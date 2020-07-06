@@ -1,0 +1,125 @@
+Header(cg01, 8)
+ClanID(jno,Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 50 Grey Lizards split at 10U and move SE (to 11V).
+ - Lizards eat from fertile hex 11V.
+ - 50 Grey Lizards at 11V move S (to 12V).
+
+ - 47 Red, 182 Black Lizards at 10Y move SE (to 11Z).
+ - Lizards eat from fertile hex 11Z.
+ - 47 Red, 182 Black Lizards at 11Z move SE (to 11AA).
+
+ - 22 Yellow Lizards at 5U move SE (to 6V).
+ - Lizards eat from fertile hex 6V.
+ - 22 Yellow Lizards at 6V move NE (to 5W).
+ - Lizards eat from fertile hex 5W.
+
+ - 15 Red, 42 Black Lizards at 14AB move SE (to 14AC).
+ - 15 Red, 42 Black Lizards at 14AC move SE (to 15AD).
+ - Lizards attack 15 militia Lizards in free Den at 15AD.
+ - Combat round 3! Standing Lizards: 49. Standing enemy Lizards: 0.
+ - Your Lizards at 15AD mercilessly SLAUGHTERED their foul enemy. They are now Good warriors.
+ - Your Lizards captured Green Den at 15AD.
+
+ - 24 Black Lizards at 6W move N (to 5W).
+ - Lizards eat from fertile hex 5W.
+
+ - 58 Red, 30 Yellow, 145 Black Lizards at 9Q move SE (to 10R).
+ - Lizards attack 45 militia Lizards in free Den at 10R.
+ - Combat round 2! Standing Lizards: 223. Standing enemy Lizards: 0.
+ - Your Lizards at 10R completely CONQUER their enemy. They are now Dangerous warriors.
+ - Your Lizards captured Grey Den at 10R.
+ - 52 Red, 29 Yellow, 142 Black Lizards at 10R move NW (to 9Q).
+ - Lizards eat from fertile hex 9Q.
+
+ - 2 Red Lizards at 17Z move SW (to 17Y).
+ - Lizards eat from fertile hex 17Y.
+ - 2 Red Lizards at 17Y move NE (to 17Z).
+
+ - 57 Red, 17 Yellow, 10 Black Lizards at 14S move SW (to 15R).
+ - Lizards attack 30 militia Lizards in free Den at 15R.
+ - Combat round 4! Standing Lizards: 71. Standing enemy Lizards: 0.
+ - Your Lizards at 15R REJOICE as they trample their enemy under-claw. They are now Good warriors.
+ - Your Lizards captured Grey Den at 15R.
+
+ - 10 Green Lizards at 6U move NW (to 6T).
+ - 10 Green Lizards at 6T move NW (to 5S).
+
+ - 14 Yellow Lizards at 13U move NE (to 13V).
+ - Lizards eat from fertile hex 13V.
+ - 14 Yellow Lizards at 13V move SE (to 13W).
+Phase(development)
+
+ - Recruiting from Grey Den at 15R. 34 Grey lizards recruited from Den leaving 66 Den Lizards at 15R.
+
+ - Recruiting from Green Den at 15AD. 17 Green lizards recruited from Den leaving 33 Den Lizards at 15AD.
+
+ - Recruiting from Green Den at 6Y. 15 Green lizards recruited from Den leaving 29 Den Lizards at 6Y.
+
+ - Recruiting from Grey Den at 10R. 52 Grey lizards recruited from Den leaving 98 Den Lizards at 10R.
+
+ - Recruiting from Home Den at 10Y. 8 Red lizards recruited from Den leaving 15 Den Lizards at 10Y.
+
+ - Recruiting from Black Den at 15Z. 22 Black lizards recruited from Den leaving 42 Den Lizards at 15Z.
+
+ - Recruiting from Yellow Den at 5U. 21 Yellow lizards recruited from Den leaving 40 Den Lizards at 5U.
+
+ - Recruiting from Yellow Den at 5R. 12 Yellow lizards recruited from Den leaving 23 Den Lizards at 5R.
+
+ - Surveying hex NW of 9V for Bridge. Grey Lizards build Bridge at 8U.
+
+ - Recruiting from Yellow Den at 13U. 12 Yellow lizards recruited from Den leaving 23 Den Lizards at 13U.
+
+ - Recruiting from Black Den at 6W. 23 Black lizards recruited from Den leaving 44 Den Lizards at 6W.
+
+ - Fertile hex planted at 10V by 10 Green Lizards.
+ClanReport(Jumping Jono)
+Den(5R, 23, Yellow, 43 Yellow, Sated, Average)
+
+Den(5U, 40, Yellow, 21 Yellow, Sated, Average)
+
+Den(6W, 44, Black, 23 Black, Sated, Average)
+
+Den(6Y, 29, Green, 15 Green, Sated, Average)
+
+Den(9V, 24, Grey, 22 Grey, Peckish, Average)
+
+Den(10R, 98, Grey, 52 Grey, Sated, Average)
+
+Den(10W, 46, Red, 17 Red, Peckish, Average)
+
+HomeDen(10Y, 15, 1, 8 Red, Sated, Average)
+
+Den(13U, 23, Yellow, 12 Yellow, Sated, Average)
+
+Den(15R, 66, Grey, 53 Red, 34 Grey, 11 Yellow, 7 Black, Sated, Average)
+
+Den(15Z, 42, Black, 46 Black, Sated, Average)
+
+Den(15AD, 33, Green, 11 Red, 17 Green, 38 Black, Peckish, Average)
+
+ - 5S Band of 10 Green (Sated & Average) Lizards.
+ - 5W Band of 16 Green, 75 Yellow, 50 Black (Sated & Average) Lizards.
+ - 5AA Band of 10 Green (Sated & Average) Lizards.
+ - 9Q Band of 52 Red, 29 Yellow, 142 Black (Sated & Dangerous) Lizards.
+ - 9W Band of 29 Black (Sated & Average) Lizards.
+ - 10V Band of 10 Green (Hungry & Average) Lizards.
+ - 11AA Band of 47 Red, 182 Black (Sated & Average) Lizards.
+ - 12V Band of 50 Grey (Sated & Average) Lizards.
+ - 13W Band of 14 Yellow (Sated & Average) Lizards.
+ - 17Z Band of 2 Red (Sated & Average) Lizards.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 8:
+
+ 01 -   2046 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   1836 Player 01, 'Mike TB' (mtb) Clan.
+ 03 -   1827 Player 03, 'Dangerous Dan' (dan) Clan.
+ 04 -   1346 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

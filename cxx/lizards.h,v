@@ -1,0 +1,344 @@
+head	1.1;
+access;
+symbols;
+locks
+	ralexand:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	2008.05.06.10.25.54;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include <stdio.h>
+#include <time.h>
+
+#define VERSION "0.0.1"
+
+#define LIZ_TRUE 1
+#define LIZ_FALSE 0
+
+/* various text and binary orders files used by Lizards! */
+
+#define TEXT_ORDS_F                   "LORDS"   /* text order file */
+#define POSTSCRIPT_F                  ".ps"  /* postscript turn file */
+#define PSHEADER_F	       	"lzheader.ps"
+
+/* various text output files for players. */
+
+#define PLAYER_MESG_F                 "LP"   /* general player text */
+#define PLAYER_LIST_F                 "LL"   /* modem user view list */
+#define PLYMAP_MESG_F                 "LM"   /* text maps */
+#define PLYPLY_MESG_F                 "LC"   /* text messages */
+#define PLYERR_MESG_F		      "LE"   /* error messages */
+/* Lizards! binary and text data files. */
+
+#define DEN_LIZARD_LEVEL 50
+#define DEN_RECOVER_LEVEL 0.25
+#define DEN_STARVE_LEVEL 0.20
+#define DEN_INCREASE_STARVE_LEVEL 0.15
+#define DEN_MILITIA_LEVEL 0.30
+#define MINIMUM_POP_LEVEL 10
+#define POP_ADDITION 4
+#define DEN_RECRUIT_LEVEL 0.35
+
+#define HOME_SIZE 400
+
+#define MAX_LIZARDS_IN_HEX 300
+#define MAX_CLAN_CODE 3
+#define MAX_CLAN_NAME 20
+
+#define LIZ_SPAWN 0x0001
+#define LIZ_CAPTURE 0x0002
+#define LIZ_VOLCANO 0x0004
+#define LIZ_PEAK 0x0008
+#define LIZ_WRAP 0x0010
+#define LIZ_VICTORY 0x0020
+#define LIZ_GIVE 0x0040
+
+enum Terrain {
+  WATER,
+  PLAIN,
+  PEAK,
+  SWAMP,
+  SCRUB
+};
+
+#define DIRECTIONS 6
+
+enum Direction {
+  NORTH,
+  NORTHEAST,
+  SOUTHEAST,
+  SOUTH,
+  SOUTHWEST,
+  NORTHWEST
+};
+
+#define LIZARD_COLOURS 5
+
+enum LizardColour {
+  RED,
+  GREEN,
+  GREY,
+  BLACK,
+  YELLOW,
+  UNSEATTLED,
+};
+
+enum Feature {
+  GENERIC,
+  FERTILE,
+  VOLCANO,
+  WHIRLPOOL,
+  CURSED,
+  RUIN,
+  TEMPLE,
+  DEN,
+  BAND,
+  SPY,
+  BRIDGE,
+  RAFT,
+  BUILDING
+};
+
+enum Status {
+  PLAYER_INIT,
+  PLAYER_DEAD,
+  PLAYER_RETIRED,
+  PLAYER_ACTIVE
+};
+
+class debug_t {
+ public:
+  char *logfilename;
+  char *bannerstr;
+  FILE *stream;
+  debug_t();
+  ~debug_t();
+  void banner(const char *);
+  void log(char *s, ...);
+};
+
+class point_t {
+public:
+  int x,y;
+  point_t();
+  point_t(int x_p, int y_p);
+  int operator==(const point_t& p);
+  int operator!=(const point_t& p);
+};
+
+class feature_t {
+ public:
+  int type;
+  int owner;
+  feature_t();
+  virtual ~feature_t();
+  virtual void debug(FILE *);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class den_t : public feature_t {
+ public:
+  int pop;
+  int colour;
+  int hunger;
+  int home;
+  den_t();
+  den_t(int);
+  den_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class band_t : public feature_t {
+ public:
+  int colour[5];
+  int hunger;
+  int combat;
+  int immobile;
+  band_t();
+  band_t(xmlNodePtr);
+  int size();
+  char *describe();
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class fertile_t : public feature_t {
+ public:
+  int level;
+  fertile_t();
+  fertile_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class temple_t : public feature_t {
+ public:
+  temple_t();
+  temple_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class ruin_t : public feature_t {
+ public:
+  ruin_t();
+  ruin_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class cursed_t : public feature_t {
+ public:
+  cursed_t();
+  cursed_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class volcano_t : public feature_t {
+ public:
+  volcano_t();
+  volcano_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class whirlpool_t : public feature_t {
+ public:
+  whirlpool_t();
+  whirlpool_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class raft_t : public feature_t {
+ public:
+  raft_t();
+  raft_t(xmlNodePtr);
+  virtual xmlNodePtr save_xml(xmlNsPtr ns);
+};
+
+class hex_t {
+public:
+  point_t xy;
+  int tmpl;
+  int owner;
+  char *title;
+  Terrain terrain;
+  hex_t **adjlist;
+  int flistlen;
+  feature_t **flist;
+
+  hex_t(void);
+  ~hex_t(void);
+  void save(FILE *);
+  void save_features(FILE *);
+  void set(int x_p, int y_p);
+  xmlNodePtr save_xml(xmlNsPtr ns);
+  int size();
+  void set_adjacent(int dir, hex_t *hex);
+  hex_t *adjacent(int);
+  int num_features(void);
+  feature_t* has_feature(Feature f);
+  int terrain_adjacent(Terrain t);
+  int feature_adjacent(Feature f);
+  feature_t* add_feature(feature_t* f);
+  feature_t* del_feature(feature_t* f);
+  feature_t* pop_feature();
+  void clear_features();
+  void debug(FILE *);
+  void reload(xmlNodePtr, class world_t *);
+};
+
+class player_t {
+ public:
+  int num;
+  int status;
+  char *ref;
+  char *code;
+  char *clan;
+  char *startup;
+  FILE *fptr;
+  void debug(FILE *);
+};
+
+class map_t {
+ private:
+  hex_t *hexes;
+ public:
+  int width, height, size;
+  map_t();
+  map_t(const int, const int);
+  ~map_t();
+  hex_t* hex(const int, const int);
+  hex_t* hex(const int);
+  hex_t* hex(const point_t);
+  hex_t* operator[](const int);
+  hex_t* operator[](const point_t);
+  hex_t* operator()(const int, const int);
+  hex_t* operator()(const int);
+  hex_t* operator()(const point_t);
+  void resize(const int, const int);
+  void desc_short(FILE*);
+  void desc_long(FILE*);
+  void create_nowrap();
+  xmlNodePtr save_xml(xmlNsPtr ns);
+  void debug(FILE*);
+};
+
+class world_t {
+public:
+  time_t due;
+  int turn;
+  int flags;
+  char *game;
+  char *path;
+  int num_players;
+  player_t **player;
+  map_t map;
+
+  world_t(int, int, const char *, const char *);
+  world_t(const char *);
+  ~world_t();
+  void load();
+  void save();
+
+  int open_player_files(void);
+  int close_player_files(void);
+  hex_t *gethex(const int, const int);
+  hex_t *gethex(const int);
+  hex_t *gethex(const point_t&);
+  void desc_short(FILE*);
+  void desc_long(FILE*);
+  void debug(FILE*);
+};
+
+extern char *colours[];
+
+extern void WorldFill(world_t *, char *, int, int, char **);
+extern void WorldPopulate(world_t *, int, int);
+extern void WorldFix(world_t *);
+extern void CustomStartup(world_t *);
+
+extern void ClanReport(world_t*);
+
+// ----------------------------------------------------------------------
+//
+// Global variables and misc functions
+//
+// ----------------------------------------------------------------------
+extern char* liz_colours[];
+extern char* liz_hunger_desc[];
+extern char* liz_combat_desc[];
+
+extern debug_t debug;
+extern char *progname;
+extern int uniform(int);
+@

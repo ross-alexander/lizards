@@ -1,0 +1,120 @@
+Header(cg01, 5)
+ClanID(mtb,Mike TB)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - Spy Lizard at 24H moves SW (to 24G).
+ - Spy Lizard at 24G moves S (to 25G).
+
+ - 10 Green Lizards split at 17K and move N (to 16K).
+ - Something slimy rises from the deep and ATTACKS your Lizards at 16K!
+ - Combat round 2! Surviving Lizards: 0.
+ - The bones of your defeated Lizards litter the depths at 16K.
+
+ - Spy Lizard at 13A moves NW (to 13AF).
+ - Spy Lizard at 13AF moves N (to 12AF).
+
+ - Spy Lizard at 19O moves S (to 20O).
+ - Spy Lizard at 20O moves S (to 21O).
+
+ - Sneak 10I (N NE) order ignored. You have Spys in hex, but they are mired or have already moved.
+
+ - Spy Lizard at 16G moves S (to 17G).
+ - Spy Lizard at 17G moves S (to 18G).
+
+ - Whirlpool at 20B moves SE (to 20C)!
+ - Whirlpool at 20C moves NE (to 20D)!
+
+ - 10 Green Lizards split at 17K and move N (to 16K).
+ - 10 Green Lizards at 16K move N (to 15K).
+
+ - Spy Lizard at 13P moves N (to 12P).
+ - Spy Lizard at 12P moves NE (to 11Q).
+
+ - 17 Yellow, 80 Black Lizards at 13E move SW (to 14D).
+ - 17 Yellow, 80 Black Lizards at 14D move SW (to 14C).
+ - Lizards eat from fertile hex 14C.
+
+ - 69 Black Lizards at 18M move SW (to 19L).
+ - 69 Black Lizards at 19L move S (to 20L).
+
+ - 10 Green Lizards at 17J move N (to 16J).
+ - 10 Green Lizards at 16J move N (to 15J).
+ - Lizards eat from fertile hex 15J.
+
+ - 3 Red Lizards split at 17I and move SW (to 18H).
+ - 3 Red Lizards at 18H move SW (to 18G).
+
+ - Spy Lizard at 18C moves SW (to 19B).
+ - Spy Lizard at 19B moves SW (to 19A).
+
+ - 3 Red Lizards split at 17I and move N (to 16I).
+ - 3 Red Lizards at 16I move N (to 15I).
+
+ - 34 Red, 76 Black Lizards at 12J move N (to 11J).
+ - Lizards eat from fertile hex 11J.
+ - 34 Red, 76 Black Lizards at 11J move N (to 10J).
+ - Lizards attack 45 militia Lizards in free Den at 10J.
+ - Combat round 4! Standing Lizards: 86. Standing enemy Lizards: 0.
+ - Your Lizards at 10J completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Grey Den at 10J.
+
+ - 2 Black Lizards at 15O move N (to 14O).
+ - Lizards attack 15 militia Lizards in free Den at 14O.
+ - Combat round 1! Standing Lizards: 0. Standing enemy Lizards: 15.
+ - All of your Lizards at 15O travel the short and bloody path to oblivion.
+
+ - Whirlpool at 20Q moves N (to 19Q)!
+
+ - Whirlpool at 20H moves NE (to 19I)!
+ - Whirlpool at 19I moves SE (to 20J)!
+Phase(development)
+
+ - Recruiting from Red Den at 13I. 34 Red lizards recruited from Den leaving 64 Den Lizards at 13I.
+
+ - Recruiting from Grey Den at 10J. 52 Grey lizards recruited from Den leaving 98 Den Lizards at 10J.
+
+ - Attempted to Recruit from Den at 14O that isn't yours or doesn't exist.
+SpyNative: 25G
+SpyNative: 12AF
+SpyNative: 10I
+SpyNative: 11Q
+SpyRejoin: 18G
+ClanReport(Mike TB)
+Den(10J, 98, Grey, 25 Red, 52 Grey, 61 Black, Sated, Average)
+
+Den(13I, 64, Red, 34 Red, Sated, Average)
+
+Den(14G, 48, Yellow, , Famished, Average)
+
+Den(14K, 48, Black, , Famished, Average)
+
+HomeDen(17I, 65, 1, 11 Red, Famished, Average)
+
+Den(17K, 46, Green, 3 Green, Peckish, Average)
+
+Den(17N, 50, Yellow, , Starved, Good)
+
+ - 13M Band of 100 Black (Starved & Average) Lizards.
+ - 14C Band of 17 Yellow, 80 Black (Sated & Average) Lizards.
+ - 15I Band of 3 Red (Famished & Average) Lizards.
+ - 15J Band of 10 Green (Sated & Average) Lizards.
+ - 15K Band of 10 Green (Peckish & Average) Lizards.
+ - 18G Band of 3 Red, 2 Black (Famished & Average) Lizards.
+ - 19J Band of 1 Black (Famished & Average) Lizards.
+ - 20L Band of 69 Black (Peckish & Good) Lizards.
+ - 19A Spy Lizard. Spy for 2 turns.
+ - 21O Spy Lizard. Spy for 1 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 5:
+
+ 01 -   1321 Player 03, 'Dangerous Dan' (dan) Clan.
+ 02 -   1310 Player 02, 'Jumping Jono' (jno) Clan.
+ 03 -   1132 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -   1129 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

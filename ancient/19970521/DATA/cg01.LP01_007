@@ -1,0 +1,133 @@
+Header(cg01, 7)
+ClanID(mtb,Mike TB)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 106 Black Lizards at 14K move NE (to 14L).
+ - 106 Black Lizards at 14L move SE (to 14M).
+
+ - Spy Lizard splits at 15B and moves N (to 14B).
+ - Spy Lizard at 14B moves N (to 13B).
+
+ - 17 Yellow Lizards at 17N move N (to 16N).
+ - 17 Yellow Lizards at 16N move N (to 15N).
+
+ - 22 Red, 61 Black Lizards split at 10J and move NW (to 9I).
+ - Lizards eat from fertile hex 9I.
+ - 22 Red, 61 Black Lizards at 9I move SW (to 10H).
+
+ - 2 Red Lizards split at 16H and move S (to 17H).
+ - 2 Red Lizards at 17H move SW (to 17G).
+
+ - Spy Lizard at 9L moves NE (to 8M).
+ - Spy Lizard at 8M moves SE (to 9N).
+
+ - Spy Lizard at 8J moves N (to 7J).
+ - Spy Lizard at 7J moves N (to 6J).
+
+ - Spy Lizard at 9H moves NW (to 8G).
+ - Spy Lizard at 8G moves SW (to 9F).
+
+ - 28 Red Lizards at 13I move SW (to 14H).
+ - 28 Red Lizards at 14H move SW (to 14G).
+
+ - 16 Yellow Lizards split at 15B and move S (to 16B).
+ - 16 Yellow Lizards at 16B move S (to 17B).
+
+ - 75 Grey Lizards split at 10J and move NE (to 9K).
+ - Lizards eat from fertile hex 9K.
+ - 75 Grey Lizards at 9K move SE (to 10L).
+ - Lizards at 10L cringe as a HUGE and hungry Sea Monster rises from the hex.
+ - Combat round 2! Surviving Lizards: 63.
+ - The mighty Sea Monster falls under the blows of your Lizards at 10L.
+ - 63 Grey Lizards survive at 10L.
+
+ - Whirlpool at 10D moves S (to 11D)!
+
+ - 24 Green, 49 Black Lizards split at 21N and move SE (to 21O).
+ - Lizards eat from fertile hex 21O.
+ - 24 Green, 49 Black Lizards at 21O move S (to 22O).
+ - Lizards attack 15 militia Lizards in free Den at 22O.
+ - Combat round 2! Standing Lizards: 70. Standing enemy Lizards: 0.
+ - Your Lizards at 22O emerge from the melee VICTORIOUS! They are now Dangerous warriors.
+ - Your Lizards captured Black Den at 22O.
+
+ - 10 Green Lizards split at 21N and move S (to 22N).
+ - 10 Green Lizards at 22N move S (to 23N).
+
+ - 15 Yellow, 79 Black Lizards at 15A move SE (to 16B).
+ - 15 Yellow, 79 Black Lizards at 16B move S (to 17B).
+
+ - 39 Red Lizards at 17I move NE (to 17J).
+ - Lizards eat from fertile hex 17J.
+ - 39 Red Lizards at 17J move SW (to 17I).
+
+ - 10 Green Lizards at 15M move NE (to 15N).
+
+ - Whirlpool at 21L moves S (to 22L)!
+ - Whirlpool at 22L moves S (to 23L)!
+Phase(development)
+
+ - Recruiting from Yellow Den at 15B. 14 Yellow lizards recruited from Den leaving 27 Den Lizards at 15B.
+
+ - Recruiting from Green Den at 17K. 27 Green lizards recruited from Den leaving 53 Den Lizards at 17K.
+
+ - Fertile hex planted at 13K by 10 Green Lizards.
+
+ - Recruiting from Yellow Den at 14G. 15 Yellow lizards recruited from Den leaving 28 Den Lizards at 14G.
+
+ - Recruiting from Yellow Den at 17N. 14 Yellow lizards recruited from Den leaving 27 Den Lizards at 17N.
+
+ - Recruiting from Green Den at 21N. 29 Green lizards recruited from Den leaving 54 Den Lizards at 21N.
+
+ - Surveying hex S of 11J for Bridge. Grey Lizards build Bridge at 12J.
+SpyNative: 19A
+Starve: 17G 2 0 0 0 0 0Starve: 18G 2 1 0 0 1 0Starve: 16H 1 0 0 0 0 0Starve: 19J 1 0 0 0 0 0ClanReport(Mike TB)
+Den(10J, 107, Grey, , Peckish, Average)
+
+Den(13I, 70, Red, , Peckish, Average)
+
+Den(14G, 28, Yellow, 28 Red, 33 Yellow, Sated, Average)
+
+Den(14K, 43, Black, , Starved, Average)
+
+Den(15B, 27, Yellow, 14 Yellow, Sated, Average)
+
+HomeDen(17I, 71, 1, 39 Red, Sated, Average)
+
+Den(17K, 53, Green, 30 Green, Sated, Average)
+
+Den(17N, 27, Yellow, 14 Yellow, Sated, Average)
+
+Den(21N, 54, Green, 29 Green, Sated, Average)
+
+Den(22O, 50, Black, 24 Green, 46 Black, Sated, Dangerous)
+
+ - 10H Band of 22 Red, 61 Black (Sated & Average) Lizards.
+ - 10L Band of 63 Grey (Sated & Average) Lizards.
+ - 11J Band of 20 Grey (Sated & Average) Lizards.
+ - 13K Band of 10 Green (STARVING & Average) Lizards.
+ - 14M Band of 106 Black (Starved & Average) Lizards.
+ - 15N Band of 10 Green, 17 Yellow (Peckish & Average) Lizards.
+ - 17B Band of 31 Yellow, 79 Black (Peckish & Average) Lizards.
+ - 18G Band of 1 Red, 1 Black (STARVING & Average) Lizards.
+ - 23N Band of 10 Green (Hungry & Good) Lizards.
+ - 21O Spy Lizard. Spy for 3 turns.
+ - 19I Spy Lizard. Spy for 1 turns.
+ - 9F Spy Lizard. Spy for 1 turns.
+ - 6J Spy Lizard. Spy for 1 turns.
+ - 9N Spy Lizard. Spy for 1 turns.
+ - 13B Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 7:
+
+ 01 -   1715 Player 03, 'Dangerous Dan' (dan) Clan.
+ 02 -   1584 Player 02, 'Jumping Jono' (jno) Clan.
+ 03 -   1539 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -   1307 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

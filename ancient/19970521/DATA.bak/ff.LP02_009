@@ -1,0 +1,36 @@
+Header(ff, 9, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+ - 110 Green Lizards at 10D move SE (to 10E).
+ - Lizards eat from fertile hex 10E.
+ - 106 Green, 30 Grey Lizards at 9C move SE (to 10D).
+ - 106 Green, 30 Grey Lizards at 10D move SE (to 10E).
+ - Lizards eat from fertile hex 10E.
+ - 66 Green, 53 Yellow Lizards at 1K move SW (to 2J).
+ - 66 Green, 53 Yellow Lizards at 2J move SW (to 2I).
+Phase(development)
+ - Recruiting from Yellow Den at 1K. 12 Yellow lizards recruited from Den leaving 25 Den Lizards at 1K.
+ - Fertile hex planted at 9F by 10 Green Lizards.
+ - Fertile hex planted at 10F by 10 Green Lizards.
+ - Recruiting from Home Den at 10G. 13 Black lizards recruited from Den leaving 27 Den Lizards at 10G.
+ - Den completed at 9E by 50 Grey Lizards. Den is presently un-populated.
+ - Recruiting from Grey Den at 9C. 11 Grey lizards recruited from Den leaving 23 Den Lizards at 9C.
+Starve: 9E 26 0 0 24 0 0ClanReport(Jumping Jono)
+Den(1K,25,5,0,0,0,0,12,0,0)
+Den(9C,23,3,0,0,11,0,0,0,0)
+Den(9E,0,0,0,0,24,0,0,5,0)
+HomeDen(10G,27,4,24,16,0,102,0,0,0)
+ - 2I Band of 66 Green, 53 Yellow (Hungry & Average) Lizards.
+ - 9F Band of 10 Green (Peckish & Average) Lizards.
+ - 10E Band of 216 Green, 30 Grey (Sated & Average) Lizards.
+ - 10F Band of 10 Green (Hungry & Average) Lizards.
+
+ * Clans Ranking at end of Turn 9:
+
+ 01 -    966 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    784 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

@@ -1,0 +1,36 @@
+Header(ff, 10, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+NomadsJoinDen(9E,4)
+Phase(artillery)
+ - 80 Black Lizards at 10G begin chanting N N...
+ - Mist engulfs 8G as the hex rises out of the sea!
+ - Your black lizards have created a Plain hex there. 
+ - Your 80 Black Lizards at 10G finish chanting.
+ - 24 Black Lizards here slowly fade to Red!
+Phase(movement)
+ - 10 Green Lizards at 9F move S (to 10F).
+ - Lizards eat from fertile hex 10F.
+ - 24 Grey Lizards at 9E move NE (to 9F).
+ - Lizards eat from fertile hex 9F.
+ - 66 Green, 53 Yellow Lizards at 2I move N (to 1I).
+ - 66 Green, 53 Yellow Lizards at 1I move NE (to 1J).
+ - Lizards eat from fertile hex 1J.
+Phase(development)
+ClanReport(Jumping Jono)
+Den(1K,33,5,0,0,0,0,12,1,0)
+Den(9C,34,3,0,0,11,0,0,1,0)
+Den(9E,4,0,0,0,0,0,0,5,0)
+HomeDen(10G,40,4,48,16,0,78,0,1,0)
+Band(1J, 0, 66, 0, 0, 53, 0, 0)
+Band(9F, 0, 0, 24, 0, 0, 0, 0)
+Band(10E, 0, 216, 30, 0, 0, 0, 0)
+Band(10F, 0, 20, 0, 0, 0, 0, 0)
+
+ * Clans Ranking at end of Turn 10:
+
+ 01 -   1058 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    820 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

@@ -1,0 +1,7 @@
+Header: off
+ClanID: bla
+Spawning: off
+Phase: world
+Phase: artillery
+Phase: movement
+Phase: development

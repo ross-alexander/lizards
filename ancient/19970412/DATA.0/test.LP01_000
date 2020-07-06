@@ -1,0 +1,7 @@
+Header: off
+ClanID: kea
+Spawning: off
+Phase: world
+Phase: artillery
+Phase: movement
+Phase: development

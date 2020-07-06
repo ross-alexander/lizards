@@ -1,0 +1,605 @@
+head	1.1;
+access;
+symbols;
+locks
+	ralexand:1.1; strict;
+comment	@// @;
+
+
+1.1
+date	2012.11.07.15.17.07;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include <string>
+#include <map>
+#include <vector>
+#include <typeinfo>
+
+#include <assert.h>
+
+#include <cairomm/context.h>
+#include <librsvg/rsvg.h>
+
+#include <json/json.h>
+
+#include "lizards.h"
+
+#define GROUP_SIZE 10		/* lizards are dealt with in 10 groups */
+
+#define WATER_COST 0
+#define PLAIN_COST 15
+#define RUIN_COST 40
+#define FERTILE_COST 25
+#define SWAMP_COST 10
+#define PEAK_COST 10
+#define VOLCANO_COST 10
+#define WHIRLPOOL_COST 5
+#define SCRUB_COST 10
+#define TEMPLE_COST 40
+#define CURSED_COST 15
+
+#define RED_WARRIOR_COST 10	/* all per 10 pop lizards */
+#define YELLOW_WARRIOR_COST 15
+#define GREEN_WARRIOR_COST 20
+#define GREY_WARRIOR_COST 20
+#define BLACK_WARRIOR_COST 30
+
+#define RED_POP_COST 15 	/* all per 10 pop lizards */
+#define YELLOW_POP_COST 25
+#define GREEN_POP_COST 25
+#define GREY_POP_COST 30
+#define BLACK_POP_COST 50
+
+#define MINIMUM_POP_PER_DEN 3	/* 3 groups of 10 pop lizards! */
+
+#define RED_DEN_COST 65 + (MINIMUM_POP_PER_DEN * RED_POP_COST)
+#define YELLOW_DEN_COST 100 + (MINIMUM_POP_PER_DEN * YELLOW_POP_COST)
+#define GREEN_DEN_COST 110 + (MINIMUM_POP_PER_DEN * GREEN_POP_COST)
+#define GREY_DEN_COST 95 + (MINIMUM_POP_PER_DEN * GREY_POP_COST)
+#define BLACK_DEN_COST 150 + (MINIMUM_POP_PER_DEN * BLACK_POP_COST)
+
+#define PLAYER_SETUP_POINTS 1200
+
+struct code_map {
+  int id;
+  const char *code;
+  int cost;
+};
+
+static code_map cm[] = {
+    { 1, WATER_CODE, WATER_COST },
+    { 2, PLAINS_CODE, PLAIN_COST },
+    { 3, RUIN_CODE, RUIN_COST },
+    { 4, FERTILE_CODE, FERTILE_COST },
+    { 5, SWAMP_CODE, SWAMP_COST },
+    { 6, PEAK_CODE, PEAK_COST },
+    { 7, VOLCANO_CODE, VOLCANO_COST },
+    { 8, WHIRLPOOL_CODE, WHIRLPOOL_COST },
+    { 9, SCRUB_CODE, SCRUB_COST },
+    { 10, TEMPLE_CODE, TEMPLE_COST },
+    { 11, CURSED_CODE, CURSED_COST },
+    { 12, RED_DEN_CODE, RED_DEN_COST },
+    { 13, YELLOW_DEN_CODE, YELLOW_DEN_COST },
+    { 14, GREEN_DEN_CODE, GREEN_DEN_COST },
+    { 15, GREY_DEN_CODE, GREY_DEN_COST },
+    { 16, BLACK_DEN_CODE, BLACK_DEN_COST },
+  };
+
+static code_map bm[] = {
+    { GREEN, GREEN_LIZARD_CODE, GREEN_WARRIOR_COST },
+    { GREY, GREY_LIZARD_CODE, GREY_WARRIOR_COST },
+    { BLACK, BLACK_LIZARD_CODE, BLACK_WARRIOR_COST },
+    { YELLOW, YELLOW_LIZARD_CODE, YELLOW_WARRIOR_COST },
+    { RED, RED_LIZARD_CODE, RED_WARRIOR_COST},
+  };
+
+hex_t* template_t::hex_from_id(int terrain)
+{
+  hex_t *hex = 0;
+  switch(terrain)
+    {
+    case 0:
+      hex = new hex_t();
+      break;
+    case 1:
+      hex = new water_t();
+      break;
+    case 2:
+      hex = new plains_t();
+      break;
+    case 3:
+      hex = new ruin_t();
+      break;
+    case 4:
+      hex = new fertile_t();
+      break;
+    case 5:
+      hex = new swamp_t();
+      break;
+    case 6:
+      hex = new peak_t();
+      break;
+    case 7:
+      hex = new volcano_t();
+      break;
+    case 8:
+      hex = new whirlpool_t();
+      break;
+    case 9:
+      hex = new scrub_t();
+      break;
+    case 10:
+      hex = new temple_t();
+      break;
+    case 11:
+      hex = new cursed_t();
+      break;
+    case 12:
+      hex = new den_t(RED);
+      break;
+    case 13:
+      hex = new den_t(YELLOW);
+      break;
+    case 14:
+      hex = new den_t(GREEN);
+      break;
+    case 15:
+      hex = new den_t(GREY);
+      break;
+    case 16:
+      hex = new den_t(BLACK);
+      break;
+    }
+  return hex;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- hexify
+--
+---------------------------------------------------------------------- */
+
+hex_t *template_t::hexify(layout_t* layout, char **tokens)
+{
+  /* --------------------
+     Get id (number) of template hex
+     -------------------- */
+
+  int id = strtol(tokens[0], 0, 10) - 1;
+  assert(id >= 0 && id < layout->size);
+  int loop, terrain;
+  point_t* p = (*layout)[id];
+  assert(p);
+  hex_t *hex = 0;
+
+  terrain = 16;
+
+  for (loop = 0; loop < TERRAIN_TYPES; loop ++)
+    if (std::string(tokens[1]) == cm[loop].code)
+      {
+	terrain = cm[loop].id;
+	cost = cm[loop].cost;
+	hex = hex_from_id(terrain);
+	if (hex == 0)
+	  fprintf(stderr, "Unknown terrain %s at %s\n", tokens[1], tokens[0]);
+      }
+
+  band_t *band = new band_t;
+
+  for (int i = 2; tokens[i]; i++)
+    {
+      for (int j = 0; j < UNSETTLED; j++)
+	{
+	  if ((std::string(tokens[i]) == bm[j].code) && (tokens[i+1]))
+	    {
+	      int c = strtol(tokens[i+1], 0, 10);
+	      c -= c%GROUP_SIZE;
+	      band->set(bm[j].id, c);
+	      cost += c/GROUP_SIZE * bm[j].cost;
+	      i++;
+	    }
+	}
+    }
+  if (band->size())
+    hex->set(band);
+  else
+    free(band);
+  assert(hex);
+  hex->xy = *p;
+  return hex;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- template::getline
+--
+---------------------------------------------------------------------- */
+
+char** template_t::getline(FILE *f)
+{
+  char buf[1024];
+  char *s;
+  unsigned int i, j;
+  const char *sepstr = " \r\n";
+
+  /* --------------------
+     Get line
+     -------------------- */
+
+  if ((s = fgets(buf, 1024, f)) == 0)
+    return 0;
+
+  /* --------------------
+     Convert to upper case
+     -------------------- */
+  
+  for (i = 0; i < strlen(s); i++)
+    s[i] = islower(s[i]) ? toupper(s[i]) : s[i];
+
+  /* --------------------
+     Count the number of tokens that will be generated.  For entries
+     like BLK123 we need two tokens, not one.
+     -------------------- */
+  
+  char *ctmp = buf;
+  for (i = 0; (j = strcspn(ctmp, sepstr)); i++)
+    {
+      int num = 0;
+      int alpha = 0;
+      for (unsigned int k = 0; k < j; k++)
+	{
+	  if (isdigit(ctmp[k]))
+	    num = 1;
+	  else
+	    alpha = 1;
+	}
+      if (num && alpha)
+	i++;
+      ctmp += j + strspn(ctmp + j, sepstr);
+    }
+
+  /* --------------------
+     Allocate space for token list
+     -------------------- */
+
+  char **tokens = new char*[i+1];
+  tokens[i] = 0;
+
+  ctmp = buf;
+
+  for (i = 0; (j = strcspn(ctmp, sepstr)); )
+    {
+      unsigned int k;
+      for (k = 0; !isdigit(ctmp[k]) && (k < j); k++)
+	;
+
+      /* --------------------
+	 k = number of non digit characters at the start of the string
+	 -------------------- */
+
+      if (k > 0)
+	{
+	  tokens[i] = new char[k+1];
+	  strncpy(tokens[i], ctmp, k);
+	  tokens[i][k] = 0;
+	  i++;
+	}
+
+      /* --------------------
+	 if there are some digit characters at the end of the string
+	 -------------------- */
+
+      if (k != j)
+	{
+	  tokens[i] = new char[j-k+1];
+	  strncpy(tokens[i], ctmp+k, j-k);
+	  tokens[i][j-k] = 0;
+	  i++;
+	}
+      int l = strspn(ctmp+j, sepstr);
+      ctmp += j + l;
+    }
+  return tokens;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- template::template_t
+--
+---------------------------------------------------------------------- */
+
+/* --------------------
+   All constructors call init to do the duplicate initialization.
+   -------------------- */
+
+void template_t::init(layout_t* ll)
+{
+  layout = ll;
+  home = -1;
+  cost = layout->cost;
+  hexen = new hex_t*[layout->size];
+  size = layout->size;
+  for (int k = 0; k < size; k++)
+    hexen[k] = 0;
+}
+
+/* -------------------- 
+   Can create blank hex maps from layouts.  Saves duplicate code with
+   the layout since the map creation and placement needs to be done
+   regardless.
+   -------------------- */
+
+template_t::template_t(layout_t* layout)
+{
+  init(layout);
+}
+
+/* ----------------------------------------------------------------------
+--
+-- load_file_txt
+--
+   Load file from text using the original lizards format.  This is a
+   surprisingly compact format but does require fair bit of logic to
+   parse.
+--
+---------------------------------------------------------------------- */
+
+void template_t::load_file_txt(layouts_t* layouts, const char *path)
+{
+  char **tokens;
+  FILE *fptr = fopen(path, "r");
+  assert(fptr != 0);
+
+  home = -1;
+  
+  if ((tokens = getline(fptr)) == 0)
+    {
+      fprintf(stderr, "File %s not a template.\n", path);
+      exit(EXIT_FAILURE);
+    }
+  
+  if (strcmp(tokens[0], TEMPLATE_CODE) != 0)
+    {
+      fprintf(stderr, "File %s not a template.\n", path);
+      exit (EXIT_FAILURE);
+    }
+
+  if ((layout = (*layouts)[strtol(tokens[1], 0, 10)]) == 0)
+    {
+      fprintf(stderr, "Invalid Layout %s in template\n", tokens[1]);
+      exit(EXIT_FAILURE);
+    }
+
+  for (int k = 0; tokens[k]; k++)
+    free(tokens[k]);
+  free(tokens);
+
+  /* cost tmpl list */
+  init(layout);
+
+  while ((tokens = getline(fptr)) != 0)
+    {
+      if (strcmp (tokens[0], HOME_HEX_CODE) == 0)
+	{
+	  home = strtol(tokens[1], 0, 10);
+	  if (home <= 0 || home > layout->size)
+	    {
+	      fprintf(stderr, "FATAL ERROR: invalid HOME HEX.\n");
+	      exit (EXIT_FAILURE);
+	    }
+	  home--; /* adjust it down for 0 based hex list */
+	}
+      else if (isdigit(tokens[0][0])) /* non-digit char starts line! */
+	{
+	  int off = strtol(tokens[0], 0, 10) - 1;
+	  assert(off >=0 && off < layout->size);
+	  /* build hex, keeping track of points */
+	  if ((*layout)[off])
+	    {
+	      hex_t *hex = hexify(layout, tokens);
+	      assert(hexen[off] == 0);
+	      hexen[off] = hex;
+	    }
+	}
+      for (int j = 0; tokens[j]; j++)
+	free(tokens[j]);
+      free(tokens);
+    }
+}
+
+/* ----------------------------------------------------------------------
+--
+-- load_file_js
+--
+---------------------------------------------------------------------- */
+
+void template_t::read_js(layouts_t *layouts, std::string s)
+{
+  json_object *js = json_tokener_parse(s.c_str());
+  assert(js != 0);
+  assert(json_object_is_type(js, json_type_object));
+
+  json_object *t;
+  assert(json_object_object_get_ex(js, "layout", &t));
+
+  layout_t *layout = (*layouts)[json_object_get_int(t)];
+  assert(layout);
+
+  /* --------------------
+     Run init now to create the right size arrays etc
+     -------------------- */
+
+  init(layout);
+
+  if (json_object_object_get_ex(js, "home", &t))
+    {
+      home = json_object_get_int(t);
+      if (home <= 0 || home > layout->size)
+	{
+	  fprintf(stderr, "FATAL ERROR: invalid HOME HEX.\n");
+	  exit (EXIT_FAILURE);
+	}
+      home--; /* adjust it down for 0 based hex list */
+    }
+
+  if (json_object_object_get_ex(js, "active", &t))
+    active = json_object_get_int(t);
+  else
+    active = 0;
+
+  if (json_object_object_get_ex(js, "hexes", &t))
+    {
+      assert(json_object_is_type(t, json_type_array));
+      
+      int len = json_object_array_length(t);
+
+      int ncodes = sizeof(cm)/sizeof(code_map);
+      std::map<std::string, code_map> hextypemap;
+      for (int k = 0; k < ncodes; k++)
+	hextypemap[cm[k].code] = cm[k];
+      
+      for (int i = 0; i < len; i++)
+	{
+	  json_object *h = json_object_array_get_idx(t, i);
+	  json_object *tt;
+	  assert(json_object_is_type(h, json_type_object));
+	  json_object_object_get_ex(h, "id", &tt);
+	  int id = json_object_get_int(tt);
+	  assert(id > 0 && id <= layout->size);
+	  int hex_type = 0;
+	  if (json_object_object_get_ex(h, "type", &tt))
+	    {
+	      const char *type = json_object_get_string(tt);
+	      if (hextypemap.count(type))
+		{
+		  code_map c = hextypemap[type];
+		  hex_type = c.id;
+		}
+	    }
+	  id--;
+	  hex_t* hex = hex_from_id(hex_type);
+	  assert(hex);
+	  point_t* p = (*layout)[id];
+	  assert(p);
+	  hex->xy = *p;
+	  assert(hexen[id] == 0);
+	  hexen[id] = hex;
+
+	  if (json_object_object_get_ex(h, "title", &tt))
+	    {
+	      const char *title = json_object_get_string(tt);
+	      hex->setid(title);
+	    }
+
+	  if (json_object_object_get_ex(h, "band", &tt))
+	    {
+	      band_t *band = new band_t();
+	      for (unsigned int k = 0; k < sizeof(bm)/sizeof(code_map); k++)
+		{
+		  json_object *ttt;
+		  if (json_object_object_get_ex(tt, bm[k].code, &ttt))
+		    {
+		      int c = json_object_get_int(ttt);
+		      c -= c%GROUP_SIZE;
+		      if (c > 0)
+			{
+			  band->set(bm[k].id, c);
+			  cost += c/GROUP_SIZE * bm[k].cost;
+			}
+		    }
+		}
+	      if (band->size() > 0) hex->set(band);
+	    }
+	}
+    }
+}
+
+void template_t::load_file_js(layouts_t *layouts, const char *path)
+{
+  std::string s = misc_t::read_file(path);
+  if (s.length())
+    read_js(layouts, s);
+}
+
+/* ----------------------------------------------------------------------
+--
+-- constructors
+--
+---------------------------------------------------------------------- */
+
+template_t::template_t(layouts_t* layouts, int format, const char* path)
+{
+  if (format == FORMAT_FILE_TXT)
+    load_file_txt(layouts, path);
+  else if (format == FORMAT_FILE_JS)
+    load_file_js(layouts, path);
+  else if (format == FORMAT_STRING_JS)
+    read_js(layouts, std::string(path));
+}
+
+/* ----------------------------------------------------------------------
+--
+-- realize
+--
+---------------------------------------------------------------------- */
+
+grid_t * template_t::realize()
+{
+  int x_min = layout->x_min;
+  int y_min = layout->y_min;
+
+  int x_max = layout->x_max;
+  int y_max = layout->y_max;
+
+  x_min -= abs(x_min%2);
+  y_min -= abs(y_min%2);
+  x_max += abs(x_max%2);
+  y_max += abs(y_max%2);
+
+  int width = x_max - x_min + 1;
+  int height = y_max - y_min + 1;
+
+  point_t o(-x_min, -y_min);
+
+  grid_t *grid = new grid_t(width, height);
+
+  for (int i = 0; i < size; i++)
+    if (!hexen[i])
+      {
+	hexen[i] = new hex_t();
+	hexen[i]->xy = *((*layout)[i]);
+      }
+  for (int i = 0; i < size; i++)
+    {
+      char t[4];
+      snprintf(t, 4, "%02d", i+1);
+      if (hexen[i]->getid() == 0)
+	hexen[i]->setid(t);
+    }
+  printf("Width = %d height = %d\n", width, height);
+
+  grid->place_template(this, 0, o);
+  return grid;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- json
+--
+---------------------------------------------------------------------- */
+
+void template_t::json(char *file)
+{
+}
+@

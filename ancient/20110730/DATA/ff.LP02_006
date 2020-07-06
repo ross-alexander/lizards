@@ -1,0 +1,7 @@
+Header(ff, 6, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 10 Lizards at 7J attacked by 50 'Raging Ross' Clan Lizards.

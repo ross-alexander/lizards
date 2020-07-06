@@ -1,0 +1,642 @@
+head	1.3;
+access;
+symbols;
+locks
+	ralexand:1.3; strict;
+comment	@// @;
+
+
+1.3
+date	2008.06.13.17.31.26;	author ralexand;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2008.06.13.17.10.54;	author ralexand;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.06.03.14.55.13;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Fixed but mangling centre_points.
+@
+text
+@#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+#include <libxml/tree.h>
+
+#include "lizards.h"
+#include "hexlist.h"
+
+
+/* ----------------------------------------------------------------------
+--
+-- min
+--
+---------------------------------------------------------------------- */
+
+static int min(int a, int b)
+{
+  return a > b ? b : a;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- edge
+--
+---------------------------------------------------------------------- */
+
+bbox_t hexlist_t::edge(void)
+{
+  int l = 2 * world->map.width;
+  int r = -l;
+  int t = 2 * world->map.height;
+  int b = -t;
+
+  for (int i = 0; i < cnt; i++)
+    {
+      int x = list[i].x;
+      int y = list[i].y;
+      if (x < l) l = x;
+      if (x > r) r = x;
+      if (y > b) b = y;
+      if (y < t) t = y;
+    }
+  bbox_t bb;
+  bb.right = r;
+  bb.bottom = b;
+  bb.left = l;
+  bb.top = t;
+  return bb;
+}
+
+/* ----------------------------------------------------------------------
+--
+--
+--
+---------------------------------------------------------------------- */
+
+static int see_list_centred_y_sort (const void *elem1, const void *elem2)
+{
+  if (((see_t *)elem1)->cy < ((see_t *)elem2)->cy)
+    return (-1);
+  else
+    if (((see_t *)elem1)->cy > ((see_t *)elem2)->cy)
+      return (1);
+    else
+      return (0);
+}
+
+int hexlist_t::sum_distances (int x, int y)
+{
+  int total = 0;
+  for (int i = 0; i < cnt; i++)
+    {
+      see_t* ptr = &list[i];
+      int xd = abs(ptr->x - x);
+      int yd = abs(ptr->y - y);
+      total += min(xd, world->map.width - xd);
+      total += min(yd, world->map.width - yd);
+    }
+  return (total);
+}
+
+void hexlist_t::weight_points(void)
+{
+  if (cnt == 0) return;
+  for (int i = 0; i < cnt; i++)
+    list[i].weight = sum_distances(list[i].x, list[i].y);
+}
+
+point_t hexlist_t::find_weighted_centre(void)
+{
+  int lowest = 0;
+  for (int i = 0; i < cnt; i++)
+    {
+      if (list[i].weight < list[lowest].weight)
+	lowest = i;
+    }
+  return point_t(list[lowest].x, list[lowest].y);
+}
+
+void hexlist_t::centre_points (int cx, int cy)
+{
+  int x, y;
+
+  for (int loop = 0; loop < cnt; loop++)
+    {
+      see_t *ptr = &list[loop];
+      x = ptr->x - cx + (world->map.width / 2);
+
+      if (x < 0) x += world->map.width;
+      if (x >= world->map.width) x = x % world->map.width;
+    
+      if (ptr->x % 2 != x % 2)
+	x += 1;
+
+      y = ptr->y - cy + (world->map.height / 2);
+
+      if (y < 0) y += world->map.height;
+      if (y >= world->map.height) y = y % world->map.height;
+
+      ptr->cx = x;
+      ptr->cy = y;
+      printf("center (%s %d, %d) - (%d, %d) = (%d, %d)\n", world->map(ptr->x, ptr->y)->title, ptr->x, ptr->y, cx, cy, ptr->cx, ptr->cy);
+    }
+}
+
+bbox_t hexlist_t::centre(void)
+{
+  weight_points();
+  point_t centre = find_weighted_centre();
+  centre_points(centre.x, centre.y);
+  qsort (list, cnt, sizeof (see_t), see_list_centred_y_sort);
+  return edge();
+}
+
+void hexlist_t::zero_points (int cx, int cy)
+{
+  cx -= cx%2;
+  for (int i = 0; i < cnt; i++)
+    {
+      see_t *ptr = &list[i];
+      ptr->cx = ptr->cx - cx;
+      ptr->cy = ptr->cy - cy;
+      printf("zero (%s %d, %d) - (%d, %d) = (%d, %d)\n", world->map(ptr->x, ptr->y)->title, ptr->x, ptr->y, cx, cy, ptr->cx, ptr->cy);
+    }
+}
+
+bbox_t hexlist_t::zero(void)
+{
+  weight_points();
+  point_t centre = find_weighted_centre();
+
+  centre_points(centre.x, centre.y);
+
+  qsort (list, cnt, sizeof (see_t), see_list_centred_y_sort);
+  return edge();
+}
+
+fbox_t hexlist_t::fzero(void)
+{
+  fbox_t fb;
+  weight_points();
+  point_t centre = find_weighted_centre();
+
+  centre_points(centre.x, centre.y);
+  bbox_t bb = edge();
+  int w = bb.right - bb.left;
+  int h = bb.bottom - bb.top;
+  zero_points(w/2, h/2);
+
+  qsort (list, cnt, sizeof (see_t), see_list_centred_y_sort);
+
+  fb.left = 2 * world->map.width;
+  fb.right = -2 * world->map.width;
+  fb.top = 2 * world->map.height;
+  fb.bottom = -2 * world->map.height;
+
+  for (int i = 0; i < cnt; i++)
+    {
+      see_t *see = &list[i];
+      see->mx = 1.5 * see->cx;
+      see->my = sqrt(3) * (see->cy - abs(see->cx%2)/2.0);
+
+      if ((see->mx - 1.0) < fb.left)
+	fb.left = see->mx - 1.0;
+      if ((see->mx + 1.0) > fb.right)
+	fb.right = see->mx + 1.0;
+      if ((see->my - sqrt(3)/2.0) < fb.top)
+	fb.top = see->my - sqrt(3)/2.0;
+      if ((see->my + sqrt(3)/2.0) > fb.bottom)
+	fb.bottom = see->my + sqrt(3)/2.0;
+    }
+  return fb;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- build_list
+--
+---------------------------------------------------------------------- */
+
+void hexlist_t::build_list(bandlist_t *ulist)
+{
+  int work, i, j, *seen;
+  see_t *see_ptr;
+  int see_hex;
+
+  if ((seen = (int*)calloc (world->map.size, sizeof(int))) == NULL)
+    {
+      printf ("FATAL ERROR: Out of memory line __LINE__ of __FILE__.\n");
+      exit (EXIT_FAILURE);
+    }
+  for (work = 0; work < ulist->cnt; work++)
+    mark_hex(seen, ulist->list[work].xy, ulist->list[work].peak ? 4 : 3);
+  see_hex = 0;
+  for (j = 0; j < world->map.height; j++)
+    for (i = 0; i < world->map.width; i++)
+      if (seen[j * world->map.width + i])
+	see_hex++;
+
+  if ((see_ptr = (see_t*)calloc (see_hex, sizeof (see_t))) == NULL)
+    {
+      printf ("FATAL ERROR: Out of memory line __LINE__ of __FILE__.\n");
+      exit (EXIT_FAILURE);
+    }
+  see_hex = 0;
+  for (j = 0; j < world->map.height; j++)
+    for (i = 0; i < world->map.width; i++)
+      if (seen[j * world->map.width + i])
+	{
+	  see_ptr[see_hex].x = i;
+	  see_ptr[see_hex].y = j;
+	  see_ptr[see_hex].away = seen[j * world->map.width + i];
+	  see_hex++;
+	}
+  cnt = see_hex;
+  list = see_ptr;
+  free(seen);
+}
+
+hexlist_t::hexlist_t(world_t *w, bandlist_t* ulist)
+{
+  world = w; 
+  build_list(ulist);
+}
+
+hexlist_t::hexlist_t(world_t *w, int p)
+{
+  world = w;
+  bandlist_t* b = new bandlist_t(w, p);
+  build_list(b);
+  delete b;
+}
+
+void hexlist_t::mark_hex(int *seen, point_t xy, int depth)
+{
+  int i, j;
+  hex_t *hex = world->map(xy);
+  j = world->map.width * hex->xy.y + hex->xy.x;
+  if (seen[j] < depth)
+    seen[j] = depth;
+  if (depth > 1)
+    for (i = 0; i < 6; i++)
+      if (hex->adjacent(i))
+	mark_hex(seen, hex->adjacent(i)->xy, depth - 1);
+}
+
+hexlist_t::~hexlist_t()
+{
+  free(list);
+}
+
+/* ----------------------------------------------------------------------
+--
+-- build_unit_list
+--
+---------------------------------------------------------------------- */
+
+int bandlist_t::lizards_in_hex(hex_t *hex)
+{
+  band_t *band;
+  if ((band = (band_t*)hex->has_feature(BAND)))
+    {
+      return band->size();
+    }
+  else
+    return 0;
+}
+
+bandlist_t::bandlist_t(world_t *world, int player)
+{
+  int x, y;
+  hex_t *hex;
+  unit_t *work_unit;
+
+  printf("Building band list for player %d\n", player);
+
+  cnt = 0;
+  for (x = 0; x < world->map.width; x++)
+    for (y = 0; y < world->map.height; y++)
+      {
+	hex = world->map(x, y);
+	if ((hex->owner == player) && (lizards_in_hex(hex) > 0))
+	  cnt++;
+      }
+
+  /* cnt is upper limit on total number of possible units */
+
+  if (!(list = (unit_t*)calloc(1, sizeof(unit_t) * cnt)))
+    {
+      fprintf(stderr, "calloc failed in line __LINE__ of file __FILE__\n");
+      exit(EXIT_FAILURE);
+    }
+  cnt = 0;
+  for (x = 0; x < world->map.width; x++)
+    for (y = 0; y < world->map.height; y++)
+      {
+	hex = world->map(x, y);
+	if ((hex->owner == player) && (lizards_in_hex (hex) > 0))
+	  {
+	    work_unit = &list[cnt];
+	    work_unit->xy.x = x;
+	    work_unit->xy.y = y;
+	    work_unit->spy = 0;
+	    if (hex->has_feature(PEAK))
+	      work_unit->peak = 1;
+	    else
+	      work_unit->peak = 0;
+	    cnt++;
+	  }
+      }
+  printf("Player %d had %d units.\n", player, cnt);
+}
+
+bandlist_t::~bandlist_t()
+{
+  free(list);
+}
+@
+
+
+1.2
+log
+@Fix problems with zero centering.
+@
+text
+@d39 2
+a40 2
+      int x = list[i].cx;
+      int y = list[i].cy;
+a53 2
+      
+
+a70 22
+static int see_list_y_sort (const void *elem1, const void *elem2)
+{
+  if (((see_t *)elem1)->y < ((see_t *)elem2)->y)
+    return (-1);
+  else
+    if (((see_t *)elem1)->y > ((see_t *)elem2)->y)
+      return (1);
+    else
+      return (0);
+}
+
+static int see_list_x_sort (const void *elem1, const void *elem2)
+{
+  if (((see_t *)elem1)->x < ((see_t *)elem2)->x)
+    return (-1);
+  else
+    if (((see_t *)elem1)->x > ((see_t *)elem2)->x)
+      return (1);
+    else
+      return (0);
+}
+
+d73 2
+a74 7
+  int loop,
+    i,
+    j,
+    total = 0;
+  see_t *ptr;
+  
+  for (loop = 0; loop < cnt; loop ++)
+d76 1
+a76 1
+      ptr = &list[loop];
+a80 26
+
+      /*      if (ptr->x < x)
+	{
+	  i = ptr->x;
+	  j = x;
+	}
+      else
+	{
+	  i = x;
+	  j = ptr->x;
+	}
+      total += min (j - i, world->map.width - j + i);
+      
+      if (ptr->y < y)
+	{
+	  i = ptr->y;
+	  j = y;
+	}
+      else
+	{
+	  i = y;
+	  j = ptr->y;
+	}
+      total += min (j - i, world->map.height - j + i);
+      */
+      
+d88 2
+a89 2
+  for (int loop = 0; loop < cnt; loop ++)
+    list[loop].weight = sum_distances(list[loop].x, list[loop].y);
+d103 1
+a103 1
+void hexlist_t::centre_points (int centre_x, int centre_y)
+d110 1
+a110 1
+      x = ptr->x - centre_x + (world->map.width / 2);
+d118 1
+a118 1
+      y = ptr->y - centre_y + (world->map.height / 2);
+d125 1
+d144 3
+a146 5
+      ptr->cx = ptr->x - cx;
+      ptr->cy = ptr->y - cy;
+      //      if (ptr->cx < -world->map.width/2) ptr->cx += world->map.width/2;
+      //      if (ptr->cy < -world->map.height/2) ptr->cy += world->map.height/2;
+      printf("(%s %d, %d) - (%d, %d) = (%d, %d)\n", world->map(ptr->x, ptr->y)->title, ptr->x, ptr->y, cx, cy, ptr->cx, ptr->cy);
+d154 3
+a156 1
+  zero_points(centre.x, centre.y);
+d167 5
+a171 2
+  printf("%d %d\n", centre.x, centre.y);
+  zero_points(centre.x, centre.y);
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d5 2
+d24 31
+d64 1
+a64 1
+  if (((see_t *)elem1)->centred_y < ((see_t *)elem2)->centred_y)
+d67 1
+a67 1
+    if (((see_t *)elem1)->centred_y > ((see_t *)elem2)->centred_y)
+d95 1
+a95 1
+int HexList::sum_distances (int x, int y)
+d102 1
+a102 1
+
+d106 4
+d111 1
+a111 1
+      if (ptr->x < x)
+d115 3
+a117 1
+	} else {
+a120 1
+
+d122 1
+a122 1
+
+d127 3
+a129 1
+	} else {
+a132 1
+
+d134 2
+a136 1
+
+d140 1
+a140 1
+void HexList::weight_points(void)
+d147 1
+a147 1
+point_t HexList::find_weighted_centre(void)
+d149 8
+a156 5
+  see_t *ptr;
+  point_t centre;
+  int loop,
+    i = 0,
+    lowest;
+d158 3
+a160 1
+  if (cnt == 0) return centre;
+d162 4
+a165 1
+  lowest = list[0].weight;
+d167 10
+a176 3
+  for (loop = 0; loop < cnt; loop ++)
+    {
+      ptr = &list[loop];
+d178 2
+a179 7
+      if (lowest >= list[i].weight)
+	{
+	  centre.x = ptr->x;
+	  centre.y = ptr->y;
+	  lowest = list[i].weight;
+	}
+      i++;
+a180 1
+return centre;
+d183 1
+a183 1
+void HexList::centre_see_list (void)
+d189 1
+d192 1
+a192 1
+void HexList::centre_points (int centre_x, int centre_y)
+d194 11
+a204 1
+  see_t *ptr;
+d206 8
+a213 3
+  int loop,
+    x,
+    y;
+d215 5
+a219 4
+  for ( loop = 0; loop < cnt; loop++)
+    {
+      ptr = &list[loop];
+      x = ptr->x - centre_x + (world->map.width / 2);
+d221 2
+a222 5
+      if (x < 0) x += world->map.width;
+      if (x >= world->map.width) x = x % world->map.width;
+    
+      if (ptr->x % 2 != x % 2)
+	x += 1;
+d224 1
+a224 1
+      y = ptr->y - centre_y + (world->map.height / 2);
+d226 4
+a229 2
+      if (y < 0) y += world->map.height;
+      if (y >= world->map.height) y = y % world->map.height;
+d231 14
+a244 2
+      ptr->centred_x = x;
+      ptr->centred_y = y;
+d246 1
+d249 5
+d255 1
+a255 1
+HexList::HexList(world_t *w, BandList ulist)
+a259 1
+  world = w;
+d266 2
+a267 2
+  for (work = 0; work < ulist.cnt; work++)
+    mark_hex(seen, ulist.list[work].xy, ulist.list[work].peak ? 4 : 3);
+d286 1
+d294 5
+d300 1
+a300 1
+void HexList::mark_hex(int *seen, point_t xy, int depth)
+d302 5
+a306 3
+  int i;
+
+  //  printf("mark_hex([%d,%d], %d)\n", xy.x, xy.y, depth);
+d308 7
+a314 2
+  hex_t *hex = world->gethex(xy);
+  seen[world->map.width * hex->xy.y + hex->xy.x] = 1;
+d321 5
+d332 1
+a332 1
+int BandList::lizards_in_hex(hex_t *hex)
+d343 1
+a343 1
+BandList::BandList(world_t *world, int player)
+d355 1
+a355 1
+	hex = world->gethex(x, y);
+d371 1
+a371 1
+	hex = world->gethex(x, y);
+d378 1
+a378 1
+	    if (hex->terrain == PEAK)
+d388 1
+a388 1
+BandList::~BandList()
+d390 1
+a390 1
+  //  free(list);
+@

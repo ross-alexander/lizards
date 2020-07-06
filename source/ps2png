@@ -1,0 +1,6 @@
+#!/bin/sh
+
+RESOLUTION=200
+
+gs -sDEVICE=png16m -sOutputFile=$1-%d.png \
+-r${RESOLUTION} -dBATCH -dNOPAUSE -sPAPERSIZE=a4 $1.ps

@@ -1,0 +1,54 @@
+head	1.1;
+access;
+symbols;
+locks
+	rossa:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	99.02.20.10.57.54;	author rossa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include <stdlib.h>
+#include <stdio.h>
+#include "lizard.h"
+
+int new_add_order(World *world, order_t *order)
+{
+  world->order_list[world->num_orders] = malloc(sizeof(order_t));
+  memcpy(world->order_list[world->num_orders++], order, sizeof(order_t));
+  return 1;
+}
+
+new_hex_t* new_get_hex(World *world, coord xy)
+{
+  return &world->hexen[xy.x * world->y + xy.y];
+}
+
+coord new_move_coord(World *world, new_hex_t* hex, int dir)
+{
+  return hex->edge[dir];
+}
+
+feature_t *new_has_feature(new_hex_t *hex, int f)
+{
+  feature_t *ftmp;
+  for (ftmp = hex->chain; ftmp; ftmp = ftmp->chain)
+    {
+      if (ftmp->type == f) return ftmp;
+    }
+  return ftmp;
+}
+@

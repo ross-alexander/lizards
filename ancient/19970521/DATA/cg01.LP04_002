@@ -1,0 +1,57 @@
+Header(cg01, 2)
+ClanID(rda,Raging Ross)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - Spy Lizard at 4I moves SE (to 5J).
+ - Spy Lizard at 5J moves S (to 6J).
+
+ - 140 Black Lizards at 1G move SW (to 2F).
+ - Lizards attack 30 militia Lizards in free Den at 2F.
+ - Combat round 2! Standing Lizards: 133. Standing enemy Lizards: 0.
+ - Your Lizards at 2F emerge from the melee VICTORIOUS! They are now Good warriors.
+ - Your Lizards captured Yellow Den at 2F.
+ - 133 Black Lizards at 2F move NE (to 1G).
+
+ - 17 Grey, 195 Black Lizards at 1K move SE (to 2L).
+ - 17 Grey, 195 Black Lizards at 2L move SE (to 2M).
+ - Lizards eat from fertile hex 2M.
+
+ - Spy Lizard at 4I moves SE (to 5J).
+ - Spy Lizard at 5J moves S (to 6J).
+
+ - Spy Lizard at 32I moves NE (to 32J).
+ - Spy Lizard at 32J moves N (to 31J).
+Phase(development)
+
+ - Recruiting from Grey Den at 1K. 14 Grey lizards recruited from Den leaving 27 Den Lizards at 1K.
+
+ - Recruiting from Home Den at 2I. 14 Red lizards recruited from Den leaving 27 Den Lizards at 2I.
+
+ - Recruiting from Yellow Den at 2F. 34 Yellow lizards recruited from Den leaving 66 Den Lizards at 2F.
+ClanReport(Raging Ross)
+Den(1K, 27, Grey, 14 Grey, Sated, Average)
+
+Den(2F, 66, Yellow, 34 Yellow, Sated, Average)
+
+HomeDen(2I, 27, 1, 31 Red, 56 Black, Sated, Average)
+
+ - 1G Band of 133 Black (Hungry & Good) Lizards.
+ - 2M Band of 17 Grey, 195 Black (Sated & Average) Lizards.
+ - 31J Spy Lizard. Spy for 1 turns.
+ - 6J Spy Lizard. Spy for 1 turns.
+ - 6J Spy Lizard. Spy for 1 turns.
+ - 32I Spy Lizard. Spy for 1 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 2:
+
+ 01 -    775 Player 03, 'Dangerous Dan' (dan) Clan.
+ 02 -    773 Player 02, 'Jumping Jono' (jno) Clan.
+ 03 -    704 Player 04, 'Raging Ross' (rda) Clan.
+ 04 -    587 Player 01, 'Mike TB' (mtb) Clan.
+Trailer()

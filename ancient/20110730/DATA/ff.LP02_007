@@ -1,0 +1,34 @@
+Header(ff, 7, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+ - 80 Black Lizards at 10G begin chanting NW...
+ - Mist engulfs 10F as the hex rises out of the sea!
+ - Your black lizards have created a Swamp hex there. 
+ - Your 80 Black Lizards at 10G finish chanting.
+ - 24 Black Lizards here slowly fade to Red!
+Phase(movement)
+ - 11 Green Lizards at 9E move NW (to 9D).
+ - Something slimy rises from the deep and ATTACKS your Lizards at 9D!
+ - Combat round 1! Surviving Lizards: 0.
+ - The sea at 9D settles to leave no trace of your valiant Lizards...
+ - 50 Grey Lizards split at 9C and move SE (to 10D).
+ - 50 Grey Lizards at 10D move NE (to 9E).
+Phase(development)
+ - Recruiting from Yellow Den at 1K. 10 Yellow lizards recruited from Den leaving 21 Den Lizards at 1K.
+ - Recruiting from Grey Den at 9C. 11 Grey lizards recruited from Den leaving 23 Den Lizards at 9C.
+ - Recruiting from Home Den at 10G. 16 Black lizards recruited from Den leaving 30 Den Lizards at 10G.
+ClanReport(Jumping Jono)
+Den(1K,21,5,0,66,0,0,53,0,0)
+Den(9C,23,3,0,106,19,0,0,2,0)
+HomeDen(10G,30,4,24,36,0,74,0,0,0)
+ - 9E Band of 50 Grey (Famished & Average) Lizards.
+ - 10B Band of 110 Green (Sated & Average) Lizards.
+
+ * Clans Ranking at end of Turn 7:
+
+ 01 -    845 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    722 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

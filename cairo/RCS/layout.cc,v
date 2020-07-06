@@ -1,0 +1,166 @@
+head	1.1;
+access;
+symbols;
+locks
+	ralexand:1.1; strict;
+comment	@// @;
+
+
+1.1
+date	2012.08.28.14.44.52;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include <string>
+#include <map>
+#include <vector>
+#include <typeinfo>
+
+#include <assert.h>
+
+#include <cairomm/context.h>
+#include <librsvg/rsvg.h>
+
+#include "lizards.h"
+
+/* ----------------------------------------------------------------------
+--
+-- layout
+--
+---------------------------------------------------------------------- */
+
+layout_t::layout_t()
+{
+  size = cost = 0;
+}
+
+layout_t::layout_t(int j, int k)
+{
+  size = j;
+  cost = k;
+}
+
+point_t*& layout_t::operator[](int i)
+{
+  assert((i >= 0) && (i < size));
+  return offsets[i];
+}
+
+void layout_t::bounds()
+{
+  assert(size > 0);
+  x_min = x_max = offsets[0]->x;
+  y_min = y_max = offsets[0]->y;
+  for (int i = 1; i < size; i++)
+    {
+      int x = offsets[i]->x;
+      int y = offsets[i]->y;
+      if (x < x_min) x_min = x;
+      if (x > x_max) x_max = x;
+
+      if (y < y_min) y_min = y;
+      if (y > y_max) y_max = y;
+    }
+}
+
+grid_t* layout_t::realize()
+{
+  template_t *tmpl = new template_t(this);
+  return tmpl->realize();
+
+  x_max += x_max%2;
+  y_max += y_max%2;
+
+  x_min += x_min%2;
+  y_min += y_min%2;
+
+  int width = x_max - x_min + 1;
+  int height = y_max - y_min + 1;
+
+  //  width += width%2;
+  //  height += height%2;
+
+  printf("Width = %d height = %d\n", width, height);
+
+  point_t o(x_min, y_min);
+
+  printf("%d %d\n", o.x, o.y);
+
+  grid_t *grid = new grid_t(width, height);
+  for (int i = 0; i < size; i++)
+    {
+      char t[4];
+      point_t p(*(offsets[i]));
+      p -= o;
+      snprintf(t, 4, "%02d", i+1);
+      //      printf("%d %d\n", p.x, p.y);
+      hex_t *hex = new hex_t();
+      hex->setid(t);
+      grid->set(p, hex);
+    }
+  return grid;
+}
+
+/* ----------------------------------------------------------------------
+ --
+ -- layouts
+ --
+ ---------------------------------------------------------------------- */
+
+layouts_t::layouts_t(const char *f)
+{
+  FILE *stream = fopen(f, "r");
+  assert(stream);
+  char line[1024];
+
+  while(fgets(line, 1024, stream))
+    {
+      int cost;
+      int size;
+      int id;
+      if (sscanf(line, "LAYOUT %d %d %d", &id, &size, &cost))
+	{
+	  layout_t* t = new layout_t(size, cost);
+	  for (int j = 0; fgets(line, 1024, stream) && j < size; j++)
+	    {
+	      int lid, x, y;
+	      if (sscanf(line, "%d %d %d", &lid, &x, &y))
+		{
+		  point_t* p = new point_t(x, y);
+		  lid--;
+		  (*t)[lid] = p;
+		}
+	    }
+	  layouts[id] = t;
+	  t->bounds();
+	}
+    }
+  fclose(stream);
+}
+
+layout_t* layouts_t::layout(int id)
+{
+  return layouts[id];
+}
+
+layout_t*& layouts_t::operator[](int id)
+{
+  return layouts[id];
+}
+
+int layouts_t::size()
+{
+  return layouts.size();
+}
+
+@

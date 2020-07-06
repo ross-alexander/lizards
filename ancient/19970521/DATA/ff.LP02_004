@@ -1,0 +1,36 @@
+Header(ff, 4, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+ - Lob Order at 1K ignored as hex contain NO Yellow Lizards!
+Phase(movement)
+ - 10 Green Lizards split at 8K and move NW (to 8J).
+ - 10 Green Lizards at 8J move N (to 7J).
+ - Lizards eat from fertile hex 7J.
+ - 110 Green Lizards split at 8K and move SE (to 9L).
+ - 110 Green Lizards at 9L move SE (to 9A).
+Phase(development)
+ - Recruiting from Grey Den at 9C. 16 Grey lizards recruited from Den leaving 32 Den Lizards at 9C.
+ - Recruiting from Yellow Den at 1K. 17 Yellow lizards recruited from Den leaving 33 Den Lizards at 1K.
+ - Fertile hex planted at 10E by 11 Green Lizards.
+ - Recruiting from Home Den at 10G. 18 Black lizards recruited from Den leaving 36 Den Lizards at 10G.
+ - Surveying hex SE of 9C for Bridge. Grey Lizards build Bridge at 10D.
+ClanReport(Jumping Jono)
+Den(1K,33,5,0,66,0,0,17,0,0)
+
+Den(9C,32,3,0,106,33,0,0,2,0)
+
+HomeDen(10G,36,4,0,36,0,49,0,1,0)
+
+ - 7J Band of 10 Green (Sated & Average) Lizards.
+ - 9A Band of 110 Green (Famished & Average) Lizards.
+ - 10E Band of 11 Green (Peckish & Average) Lizards.
+ - 12D Spy Lizard. Spy for 3 turns.
+
+ * Clans Ranking at end of Turn 4:
+
+ 01 -    650 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -    524 Player 01, 'Raging Ross' (rda) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

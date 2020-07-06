@@ -1,0 +1,120 @@
+Header(cg01, 9)
+ClanID(rda,Raging Ross)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+
+ - 150 Black Lizards at 4P begin chanting S N...your Lizards at 4P are seized by a powerful force and hurled N!
+ - Only to be dumped at 32P.
+ - The Temple at 32P glows! Your 150 Black Lizards finish chanting.
+Phase(movement)
+
+ - 34 Green Lizards at 6I move NW (to 6H).
+ - 34 Green Lizards at 6H move SW (to 6G).
+ - Lizards eat from fertile hex 6G.
+
+ - 18 Yellow Lizards at 1C move NW (to 1B).
+ - Lizards attack 30 militia Lizards in free Den at 1B.
+ - Combat round 1! Standing Lizards: 11. Standing enemy Lizards: 26.
+ - Your Lizards flee from combat and remain at 1C.
+
+ - 57 Red Lizards at 1G move NW (to 1F).
+ - 57 Red Lizards at 1F move SW (to 1E).
+ - Lizards eat from fertile hex 1E.
+
+ - 30 Red Lizards at 3N move NW (to 2M).
+ - Lizards eat from fertile hex 2M.
+
+ - 30 Green Lizards at 29J move SE (to 29K).
+ - 30 Green Lizards at 29K move SE (to 30L).
+
+ - 17 Yellow Lizards at 6M move SE (to 7N).
+ - Lizards eat from fertile hex 7N.
+
+ - 10 Green Lizards split at 6K and move NW (to 6J).
+ - Lizards eat from fertile hex 6J.
+ - 10 Green Lizards at 6J move SW (to 6I).
+
+ - 10 Black Lizards at 1J move S (to 2J).
+
+ - 11 Red Lizards at 31P move N (to 30P).
+ - 11 Red Lizards at 30P move NE (to 29Q).
+ - Lizards eat from fertile hex 29Q.
+
+ - 55 Yellow Lizards at 1D move NW (to 32C).
+ - 55 Yellow Lizards at 32C move SW (to 1B).
+ - Lizards attack 26 militia Lizards in free Den at 1B.
+ - Combat round 3! Standing Lizards: 44. Standing enemy Lizards: 0.
+ - Your Lizards at 1B completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Yellow Den at 1B.
+
+ - 10 Green Lizards split at 6K and move NE (to 6L).
+ - 10 Green Lizards at 6L move NE (to 5M).
+
+ - 33 Grey Lizards at 1K move NW (to 1J).
+ - Lizards eat from fertile hex 1J.
+Phase(development)
+
+ - Recruiting from Red Den at 3N. 31 Red lizards recruited from Den leaving 60 Den Lizards at 3N.
+
+ - Recruiting from Grey Den at 1K. 16 Grey lizards recruited from Den leaving 31 Den Lizards at 1K.
+
+ - Recruiting from Yellow Den at 2F. 31 Yellow lizards recruited from Den leaving 59 Den Lizards at 2F.
+
+ - Recruiting from Green Den at 30I. 28 Green lizards recruited from Den leaving 53 Den Lizards at 30I.
+SpyRejoin: 6G
+SpyNative: 2K
+SpyNative: 30G
+SpyNative: 2AE
+SpyNative: 6E
+SpyNative: 28G
+SpyRejoin: 30L
+ClanReport(Raging Ross)
+Den(1B, 100, Yellow, 44 Yellow, Peckish, Good)
+
+Den(1K, 31, Grey, 16 Grey, Sated, Average)
+
+Den(2F, 59, Yellow, 31 Yellow, Sated, Average)
+
+HomeDen(2I, 50, 1, , Peckish, Average)
+
+Den(3N, 60, Red, 31 Red, Sated, Average)
+
+Den(6K, 70, Green, 8 Green, Peckish, Average)
+
+Den(6M, 48, Yellow, , Hungry, Average)
+
+Den(30I, 53, Green, 28 Green, Sated, Average)
+
+ - 1C Band of 11 Yellow (Sated & Average) Lizards.
+ - 1E Band of 57 Red (Sated & Average) Lizards.
+ - 1J Band of 33 Grey (Sated & Average) Lizards.
+ - 1O Band of 14 Grey (Hungry & Average) Lizards.
+ - 2J Band of 10 Black (Sated & Average) Lizards.
+ - 2M Band of 30 Red (Sated & Average) Lizards.
+ - 2N Band of 91 Black (Sated & Average) Lizards.
+ - 5M Band of 10 Green (Peckish & Average) Lizards.
+ - 6G Band of 1 Red, 34 Green (Sated & Average) Lizards.
+ - 6I Band of 10 Green (Sated & Average) Lizards.
+ - 7N Band of 23 Green, 17 Yellow, 33 Black (Sated & Average) Lizards.
+ - 29Q Band of 11 Red (Sated & Average) Lizards.
+ - 30L Band of 31 Green (Famished & Good) Lizards.
+ - 32P Band of 33 Red, 3 Grey, 183 Black (Sated & Average) Lizards.
+ - 32D Spy Lizard. Spy for 3 turns.
+ - 3R Spy Lizard. Spy for 3 turns.
+ - 9H Spy Lizard. Spy for 1 turns.
+ - 9L Spy Lizard. Spy for 1 turns.
+ - 27J Spy Lizard. Spy for 1 turns.
+ - 28H Spy Lizard. Spy for 1 turns.
+ - 28L Spy Lizard. Spy for 1 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 9:
+
+ 01 -   2310 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   2075 Player 01, 'Mike TB' (mtb) Clan.
+ 03 -   2075 Player 03, 'Dangerous Dan' (dan) Clan.
+ 04 -   1536 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

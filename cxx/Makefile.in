@@ -1,0 +1,81 @@
+CC	= @CC@
+
+# GLUT_CFLAGS	= -I/opt/openglut/include
+# GLUT_LIBS	= -L/opt/openglut/lib -lglut
+
+# GTS_CFLAGS	= @GTS_CFLAGS@
+# GTS_LIBS	= @GTS_LIBS@
+
+# GTKGL_CFLAGS	= @GTKGLEXT_CFLAGS@
+# GTKGL_LIBS	= @GTKGLEXT_LIBS@
+
+GTK_CFLAGS	= @GTK_CFLAGS@
+GTK_LIBS	= @GTK_LIBS@
+
+GLIB_CFLAGS	= @GLIB_CFLAGS@
+GLIB_LIBS	= @GLIB_LIBS@
+
+XML_CFLAGS	= @XMLPP_CFLAGS@
+XML_LIBS	= @XMLPP_LIBS@
+
+RSVG_CFLAGS	= @RSVG_CFLAGS@
+RSVG_LIBS	= @RSVG_LIBS@
+
+# GL_LIBS		= -lGL -lGLU -lglut
+CAIRO_CFLAGS	= @SVGCAIRO_CFLAGS@
+CAIRO_LIBS	= @SVGCAIRO_LIBS@
+
+
+CAIROMM_CFLAGS	= @CAIROMM_CFLAGS@
+CAIROMM_LIBS	= @CAIROMM_LIBS@
+
+CXXFLAGS = -g -Wall $(CAIRO_CFLAGS) $(RSVG_CFLAGS) $(GTK_CFLAGS) $(GLIB_CFLAGS) $(XML_CFLAGS)
+LDLIBS	= $(RSVG_LIBS) $(GTK_LIBS) $(GLIB_LIBS) $(XML_LIBS) $(CAIRO_LIBS)
+
+OBJECTS = debug.o misc.o base.o point.o feature.o hex.o map.o player.o world.o create.o hexlist.o \
+output-cairo.o output-svg.o output-cairo.o output-ps.o output.o \
+orders.o \
+worldopen.o worldmast.o worldshut.o tordbord.o clanreport.o clanrank.o terrain.o terrmast.o bordshuffle.o turn.o lizards.o
+
+all: lizards cairo
+
+Test0001.svg: lizards defs.svg
+	./lizards -osvg
+
+lizards: $(OBJECTS)
+	$(CXX) $(LDFLAGS) $^ $(LDLIBS) -o $@
+
+lizards.o: lizards.cc lizards.h
+
+feature.o: feature.cc lizards.h
+
+hex.o: hex.cc lizards.h
+
+point.o: point.cc lizards.h
+
+map.o: map.cc lizards.h
+
+create.o: create.cc lizards.h
+
+psprint.o: psprint.cc lizards.h
+
+world.o: world.cc lizards.h
+
+clanreport.o: clanreport.cc lizards.h
+
+clanrank.o: clanrank.cc lizards.h
+
+# ----------------------------------------------------------------------
+#
+# cairo
+#
+# ----------------------------------------------------------------------
+
+cairo:	point.o cairo.o
+	$(CXX) -g -Wall $^ $(XML_LIBS) $(GLIB_LIBS) $(RSVG_LIBS) $(CAIROMM_LIBS) -o $@
+
+cairo.o	: cairo.cc
+	$(CXX) -g -Wall $(XML_CFLAGS) $(GLIB_CFLAGS) $(SVGCAIRO_CFLAGS) $(CAIROMM_CFLAGS) $(RSVG_CFLAGS) -c $^ -o $@
+
+clean:
+	rm -f lizards $(OBJECTS) *~

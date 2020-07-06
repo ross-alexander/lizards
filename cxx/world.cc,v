@@ -1,0 +1,600 @@
+head	1.2;
+access;
+symbols;
+locks
+	ralexand:1.2; strict;
+comment	@// @;
+
+
+1.2
+date	2008.07.01.17.23.38;	author ralexand;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2001.04.29.20.09.15;	author rossa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Convert save to libxml++.
+@
+text
+@#include <string.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <alloca.h>
+#include <assert.h>
+
+#include <glib.h>
+#include <libxml/tree.h>
+#include <libxml/parser.h>
+#include <libxml/xpath.h>
+#include <libxml++/libxml++.h>
+
+#include "lizards.h"
+
+/* ----------------------------------------------------------------------
+--
+-- Constructors
+--
+---------------------------------------------------------------------- */
+
+
+world_t::world_t(int x, int y, const char *d, const char *n)
+{
+  dbg.log("world_t::world_t(%d, %d, %s, %s) called.", x, y, d, n);
+  turn = 0;
+  game = strdup(n);
+  dir = g_strdup(d);
+  path = g_strdup_printf("%s/%s.xml", d, game);
+  oldmaps = 0;
+  if (x > 1 && y > 1)
+    {
+      map = new map_t(x, y);
+      map->create_nowrap();
+    }
+}
+
+world_t::world_t(const char *p)
+{
+  game = NULL;
+  dir = NULL;
+  path = strdup(p);
+  load();
+}
+
+/* ----------------------------------------------------------------------
+--
+-- open_player_files
+--
+---------------------------------------------------------------------- */
+int world_t::open_player_files(void)
+{
+  char tmp[256];
+  for (int i = 0; i < num_players; i++)
+    {
+      sprintf(tmp, "%s%02d%02d.txt",
+	      game,
+	      turn,
+	      i);
+      if ((player[i]->fptr = fopen(tmp, "w")) == NULL)
+	exit(1);
+    }
+  return 0;
+}
+
+int world_t::close_player_files(void)
+{
+  for (int i = 0; i < num_players; i++)
+    if (player[i]->fptr != NULL)
+      {
+	fclose(player[i]->fptr);
+	player[i]->fptr = NULL;
+      }
+  return 0;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- get_world
+--
+---------------------------------------------------------------------- */
+void world_t::load()
+{
+  xmlpp::DomParser parser(path);
+
+  xmlDocPtr doc = xmlParseFile(path);
+  xmlXPathContextPtr ctx = xmlXPathNewContext(doc);
+  xmlXPathObjectPtr res;
+
+
+
+  if (doc == NULL)
+    {
+      fprintf(stderr, "Failed to open %s: %s\n", path, strerror(errno));
+      exit(1);
+    }
+  xmlNodePtr swamp = xmlDocGetRootElement(doc);
+  if (strcmp("swamp", (char*)swamp->name))
+    {
+      fprintf(stderr, "Root element is not 'swamp'\n");
+      exit(1);
+    }
+
+  if (xmlAttrPtr gameAttr = xmlHasProp(swamp, (xmlChar*)"game"))
+    {
+      free(game);
+      game = strdup((char*)gameAttr->children->content);
+    }
+
+  xmlAttrPtr dirAttr = xmlHasProp(swamp, (xmlChar*)"dir");
+  if (dirAttr == NULL)
+    {
+      fprintf(stderr, "Swamp missing attribute dir.\n");
+      free(dir);
+      exit(1);
+    }
+  dir = g_strdup((char*)dirAttr->children->content);
+
+  xmlAttrPtr turnAttr = xmlHasProp(swamp, (xmlChar*)"turn");
+  if (turnAttr == NULL)
+    {
+      fprintf(stderr, "Turn missing attribute turn.\n");
+      exit(1);
+    }
+  turn = strtol((char*)turnAttr->children->content, NULL, 10);
+
+  printf("%s [%s] turn %d\n", game, dir, turn);
+
+  if ((res = xmlXPathEvalExpression((xmlChar*)"//swamp/players/player", ctx)))
+    if (res->type == XPATH_NODESET)
+      {
+	xmlNodeSetPtr nodeset = res->nodesetval;
+	num_players = nodeset->nodeNr + 1;
+	player = new player_t*[num_players];
+
+	player[0] = new player_t;
+	player[0]->num = 0;
+	player[0]->ref = strdup("CG-00");
+	player[0]->clan = strdup("Circle Games");
+	player[0]->code = strdup("C-G");
+
+	for (int i = 0; i < nodeset->nodeNr; i++)
+	  {
+	    xmlNodePtr pn = nodeset->nodeTab[i];
+	    xmlAttrPtr cla = xmlHasProp(pn, (xmlChar*)"clan");
+	    xmlAttrPtr cda = xmlHasProp(pn, (xmlChar*)"code");
+	    xmlAttrPtr rfa = xmlHasProp(pn, (xmlChar*)"ref");
+	    xmlAttrPtr ida = xmlHasProp(pn, (xmlChar*)"indx");
+	    //	    xmlAttrPtr hd = xmlHasProp(pn, (xmlChar*)"homedens");
+	    int index = strtol((char*)ida->children->content, NULL, 10);
+	    player[index] = new player_t;
+	    player[index]->num = index;
+	    player[index]->ref = strdup((char*)rfa->children->content);
+	    player[index]->clan = strdup((char*)cla->children->content);
+	    player[index]->code = strdup((char*)cda->children->content);
+	    player[index]->home_dens = 0;
+	    printf("%d %s [%s] %s\n",
+		   player[index]->num,
+		   player[index]->code,
+		   player[index]->ref,
+		   player[index]->clan);
+	  }
+	xmlXPathFreeObject(res);
+      }
+
+  /* -------------------- 
+     oldmaps is sized turn+2 so fit both the current turns (since it
+     is zero based) and any new turn
+     -------------------- */
+
+  oldmaps = new map_t*[turn + 2];
+  for (int j = 0; j < turn+2; j++)
+    oldmaps[j] = 0;
+
+  if ((res = xmlXPathEvalExpression((xmlChar*)"//swamp/turn", ctx)))
+    if (res->type == XPATH_NODESET)
+      {
+	xmlNodeSetPtr nodeset = res->nodesetval;
+	int turns = nodeset->nodeNr;
+
+	for (int j = 0; j < turns; j++)
+	  {
+	    xmlNodePtr p = nodeset->nodeTab[j];
+	    char *t = (char*)xmlGetProp(p, (xmlChar*)"turn");
+	    if (t == NULL)
+	      {
+		fprintf(stderr, "Node <turn> missing turn attribute.\n");
+		exit(1);
+	      }
+	    int k = strtol(t, NULL, 10);
+	    free(t);
+	    if (k > turn)
+	      {
+		fprintf(stderr, "Found <turn> with turn (%d) > game turn (%d), ignoring turn.\n", k, turn);
+	      }
+	    else
+	      {
+		for (xmlNodePtr t = p->children; t != NULL; t = t->next)
+		  {
+		    if (strcmp((const char*)t->name, "map") == 0)
+		      oldmaps[k] = new map_t(t);
+		  }
+	      }
+	  }
+      }
+  map = new map_t(*oldmaps[turn]);
+
+  xmlXPathFreeContext(ctx);
+}
+
+/* ----------------------------------------------------------------------
+--
+-- put_world
+--
+---------------------------------------------------------------------- */
+void world_t::save()
+{
+  const char *ns = "";
+  xmlpp::Document doc("1.0");
+  xmlpp::Element *xn_swamp = doc.create_root_node("swamp", "", ns);
+  xn_swamp->set_attribute("game", game);
+  xn_swamp->set_attribute("dir", dir);
+  xn_swamp->set_attribute("turn", Glib::ustring::compose("%1", turn));
+
+  //  xn_swamp->set_attribute("width", Glib::ustring::compose("%1", map->width));
+  //  xn_swamp->set_attribute("height", Glib::ustring::compose("%1", map->height));
+
+  xmlpp::Element *xn_players = xn_swamp->add_child("players", ns);
+
+  for (int i = 1; i < num_players; i++)
+    {
+      xmlpp::Element *node = xn_players->add_child("player");
+      node->set_attribute("ref", player[i]->ref);
+      node->set_attribute("indx", Glib::ustring::compose("%1", player[i]->num));
+      node->set_attribute("clan", player[i]->clan);
+      node->set_attribute("code", player[i]->code);
+    }
+  /* --------------------
+
+     the oldmaps array is originally sized turn+2 so in general the
+     last entry should be NULL.  If it isn't then we delete the
+     existing entry and update with the current map.  If turn has been
+     increased then there is space anyway.
+
+     -------------------- */
+
+  if (oldmaps == NULL)
+    {
+      oldmaps = new map_t*[turn+1];
+      for (int k = 0; k < turn+1; k++)
+	oldmaps[k] = 0;
+    }
+
+  if (oldmaps[turn])
+    delete oldmaps[turn];
+
+  oldmaps[turn] = new map_t(*map);
+
+  for (int i = 0; i <= turn; i++)
+    if (oldmaps[i])
+      {
+	xmlpp::Element *xn_turn = xn_swamp->add_child("turn");
+	xn_turn->set_attribute("turn", Glib::ustring::compose("%1", turn));
+	oldmaps[i]->save_xml(xn_turn);
+      }
+  doc.write_to_file_formatted(path);
+}
+
+world_t::~world_t()
+{
+  dbg.log("world_t::~world_t() entered.");
+}
+
+void world_t::debug(FILE *stream)
+{
+  fprintf(stream, "Swamp(game=%s turn=%d)\n", game, turn);
+  map->debug(stream);
+}
+
+player_t *world_t::get_player(int p)
+{
+  assert(p >= 0 && p <= num_players);
+  return player[p];
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d4 2
+d7 1
+d10 2
+d15 5
+a19 9
+hex_t *world_t::gethex(const int x, const int y)
+{
+  return map.hex(x, y);
+};
+
+hex_t *world_t::gethex(const point_t &p)
+{
+  return map.hex(p.x, p.y);
+};
+a20 4
+hex_t *world_t::gethex(const int s)
+{
+  return map.hex(s);
+}
+d22 1
+a22 1
+world_t::world_t(int x, int y, const char *p, const char *n)
+d24 1
+a24 1
+  debug.log("world_t::world_t(%d, %d, %s, %s) called.", x, y, p, n);
+d27 4
+a30 2
+  path = strdup(p);
+  if (x > 1 && y > 0)
+d32 2
+a33 2
+      map.resize(x, y);
+      map.create_nowrap();
+d37 1
+a37 1
+void world_t::desc_short(FILE *stream)
+d39 4
+a42 1
+  fprintf(stream, "<game path=\"%s\" title=\"%s\">\n", path, game);
+d45 1
+a45 1
+/*----------------------------------------------------------------------
+d47 1
+a47 1
+-- get_player_list
+d50 1
+a50 1
+void world_t::get_player_list (FILE *fptr)
+d52 2
+a53 9
+  char work_string [255];
+  char *str;
+  int i, nplayers;
+
+  fscanf(fptr, "%3s %d\n", work_string, &nplayers);
+  debug.log("Player header (%d players)", nplayers);
+  num_players = nplayers; /* this includes player 0 */
+  player = new player_t*[num_players];
+  for (i = 1; i < nplayers && fgets (work_string, 255, fptr); i++)
+d55 8
+a62 15
+      player_t *p = new player_t;
+      p->num = i;
+      str = strtok(work_string, ","); p->ref = strdup(str);
+      str = strtok(NULL, ","); p->num = atoi(str);
+      str = strtok(NULL, ","); p->code = strdup(str);
+      str = strtok(NULL, ","); p->clan = strdup(str);
+      str = strtok(NULL, "\n"); p->status = atoi(str);
+      player[i] = p;
+  }
+
+  player[0] = new player_t;
+  player[0]->num = 0;
+  player[0]->ref = strdup("CG-00");
+  player[0]->clan = strdup("Circle Games");
+  player[0]->code = strdup("C-G");
+d65 1
+a65 1
+void world_t::save_player_list (FILE *fptr)
+d67 7
+a73 10
+  int i;
+  fprintf (fptr, "PHR %d\n", num_players);
+
+  for (i = 1; i < num_players; i++)
+    fprintf (fptr, "PLR %s,%d,%s,%s,%d\n",
+	     player[i]->ref,
+	     player[i]->num,
+	     player[i]->code,
+	     player[i]->clan,
+	     player[i]->status);
+d83 6
+a88 2
+  int length;
+  char *filename;
+a89 3
+  length = strlen(path) + strlen(game) + strlen(".xml");
+  filename = (char*)alloca(length + 2);
+  sprintf (filename, "%s/%s.xml", path, game);
+a90 1
+  xmlDocPtr doc = xmlParseFile(filename);
+d93 1
+a93 1
+      fprintf(stderr, "Failed to open %s: %s\n", filename, strerror(errno));
+d103 1
+a103 2
+  xmlAttrPtr widthAttr = xmlHasProp(swamp, (xmlChar*)"width");
+  if (widthAttr == NULL)
+d105 2
+a106 2
+      fprintf(stderr, "Swamp missing attribute width.\n");
+      exit(1);
+d109 2
+a110 2
+  xmlAttrPtr heightAttr = xmlHasProp(swamp, (xmlChar*)"height");
+  if (heightAttr == NULL)
+d112 2
+a113 1
+      fprintf(stderr, "Swamp missing attribute height.\n");
+d116 1
+d118 2
+a119 9
+  exit(0);
+
+  FILE *fptr;
+  int i, x, y, nfeatures, width, height;
+  char flag_str[200], title[40], tag[4];
+  hex_t *hex;
+
+
+  if ((fptr = fopen (filename, "r")) == NULL)
+d121 2
+a122 2
+      printf ("FATAL ERROR: Unable to read %s file.\n", filename);
+      exit (EXIT_FAILURE);
+d124 3
+a126 1
+  debug.log("Opened file %s for reading.", filename);
+d128 12
+a139 2
+  fscanf (fptr, "%s %40s,%d,%d,%d,%ld\n", tag, title, &width, &height, &turn, &due);
+  debug.log("World (%s %s %d %d %d %ld) opened.", tag, title, width, height, turn, due);
+d141 23
+a163 3
+  fscanf (fptr, "%s %200s\n", tag, flag_str);
+  debug.log("Flags %s", flag_str);
+  get_player_list(fptr);
+d165 8
+a172 1
+  map.resize(width, height);
+d174 2
+a175 2
+  for (y = 0; y < height; y++)
+    for (x = 0; x < width; x++)
+d177 4
+a180 7
+	int terrain;
+	hex = map.hex(x, y);
+	fscanf(fptr, "%s %d %d %s %d %d ", tag, &hex->xy.x, &hex->xy.y, title,
+	       &terrain, &hex->owner);
+	hex->terrain = (Terrain)terrain;
+	hex->title = strdup(title);
+	for (i = 0; i < 6; i++)
+d182 21
+a202 5
+	    point_t xy;
+	    int invalid;
+	    fscanf(fptr, "%d %d %d", &invalid, &xy.x, &xy.y);
+	    if (!invalid)
+	      hex->set_adjacent(i, gethex(xy));
+a203 1
+	fscanf(fptr, "\n");
+d205 3
+a207 29
+  for (i = 0; i < nfeatures; i++)
+    {
+      int type, x, y;
+      fscanf(fptr, "%s %d ", tag, &type);
+      switch(type)
+	{
+	case DEN:
+	  {
+	    den_t *den = new den_t;
+	    fscanf(fptr, "%d %d %d", &den->owner, &x, &y);
+	    fscanf(fptr, "%d %d %d %d", &den->pop, &den->hunger,
+		   &den->type, &den->home);
+	    gethex(x, y)->add_feature(den);
+	    break;
+	  }
+	case BAND:
+	  {
+	    band_t *band = new band_t;
+	    fscanf(fptr, "%d %d %d", &band->owner, &x, &y);
+	    fscanf(fptr, "%d %d %d %d %d %d %d",
+		   &band->colour[RED], &band->colour[GREEN],
+		   &band->colour[GREY], &band->colour[BLACK],
+		   &band->colour[YELLOW],
+		   &band->hunger, &band->immobile);
+	    break;
+	  }
+	}
+    }
+  fclose(fptr);
+d217 9
+a225 12
+  FILE *fptr;
+  int length, x, y, nfeatures;
+  hex_t *hex;
+  char *filename;
+
+  nfeatures = 0;
+  for (y = 0; y < map.height; y++)
+    for (x = 0; x < map.width; x++)
+      {
+	hex = map.hex(x, y);
+	nfeatures += hex->num_features();
+      }
+d227 1
+a227 14
+  length = strlen(path) + strlen(WORLD_STAT_F) + strlen(game);
+  filename = (char*)alloca(length + 3);
+  sprintf (filename, "%s/%s.%s", path, game, WORLD_STAT_F);
+
+  if ((fptr = fopen (filename, "w")) == 0)
+  {
+    printf ("FATAL ERROR: Unable to write %s file.\n", filename);
+    exit (EXIT_FAILURE);
+  }
+  fprintf (fptr, "HDR %s,%d,%d,", game, map.width, map.height);
+  fprintf (fptr, "%d,", turn);
+  fprintf (fptr, "%ld\n", due);
+  fprintf (fptr, "FLG %s\n", flags & LIZ_VICTORY ? "VICTORY" : "");
+  save_player_list(fptr);
+d229 1
+a229 2
+  nfeatures = 0;
+  for (int i = 0; i < map.size; i++)
+d231 5
+a235 2
+      map.hex(i)->save(fptr);
+      map.hex(i)->save_features(fptr);
+d237 6
+a242 15
+  fclose(fptr);
+  char tmp[10];
+  xmlDocPtr doc = xmlNewDoc((xmlChar*)"1.0");
+  xmlNodePtr swamp = xmlNewNode(NULL, (xmlChar*)"swamp");
+  xmlDocSetRootElement(doc, swamp);
+  xmlNewProp(swamp, (xmlChar*)"game", (xmlChar*)game);
+  sprintf(tmp, "%d", map.width);
+  xmlNewProp(swamp, (xmlChar*)"width", (xmlChar*)tmp);
+
+  sprintf(tmp, "%d", map.height);
+  xmlNewProp(swamp, (xmlChar*)"height", (xmlChar*)tmp);
+
+  //xmlNsPtr ns = xmlNewNs(swamp, NULL, (xmlChar*)"lizards");
+  //  xmlSetNs(swamp, ns);
+  xmlNsPtr ns = NULL;
+d244 3
+a246 3
+  xmlNodePtr ply = xmlNewNode(ns, (xmlChar*)"players");
+  xmlAddChild(swamp, ply);
+  for (int i = 1; i < num_players; i++)
+d248 3
+a250 7
+      xmlNodePtr node = xmlNewNode(ns, (xmlChar*)"player");
+      xmlNewProp(node, (xmlChar*)"ref", (xmlChar*)player[i]->ref);
+      sprintf(tmp, "%d", player[i]->num);
+      xmlNewProp(node, (xmlChar*)"indx", (xmlChar*)tmp);
+      xmlNewProp(node, (xmlChar*)"code", (xmlChar*)player[i]->code);
+      xmlNewProp(node, (xmlChar*)"clan", (xmlChar*)player[i]->clan);
+      xmlAddChild(ply, node);
+d252 14
+a265 3
+  xmlAddChild(swamp, map.save_xml(ns));
+  xmlSaveFile("liz.xml", doc);
+  xmlFreeDoc(doc);
+d270 13
+a282 1
+  debug.log("world_t::~world_t() entered.");
+@

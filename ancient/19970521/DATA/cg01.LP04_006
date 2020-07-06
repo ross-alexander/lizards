@@ -1,0 +1,134 @@
+Header(cg01, 6)
+ClanID(rda,Raging Ross)
+Spawning(off)
+Phase(world)
+DenOverpopulation: ¸úÿ¿Húÿ¿F 4
+Phase(artillery)
+Phase(movement)
+
+ - Spy Lizard at 5F moves S (to 6F).
+ - Spy Lizard at 6F moves SW (to 6E).
+
+ - 10 Green Lizards split at 6K and move N (to 5K).
+ - 10 Green Lizards at 5K move NW (to 5J).
+
+ - Spy Lizard at 29F moves N (to 28F).
+ - Spy Lizard at 28F moves N (to 27F).
+
+ - Spy Lizard at 5N moves NE (to 4O).
+ - Spy Lizard at 4O moves NE (to 4P).
+
+ - 113 Black Lizards split at 30I and move SE (to 31J).
+ - Lizards eat from fertile hex 31J.
+ - 113 Black Lizards at 31J move SE (to 31K).
+
+ - Spy Lizard at 4I moves S (to 5I).
+ - Spy Lizard at 5I moves S (to 6I).
+
+ - 34 Green Lizards split at 30I and move N (to 29I).
+ - Lizards eat from fertile hex 29I.
+ - 34 Green Lizards at 29I move NE (to 29J).
+
+ - Spy Lizard at 31B moves NW (to 30A).
+
+ - 24 Green, 35 Black Lizards split at 6K and move SE (to 7L).
+ - 24 Green, 35 Black Lizards at 7L move NE (to 6M).
+ - Lizards attack 15 militia Lizards in free Den at 6M.
+ - Combat round 3! Standing Lizards: 56. Standing enemy Lizards: 0.
+ - Your Lizards at 6M completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Yellow Den at 6M.
+
+ - Spy Lizard splits at 1D and moves N (to 32D).
+
+ - Spy Lizard at 3D moves SW (to 3C).
+ - Spy Lizard at 3C moves SW (to 4B).
+
+ - Spy Lizard at 4E moves SW (to 5D).
+ - Spy Lizard at 5D moves SW (to 5C).
+
+ - Spy Lizard at 30G moves N (to 29G).
+ - Spy Lizard at 29G moves N (to 28G).
+
+ - Spy Lizard at 2G moves S (to 3G).
+ - Spy Lizard at 3G moves S (to 4G).
+
+ - Spy Lizard at 32G moves NE (to 32H).
+
+ - Spy Lizard splits at 1O and moves SE (to 2P).
+ - Spy Lizard at 2P moves SE (to 2Q).
+
+ - 3 Grey, 183 Black Lizards at 5M move NE (to 5N).
+ - 3 Grey, 183 Black Lizards at 5N move NE (to 4O).
+
+ - 8 Yellow Lizards split at 1D and move SW (to 1C).
+ - Lizards eat from fertile hex 1C.
+
+ - 29 Red Lizards split at 1O and move N (to 32O).
+ - 29 Red Lizards at 32O move NE (to 32P).
+
+ - Spy Lizard at 2C moves NW (to 2B).
+ - Spy Lizard at 2B moves NW (to 1A).
+
+ - Spy Lizard at 6Q moves NE (to 6R).
+ - Spy Lizard at 6R moves SE (to 6S).
+ - Spy Lizard MIRED in Swamp at 6S for next turn.
+Phase(development)
+
+ - Recruiting from Home Den at 2I. 14 Red lizards recruited from Den leaving 27 Den Lizards at 2I.
+
+ - Recruiting from Yellow Den at 2F. 36 Yellow lizards recruited from Den leaving 68 Den Lizards at 2F.
+
+ - Recruiting from Green Den at 30I. 29 Green lizards recruited from Den leaving 54 Den Lizards at 30I.
+ClanReport(Raging Ross)
+Den(1K, 41, Grey, 17 Grey, Peckish, Average)
+
+Den(2F, 68, Yellow, 36 Yellow, Sated, Average)
+
+HomeDen(2I, 27, 1, 57 Red, Sated, Average)
+
+Den(3N, 71, Red, 32 Red, Peckish, Average)
+
+Den(6K, 83, Green, , Peckish, Average)
+
+Den(6M, 50, Yellow, 23 Green, 33 Black, Peckish, Good)
+
+Den(30I, 54, Green, 29 Green, Sated, Average)
+
+ - 1C Band of 8 Yellow (Sated & Average) Lizards.
+ - 1M Band of 14 Grey (Hungry & Average) Lizards.
+ - 4O Band of 3 Grey, 183 Black (Famished & Good) Lizards.
+ - 5J Band of 10 Green (Peckish & Average) Lizards.
+ - 6J Band of 2 Black (Sated & Average) Lizards.
+ - 29J Band of 34 Green (Sated & Good) Lizards.
+ - 31I Band of 20 Yellow (Starved & Average) Lizards.
+ - 31J Band of 10 Black (Sated & Average) Lizards.
+ - 31K Band of 113 Black (Sated & Average) Lizards.
+ - 32P Band of 29 Red (Peckish & Average) Lizards.
+ - 1Q Spy Lizard. Spy for 3 turns.
+ - 31R Spy Lizard. Spy for 3 turns.
+ - 1A Spy Lizard. Spy for 3 turns.
+ - 6S Spy Lizard. Spy for 3 turns.
+ - 30A Spy Lizard. Spy for 3 turns.
+ - 6E Spy Lizard. Spy for 2 turns.
+ - 5C Spy Lizard. Spy for 2 turns.
+ - 27F Spy Lizard. Spy for 2 turns.
+ - 6I Spy Lizard. Spy for 1 turns.
+ - 2K Spy Lizard. Spy for 1 turns.
+ - 32H Spy Lizard. Spy for 1 turns.
+ - 4B Spy Lizard. Spy for 1 turns.
+ - 4P Spy Lizard. Spy for 1 turns.
+ - 4G Spy Lizard. Spy for 1 turns.
+ - 28G Spy Lizard. Spy for 1 turns.
+ - 32D Spy Lizard. Spy for 0 turns.
+ - 2Q Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 6:
+
+ 01 -   1499 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   1475 Player 03, 'Dangerous Dan' (dan) Clan.
+ 03 -   1350 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -   1294 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

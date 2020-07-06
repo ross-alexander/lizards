@@ -1,0 +1,117 @@
+head	1.2;
+access;
+symbols;
+locks
+	rossa:1.2; strict;
+comment	@# @;
+
+
+1.2
+date	99.03.16.22.47.42;	author rossa;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.03.16.20.30.13;	author rossa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Close for the day (16.3.1999).
+@
+text
+@1999-03-16:
+	Customstart now working.
+	Still problems with allocating dens when world small.
+	Spies should load and save correctly.
+	PSCENPRN now works correctly.
+	fill.c completed but escape clauses in random loops removed.
+	lay_island_II modified in fill.c to correctly fix the land percentage.
+
+1999-03-15:
+	Start work on removing the binary save file.
+	Fix worldfill, worldpop and worldfix.
+	World creation almost finished except custom start.
+	Add template field to hex.
+	Remove old_hex definition.
+	Set feature ownership correctly in worldfix.
+	Features now save correctly.
+	Spies don't currently save or load from file.
+
+1999-03-08:
+	WorldShut finished except turns undisturbed for building.
+
+1999-03-07:
+	showhex extended to show 5x4 hexes and dens, fertile.
+	MOVE order almost finished.
+	SPLIT order done.
+	RECRUIT order almost done.
+	SEA MONSTER combat now works.
+	Lots of old code removed.
+	new_hex_t renamed to hex_t.
+	World renamed to world_t.
+	TextOrderConvert now uses proper structure including jump table.
+
+1999-03-01: showhex written.
+	This is help play the game by actually seeing what's going
+	on.
+
+	MOVE order needs fixing about not reporting illegal hex etc.
+
+1999-02-20: Start of new lizards.
+	This involves splitting features from terrain leaving the following
+	terrain features: PLAIN, WATER, SWAMP, PEAK & SCRUB.  The features
+	are DEN, HOMEDEN, BAND, TEMPLE, RUIN, RAFT, BRIDGE, FERTILE,
+	VOLCANO, WHIRLPOOL & CURSED.
+
+	Spies are currently treated although the only reason is that
+	there can be more than one spy per hex.  Better to leave spies
+	alone for the moment.
+
+	Complete TERRMAST in libturn.
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 8
+d10 8
+a17 8
+	Start work on removing the binary save file
+	Fix worldfill, worldpop and worldfix
+	World creation almost finished except custom start
+	Add template field to hex
+	Remove old_hex definition
+	Set feature ownership correctly in worldfix
+	Features now save correctly
+	Spies don't currently save or load from file
+d20 1
+a20 1
+	WorldShut finished except turns undisturbed for building
+d23 9
+a31 9
+	showhex extended to show 5x4 hexes and dens, fertile
+	MOVE order almost finished
+	SPLIT order done
+	RECRUIT order almost done
+	SEA MONSTER combat now works
+	Lots of old code removed
+	new_hex_t renamed to hex_t
+	World renamed to world_t
+	TextOrderConvert now uses proper structure including jump table
+d33 1
+a33 1
+1999-03-01: showhex written
+d39 1
+a39 1
+1999-02-20: Start of new lizards
+@

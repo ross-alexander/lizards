@@ -1,0 +1,89 @@
+1999-07-14:
+	Check that it would compile with C++.
+
+1999-04-13:
+	Modify clanrank.c so calculating victory points is in a
+	seperate function.  Fix customstart.c.  Change save_player_list
+	so it prints out all players except player 0.
+
+1999-04-03:
+	Change player structure so that players now have a
+	status.  This will be BLANK (never initialised),
+	ACTIVE (currently in game), WITHDREW (volentarily left the
+	game) and EXTINCT (wiped out).  It may useful to record
+	which turn they exited the game.  This change means that
+	player[i] will always be a valid pointer.  However, a check
+	will be done to check their status.
+	
+1999-03-31:
+	Fix date printing in debug.
+	Add decode stuff to PRCS archive.
+	Decode now reads in the file and correctly reprints it.
+	decode.scm now displays bands and dens.
+
+1999-03-17:
+	Fix bug in pscenprn.
+	Alter worldinit so that ALL player information including
+	template startup (NOT custom template but rather a file name)
+	used in worldinit.  The points and startup field added to
+	player struct.
+
+	The structure of the init file is
+		REF,CLAN,NAME,STARTUP
+
+	TORDBORD now compiles again with orders sort of working (not
+	tested at all).
+
+	world->num_players now includes player 0.  This makes memory
+	allocation and loops much simpler and fits in a lot better
+	with C.
+
+1999-03-16:
+	Customstart now working.
+	Still problems with allocating dens when world small.
+	Spies should load and save correctly.
+	PSCENPRN now works correctly.
+	fill.c completed but escape clauses in random loops removed.
+	lay_island_II modified in fill.c to correctly fix the land percentage.
+
+1999-03-15:
+	Start work on removing the binary save file.
+	Fix worldfill, worldpop and worldfix.
+	World creation almost finished except custom start.
+	Add template field to hex.
+	Remove old_hex definition.
+	Set feature ownership correctly in worldfix.
+	Features now save correctly.
+	Spies don't currently save or load from file.
+
+1999-03-08:
+	WorldShut finished except turns undisturbed for building.
+
+1999-03-07:
+	showhex extended to show 5x4 hexes and dens, fertile.
+	MOVE order almost finished.
+	SPLIT order done.
+	RECRUIT order almost done.
+	SEA MONSTER combat now works.
+	Lots of old code removed.
+	new_hex_t renamed to hex_t.
+	World renamed to world_t.
+	TextOrderConvert now uses proper structure including jump table.
+
+1999-03-01: showhex written.
+	This is help play the game by actually seeing what's going
+	on.
+
+	MOVE order needs fixing about not reporting illegal hex etc.
+
+1999-02-20: Start of new lizards.
+	This involves splitting features from terrain leaving the following
+	terrain features: PLAIN, WATER, SWAMP, PEAK & SCRUB.  The features
+	are DEN, HOMEDEN, BAND, TEMPLE, RUIN, RAFT, BRIDGE, FERTILE,
+	VOLCANO, WHIRLPOOL & CURSED.
+
+	Spies are currently treated although the only reason is that
+	there can be more than one spy per hex.  Better to leave spies
+	alone for the moment.
+
+	Complete TERRMAST in libturn.

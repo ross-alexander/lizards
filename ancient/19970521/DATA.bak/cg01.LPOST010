@@ -1,0 +1,1094 @@
+/Gameletter {(cg01)} def
+/Turnnumber {(10)} def
+/NTN {(11)} def
+/Date {(1/1/1990)} def
+/saveobj save def
+/Shadow_Code {(mtb)} def
+Map_Page_R
+-1190 140 Location_R
+(Mike TB Clan World View for Lizards! Game cg01 Turn 10 Page 1 of 2. World size 1A to 32AF) Map_Page_Num
+620 475 wat (4J) Small
+585 450 wat (4I) Small
+655 450 wat (4K) Small
+620 425 bru (5J) Small
+585 400 bru (5I) Small
+655 400 swp (5K) Small
+550 425 wat (5H) Small
+690 425 wat (5L) Small
+620 375 fer (6J) Small (mtb) Owner (SPY) Troop_Number
+585 350 swp (6I) Small (rda) Owner (10) Troop_Number
+655 350 gden (6K) Small (rda) Owner
+550 375 wat (6H) Small
+690 375 wat (6L) Small
+655 300 wat (7K) Small
+480 325 grden (7F) Small (Free) Owner
+445 300 wat (7E) Small
+515 300 wat (7G) Small
+620 325 fer (7J) Small
+550 325 wat (7H) Small
+690 325 wat (7L) Small
+585 300 wat (7I) Small
+760 325 fer (7N) Small (rda) Owner (73) Troop_Number
+725 300 wat (7M) Small
+795 300 wat (7O) Small
+655 250 wat (8K) Small
+620 275 wat (8J) Small
+690 275 wat (8L) Small
+585 250 wat (8I) Small
+725 250 wat (8M) Small
+480 275 wat (8F) Small
+445 250 wat (8E) Small
+515 250 wat (8G) Small
+410 275 fer (8D) Small
+550 275 wat (8H) Small
+760 275 wat (8N) Small
+795 250 wat (8O) Small
+830 275 pla (8P) Small
+445 200 fer (9E) Small
+655 200 fer (9K) Small (mtb) Owner (83) Troop_Number
+620 225 bru (9J) Small
+690 225 wat (9L) Small
+585 200 fer (9I) Small
+725 200 fer (9M) Small
+760 225 swp (9N) Small (mtb) Owner (SPY) Troop_Number
+795 200 tem (9O) Small (jno) Owner (223) Troop_Number
+480 225 pla (9F) Small (mtb) Owner (SPY) Troop_Number
+515 200 fer (9G) Small
+410 225 wat (9D) Small
+550 225 wat (9H) Small
+830 225 wat (9P) Small
+445 150 pla (10E) Small
+410 175 wat (10D) Small
+480 175 rden (10F) Small (Free) Owner
+375 150 swp (10C) Small
+515 150 swp (10G) Small
+620 175 grden (10J) Small (mtb) Owner (113) Troop_Number
+585 150 swp (10I) Small
+655 150 bru (10K) Small (mtb) Owner (46) Troop_Number
+690 175 wat (10L) Small
+725 150 rden (10M) Small (mtb) Owner (166) Troop_Number
+760 175 pla (10N) Small
+795 150 pla (10O) Small
+550 175 wat (10H) Small
+830 175 wat (10P) Small
+445 100 wat (11E) Small (mtb) Owner (61) Troop_Number
+410 125 wat (11D) Small
+480 125 fer (11F) Small
+375 100 wat (11C) Small
+515 100 wat (11G) Small
+620 125 fer (11J) Small
+585 100 wat (11I) Small
+655 100 wat (11K) Small
+550 125 wat (11H) Small
+690 125 wat (11L) Small
+725 100 wat (11M) Small
+760 125 fer (11N) Small
+795 100 wat (11O) Small
+830 125 wat (11P) Small
+865 100 wat (11Q) Small
+340 125 swp (11B) Small
+305 100 wat (11A) Small
+410 75 bru (12D) Small
+480 75 wat (12F) Small
+445 50 wat (12E) Small
+375 50 wat (12C) Small
+515 50 wat (12G) Small
+620 75 bri (12J) Small (mtb) Owner (10) Troop_Number
+585 50 wat (12I) Small
+655 50 wat (12K) Small
+550 75 wat (12H) Small
+690 75 wat (12L) Small
+760 75 wat (12N) Small
+725 50 wat (12M) Small
+795 50 wat (12O) Small (mtb) Owner (116) Troop_Number
+830 75 pla (12P) Small
+865 50 wat (12Q) Small
+340 75 whi (12B) Small
+305 50 wat (12A) Small
+270 75 vol (12AF) Small
+340 25 bru (13B) Small (mtb) Owner (SPY) Troop_Number
+305 0 swp (13A) Small
+375 0 bru (13C) Small
+410 25 wat (13D) Small
+480 25 wat (13F) Small
+445 0 fer (13E) Small
+515 0 wat (13G) Small
+550 25 wat (13H) Small
+585 0 rden (13I) Small (mtb) Owner (74) Troop_Number
+620 25 fer (13J) Small
+690 25 wat (13L) Small
+655 0 fer (13K) Small
+760 25 swp (13N) Small
+725 0 swp (13M) Small
+795 0 swp (13O) Small
+830 25 wat (13P) Small
+865 0 fer (13Q) Small
+270 25 wat (13AF) Small
+printing
+Map_Page_R
+-1190 140 Location_R
+(Mike TB Clan World View for Lizards! Game cg01 Turn 10 Page 2 of 2. World size 1A to 32AF) Map_Page_Num
+340 775 wat (14B) Small
+305 750 swp (14A) Small
+375 750 fer (14C) Small
+270 775 wat (14AF) Small
+410 775 wat (14D) Small
+515 750 yden (14G) Small (mtb) Owner (74) Troop_Number
+480 775 wat (14F) Small
+550 775 wat (14H) Small
+445 750 fer (14E) Small
+585 750 fer (14I) Small
+620 775 wat (14J) Small
+760 775 fer (14N) Small
+725 750 wat (14M) Small
+795 750 bden (14O) Small (mtb) Owner (41) Troop_Number
+690 775 wat (14L) Small
+830 775 wat (14P) Small
+340 725 yden (15B) Small (mtb) Owner (57) Troop_Number
+305 700 wat (15A) Small
+375 700 wat (15C) Small
+270 725 wat (15AF) Small
+410 725 wat (15D) Small
+480 725 fer (15F) Small
+550 725 wat (15H) Small
+515 700 wat (15G) Small
+445 700 wat (15E) Small
+585 700 wat (15I) Small
+655 700 wat (15K) Small
+760 725 fer (15N) Small (mtb) Owner (41) Troop_Number
+725 700 wat (15M) Small
+795 700 wat (15O) Small
+690 725 wat (15L) Small
+830 725 wat (15P) Small
+305 650 wat (16A) Small
+340 675 wat (16B) Small
+270 675 swp (16AF) Small
+410 675 wat (16D) Small
+375 650 wat (16C) Small
+480 675 whi (16F) Small
+550 675 rui (16H) Small
+515 650 wat (16G) Small
+655 650 wat (16K) Small
+620 675 wat (16J) Small
+690 675 swp (16L) Small
+585 650 wat (16I) Small
+725 650 wat (16M) Small
+760 675 wat (16N) Small
+830 675 pla (16P) Small
+795 650 wat (16O) Small
+865 650 wat (16Q) Small
+305 600 fer (17A) Small
+270 625 wat (17AF) Small
+340 625 bru (17B) Small
+235 600 bru (17AE) Small
+375 600 bru (17C) Small
+515 600 bru (17G) Small
+480 625 pla (17F) Small
+550 625 wat (17H) Small
+445 600 fer (17E) Small
+585 600 hden (17I) Small (mtb) Owner (75) Troop_Number
+655 600 gden (17K) Small (mtb) Owner (87) Troop_Number
+620 625 fer (17J) Small
+690 625 wat (17L) Small
+725 600 fer (17M) Small
+760 625 yden (17N) Small (mtb) Owner (72) Troop_Number
+795 600 swp (17O) Small (mtb) Owner (10) Troop_Number
+830 625 wat (17P) Small
+865 600 pla (17Q) Small
+305 550 gden (18A) Small (mtb) Owner (217) Troop_Number
+270 575 wat (18AF) Small
+340 575 fer (18B) Small
+235 550 bru (18AE) Small
+375 550 bru (18C) Small
+515 550 tem (18G) Small (mtb) Owner (56) Troop_Number
+480 575 wat (18F) Small
+550 575 wat (18H) Small
+445 550 gden (18E) Small (Free) Owner
+585 550 fer (18I) Small
+620 575 wat (18J) Small
+690 575 wat (18L) Small
+655 550 fer (18K) Small (mtb) Owner (SPY) Troop_Number
+725 550 wat (18M) Small
+760 575 wat (18N) Small
+830 575 wat (18P) Small
+795 550 wat (18O) Small
+865 550 gden (18Q) Small (Free) Owner
+900 575 fer (18R) Small
+935 550 swp (18S) Small
+270 525 wat (19AF) Small
+340 525 pla (19B) Small
+305 500 wat (19A) Small
+235 500 wat (19AE) Small
+375 500 wat (19C) Small
+480 525 swp (19F) Small
+550 525 wat (19H) Small
+515 500 wat (19G) Small
+445 500 wat (19E) Small
+585 500 wat (19I) Small
+620 525 mou (19J) Small
+690 525 wat (19L) Small
+655 500 wat (19K) Small
+760 525 wat (19N) Small
+725 500 wat (19M) Small
+795 500 wat (19O) Small
+830 525 wat (19P) Small
+865 500 wat (19Q) Small (mtb) Owner (43) Troop_Number
+900 525 pla (19R) Small
+935 500 wat (19S) Small
+270 475 wat (20AF) Small
+340 475 wat (20B) Small
+305 450 wat (20A) Small
+480 475 wat (20F) Small
+550 475 wat (20H) Small
+515 450 wat (20G) Small
+760 475 wat (20N) Small
+725 450 wat (20M) Small
+795 450 wat (20O) Small
+690 475 pla (20L) Small
+830 475 wat (20P) Small
+900 475 wat (20R) Small
+865 450 wat (20Q) Small
+935 450 wat (20S) Small
+620 475 wat (20J) Small
+655 450 wat (20K) Small
+760 425 gden (21N) Small (mtb) Owner (88) Troop_Number
+725 400 fer (21M) Small
+795 400 fer (21O) Small
+690 425 wat (21L) Small
+830 425 wat (21P) Small
+865 400 pla (21Q) Small
+900 425 bru (21R) Small
+760 375 wat (22N) Small
+690 375 wat (22L) Small
+830 375 wat (22P) Small
+725 350 pla (22M) Small
+795 350 bden (22O) Small (mtb) Owner (64) Troop_Number
+865 350 pla (22Q) Small
+760 325 fer (23N) Small (mtb) Owner (10) Troop_Number
+725 300 wat (23M) Small
+795 300 wat (23O) Small
+690 325 wat (23L) Small
+830 325 wat (23P) Small
+865 300 wat (23Q) Small
+760 275 wat (24N) Small
+690 275 fer (24L) Small
+830 275 wat (24P) Small
+725 250 wat (24M) Small
+795 250 wat (24O) Small
+760 225 pla (25N) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(jno)} def
+Map_Page_R
+-1190 140 Location_R
+(Jumping Jono Clan World View for Lizards! Game cg01 Turn 10 Page 1 of 2. World size 1A to 32AF) Map_Page_Num
+760 425 wat (2AB) Small
+725 400 fer (2AA) Small
+795 400 wat (2AC) Small
+410 375 bru (3R) Small
+375 350 wat (3Q) Small
+445 350 wat (3S) Small
+515 350 wat (3U) Small
+585 350 wat (3W) Small
+760 375 wat (3AB) Small
+725 350 wat (3AA) Small
+795 350 wat (3AC) Small
+690 375 bden (3Z) Small (Free) Owner
+830 375 wat (3AD) Small
+410 325 wat (4R) Small
+375 300 wat (4Q) Small
+445 300 wat (4S) Small
+340 325 fer (4P) Small
+480 325 wat (4T) Small
+515 300 wat (4U) Small
+550 325 wat (4V) Small
+585 300 wat (4W) Small
+620 325 wat (4X) Small
+655 300 wat (4Y) Small
+760 325 fer (4AB) Small (jno) Owner (10) Troop_Number
+725 300 wat (4AA) Small
+795 300 wat (4AC) Small
+690 325 wat (4Z) Small
+830 325 wat (4AD) Small
+410 275 yden (5R) Small (jno) Owner (74) Troop_Number
+375 250 fer (5Q) Small
+445 250 fer (5S) Small (jno) Owner (10) Troop_Number
+340 275 wat (5P) Small
+480 275 wat (5T) Small
+515 250 yden (5U) Small (jno) Owner (58) Troop_Number
+550 275 fer (5V) Small
+585 250 fer (5W) Small (jno) Owner (200) Troop_Number
+620 275 wat (5X) Small
+655 250 wat (5Y) Small
+690 275 pla (5Z) Small
+725 250 fer (5AA) Small
+760 275 wat (5AB) Small
+830 275 bru (5AD) Small
+795 250 swp (5AC) Small
+410 225 wat (6R) Small
+340 225 wat (6P) Small
+480 225 wat (6T) Small
+375 200 bru (6Q) Small
+445 200 swp (6S) Small
+515 200 fer (6U) Small
+550 225 fer (6V) Small
+585 200 bden (6W) Small (jno) Owner (63) Troop_Number
+620 225 wat (6X) Small
+655 200 gden (6Y) Small (jno) Owner (37) Troop_Number
+690 225 wat (6Z) Small
+725 200 tem (6AA) Small (jno) Owner
+760 225 wat (6AB) Small
+305 150 wat (7O) Small
+410 175 vol (7R) Small
+480 175 wat (7T) Small
+445 150 wat (7S) Small
+550 175 fer (7V) Small
+515 150 wat (7U) Small
+585 150 wat (7W) Small
+620 175 wat (7X) Small
+655 150 wat (7Y) Small
+690 175 fer (7Z) Small
+725 150 wat (7AA) Small
+305 100 wat (8O) Small
+270 125 wat (8N) Small
+340 125 pla (8P) Small
+235 100 wat (8M) Small
+375 100 wat (8Q) Small
+410 125 wat (8R) Small
+445 100 wat (8S) Small
+515 100 bri (8U) Small (jno) Owner (22) Troop_Number
+480 125 vol (8T) Small
+550 125 bri (8V) Small (jno) Owner
+585 100 wat (8W) Small
+620 125 wat (8X) Small
+690 125 wat (8Z) Small
+655 100 wat (8Y) Small
+725 100 wat (8AA) Small
+305 50 tem (9O) Small (jno) Owner (223) Troop_Number
+270 75 swp (9N) Small
+340 75 wat (9P) Small
+235 50 fer (9M) Small
+375 50 fer (9Q) Small
+410 75 fer (9R) Small
+445 50 swp (9S) Small
+480 75 wat (9T) Small
+550 75 grden (9V) Small (jno) Owner (35) Troop_Number
+515 50 swp (9U) Small
+585 50 fer (9W) Small
+620 75 wat (9X) Small
+655 50 wat (9Y) Small
+690 75 bru (9Z) Small
+725 50 swp (9AA) Small
+760 75 wat (9AB) Small
+795 50 wat (9AC) Small
+270 25 pla (10N) Small
+340 25 wat (10P) Small
+305 0 pla (10O) Small
+235 0 rden (10M) Small (mtb) Owner
+375 0 swp (10Q) Small
+410 25 grden (10R) Small (jno) Owner (124) Troop_Number
+445 0 fer (10S) Small
+480 25 bri (10T) Small (jno) Owner
+550 25 fer (10V) Small
+515 0 swp (10U) Small (jno) Owner (10) Troop_Number
+585 0 rden (10W) Small (jno) Owner (83) Troop_Number
+620 25 wat (10X) Small
+655 0 hden (10Y) Small (jno) Owner (58) Troop_Number
+690 25 wat (10Z) Small
+725 0 tem (10AA) Small (jno) Owner (229) Troop_Number
+760 25 wat (10AB) Small
+795 0 wat (10AC) Small
+printing
+Map_Page_R
+-1190 140 Location_R
+(Jumping Jono Clan World View for Lizards! Game cg01 Turn 10 Page 2 of 2. World size 1A to 32AF) Map_Page_Num
+270 775 fer (11N) Small
+340 775 wat (11P) Small
+305 750 wat (11O) Small
+410 775 bru (11R) Small (jno) Owner (52) Troop_Number
+480 775 wat (11T) Small
+375 750 wat (11Q) Small
+445 750 wat (11S) Small
+550 775 fer (11V) Small
+515 750 wat (11U) Small
+585 750 wat (11W) Small
+620 775 wat (11X) Small
+655 750 wat (11Y) Small
+690 775 fer (11Z) Small
+725 750 wat (11AA) Small
+760 775 wat (11AB) Small
+795 750 wat (11AC) Small
+410 725 wat (12R) Small
+340 725 pla (12P) Small
+480 725 pla (12T) Small
+375 700 wat (12Q) Small
+445 700 wat (12S) Small
+550 725 wat (12V) Small
+515 700 wat (12U) Small
+585 700 wat (12W) Small
+620 725 wat (12X) Small
+655 700 wat (12Y) Small
+690 725 wat (12Z) Small
+760 725 wat (12AB) Small
+725 700 wat (12AA) Small
+410 675 bru (13R) Small
+375 650 fer (13Q) Small
+445 650 fer (13S) Small
+515 650 yden (13U) Small (jno) Owner (43) Troop_Number
+480 675 wat (13T) Small
+550 675 fer (13V) Small
+585 650 rui (13W) Small (jno) Owner (64) Troop_Number
+620 675 wat (13X) Small
+655 650 swp (13Y) Small
+830 675 fer (13AD) Small
+795 650 wat (13AC) Small
+865 650 swp (13AE) Small
+410 625 wat (14R) Small
+375 600 fer (14Q) Small
+445 600 fer (14S) Small
+340 625 wat (14P) Small
+480 625 wat (14T) Small
+550 625 bru (14V) Small
+515 600 swp (14U) Small
+585 600 swp (14W) Small
+620 625 wat (14X) Small
+655 600 fer (14Y) Small
+690 625 fer (14Z) Small
+725 600 bru (14AA) Small
+830 625 wat (14AD) Small
+795 600 wat (14AC) Small
+865 600 fer (14AE) Small
+760 625 wat (14AB) Small
+900 625 wat (14AF) Small
+305 600 bden (14O) Small (mtb) Owner
+410 575 grden (15R) Small (jno) Owner (186) Troop_Number
+375 550 wat (15Q) Small
+445 550 wat (15S) Small
+340 575 wat (15P) Small
+480 575 wat (15T) Small
+550 575 swp (15V) Small
+515 550 wat (15U) Small
+620 575 wat (15X) Small
+585 550 wat (15W) Small
+690 575 bden (15Z) Small (jno) Owner (58) Troop_Number
+655 550 wat (15Y) Small
+725 550 wat (15AA) Small
+760 575 wat (15AB) Small
+795 550 wat (15AC) Small
+830 575 gden (15AD) Small (jno) Owner (41) Troop_Number
+865 550 wat (15AE) Small
+900 575 wat (15AF) Small
+305 550 wat (15O) Small
+270 575 fer (15N) Small (mtb) Owner (41) Troop_Number
+410 525 wat (16R) Small
+340 525 pla (16P) Small (jno) Owner (SPY) Troop_Number
+480 525 rui (16T) Small (jno) Owner (SPY) Troop_Number
+375 500 wat (16Q) Small
+445 500 wat (16S) Small
+690 525 wat (16Z) Small
+655 500 wat (16Y) Small
+725 500 wat (16AA) Small
+620 525 pla (16X) Small
+760 525 wat (16AB) Small
+585 500 wat (16W) Small
+795 500 wat (16AC) Small
+830 525 wat (16AD) Small
+900 525 swp (16AF) Small
+865 500 wat (16AE) Small
+305 500 wat (16O) Small
+270 525 wat (16N) Small
+515 500 wat (16U) Small
+550 525 wat (16V) Small
+410 475 pla (17R) Small
+690 475 mou (17Z) Small (jno) Owner (48) Troop_Number
+655 450 fer (17Y) Small
+725 450 fer (17AA) Small
+620 475 wat (17X) Small
+760 475 wat (17AB) Small
+585 450 swp (17W) Small
+795 450 wat (17AC) Small
+830 475 bden (17AD) Small (jno) Owner (110) Troop_Number
+865 450 bru (17AE) Small
+900 475 wat (17AF) Small
+340 475 wat (17P) Small
+270 475 yden (17N) Small (mtb) Owner
+305 450 swp (17O) Small (mtb) Owner (10) Troop_Number
+375 450 pla (17Q) Small
+480 475 wat (17T) Small
+550 475 swp (17V) Small
+445 450 pla (17S) Small
+515 450 pla (17U) Small
+690 425 gden (18Z) Small (Free) Owner
+620 425 wat (18X) Small
+760 425 wat (18AB) Small
+655 400 pla (18Y) Small
+725 400 fer (18AA) Small
+585 400 fer (18W) Small
+795 400 wat (18AC) Small
+830 425 fer (18AD) Small
+900 425 wat (18AF) Small
+865 400 bru (18AE) Small
+340 425 wat (18P) Small
+480 425 wat (18T) Small
+690 375 pla (19Z) Small
+620 375 wat (19X) Small
+760 375 wat (19AB) Small
+655 350 wat (19Y) Small
+725 350 wat (19AA) Small
+830 375 wat (19AD) Small
+690 325 wat (20Z) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(dan)} def
+Map_Page_R
+-1190 140 Location_R
+(Dangerous Dan Clan World View for Lizards! Game cg01 Turn 10 Page 1 of 2. World size 1A to 32AF) Map_Page_Num
+340 375 mou (17Z) Small (jno) Owner (48) Troop_Number
+305 350 fer (17Y) Small
+375 350 fer (17AA) Small
+410 325 wat (18AB) Small
+375 300 fer (18AA) Small
+445 300 wat (18AC) Small
+340 325 gden (18Z) Small (Free) Owner
+305 300 pla (18Y) Small
+270 325 wat (18X) Small
+235 300 fer (18W) Small
+690 275 wat (19D) Small
+655 250 wat (19C) Small
+725 250 wat (19E) Small
+340 275 pla (19Z) Small (dan) Owner (SPY) Troop_Number
+305 250 wat (19Y) Small
+375 250 wat (19AA) Small
+410 275 wat (19AB) Small
+445 250 wat (19AC) Small
+480 275 wat (19AD) Small
+760 275 swp (19F) Small
+795 250 wat (19G) Small
+270 275 wat (19X) Small
+235 250 wat (19W) Small
+200 275 gden (19V) Small (Free) Owner
+620 225 wat (20B) Small
+585 200 wat (20A) Small
+655 200 wat (20C) Small
+690 225 wat (20D) Small
+725 200 wat (20E) Small
+760 225 wat (20F) Small
+340 225 wat (20Z) Small
+305 200 wat (20Y) Small
+375 200 wat (20AA) Small
+270 225 pla (20X) Small (dan) Owner (SPY) Troop_Number
+410 225 tem (20AB) Small (dan) Owner (178) Troop_Number
+445 200 mou (20AC) Small
+480 225 wat (20AD) Small
+795 200 wat (20G) Small
+830 225 wat (20H) Small
+235 200 wat (20W) Small
+200 225 wat (20V) Small
+620 175 bru (21B) Small
+585 150 bru (21A) Small
+655 150 fer (21C) Small
+550 175 wat (21AF) Small
+690 175 wat (21D) Small (dan) Owner (54) Troop_Number
+725 150 gden (21E) Small (Free) Owner
+760 175 pla (21F) Small (dan) Owner (SPY) Troop_Number
+340 175 bru (21Z) Small (dan) Owner (54) Troop_Number
+305 150 fer (21Y) Small
+375 150 rui (21AA) Small
+270 175 wat (21X) Small
+410 175 fer (21AB) Small
+480 175 fer (21AD) Small
+445 150 bden (21AC) Small (dan) Owner (92) Troop_Number
+515 150 bru (21AE) Small
+795 150 bru (21G) Small
+830 175 wat (21H) Small
+200 175 wat (21V) Small
+235 150 wat (21W) Small
+620 125 bden (22B) Small (dan) Owner (127) Troop_Number
+585 100 bru (22A) Small
+655 100 pla (22C) Small
+550 125 wat (22AF) Small
+690 125 wat (22D) Small
+760 125 wat (22F) Small
+725 100 fer (22E) Small
+340 125 fer (22Z) Small
+270 125 wat (22X) Small
+410 125 fer (22AB) Small
+305 100 swp (22Y) Small
+375 100 fer (22AA) Small
+445 100 bru (22AC) Small (dan) Owner (10) Troop_Number
+480 125 fer (22AD) Small
+515 100 fer (22AE) Small
+830 125 wat (22H) Small
+795 100 gden (22G) Small (Free) Owner
+620 75 fer (23B) Small
+550 75 wat (23AF) Small
+690 75 wat (23D) Small
+585 50 wat (23A) Small
+655 50 wat (23C) Small
+340 75 rden (23Z) Small (dan) Owner (82) Troop_Number
+305 50 wat (23Y) Small
+375 50 wat (23AA) Small
+270 75 wat (23X) Small
+410 75 wat (23AB) Small
+480 75 swp (23AD) Small
+445 50 wat (23AC) Small
+515 50 wat (23AE) Small
+1005 50 wat (23M) Small
+760 75 fer (23F) Small (dan) Owner (SPY) Troop_Number
+725 50 wat (23E) Small
+795 50 wat (23G) Small
+830 75 wat (23H) Small
+585 0 wat (24A) Small
+620 25 wat (24B) Small
+655 0 wat (24C) Small
+550 25 wat (24AF) Small
+690 25 wat (24D) Small
+725 0 wat (24E) Small
+760 25 wat (24F) Small
+795 0 wat (24G) Small
+165 0 wat (24U) Small
+340 25 wat (24Z) Small
+270 25 swp (24X) Small
+410 25 bru (24AB) Small
+305 0 wat (24Y) Small
+375 0 wat (24AA) Small
+445 0 wat (24AC) Small
+480 25 wat (24AD) Small
+515 0 wat (24AE) Small
+1005 0 wat (24M) Small
+970 25 fer (24L) Small
+1040 25 wat (24N) Small
+935 0 wat (24K) Small
+1075 0 wat (24O) Small
+830 25 fer (24H) Small
+printing
+Map_Page_R
+-1190 140 Location_R
+(Dangerous Dan Clan World View for Lizards! Game cg01 Turn 10 Page 2 of 2. World size 1A to 32AF) Map_Page_Num
+585 750 fer (25A) Small
+550 775 wat (25AF) Small
+620 775 bru (25B) Small (dan) Owner (44) Troop_Number
+515 750 fer (25AE) Small
+655 750 pla (25C) Small (dan) Owner (41) Troop_Number
+690 775 wat (25D) Small
+725 750 grden (25E) Small (dan) Owner (29) Troop_Number
+760 775 pla (25F) Small
+795 750 fer (25G) Small
+830 775 wat (25H) Small
+865 750 wat (25I) Small
+165 750 swp (25U) Small
+130 775 wat (25T) Small
+200 775 mou (25V) Small
+95 750 pla (25S) Small
+235 750 pla (25W) Small
+340 775 fer (25Z) Small
+375 750 rden (25AA) Small (dan) Owner (97) Troop_Number
+410 775 wat (25AB) Small
+305 750 swp (25Y) Small
+445 750 hden (25AC) Small (dan) Owner (78) Troop_Number
+480 775 fer (25AD) Small
+1005 750 pla (25M) Small (dan) Owner (SPY) Troop_Number
+970 775 wat (25L) Small
+1040 775 pla (25N) Small
+935 750 wat (25K) Small
+1075 750 swp (25O) Small
+585 700 gden (26A) Small (dan) Owner (71) Troop_Number
+550 725 wat (26AF) Small
+620 725 swp (26B) Small
+515 700 bden (26AE) Small (dan) Owner (74) Troop_Number
+655 700 swp (26C) Small
+690 725 bri (26D) Small (dan) Owner
+725 700 fer (26E) Small
+760 725 fer (26F) Small (dan) Owner (10) Troop_Number
+795 700 grden (26G) Small (dan) Owner (43) Troop_Number
+830 725 wat (26H) Small
+865 700 wat (26I) Small
+165 700 pla (26U) Small (dan) Owner (149) Troop_Number
+130 725 wat (26T) Small
+200 725 wat (26V) Small
+95 700 swp (26S) Small
+235 700 fer (26W) Small
+270 725 wat (26X) Small
+340 725 wat (26Z) Small
+410 725 wat (26AB) Small
+375 700 fer (26AA) Small
+305 700 fer (26Y) Small
+445 700 fer (26AC) Small
+480 725 wat (26AD) Small
+970 725 wat (26L) Small
+1040 725 fer (26N) Small
+1005 700 swp (26M) Small
+935 700 pla (26K) Small
+1075 700 swp (26O) Small
+550 675 mou (27AF) Small
+620 675 fer (27B) Small
+585 650 wat (27A) Small
+515 650 wat (27AE) Small
+655 650 wat (27C) Small
+690 675 wat (27D) Small
+725 650 wat (27E) Small
+760 675 bru (27F) Small
+830 675 wat (27H) Small
+795 650 wat (27G) Small
+865 650 wat (27I) Small
+130 675 wat (27T) Small
+200 675 grden (27V) Small (dan) Owner (50) Troop_Number
+165 650 wat (27U) Small
+95 650 wat (27S) Small
+235 650 wat (27W) Small
+270 675 wat (27X) Small
+340 675 pla (27Z) Small
+410 675 wat (27AB) Small
+375 650 wat (27AA) Small
+480 675 fer (27AD) Small
+445 650 wat (27AC) Small
+970 675 wat (27L) Small
+1040 675 rden (27N) Small (Free) Owner
+1005 650 wat (27M) Small
+900 675 wat (27J) Small
+935 650 wat (27K) Small
+550 625 bru (28AF) Small (dan) Owner (30) Troop_Number
+620 625 wat (28B) Small
+585 600 wat (28A) Small
+725 600 wat (28E) Small
+690 625 pla (28D) Small
+760 625 wat (28F) Small
+655 600 wat (28C) Small
+795 600 wat (28G) Small
+830 625 bru (28H) Small
+130 625 pla (28T) Small
+200 625 wat (28V) Small
+165 600 wat (28U) Small
+270 625 wat (28X) Small
+235 600 wat (28W) Small
+445 600 wat (28AC) Small
+410 625 bru (28AB) Small
+480 625 wat (28AD) Small
+375 600 wat (28AA) Small
+515 600 wat (28AE) Small
+900 625 wat (28J) Small
+865 600 wat (28I) Small
+935 600 wat (28K) Small
+970 625 wat (28L) Small
+725 550 rden (29E) Small (dan) Owner (319) Troop_Number
+690 575 wat (29D) Small
+760 575 fer (29F) Small
+655 550 fer (29C) Small
+795 550 pla (29G) Small
+200 575 pla (29V) Small
+445 550 fer (29AC) Small (dan) Owner (96) Troop_Number
+410 575 wat (29AB) Small
+480 575 swp (29AD) Small
+375 550 pla (29AA) Small
+515 550 swp (29AE) Small
+550 575 wat (29AF) Small
+620 575 gden (29B) Small (Free) Owner
+585 550 fer (29A) Small
+900 575 bru (29J) Small (dan) Owner (SPY) Troop_Number
+865 550 fer (29I) Small
+935 550 swp (29K) Small
+830 575 wat (29H) Small
+970 575 wat (29L) Small
+690 525 wat (30D) Small
+760 525 fer (30F) Small
+725 500 wat (30E) Small
+655 500 pla (30C) Small
+795 500 swp (30G) Small
+410 525 wat (30AB) Small
+480 525 rden (30AD) Small (Free) Owner
+445 500 fer (30AC) Small
+375 500 wat (30AA) Small
+515 500 bru (30AE) Small
+550 525 wat (30AF) Small
+585 500 mou (30A) Small (dan) Owner (SPY) Troop_Number
+620 525 bru (30B) Small
+900 525 wat (30J) Small
+830 525 wat (30H) Small
+970 525 wat (30L) Small (rda) Owner (31) Troop_Number
+865 500 gden (30I) Small (rda) Owner
+935 500 bru (30K) Small
+690 475 wat (31D) Small
+760 475 wat (31F) Small
+725 450 wat (31E) Small
+410 475 wat (31AB) Small
+480 475 pla (31AD) Small
+445 450 wat (31AC) Small
+550 475 wat (31AF) Small
+620 475 swp (31B) Small
+585 450 wat (31A) Small
+515 450 wat (31AE) Small
+655 450 wat (31C) Small
+900 475 fer (31J) Small
+550 425 swp (32AF) Small
+620 425 wat (32B) Small
+585 400 wat (32A) Small
+480 425 wat (32AD) Small
+690 425 mou (32D) Small
+515 400 wat (32AE) Small
+655 400 wat (32C) Small
+550 375 wat (1AF) Small
+620 375 yden (1B) Small (rda) Owner
+585 350 swp (1A) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(rda)} def
+Map_Page_R
+-1190 140 Location_R
+(Raging Ross Clan World View for Lizards! Game cg01 Turn 10 Page 1 of 2. World size 1A to 32AF) Map_Page_Num
+550 375 wat (25J) Small
+515 350 wat (25I) Small
+585 350 wat (25K) Small
+550 325 wat (26J) Small
+515 300 wat (26I) Small
+585 300 pla (26K) Small
+480 325 wat (26H) Small
+620 325 wat (26L) Small
+445 300 grden (26G) Small (dan) Owner
+655 300 swp (26M) Small
+795 250 wat (27Q) Small
+550 275 wat (27J) Small (rda) Owner (SPY) Troop_Number
+515 250 wat (27I) Small
+585 250 wat (27K) Small
+480 275 wat (27H) Small
+620 275 wat (27L) Small
+445 250 wat (27G) Small
+410 275 bru (27F) Small
+655 250 wat (27M) Small
+690 275 rden (27N) Small (Free) Owner
+515 200 wat (28I) Small
+620 225 wat (28L) Small (rda) Owner (SPY) Troop_Number
+585 200 wat (28K) Small
+655 200 wat (28M) Small
+795 200 wat (28Q) Small
+760 225 wat (28P) Small
+830 225 wat (28R) Small
+725 200 wat (28O) Small
+865 200 wat (28S) Small
+550 225 wat (28J) Small
+480 225 bru (28H) Small (rda) Owner (SPY) Troop_Number
+445 200 wat (28G) Small
+410 225 wat (28F) Small
+690 225 wat (28N) Small
+515 150 fer (29I) Small
+480 175 wat (29H) Small
+550 175 bru (29J) Small
+445 150 pla (29G) Small
+585 150 swp (29K) Small
+620 175 wat (29L) Small
+655 150 bru (29M) Small
+690 175 fer (29N) Small
+795 150 fer (29Q) Small (rda) Owner (11) Troop_Number
+760 175 wat (29P) Small
+830 175 swp (29R) Small
+725 150 yden (29O) Small (Free) Owner
+865 150 swp (29S) Small
+340 175 wat (29D) Small
+305 150 fer (29C) Small
+375 150 rden (29E) Small (dan) Owner
+410 175 fer (29F) Small
+515 100 gden (30I) Small (rda) Owner (81) Troop_Number
+480 125 wat (30H) Small
+550 125 wat (30J) Small
+445 100 swp (30G) Small
+585 100 bru (30K) Small
+620 125 wat (30L) Small (rda) Owner (31) Troop_Number
+655 100 wat (30M) Small
+690 125 bru (30N) Small
+760 125 wat (30P) Small
+725 100 wat (30O) Small
+795 100 grden (30Q) Small (Free) Owner
+830 125 wat (30R) Small
+865 100 bru (30S) Small
+340 125 wat (30D) Small
+305 100 pla (30C) Small
+375 100 wat (30E) Small
+270 125 bru (30B) Small
+410 125 fer (30F) Small
+235 100 mou (30A) Small
+270 75 swp (31B) Small
+235 50 wat (31A) Small
+305 50 wat (31C) Small
+375 50 wat (31E) Small
+480 75 wat (31H) Small
+550 75 fer (31J) Small
+515 50 wat (31I) Small
+445 50 wat (31G) Small
+585 50 wat (31K) Small
+620 75 wat (31L) Small
+690 75 wat (31N) Small
+655 50 wat (31M) Small
+725 50 wat (31O) Small
+760 75 wat (31P) Small
+795 50 wat (31Q) Small
+830 75 fer (31R) Small
+340 75 wat (31D) Small
+410 75 wat (31F) Small
+270 25 wat (32B) Small
+235 0 wat (32A) Small
+305 0 wat (32C) Small
+200 25 swp (32AF) Small
+340 25 mou (32D) Small (rda) Owner (SPY) Troop_Number
+375 0 wat (32E) Small
+410 25 wat (32F) Small
+445 0 wat (32G) Small
+480 25 rui (32H) Small
+550 25 wat (32J) Small
+515 0 wat (32I) Small
+585 0 wat (32K) Small
+620 25 wat (32L) Small
+655 0 wat (32M) Small
+690 25 wat (32N) Small
+725 0 wat (32O) Small
+760 25 tem (32P) Small (rda) Owner (219) Troop_Number
+795 0 wat (32Q) Small
+830 25 wat (32R) Small
+printing
+Map_Page_R
+-1190 140 Location_R
+(Raging Ross Clan World View for Lizards! Game cg01 Turn 10 Page 2 of 2. World size 1A to 32AF) Map_Page_Num
+270 775 yden (1B) Small (rda) Owner (144) Troop_Number
+235 750 swp (1A) Small
+305 750 fer (1C) Small (rda) Owner (11) Troop_Number
+200 775 wat (1AF) Small
+340 775 wat (1D) Small
+375 750 fer (1E) Small (rda) Owner (57) Troop_Number
+410 775 swp (1F) Small
+445 750 pla (1G) Small
+480 775 wat (1H) Small
+550 775 fer (1J) Small (rda) Owner (33) Troop_Number
+515 750 pla (1I) Small
+585 750 grden (1K) Small (rda) Owner (47) Troop_Number
+620 775 wat (1L) Small
+655 750 bru (1M) Small
+690 775 swp (1N) Small
+725 750 rui (1O) Small (rda) Owner (14) Troop_Number
+760 775 wat (1P) Small
+795 750 pla (1Q) Small
+830 775 tem (1R) Small
+865 750 fer (1S) Small
+270 725 fer (2B) Small
+200 725 wat (2AF) Small
+340 725 wat (2D) Small
+235 700 bru (2A) Small
+305 700 swp (2C) Small
+375 700 fer (2E) Small
+410 725 yden (2F) Small (rda) Owner (90) Troop_Number
+445 700 wat (2G) Small
+480 725 wat (2H) Small
+550 725 pla (2J) Small (rda) Owner (10) Troop_Number
+620 725 bri (2L) Small (rda) Owner
+515 700 hden (2I) Small (rda) Owner (50) Troop_Number
+585 700 bru (2K) Small
+655 700 fer (2M) Small (rda) Owner (30) Troop_Number
+690 725 fer (2N) Small (rda) Owner (91) Troop_Number
+725 700 pla (2O) Small
+760 725 wat (2P) Small
+795 700 pla (2Q) Small
+830 725 wat (2R) Small
+865 700 grden (2S) Small (Free) Owner
+900 725 wat (2T) Small
+270 675 pla (3B) Small
+340 675 wat (3D) Small
+305 650 wat (3C) Small
+410 675 pla (3F) Small
+375 650 wat (3E) Small
+480 675 wat (3H) Small
+445 650 wat (3G) Small
+550 675 fer (3J) Small
+620 675 wat (3L) Small
+515 650 wat (3I) Small
+585 650 wat (3K) Small
+690 675 rden (3N) Small (rda) Owner (91) Troop_Number
+655 650 wat (3M) Small
+725 650 wat (3O) Small
+760 675 wat (3P) Small
+830 675 bru (3R) Small (rda) Owner (SPY) Troop_Number
+795 650 wat (3Q) Small
+865 650 wat (3S) Small
+900 675 wat (3T) Small
+410 625 wat (4F) Small
+445 600 wat (4G) Small
+515 600 wat (4I) Small
+550 625 wat (4J) Small
+585 600 wat (4K) Small
+620 625 bru (4L) Small
+690 625 wat (4N) Small
+655 600 wat (4M) Small
+725 600 wat (4O) Small
+760 625 fer (4P) Small
+830 625 wat (4R) Small
+900 625 wat (4T) Small
+795 600 wat (4Q) Small
+865 600 wat (4S) Small
+445 550 wat (5G) Small
+410 575 wat (5F) Small
+480 575 wat (5H) Small
+375 550 wat (5E) Small
+515 550 bru (5I) Small
+550 575 bru (5J) Small
+585 550 swp (5K) Small
+620 575 wat (5L) Small
+655 550 pla (5M) Small (rda) Owner (10) Troop_Number
+690 575 pla (5N) Small
+725 550 bru (5O) Small
+830 575 yden (5R) Small (jno) Owner
+445 500 fer (6G) Small (rda) Owner (35) Troop_Number
+410 525 wat (6F) Small
+480 525 wat (6H) Small
+375 500 fer (6E) Small
+515 500 swp (6I) Small (rda) Owner (10) Troop_Number
+550 525 fer (6J) Small
+585 500 gden (6K) Small (rda) Owner (78) Troop_Number
+620 525 wat (6L) Small
+655 500 yden (6M) Small (rda) Owner (48) Troop_Number
+690 525 swp (6N) Small
+725 500 rui (6O) Small
+760 525 wat (6P) Small
+410 475 grden (7F) Small (Free) Owner
+480 475 wat (7H) Small
+445 450 wat (7G) Small
+375 450 wat (7E) Small
+515 450 wat (7I) Small
+550 475 fer (7J) Small
+585 450 wat (7K) Small
+620 475 wat (7L) Small
+655 450 wat (7M) Small
+690 475 fer (7N) Small (rda) Owner (73) Troop_Number
+725 450 wat (7O) Small
+760 475 wat (7P) Small
+410 425 wat (8F) Small
+480 425 wat (8H) Small
+445 400 wat (8G) Small
+550 425 wat (8J) Small
+515 400 wat (8I) Small
+620 425 wat (8L) Small
+585 400 wat (8K) Small
+690 425 wat (8N) Small
+760 425 pla (8P) Small
+655 400 wat (8M) Small
+725 400 wat (8O) Small
+690 375 swp (9N) Small
+480 375 wat (9H) Small (rda) Owner (SPY) Troop_Number
+445 350 fer (9G) Small
+515 350 fer (9I) Small
+410 375 pla (9F) Small
+550 375 bru (9J) Small
+620 375 wat (9L) Small (rda) Owner (SPY) Troop_Number
+585 350 fer (9K) Small (mtb) Owner (83) Troop_Number
+655 350 fer (9M) Small
+480 325 wat (10H) Small
+410 325 rden (10F) Small (Free) Owner
+550 325 grden (10J) Small (mtb) Owner
+445 300 swp (10G) Small
+515 300 swp (10I) Small
+620 325 wat (10L) Small
+690 325 pla (10N) Small
+585 300 bru (10K) Small
+655 300 rden (10M) Small (mtb) Owner
+480 275 wat (11H) Small
+620 275 wat (11L) Small
+printing
+saveobj restore

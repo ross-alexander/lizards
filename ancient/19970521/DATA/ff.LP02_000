@@ -1,0 +1,18 @@
+Header(ff, 0, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+Phase(development)
+ClanReport(Jumping Jono)
+HomeDen(10G,50,4,0,400,0,0,0,0,0)
+
+
+ * Clans Ranking at end of Turn 0:
+
+ 01 -    500 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    500 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+Trailer()

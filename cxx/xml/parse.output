@@ -1,0 +1,757 @@
+   0  $accept : parse $end
+
+   1  parse : hdr flg phr players hexes
+
+   2  hdr : tHDR tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT
+
+   3  flg : tFLG
+   4      | tFLG tSTRING
+
+   5  phr : tPHR tINT
+
+   6  players : plr
+   7          | players plr
+
+   8  plr : tPLR tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tSTRING tCOMMA tINT
+
+   9  hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT
+
+  10  hexes : hex
+  11        | hex features
+  12        | hexes hex
+  13        | hexes hex features
+
+  14  features : tFEA tINT tCOMMA tSTRING nums
+  15           | features tFEA tINT tCOMMA tSTRING nums
+
+  16  nums : tCOMMA tINT
+  17       | nums tCOMMA tINT
+
+state 0
+	$accept : . parse $end  (0)
+
+	tHDR  shift 1
+	.  error
+
+	parse  goto 2
+	hdr  goto 3
+
+
+state 1
+	hdr : tHDR . tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (2)
+
+	tSTRING  shift 4
+	.  error
+
+
+state 2
+	$accept : parse . $end  (0)
+
+	$end  accept
+
+
+state 3
+	parse : hdr . flg phr players hexes  (1)
+
+	tFLG  shift 5
+	.  error
+
+	flg  goto 6
+
+
+state 4
+	hdr : tHDR tSTRING . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (2)
+
+	tCOMMA  shift 7
+	.  error
+
+
+state 5
+	flg : tFLG .  (3)
+	flg : tFLG . tSTRING  (4)
+
+	tSTRING  shift 8
+	tPHR  reduce 3
+
+
+state 6
+	parse : hdr flg . phr players hexes  (1)
+
+	tPHR  shift 9
+	.  error
+
+	phr  goto 10
+
+
+state 7
+	hdr : tHDR tSTRING tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (2)
+
+	tINT  shift 11
+	.  error
+
+
+state 8
+	flg : tFLG tSTRING .  (4)
+
+	.  reduce 4
+
+
+state 9
+	phr : tPHR . tINT  (5)
+
+	tINT  shift 12
+	.  error
+
+
+state 10
+	parse : hdr flg phr . players hexes  (1)
+
+	tPLR  shift 13
+	.  error
+
+	plr  goto 14
+	players  goto 15
+
+
+state 11
+	hdr : tHDR tSTRING tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT  (2)
+
+	tCOMMA  shift 16
+	.  error
+
+
+state 12
+	phr : tPHR tINT .  (5)
+
+	.  reduce 5
+
+
+state 13
+	plr : tPLR . tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tSTRING tCOMMA tINT  (8)
+
+	tINT  shift 17
+	.  error
+
+
+state 14
+	players : plr .  (6)
+
+	.  reduce 6
+
+
+state 15
+	parse : hdr flg phr players . hexes  (1)
+	players : players . plr  (7)
+
+	tPLR  shift 13
+	tHEX  shift 18
+	.  error
+
+	hex  goto 19
+	hexes  goto 20
+	plr  goto 21
+
+
+state 16
+	hdr : tHDR tSTRING tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT  (2)
+
+	tINT  shift 22
+	.  error
+
+
+state 17
+	plr : tPLR tINT . tCOMMA tINT tCOMMA tSTRING tCOMMA tSTRING tCOMMA tINT  (8)
+
+	tCOMMA  shift 23
+	.  error
+
+
+state 18
+	hex : tHEX . tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 24
+	.  error
+
+
+state 19
+	hexes : hex .  (10)
+	hexes : hex . features  (11)
+
+	tFEA  shift 25
+	$end  reduce 10
+	tHEX  reduce 10
+
+	features  goto 26
+
+
+state 20
+	parse : hdr flg phr players hexes .  (1)
+	hexes : hexes . hex  (12)
+	hexes : hexes . hex features  (13)
+
+	tHEX  shift 18
+	$end  reduce 1
+
+	hex  goto 27
+
+
+state 21
+	players : players plr .  (7)
+
+	.  reduce 7
+
+
+state 22
+	hdr : tHDR tSTRING tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT  (2)
+
+	tCOMMA  shift 28
+	.  error
+
+
+state 23
+	plr : tPLR tINT tCOMMA . tINT tCOMMA tSTRING tCOMMA tSTRING tCOMMA tINT  (8)
+
+	tINT  shift 29
+	.  error
+
+
+state 24
+	hex : tHEX tINT . tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 30
+	.  error
+
+
+state 25
+	features : tFEA . tINT tCOMMA tSTRING nums  (14)
+
+	tINT  shift 31
+	.  error
+
+
+state 26
+	hexes : hex features .  (11)
+	features : features . tFEA tINT tCOMMA tSTRING nums  (15)
+
+	tFEA  shift 32
+	$end  reduce 11
+	tHEX  reduce 11
+
+
+state 27
+	hexes : hexes hex .  (12)
+	hexes : hexes hex . features  (13)
+
+	tFEA  shift 25
+	$end  reduce 12
+	tHEX  reduce 12
+
+	features  goto 33
+
+
+state 28
+	hdr : tHDR tSTRING tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT  (2)
+
+	tINT  shift 34
+	.  error
+
+
+state 29
+	plr : tPLR tINT tCOMMA tINT . tCOMMA tSTRING tCOMMA tSTRING tCOMMA tINT  (8)
+
+	tCOMMA  shift 35
+	.  error
+
+
+state 30
+	hex : tHEX tINT tCOMMA . tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 36
+	.  error
+
+
+state 31
+	features : tFEA tINT . tCOMMA tSTRING nums  (14)
+
+	tCOMMA  shift 37
+	.  error
+
+
+state 32
+	features : features tFEA . tINT tCOMMA tSTRING nums  (15)
+
+	tINT  shift 38
+	.  error
+
+
+state 33
+	hexes : hexes hex features .  (13)
+	features : features . tFEA tINT tCOMMA tSTRING nums  (15)
+
+	tFEA  shift 32
+	$end  reduce 13
+	tHEX  reduce 13
+
+
+state 34
+	hdr : tHDR tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT  (2)
+
+	tCOMMA  shift 39
+	.  error
+
+
+state 35
+	plr : tPLR tINT tCOMMA tINT tCOMMA . tSTRING tCOMMA tSTRING tCOMMA tINT  (8)
+
+	tSTRING  shift 40
+	.  error
+
+
+state 36
+	hex : tHEX tINT tCOMMA tINT . tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 41
+	.  error
+
+
+state 37
+	features : tFEA tINT tCOMMA . tSTRING nums  (14)
+
+	tSTRING  shift 42
+	.  error
+
+
+state 38
+	features : features tFEA tINT . tCOMMA tSTRING nums  (15)
+
+	tCOMMA  shift 43
+	.  error
+
+
+state 39
+	hdr : tHDR tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT  (2)
+
+	tINT  shift 44
+	.  error
+
+
+state 40
+	plr : tPLR tINT tCOMMA tINT tCOMMA tSTRING . tCOMMA tSTRING tCOMMA tINT  (8)
+
+	tCOMMA  shift 45
+	.  error
+
+
+state 41
+	hex : tHEX tINT tCOMMA tINT tCOMMA . tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tSTRING  shift 46
+	.  error
+
+
+state 42
+	features : tFEA tINT tCOMMA tSTRING . nums  (14)
+
+	tCOMMA  shift 47
+	.  error
+
+	nums  goto 48
+
+
+state 43
+	features : features tFEA tINT tCOMMA . tSTRING nums  (15)
+
+	tSTRING  shift 49
+	.  error
+
+
+state 44
+	hdr : tHDR tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT .  (2)
+
+	.  reduce 2
+
+
+state 45
+	plr : tPLR tINT tCOMMA tINT tCOMMA tSTRING tCOMMA . tSTRING tCOMMA tINT  (8)
+
+	tSTRING  shift 50
+	.  error
+
+
+state 46
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 51
+	.  error
+
+
+state 47
+	nums : tCOMMA . tINT  (16)
+
+	tINT  shift 52
+	.  error
+
+
+state 48
+	features : tFEA tINT tCOMMA tSTRING nums .  (14)
+	nums : nums . tCOMMA tINT  (17)
+
+	tCOMMA  shift 53
+	$end  reduce 14
+	tHEX  reduce 14
+	tFEA  reduce 14
+
+
+state 49
+	features : features tFEA tINT tCOMMA tSTRING . nums  (15)
+
+	tCOMMA  shift 47
+	.  error
+
+	nums  goto 54
+
+
+state 50
+	plr : tPLR tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tSTRING . tCOMMA tINT  (8)
+
+	tCOMMA  shift 55
+	.  error
+
+
+state 51
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 56
+	.  error
+
+
+state 52
+	nums : tCOMMA tINT .  (16)
+
+	.  reduce 16
+
+
+state 53
+	nums : nums tCOMMA . tINT  (17)
+
+	tINT  shift 57
+	.  error
+
+
+state 54
+	features : features tFEA tINT tCOMMA tSTRING nums .  (15)
+	nums : nums . tCOMMA tINT  (17)
+
+	tCOMMA  shift 53
+	$end  reduce 15
+	tHEX  reduce 15
+	tFEA  reduce 15
+
+
+state 55
+	plr : tPLR tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tSTRING tCOMMA . tINT  (8)
+
+	tINT  shift 58
+	.  error
+
+
+state 56
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 59
+	.  error
+
+
+state 57
+	nums : nums tCOMMA tINT .  (17)
+
+	.  reduce 17
+
+
+state 58
+	plr : tPLR tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tSTRING tCOMMA tINT .  (8)
+
+	.  reduce 8
+
+
+state 59
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 60
+	.  error
+
+
+state 60
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 61
+	.  error
+
+
+state 61
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 62
+	.  error
+
+
+state 62
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 63
+	.  error
+
+
+state 63
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 64
+	.  error
+
+
+state 64
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 65
+	.  error
+
+
+state 65
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 66
+	.  error
+
+
+state 66
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 67
+	.  error
+
+
+state 67
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 68
+	.  error
+
+
+state 68
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 69
+	.  error
+
+
+state 69
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 70
+	.  error
+
+
+state 70
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 71
+	.  error
+
+
+state 71
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 72
+	.  error
+
+
+state 72
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 73
+	.  error
+
+
+state 73
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 74
+	.  error
+
+
+state 74
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 75
+	.  error
+
+
+state 75
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 76
+	.  error
+
+
+state 76
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 77
+	.  error
+
+
+state 77
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 78
+	.  error
+
+
+state 78
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 79
+	.  error
+
+
+state 79
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 80
+	.  error
+
+
+state 80
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 81
+	.  error
+
+
+state 81
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 82
+	.  error
+
+
+state 82
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 83
+	.  error
+
+
+state 83
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 84
+	.  error
+
+
+state 84
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 85
+	.  error
+
+
+state 85
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 86
+	.  error
+
+
+state 86
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 87
+	.  error
+
+
+state 87
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 88
+	.  error
+
+
+state 88
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 89
+	.  error
+
+
+state 89
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 90
+	.  error
+
+
+state 90
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 91
+	.  error
+
+
+state 91
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 92
+	.  error
+
+
+state 92
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 93
+	.  error
+
+
+state 93
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT tCOMMA tINT  (9)
+
+	tINT  shift 94
+	.  error
+
+
+state 94
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT tCOMMA tINT  (9)
+
+	tCOMMA  shift 95
+	.  error
+
+
+state 95
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT tCOMMA tINT  (9)
+
+	tINT  shift 96
+	.  error
+
+
+state 96
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT . tCOMMA tINT  (9)
+
+	tCOMMA  shift 97
+	.  error
+
+
+state 97
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA . tINT  (9)
+
+	tINT  shift 98
+	.  error
+
+
+state 98
+	hex : tHEX tINT tCOMMA tINT tCOMMA tSTRING tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT tCOMMA tINT .  (9)
+
+	.  reduce 9
+
+
+11 terminals, 11 nonterminals
+18 grammar rules, 99 states

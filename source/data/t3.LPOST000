@@ -1,0 +1,41 @@
+/Gameletter {(t3)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(921681891)} def
+/saveobj save def
+/Shadow_Code {(rda)} def
+Map_Page_R
+-1190 140 Location_R
+(Raging Ross Clan World View for Lizards! Game t3 Turn 0 Page 1 of 1. World size 1A to 10J) Map_Page_Num
+165 750 wat (4E) Small
+200 775 wat (4F) Small
+235 750 pla (4G) Small
+95 700 wat (5C) Small
+130 725 fer (5D) Small
+165 700 wat (5E) Small
+200 725 grden (5F) Small (Free) Owner
+235 700 bru (5G) Small
+270 725 swp (5H) Small
+305 700 wat (5I) Small
+95 650 fer (6C) Small
+130 675 gden (6D) Small (Free) Owner
+165 650 rui (6E) Small (rda) Owner (50) Troop_Number
+200 675 fer (6F) Small (rda) Owner (20) Troop_Number
+235 650 rui (6G) Small (rda) Owner (50) Troop_Number
+270 675 bru (6H) Small
+305 650 wat (6I) Small
+95 600 wat (7C) Small
+130 625 fer (7D) Small
+165 600 fer (7E) Small
+200 625 tem (7F) Small (rda) Owner (110) Troop_Number
+235 600 fer (7G) Small
+270 625 swp (7H) Small
+305 600 wat (7I) Small
+130 575 wat (8D) Small
+165 550 bru (8E) Small
+200 575 hden (8F) Small (rda) Owner (30) Troop_Number
+235 550 bru (8G) Small
+270 575 wat (8H) Small
+200 525 bru (9F) Small
+printing
+saveobj restore

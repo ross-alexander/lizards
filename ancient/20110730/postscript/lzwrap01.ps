@@ -1,0 +1,260 @@
+
+
+/Map_Data_Wrap_X {
+
+%	This procidure is for Wrapping the map by changing the Location:X
+%	in activeLocations.
+
+%	Build an array (long as width in Hexs) and fill with -1.  The repeat
+%	fills the array at index with the index number if their Location:X 
+%	has a Hex in that colim.
+%	eg.
+%	[0 1 2 3 4 -1 -1 -1 -1 -1 10 11 12 13 -1 15 .... 29 30 31 32]
+
+Map_Size 1 sub /M_Count exch def		% foe 0 indexed arrays
+
+mark
+/X_Slots Map_Size array def			% array for data
+/X_Mul 1 def					% count at 1
+
+Map_Size { -1 dup } repeat X_Slots astore	% male 32 -1, then 
+ 						% store in array X_Slots
+Map_Size {					% start repeat
+X_Mul Hex_Width mul 25 add /Map_Test_Num exch def
+activeLocations {  
+		dup
+	Location:X Map_Test_Num eq 
+			{ 
+			X_Slots X_Mul 1 sub X_Mul put exit 
+			} { 
+			pop 
+			} ifelse
+		} forall
+	X_Mul 1 add /X_Mul exch def
+} repeat
+cleartomark
+
+%	Take the array and find the longest "-1" in a line and return them
+%	as the longest gap in the Location:X for the wrapping.
+
+/Start -1 def 
+/Finish -1 def
+/Longest_Start -1 def 
+/Longest_Finish -1 def
+/First_Start -1 def 
+/First_Finish -1 def
+/First_Length 0 def 
+/Current_Length 0 def
+/Longest_Length 0 def
+
+X_Slots 0 get -1 ne /First_Finished exch def
+0 1 M_Count 
+	{ 
+	/i exch def
+	X_Slots i get 
+	-1 eq 
+	{
+	Current_Length 0 eq
+		{
+		i /Start exch def
+		} if
+	Current_Length 1 add /Current_Length exch def
+	/Finish i def  
+	} {
+	/Current_Length 0 def
+	/First_Finished true def
+	} ifelse
+
+	First_Finished false eq 
+		{
+		Start /First_Start exch def
+		Finish /First_Finish exch def
+		Current_Length /First_Length exch def
+		} if
+
+	Current_Length Longest_Length gt 
+		{
+		Start /Longest_Start exch def
+		Finish /Longest_Finish exch def
+		Current_Length /Longest_Length exch def
+		} if
+} for
+
+X_Slots 0 get -1 eq
+X_Slots M_Count get -1 eq
+and
+{
+Current_Length First_Length add
+Longest_Length gt
+	{
+		Start /Longest_Start exch def		
+		First_Finish  /Longest_Finish exch def	
+		Current_Length First_Length add /Longest_Length exch def
+	} if
+} if
+
+%	Replace activeLocations (Location:X) with the new X after its been
+%	modifided by the Off_Set number. (For wapping)
+
+%	Find the middle of the page and center data.
+%	Main body of hexs.
+
+Longest_Length 2 idiv 
+Longest_Start add
+dup Map_Size gt { Map_Size sub } if
+/Longest_Finish exch def		% Longest_Finished now centre of gap.
+
+Longest_Finish dup 2 mod add /Longest_Finish exch def
+Longest_Finish Hex_Width mul dup /Off_Set exch def
+neg Map_Size Hex_Width mul add /Right_Off_Set exch def 
+
+%	Change all the X postions by the right amount.
+
+activeLocations { 		% above in the nested if.
+	dup 
+	Location:X Off_Set sub 
+	0 le {	
+		dup
+		Location:X Right_Off_Set add		
+		Location:setX
+	} {	
+		dup
+		Location:X Off_Set sub		
+		Location:setX
+	} ifelse
+} forall
+
+} bd def			% def and end of /Map_Data_Wrap_X
+
+
+
+
+
+
+
+/Map_Data_Wrap_Y {
+
+%	This procidure is for Wrapping the map by changing the Location:Y
+%	in activeLocations.
+
+%	Build an array (High as the hight in Hexs) and fill with -1. The repeat
+%	fills the array at index with the index number if their Location:Y 
+%	has a Hex in that row.
+%	eg.
+%	[0 1 2 3 4 -1 -1 -1 -1 -1 10 11 12 13 -1 15 .... 29 30 31 32]
+
+Map_Size 1 sub /M_Count exch def		% for 0 indexed arrays
+
+mark 
+/Y_Slots Map_Size array def			% array for data
+/Y_Mul 1 def					% count at 1
+
+Map_Size { -1 dup } repeat Y_Slots astore	% make 32 -1, then 
+ 						% store in array Y_Slots
+
+Map_Size Hex_Hight mul /Y_Max exch def		% 32 50 mul = Y_Max @ 1600
+Map_Size {					% start repeat @ 32
+Y_Mul Hex_Hight mul				% Y_Mul 50 mul = start @ 50
+/Map_Test_Num exch def
+Map_Test_Num Y_Max gt 
+	{ (Error in "Map_Y Section" in Max Hight) == } if 
+activeLocations {  
+		dup
+	Location:Y Map_Test_Num 
+		eq { 
+			Y_Slots Y_Mul 1 sub Y_Mul put exit 
+		}{ 
+			pop 
+		} ifelse
+	} forall
+	Y_Mul 1 add /Y_Mul exch def
+} repeat
+cleartomark
+
+%	Take the array and find the longest "-1" in a line and return them
+%	as the longest gap in the Locatin:Y for the wrapping.
+
+/Start -1 def 
+/Finish -1 def
+/Longest_Start -1 def 
+/Longest_Finish -1 def
+/First_Start -1 def 
+/First_Finish -1 def
+/First_Length 0 def 
+/Current_Length 0 def
+/Longest_Length 0 def
+
+Y_Slots 0 get -1 ne /First_Finished exch def
+0 1 M_Count 
+	{ 
+	/i exch def
+	Y_Slots i get 
+	-1 eq 
+	{
+	Current_Length 0 eq
+		{
+		i /Start exch def
+		} if
+	Current_Length 1 add /Current_Length exch def
+	/Finish i def  
+	} {
+	/Current_Length 0 def
+	/First_Finished true def
+	} ifelse
+
+	First_Finished false eq 
+		{
+		Start /First_Start exch def
+		Finish /First_Finish exch def
+		Current_Length /First_Length exch def
+		} if
+
+	Current_Length Longest_Length gt 
+		{
+		Start /Longest_Start exch def
+		Finish /Longest_Finish exch def
+		Current_Length /Longest_Length exch def
+		} if
+} for
+
+Y_Slots 0 get -1 eq
+Y_Slots M_Count get -1 eq
+and
+{
+Current_Length First_Length add
+Longest_Length gt
+	{
+		Start /Longest_Start exch def		
+		First_Finish  /Longest_Finish exch def	
+		Current_Length First_Length add /Longest_Length exch def
+	} if
+} if
+
+%	Replace activeLocations (Location:Y) with the new Y after its been
+%	modifided by the Off_Set number. (For wapping)
+
+%	Local verables
+
+/Size_1 800 def		% in the X 
+/Size_2 1800 def	% 1600 + 200
+
+Longest_Finish Hex_Hight mul dup /Off_Set exch def 
+neg Map_Size Hex_Hight mul add /Up_Off_Set exch def 
+
+Off_Set Size_1 ge /Sec_Page exch def		% is there a second page?
+						% fasle = No true = Yes
+
+activeLocations { 				% above in the nested if.
+	dup
+	Location:Y Off_Set sub 			% Location:Y - gap hight
+	0 le {					% is less then 0 ?
+		dup				
+		Location:Y Up_Off_Set add	% 
+		Location:setY			% set :Y
+	} {	
+		dup
+		Location:Y Off_Set sub
+		Location:setY
+	} ifelse
+} forall
+} bd def				% def and end of /Map_Data_Wrap_Y

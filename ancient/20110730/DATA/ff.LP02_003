@@ -1,0 +1,11 @@
+
+ * LIZARDS! ORDER ERRORS
+
+Header(ff, 3, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+ - 74 Green Lizards at 1J move SE (to 1K).
+ - Lizards attack 15 militia Lizards in free Den at 1K.
+ - Combat round 2! Standing Lizards: 66. Standing enemy Lizards: 0.

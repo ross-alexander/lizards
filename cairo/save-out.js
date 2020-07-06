@@ -1,0 +1,1 @@
+{"layout":2,"home":4,"cost":110,"active":4,"hexes":[{"id":1,"type":"RUI"},{"id":2,"type":"FER"},{"id":3,"type":"SCR"},{"id":4,"type":"FER"},{"id":5,"type":"TEM"},{"id":6,"type":"BLK"},{"id":7,"type":"SCR"},{"id":8,"type":"RUI"},{"id":9,"type":"FER"}]}

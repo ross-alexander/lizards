@@ -1,0 +1,41 @@
+ - Spy Lizard splits at 6K and moves S (to 7K).
+ - Spy Lizard at 7K moves S (to 8K).
+ - 200 Green Lizards split at 6K and move NW (to 6J).
+ - Lizards eat from fertile hex 6J.
+ - 200 Green Lizards at 6J move N (to 5J).
+ - Spy Lizard at 4K moves N (to 3K).
+ - Spy Lizard at 3K moves N (to 2K).
+ - Froth fills 2K as your Spy Lizard is CONSUMED with gusto by a Sea Monster.
+ - Spy Lizard splits at 6K and moves S (to 7K).
+ - Spy Lizard at 7K moves S (to 8K).
+ - Sneak 5A (SE NE) order ignored. You have Spys in hex, but they are mired or have already moved.
+ - Fertile hex planted at 5K by 20 Green Lizards.
+ - Recruiting from Home Den at 6K. 17 Black lizards recruited from Den leaving 33 Den Lizards at 6K.
+ - Fertile hex planted at 7J by 20 Green Lizards.
+ - Fertile hex planted at 5I by 20 Green Lizards.
+Header(ff, 2, 1, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+Phase(development)
+ClanReport(Raging Ross)
+HomeDen(6K,33,4,0,134,0,17,0,1,0)
+
+ - 5I Band of 20 Green (Peckish & Average) Lizards.
+ - 5J Band of 200 Green (Sated & Average) Lizards.
+ - 5K Band of 20 Green (Hungry & Average) Lizards.
+ - 7J Band of 20 Green (Hungry & Average) Lizards.
+ - 5A Spy Lizard. Spy for 1 turns.
+ - 7A Spy Lizard. Spy for 1 turns.
+ - 8K Spy Lizard. Spy for 0 turns.
+ - 8K Spy Lizard. Spy for 0 turns.
+
+ * Clans Ranking at end of Turn 2:
+
+ 01 -    531 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -    498 Player 01, 'Raging Ross' (rda) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+Trailer()

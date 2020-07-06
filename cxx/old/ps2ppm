@@ -1,0 +1,14 @@
+#!/bin/sh
+
+RESOLUTION=200
+REDUCTION=2
+
+if [ -f $1.ps ];
+then
+  file=$1
+else
+  file=`cat $i | sed 's/.ps^//'`;
+fi
+
+gs -sDEVICE=ppm -sOutputFile=$file-%d.ppm -r${RESOLUTION} -dBATCH -dNOPAUSE  \
+   -sPAPERSIZE=a4 $file.ps

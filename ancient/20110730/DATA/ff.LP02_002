@@ -1,0 +1,41 @@
+ - 110 Green Lizards at 9E move SW (to 10D).
+ - 110 Green Lizards at 10D move NW (to 9C).
+ - Lizards attack 15 militia Lizards in free Den at 9C.
+ - Combat round 2! Standing Lizards: 106. Standing enemy Lizards: 0.
+ - Your Lizards at 9C mercilessly SLAUGHTERED their foul enemy. They are now Good warriors.
+ - Your Lizards captured Grey Den at 9C.
+ - 120 Green Lizards at 8G move NE (to 8H).
+ - 120 Green Lizards at 8H move NE (to 7I).
+ - 74 Green Lizards at 11I move S (to 12I).
+ - 74 Green Lizards at 12I move SE (to 1J).
+ - Lizards eat from fertile hex 1J.
+ - Spy Lizard at 11E moves SW (to 12D).
+ - 30 Green Lizards at 12G move N (to 11G).
+ - 30 Green Lizards at 11G move N (to 10G).
+ - Fertile hex planted at 11F by 11 Green Lizards.
+ - Recruiting from Grey Den at 9C. 17 Grey lizards recruited from Den leaving 33 Den Lizards at 9C.
+ - Recruiting from Home Den at 10G. 14 Black lizards recruited from Den leaving 27 Den Lizards at 10G.
+Header(ff, 2, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+Phase(development)
+ClanReport(Jumping Jono)
+Den(9C, 33, Grey, 106 Green, 17 Grey, Peckish, Average)
+
+HomeDen(10G,27,4,0,36,0,31,0,0,0)
+
+ - 1J Band of 74 Green (Sated & Average) Lizards.
+ - 7I Band of 120 Green (Peckish & Average) Lizards.
+ - 11F Band of 11 Green (Hungry & Average) Lizards.
+ - 12D Spy Lizard. Spy for 1 turns.
+
+ * Clans Ranking at end of Turn 2:
+
+ 01 -    531 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -    498 Player 01, 'Raging Ross' (rda) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+Trailer()

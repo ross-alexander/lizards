@@ -1,0 +1,118 @@
+;; -*- Prcs -*-
+(Created-By-Prcs-Version 1 2 14)
+(Project-Description "")
+(Project-Version lizards 0 4)
+(Parent-Version lizards 0 3)
+(Version-Log "")
+(New-Version-Log "")
+(Checkin-Time "Wed, 14 Apr 1999 22:56:04 +0100")
+(Checkin-Login rossa)
+(Populate-Ignore ())
+(Project-Keywords)
+(Files
+;; This is a comment.  Fill in files here.
+;; For example:  (prcs/checkout.cc ())
+
+;; Files added by populate at Wed, 17 Mar 1999 16:59:07 +0000,
+;; to version 0.0(w), by rossa:
+
+  (CUST4.MAP (lizards/0_CUST4.MAP 1.1 644))
+  (CUST3.MAP (lizards/1_CUST3.MAP 1.1 644))
+  (showhex.c (lizards/2_showhex.c 1.1 644))
+  (CUST2.MAP (lizards/3_CUST2.MAP 1.1 644))
+  (common/newfuncs.c (lizards/4_newfuncs.c 1.2 644))
+  (common/lizards.h (lizards/5_lizards.h 1.4 644))
+  (common/lizglobs.c (lizards/6_lizglobs.c 1.2 644))
+  (common/strgfunc.h (lizards/7_strgfunc.h 1.1 644))
+  (common/strgfunc.c (lizards/8_strgfunc.c 1.1 644))
+  (common/score.h (lizards/9_score.h 1.1 644))
+  (common/Makefile.in (lizards/10_Makefile.i 1.1 644))
+  (common/lizmisc.h (lizards/11_lizmisc.h 1.2 644))
+  (common/lizmisc.c (lizards/12_lizmisc.c 1.2 644))
+  (common/lizhex.h (lizards/13_lizhex.h 1.1 644))
+  (common/lizgame.h (lizards/14_lizgame.h 1.1 644))
+  (common/lizgame.c (lizards/15_lizgame.c 1.4 644))
+  (common/filefunc.h (lizards/16_filefunc.h 1.1 644))
+  (common/filefunc.c (lizards/17_filefunc.c 1.1 644))
+  (common/lizhex.c (lizards/18_lizhex.c 1.1 644))
+  (common/compat.h (lizards/19_compat.h 1.1 644))
+  (common/compat.c (lizards/20_compat.c 1.1 644))
+  (CUST1.MAP (lizards/21_CUST1.MAP 1.1 644))
+  (psprint.c (lizards/22_psprint.c 1.1 644))
+  (psplypage.c (lizards/23_psplypage. 1.1 644))
+  (psmapper.c (lizards/24_psmapper.c 1.1 644))
+  (pscenprn.c (lizards/25_pscenprn.c 1.2 644))
+  (postscript/lzwrap01.ps (lizards/26_lzwrap01.p 1.1 644))
+  (postscript/lzheader.ps (lizards/27_lzheader.p 1.1 644))
+  (runturn.c (lizards/28_runturn.c 1.1 644))
+  (README (lizards/29_README 1.4 644))
+  (Makefile.in (lizards/30_Makefile.i 1.1 644))
+  (LMESGS.TXT (lizards/31_LMESGS.TXT 1.1 644))
+  (libturn/recruitorder.c (lizards/32_recruitord 1.2 644))
+  (libturn/splitorder.c (lizards/33_splitorder 1.2 644))
+  (libturn/sneakorder.c (lizards/34_sneakorder 1.1 644))
+  (libturn/moveorder.c (lizards/35_moveorder. 1.2 644))
+  (libturn/worldshut.c (lizards/36_worldshut. 1.3 644))
+  (libturn/worldopen.c (lizards/37_worldopen. 1.3 644))
+  (libturn/worldmast.c (lizards/38_worldmast. 1.3 644))
+  (libturn/tordbord.c (lizards/39_tordbord.c 1.3 644))
+  (libturn/terrmast.c (lizards/40_terrmast.c 1.1 644))
+  (libturn/terrain.h (lizards/41_terrain.h 1.1 644))
+  (libturn/terrain.c (lizards/42_terrain.c 1.2 644))
+  (libturn/orders.h (lizards/43_orders.h 1.1 644))
+  (libturn/combat.c (lizards/44_combat.c 1.1 644))
+  (libturn/moreords.h (lizards/45_moreords.h 1.1 644))
+  (libturn/moreorders.c (lizards/46_moreorders 1.1 644))
+  (libturn/messapnd.c (lizards/47_messapnd.c 1.3 644))
+  (libturn/Makefile.in (lizards/48_Makefile.i 1.1 644))
+  (libturn/lizord.c (lizards/49_lizord.c 1.2 644))
+  (libturn/lizmesg.h (lizards/50_lizmesg.h 1.1 644))
+  (libturn/lizmesg.c (lizards/51_lizmesg.c 1.1 644))
+  (libturn/clanreport.c (lizards/b/0_clanreport 1.3 644))
+  (libturn/clanrank.c (lizards/b/1_clanrank.c 1.4 644))
+  (libturn/chants.h (lizards/b/2_chants.h 1.1 644))
+  (libturn/chants.c (lizards/b/3_chants.c 1.1 644))
+  (libturn/bordshuffle.c (lizards/b/4_bordshuffl 1.2 644))
+  (libturn/blddest.h (lizards/b/5_blddest.h 1.1 644))
+  (libturn/blddest.c (lizards/b/6_blddest.c 1.1 644))
+  (etc/install-sh (lizards/b/7_install-sh 1.1 755))
+  (etc/config.sub (lizards/b/8_config.sub 1.1 755))
+  (etc/config.guess (lizards/b/9_config.gue 1.1 755))
+  (create/create.h (lizards/b/10_create.h 1.2 644))
+  (create/custom.h (lizards/b/11_custom.h 1.1 644))
+  (create/init.c (lizards/b/12_init.c 1.1 644))
+  (create/customstart.c (lizards/b/13_customstar 1.3 644))
+  (create/populate.c (lizards/b/14_populate.c 1.2 644))
+  (create/convert.c (lizards/b/15_convert.c 1.1 644))
+  (create/fix.c (lizards/b/16_fix.c 1.1 644))
+  (create/fill.c (lizards/b/17_fill.c 1.1 644))
+  (worldlisp.c (lizards/b/18_worldlisp. 1.2 644))
+  (worldturn.c (lizards/b/19_worldturn. 1.2 644))
+  (worldinit.c (lizards/b/20_worldinit. 1.3 644))
+  (configure.in (lizards/b/21_configure. 1.1 644))
+
+;; Files added by populate at Mon, 29 Mar 1999 22:52:05 +0100,
+;; to version 0.2(w), by rossa:
+
+  
+
+;; Files added by populate at Mon, 29 Mar 1999 22:52:08 +0100,
+;; to version 0.2(w), by rossa:
+
+  (decode/decode.h (lizards/b/22_decode.h 1.1 644))
+
+;; Files added by populate at Wed, 31 Mar 1999 21:28:28 +0100,
+;; to version 0.2(w), by rossa:
+
+  (decode/Makefile.in (lizards/b/23_Makefile.i 1.1 644))
+  (decode/lex.decode.l (lizards/b/24_lex.decode 1.1 644))
+  (decode/decode.tab.y (lizards/b/25_decode.tab 1.1 644))
+  (decode/decode.c (lizards/b/26_decode.c 1.1 644))
+
+;; Files deleted by depopulate at Wed, 31 Mar 1999 21:29:20 +0100,
+;; from version 0.2(w), by rossa:
+
+  ; (decode/decode.lex ())
+)
+(Merge-Parents)
+(New-Merge-Parents)

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+SGMLS=sgmls
+SGMLSASP='sgmlsasp mapping'
+
+INPUT=$1
+OUTPUT=`echo $INPUT | sed 's/.sgml/.tex/'`
+
+SGML_PATH=$PWD/%N.dtd:$PWD/%P.dtd:$PWD/%N
+export SGML_PATH
+
+#$SGMLS $INPUT | $SGMLSASP
+$SGMLS $INPUT | $SGMLSASP

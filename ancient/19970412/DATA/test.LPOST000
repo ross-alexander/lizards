@@ -1,0 +1,425 @@
+/Gameletter {(test)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(1/1/1990)} def
+/saveobj save def
+/Shadow_Code {(C-G)} def
+Map_Page_R
+-1190 140 Location_R
+(Circle Games Clan World View for Lizards! Game test Turn 0 Page 1 of 2. World size 1A to 20T) Map_Page_Num
+25 750 yden (1A) Small (Free) Owner
+690 775 wat (1T) Small
+60 775 fer (1B) Small
+655 750 pla (1S) Small
+95 750 gden (1C) Small (Free) Owner
+130 775 wat (1D) Small
+165 750 bru (1E) Small
+200 775 fer (1F) Small
+235 750 rden (1G) Small (Free) Owner
+270 775 wat (1H) Small
+305 750 fer (1I) Small
+515 750 fer (1O) Small
+480 775 fer (1N) Small
+550 775 wat (1P) Small
+445 750 wat (1M) Small
+585 750 fer (1Q) Small
+620 775 grden (1R) Small (Free) Owner
+690 725 wat (2T) Small
+60 725 wat (2B) Small
+25 700 fer (2A) Small
+655 700 fer (2S) Small
+95 700 wat (2C) Small
+130 725 wat (2D) Small
+165 700 swp (2E) Small
+200 725 fer (2F) Small
+270 725 wat (2H) Small
+235 700 fer (2G) Small
+305 700 swp (2I) Small
+515 700 bden (2O) Small (Free) Owner
+480 725 wat (2N) Small
+550 725 wat (2P) Small
+445 700 swp (2M) Small
+585 700 bru (2Q) Small
+620 725 pla (2R) Small
+690 675 wat (3T) Small
+60 675 wat (3B) Small
+25 650 wat (3A) Small
+130 675 wat (3D) Small
+95 650 wat (3C) Small
+200 675 fer (3F) Small
+270 675 wat (3H) Small
+235 650 wat (3G) Small
+445 650 wat (3M) Small
+480 675 fer (3N) Small
+550 675 wat (3P) Small
+515 650 wat (3O) Small
+585 650 wat (3Q) Small
+620 675 rui (3R) Small
+60 625 wat (4B) Small
+25 600 wat (4A) Small
+95 600 wat (4C) Small
+165 600 wat (4E) Small
+445 600 wat (4M) Small
+410 625 wat (4L) Small
+480 625 wat (4N) Small
+375 600 wat (4K) Small
+515 600 wat (4O) Small
+550 625 swp (4P) Small
+60 575 fer (5B) Small
+25 550 fer (5A) Small
+95 550 pla (5C) Small
+690 575 wat (5T) Small
+130 575 wat (5D) Small
+165 550 fer (5E) Small
+200 575 pla (5F) Small
+235 550 swp (5G) Small
+445 550 grden (5M) Small (Free) Owner
+410 575 wat (5L) Small
+480 575 wat (5N) Small
+375 550 bru (5K) Small
+515 550 wat (5O) Small
+60 525 yden (6B) Small (Free) Owner
+25 500 fer (6A) Small
+95 500 fer (6C) Small
+690 525 wat (6T) Small
+130 525 wat (6D) Small
+165 500 bden (6E) Small (Free) Owner
+200 525 fer (6F) Small
+235 500 swp (6G) Small
+410 525 wat (6L) Small
+480 525 fer (6N) Small
+445 500 wat (6M) Small
+375 500 mou (6K) Small
+515 500 wat (6O) Small
+60 475 mou (7B) Small
+690 475 wat (7T) Small
+130 475 wat (7D) Small
+25 450 wat (7A) Small
+95 450 wat (7C) Small
+200 475 bru (7F) Small
+165 450 wat (7E) Small
+235 450 wat (7G) Small
+410 475 wat (7L) Small
+480 475 wat (7N) Small
+445 450 wat (7M) Small
+25 400 wat (8A) Small
+60 425 whi (8B) Small
+130 425 wat (8D) Small
+200 425 wat (8F) Small
+165 400 wat (8E) Small
+445 400 wat (8M) Small
+585 400 wat (8Q) Small
+25 350 swp (9A) Small
+690 375 wat (9T) Small
+60 375 pla (9B) Small
+655 350 pla (9S) Small
+95 350 swp (9C) Small
+200 375 pla (9F) Small
+165 350 rui (9E) Small
+235 350 bru (9G) Small
+445 350 wat (9M) Small
+410 375 wat (9L) Small
+480 375 wat (9N) Small
+375 350 wat (9K) Small
+515 350 wat (9O) Small
+585 350 fer (9Q) Small
+550 375 wat (9P) Small
+620 375 bru (9R) Small
+25 300 grden (10A) Small (Free) Owner
+690 325 wat (10T) Small
+60 325 wat (10B) Small
+655 300 bru (10S) Small
+95 300 bru (10C) Small
+200 325 wat (10F) Small
+165 300 swp (10E) Small
+235 300 fer (10G) Small
+130 325 wat (10D) Small
+270 325 wat (10H) Small
+445 300 rden (10M) Small (Free) Owner
+410 325 wat (10L) Small
+480 325 wat (10N) Small
+375 300 wat (10K) Small
+515 300 wat (10O) Small
+585 300 gden (10Q) Small (Free) Owner
+550 325 wat (10P) Small
+620 325 fer (10R) Small
+690 275 wat (11T) Small
+60 275 fer (11B) Small
+25 250 wat (11A) Small
+655 250 wat (11S) Small
+95 250 wat (11C) Small
+200 275 grden (11F) Small (Free) Owner
+165 250 wat (11E) Small
+235 250 wat (11G) Small
+130 275 wat (11D) Small
+270 275 wat (11H) Small
+375 250 wat (11K) Small
+410 275 wat (11L) Small
+480 275 fer (11N) Small
+445 250 wat (11M) Small
+515 250 wat (11O) Small
+550 275 wat (11P) Small
+620 275 fer (11R) Small
+585 250 wat (11Q) Small
+690 225 bru (12T) Small
+60 225 wat (12B) Small
+25 200 wat (12A) Small
+95 200 wat (12C) Small
+200 225 wat (12F) Small
+130 225 wat (12D) Small
+270 225 swp (12H) Small
+165 200 wat (12E) Small
+235 200 wat (12G) Small
+375 200 wat (12K) Small
+340 225 wat (12J) Small
+410 225 wat (12L) Small
+305 200 wat (12I) Small
+445 200 wat (12M) Small
+480 225 wat (12N) Small
+515 200 wat (12O) Small
+550 225 wat (12P) Small
+620 225 wat (12R) Small
+585 200 wat (12Q) Small
+95 150 wat (13C) Small
+60 175 bru (13B) Small
+130 175 wat (13D) Small
+25 150 pla (13A) Small
+165 150 pla (13E) Small
+200 175 gden (13F) Small (Free) Owner
+235 150 bru (13G) Small
+270 175 wat (13H) Small
+375 150 rden (13K) Small (Free) Owner
+340 175 swp (13J) Small
+410 175 wat (13L) Small
+305 150 swp (13I) Small
+445 150 bru (13M) Small
+480 175 swp (13N) Small
+515 150 fer (13O) Small
+550 175 wat (13P) Small
+620 175 swp (13R) Small
+585 150 swp (13Q) Small
+655 150 tem (13S) Small
+95 100 gden (14C) Small (Free) Owner
+60 125 wat (14B) Small
+130 125 wat (14D) Small
+25 100 swp (14A) Small
+165 100 tem (14E) Small
+200 125 fer (14F) Small
+270 125 wat (14H) Small
+235 100 pla (14G) Small
+340 125 fer (14J) Small
+410 125 wat (14L) Small
+375 100 bru (14K) Small
+305 100 bru (14I) Small
+445 100 fer (14M) Small
+480 125 yden (14N) Small (Free) Owner
+515 100 wat (14O) Small
+550 125 wat (14P) Small
+620 125 wat (14R) Small
+585 100 fer (14Q) Small
+655 100 fer (14S) Small
+690 125 wat (14T) Small
+60 75 fer (15B) Small
+130 75 wat (15D) Small
+95 50 wat (15C) Small
+25 50 wat (15A) Small
+165 50 wat (15E) Small
+200 75 pla (15F) Small
+340 75 pla (15J) Small
+410 75 wat (15L) Small
+375 50 wat (15K) Small
+480 75 bru (15N) Small
+550 75 wat (15P) Small
+445 50 wat (15M) Small
+515 50 wat (15O) Small
+585 50 wat (15Q) Small
+620 75 bden (15R) Small (Free) Owner
+655 50 wat (15S) Small
+690 75 wat (15T) Small
+25 0 wat (16A) Small
+60 25 wat (16B) Small
+130 25 tem (16D) Small
+95 0 wat (16C) Small
+480 25 wat (16N) Small
+445 0 wat (16M) Small
+515 0 wat (16O) Small
+585 0 wat (16Q) Small
+550 25 swp (16P) Small
+620 25 wat (16R) Small
+655 0 wat (16S) Small
+690 25 pla (16T) Small
+printing
+Map_Page_R
+-1190 140 Location_R
+(Circle Games Clan World View for Lizards! Game test Turn 0 Page 2 of 2. World size 1A to 20T) Map_Page_Num
+25 750 pla (17A) Small
+690 775 wat (17T) Small
+60 775 pla (17B) Small
+655 750 hden (17S) Small (kea) Owner
+95 750 bru (17C) Small
+200 775 swp (17F) Small
+165 750 pla (17E) Small
+235 750 swp (17G) Small
+480 775 wat (17N) Small
+445 750 wat (17M) Small
+515 750 fer (17O) Small
+410 775 wat (17L) Small
+550 775 wat (17P) Small
+585 750 gden (17Q) Small (Free) Owner
+620 775 fer (17R) Small
+25 700 yden (18A) Small (Free) Owner
+690 725 wat (18T) Small
+60 725 fer (18B) Small
+655 700 pla (18S) Small
+95 700 pla (18C) Small
+200 725 wat (18F) Small
+165 700 fer (18E) Small
+235 700 fer (18G) Small
+130 725 wat (18D) Small
+270 725 wat (18H) Small
+480 725 rden (18N) Small (Free) Owner
+445 700 wat (18M) Small
+515 700 fer (18O) Small
+410 725 wat (18L) Small
+550 725 wat (18P) Small
+620 725 wat (18R) Small
+585 700 wat (18Q) Small
+25 650 wat (19A) Small
+690 675 wat (19T) Small
+60 675 fer (19B) Small
+655 650 wat (19S) Small
+95 650 wat (19C) Small
+200 675 yden (19F) Small (Free) Owner
+165 650 wat (19E) Small
+235 650 wat (19G) Small
+130 675 wat (19D) Small
+270 675 wat (19H) Small
+480 675 fer (19N) Small
+410 675 wat (19L) Small
+550 675 wat (19P) Small
+445 650 wat (19M) Small
+515 650 wat (19O) Small
+620 675 swp (19R) Small
+585 650 wat (19Q) Small
+25 600 wat (20A) Small
+690 625 fer (20T) Small
+60 625 wat (20B) Small
+655 600 wat (20S) Small
+95 600 wat (20C) Small
+130 625 wat (20D) Small
+165 600 wat (20E) Small
+200 625 wat (20F) Small
+270 625 wat (20H) Small
+235 600 wat (20G) Small
+305 600 wat (20I) Small
+480 625 wat (20N) Small
+515 600 wat (20O) Small
+620 625 wat (20R) Small
+585 600 wat (20Q) Small
+550 625 bru (20P) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(kea)} def
+Map_Page_R
+-1190 140 Location_R
+(Kill em all Clan World View for Lizards! Game test Turn 0 Page 1 of 1. World size 1A to 20T) Map_Page_Num
+655 750 wat (15S) Small
+655 700 wat (16S) Small
+620 725 wat (16R) Small
+690 725 pla (16T) Small
+585 700 wat (16Q) Small
+25 700 wat (16A) Small
+655 650 hden (17S) Small (kea) Owner (450) Troop_Number
+620 675 fer (17R) Small
+690 675 wat (17T) Small
+585 650 gden (17Q) Small (Free) Owner
+25 650 pla (17A) Small
+620 625 wat (18R) Small
+690 625 wat (18T) Small
+655 600 pla (18S) Small
+585 600 wat (18Q) Small
+25 600 yden (18A) Small (Free) Owner
+620 575 swp (19R) Small
+690 575 wat (19T) Small
+655 550 wat (19S) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(nuk)} def
+Map_Page_R
+-1190 140 Location_R
+(Duke Nukem Clan World View for Lizards! Game test Turn 0 Page 1 of 1. World size 1A to 20T) Map_Page_Num
+620 775 wat (5R) Small
+585 750 bru (5Q) Small
+655 750 pla (5S) Small
+620 725 swp (6R) Small
+585 700 fer (6Q) Small
+655 700 pla (6S) Small
+550 725 wat (6P) Small
+690 725 wat (6T) Small
+620 675 hden (7R) Small (nuk) Owner (450) Troop_Number
+585 650 wat (7Q) Small
+655 650 wat (7S) Small
+550 675 wat (7P) Small
+690 675 wat (7T) Small
+620 625 wat (8R) Small
+550 625 pla (8P) Small
+690 625 vol (8T) Small
+585 600 wat (8Q) Small
+655 600 wat (8S) Small
+620 575 bru (9R) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(bla)} def
+Map_Page_R
+-1190 140 Location_R
+(Blah blah blah Clan World View for Lizards! Game test Turn 0 Page 1 of 1. World size 1A to 20T) Map_Page_Num
+305 750 wat (16I) Small
+305 700 fer (17I) Small
+270 725 wat (17H) Small
+340 725 bru (17J) Small
+235 700 swp (17G) Small
+375 700 swp (17K) Small
+305 650 hden (18I) Small (bla) Owner (450) Troop_Number
+270 675 wat (18H) Small
+340 675 pla (18J) Small
+235 650 fer (18G) Small
+375 650 swp (18K) Small
+270 625 wat (19H) Small
+340 625 pla (19J) Small
+305 600 wat (19I) Small
+235 600 wat (19G) Small
+375 600 wat (19K) Small
+270 575 wat (20H) Small
+340 575 wat (20J) Small
+305 550 wat (20I) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(sla)} def
+Map_Page_R
+-1190 140 Location_R
+(Slayer Clan World View for Lizards! Game test Turn 0 Page 1 of 1. World size 1A to 20T) Map_Page_Num
+340 775 wat (4J) Small
+305 750 wat (4I) Small
+375 750 wat (4K) Small
+340 725 swp (5J) Small
+305 700 bru (5I) Small
+375 700 bru (5K) Small
+270 725 wat (5H) Small
+410 725 wat (5L) Small
+340 675 hden (6J) Small (sla) Owner (450) Troop_Number
+305 650 fer (6I) Small
+375 650 mou (6K) Small
+270 675 wat (6H) Small
+410 675 wat (6L) Small
+340 625 pla (7J) Small
+270 625 wat (7H) Small
+410 625 wat (7L) Small
+305 600 wat (7I) Small
+375 600 wat (7K) Small
+340 575 wat (8J) Small
+printing
+saveobj restore

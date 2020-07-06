@@ -1,0 +1,21 @@
+Header(cg01, 0)
+ClanID(mtb,Mike TB)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+Phase(development)
+ClanReport(Mike TB)
+HomeDen(17I, 50, 1, 400 Black, Sated, Average)
+
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 0:
+
+ 01 -    500 Player 01, 'Mike TB' (mtb) Clan.
+ 02 -    500 Player 02, 'Jumping Jono' (jno) Clan.
+ 03 -    500 Player 03, 'Dangerous Dan' (dan) Clan.
+ 04 -    500 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

@@ -1,0 +1,98 @@
+1999-08-08 21:12 Debugger (debug.cc, 16) started.
+1999-08-08 21:12 random time seed = 934143147
+1999-08-08 21:12 Test Got player startup STARTUP 1.
+1999-08-08 21:12 Test Read from template TEMPLATE 2
+1999-08-08 21:12 Test Got token "TEMPLATE"
+1999-08-08 21:12 Test Got template 2 for player 1
+1999-08-08 21:12 Test Read from template HOME 6
+1999-08-08 21:12 Test Read from template 01 RUI GRY50
+1999-08-08 21:12 Test build_hex(RUI GRY50)
+1999-08-08 21:12 Test Got lizard colour GRY.
+1999-08-08 21:12 Test Got 5 GREY lizards.
+1999-08-08 21:12 Test Added lizards to hex.
+1999-08-08 21:12 Test Read from template 02 FER
+1999-08-08 21:12 Test build_hex(FER)
+1999-08-08 21:12 Test Read from template 03 SCR
+1999-08-08 21:12 Test build_hex(SCR)
+1999-08-08 21:12 Test Read from template 04 FER GRN20
+1999-08-08 21:12 Test build_hex(FER GRN20)
+1999-08-08 21:12 Test Got lizard colour GRN.
+1999-08-08 21:12 Test Read from template 05 TEM BLK110
+1999-08-08 21:12 Test build_hex(TEM BLK110)
+1999-08-08 21:12 Test Got lizard colour BLK.
+1999-08-08 21:12 Test Read from template 06 BLK
+1999-08-08 21:12 Test build_hex(BLK)
+1999-08-08 21:12 Test Read from template 07 SCR
+1999-08-08 21:12 Test build_hex(SCR)
+1999-08-08 21:12 Test Read from template 08 RUI GRY50
+1999-08-08 21:12 Test build_hex(RUI GRY50)
+1999-08-08 21:12 Test Got lizard colour GRY.
+1999-08-08 21:12 Test Got 5 GREY lizards.
+1999-08-08 21:12 Test Added lizards to hex.
+1999-08-08 21:12 Test Read from template 09 FER
+1999-08-08 21:12 Test build_hex(FER)
+1999-08-08 21:12 Test Finished reading in hexes.
+1999-08-08 21:12 Test Counted 2 fertile hexes.
+1999-08-08 21:12 Test Player 1 has grid location 2.
+1999-08-08 21:12 Test Put hex 0 into 2E (owner 1).
+1999-08-08 21:12 Test Put hex 1 into 3E (owner 1).
+1999-08-08 21:12 Test Put hex 2 into 4E (owner 1).
+1999-08-08 21:12 Test Put hex 3 into 2F (owner 1).
+1999-08-08 21:12 Test Put hex 4 into 3F (owner 1).
+1999-08-08 21:12 Test Put hex 5 into 4F (owner 1).
+1999-08-08 21:12 Test Put hex 6 into 1G (owner 1).
+1999-08-08 21:12 Test Put hex 7 into 2G (owner 1).
+1999-08-08 21:12 Test Put hex 8 into 3G (owner 1).
+1999-08-08 21:12 Test lay_template player = 1 completed
+1999-08-08 21:12 Test Got player startup STARTUP 2.
+1999-08-08 21:12 Test Read from template TEMPLATE 3
+1999-08-08 21:12 Test Got token "TEMPLATE"
+1999-08-08 21:12 Test Got template 3 for player 2
+1999-08-08 21:12 Test Read from template HOME 6
+1999-08-08 21:12 Test Read from template 01 PEA RED100 GRY50
+1999-08-08 21:12 Test build_hex(PEA RED100 GRY50)
+1999-08-08 21:12 Test Got lizard colour RED.
+1999-08-08 21:12 Test Got lizard colour GRY.
+1999-08-08 21:12 Test Got 5 GREY lizards.
+1999-08-08 21:12 Test Added lizards to hex.
+1999-08-08 21:12 Test Read from template 02 FER
+1999-08-08 21:12 Test build_hex(FER)
+1999-08-08 21:12 Test Read from template 03 SCR GRN10
+1999-08-08 21:12 Test build_hex(SCR GRN10)
+1999-08-08 21:12 Test Got lizard colour GRN.
+1999-08-08 21:12 Test Read from template 04 SCR
+1999-08-08 21:12 Test build_hex(SCR)
+1999-08-08 21:12 Test Read from template 05 SCR RED100 GRN10
+1999-08-08 21:12 Test build_hex(SCR RED100 GRN10)
+1999-08-08 21:12 Test Got lizard colour RED.
+1999-08-08 21:12 Test Got lizard colour GRN.
+1999-08-08 21:12 Test Read from template 06 RED60
+1999-08-08 21:12 Test build_hex(RED60)
+1999-08-08 21:12 Test Read from template 07 FER RED100 YEL50
+1999-08-08 21:12 Test build_hex(FER RED100 YEL50)
+1999-08-08 21:12 Test Got lizard colour RED.
+1999-08-08 21:12 Test Got lizard colour YEL.
+1999-08-08 21:12 Test Read from template 08 SCR
+1999-08-08 21:12 Test build_hex(SCR)
+1999-08-08 21:12 Test Read from template 09 FER
+1999-08-08 21:12 Test build_hex(FER)
+1999-08-08 21:12 Test Read from template 10 SCR GRN10
+1999-08-08 21:12 Test build_hex(SCR GRN10)
+1999-08-08 21:12 Test Got lizard colour GRN.
+1999-08-08 21:12 Test Read from template 11 PEA RED100 GRY50
+1999-08-08 21:12 Test build_hex(PEA RED100 GRY50)
+1999-08-08 21:12 Test Got lizard colour RED.
+1999-08-08 21:12 Test Got lizard colour GRY.
+1999-08-08 21:12 Test Got 5 GREY lizards.
+1999-08-08 21:12 Test Added lizards to hex.
+1999-08-08 21:12 Test Finished reading in hexes.
+1999-08-08 21:12 Test Counted 3 fertile hexes.
+1999-08-08 21:12 Test Player 2 has grid location 1.
+1999-08-08 21:12 Test Put hex 0 into 3B (owner 2).
+1999-08-08 21:12 Test Put hex 1 into 1C (owner 2).
+1999-08-08 21:12 Test Put hex 2 into 2C (owner 2).
+1999-08-08 21:12 Test Put hex 3 into 3C (owner 2).
+1999-08-08 21:12 Test Put hex 4 into 1D (owner 2).
+1999-08-08 21:12 Test Put hex 5 into 2D (owner 2).
+1999-08-08 21:12 Test Put hex 6 into 3D (owner 2).
+1999-08-08 21:12 Test Debugger closing.

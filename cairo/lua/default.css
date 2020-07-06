@@ -1,0 +1,15 @@
+table {
+    border-collapse: collapse;
+}
+
+div {
+    border:1px solid yellow;
+}
+
+svg {
+    pointer-events: none;
+}
+
+embed {
+    border:1pt solid blue;
+}

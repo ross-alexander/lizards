@@ -1,0 +1,78 @@
+/*
+/* Messages for Spys eaten by Sea Monster. Lines 0-3.
+/*
+Spy Lizard at %h is ENGULFED by a huge Sea Monster.
+BUBBLES RISE...and something drags your Spy Lizard under at %h!
+Froth fills %h as your Spy Lizard is CONSUMED with gusto by a Sea Monster.
+Your Spy Lizard SATES a Sea Monster at %h.
+/*
+/* Messages for Band attacked by Sea Monster. Lines 4-7.
+/*
+Lizards at %h cringe as a HUGE and hungry Sea Monster rises from the hex.
+A Sea Monster suddenly appears beneath your Lizards at %h!
+Something slimy rises from the deep and ATTACKS your Lizards at %h!
+Lizards at %h are attacked by loathsome abomination from the depths.
+/*
+/* Messages for Band defeating Sea Monster. Lines 8-11.
+/*
+The mighty Sea Monster falls under the blows of your Lizards at %h.
+Your Lizards rally together and slay the Sea Monster at %h.
+Victory! The Sea Monster at %h is slain by your Lizards.
+Sea Monster ichor fills %h as your Lizards finish the beastie off.
+/*
+/* Messages for Band eaten by Sea Monster. Lines 12-15
+/*
+All of your Lizards at %h are unwillingly sacrificed to the Sea Monster.
+The sea at %h settles to leave no trace of your valiant Lizards...
+Alas, all your Lizards at %h perish and the Sea Monster returns to the deep.
+The bones of your defeated Lizards litter the depths at %h.
+/*
+/* Messages for Band killed by enemy Band. Lines 16-19.
+/*
+ALL your Lizards at %h fall under the claws of their enemies.
+Your Lizards at %h are SLAIN by their enemy.
+All of your Lizards at %h travel the short and bloody path to oblivion.
+Your Lizards at %h were SLAUGHTERED by merciless and uncaring enemy.
+/*
+/* Messages for Band killing enemy Band. Lines 20-23.
+/*
+Your Lizards at %h REJOICE as they trample their enemy under-claw.
+Your Lizards at %h emerge from the melee VICTORIOUS!
+Your Lizards at %h mercilessly SLAUGHTERED their foul enemy.
+Your Lizards at %h completely CONQUER their enemy.
+/*
+/* Messages for Spy captured by Den for Den. Lines 24-27.
+/*
+Den at %h captures and sacrifices Spy Lizard from '%p' Clan.
+SPY Lizard from '%p' Clan captured in Den at %h.
+Infiltrating SPY Lizard from '%p' Clan put to death in Den at %h.
+Den at %h tortures SPY Lizard from '%p' Clan to death.
+/*
+/* Messages for Spy captured by Den for Spy. Lines 28-31.
+/*
+Spy Lizard captured and gibbeted by '%p' Den at %h.
+Spy Lizard mysteriously disappears into '%p' Den at %h.
+Spy Lizard unwillingly joins sacrificial rites in '%p' Den at %h.
+Fingers belonging to Spy Lizard at %h returned by '%p' Clan Den there.
+/*
+/* Messages for Spy captured by Band for Band. Lines 32-35.
+/*
+Lizards at %h capture and wear SPY Lizard from '%p' Clan.
+Lizards at %h capture SPY Lizard from '%p' Clan.
+An infiltrating SPY Lizard from '%p' Clan captured by Lizards at %h.
+Lizards at %h capture and hideously maim SPY Lizard from '%p' Clan.
+/*
+/* Messages for Spy captured by Band for Spy. Lines 36-39.
+/*
+Spy Lizard captured and flayed alive by '%p' Lizards at %h.
+Spy Lizard is captured then returned in chunks by '%p' Lizards at %h.
+'%p' Lizards at %h laugh as they torture your captured Spy Lizard.
+Spy Lizard forced to play 'catch the spear' by '%p' Lizards at %h.
+/*
+/* Message for Spy sucked to death by Whirlpool. Lines 40-43.
+/*
+Spy Lizard is sucked down to a watery grave by Whirlpool.
+Spy Lizard drowns quickly and hopelessly in Whirlpool.
+Whirlpool claws your Spy Lizard into the cold, unlit depths.
+Whirlpool drags your Spy Lizard to the ocean floor, where it quickly drowns.
+

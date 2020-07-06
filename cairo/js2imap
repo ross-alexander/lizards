@@ -1,0 +1,53 @@
+#!/usr/bin/env perl
+
+use JSON;
+use XML::LibXML;
+
+sub js2imap {
+    my ($path) = @_;
+
+    my $stream;
+    open($stream, "<", $path);
+    my $js = decode_json(<$stream>);
+    close($stream);
+
+    my $doc = XML::LibXML::Document->new("1.0", "utf-8");
+
+    my $html = $doc->createElement("html");
+    $doc->setDocumentElement($html);
+
+    my $head = $html->addNewChild("", "head");
+    my $body = $html->addNewChild("", "body");
+
+    my $width = $js->{width};
+    my $height = $js->{height};
+
+    my $img = $body->addNewChild("", "img");
+    $img->setAttribute("src", "CUST1.svg");
+    $img->setAttribute("usemap", "#CUST1");
+    $img->setAttribute("style", "border:1pt solid blue;width:$width;height:$height;");
+    my $map = $body->addNewChild("", "map");
+    $map->setAttribute("id", "CUST1");
+
+    my $hexes = $js->{hexes};
+    my $border = $js->{border};
+    for my $h (@$hexes)
+    {
+	my $area = $map->addNewChild("", "area");
+	$area->setAttribute("shape", "poly");
+	$area->setAttribute("id", $h->{title});
+	my @coords;
+	for my $xy (@{$h->{path}})
+	{
+	    push(@coords, $xy->{x}, $xy->{y});
+	}
+	$area->setAttribute("coords", join(",", @coords));
+	$area->setAttribute("href", sprintf("javascript:alert(\'%s\');", $h->{title}));
+    }
+    print $doc->toString(1);
+}
+
+for my $i (@ARGV)
+{
+    js2imap($i);
+}

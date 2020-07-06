@@ -1,0 +1,4 @@
+#define HOME_DEN_SCORE 50
+#define DEN_SCORE 25
+#define BRIDGE_SCORE 10
+#define TEMPLE_SCORE 30

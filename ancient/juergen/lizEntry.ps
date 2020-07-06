@@ -1,0 +1,8 @@
+#!/usr/local/bin/perl
+
+print "Content-type: text/plain", "\n\n";
+read (STDIN, $lizworld, "12");
+$test = $ENV{REMOTE_USER};
+print "=", $test, ", ", $ENV{'CONTENT_LENGTH'}, "<<\n";
+
+exit(0);

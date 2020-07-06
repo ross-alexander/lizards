@@ -1,0 +1,54 @@
+#ifndef YYSTYPE
+#define YYSTYPE int
+#endif
+#define	INTEGER	258
+#define	IDENT	259
+#define	LPAREN	260
+#define	RPAREN	261
+#define	COMMA	262
+#define	WORLD	263
+#define	PLAYER	264
+#define	HEX	265
+#define	UNIT	266
+#define	PIPE	267
+#define	UNSEATTLED	268
+#define	RED	269
+#define	GREEN	270
+#define	GREY	271
+#define	BLACK	272
+#define	YELLOW	273
+#define	PLAIN	274
+#define	DEN	275
+#define	RUIN	276
+#define	FERTILE	277
+#define	SWAMP	278
+#define	PEAK	279
+#define	VOLCANO	280
+#define	WATER	281
+#define	WHIRLPOOL	282
+#define	SCRUB	283
+#define	TEMPLE	284
+#define	CURSED	285
+#define	HOMEDEN	286
+#define	SATED	287
+#define	PECKISH	288
+#define	HUNGRY	289
+#define	FAMISHED	290
+#define	STARVED	291
+#define	STARVING	292
+#define	AVERAGE	293
+#define	GOOD	294
+#define	DANGEROUS	295
+#define	FEROCIOUS	296
+#define	FEARSOME	297
+#define	VERERAN	298
+#define	SPAWN	299
+#define	CAPTURE	300
+#define	WRAP	301
+#define	VICTORY	302
+#define	HOME	303
+#define	HOMEVICTORY	304
+#define	GIVE	305
+
+
+extern YYSTYPE yylval;

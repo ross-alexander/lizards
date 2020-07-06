@@ -1,0 +1,76 @@
+head	1.1;
+access;
+symbols;
+locks
+	ralexand:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2012.10.13.10.16.16;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@body {
+    background-image:url(bg.png);
+    font-family:NimbusSanL,helvetica,arial;
+    font-weight:normal;
+    font-size: 8pt;
+} 
+h1 { background: #FFFFFF; border: 1pt solid blue;
+  padding: 2pt 2pt 2pt 2pt;
+  text-align: center; font-size:18pt;
+  font-family:URWGothicLDem,NimbusSanL,helvetica,arial;
+  font-weight:normal;
+}
+div {
+  background:#FFFFFF;
+  border: 1pt solid red;
+}
+
+img {
+}
+
+select {
+    font-size: 8pt;
+}
+
+table.super {
+  background:#FFFFFF;
+  border: 1pt solid red;
+}
+
+table.hex {
+    border-collapse: collapse;
+}
+
+table.hex td {
+    border: 1pt solid grey;
+    font-size: 9pt;
+}
+
+textarea {
+    width: 30pt;
+    height: 10pt;
+}
+
+input {
+    display: block;
+}
+
+img.layout {
+    border:0.5pt solid grey;
+    width:50%;
+    height:50%;
+}
+@

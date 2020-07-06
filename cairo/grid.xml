@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<lizards>
+  <map width="16" height="16">
+    <ruin x="0" y="0" id="1A" owner="0"/>
+    <swamp x="0" y="1" id="2A" owner="0"/>
+    <fertile x="0" y="2" id="3A" owner="0" age="0"/>
+    <swamp x="0" y="3" id="4A" owner="0"/>
+    <plains x="0" y="4" id="5A" owner="0"/>
+    <swamp x="0" y="5" id="6A" owner="0"/>
+    <scrub x="0" y="6" id="7A" owner="0"/>
+    <water x="0" y="7" id="8A" owner="0"/>
+    <fertile x="0" y="8" id="9A" owner="0" age="0"/>
+    <fertile x="0" y="9" id="10A" owner="0" age="0"/>
+    <water x="0" y="10" id="11A" owner="0"/>
+    <water x="0" y="11" id="12A" owner="0"/>
+    <plains x="0" y="12" id="13A" owner="0"/>
+    <scrub x="0" y="13" id="14A" owner="0"/>
+    <water x="0" y="14" id="15A" owner="0"/>
+    <water x="0" y="15" id="16A" owner="0"/>
+    <fertile x="1" y="0" id="1B" owner="0" age="0"/>
+    <water x="1" y="1" id="2B" owner="0"/>
+    <plains x="1" y="2" id="3B" owner="0"/>
+    <water x="1" y="3" id="4B" owner="0"/>
+    <scrub x="1" y="4" id="5B" owner="0"/>
+    <water x="1" y="5" id="6B" owner="0"/>
+    <fertile x="1" y="6" id="7B" owner="0" age="0"/>
+    <water x="1" y="7" id="8B" owner="0"/>
+    <swamp x="1" y="8" id="9B" owner="0"/>
+    <swamp x="1" y="9" id="10B" owner="0"/>
+    <fertile x="1" y="10" id="11B" owner="0" age="0"/>
+    <water x="1" y="11" id="12B" owner="0"/>
+    <plains x="1" y="12" id="13B" owner="0"/>
+    <fertile x="1" y="13" id="14B" owner="0" age="0"/>
+    <fertile x="1" y="14" id="15B" owner="0" age="0"/>
+    <water x="1" y="15" id="16B" owner="0"/>
+    <fertile x="2" y="0" id="1C" owner="0" age="0"/>
+    <scrub x="2" y="1" id="2C" owner="0"/>
+    <water x="2" y="2" id="3C" owner="0"/>
+    <water x="2" y="3" id="4C" owner="0"/>
+    <scrub x="2" y="4" id="5C" owner="0"/>
+    <den x="2" y="5" id="6C" owner="0" size="50" type="2">
+      <band grey="14"/>
+    </den>
+    <water x="2" y="6" id="7C" owner="0"/>
+    <water x="2" y="7" id="8C" owner="0"/>
+    <fertile x="2" y="8" id="9C" owner="0" age="0"/>
+    <den x="2" y="9" id="10C" owner="0" size="100" type="0">
+      <band red="29"/>
+    </den>
+    <water x="2" y="10" id="11C" owner="0"/>
+    <water x="2" y="11" id="12C" owner="0"/>
+    <fertile x="2" y="12" id="13C" owner="0" age="0"/>
+    <peak x="2" y="13" id="14C" owner="2">
+      <band red="100" grey="50"/>
+    </peak>
+    <water x="2" y="14" id="15C" owner="0"/>
+    <den x="2" y="15" id="16C" owner="0" size="100" type="3">
+      <band black="29"/>
+    </den>
+    <water x="3" y="0" id="1D" owner="0"/>
+    <water x="3" y="1" id="2D" owner="0"/>
+    <water x="3" y="2" id="3D" owner="0"/>
+    <water x="3" y="3" id="4D" owner="0"/>
+    <ruin x="3" y="4" id="5D" owner="1">
+      <band grey="50"/>
+    </ruin>
+    <fertile x="3" y="5" id="6D" owner="1" age="0"/>
+    <scrub x="3" y="6" id="7D" owner="1"/>
+    <water x="3" y="7" id="8D" owner="0"/>
+    <water x="3" y="8" id="9D" owner="0"/>
+    <water x="3" y="9" id="10D" owner="0"/>
+    <water x="3" y="10" id="11D" owner="0"/>
+    <water x="3" y="11" id="12D" owner="0"/>
+    <fertile x="3" y="12" id="13D" owner="2" age="0"/>
+    <scrub x="3" y="13" id="14D" owner="2">
+      <band green="10"/>
+    </scrub>
+    <scrub x="3" y="14" id="15D" owner="2"/>
+    <water x="3" y="15" id="16D" owner="0"/>
+    <swamp x="4" y="0" id="1E" owner="0"/>
+    <swamp x="4" y="1" id="2E" owner="0"/>
+    <water x="4" y="2" id="3E" owner="0"/>
+    <fertile x="4" y="3" id="4E" owner="1" age="0">
+      <band green="20"/>
+    </fertile>
+    <temple x="4" y="4" id="5E" owner="1">
+      <band black="110"/>
+    </temple>
+    <den x="4" y="5" id="6E" owner="1" size="0" type="3"/>
+    <water x="4" y="6" id="7E" owner="0"/>
+    <water x="4" y="7" id="8E" owner="0"/>
+    <scrub x="4" y="8" id="9E" owner="0"/>
+    <den x="4" y="9" id="10E" owner="0" size="100" type="1">
+      <band green="29"/>
+    </den>
+    <fertile x="4" y="10" id="11E" owner="0" age="0"/>
+    <scrub x="4" y="11" id="12E" owner="2">
+      <band red="100" green="10"/>
+    </scrub>
+    <den x="4" y="12" id="13E" owner="2" size="0" type="0"/>
+    <fertile x="4" y="13" id="14E" owner="2" age="0">
+      <band red="100" yellow="50"/>
+    </fertile>
+    <water x="4" y="14" id="15E" owner="0"/>
+    <water x="4" y="15" id="16E" owner="0"/>
+    <scrub x="5" y="0" id="1F" owner="0"/>
+    <water x="5" y="1" id="2F" owner="0"/>
+    <volcano x="5" y="2" id="3F" owner="0"/>
+    <scrub x="5" y="3" id="4F" owner="1"/>
+    <ruin x="5" y="4" id="5F" owner="1">
+      <band grey="50"/>
+    </ruin>
+    <fertile x="5" y="5" id="6F" owner="1" age="0"/>
+    <plains x="5" y="6" id="7F" owner="0"/>
+    <water x="5" y="7" id="8F" owner="0"/>
+    <plains x="5" y="8" id="9F" owner="0"/>
+    <water x="5" y="9" id="10F" owner="0"/>
+    <fertile x="5" y="10" id="11F" owner="0" age="0"/>
+    <scrub x="5" y="11" id="12F" owner="2"/>
+    <fertile x="5" y="12" id="13F" owner="2" age="0"/>
+    <scrub x="5" y="13" id="14F" owner="2">
+      <band green="10"/>
+    </scrub>
+    <den x="5" y="14" id="15F" owner="0" size="100" type="3">
+      <band black="29"/>
+    </den>
+    <water x="5" y="15" id="16F" owner="0"/>
+    <den x="6" y="0" id="1G" owner="0" size="50" type="1">
+      <band green="14"/>
+    </den>
+    <swamp x="6" y="1" id="2G" owner="0"/>
+    <water x="6" y="2" id="3G" owner="0"/>
+    <water x="6" y="3" id="4G" owner="0"/>
+    <den x="6" y="4" id="5G" owner="0" size="50" type="0">
+      <band red="14"/>
+    </den>
+    <fertile x="6" y="5" id="6G" owner="0" age="0"/>
+    <water x="6" y="6" id="7G" owner="0"/>
+    <water x="6" y="7" id="8G" owner="0"/>
+    <den x="6" y="8" id="9G" owner="0" size="100" type="4">
+      <band yellow="29"/>
+    </den>
+    <fertile x="6" y="9" id="10G" owner="0" age="0"/>
+    <plains x="6" y="10" id="11G" owner="0"/>
+    <peak x="6" y="11" id="12G" owner="2">
+      <band red="100" grey="50"/>
+    </peak>
+    <swamp x="6" y="12" id="13G" owner="0"/>
+    <fertile x="6" y="13" id="14G" owner="0" age="0"/>
+    <water x="6" y="14" id="15G" owner="0"/>
+    <fertile x="6" y="15" id="16G" owner="0" age="0"/>
+    <water x="7" y="0" id="1H" owner="0"/>
+    <swamp x="7" y="1" id="2H" owner="0"/>
+    <scrub x="7" y="2" id="3H" owner="0"/>
+    <fertile x="7" y="3" id="4H" owner="0" age="0"/>
+    <water x="7" y="4" id="5H" owner="0"/>
+    <water x="7" y="5" id="6H" owner="0"/>
+    <fertile x="7" y="6" id="7H" owner="0" age="0"/>
+    <water x="7" y="7" id="8H" owner="0"/>
+    <fertile x="7" y="8" id="9H" owner="0" age="0"/>
+    <water x="7" y="9" id="10H" owner="0"/>
+    <water x="7" y="10" id="11H" owner="0"/>
+    <water x="7" y="11" id="12H" owner="0"/>
+    <water x="7" y="12" id="13H" owner="0"/>
+    <water x="7" y="13" id="14H" owner="0"/>
+    <water x="7" y="14" id="15H" owner="0"/>
+    <water x="7" y="15" id="16H" owner="0"/>
+    <plains x="8" y="0" id="1I" owner="0"/>
+    <swamp x="8" y="1" id="2I" owner="0"/>
+    <water x="8" y="2" id="3I" owner="0"/>
+    <water x="8" y="3" id="4I" owner="0"/>
+    <fertile x="8" y="4" id="5I" owner="0" age="0"/>
+    <den x="8" y="5" id="6I" owner="0" size="150" type="1">
+      <band green="44"/>
+    </den>
+    <water x="8" y="6" id="7I" owner="0"/>
+    <water x="8" y="7" id="8I" owner="0"/>
+    <plains x="8" y="8" id="9I" owner="0"/>
+    <scrub x="8" y="9" id="10I" owner="0"/>
+    <water x="8" y="10" id="11I" owner="0"/>
+    <water x="8" y="11" id="12I" owner="0"/>
+    <scrub x="8" y="12" id="13I" owner="0"/>
+    <swamp x="8" y="13" id="14I" owner="0"/>
+    <water x="8" y="14" id="15I" owner="0"/>
+    <fertile x="8" y="15" id="16I" owner="0" age="0"/>
+    <fertile x="9" y="0" id="1J" owner="0" age="0"/>
+    <water x="9" y="1" id="2J" owner="0"/>
+    <plains x="9" y="2" id="3J" owner="0"/>
+    <water x="9" y="3" id="4J" owner="0"/>
+    <plains x="9" y="4" id="5J" owner="0"/>
+    <scrub x="9" y="5" id="6J" owner="0"/>
+    <fertile x="9" y="6" id="7J" owner="0" age="0"/>
+    <plains x="9" y="7" id="8J" owner="0"/>
+    <fertile x="9" y="8" id="9J" owner="0" age="0"/>
+    <water x="9" y="9" id="10J" owner="0"/>
+    <swamp x="9" y="10" id="11J" owner="0"/>
+    <peak x="9" y="11" id="12J" owner="4"/>
+    <scrub x="9" y="12" id="13J" owner="4"/>
+    <temple x="9" y="13" id="14J" owner="4"/>
+    <plains x="9" y="14" id="15J" owner="0"/>
+    <scrub x="9" y="15" id="16J" owner="0"/>
+    <den x="10" y="0" id="1K" owner="0" size="100" type="2">
+      <band grey="29"/>
+    </den>
+    <fertile x="10" y="1" id="2K" owner="0" age="0"/>
+    <water x="10" y="2" id="3K" owner="0"/>
+    <water x="10" y="3" id="4K" owner="0"/>
+    <swamp x="10" y="4" id="5K" owner="0"/>
+    <scrub x="10" y="5" id="6K" owner="0"/>
+    <water x="10" y="6" id="7K" owner="0"/>
+    <whirlpool x="10" y="7" id="8K" owner="0"/>
+    <den x="10" y="8" id="9K" owner="0" size="50" type="0">
+      <band red="14"/>
+    </den>
+    <fertile x="10" y="9" id="10K" owner="0" age="0"/>
+    <scrub x="10" y="10" id="11K" owner="4"/>
+    <den x="10" y="11" id="12K" owner="4" size="0" type="0">
+      <band red="10"/>
+    </den>
+    <scrub x="10" y="12" id="13K" owner="4">
+      <band green="10"/>
+    </scrub>
+    <peak x="10" y="13" id="14K" owner="4"/>
+    <water x="10" y="14" id="15K" owner="0"/>
+    <water x="10" y="15" id="16K" owner="0"/>
+    <swamp x="11" y="0" id="1L" owner="0"/>
+    <water x="11" y="1" id="2L" owner="0"/>
+    <water x="11" y="2" id="3L" owner="0"/>
+    <water x="11" y="3" id="4L" owner="0"/>
+    <temple x="11" y="4" id="5L" owner="3">
+      <band red="90"/>
+    </temple>
+    <ruin x="11" y="5" id="6L" owner="3">
+      <band green="10" yellow="10" grey="50" black="10"/>
+    </ruin>
+    <water x="11" y="6" id="7L" owner="0"/>
+    <water x="11" y="7" id="8L" owner="0"/>
+    <water x="11" y="8" id="9L" owner="0"/>
+    <water x="11" y="9" id="10L" owner="0"/>
+    <water x="11" y="10" id="11L" owner="0"/>
+    <scrub x="11" y="11" id="12L" owner="4">
+      <band green="10"/>
+    </scrub>
+    <fertile x="11" y="12" id="13L" owner="4" age="0"/>
+    <den x="11" y="13" id="14L" owner="4" size="0" type="2">
+      <band red="10"/>
+    </den>
+    <scrub x="11" y="14" id="15L" owner="4"/>
+    <scrub x="11" y="15" id="16L" owner="0"/>
+    <plains x="12" y="0" id="1M" owner="0"/>
+    <swamp x="12" y="1" id="2M" owner="0"/>
+    <water x="12" y="2" id="3M" owner="0"/>
+    <ruin x="12" y="3" id="4M" owner="3">
+      <band green="10" yellow="10" grey="50" black="10"/>
+    </ruin>
+    <fertile x="12" y="4" id="5M" owner="3" age="0"/>
+    <fertile x="12" y="5" id="6M" owner="3" age="0">
+      <band red="10"/>
+    </fertile>
+    <water x="12" y="6" id="7M" owner="0"/>
+    <water x="12" y="7" id="8M" owner="0"/>
+    <plains x="12" y="8" id="9M" owner="0"/>
+    <den x="12" y="9" id="10M" owner="0" size="50" type="1">
+      <band green="14"/>
+    </den>
+    <water x="12" y="10" id="11M" owner="0"/>
+    <den x="12" y="11" id="12M" owner="4" size="0" type="0">
+      <band red="70"/>
+    </den>
+    <fertile x="12" y="12" id="13M" owner="4" age="0"/>
+    <scrub x="12" y="13" id="14M" owner="4">
+      <band green="10"/>
+    </scrub>
+    <ruin x="12" y="14" id="15M" owner="4">
+      <band grey="50"/>
+    </ruin>
+    <water x="12" y="15" id="16M" owner="0"/>
+    <plains x="13" y="0" id="1N" owner="0"/>
+    <temple x="13" y="1" id="2N" owner="0"/>
+    <plains x="13" y="2" id="3N" owner="0"/>
+    <water x="13" y="3" id="4N" owner="0"/>
+    <swamp x="13" y="4" id="5N" owner="3">
+      <band green="10"/>
+    </swamp>
+    <den x="13" y="5" id="6N" owner="3" size="0" type="4">
+      <band red="80" yellow="10" black="50"/>
+    </den>
+    <swamp x="13" y="6" id="7N" owner="0"/>
+    <water x="13" y="7" id="8N" owner="0"/>
+    <peak x="13" y="8" id="9N" owner="0"/>
+    <scrub x="13" y="9" id="10N" owner="0"/>
+    <fertile x="13" y="10" id="11N" owner="0" age="0"/>
+    <water x="13" y="11" id="12N" owner="0"/>
+    <scrub x="13" y="12" id="13N" owner="4"/>
+    <ruin x="13" y="13" id="14N" owner="4"/>
+    <scrub x="13" y="14" id="15N" owner="4"/>
+    <swamp x="13" y="15" id="16N" owner="4"/>
+    <fertile x="14" y="0" id="1O" owner="0" age="0"/>
+    <scrub x="14" y="1" id="2O" owner="0"/>
+    <water x="14" y="2" id="3O" owner="0"/>
+    <den x="14" y="3" id="4O" owner="0" size="50" type="3">
+      <band black="14"/>
+    </den>
+    <plains x="14" y="4" id="5O" owner="0"/>
+    <swamp x="14" y="5" id="6O" owner="0"/>
+    <water x="14" y="6" id="7O" owner="0"/>
+    <water x="14" y="7" id="8O" owner="0"/>
+    <fertile x="14" y="8" id="9O" owner="0" age="0"/>
+    <scrub x="14" y="9" id="10O" owner="0"/>
+    <temple x="14" y="10" id="11O" owner="0"/>
+    <swamp x="14" y="11" id="12O" owner="0"/>
+    <scrub x="14" y="12" id="13O" owner="4"/>
+    <scrub x="14" y="13" id="14O" owner="4"/>
+    <ruin x="14" y="14" id="15O" owner="4"/>
+    <water x="14" y="15" id="16O" owner="0"/>
+    <water x="15" y="0" id="1P" owner="0"/>
+    <fertile x="15" y="1" id="2P" owner="0" age="0"/>
+    <water x="15" y="2" id="3P" owner="0"/>
+    <water x="15" y="3" id="4P" owner="0"/>
+    <water x="15" y="4" id="5P" owner="0"/>
+    <water x="15" y="5" id="6P" owner="0"/>
+    <water x="15" y="6" id="7P" owner="0"/>
+    <water x="15" y="7" id="8P" owner="0"/>
+    <water x="15" y="8" id="9P" owner="0"/>
+    <den x="15" y="9" id="10P" owner="0" size="150" type="4">
+      <band yellow="44"/>
+    </den>
+    <water x="15" y="10" id="11P" owner="0"/>
+    <water x="15" y="11" id="12P" owner="0"/>
+    <water x="15" y="12" id="13P" owner="0"/>
+    <water x="15" y="13" id="14P" owner="0"/>
+    <water x="15" y="14" id="15P" owner="0"/>
+    <water x="15" y="15" id="16P" owner="0"/>
+  </map>
+</lizards>

@@ -1,0 +1,16 @@
+# Generated automatically from Makefile.in by configure.
+DEBUG = -g -Wall -Wstrict-prototypes -Wmissing-prototypes -pedantic
+
+DEFINES = -I. -I../liblizards
+
+CFLAGS = $(DEBUG) $(DEFINES) 
+LIBOBJS = lizord.o lizmesg.o orders.o moreorders.o chants.o blddest.o \
+terrain.o tordbord.o terrmast.o bordshuffle.o worldopen.o worldmast.o \
+worldshut.o clanreport.o clanrank.o messapnd.o
+
+libturn.a: $(LIBOBJS)
+	ar cr libturn.a $(LIBOBJS)
+	ranlib libturn.a
+	
+clean:
+	rm -f *~ *.o *.a

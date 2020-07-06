@@ -1,0 +1,106 @@
+body {
+    background-image:url(bg.png);
+    font-family:NimbusSanL,helvetica,arial;
+    font-weight:normal;
+    font-size: 8pt;
+} 
+h1 { background: #FFFFFF; border: 1pt solid blue;
+  padding: 2pt 2pt 2pt 2pt;
+  text-align: center; font-size:18pt;
+  font-family:URWGothicLDem,NimbusSanL,helvetica,arial;
+  font-weight:normal;
+}
+div {
+  background:#FFFFFF;
+  border: 1pt solid red;
+}
+
+select {
+    font-size: 8pt;
+}
+
+table.super {
+  background:#FFFFFF;
+  border: 1pt solid red;
+}
+
+table.hex {
+    border-collapse: collapse;
+}
+
+table.hex td {
+    border: 1pt solid grey;
+    font-size: 9pt;
+}
+
+textarea {
+    width: 30pt;
+    height: 10pt;
+}
+
+input {
+    display: block;
+}
+
+table.layouts {
+    width:100%;
+}
+
+table.layouts td {
+    border:0.5pt solid grey;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td.bigbox {
+    width: 450pt;
+    height: 440pt;
+    border: 1pt solid black;
+    background: white;
+    text-align: center;
+}
+
+td.logbox {
+    width: 450pt;
+    height: 100pt;
+    border: 1pt solid black;
+    background: white;
+    text-align: center;
+}    
+
+td.smallbox {
+    background: white;
+    text-align: left;
+    vertical-align: top;
+    font-weight: bold;
+    border: 1pt solid black;
+}
+
+#caption {
+    border: 1pt solid yellow;
+    text-align: center;
+    font-size: 20pt;
+    background: white;
+}
+
+table.icons td.outer  {
+    border: 1pt solid black;
+    background: white;
+    text-align: center;
+    font-size: 10pt;
+}
+
+img.icon {
+    width: 50pt;
+}
+
+td.bigbox img.icon {
+    width: 100%;
+}
+
+img {
+    padding: 0pt 0pt 0pt 0pt;
+    margin: 0pt 0pt 0pt 0pt;
+}

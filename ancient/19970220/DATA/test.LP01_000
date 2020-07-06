@@ -1,0 +1,15 @@
+Header(test,0,1,kea,Kill Em All,1/1/1990)
+Spawning: off
+Phase(World)
+Phase: Artillery
+Phase: Movement
+Phase: Development
+Phase: ClanListing
+HomeDen: 6U 1 400 0 0 0 0 0 0 50
+ClanRanking: 0
+ClanScore: 1 500 1
+ClanScore: 2 500 2
+ClanScore: 3 500 3
+
+ - THERE ARE 3 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

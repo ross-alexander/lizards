@@ -1,0 +1,121 @@
+Header(cg01, 3)
+ClanID(mtb,Mike TB)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 86 Black Lizards split at 15I and move NW (to 15H).
+ - 86 Black Lizards at 15H move NW (to 14G).
+ - Lizards attack 15 militia Lizards in free Den at 14G.
+ - Combat round 2! Standing Lizards: 80. Standing enemy Lizards: 0.
+ - Your Lizards at 14G REJOICE as they trample their enemy under-claw. They are now Good warriors.
+ - Your Lizards captured Yellow Den at 14G.
+
+ - 2 Black Lizards at 16K move NE (to 16L).
+ - 2 Black Lizards at 16L move NE (to 15M).
+
+ - Spy Lizard splits at 19J and moves SE (to 19K).
+ - Spy Lizard at 19K moves SE (to 20L).
+
+ - Spy Lizard splits at 18M and moves SE (to 19N).
+ - Spy Lizard at 19N is ENGULFED by a huge Sea Monster.
+
+ - Whirlpool at 20G moves N (to 19G)!
+ - Whirlpool at 19G moves SW (to 20F)!
+
+ - 95 Black Lizards split at 16L and move SE (to 16M).
+ - A Sea Monster suddenly appears beneath your Lizards at 16M!
+ - Combat round 3! Surviving Lizards: 73.
+ - Victory! The Sea Monster at 16M is slain by your Lizards.
+ - 73 Black Lizards survive at 16M.
+ - 73 Black Lizards at 16M move SE (to 17N).
+ - Lizards attack 15 militia Lizards in free Den at 17N.
+ - Combat round 3! Standing Lizards: 68. Standing enemy Lizards: 0.
+ - Your Lizards at 17N completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Yellow Den at 17N.
+
+ - Spy Lizard splits at 18G and moves NW (to 18F).
+ - Spy Lizard at 18F moves NW (to 17E).
+
+ - Spy Lizard at 21J moves S (to 22J).
+ - Spy Lizard at 22J moves S (to 23J).
+
+ - 100 Black Lizards split at 16L and move NW (to 15K).
+ - Lizards at 15K cringe as a HUGE and hungry Sea Monster rises from the hex.
+ - Combat round 2! Surviving Lizards: 87.
+ - Victory! The Sea Monster at 15K is slain by your Lizards.
+ - 87 Black Lizards survive at 15K.
+ - 87 Black Lizards at 15K move N (to 14K).
+ - Lizards attack 15 militia Lizards in free Den at 14K.
+ - Combat round 2! Standing Lizards: 83. Standing enemy Lizards: 0.
+ - Your Lizards at 14K REJOICE as they trample their enemy under-claw. They are now Good warriors.
+ - Your Lizards captured Black Den at 14K.
+
+ - Spy Lizard at 15M moves NE (to 15N).
+ - Spy Lizard at 15N moves N (to 14N).
+
+ - 86 Black Lizards split at 15I and move N (to 14I).
+ - Lizards eat from fertile hex 14I.
+ - 86 Black Lizards at 14I move N (to 13I).
+ - Lizards attack 30 militia Lizards in free Den at 13I.
+ - Combat round 3! Standing Lizards: 76. Standing enemy Lizards: 0.
+ - Your Lizards at 13I REJOICE as they trample their enemy under-claw. They are now Good warriors.
+ - Your Lizards captured Red Den at 13I.
+
+ - Spy Lizard at 14H moves N (to 13H).
+ - Spy Lizard at 13H moves N (to 12H).
+
+ - Spy Lizard at 15E moves NW (to 15D).
+ - Spy Lizard at 15D moves NW (to 14C).
+
+ - 10 Green Lizards split at 17K and move NW (to 17J).
+
+ - Spy Lizard splits at 18G and moves SW (to 19F).
+ - Spy Lizard at 19F moves SW (to 19E).
+Phase(development)
+
+ - Recruiting from Yellow Den at 14G. 17 Yellow lizards recruited from Den leaving 33 Den Lizards at 14G.
+
+ - Recruiting from Black Den at 14K. 17 Black lizards recruited from Den leaving 33 Den Lizards at 14K.
+
+ - Recruiting from Red Den at 13I. 34 Red lizards recruited from Den leaving 66 Den Lizards at 13I.
+
+ - Attempted to Recruit from Den at 17W that isn't yours or doesn't exist.
+ClanReport(Mike TB)
+Den(13I, 66, Red, 34 Red, 76 Black, Sated, Average)
+
+Den(14G, 33, Yellow, 17 Yellow, 80 Black, Hungry, Average)
+
+Den(14K, 33, Black, 100 Black, Hungry, Average)
+
+HomeDen(17I, 41, 1, 17 Red, Peckish, Average)
+
+Den(17K, 41, Green, 7 Green, Peckish, Average)
+
+Den(17N, 50, Yellow, 68 Black, Famished, Good)
+
+ - 15M Band of 2 Black (Famished & Average) Lizards.
+ - 17J Band of 10 Green (Peckish & Average) Lizards.
+ - 18G Band of 1 Black (Famished & Average) Lizards.
+ - 18M Band of 2 Black (Famished & Good) Lizards.
+ - 19J Band of 1 Black (Peckish & Average) Lizards.
+ - 23J Spy Lizard. Spy for 2 turns.
+ - 14C Spy Lizard. Spy for 2 turns.
+ - 12H Spy Lizard. Spy for 2 turns.
+ - 14N Spy Lizard. Spy for 2 turns.
+ - 16G Spy Lizard. Spy for 1 turns.
+ - 20L Spy Lizard. Spy for 0 turns.
+ - 17E Spy Lizard. Spy for 0 turns.
+ - 19E Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 3:
+
+ 01 -    980 Player 03, 'Dangerous Dan' (dan) Clan.
+ 02 -    892 Player 01, 'Mike TB' (mtb) Clan.
+ 03 -    880 Player 02, 'Jumping Jono' (jno) Clan.
+ 04 -    848 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

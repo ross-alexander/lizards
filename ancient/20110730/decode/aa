@@ -1,0 +1,88 @@
+sgmls: Warning at lizdoc.dtd, line 1 in declaration parameter 4:
+       Could not find external parameter entity "general"
+sgmls: Error at lizdoc.dtd, line 2 at ";":
+       Reference to non-existent parameter entity "general" ignored
+sgmls: SGML error at lizdoc.dtd, line 30 in declaration parameter 4:
+       Content model or keyword expected; declaration terminated
+sgmls: SGML error at gg, line 1 at "]":
+       Invalid character(s) ignored; attempting to resume DOCTYPE subset
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "num" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "percnt" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "circ" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "lowbar" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "lcub" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "verbar" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "rcub" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 2 at record start:
+       General entity "nbsp" in short reference map "GLOBAL" undeclared
+sgmls: SGML error at gg, line 3 at ")":
+       No definition for ITEM implied start-tag; "ITEM O O ANY" assumed
+AGAME CDATA ff
+ATURN CDATA 10
+ACLANNAME CDATA Raging Ross
+(LIZDOC
+(SECT
+(P
+(ITEM
+-World Phase (All Den Growth and Seattling)\n
+(P
+(ITEM
+-- 80 Black Lizards at 6K begin chanting SE...\n - Dust engulfs 7L as the hex sinks into the sea!\n - Your black lizards have created a Water hex there.\n - Your 80 Black Lizards at 6K finish chanting.\n - 24 Black Lizards here slowly fade to Red!\n\n - Mist engulfs 8G as the hex rises out of the sea! There is now a Plain hex there.\n
+(SECT
+(P
+(ITEM
+-Movement Phase (all Move, Split, Sail and Sneak orders)\n
+(P
+(ITEM
+-- 47 Green Lizards at 7J move N (to 6J).\n - Lizards eat from fertile hex 6J.\n - 47 Green Lizards at 6J move NW (to 5I).\n - Lizards eat from fertile hex 5I.\n - 113 Green Lizards at 5B move S (to 6B).\n - Lizards eat from fertile hex 6B.\n - 113 Green Lizards at 6B move N (to 5B).\n
+(SECT
+(P
+(ITEM
+-Development Phase (all Build, Destroy, Recruit and Give orders)\n
+(P
+(ITEM
+-- Den completed at 7F by 67 Grey Lizards. Den is presently un-populated.\n - Fertile hex planted at 6L by 10 Green Lizards.\n - Fertile hex planted at 7B by 10 Green Lizards.\n - Fertile hex planted at 6G by 10 Green Lizards.\n - Surveying hex SW of 5E for Bridge. Grey Lizards build Bridge at 6D.\n - Fertile hex planted at 6C by 10 Green Lizards.\n
+(SECT
+(P
+(ITEM
+-Clan Report for Clan Raging Ross at and end of turn 10\n
+(P
+(ITEM
+-5B\nDen with 145 Green den lizards and 113 Green (total 113 lizards, Sated & Average) warrior lizards.\n\n
+(ITEM
+-5F\nDen with 59 Grey den lizards and 25 Grey (total 25 lizards, Peckish & Average) warrior lizards.\n\n
+(ITEM
+-6K - Home Den with 49 Black den lizards and 72 Red, 42 Green and 64 Black (total 178 lizards, Peckish & Average) warrior lizards.\n\n
+(ITEM
+-7F\nDen with 0 Unseattled den lizards and 143 Green and 67 Grey (total 210 lizards, Hungry & Average) warrior lizards.\n\nBand 5E 0 0 20 0 0 0 0 \nBand 5I 0 52 0 0 0 0 0 \nBand 6C 0 10 0 0 0 3 0 \nBand 6E 0 2 20 0 0 2 0 \nBand 6G 0 10 0 0 0 2 0 \nBand 6L 0 10 0 0 0 1 0 \nBand 7B 0 10 0 0 0 3 0 \n\n * Clans Ranking at end of Turn 10:\n\n 01 -   1058 Player 01, 'Raging Ross' (rda) Clan.\n 02 -    820 Player 02, 'Jumping Jono' (jno) Clan.\n\n - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.\n - YOU PRESENTLY CONTROL 1 HOME DEN.
+)ITEM
+)ITEM
+)ITEM
+)ITEM
+)P
+)ITEM
+)P
+)SECT
+)ITEM
+)P
+)ITEM
+)P
+)SECT
+)ITEM
+)P
+)ITEM
+)P
+)SECT
+)ITEM
+)P
+)ITEM
+)P
+)SECT
+)LIZDOC

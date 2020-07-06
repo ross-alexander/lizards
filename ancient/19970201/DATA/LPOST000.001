@@ -1,0 +1,176 @@
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/saveobj save def
+/Shadow_Code {(C-G)} def
+ * This is the Circle Games Header for Turn 0 of LIZARDS! Game 001.
+ * ORDERS FOR NEXT TURN DUE BY 01/01/1980
+.
+
+ 1 - Player 01, 'Kill em all' (KEA) Clan.
+ 1 - Player 02, 'Nuke til Glow' (NTG) Clan.
+
+
+ * Clans Ranking at end of Turn 0:
+
+ 01 -   2450 Player 01, 'Kill em all' (KEA) Clan.
+ 02 -   2450 Player 02, 'Nuke til Glow' (NTG) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST GAIN 2000 VICTORY POINTS TO WIN.
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST GAIN 2000 VICTORY POINTS TO WIN.
+[
+] format
+pr
+saveobj restore
+/saveobj save def
+/Shadow_Code {(KEA)} def
+ * You are player 1 (Ross) with 'Kill em all' Clan!
+ * You have Credit of $.
+ * This is Turn 0 of LIZARDS! Game 001.
+ * ORDERS FOR NEXT TURN DUE BY 01/01/1980
+.
+
+ * WORLD PHASE (all Den Growth and Settling).
+
+ * ARTILLERY PHASE (all Chants, Lobs and Free orders).
+
+ * MOVEMENT PHASE (all Moves, Splits, Sails and Sneaks orders).
+
+ * DEVELOPMENT PHASE (all Builds, Destroy, Recruit and Give orders).
+
+ * Clan Listing for 'Kill em all' at end of Turn 0:
+
+ - 18G Red Home Den contains 400 Grey (Sated & Average) Lizards and 50 Den Lizards.
+
+ * Clans Ranking at end of Turn 0:
+
+ 01 -   2450 Player 01, 'Kill em all' (KEA) Clan.
+ 02 -   2450 Player 02, 'Nuke til Glow' (NTG) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST GAIN 2000 VICTORY POINTS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+[
+] format
+pr
+Map_Page_R
+-1190 140 Location_R
+(Kill em all Clan World View for Lizards! Game 001 Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+585 750 wat () Small
+585 700 pla () Small
+550 725 bru () Small
+620 725 wat () Small
+515 700 fer () Small
+655 700 fer () Small
+585 650 hden () Small (KEA) Owner (450) Troop_Number
+550 675 fer () Small
+620 675 wat () Small
+515 650 wat () Small
+655 650 gden () Small (Free) Owner
+550 625 wat () Small
+620 625 wat () Small
+585 600 wat () Small
+515 600 wat () Small
+655 600 wat () Small
+550 575 wat () Small
+620 575 swp () Small
+585 550 wat () Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(NTG)} def
+ * You are player 2 (John) with 'Nuke til Glow' Clan!
+ * You have Credit of $.
+ * This is Turn 0 of LIZARDS! Game 001.
+ * ORDERS FOR NEXT TURN DUE BY 01/01/1980
+.
+
+ * WORLD PHASE (all Den Growth and Settling).
+
+ * ARTILLERY PHASE (all Chants, Lobs and Free orders).
+
+ * MOVEMENT PHASE (all Moves, Splits, Sails and Sneaks orders).
+
+ * DEVELOPMENT PHASE (all Builds, Destroy, Recruit and Give orders).
+
+ * Clan Listing for 'Nuke til Glow' at end of Turn 0:
+
+ - 30AA Red Home Den contains 400 Grey (Sated & Average) Lizards and 50 Den Lizards.
+
+ * Clans Ranking at end of Turn 0:
+
+ 01 -   2450 Player 01, 'Kill em all' (KEA) Clan.
+ 02 -   2450 Player 02, 'Nuke til Glow' (NTG) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST GAIN 2000 VICTORY POINTS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+[
+] format
+pr
+Map_Page_R
+-1190 140 Location_R
+(Nuke til Glow Clan World View for Lizards! Game 001 Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+585 750 wat () Small
+585 700 pla () Small
+550 725 fer () Small
+620 725 wat () Small
+515 700 gden () Small (Free) Owner
+655 700 pla () Small
+585 650 hden () Small (NTG) Owner (450) Troop_Number
+550 675 wat () Small
+620 675 wat () Small
+515 650 pla () Small
+655 650 fer () Small
+550 625 fer () Small
+620 625 wat () Small
+585 600 wat () Small
+515 600 wat () Small
+655 600 wat () Small
+550 575 wat () Small
+620 575 wat () Small
+585 550 wat () Small
+printing
+saveobj restore
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/Gameletter {(001)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def

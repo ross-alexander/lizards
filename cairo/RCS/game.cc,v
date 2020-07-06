@@ -1,0 +1,168 @@
+head	1.1;
+access;
+symbols;
+locks
+	ralexand:1.1; strict;
+comment	@// @;
+
+
+1.1
+date	2012.11.23.18.42.08;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include <assert.h>
+#include <errno.h>
+#include <time.h>
+#include <string.h>
+
+#include <libxml++/libxml++.h>
+
+#include "lizards.h"
+
+game_t::game_t(int format, const char *path)
+{
+  if (format == FORMAT_FILE_JS)
+    {
+      serial_t s = serial_t::from_file(path);
+      serial_array_t pl;
+      assert(s.get("players", pl));
+      nplayers = pl.size();
+
+      assert(nplayers >= 1);
+      printf("Number of players is %d\n", nplayers);
+      plist = new player_t*[nplayers + 1];
+
+      for (unsigned int i = 0; i < nplayers; i++)
+	{
+	  serial_t p = pl[i];
+	  const char* startup;
+	  p.get("startup", startup);
+	  player_t *pp = plist[i+1] = new player_t;
+	  pp->startup = strdup(startup);
+	  const char *code;
+	  if (p.get("code", code))
+	    {
+	      pp->code = strndup(code, 3);
+	    }
+	}
+    }
+  else if (format == FORMAT_FILE_XML)
+    {
+      xmlpp::DomParser parser(path);
+      
+      if (!parser)
+	{
+	  fprintf(stderr, "Failed to open %s: %s\n", path, strerror(errno));
+	  exit(1);
+	}
+      
+      xmlpp::Element *root = parser.get_document()->get_root_node();
+      if (root->get_name() != "lizards")
+	{
+	  fprintf(stderr, "Root element is not 'lizards'\n");
+	  exit(1);
+	}
+      
+  //  assert(root->get_attribute("game"));
+  //  assert(root->get_attribute("dir"));
+  //  assert(root->get_attribute("turn"));
+
+  //  if (game) delete game;
+  //  game = strdup(xn_swamp->get_attribute("game")->get_value().data());
+
+  //  if (dir) delete dir;
+  //  dir = strdup(xn_swamp->get_attribute("dir")->get_value().data());
+
+  //  xmlDocPtr doc = xmlParseFile(path);
+  //  xmlXPathContextPtr ctx = xmlXPathNewContext(doc);
+  //  xmlXPathObjectPtr res;
+
+  //  turn = strtol(xn_swamp->get_attribute("dir")->get_value().data(), NULL, 10);
+
+  //  printf("%s [%s] turn %d\n", game, dir, turn);
+
+      xmlpp::NodeSet ns = root->find("player");
+      
+      nplayers = ns.size();
+      assert(nplayers >= 1);
+
+      printf("Number of players is %d\n", nplayers);
+      
+      plist = new player_t*[nplayers + 1];
+      
+  //  player[0] = new player_t;
+  //  player[0]->num = 0;
+  //  player[0]->ref = strdup("CG-00");
+  //  player[0]->clan = strdup("Circle Games");
+  //  player[0]->code = strdup("C-G");
+
+      for (unsigned int i = 0; i < ns.size(); i++)
+	{
+	  xmlpp::Element *e = dynamic_cast<xmlpp::Element*>(ns[i]);
+	  assert(e != NULL);
+	  assert(e->get_attribute("startup"));
+	  plist[i+1] = new player_t;
+	  plist[i+1]->startup = strdup(e->get_attribute("startup")->get_value().data());
+	}
+    }
+}
+
+game_t::game_t(player_t ** _players)
+{
+  nplayers = 0;
+  for (int i = 0; _players[i]; i++)
+    nplayers++;
+  nplayers++;
+  plist = new player_t*[nplayers];
+  for (int i = 0; _players[i]; i++)
+    plist[i+1] = _players[i];
+}
+
+player_t *game_t::player(unsigned int p)
+{
+  assert(p > 0 && p <= nplayers);
+  return plist[p];
+}
+
+grid_t * game_t::bootstrap()
+{
+  grid_t *grid = new grid_t(16, 16);
+  grid->generate_typical();
+
+  int np = (grid->width * grid->height) >> 8;
+  point_t places[np];
+
+  for (int i = 0; i < grid->width / 8; i++)
+    for (int j = 0; j < grid->height / 8; j++)
+      places[grid->width/8 * i + j] = point_t(i*8+4, j*8+4);
+
+  srandom(time(0));
+  for (int i = 0; i < grid->width * grid->height; i++)
+    {
+      int a = random() % np;
+      int b = random() % np;
+      point_t p = places[b];
+      places[b] = places[a];
+      places[a] = p;
+    }
+
+  for (unsigned int i = 1; i <= nplayers; i++)
+    {
+      layouts_t *layouts = new layouts_t(FORMAT_FILE_TXT, "LAYOUT.TXT");
+      template_t *tmpl = new template_t(layouts, FORMAT_FILE_TXT, player(i)->startup);
+      grid->place_template(tmpl, i, places[i-1]);
+    }
+  return grid;
+}
+@

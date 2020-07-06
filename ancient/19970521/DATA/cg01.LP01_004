@@ -1,0 +1,103 @@
+Header(cg01, 4)
+ClanID(mtb,Mike TB)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 100 Black Lizards at 14K move NE (to 14L).
+ - 100 Black Lizards at 14L move NE (to 13M).
+
+ - Spy Lizard at 20L moves SE (to 20M).
+ - Spy Lizard at 20M moves SE (to 21N).
+ - Spy Lizard captured by Den at 21N.
+
+ - 34 Red, 76 Black Lizards at 13I move NE (to 13J).
+ - Lizards eat from fertile hex 13J.
+ - 34 Red, 76 Black Lizards at 13J move N (to 12J).
+
+ - Spy Lizard splits at 18M and moves SE (to 19N).
+ - Spy Lizard at 19N moves SE (to 19O).
+
+ - 17 Yellow, 80 Black Lizards at 14G move NW (to 14F).
+ - 17 Yellow, 80 Black Lizards at 14F move NW (to 13E).
+ - Lizards eat from fertile hex 13E.
+
+ - 2 Black Lizards at 15M move NE (to 15N).
+ - 2 Black Lizards at 15N move SE (to 15O).
+
+ - Spy Lizard at 17E moves SW (to 18D).
+ - Spy Lizard at 18D moves SW (to 18C).
+
+ - Spy Lizard at 14C moves NW (to 14B).
+ - Spy Lizard at 14B moves NW (to 13A).
+
+ - Whirlpool at 21P moves NE (to 20Q)!
+
+ - Whirlpool at 11A moves SE (to 12B)!
+ - Whirlpool at 12B moves NE (to 11C)!
+
+ - Spy Lizard at 23J moves SW (to 23I).
+ - Spy Lizard at 23I moves SW (to 24H).
+
+ - Spy Lizard at 12H moves NE (to 11I).
+ - Spy Lizard at 11I moves N (to 10I).
+ - Spy Lizard MIRED in Swamp at 10I for next turn.
+
+ - 68 Black Lizards at 17N move SW (to 17M).
+ - Lizards eat from fertile hex 17M.
+ - 68 Black Lizards at 17M move S (to 18M).
+
+ - Spy Lizard at 14N moves NE (to 13O).
+ - Spy Lizard at 13O moves NE (to 13P).
+
+ - Whirlpool at 20F moves NE (to 19G)!
+ - Whirlpool at 19G moves SE (to 20H)!
+
+ - Spy Lizard at 19E moves S (to 20E).
+ - Spy Lizard at 20E moves S (to 21E).
+ - Spy Lizard captured by Den at 21E.
+Phase(development)
+
+ - Fertile hex planted at 17J by 10 Green Lizards.
+
+ - Recruiting from Green Den at 17K. 16 Green lizards recruited from Den leaving 32 Den Lizards at 17K.
+ClanReport(Mike TB)
+Den(13I, 83, Red, , Peckish, Average)
+
+Den(14G, 41, Yellow, , Famished, Average)
+
+Den(14K, 41, Black, , Famished, Average)
+
+HomeDen(17I, 48, 1, 17 Red, Hungry, Average)
+
+Den(17K, 32, Green, 23 Green, Sated, Average)
+
+Den(17N, 50, Yellow, , Starved, Good)
+
+ - 12J Band of 34 Red, 76 Black (Sated & Average) Lizards.
+ - 13E Band of 17 Yellow, 80 Black (Sated & Average) Lizards.
+ - 13M Band of 100 Black (Famished & Average) Lizards.
+ - 15O Band of 2 Black (Starved & Average) Lizards.
+ - 17J Band of 10 Green (Hungry & Average) Lizards.
+ - 18G Band of 1 Black (Starved & Average) Lizards.
+ - 18M Band of 69 Black (Sated & Good) Lizards.
+ - 19J Band of 1 Black (Hungry & Average) Lizards.
+ - 24H Spy Lizard. Spy for 3 turns.
+ - 13A Spy Lizard. Spy for 3 turns.
+ - 10I Spy Lizard. Spy for 3 turns.
+ - 13P Spy Lizard. Spy for 3 turns.
+ - 16G Spy Lizard. Spy for 2 turns.
+ - 18C Spy Lizard. Spy for 1 turns.
+ - 19O Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 4:
+
+ 01 -   1140 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   1043 Player 03, 'Dangerous Dan' (dan) Clan.
+ 03 -    937 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -    866 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

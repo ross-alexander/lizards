@@ -1,0 +1,11 @@
+Header(xx, 0, 0, 2, 1, rda, Raging Ross, 2, kea, Kill em all)
+Spawning(off)
+
+ 1 - Player 01, 'Raging Ross' (rda) Clan.
+ 1 - Player 02, 'Kill em all' (kea) Clan.
+
+ClanRank()Rank(01,500,1,Raging Ross,rda)
+Rank(02,500,2,Kill em all,kea)
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+Trailer()

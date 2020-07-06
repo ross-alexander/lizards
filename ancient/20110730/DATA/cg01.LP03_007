@@ -1,0 +1,129 @@
+Header(cg01, 7)
+ClanID(dan,Dangerous Dan)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+
+ - 80 Black Lizards at 20AB begin chanting SE...
+ - Mist engulfs 20AC as the hex rises out of the sea!
+ - Your black lizards have raised a Peak from the depths! 
+ - The Temple at 20AB glows! Your 80 Black Lizards finish chanting.
+Phase(movement)
+
+ - 24 Red Lizards at 25AA move SW (to 26Z).
+ - 24 Red Lizards at 26Z move SW (to 26Y).
+ - Lizards eat from fertile hex 26Y.
+
+ - 42 Red, 104 Black Lizards at 22AF move NE (to 21A).
+ - 42 Red, 104 Black Lizards at 21A move SE (to 22B).
+ - Lizards attack 30 militia Lizards in free Den at 22B.
+ - Combat round 1! Standing Lizards: 140. Standing enemy Lizards: 0.
+ - Your Lizards at 22B mercilessly SLAUGHTERED their foul enemy. They are now Dangerous warriors.
+ - Your Lizards captured Black Den at 22B.
+
+ - 30 Red Lizards at 23Z move N (to 22Z).
+ - Lizards eat from fertile hex 22Z.
+ - 30 Red Lizards at 22Z move N (to 21Z).
+
+ - Split 23Z (N N) order ignored. NO Lizards in hex.
+
+ - Split 23Z (N NW) order ignored. NO Lizards in hex.
+
+ - 52 Red Lizards at 27Z move NW (to 26Y).
+ - Lizards eat from fertile hex 26Y.
+
+ - Spy Lizard splits at 26AE and moves SE (to 27AF).
+ - Spy Lizard at 27AF moves S (to 28AF).
+
+ - 63 Red Lizards at 25Z move S (to 26Z).
+ - 63 Red Lizards at 26Z move SW (to 26Y).
+ - Lizards eat from fertile hex 26Y.
+
+ - Spy Lizard at 20AD moves NE (to 19AE).
+ - Spy Lizard at 19AE moves N (to 18AE).
+
+ - Spy Lizard splits at 26G and moves NW (to 26F).
+ - Spy Lizard at 26F moves NW (to 25E).
+
+ - Spy Lizard splits at 26G and moves NE (to 26H).
+ - Spy Lizard at 26H moves SE (to 26I).
+
+ - Spy Lizard at 20AD moves NE (to 19AE).
+ - Spy Lizard at 19AE moves N (to 18AE).
+
+ - 10 Green Lizards at 26E move NE (to 26F).
+
+ - Spy Lizard at 18AE moves NE (to 18AF).
+ - Spy Lizard at 18AF moves NE (to 17A).
+
+ - 13 Red, 221 Black Lizards split at 26G and move SE (to 27H).
+ - 13 Red, 221 Black Lizards at 27H move S (to 28H).
+
+ - Spy Lizard splits at 26AE and moves SE (to 27AF).
+ - Spy Lizard at 27AF moves S (to 28AF).
+
+ - 14 Red Lizards at 26AA move SW (to 27Z).
+ - 14 Red Lizards at 27Z move NW (to 26Y).
+ - Lizards eat from fertile hex 26Y.
+Phase(development)
+
+ - Recruiting from Grey Den at 25E. 12 Grey lizards recruited from Den leaving 23 Den Lizards at 25E.
+
+ - Recruiting from Red Den at 23Z. 26 Red lizards recruited from Den leaving 49 Den Lizards at 23Z.
+
+ - Surveying hex SW of 25E for Bridge. Grey Lizards build Bridge at 26D.
+
+ - Recruiting from Grey Den at 26G. 14 Grey lizards recruited from Den leaving 27 Den Lizards at 26G.
+
+ - Fertile hex planted at 25AD by 10 Green Lizards.
+
+ - Recruiting from Black Den at 26AE. 22 Black lizards recruited from Den leaving 41 Den Lizards at 26AE.
+
+ - Recruiting from Home Den at 25AC. 13 Red lizards recruited from Den leaving 26 Den Lizards at 25AC.
+SpyNative: 32Y
+SpyNative: 25S
+SpyNative: 1AF
+SpyRejoin: 25E
+ClanReport(Dangerous Dan)
+Den(21AC, 76, Black, 63 Black, Peckish, Average)
+
+Den(22B, 100, Black, 37 Red, 103 Black, Peckish, Dangerous)
+
+Den(23Z, 49, Red, 26 Red, Sated, Average)
+
+Den(25E, 23, Grey, 1 Red, 43 Grey, Sated, Average)
+
+Den(25AA, 63, Red, , Peckish, Average)
+
+HomeDen(25AC, 26, 1, 29 Red, Sated, Average)
+
+Den(26A, 66, Green, 1 Green, Famished, Average)
+
+Den(26G, 27, Grey, 31 Grey, Sated, Average)
+
+Den(26AE, 41, Black, 96 Black, Sated, Average)
+
+ - 20AB Band of 80 Black (Famished & Good) Lizards.
+ - 21Z Band of 30 Red (Sated & Average) Lizards.
+ - 25AD Band of 10 Green (Peckish & Average) Lizards.
+ - 26F Band of 10 Green (Sated & Average) Lizards.
+ - 26Y Band of 153 Red (Sated & Average) Lizards.
+ - 28H Band of 13 Red, 221 Black (Peckish & Average) Lizards.
+ - 17Z Spy Lizard. Spy for 3 turns.
+ - 17A Spy Lizard. Spy for 2 turns.
+ - 18AE Spy Lizard. Spy for 2 turns.
+ - 18AE Spy Lizard. Spy for 2 turns.
+ - 28AF Spy Lizard. Spy for 0 turns.
+ - 26I Spy Lizard. Spy for 0 turns.
+ - 28AF Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 7:
+
+ 01 -   1715 Player 03, 'Dangerous Dan' (dan) Clan.
+ 02 -   1584 Player 02, 'Jumping Jono' (jno) Clan.
+ 03 -   1539 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -   1307 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

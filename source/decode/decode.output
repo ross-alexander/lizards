@@ -1,0 +1,204 @@
+
+
+Terminals which are not used:
+
+   LIST
+   FUNC
+
+
+
+Grammar
+rule 1    decode -> parse
+rule 2    parse -> LEFT plist RIGHT
+rule 3    parse -> QUOTE LEFT plist RIGHT
+rule 4    parse -> IDENT
+rule 5    parse -> INTEGER
+rule 6    parse -> STRING
+rule 7    plist -> parse
+rule 8    plist -> plist parse
+
+Terminals, with rules where they appear
+
+$ (-1)
+error (256)
+LEFT (258) 2 3
+RIGHT (259) 2 3
+STRING (260) 6
+INTEGER (261) 5
+QUOTE (262) 3
+IDENT (263) 4
+LIST (264)
+FUNC (265)
+
+Nonterminals, with rules where they appear
+
+decode (11)
+    on left: 1
+parse (12)
+    on left: 2 3 4 5 6, on right: 1 7 8
+plist (13)
+    on left: 7 8, on right: 2 3 8
+
+
+state 0
+
+    LEFT	shift, and go to state 1
+    STRING	shift, and go to state 2
+    INTEGER	shift, and go to state 3
+    QUOTE	shift, and go to state 4
+    IDENT	shift, and go to state 5
+
+    decode	go to state 14
+    parse	go to state 6
+
+
+
+state 1
+
+    parse  ->  LEFT . plist RIGHT   (rule 2)
+
+    LEFT	shift, and go to state 1
+    STRING	shift, and go to state 2
+    INTEGER	shift, and go to state 3
+    QUOTE	shift, and go to state 4
+    IDENT	shift, and go to state 5
+
+    parse	go to state 7
+    plist	go to state 8
+
+
+
+state 2
+
+    parse  ->  STRING .   (rule 6)
+
+    $default	reduce using rule 6 (parse)
+
+
+
+state 3
+
+    parse  ->  INTEGER .   (rule 5)
+
+    $default	reduce using rule 5 (parse)
+
+
+
+state 4
+
+    parse  ->  QUOTE . LEFT plist RIGHT   (rule 3)
+
+    LEFT	shift, and go to state 9
+
+
+
+state 5
+
+    parse  ->  IDENT .   (rule 4)
+
+    $default	reduce using rule 4 (parse)
+
+
+
+state 6
+
+    decode  ->  parse .   (rule 1)
+
+    $default	reduce using rule 1 (decode)
+
+
+
+state 7
+
+    plist  ->  parse .   (rule 7)
+
+    $default	reduce using rule 7 (plist)
+
+
+
+state 8
+
+    parse  ->  LEFT plist . RIGHT   (rule 2)
+    plist  ->  plist . parse   (rule 8)
+
+    LEFT	shift, and go to state 1
+    RIGHT	shift, and go to state 10
+    STRING	shift, and go to state 2
+    INTEGER	shift, and go to state 3
+    QUOTE	shift, and go to state 4
+    IDENT	shift, and go to state 5
+
+    parse	go to state 11
+
+
+
+state 9
+
+    parse  ->  QUOTE LEFT . plist RIGHT   (rule 3)
+
+    LEFT	shift, and go to state 1
+    STRING	shift, and go to state 2
+    INTEGER	shift, and go to state 3
+    QUOTE	shift, and go to state 4
+    IDENT	shift, and go to state 5
+
+    parse	go to state 7
+    plist	go to state 12
+
+
+
+state 10
+
+    parse  ->  LEFT plist RIGHT .   (rule 2)
+
+    $default	reduce using rule 2 (parse)
+
+
+
+state 11
+
+    plist  ->  plist parse .   (rule 8)
+
+    $default	reduce using rule 8 (plist)
+
+
+
+state 12
+
+    parse  ->  QUOTE LEFT plist . RIGHT   (rule 3)
+    plist  ->  plist . parse   (rule 8)
+
+    LEFT	shift, and go to state 1
+    RIGHT	shift, and go to state 13
+    STRING	shift, and go to state 2
+    INTEGER	shift, and go to state 3
+    QUOTE	shift, and go to state 4
+    IDENT	shift, and go to state 5
+
+    parse	go to state 11
+
+
+
+state 13
+
+    parse  ->  QUOTE LEFT plist RIGHT .   (rule 3)
+
+    $default	reduce using rule 3 (parse)
+
+
+
+state 14
+
+    $   	go to state 15
+
+
+
+state 15
+
+    $   	go to state 16
+
+
+
+state 16
+
+    $default	accept

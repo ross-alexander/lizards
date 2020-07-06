@@ -1,0 +1,24 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:544: checking for gcc
+configure:621: checking whether the C compiler (gcc  ) works
+configure:635: gcc -o conftest    conftest.c  1>&5
+configure:655: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:660: checking whether we are using GNU C
+configure:684: checking whether gcc accepts -g
+configure:712: checking how to run the C preprocessor
+configure:773: checking for ANSI C header files
+configure:877: checking whether time.h and sys/time.h may both be included
+configure:914: checking for working alloca.h
+configure:947: checking for alloca
+configure:1144: checking for unistd.h
+configure:1144: checking for stdio.h
+configure:1144: checking for stdlib.h
+configure:1144: checking for string.h
+configure:1144: checking for netinet/in.h
+configure:1144: checking for sys/socket.h
+configure:1144: checking for sys/select.h
+configure:1144: checking for netdb.h
+configure:1144: checking for signal.h
+configure:1144: checking for sys/time.h

@@ -1,0 +1,821 @@
+head	1.2;
+access;
+symbols;
+locks
+	ralexand:1.2; strict;
+comment	@# @;
+
+
+1.2
+date	2012.11.12.16.10.20;	author ralexand;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2012.11.06.15.22.16;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@Remove old code.
+@
+text
+@#!/usr/bin/perl
+
+use CGI qw(:cgi);
+use XML::LibXML;
+use File::Basename;
+use Encode;
+use JSON;
+use Data::Dumper;
+
+# ----------------------------------------------------------------------
+#
+# make_xhtml
+#
+# ----------------------------------------------------------------------
+
+sub make_xhtml {
+    my $opts = {@@_};
+    my $doc = XML::LibXML::Document->new("1.0", "utf-8");
+    my $dtd = $doc->createInternalSubset("html", undef, undef);
+    my $html = $doc->createElement("html");
+    $doc->setDocumentElement($html);
+    my $head = $html->addNewChild("", "head");
+    my $body = $html->addNewChild("", "body");
+    
+    $head->appendTextChild("title", "Lizards!");
+    my $link = $head->addNewChild("", "link");
+    $link->setAttribute("type", "text/css");
+    $link->setAttribute("rel", "stylesheet");
+    $link->setAttribute("href", "default.css");
+
+    if ($opts->{script})
+    {
+	my $script = $head->addNewChild("", "script");
+	$script->setAttribute("language", "JavaScript");
+	$script->setAttribute("src", $opts->{script});
+	$script->appendText(" ");
+    }
+    return ($doc, $html, $head, $body);
+}
+
+# ----------------------------------------------------------------------
+#
+# handle_post
+#
+# ----------------------------------------------------------------------
+
+sub handle_post {
+    my ($cgi) = @@_;
+
+    my $hidden = $cgi->param(hidden);
+    my $res = decode_json($hidden);
+
+    print STDERR $hidden, "\n";
+
+    if ($res->{'function'} eq 'select_layout')
+    {
+	my $template = {
+	    layout => $res->{id},
+	    hexes => []};
+	select_template($cgi, $template);
+    }
+    elsif ($res->{'function'} eq 'show_template')
+    {
+	my $template = $res->{tmpl};
+	select_template($cgi, $template, $res);
+    }
+    else
+    {
+
+	print $cgi->header(-type => 'text/plain');
+	my $vars = $cgi->Vars();
+	
+	print $cgi->param('hidden');
+	
+	while(my ($k, $v) = each(%$vars))
+	{
+	    printf("%s -> %s\n", $k, $v);
+	}
+    }
+}
+
+# ----------------------------------------------------------------------
+#
+# read_js_file
+#
+# ----------------------------------------------------------------------
+sub read_js_file {
+    my ($file) = @@_;
+
+    return undef if (! -f $file);
+    my $stream;
+    open($stream, "<:encoding(utf-8)", $file);
+    my $text = join("", <$stream>);
+    close($stream);
+
+    return JSON->new->relaxed->decode(decode('utf-8', $text));
+}
+
+# ----------------------------------------------------------------------
+#
+# select_template
+#
+# ----------------------------------------------------------------------
+
+sub select_template {
+    my ($cgi, $tmpl, $full) = @@_;
+
+    my $icon = $full->{icon};
+    my $active = $tmpl->{active};
+    my $session = $cgi->param('session');
+
+# --------------------
+# If an icon has been pressed
+# --------------------
+
+    if(defined($icon))
+    {
+	my $hex = undef;
+	for my $i (0 .. length($tmpl->{hexes} - 1))
+	{
+	    my $h = $tmpl->{hexes}->[$i];
+	    $hex = $h if ($h->{id} == $active);
+	}
+
+# --------------------
+# If there is a hex there
+# --------------------
+
+	if ($hex)
+	{
+
+# --------------------
+# If it is +/- for adding to bands
+# --------------------
+
+	    if ($icon =~ m:^([+-])([A-Z]+):)
+	    {
+		my $band_type = $2;
+
+		print STDERR "Band $band_type\n";
+
+		$hex->{band} //= {}; # Assigns unless definded $hex->{band}
+ 		$hex->{band}->{$band_type} += 10 if ($1 eq '+');
+		$hex->{band}->{$band_type} -= 10 if ($1 eq '-');
+	    }
+	    else
+	    {
+		$hex->{type} = $icon;
+	    }
+	}
+
+# --------------------
+# If no hex defined then create one
+# --------------------
+
+	else
+	{
+	    if (!($icon =~ m:^[+-]:))
+	    {
+		$hex = {'id' => $tmpl->{active}, 'type' => $full->{icon}};
+		push($tmpl->{hexes}, $hex);
+	    }
+	}
+    }
+
+    my $tmpl_file = "tmp/$session.js";
+    my $svg_file = "tmp/$session.svg";
+
+    my $stream;
+    open($stream, ">", $tmpl_file);
+    print $stream encode_json($tmpl);
+    close($stream);
+
+    my $lua = "lua template.lua --layouts=LAYOUT.JS --input=$tmpl_file --output=$svg_file";
+
+    if (exists($full->{x}) && exists($full->{y}) && exists($full->{width}) && exists($full->{height}))
+    {
+	$lua .= sprintf(" --hit=%s,%s,%s,%s", $full->{x}, $full->{y}, $full->{width}, $full->{height});
+    }
+
+    print(STDERR $lua, "\n");
+    my $res = `$lua`;
+    print(STDERR $res);
+    if (!defined($icon) && ($res =~ m:Hit for hex ([0-9]+):))
+    {
+	$active = int($1);
+	$tmpl->{active} = $active;
+	printf(STDERR "Active set to $active\n");
+    }
+
+# -------------------
+# Build base xml structure
+# --------------------
+
+    my ($doc, $html, $head, $body) = make_xhtml(script => "default.js");
+
+# --------------------
+# Stick a nice header up
+# --------------------
+
+    my $h1 = $body->addNewChild("", "h1");
+    $h1->appendText("Lizards!");
+
+    my $form = $body->addNewChild("", "form");
+    $form->setAttribute("method", "POST");
+    $form->setAttribute("action", "reload.cgi");
+    $form->setAttribute("id", "bigpost");
+
+    my $input = $form->addNewChild("", "input");
+    $input->setAttribute('type', 'hidden');
+    $input->setAttribute('id', 'hidden');
+    $input->setAttribute('name', 'hidden');
+    $input->setAttribute('value', 'default');
+    
+    my $input = $form->addNewChild("", "input");
+    $input->setAttribute('type', 'hidden');
+    $input->setAttribute('id', 'session');
+    $input->setAttribute('name', 'session');
+    $input->setAttribute('value', $session);
+
+    my $table = $form->addNewChild("", "table");
+    $table->setAttribute("class", "icons");
+
+
+    sub add_row {
+	my ($table, $row) = @@_;
+
+	my @@imgs;
+
+	my $tr = $table->addNewChild("", "tr");
+	for my $i (@@$row)
+	{
+	    my $td = $tr->addNewChild("", "td");
+	    $td->setAttribute("class", "outer");
+	    my $table_s = $td->addNewChild("", "table");
+	    my $tr_i = $table_s->addNewChild("", "tr");
+	    my $td_i = $tr_i->addNewChild("", "td");
+	    if (exists($i->{f}))
+	    {
+		my $img = $td_i->addNewChild("", "img");
+		$img->setAttribute("src", $i->{f});
+		$img->setAttribute("class", "icon");
+		if (exists($i->{t}))
+		{
+		    $img->setAttribute("icon_type", $i->{t});
+		}
+		push(@@imgs, $img);
+	    }
+	    if (exists($i->{c}))
+	    {
+		my $tr_c = $table_s->addNewChild("", "tr");
+		my $td_c = $tr_c->addNewChild("", "td");
+		$td_c->appendText($i->{c});
+	    }
+		
+	    for my $j (class, id, rowspan, colspan)
+	    {
+		$td->setAttribute($j, $i->{$j}) if (exists($i->{$j}));
+	    }
+	}
+	return @@imgs;
+    }
+
+    my @@row1 = add_row($table, [
+			   { class => 'bigbox', rowspan => 5, f => $svg_file },
+			   { class => 'smallbox', rowspan => 2, colspan => 3, id => 'sb' },
+			   {c => Water, f => "images/WAT.svg", t => WAT},
+			   {c => Plains, f => "images/PLA.svg", t => PLA},
+			   {c => Fertile, f => "images/FER.svg", t => FER},
+			   {c => Scrub, f => "images/SCR.svg", t => SCR},
+		       ]);
+
+    my @@desc;
+    for my $h (sort({$a->{id} <=> $b->{id}} @@{$tmpl->{hexes}}))
+    {
+	my $dsc = sprintf("%02d - %s", $h->{id}, $h->{type});
+	if (exists($h->{band}))
+	{
+	    while(my ($k, $v) = each(%{$h->{band}}))
+	    {
+		$dsc = $dsc . " $v $k ";
+	    }
+	}
+	push(@@desc, $dsc);
+    }
+    map { $_ = "<li>$_</li>\n" } @@desc;
+    $tmpl->{desc} = "<ul>" . join("\n", @@desc) . "</ul>\n";
+
+    my $tmpl_js = encode_json($tmpl);
+    printf(STDERR "$tmpl_js\n");
+
+    my $bigbox = @@row1[0];
+    $bigbox->setAttribute("id", "bb");
+    $bigbox->setAttribute("onclick", "bbpost(event)");
+    $bigbox->setAttribute("tmpl", $tmpl_js);
+    $bigbox->setAttribute("class", "bb");
+
+    add_row($table, [
+		{c => Whirlpool, f => "images/WHI.svg", t => WHI},
+		{c => Temple, f => "images/TEM.svg", t => TEM},
+		{c => Peak, f => "images/PEA.svg", t => PEA},
+		{c => Volcano, f => "images/VOL.svg", t => VOL},
+	    ]);
+    add_row($table, [
+		{c => 'Red Den', f => "images/RED.svg", t => RED},
+		{c => 'Green Den', f => "images/GRN.svg", t => GRN},
+		{c => 'Grey Den', f => "images/GRY.svg", t => GRY},
+		{c => 'Yellow Den', f => "images/YEL.svg", t => YEL},
+		{c => 'Black Den', f => "images/BLK.svg", t => BLK},
+		{c => Swamp, f => "images/SWA.svg", t => SWA},
+		{c => Ruins, f => "images/RUI.svg", t => RUI},
+	    ]);
+    add_row($table, [
+		{c => '+10 Red', f => "images/RED_add.svg", t => '+RED'},
+		{c => '+10 Green', f => "images/GRN_add.svg", t => '+GRN'},
+		{c => '+10 Grey', f => "images/GRY_add.svg"},
+		{c => '+10 Yellow', f => "images/YEL_add.svg"},
+		{c => '+10 Black', f => "images/BLK_add.svg"},
+		{c => Fertile, f => "images/FER.svg", t => FER},
+		{c => Cursed, f => "images/CUR.svg", t => CUR},
+	    ]);
+    add_row($table, [
+		{c => '-10 Red', f => "images/RED_sub.svg", t => '-RED'},
+		{c => '-10 Green', f => "images/GRN_sub.svg"},
+		{c => '-10 Grey', f => "images/GRY_sub.svg"},
+		{c => '-10 Yellow', f => "images/YEL_sub.svg"},
+		{c => '-10 Black', f => "images/BLK_sub.svg"}]);
+
+    print $cgi->header(-type => 'text/html', -charset=>'utf-8');
+    print $doc->toString(1);
+    print STDERR "----------------------------------------\n\n";
+}
+
+
+# ----------------------------------------------------------------------
+#
+# select_layout
+#
+# ----------------------------------------------------------------------
+
+sub select_layout {
+    my ($cgi) = @@_;
+
+# --------------------
+# Load LAYOUT.JS
+# --------------------
+
+    my $layouts = read_js_file("LAYOUT.JS");
+
+    for my $l (@@$layouts)
+    {
+	my $id = $l->{id};
+	if (!exists($l->{image}))
+	{
+	    my $image = sprintf("images/layout-%02d.svg", $id);
+	    if (! -f $image)
+	    {
+		`lua layout.lua --input=LAYOUT.JS --layout=$id --output=$image`;
+		my $rc = $?;
+		die "Cannot create image $image" if ($rc != 0);
+	    }
+	    $l->{image} = $image;
+	}
+    }
+
+# -------------------
+# Build base xml structure
+# --------------------
+
+    my ($doc, $html, $head, $body) = make_xhtml(script => "default.js");
+
+# --------------------
+# Stick a nice header up
+# --------------------
+
+    my $h1 = $body->addNewChild("", "h1");
+    $h1->appendText("Lizards!");
+
+# --------------------
+# Create table to hold img and caption
+# --------------------
+
+    my $form = $body->addNewChild("", "form");
+    $form->setAttribute("method", "POST");
+    $form->setAttribute("action", "reload.cgi");
+    $form->setAttribute("id", "bigpost");
+
+    my $input = $form->addNewChild("", "input");
+    $input->setAttribute('type', 'hidden');
+    $input->setAttribute('id', 'hidden');
+    $input->setAttribute('name', 'hidden');
+    $input->setAttribute('value', 'default');
+
+    my $input = $form->addNewChild("", "input");
+    $input->setAttribute('type', 'hidden');
+    $input->setAttribute('id', 'session');
+    $input->setAttribute('name', 'session');
+    $input->setAttribute('value', $$);
+
+    my $table = $form->addNewChild("", "table");
+
+    my $tr_i = $table->addNewChild("", "tr");
+    my $tr_c = $table->addNewChild("", "tr");
+
+    my $td_i_l = $tr_i->addNewChild("", "td");
+    my $td_i = $tr_i->addNewChild("", "td");
+    my $td_i_r = $tr_i->addNewChild("", "td");
+
+    my $img_l = $td_i_l->addNewChild("", "img");
+    $img_l->setAttribute("src", "/arch/images/svg/1leftarrow.svg");
+    $img_l->setAttribute("onclick", "rotate(-1)");
+    $td_i->setAttribute("class", "bigbox");
+
+# --------------------
+# main image
+# --------------------
+
+    my $img = $td_i->addNewChild("", "img");
+    $img->setAttribute("class", "bigbox");
+    $img->setAttribute("id", "bigbox");
+
+    my @@files = <layout*.svg>;
+
+    my $flist = [];
+    for my $l (@@$layouts)
+    {
+	push(@@$flist, {
+	    path => $l->{image},
+	    desc => sprintf("Cost: %d", $l->{cost}),
+	    id => $l->{id},
+	     });
+    }
+    $img->setAttribute("images", encode_json($flist));
+    $img->setAttribute("onclick", "postie()");
+
+# --------------------
+# right arrow
+# --------------------
+
+    my $img_r = $td_i_r->addNewChild("", "img");
+    $img_r->setAttribute("src", "/arch/images/svg/1rightarrow.svg");
+    $img_r->setAttribute("onclick", "rotate(1)");
+
+    $tr_c->addNewChild("", "td");
+    my $td_c = $tr_c->addNewChild("", "td");
+    $td_c->setAttribute("id", "caption");
+    $td_c->appendText("Caption competiton");
+    $tr_c->addNewChild("", "td");
+    print $cgi->header(-type => 'text/html', -charset=>'utf-8');
+    print $doc->toString(1);
+}
+
+# ----------------------------------------------------------------------
+#
+# main
+#
+# ----------------------------------------------------------------------
+
+sub main {
+    my $cgi = new CGI;
+
+    if ($ENV{REQUEST_METHOD} eq "POST")
+    {
+	handle_post($cgi);
+    }
+    else
+    {
+	select_layout($cgi);
+    }
+}
+
+&main();
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a40 238
+
+sub do_table {
+    my ($body) = @@_;
+
+    my $table = $body->addNewChild("", "table");
+    my $tr1 = $table->addNewChild("", "tr");
+    $table->setAttribute("class", "map");
+    my $td1 = $tr1->addNewChild("", "td");
+    my $textarea = $td1->addNewChild("", "textarea");
+    $textarea->setAttribute("name", "map");
+    
+    open($stream, "<", "tmp/cust.map");
+    my $text = join("", <$stream>);
+    close($stream);
+    $textarea->appendText($text);
+    
+    my $td2 = $tr1->addNewChild("", "td");
+    
+    my $svg_doc = $parser->parse_file('tmp/cust.svg');
+    my $svg_svg = $svg_doc->getDocumentElement();
+    
+    my $svg_clone = $svg_svg->cloneNode(1);
+    $td2->appendChild($svg_clone);
+    
+    
+    my $td3 = $tr1->addNewChild("", "td");
+    open($stream, "<", "tmp/cust.htm");
+    my $cost = join("", <$stream>);
+    $td3->appendWellBalancedChunk($cost);
+    
+#my $tr2 = $table->addNewChild("", "tr");
+#my $td4 = $tr2->addNewChild("", "td");
+# $td4->setAttribute("colspan", "2");
+    
+    my $input = $td1->addNewChild("", "input");
+    $input->setAttribute("type", "submit");
+    $input->setAttribute("name", "save");
+    $input->setAttribute("value", "Reload");
+}
+
+# my $img = $td2->addNewChild("", "img");
+# $img->setAttribute("src", "tmp/cust.svg");
+
+sub load_layout {
+    my $layout_l = [];
+    my $layout_m = {};
+    my $stream;
+    open($stream, "<", "LAYOUT.TXT");
+    {
+	while(<$stream>)
+	{
+	    chomp $_;
+	    if (m:LAYOUT ([0-9]+) ([0-9]+) ([0-9]+):)
+	    {
+		my $t = {
+		    'id' => $1,
+		    'count' => $2,
+		    'cost' => $3 };
+		push(@@$layout_l, $t);
+		$layout_m->{$t->{'id'}} = $t;
+	    }
+	}
+    }
+    close($stream);
+    return ($layout_l, $layout_m);
+}
+
+
+sub load_hexes {
+    return(
+ [
+    {
+	'value' => 'WAT',
+	'cost' => 0,
+	'desc' => 'Water'
+    },
+    {
+	'value' => 'PLA',
+	'cost' => 15,
+	'desc' => 'Plains',
+    },
+    {
+	'value' => 'FER',
+	'cost' => 25,
+	'desc' => 'Fertile',
+    },
+    {
+	'value' => 'SWA',
+	'cost' => 10,
+	'desc' => 'Swamp',
+    },
+    {
+	'value' => 'SCR',
+	'cost' => 10,
+	'desc' => 'Scrub',
+    },
+    {
+	'value' => 'PEA',
+	'cost' => 10,
+	'desc' => 'Peak',
+    },
+    {
+	'value' => 'RED',
+	'cost' => 110,
+	'desc' => 'Red Den',
+    },
+ ]);
+}
+
+# ----------------------------------------------------------------------
+#
+# add_hex_table
+#
+# ----------------------------------------------------------------------
+
+sub add_hex_table {
+    my ($parent, $cgi, $tmpl, $hexes) = @@_;
+
+    my $table = $parent->addNewChild("", "table");
+    $table->setAttribute("class", "hex");
+    for my $i (1 .. $tmpl->{'count'})
+    {
+	my $tr = $table->addNewChild("", "tr");
+	$tr->appendTextChild("td", "Hex $i");
+	my $td = $tr->addNewChild("", "td");
+	my $s = $td->addNewChild("", "select");
+	$s->setAttribute("name", "s$i");
+	for my $j (@@$hexes)
+	{
+	    my $o = $s->addNewChild("", "option");
+	    $o->setAttribute("value", $j->{'value'});
+	    $o->appendText($j->{'desc'});
+	    $o->setAttribute("selected", "1") if ($j->{'value'} eq $cgi->param("s$i"));
+	}
+	for my $k ('RED', 'GRN', 'GRY', 'BLK', 'YEL')
+	{
+	    my $td = $tr->addNewChild("", "td");
+	    $td->appendText($k);
+	    my $s = $td->addNewChild("", "select");
+	    $s->setAttribute("name", "s$i.$k");
+	    for my $l (0 .. 20)
+	    {
+		$o = $s->addNewChild("", "option");
+		$o->appendText($l * 10);
+		$o->setAttribute("value", $l * 10);
+		$o->setAttribute("selected", 1) if ($cgi->param("s$i.$k") == ($l * 10));
+	    }
+	}
+    }
+}
+
+# ----------------------------------------------------------------------
+#
+# main
+#
+# ----------------------------------------------------------------------
+
+sub old_main {
+    my $cgi = new CGI;
+    my $parser = new XML::LibXML;
+    my ($doc, $html, $head, $body) = make_xhtml();
+    
+    my $h1 = $body->addNewChild("", "h1");
+    $h1->appendText("Lizards!");
+    
+    my $form = $body->addNewChild("", "form");
+    $form->setAttribute("method", "POST");
+    $form->setAttribute("action", "reload.cgi");
+    
+    
+    my ($layout_l, $layout_m) = &load_layout();
+    my $_layout = $cgi->param('layout');
+    
+    my $hexes = &load_hexes();
+    
+    $_layout = 1 if (!(length($_layout) && exists($layout_m->{$_layout})));
+    
+    
+    open($stream, ">", "tmp/cust.map");
+    printf($stream "TEMPLATE %d\n", $_layout);
+    my $t = $layout_m->{$_layout};
+    
+    for my $i (1 .. $t->{'count'})
+    {
+	if ($cgi->param("s$i"))
+	{
+	    printf($stream "%02d %s", $i, $cgi->param("s$i"));
+	    for my $k ('RED', 'GRY', 'GRN', 'YEL', 'BLK')
+	    {
+		if ($cgi->param("s$i.$k"))
+		{
+		    printf($stream " %s%d", $k, $cgi->param("s$i.$k"));
+		}
+	    }
+	    printf($stream "\n");
+	}
+    }
+    close($stream);
+    `./t2svg tmp/cust.map tmp/cust.svg tmp/cust.htm`;
+    
+    my $table = $form->addNewChild("", "table");
+    $table->setAttribute("class", "super");
+    my $tr = $table->addNewChild("", "tr");
+    my $td1 = $table->addNewChild("", "td");
+    my $td2 = $table->addNewChild("", "td");
+    
+    my $select = $td1->addNewChild("", "select");
+    $select->setAttribute("name", "layout");
+    for my $l (@@$layout_l)
+    {
+	my $option = $select->addNewChild("", "option");
+	$option->setAttribute("value", $l->{'id'});
+	$option->appendText(sprintf("Layout %d (%d hexes) - cost %d", $l->{'id'}, $l->{'count'}, $l->{'cost'}));
+	$option->setAttribute("selected", 1) if ($l->{'id'} == $_layout);
+    }
+    
+    &add_hex_table($td1, $cgi, $t, $hexes);
+    
+    
+    my $input = $form->addNewChild("", "input");
+    $input->setAttribute("type", "submit");
+    $input->setAttribute("name", "save");
+    $input->setAttribute("value", "Reload");
+    
+    my $img = $td2->addNewChild("", "img");
+    $img->setAttribute("src", "tmp/cust.svg");
+    
+    if (-f "tmp/cust.htm")
+    {
+	my $doc = $parser->parse_file("tmp/cust.htm");
+	my $root = $doc->getDocumentElement();
+	my $td3 = $table->addNewChild("", "td");
+	$td3->addChild($root->cloneNode(1));
+    }
+    print $cgi->header();
+    print $doc->toString(1);
+}
+
+d108 3
+a110 5
+# -------------------
+# Build base xml structure
+# --------------------
+
+    my ($doc, $html, $head, $body) = make_xhtml(script => "default.js");
+d113 1
+a113 1
+# Stick a nice header up
+d116 1
+a116 26
+    my $h1 = $body->addNewChild("", "h1");
+    $h1->appendText("Lizards!");
+
+    my $form = $body->addNewChild("", "form");
+    $form->setAttribute("method", "POST");
+    $form->setAttribute("action", "reload.cgi");
+    $form->setAttribute("id", "bigpost");
+
+    my $input = $form->addNewChild("", "input");
+    $input->setAttribute('type', 'hidden');
+    $input->setAttribute('id', 'hidden');
+    $input->setAttribute('name', 'hidden');
+    $input->setAttribute('value', 'default');
+
+    my $session = $cgi->param('session');
+
+    my $input = $form->addNewChild("", "input");
+    $input->setAttribute('type', 'hidden');
+    $input->setAttribute('id', 'session');
+    $input->setAttribute('name', 'session');
+    $input->setAttribute('value', $session);
+
+    my $table = $form->addNewChild("", "table");
+    $table->setAttribute("class", "icons");
+
+    if(exists($full->{icon}))
+d121 2
+a122 5
+	    my $h = $tmpl->{hexes}->[i];
+	    if ($h->{id} == $tmpl->{active})
+	    {
+		$hex = $h;
+	    }
+d124 5
+d131 6
+a136 1
+	    if ($full->{icon} =~ m:^([+-])([A-Z]+):)
+d139 3
+d148 1
+a148 1
+		$hex->{type} = $full->{icon};
+d151 5
+d158 1
+a158 1
+	    if (!($full->{icon} =~ m:^[+-]:))
+a180 1
+    my $active = undef;
+d184 1
+a184 1
+    if ($res =~ m:Hit for hex ([0-9]+):)
+d187 2
+d190 34
+a223 1
+    $tmpl->{active} = $active;
+d273 18
+a290 1
+    $tmpl->{desc} = "<b>Testing</b>";
+d295 1
+a295 1
+    $bigbox->setAttribute("tmpl", encode_json($tmpl));
+d331 1
+@

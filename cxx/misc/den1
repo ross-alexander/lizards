@@ -1,0 +1,64 @@
+M -90 60
+L 90 60
+M 90 60
+L 90 40
+L 70 20
+L 30 0
+L -20 0
+L -60 20
+L -90 50
+L -90 60
+L -70 60
+L -70 40
+L -60 30
+L -40 30
+L -30 40
+L -30 60
+L -20 60
+L -20 20
+L -10 10
+L 30 10
+L 60 20
+L 70 30
+L 70 60
+L 90 60
+Z" fill="green" stroke="green"/>
+<path d="
+M -65 45
+L -35 45
+" stroke="green"/>
+<path d="
+M -15 40
+L 65 40
+" stroke="green"/> 
+<path d="
+M -10 55
+L -10 20
+" stroke="green"/> 
+<path d="
+M 0 55
+L 0 20
+" stroke="green"/> 
+<path d="
+M 10 55
+L 10 20
+" stroke="green"/> 
+<path d="
+M 20 55
+L 20 20
+" stroke="green"/> 
+<path d="
+M 30 55
+L 30 20
+" stroke="green"/> 
+<path d="
+M 40 55
+L 40 20
+" stroke="green"/> 
+<path d="
+M 50 55
+L 50 25
+" stroke="green"/> 
+<path d="
+M 60 55
+L 60 30

@@ -1,0 +1,2311 @@
+2011-09-07 18:25 Debugger (debug.cc, 18) started.
+2011-09-07 18:25 random time seed = 1315416339
+2011-09-07 18:25 map_t::map_t(32, 32) exited.
+2011-09-07 18:25 map_tt::create_nowrap() entered.
+2011-09-07 18:25 Test Hex(30G) added Green Den
+2011-09-07 18:25 Test Hex(29G) added Fertile 0
+2011-09-07 18:25 Test Hex(30H) added Fertile 0
+2011-09-07 18:25 Test Hex(30G) added 29 Green
+2011-09-07 18:25 Test Hex(6A) added Green Den
+2011-09-07 18:25 Test Hex(5A) added Fertile 0
+2011-09-07 18:25 Test Hex(6A) added 14 Green
+2011-09-07 18:25 Test Hex(13Z) added Yellow Den
+2011-09-07 18:25 Test Hex(13AA) added Fertile 0
+2011-09-07 18:25 Test Hex(14Z) added Fertile 0
+2011-09-07 18:25 Test Hex(13Y) added Fertile 0
+2011-09-07 18:25 Test Hex(13Z) added 44 Yellow
+2011-09-07 18:25 Test Hex(29AA) added Grey Den
+2011-09-07 18:25 Test Hex(30AA) added Fertile 0
+2011-09-07 18:25 Test Hex(29Z) added Fertile 0
+2011-09-07 18:25 Test Hex(29AA) added 29 Grey
+2011-09-07 18:25 Test Hex(21Y) added Red Den
+2011-09-07 18:25 Test Hex(21Z) added Fertile 0
+2011-09-07 18:25 Test Hex(22Z) added Fertile 0
+2011-09-07 18:25 Test Hex(22Y) added Fertile 0
+2011-09-07 18:25 Test Hex(21Y) added 44 Red
+2011-09-07 18:25 Test Hex(18O) added Red Den
+2011-09-07 18:25 Test Hex(17O) added Fertile 0
+2011-09-07 18:25 Test Hex(18N) added Fertile 0
+2011-09-07 18:25 Test Hex(18O) added 29 Red
+2011-09-07 18:25 Test Hex(27V) added Black Den
+2011-09-07 18:25 Test Hex(26V) added Fertile 0
+2011-09-07 18:25 Test Hex(26U) added Fertile 0
+2011-09-07 18:25 Test Hex(27V) added 29 Black
+2011-09-07 18:25 Test Hex(25AD) added Green Den
+2011-09-07 18:25 Test Hex(25AE) added Fertile 0
+2011-09-07 18:25 Test Hex(25AC) added Fertile 0
+2011-09-07 18:25 Test Hex(25AD) added 29 Green
+2011-09-07 18:25 Test Hex(8I) added Yellow Den
+2011-09-07 18:25 Test Hex(9I) added Fertile 0
+2011-09-07 18:25 Test Hex(8I) added 14 Yellow
+2011-09-07 18:25 Test Hex(30K) added Green Den
+2011-09-07 18:25 Test Hex(31J) added Fertile 0
+2011-09-07 18:25 Test Hex(30K) added 14 Green
+2011-09-07 18:25 Test Hex(24Q) added Red Den
+2011-09-07 18:25 Test Hex(25R) added Fertile 0
+2011-09-07 18:25 Test Hex(25Q) added Fertile 0
+2011-09-07 18:25 Test Hex(24Q) added 29 Red
+2011-09-07 18:25 Test Hex(3X) added Red Den
+2011-09-07 18:25 Test Hex(2W) added Fertile 0
+2011-09-07 18:25 Test Hex(3X) added 14 Red
+2011-09-07 18:25 Test Hex(18V) added Green Den
+2011-09-07 18:25 Test Hex(17V) added Fertile 0
+2011-09-07 18:25 Test Hex(18W) added Fertile 0
+2011-09-07 18:25 Test Hex(18V) added 29 Green
+2011-09-07 18:25 Test Hex(29AC) added Green Den
+2011-09-07 18:25 Test Hex(30AD) added Fertile 0
+2011-09-07 18:25 Test Hex(30AC) added Fertile 0
+2011-09-07 18:25 Test Hex(29AC) added 29 Green
+2011-09-07 18:25 Test Hex(5J) added Black Den
+2011-09-07 18:25 Test Hex(5K) added Fertile 0
+2011-09-07 18:25 Test Hex(5J) added 14 Black
+2011-09-07 18:25 Test Hex(25AA) added Green Den
+2011-09-07 18:25 Test Hex(26AA) added Fertile 0
+2011-09-07 18:25 Test Hex(26Z) added Fertile 0
+2011-09-07 18:25 Test Hex(25AA) added 29 Green
+2011-09-07 18:25 Test Hex(9AA) added Black Den
+2011-09-07 18:25 Test Hex(10Z) added Fertile 0
+2011-09-07 18:25 Test Hex(9Z) added Fertile 0
+2011-09-07 18:25 Test Hex(9AA) added 29 Black
+2011-09-07 18:25 Test Hex(28C) added Red Den
+2011-09-07 18:25 Test Hex(29C) added Fertile 0
+2011-09-07 18:25 Test Hex(29B) added Fertile 0
+2011-09-07 18:25 Test Hex(28C) added 29 Red
+2011-09-07 18:25 Test Hex(15N) added Black Den
+2011-09-07 18:25 Test Hex(14N) added Fertile 0
+2011-09-07 18:25 Test Hex(14M) added Fertile 0
+2011-09-07 18:25 Test Hex(15N) added 29 Black
+2011-09-07 18:25 Test Hex(16S) added Black Den
+2011-09-07 18:25 Test Hex(17S) added Fertile 0
+2011-09-07 18:25 Test Hex(16S) added 14 Black
+2011-09-07 18:25 Test Hex(25J) added Black Den
+2011-09-07 18:25 Test Hex(25K) added Fertile 0
+2011-09-07 18:25 Test Hex(25I) added Fertile 0
+2011-09-07 18:25 Test Hex(25J) added 29 Black
+2011-09-07 18:25 Test Hex(17Y) added Red Den
+2011-09-07 18:25 Test Hex(18Y) added Fertile 0
+2011-09-07 18:25 Test Hex(17Y) added 14 Red
+2011-09-07 18:25 Test Hex(21C) added Grey Den
+2011-09-07 18:25 Test Hex(22D) added Fertile 0
+2011-09-07 18:25 Test Hex(22C) added Fertile 0
+2011-09-07 18:25 Test Hex(21B) added Fertile 0
+2011-09-07 18:25 Test Hex(21C) added 44 Grey
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(26C) added Grey Den
+2011-09-07 18:25 Test Hex(27D) added Fertile 0
+2011-09-07 18:25 Test Hex(27B) added Fertile 0
+2011-09-07 18:25 Test Hex(26C) added 29 Grey
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(9I) found Fertile 0
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(12P) added Black Den
+2011-09-07 18:25 Test Hex(11O) added Fertile 0
+2011-09-07 18:25 Test Hex(12P) added 14 Black
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(21C) found Grey Den
+2011-09-07 18:25 Test Hex(14AE) added Black Den
+2011-09-07 18:25 Test Hex(13AE) added Fertile 0
+2011-09-07 18:25 Test Hex(15AD) added Fertile 0
+2011-09-07 18:25 Test Hex(14AD) added Fertile 0
+2011-09-07 18:25 Test Hex(14AE) added 44 Black
+2011-09-07 18:25 Test Hex(13B) added Black Den
+2011-09-07 18:25 Test Hex(13C) added Fertile 0
+2011-09-07 18:25 Test Hex(13A) added Fertile 0
+2011-09-07 18:25 Test Hex(13B) added 29 Black
+2011-09-07 18:25 Test Hex(13S) added Grey Den
+2011-09-07 18:25 Test Hex(14T) added Fertile 0
+2011-09-07 18:25 Test Hex(14S) added Fertile 0
+2011-09-07 18:25 Test Hex(13S) added 29 Grey
+2011-09-07 18:25 Test Hex(16Q) added Black Den
+2011-09-07 18:25 Test Hex(17R) added Fertile 0
+2011-09-07 18:25 Test Hex(17Q) added Fertile 0
+2011-09-07 18:25 Test Hex(16P) added Fertile 0
+2011-09-07 18:25 Test Hex(16Q) added 44 Black
+2011-09-07 18:25 Test Hex(12E) added Green Den
+2011-09-07 18:25 Test Hex(13F) added Fertile 0
+2011-09-07 18:25 Test Hex(13D) added Fertile 0
+2011-09-07 18:25 Test Hex(12E) added 29 Green
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(10T) added Yellow Den
+2011-09-07 18:25 Test Hex(10U) added Fertile 0
+2011-09-07 18:25 Test Hex(10S) added Fertile 0
+2011-09-07 18:25 Test Hex(10T) added 29 Yellow
+2011-09-07 18:25 Test Hex(23R) added Grey Den
+2011-09-07 18:25 Test Hex(22R) added Fertile 0
+2011-09-07 18:25 Test Hex(22S) added Fertile 0
+2011-09-07 18:25 Test Hex(22Q) added Fertile 0
+2011-09-07 18:25 Test Hex(23R) added 44 Grey
+2011-09-07 18:25 Test Hex(10Z) found Fertile 0
+2011-09-07 18:25 Test Hex(27B) found Fertile 0
+2011-09-07 18:25 Test Hex(23V) added Yellow Den
+2011-09-07 18:25 Test Hex(22W) added Fertile 0
+2011-09-07 18:25 Test Hex(23V) added 14 Yellow
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(22R) found Fertile 0
+2011-09-07 18:25 Test Hex(4N) added Black Den
+2011-09-07 18:25 Test Hex(5N) added Fertile 0
+2011-09-07 18:25 Test Hex(4N) added 14 Black
+2011-09-07 18:25 Test Hex(26C) found Grey Den
+2011-09-07 18:25 Test Hex(29G) found Fertile 0
+2011-09-07 18:25 Test Hex(1X) added Grey Den
+2011-09-07 18:25 Test Hex(1Y) added Fertile 0
+2011-09-07 18:25 Test Hex(1X) added 14 Grey
+2011-09-07 18:25 Test Hex(22D) found Fertile 0
+2011-09-07 18:25 Test Hex(13D) found Fertile 0
+2011-09-07 18:25 Test Hex(13C) found Fertile 0
+2011-09-07 18:25 Test Hex(7O) added Green Den
+2011-09-07 18:25 Test Hex(6O) added Fertile 0
+2011-09-07 18:25 Test Hex(7N) added Fertile 0
+2011-09-07 18:25 Test Hex(7O) added 29 Green
+2011-09-07 18:25 Test Hex(3AD) added Green Den
+2011-09-07 18:25 Test Hex(2AD) added Fertile 0
+2011-09-07 18:25 Test Hex(2AE) added Fertile 0
+2011-09-07 18:25 Test Hex(2AC) added Fertile 0
+2011-09-07 18:25 Test Hex(3AD) added 44 Green
+2011-09-07 18:25 Test Hex(18N) found Fertile 0
+2011-09-07 18:25 Test Hex(1X) found Grey Den
+2011-09-07 18:25 Test Hex(6F) added Black Den
+2011-09-07 18:25 Test Hex(5F) added Fertile 0
+2011-09-07 18:25 Test Hex(7F) added Fertile 0
+2011-09-07 18:25 Test Hex(5E) added Fertile 0
+2011-09-07 18:25 Test Hex(6F) added 44 Black
+2011-09-07 18:25 Test Hex(30V) added Grey Den
+2011-09-07 18:25 Test Hex(29W) added Fertile 0
+2011-09-07 18:25 Test Hex(30V) added 14 Grey
+2011-09-07 18:25 Test Hex(5E) found Fertile 0
+2011-09-07 18:25 Test Hex(7F) found Fertile 0
+2011-09-07 18:25 Test Hex(3Q) added Grey Den
+2011-09-07 18:25 Test Hex(2Q) added Fertile 0
+2011-09-07 18:25 Test Hex(3Q) added 14 Grey
+2011-09-07 18:25 Test Hex(29B) found Fertile 0
+2011-09-07 18:25 Test Hex(29C) found Fertile 0
+2011-09-07 18:25 Test Hex(5Q) added Red Den
+2011-09-07 18:25 Test Hex(5R) added Fertile 0
+2011-09-07 18:25 Test Hex(6Q) added Fertile 0
+2011-09-07 18:25 Test Hex(6P) added Fertile 0
+2011-09-07 18:25 Test Hex(5Q) added 44 Red
+2011-09-07 18:25 Test Hex(5W) added Yellow Den
+2011-09-07 18:25 Test Hex(6W) added Fertile 0
+2011-09-07 18:25 Test Hex(5W) added 14 Yellow
+2011-09-07 18:25 Test Hex(19E) added Black Den
+2011-09-07 18:25 Test Hex(19F) added Fertile 0
+2011-09-07 18:25 Test Hex(20F) added Fertile 0
+2011-09-07 18:25 Test Hex(19E) added 29 Black
+2011-09-07 18:25 Test Hex(10K) added Black Den
+2011-09-07 18:25 Test Hex(9K) added Fertile 0
+2011-09-07 18:25 Test Hex(10J) added Fertile 0
+2011-09-07 18:25 Test Hex(10K) added 29 Black
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(11O) found Fertile 0
+2011-09-07 18:25 Test Hex(20K) added Red Den
+2011-09-07 18:25 Test Hex(21L) added Fertile 0
+2011-09-07 18:25 Test Hex(20K) added 14 Red
+2011-09-07 18:25 Test Hex(18N) found Fertile 0
+2011-09-07 18:25 Test Hex(10U) found Fertile 0
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(2AE) found Fertile 0
+2011-09-07 18:25 Test Hex(2AD) found Fertile 0
+2011-09-07 18:25 Test Hex(21B) found Fertile 0
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(16Q) found Black Den
+2011-09-07 18:25 Test Hex(7J) added Black Den
+2011-09-07 18:25 Test Hex(6K) added Fertile 0
+2011-09-07 18:25 Test Hex(6I) added Fertile 0
+2011-09-07 18:25 Test Hex(7J) added 29 Black
+2011-09-07 18:25 Test Hex(5Z) added Yellow Den
+2011-09-07 18:25 Test Hex(5AA) added Fertile 0
+2011-09-07 18:25 Test Hex(5Y) added Fertile 0
+2011-09-07 18:25 Test Hex(5Z) added 29 Yellow
+2011-09-07 18:25 Test Hex(27B) found Fertile 0
+2011-09-07 18:25 Test Hex(3T) added Black Den
+2011-09-07 18:25 Test Hex(4T) added Fertile 0
+2011-09-07 18:25 Test Hex(2S) added Fertile 0
+2011-09-07 18:25 Test Hex(3T) added 29 Black
+2011-09-07 18:25 Test Hex(1J) added Green Den
+2011-09-07 18:25 Test Hex(1I) added Fertile 0
+2011-09-07 18:25 Test Hex(32I) added Fertile 0
+2011-09-07 18:25 Test Hex(1J) added 29 Green
+2011-09-07 18:25 Test Hex(22AC) added Red Den
+2011-09-07 18:25 Test Hex(21AC) added Fertile 0
+2011-09-07 18:25 Test Hex(22AD) added Fertile 0
+2011-09-07 18:25 Test Hex(22AC) added 29 Red
+2011-09-07 18:25 Test Hex(21B) found Fertile 0
+2011-09-07 18:25 Test Hex(25T) added Red Den
+2011-09-07 18:25 Test Hex(26T) added Fertile 0
+2011-09-07 18:25 Test Hex(25T) added 14 Red
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(30AC) found Fertile 0
+2011-09-07 18:25 Test Hex(31O) added Green Den
+2011-09-07 18:25 Test Hex(30O) added Fertile 0
+2011-09-07 18:25 Test Hex(31O) added 14 Green
+2011-09-07 18:25 Test Hex(31O) found Green Den
+2011-09-07 18:25 Test Hex(1A) added Grey Den
+2011-09-07 18:25 Test Hex(2B) added Fertile 0
+2011-09-07 18:25 Test Hex(1A) added 14 Grey
+2011-09-07 18:25 Test Hex(21C) found Grey Den
+2011-09-07 18:25 Test Hex(22W) found Fertile 0
+2011-09-07 18:25 Test Hex(21B) found Fertile 0
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(31Q) added Red Den
+2011-09-07 18:25 Test Hex(31R) added Fertile 0
+2011-09-07 18:25 Test Hex(31Q) added 14 Red
+2011-09-07 18:25 Test Hex(14T) found Fertile 0
+2011-09-07 18:25 Test Hex(21O) added Red Den
+2011-09-07 18:25 Test Hex(21N) added Fertile 0
+2011-09-07 18:25 Test Hex(21O) added 14 Red
+2011-09-07 18:25 Test Hex(14Q) added Red Den
+2011-09-07 18:25 Test Hex(13Q) added Fertile 0
+2011-09-07 18:25 Test Hex(15R) added Fertile 0
+2011-09-07 18:25 Test Hex(14Q) added 29 Red
+2011-09-07 18:25 Test Hex(21U) added Green Den
+2011-09-07 18:25 Test Hex(21V) added Fertile 0
+2011-09-07 18:25 Test Hex(22U) added Fertile 0
+2011-09-07 18:25 Test Hex(21U) added 29 Green
+2011-09-07 18:25 Test Hex(25G) added Red Den
+2011-09-07 18:25 Test Hex(26G) added Fertile 0
+2011-09-07 18:25 Test Hex(26F) added Fertile 0
+2011-09-07 18:25 Test Hex(25G) added 29 Red
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(31R) found Fertile 0
+2011-09-07 18:25 Test Hex(27V) found Black Den
+2011-09-07 18:25 Test Hex(22M) added Black Den
+2011-09-07 18:25 Test Hex(23N) added Fertile 0
+2011-09-07 18:25 Test Hex(22M) added 14 Black
+2011-09-07 18:25 Test Hex(5J) found Black Den
+2011-09-07 18:25 Test Hex(17Y) found Red Den
+2011-09-07 18:25 Test Hex(2F) added Yellow Den
+2011-09-07 18:25 Test Hex(1F) added Fertile 0
+2011-09-07 18:25 Test Hex(1G) added Fertile 0
+2011-09-07 18:25 Test Hex(2G) added Fertile 0
+2011-09-07 18:25 Test Hex(2F) added 44 Yellow
+2011-09-07 18:25 Test Hex(13AA) found Fertile 0
+2011-09-07 18:25 Test Hex(14Z) found Fertile 0
+2011-09-07 18:25 Test Hex(2O) added Black Den
+2011-09-07 18:25 Test Hex(1O) added Fertile 0
+2011-09-07 18:25 Test Hex(3N) added Fertile 0
+2011-09-07 18:25 Test Hex(2N) added Fertile 0
+2011-09-07 18:25 Test Hex(2O) added 44 Black
+2011-09-07 18:25 Test Hex(12E) found Green Den
+2011-09-07 18:25 Test Hex(1J) found Green Den
+2011-09-07 18:25 Test Hex(3X) found Red Den
+2011-09-07 18:25 Test Hex(22Z) found Fertile 0
+2011-09-07 18:25 Test Hex(23V) found Yellow Den
+2011-09-07 18:25 Test Hex(23V) found Yellow Den
+2011-09-07 18:25 Test Hex(2N) found Fertile 0
+2011-09-07 18:25 Test Hex(14T) found Fertile 0
+2011-09-07 18:25 Test Hex(13F) found Fertile 0
+2011-09-07 18:25 Test Hex(25J) found Black Den
+2011-09-07 18:25 Test Hex(22C) found Fertile 0
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(22AD) found Fertile 0
+2011-09-07 18:25 Test Hex(25B) added Yellow Den
+2011-09-07 18:25 Test Hex(25C) added Fertile 0
+2011-09-07 18:25 Test Hex(25B) added 14 Yellow
+2011-09-07 18:25 Test Hex(9N) added Yellow Den
+2011-09-07 18:25 Test Hex(9O) added Fertile 0
+2011-09-07 18:25 Test Hex(9N) added 14 Yellow
+2011-09-07 18:25 Test Hex(7J) found Black Den
+2011-09-07 18:25 Test Hex(17AD) added Grey Den
+2011-09-07 18:25 Test Hex(17AE) added Fertile 0
+2011-09-07 18:25 Test Hex(18AD) added Fertile 0
+2011-09-07 18:25 Test Hex(17AC) added Fertile 0
+2011-09-07 18:25 Test Hex(17AD) added 44 Grey
+2011-09-07 18:25 Test Hex(10Z) found Fertile 0
+2011-09-07 18:25 Test Hex(11F) added Grey Den
+2011-09-07 18:25 Test Hex(12F) added Fertile 0
+2011-09-07 18:25 Test Hex(11F) added 14 Grey
+2011-09-07 18:25 Test Hex(7O) found Green Den
+2011-09-07 18:25 Test Hex(5Z) found Yellow Den
+2011-09-07 18:25 Test Hex(23N) found Fertile 0
+2011-09-07 18:25 Test Hex(22R) found Fertile 0
+2011-09-07 18:25 Test Hex(17C) added Yellow Den
+2011-09-07 18:25 Test Hex(18D) added Fertile 0
+2011-09-07 18:25 Test Hex(18C) added Fertile 0
+2011-09-07 18:25 Test Hex(18B) added Fertile 0
+2011-09-07 18:25 Test Hex(17B) added Fertile 0
+2011-09-07 18:25 Test Hex(17C) added 59 Yellow
+2011-09-07 18:25 Test Hex(29AA) found Grey Den
+2011-09-07 18:25 Test Hex(29C) found Fertile 0
+2011-09-07 18:25 Test Hex(16Q) found Black Den
+2011-09-07 18:25 Test Hex(21U) found Green Den
+2011-09-07 18:25 Test Hex(30AA) found Fertile 0
+2011-09-07 18:25 Test Hex(9Z) found Fertile 0
+2011-09-07 18:25 Test Hex(6AC) added Yellow Den
+2011-09-07 18:25 Test Hex(5AC) added Fertile 0
+2011-09-07 18:25 Test Hex(7AD) added Fertile 0
+2011-09-07 18:25 Test Hex(6AC) added 29 Yellow
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(12E) found Green Den
+2011-09-07 18:25 Test Hex(30M) added Red Den
+2011-09-07 18:25 Test Hex(29M) added Fertile 0
+2011-09-07 18:25 Test Hex(30N) added Fertile 0
+2011-09-07 18:25 Test Hex(31N) added Fertile 0
+2011-09-07 18:25 Test Hex(30M) added 44 Red
+2011-09-07 18:25 Test Hex(19F) found Fertile 0
+2011-09-07 18:25 Test Hex(18D) found Fertile 0
+2011-09-07 18:25 Test Hex(30AC) found Fertile 0
+2011-09-07 18:25 Test Hex(26AA) found Fertile 0
+2011-09-07 18:25 Test Hex(29G) found Fertile 0
+2011-09-07 18:25 Test Hex(6F) found Black Den
+2011-09-07 18:25 Test Hex(16Q) found Black Den
+2011-09-07 18:25 Test Hex(9AA) found Black Den
+2011-09-07 18:25 Test Hex(13Q) found Fertile 0
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(17C) found Yellow Den
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(8I) found Yellow Den
+2011-09-07 18:25 Test Hex(13F) found Fertile 0
+2011-09-07 18:25 Test Hex(12F) found Fertile 0
+2011-09-07 18:25 Test Hex(2AD) found Fertile 0
+2011-09-07 18:25 Test Hex(6P) found Fertile 0
+2011-09-07 18:25 Test Hex(6O) found Fertile 0
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(10U) found Fertile 0
+2011-09-07 18:25 Test Hex(26O) added Red Den
+2011-09-07 18:25 Test Hex(27N) added Fertile 0
+2011-09-07 18:25 Test Hex(26O) added 14 Red
+2011-09-07 18:25 Test Hex(25Q) found Fertile 0
+2011-09-07 18:25 Test Hex(29C) found Fertile 0
+2011-09-07 18:25 Test Hex(17R) found Fertile 0
+2011-09-07 18:25 Test Hex(13B) found Black Den
+2011-09-07 18:25 Test Hex(13W) added Red Den
+2011-09-07 18:25 Test Hex(13V) added Fertile 0
+2011-09-07 18:25 Test Hex(13W) added 14 Red
+2011-09-07 18:25 Test Hex(9AE) added Yellow Den
+2011-09-07 18:25 Test Hex(10AE) added Fertile 0
+2011-09-07 18:25 Test Hex(9AD) added Fertile 0
+2011-09-07 18:25 Test Hex(9AE) added 29 Yellow
+2011-09-07 18:25 Test Hex(5F) found Fertile 0
+2011-09-07 18:25 Test Hex(16Q) found Black Den
+2011-09-07 18:25 Test Hex(30Y) added Yellow Den
+2011-09-07 18:25 Test Hex(29Y) added Fertile 0
+2011-09-07 18:25 Test Hex(30Y) added 14 Yellow
+2011-09-07 18:25 Test Hex(2N) found Fertile 0
+2011-09-07 18:25 Test Hex(17Y) found Red Den
+2011-09-07 18:25 Test Hex(1X) found Grey Den
+2011-09-07 18:25 Test Hex(14AD) found Fertile 0
+2011-09-07 18:25 Test Hex(29AC) found Green Den
+2011-09-07 18:25 Test Hex(2W) found Fertile 0
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(1G) found Fertile 0
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(9Q) added Yellow Den
+2011-09-07 18:25 Test Hex(10R) added Fertile 0
+2011-09-07 18:25 Test Hex(10Q) added Fertile 0
+2011-09-07 18:25 Test Hex(9Q) added 29 Yellow
+2011-09-07 18:25 Test Hex(22S) found Fertile 0
+2011-09-07 18:25 Test Hex(22R) found Fertile 0
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(32I) found Fertile 0
+2011-09-07 18:25 Test Hex(25K) found Fertile 0
+2011-09-07 18:25 Test Hex(25I) found Fertile 0
+2011-09-07 18:25 Test Hex(10Z) found Fertile 0
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(6O) found Fertile 0
+2011-09-07 18:25 Test Hex(7N) found Fertile 0
+2011-09-07 18:25 Test Hex(17AA) added Green Den
+2011-09-07 18:25 Test Hex(18AA) added Fertile 0
+2011-09-07 18:25 Test Hex(17Z) added Fertile 0
+2011-09-07 18:25 Test Hex(17AA) added 29 Green
+2011-09-07 18:25 Test Hex(1G) found Fertile 0
+2011-09-07 18:25 Test Hex(27N) found Fertile 0
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(26U) found Fertile 0
+2011-09-07 18:25 Test Hex(26T) found Fertile 0
+2011-09-07 18:25 Test Hex(5R) found Fertile 0
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(14AD) found Fertile 0
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(5U) added Red Den
+2011-09-07 18:25 Test Hex(6U) added Fertile 0
+2011-09-07 18:25 Test Hex(5T) added Fertile 0
+2011-09-07 18:25 Test Hex(5U) added 29 Red
+2011-09-07 18:25 Test Hex(19F) found Fertile 0
+2011-09-07 18:25 Test Hex(9K) found Fertile 0
+2011-09-07 18:25 Test Hex(9I) found Fertile 0
+2011-09-07 18:25 Test Hex(2N) found Fertile 0
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(26AA) found Fertile 0
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(15V) added Grey Den
+2011-09-07 18:25 Test Hex(14U) added Fertile 0
+2011-09-07 18:25 Test Hex(15V) added 14 Grey
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(5A) found Fertile 0
+2011-09-07 18:25 Test Hex(12H) added Yellow Den
+2011-09-07 18:25 Test Hex(12G) added Fertile 0
+2011-09-07 18:25 Test Hex(12H) added 14 Yellow
+2011-09-07 18:25 Test Hex(3J) added Grey Den
+2011-09-07 18:25 Test Hex(2K) added Fertile 0
+2011-09-07 18:25 Test Hex(4J) added Fertile 0
+2011-09-07 18:25 Test Hex(2I) added Fertile 0
+2011-09-07 18:25 Test Hex(3J) added 44 Grey
+2011-09-07 18:25 Test Hex(9AE) found Yellow Den
+2011-09-07 18:25 Test Hex(9Z) found Fertile 0
+2011-09-07 18:25 Test Hex(10Z) found Fertile 0
+2011-09-07 18:25 Test Hex(17J) added Grey Den
+2011-09-07 18:25 Test Hex(17K) added Fertile 0
+2011-09-07 18:25 Test Hex(17J) added 14 Grey
+2011-09-07 18:25 Test Hex(17B) found Fertile 0
+2011-09-07 18:25 Test Hex(18C) found Fertile 0
+2011-09-07 18:25 Test Hex(20F) found Fertile 0
+2011-09-07 18:25 Test Hex(13D) found Fertile 0
+2011-09-07 18:25 Test Hex(13S) found Grey Den
+2011-09-07 18:25 Test Hex(27J) added Green Den
+2011-09-07 18:25 Test Hex(26J) added Fertile 0
+2011-09-07 18:25 Test Hex(26K) added Fertile 0
+2011-09-07 18:25 Test Hex(27J) added 29 Green
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(22C) found Fertile 0
+2011-09-07 18:25 Test Hex(26C) found Grey Den
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(29G) found Fertile 0
+2011-09-07 18:25 Test Hex(1D) added Green Den
+2011-09-07 18:25 Test Hex(1E) added Fertile 0
+2011-09-07 18:25 Test Hex(1D) added 14 Green
+2011-09-07 18:25 Test Hex(2F) found Yellow Den
+2011-09-07 18:25 Test Hex(2B) found Fertile 0
+2011-09-07 18:25 Test Hex(3J) found Grey Den
+2011-09-07 18:25 Test Hex(5J) found Black Den
+2011-09-07 18:25 Test Hex(5Y) found Fertile 0
+2011-09-07 18:25 Test Hex(6W) found Fertile 0
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(19J) added Green Den
+2011-09-07 18:25 Test Hex(18J) added Fertile 0
+2011-09-07 18:25 Test Hex(18K) added Fertile 0
+2011-09-07 18:25 Test Hex(19J) added 29 Green
+2011-09-07 18:25 Test Hex(26C) found Grey Den
+2011-09-07 18:25 Test Hex(26K) found Fertile 0
+2011-09-07 18:25 Test Hex(26J) found Fertile 0
+2011-09-07 18:25 Test Hex(3AD) found Green Den
+2011-09-07 18:25 Test Hex(13B) found Black Den
+2011-09-07 18:25 Test Hex(24O) added Green Den
+2011-09-07 18:25 Test Hex(25O) added Fertile 0
+2011-09-07 18:25 Test Hex(24O) added 14 Green
+2011-09-07 18:25 Test Hex(25I) found Fertile 0
+2011-09-07 18:25 Test Hex(26J) found Fertile 0
+2011-09-07 18:25 Test Hex(14T) found Fertile 0
+2011-09-07 18:25 Test Hex(15R) found Fertile 0
+2011-09-07 18:25 Test Hex(30AC) found Fertile 0
+2011-09-07 18:25 Test Hex(13AA) found Fertile 0
+2011-09-07 18:25 Test Hex(13Y) found Fertile 0
+2011-09-07 18:25 Test Hex(5F) found Fertile 0
+2011-09-07 18:25 Test Hex(10U) found Fertile 0
+2011-09-07 18:25 Test Hex(17K) found Fertile 0
+2011-09-07 18:25 Test Hex(18J) found Fertile 0
+2011-09-07 18:25 Test Hex(18B) found Fertile 0
+2011-09-07 18:25 Test Hex(18C) found Fertile 0
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(4N) found Black Den
+2011-09-07 18:25 Test Hex(21AC) found Fertile 0
+2011-09-07 18:25 Test Hex(3AD) found Green Den
+2011-09-07 18:25 Test Hex(29Q) added Yellow Den
+2011-09-07 18:25 Test Hex(29R) added Fertile 0
+2011-09-07 18:25 Test Hex(29Q) added 14 Yellow
+2011-09-07 18:25 Test Hex(22D) found Fertile 0
+2011-09-07 18:25 Test Hex(22R) found Fertile 0
+2011-09-07 18:25 Test Hex(17AD) found Grey Den
+2011-09-07 18:25 Test Hex(22M) found Black Den
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(30H) found Fertile 0
+2011-09-07 18:25 Test Hex(3J) found Grey Den
+2011-09-07 18:25 Test Hex(5Y) found Fertile 0
+2011-09-07 18:25 Test Hex(6W) found Fertile 0
+2011-09-07 18:25 Test Hex(5W) found Yellow Den
+2011-09-07 18:25 Test Hex(11B) added Yellow Den
+2011-09-07 18:25 Test Hex(10C) added Fertile 0
+2011-09-07 18:25 Test Hex(11B) added 14 Yellow
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(1D) found Green Den
+2011-09-07 18:25 Test Hex(10R) found Fertile 0
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(21L) found Fertile 0
+2011-09-07 18:25 Test Hex(5Y) found Fertile 0
+2011-09-07 18:25 Test Hex(14Z) found Fertile 0
+2011-09-07 18:25 Test Hex(1Y) found Fertile 0
+2011-09-07 18:25 Test Hex(12F) found Fertile 0
+2011-09-07 18:25 Test Hex(12G) found Fertile 0
+2011-09-07 18:25 Test Hex(20F) found Fertile 0
+2011-09-07 18:25 Test Hex(23V) found Yellow Den
+2011-09-07 18:25 Test Hex(5Z) found Yellow Den
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(5A) found Fertile 0
+2011-09-07 18:25 Test Hex(17F) added Yellow Den
+2011-09-07 18:25 Test Hex(17E) added Fertile 0
+2011-09-07 18:25 Test Hex(17F) added 14 Yellow
+2011-09-07 18:25 Test Hex(6AC) found Yellow Den
+2011-09-07 18:25 Test Hex(13D) found Fertile 0
+2011-09-07 18:25 Test Hex(22U) found Fertile 0
+2011-09-07 18:25 Test Hex(22S) found Fertile 0
+2011-09-07 18:25 Test Hex(14N) found Fertile 0
+2011-09-07 18:25 Test Hex(14M) found Fertile 0
+2011-09-07 18:25 Test Hex(15I) added Grey Den
+2011-09-07 18:25 Test Hex(15J) added Fertile 0
+2011-09-07 18:25 Test Hex(15I) added 14 Grey
+2011-09-07 18:25 Test Hex(22D) found Fertile 0
+2011-09-07 18:25 Test Hex(2B) found Fertile 0
+2011-09-07 18:25 Test Hex(10S) found Fertile 0
+2011-09-07 18:25 Test Hex(10Q) found Fertile 0
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(23R) found Grey Den
+2011-09-07 18:25 Test Hex(10U) found Fertile 0
+2011-09-07 18:25 Test Hex(1Y) found Fertile 0
+2011-09-07 18:25 Test Hex(5A) found Fertile 0
+2011-09-07 18:25 Test Hex(21U) found Green Den
+2011-09-07 18:25 Test Hex(30H) found Fertile 0
+2011-09-07 18:25 Test Hex(26G) found Fertile 0
+2011-09-07 18:25 Test Hex(32I) found Fertile 0
+2011-09-07 18:25 Test Hex(2I) found Fertile 0
+2011-09-07 18:25 Test Hex(22AD) found Fertile 0
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(2G) found Fertile 0
+2011-09-07 18:25 Test Hex(1F) found Fertile 0
+2011-09-07 18:25 Test Hex(5Y) found Fertile 0
+2011-09-07 18:25 Test Hex(6W) found Fertile 0
+2011-09-07 18:25 Test Hex(29AA) found Grey Den
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(31J) found Fertile 0
+2011-09-07 18:25 Test Hex(1Y) found Fertile 0
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(21Z) found Fertile 0
+2011-09-07 18:25 Test Hex(22Y) found Fertile 0
+2011-09-07 18:25 Test Hex(15J) found Fertile 0
+2011-09-07 18:25 Test Hex(9G) added Grey Den
+2011-09-07 18:25 Test Hex(10G) added Fertile 0
+2011-09-07 18:25 Test Hex(9F) added Fertile 0
+2011-09-07 18:25 Test Hex(9G) added 29 Grey
+2011-09-07 18:25 Test Hex(13AA) found Fertile 0
+2011-09-07 18:25 Test Hex(13Y) found Fertile 0
+2011-09-07 18:25 Test Hex(29Z) found Fertile 0
+2011-09-07 18:25 Test Hex(18W) found Fertile 0
+2011-09-07 18:25 Test Hex(11B) found Yellow Den
+2011-09-07 18:25 Test Hex(13F) found Fertile 0
+2011-09-07 18:25 Test Hex(12F) found Fertile 0
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(15I) found Grey Den
+2011-09-07 18:25 Test Hex(26K) found Fertile 0
+2011-09-07 18:25 Test Hex(26J) found Fertile 0
+2011-09-07 18:25 Test Hex(17S) found Fertile 0
+2011-09-07 18:25 Test Hex(17Q) found Fertile 0
+2011-09-07 18:25 Test Hex(14M) found Fertile 0
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(7N) found Fertile 0
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(22R) found Fertile 0
+2011-09-07 18:25 Test Hex(1I) found Fertile 0
+2011-09-07 18:25 Test Hex(2I) found Fertile 0
+2011-09-07 18:25 Test Hex(2G) found Fertile 0
+2011-09-07 18:25 Test Hex(1G) found Fertile 0
+2011-09-07 18:25 Test Hex(22Z) found Fertile 0
+2011-09-07 18:25 Test Hex(17E) found Fertile 0
+2011-09-07 18:25 Test Hex(18C) found Fertile 0
+2011-09-07 18:25 Test Hex(5U) found Red Den
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(7F) found Fertile 0
+2011-09-07 18:25 Test Hex(25I) found Fertile 0
+2011-09-07 18:25 Test Hex(26J) found Fertile 0
+2011-09-07 18:25 Test Hex(26G) found Fertile 0
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(14S) found Fertile 0
+2011-09-07 18:25 Test Hex(15R) found Fertile 0
+2011-09-07 18:25 Test Hex(18AD) found Fertile 0
+2011-09-07 18:25 Test Hex(18K) found Fertile 0
+2011-09-07 18:25 Test Hex(5Q) found Red Den
+2011-09-07 18:25 Test Hex(11B) found Yellow Den
+2011-09-07 18:25 Test Hex(20F) found Fertile 0
+2011-09-07 18:25 Test Hex(3Q) found Grey Den
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(2W) found Fertile 0
+2011-09-07 18:25 Test Hex(19E) found Black Den
+2011-09-07 18:25 Test Hex(22Z) found Fertile 0
+2011-09-07 18:25 Test Hex(25M) added Grey Den
+2011-09-07 18:25 Test Hex(26M) added Fertile 0
+2011-09-07 18:25 Test Hex(25M) added 14 Grey
+2011-09-07 18:25 Test Hex(2AE) found Fertile 0
+2011-09-07 18:25 Test Hex(2AC) found Fertile 0
+2011-09-07 18:25 Test Hex(18W) found Fertile 0
+2011-09-07 18:25 Test Hex(17V) found Fertile 0
+2011-09-07 18:25 Test Hex(10R) found Fertile 0
+2011-09-07 18:25 Test Hex(11B) found Yellow Den
+2011-09-07 18:25 Test Hex(12H) found Yellow Den
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(17R) found Fertile 0
+2011-09-07 18:25 Test Hex(17S) found Fertile 0
+2011-09-07 18:25 Test Hex(17Q) found Fertile 0
+2011-09-07 18:25 Test Hex(22G) added Grey Den
+2011-09-07 18:25 Test Hex(23F) added Fertile 0
+2011-09-07 18:25 Test Hex(22G) added 14 Grey
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(29A) added Temple
+2011-09-07 18:25 Test Hex(17F) found Yellow Den
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(21A) added Temple
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(29J) added Temple
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(9N) found Yellow Den
+2011-09-07 18:25 Test Hex(7Z) added Temple
+2011-09-07 18:25 Test Hex(25G) found Red Den
+2011-09-07 18:25 Test Hex(18G) added Temple
+2011-09-07 18:25 Test Hex(30I) added Temple
+2011-09-07 18:25 Test Hex(1D) found Green Den
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(5AE) added Temple
+2011-09-07 18:25 Test Hex(1A) found Grey Den
+2011-09-07 18:25 Test Hex(21R) added Temple
+2011-09-07 18:25 Test Hex(31AB) added Temple
+2011-09-07 18:25 Test Hex(27J) found Green Den
+2011-09-07 18:25 Test Hex(8A) added Temple
+2011-09-07 18:25 Test Hex(8A) found Temple
+2011-09-07 18:25 Test Hex(6M) added Ruin
+2011-09-07 18:25 Test Hex(9AC) added Ruin
+2011-09-07 18:25 Test Hex(15N) found Black Den
+2011-09-07 18:25 Test Hex(25T) found Red Den
+2011-09-07 18:25 Test Hex(10O) added Ruin
+2011-09-07 18:25 Test Hex(3AD) found Green Den
+2011-09-07 18:25 Test Hex(27AB) added Ruin
+2011-09-07 18:25 Test Hex(9C) added Ruin
+2011-09-07 18:25 Test Hex(24O) found Green Den
+2011-09-07 18:25 Test Hex(25M) found Grey Den
+2011-09-07 18:25 Test Hex(18R) added Ruin
+2011-09-07 18:25 Test Hex(1A) found Grey Den
+2011-09-07 18:25 Test Hex(14J) added Ruin
+2011-09-07 18:25 Test Hex(2H) added Ruin
+2011-09-07 18:25 Test Hex(22M) found Black Den
+2011-09-07 18:25 Test Hex(13AC) added Ruin
+2011-09-07 18:25 Test Hex(27R) added Ruin
+2011-09-07 18:25 Test Hex(2R) added Swamp
+2011-09-07 18:25 Test Hex(5C) added Swamp
+2011-09-07 18:25 Test Hex(3R) added Swamp
+2011-09-07 18:25 Test Hex(17G) added Swamp
+2011-09-07 18:25 Test Hex(25N) added Swamp
+2011-09-07 18:25 Test Hex(15S) added Swamp
+2011-09-07 18:25 Test Hex(25V) added Swamp
+2011-09-07 18:25 Test Hex(26E) added Swamp
+2011-09-07 18:25 Test Hex(23Z) added Swamp
+2011-09-07 18:25 Test Hex(22N) added Swamp
+2011-09-07 18:25 Test Hex(29AE) added Swamp
+2011-09-07 18:25 Test Hex(25U) added Swamp
+2011-09-07 18:25 Test Hex(8Z) added Swamp
+2011-09-07 18:25 Test Hex(1Z) added Swamp
+2011-09-07 18:25 Test Hex(13O) added Swamp
+2011-09-07 18:25 Test Hex(12C) added Swamp
+2011-09-07 18:25 Test Hex(3AF) added Swamp
+2011-09-07 18:25 Test Hex(7R) added Swamp
+2011-09-07 18:25 Test Hex(21AD) added Swamp
+2011-09-07 18:25 Test Hex(23J) added Swamp
+2011-09-07 18:25 Test Hex(10A) added Swamp
+2011-09-07 18:25 Test Hex(5M) added Swamp
+2011-09-07 18:25 Test Hex(6Y) added Swamp
+2011-09-07 18:25 Test Hex(22V) added Swamp
+2011-09-07 18:25 Test Hex(20AF) added Swamp
+2011-09-07 18:25 Test Hex(30B) added Swamp
+2011-09-07 18:25 Test Hex(30R) added Swamp
+2011-09-07 18:25 Test Hex(21F) added Swamp
+2011-09-07 18:25 Test Hex(29U) added Swamp
+2011-09-07 18:25 Test Hex(31V) added Swamp
+2011-09-07 18:25 Test Hex(18A) added Swamp
+2011-09-07 18:25 Test Hex(21AA) added Swamp
+2011-09-07 18:25 Test Hex(12AF) added Swamp
+2011-09-07 18:25 Test Hex(18AC) added Swamp
+2011-09-07 18:25 Test Hex(21Q) added Swamp
+2011-09-07 18:25 Test Hex(11N) added Swamp
+2011-09-07 18:25 Test Hex(14O) added Swamp
+2011-09-07 18:25 Test Hex(29F) added Swamp
+2011-09-07 18:25 Test Hex(15AC) added Swamp
+2011-09-07 18:25 Test Hex(6D) added Swamp
+2011-09-07 18:25 Test Hex(10N) added Swamp
+2011-09-07 18:25 Test Hex(14I) added Swamp
+2011-09-07 18:25 Test Hex(9M) added Swamp
+2011-09-07 18:25 Test Hex(6S) added Swamp
+2011-09-07 18:25 Test Hex(26D) added Swamp
+2011-09-07 18:25 Test Hex(10W) added Swamp
+2011-09-07 18:25 Test Hex(3B) added Swamp
+2011-09-07 18:25 Test Hex(1B) added Swamp
+2011-09-07 18:25 Test Hex(6C) added Swamp
+2011-09-07 18:25 Test Hex(13M) added Swamp
+2011-09-07 18:25 Test Hex(9B) added Swamp
+2011-09-07 18:25 Test Hex(5V) added Swamp
+2011-09-07 18:25 Test Hex(27A) added Swamp
+2011-09-07 18:25 Test Hex(2U) added Swamp
+2011-09-07 18:25 Test Hex(30F) added Swamp
+2011-09-07 18:25 Test Hex(2L) added Swamp
+2011-09-07 18:25 Test Hex(13K) added Swamp
+2011-09-07 18:25 Test Hex(31B) added Swamp
+2011-09-07 18:25 Test Hex(19B) added Swamp
+2011-09-07 18:25 Test Hex(11Z) added Swamp
+2011-09-07 18:25 Test Hex(9R) added Swamp
+2011-09-07 18:25 Test Hex(26I) added Swamp
+2011-09-07 18:25 Test Hex(22A) added Swamp
+2011-09-07 18:25 Test Hex(18Q) added Swamp
+2011-09-07 18:25 Test Hex(17I) added Swamp
+2011-09-07 18:25 Test Hex(1U) added Swamp
+2011-09-07 18:25 Test Hex(22I) added Swamp
+2011-09-07 18:25 Test Hex(21S) added Swamp
+2011-09-07 18:25 Test Hex(11J) added Swamp
+2011-09-07 18:25 Test Hex(11R) added Swamp
+2011-09-07 18:25 Test Hex(9Y) added Swamp
+2011-09-07 18:25 Test Hex(18AE) added Swamp
+2011-09-07 18:25 Test Hex(18E) added Swamp
+2011-09-07 18:25 Test Hex(25W) added Swamp
+2011-09-07 18:25 Test Hex(6E) added Swamp
+2011-09-07 18:25 Test Hex(29O) added Swamp
+2011-09-07 18:25 Test Hex(2M) added Swamp
+2011-09-07 18:25 Test Hex(2A) added Swamp
+2011-09-07 18:25 Test Hex(29V) added Swamp
+2011-09-07 18:25 Test Hex(21E) added Swamp
+2011-09-07 18:25 Test Hex(13E) added Swamp
+2011-09-07 18:25 Test Hex(14E) added Swamp
+2011-09-07 18:25 Test Hex(1C) added Swamp
+2011-09-07 18:25 Test Hex(4A) added Swamp
+2011-09-07 18:25 Test Hex(1AD) added Swamp
+2011-09-07 18:25 Test Hex(27S) added Swamp
+2011-09-07 18:25 Test Hex(15M) added Swamp
+2011-09-07 18:25 Test Hex(21I) added Swamp
+2011-09-07 18:25 Test Hex(32M) added Swamp
+2011-09-07 18:25 Test Hex(19K) added Swamp
+2011-09-07 18:25 Test Hex(16D) added Fertile 0
+2011-09-07 18:25 Test Hex(1R) added Fertile 0
+2011-09-07 18:25 Test Hex(14AC) added Fertile 0
+2011-09-07 18:25 Test Hex(21AE) added Fertile 0
+2011-09-07 18:25 Test Hex(9V) added Fertile 0
+2011-09-07 18:25 Test Hex(26A) added Fertile 0
+2011-09-07 18:25 Test Hex(8AB) added Fertile 0
+2011-09-07 18:25 Test Hex(6AE) added Fertile 0
+2011-09-07 18:25 Test Hex(25T) found Red Den
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(14C) added Fertile 0
+2011-09-07 18:25 Test Hex(6F) found Black Den
+2011-09-07 18:25 Test Hex(14AA) added Fertile 0
+2011-09-07 18:25 Test Hex(3Q) found Grey Den
+2011-09-07 18:25 Test Hex(6F) found Black Den
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(5B) added Fertile 0
+2011-09-07 18:25 Test Hex(28G) added Fertile 0
+2011-09-07 18:25 Test Hex(26S) added Fertile 0
+2011-09-07 18:25 Test Hex(19R) added Fertile 0
+2011-09-07 18:25 Test Hex(17A) added Fertile 0
+2011-09-07 18:25 Test Hex(30D) added Fertile 0
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(1X) found Grey Den
+2011-09-07 18:25 Test Hex(13S) found Grey Den
+2011-09-07 18:25 Test Hex(14Q) found Red Den
+2011-09-07 18:25 Test Hex(17M) added Fertile 0
+2011-09-07 18:25 Test Hex(22G) found Grey Den
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(1M) added Fertile 0
+2011-09-07 18:25 Test Hex(30C) added Fertile 0
+2011-09-07 18:25 Test Hex(31AD) added Fertile 0
+2011-09-07 18:25 Test Hex(4AD) added Peak
+2011-09-07 18:25 Test Hex(25E) added Peak
+2011-09-07 18:25 Test Hex(20X) added Peak
+2011-09-07 18:25 Test Hex(5G) added Peak
+2011-09-07 18:25 Test Hex(28F) added Peak
+2011-09-07 18:25 Test Hex(29I) added Peak
+2011-09-07 18:25 Test Hex(25F) added Peak
+2011-09-07 18:25 Test Hex(26G) found Fertile 0
+2011-09-07 18:25 Test Hex(2AE) found Fertile 0
+2011-09-07 18:25 Test Hex(2AD) found Fertile 0
+2011-09-07 18:25 Test Hex(5AE) found Temple
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(1O) found Fertile 0
+2011-09-07 18:25 Test Hex(2N) found Fertile 0
+2011-09-07 18:25 Test Hex(1M) found Fertile 0
+2011-09-07 18:25 Test Hex(10M) added (null)
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(17O) found Fertile 0
+2011-09-07 18:25 Test Hex(18N) found Fertile 0
+2011-09-07 18:25 Test Hex(17M) found Fertile 0
+2011-09-07 18:25 Test Hex(23F) found Fertile 0
+2011-09-07 18:25 Test Hex(22D) found Fertile 0
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(5W) found Yellow Den
+2011-09-07 18:25 Test Hex(5U) found Red Den
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(5T) found Fertile 0
+2011-09-07 18:25 Test Hex(5R) found Fertile 0
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(6A) found Green Den
+2011-09-07 18:25 Test Hex(21AE) found Fertile 0
+2011-09-07 18:25 Test Hex(22AD) found Fertile 0
+2011-09-07 18:25 Test Hex(8I) found Yellow Den
+2011-09-07 18:25 Test Hex(1Y) found Fertile 0
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(5T) found Fertile 0
+2011-09-07 18:25 Test Hex(5R) found Fertile 0
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(26G) found Fertile 0
+2011-09-07 18:25 Test Hex(25AA) found Green Den
+2011-09-07 18:25 Test Hex(5Q) found Red Den
+2011-09-07 18:25 Test Hex(19E) found Black Den
+2011-09-07 18:25 Test Hex(5Q) found Red Den
+2011-09-07 18:25 Test Hex(22U) found Fertile 0
+2011-09-07 18:25 Test Hex(22S) found Fertile 0
+2011-09-07 18:25 Test Hex(19E) found Black Den
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(26G) found Fertile 0
+2011-09-07 18:25 Test Hex(30V) found Grey Den
+2011-09-07 18:25 Test Hex(19J) found Green Den
+2011-09-07 18:25 Test Hex(25AA) found Green Den
+2011-09-07 18:25 Test Hex(22Z) found Fertile 0
+2011-09-07 18:25 Test Hex(8I) found Yellow Den
+2011-09-07 18:25 Test Hex(5Q) found Red Den
+2011-09-07 18:25 Test Hex(13AE) found Fertile 0
+2011-09-07 18:25 Test Hex(14AD) found Fertile 0
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(6P) found Fertile 0
+2011-09-07 18:25 Test Hex(6O) found Fertile 0
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(29A) found Temple
+2011-09-07 18:25 Test Hex(32L) added (null)
+2011-09-07 18:25 Test Hex(26Z) found Fertile 0
+2011-09-07 18:25 Test Hex(26AA) found Fertile 0
+2011-09-07 18:25 Test Hex(31E) added (null)
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(10AE) found Fertile 0
+2011-09-07 18:25 Test Hex(5W) found Yellow Den
+2011-09-07 18:25 Test Hex(5U) found Red Den
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(5AE) found Temple
+2011-09-07 18:25 Test Hex(18AD) found Fertile 0
+2011-09-07 18:25 Test Hex(10AE) found Fertile 0
+2011-09-07 18:25 Test Hex(3AA) added (null)
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(21C) found Grey Den
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(25T) found Red Den
+2011-09-07 18:25 Test Hex(25T) found Red Den
+2011-09-07 18:25 Test Hex(6W) found Fertile 0
+2011-09-07 18:25 Test Hex(6U) found Fertile 0
+2011-09-07 18:25 Test Hex(22Z) found Fertile 0
+2011-09-07 18:25 Test Hex(22U) found Fertile 0
+2011-09-07 18:25 Test Hex(22S) found Fertile 0
+2011-09-07 18:25 Test Hex(21O) found Red Den
+2011-09-07 18:25 Test Hex(5AE) found Temple
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(13J) added (null)
+2011-09-07 18:25 Test Hex(19E) found Black Den
+2011-09-07 18:25 Test Hex(1X) found Grey Den
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(9K) found Fertile 0
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(2S) found Fertile 0
+2011-09-07 18:25 Test Hex(1R) found Fertile 0
+2011-09-07 18:25 Test Hex(22Y) found Fertile 0
+2011-09-07 18:25 Test Hex(2W) found Fertile 0
+2011-09-07 18:25 Test Hex(30Y) found Yellow Den
+2011-09-07 18:25 Test Hex(26O) found Red Den
+2011-09-07 18:25 Test Hex(25M) found Grey Den
+2011-09-07 18:25 Test Hex(17S) found Fertile 0
+2011-09-07 18:25 Test Hex(19R) found Fertile 0
+2011-09-07 18:25 Test Hex(13S) found Grey Den
+2011-09-07 18:25 Test Hex(14Q) found Red Den
+2011-09-07 18:25 Test Hex(21Z) found Fertile 0
+2011-09-07 18:25 Test Hex(1O) found Fertile 0
+2011-09-07 18:25 Test Hex(2N) found Fertile 0
+2011-09-07 18:25 Test Hex(1M) found Fertile 0
+2011-09-07 18:25 Test Hex(22Y) found Fertile 0
+2011-09-07 18:25 Test Hex(10AC) added (null)
+2011-09-07 18:25 Test Hex(17AA) found Green Den
+2011-09-07 18:25 Test Hex(17Y) found Red Den
+2011-09-07 18:25 Test Hex(1A) found Grey Den
+2011-09-07 18:25 Test Hex(14N) found Fertile 0
+2011-09-07 18:25 Test Hex(5AE) found Temple
+2011-09-07 18:25 Test Hex(2F) found Yellow Den
+2011-09-07 18:25 Test Hex(8A) found Temple
+2011-09-07 18:25 Test Hex(31AD) found Fertile 0
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(3T) found Black Den
+2011-09-07 18:25 Test Hex(21Z) found Fertile 0
+2011-09-07 18:25 Test Hex(23F) found Fertile 0
+2011-09-07 18:25 Test Hex(22D) found Fertile 0
+2011-09-07 18:25 Test Hex(31AD) found Fertile 0
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(27V) found Black Den
+2011-09-07 18:25 Test Hex(21O) found Red Den
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(6O) found Fertile 0
+2011-09-07 18:25 Test Hex(7N) found Fertile 0
+2011-09-07 18:25 Test Hex(28AE) added (null)
+2011-09-07 18:25 Test Hex(11E) added Whirlpool
+2011-09-07 18:25 Test Hex(12N) added Whirlpool
+2011-09-07 18:25 Test Hex(31F) added Whirlpool
+2011-09-07 18:25 Test Hex(6H) added Whirlpool
+2011-09-07 18:25 Test Hex(11AA) added Whirlpool
+2011-09-07 18:25 Test Hex(18I) added feature 3
+2011-09-07 18:25 Test Hex(15Z) added feature 3
+2011-09-07 18:25 Test Hex(30W) added feature 3
+2011-09-07 18:25 Test Hex(5AF) added feature 3
+2011-09-07 18:25 Test Hex(27H) added feature 3
+2011-09-07 18:25 Test Hex(3V) added feature 3
+2011-09-07 18:25 Test Hex(20C) added feature 3
+2011-09-07 18:25 Test Hex(1W) added feature 3
+2011-09-07 18:25 Test Hex(1V) added feature 3
+2011-09-07 18:25 Test Hex(17N) added feature 3
+2011-09-07 18:25 Test Hex(29N) added feature 3
+2011-09-07 18:25 Test Hex(1Q) added feature 3
+2011-09-07 18:25 Test Hex(30A) added feature 3
+2011-09-07 18:25 Test Hex(26Q) added feature 3
+2011-09-07 18:25 Test Hex(5O) added feature 3
+2011-09-07 18:25 Test Hex(20AA) added feature 3
+2011-09-07 18:25 Test Hex(1K) added feature 3
+2011-09-07 18:25 Test Hex(26R) added feature 3
+2011-09-07 18:25 Test Hex(1AF) added feature 3
+2011-09-07 18:25 Test Hex(13I) added feature 3
+2011-09-07 18:25 Test Hex(22AE) added feature 3
+2011-09-07 18:25 Test Hex(5AD) added feature 3
+2011-09-07 18:25 Test Hex(25S) added feature 3
+2011-09-07 18:25 Test Hex(9A) added feature 3
+2011-09-07 18:25 Test Hex(4B) added feature 3
+2011-09-07 18:25 Test Hex(21J) added feature 3
+2011-09-07 18:25 Test Hex(22O) added feature 3
+2011-09-07 18:25 Test Hex(9S) added feature 3
+2011-09-07 18:25 Test Hex(18M) added feature 3
+2011-09-07 18:25 Test Hex(13U) added feature 3
+2011-09-07 18:25 Test Hex(18S) added feature 3
+2011-09-07 18:25 Test Hex(21K) added feature 3
+2011-09-07 18:25 Test Hex(2AA) added feature 3
+2011-09-07 18:25 Test Hex(2Z) added feature 3
+2011-09-07 18:25 Test Hex(9J) added feature 3
+2011-09-07 18:25 Test Hex(4P) added feature 3
+2011-09-07 18:25 Test Hex(5S) added feature 3
+2011-09-07 18:25 Test Hex(22P) added feature 3
+2011-09-07 18:25 Test Hex(6X) added feature 3
+2011-09-07 18:25 Test Hex(29K) added feature 3
+2011-09-07 18:25 Test Hex(2C) added feature 3
+2011-09-07 18:25 Test Hex(26AC) added feature 3
+2011-09-07 18:25 Test Hex(31Z) added feature 3
+2011-09-07 18:25 Test Hex(7B) added feature 3
+2011-09-07 18:25 Test Hex(30J) added feature 3
+2011-09-07 18:25 Test Hex(22K) added feature 3
+2011-09-07 18:25 Test Hex(7V) added feature 3
+2011-09-07 18:25 Test Hex(25Z) added feature 3
+2011-09-07 18:25 Test Hex(14B) added feature 3
+2011-09-07 18:25 Test Hex(21G) added feature 3
+2011-09-07 18:25 Test Hex(4AE) added feature 3
+2011-09-07 18:25 Test Hex(25A) added feature 3
+2011-09-07 18:25 Test Hex(1AE) added feature 3
+2011-09-07 18:25 Test Hex(1AA) added feature 3
+2011-09-07 18:25 Test Hex(19V) added feature 3
+2011-09-07 18:25 Test Hex(10AA) added feature 3
+2011-09-07 18:25 Test Hex(31I) added feature 3
+2011-09-07 18:25 Test Hex(27F) added feature 3
+2011-09-07 18:25 Test Hex(26AE) added feature 3
+2011-09-07 18:25 Test Hex(13G) added feature 3
+2011-09-07 18:25 Test Hex(1S) added feature 3
+2011-09-07 18:25 Test Hex(18Z) added feature 3
+2011-09-07 18:25 Test Hex(5P) added feature 3
+2011-09-07 18:25 Test Hex(6AA) added feature 3
+2011-09-07 18:25 Test Hex(19Z) added feature 3
+2011-09-07 18:25 Test Hex(1AC) added feature 3
+2011-09-07 18:25 Test Hex(2E) added feature 3
+2011-09-07 18:25 Test Hex(9U) added feature 3
+2011-09-07 18:25 Test Hex(6V) added feature 3
+2011-09-07 18:25 Test Hex(11V) added feature 3
+2011-09-07 18:25 Test Hex(26W) added feature 3
+2011-09-07 18:25 Test Hex(9L) added feature 3
+2011-09-07 18:25 Test Hex(22E) added feature 3
+2011-09-07 18:25 Test Hex(14R) added feature 3
+2011-09-07 18:25 Test Hex(18U) added feature 3
+2011-09-07 18:25 Test Got player startup STARTUP 1.
+2011-09-07 18:25 Test Got template 2 for player 1
+2011-09-07 18:25 Test Hex((null)) added Ruin
+2011-09-07 18:25 Test Hex((null)) added 50 Grey
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Hex((null)) added 20 Green
+2011-09-07 18:25 Test Hex((null)) added Temple
+2011-09-07 18:25 Test Hex((null)) added 110 Black
+2011-09-07 18:25 Test Hex((null)) added Black Den
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Ruin
+2011-09-07 18:25 Test Hex((null)) added 50 Grey
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Finished reading in hexes.
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Counted 2 fertile hexes.
+2011-09-07 18:25 Test Hex((null)) found Black Den
+2011-09-07 18:25 Test calling lay_template()
+2011-09-07 18:25 Test Player 1 has grid location 2.
+2011-09-07 18:25 Test 25H cleared
+2011-09-07 18:25 Test Hex(25H) added 50 Grey
+2011-09-07 18:25 Test Hex(25H) added Ruin
+2011-09-07 18:25 Test Put hex 0 into 25H (owner 1).
+2011-09-07 18:25 Test 26H cleared
+2011-09-07 18:25 Test Hex(26H) added Fertile 0
+2011-09-07 18:25 Test Put hex 1 into 26H (owner 1).
+2011-09-07 18:25 Test 27H cleared
+2011-09-07 18:25 Test Feature(feature 3) destructed
+2011-09-07 18:25 Test Hex(27H) added feature 3
+2011-09-07 18:25 Test Put hex 2 into 27H (owner 1).
+2011-09-07 18:25 Test 24I cleared
+2011-09-07 18:25 Test Hex(24I) added 20 Green
+2011-09-07 18:25 Test Hex(24I) added Fertile 0
+2011-09-07 18:25 Test Put hex 3 into 24I (owner 1).
+2011-09-07 18:25 Test 25I cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(25I) added 110 Black
+2011-09-07 18:25 Test Hex(25I) added Temple
+2011-09-07 18:25 Test Put hex 4 into 25I (owner 1).
+2011-09-07 18:25 Test 26I cleared
+2011-09-07 18:25 Test Feature(Swamp) destructed
+2011-09-07 18:25 Test Hex(26I) added Black Home Den
+2011-09-07 18:25 Test Put hex 5 into 26I (owner 1).
+2011-09-07 18:25 Test 24J cleared
+2011-09-07 18:25 Test Hex(24J) added feature 3
+2011-09-07 18:25 Test Put hex 6 into 24J (owner 1).
+2011-09-07 18:25 Test 25J cleared
+2011-09-07 18:25 Test Feature(Black Den) destructed
+2011-09-07 18:25 Test Feature(29 Black) destructed
+2011-09-07 18:25 Test Hex(25J) added 50 Grey
+2011-09-07 18:25 Test Hex(25J) added Ruin
+2011-09-07 18:25 Test Put hex 7 into 25J (owner 1).
+2011-09-07 18:25 Test 26J cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(26J) added Fertile 0
+2011-09-07 18:25 Test Put hex 8 into 26J (owner 1).
+2011-09-07 18:25 Test lay_template player = 1 completed
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test Finished player 1
+2011-09-07 18:25 Test Got player startup STARTUP 2.
+2011-09-07 18:25 Test Got template 3 for player 2
+2011-09-07 18:25 Test Hex((null)) added Peak
+2011-09-07 18:25 Test Hex((null)) added 100 Red and 50 Grey
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Hex((null)) added 10 Green
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Hex((null)) added 100 Red and 10 Green
+2011-09-07 18:25 Test Hex((null)) added Red Den
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Hex((null)) added 100 Red and 50 Yellow
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Hex((null)) added 10 Green
+2011-09-07 18:25 Test Hex((null)) added Peak
+2011-09-07 18:25 Test Hex((null)) added 100 Red and 50 Grey
+2011-09-07 18:25 Test Finished reading in hexes.
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Counted 3 fertile hexes.
+2011-09-07 18:25 Test Hex((null)) found Red Den
+2011-09-07 18:25 Test calling lay_template()
+2011-09-07 18:25 Test Player 2 has grid location 3.
+2011-09-07 18:25 Test 26W cleared
+2011-09-07 18:25 Test Feature(feature 3) destructed
+2011-09-07 18:25 Test Hex(26W) added 100 Red and 50 Grey
+2011-09-07 18:25 Test Hex(26W) added Peak
+2011-09-07 18:25 Test Put hex 0 into 26W (owner 2).
+2011-09-07 18:25 Test 25X cleared
+2011-09-07 18:25 Test Hex(25X) added Fertile 0
+2011-09-07 18:25 Test Put hex 1 into 25X (owner 2).
+2011-09-07 18:25 Test 26X cleared
+2011-09-07 18:25 Test Hex(26X) added 10 Green
+2011-09-07 18:25 Test Hex(26X) added feature 3
+2011-09-07 18:25 Test Put hex 2 into 26X (owner 2).
+2011-09-07 18:25 Test 27X cleared
+2011-09-07 18:25 Test Hex(27X) added feature 3
+2011-09-07 18:25 Test Put hex 3 into 27X (owner 2).
+2011-09-07 18:25 Test 24Y cleared
+2011-09-07 18:25 Test Hex(24Y) added 100 Red and 10 Green
+2011-09-07 18:25 Test Hex(24Y) added feature 3
+2011-09-07 18:25 Test Put hex 4 into 24Y (owner 2).
+2011-09-07 18:25 Test 25Y cleared
+2011-09-07 18:25 Test Hex(25Y) added Red Home Den
+2011-09-07 18:25 Test Put hex 5 into 25Y (owner 2).
+2011-09-07 18:25 Test 26Y cleared
+2011-09-07 18:25 Test Hex(26Y) added 100 Red and 50 Yellow
+2011-09-07 18:25 Test Hex(26Y) added Fertile 0
+2011-09-07 18:25 Test Put hex 6 into 26Y (owner 2).
+2011-09-07 18:25 Test 24Z cleared
+2011-09-07 18:25 Test Hex(24Z) added feature 3
+2011-09-07 18:25 Test Put hex 7 into 24Z (owner 2).
+2011-09-07 18:25 Test 25Z cleared
+2011-09-07 18:25 Test Feature(feature 3) destructed
+2011-09-07 18:25 Test Hex(25Z) added Fertile 0
+2011-09-07 18:25 Test Put hex 8 into 25Z (owner 2).
+2011-09-07 18:25 Test 26Z cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(26Z) added 10 Green
+2011-09-07 18:25 Test Hex(26Z) added feature 3
+2011-09-07 18:25 Test Put hex 9 into 26Z (owner 2).
+2011-09-07 18:25 Test 24AA cleared
+2011-09-07 18:25 Test Hex(24AA) added 100 Red and 50 Grey
+2011-09-07 18:25 Test Hex(24AA) added Peak
+2011-09-07 18:25 Test Put hex 10 into 24AA (owner 2).
+2011-09-07 18:25 Test lay_template player = 2 completed
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test Finished player 2
+2011-09-07 18:25 Test Got player startup STARTUP 3.
+2011-09-07 18:25 Test Got template 1 for player 3
+2011-09-07 18:25 Test Hex((null)) added Temple
+2011-09-07 18:25 Test Hex((null)) added 90 Red
+2011-09-07 18:25 Test Hex((null)) added Ruin
+2011-09-07 18:25 Test Hex((null)) added 10 Green, 50 Grey, 10 Black and 10 Yellow
+2011-09-07 18:25 Test Hex((null)) added Ruin
+2011-09-07 18:25 Test Hex((null)) added 10 Green, 50 Grey, 10 Black and 10 Yellow
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Hex((null)) added 10 Red
+2011-09-07 18:25 Test Hex((null)) added Swamp
+2011-09-07 18:25 Test Hex((null)) added 10 Green
+2011-09-07 18:25 Test Hex((null)) added Yellow Den
+2011-09-07 18:25 Test Hex((null)) added 80 Red, 50 Black and 10 Yellow
+2011-09-07 18:25 Test Finished reading in hexes.
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Counted 2 fertile hexes.
+2011-09-07 18:25 Test Hex((null)) found Yellow Den
+2011-09-07 18:25 Test calling lay_template()
+2011-09-07 18:25 Test Player 3 has grid location 1.
+2011-09-07 18:25 Test 9X cleared
+2011-09-07 18:25 Test Hex(9X) added 90 Red
+2011-09-07 18:25 Test Hex(9X) added Temple
+2011-09-07 18:25 Test Put hex 0 into 9X (owner 3).
+2011-09-07 18:25 Test 10X cleared
+2011-09-07 18:25 Test Hex(10X) added 10 Green, 50 Grey, 10 Black and 10 Yellow
+2011-09-07 18:25 Test Hex(10X) added Ruin
+2011-09-07 18:25 Test Put hex 1 into 10X (owner 3).
+2011-09-07 18:25 Test 8Y cleared
+2011-09-07 18:25 Test Hex(8Y) added 10 Green, 50 Grey, 10 Black and 10 Yellow
+2011-09-07 18:25 Test Hex(8Y) added Ruin
+2011-09-07 18:25 Test Put hex 2 into 8Y (owner 3).
+2011-09-07 18:25 Test 9Y cleared
+2011-09-07 18:25 Test Feature(Swamp) destructed
+2011-09-07 18:25 Test Hex(9Y) added Fertile 0
+2011-09-07 18:25 Test Put hex 3 into 9Y (owner 3).
+2011-09-07 18:25 Test 10Y cleared
+2011-09-07 18:25 Test Hex(10Y) added 10 Red
+2011-09-07 18:25 Test Hex(10Y) added Fertile 0
+2011-09-07 18:25 Test Put hex 4 into 10Y (owner 3).
+2011-09-07 18:25 Test 9Z cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(9Z) added 10 Green
+2011-09-07 18:25 Test Hex(9Z) added Swamp
+2011-09-07 18:25 Test Put hex 5 into 9Z (owner 3).
+2011-09-07 18:25 Test 10Z cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(10Z) added 80 Red, 50 Black and 10 Yellow
+2011-09-07 18:25 Test Hex(10Z) added Yellow Home Den
+2011-09-07 18:25 Test Put hex 6 into 10Z (owner 3).
+2011-09-07 18:25 Test lay_template player = 3 completed
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test Finished player 3
+2011-09-07 18:25 Test Got player startup STARTUP 4.
+2011-09-07 18:25 Test Got template 8 for player 4
+2011-09-07 18:25 Test Hex((null)) added Peak
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Temple
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Red Den
+2011-09-07 18:25 Test Hex((null)) added 10 Red
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Hex((null)) added 10 Green
+2011-09-07 18:25 Test Hex((null)) added Peak
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Hex((null)) added 10 Green
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Grey Den
+2011-09-07 18:25 Test Hex((null)) added 10 Red
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Red Den
+2011-09-07 18:25 Test Hex((null)) added 70 Red
+2011-09-07 18:25 Test Hex((null)) added Fertile 0
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Hex((null)) added 10 Green
+2011-09-07 18:25 Test Hex((null)) added Ruin
+2011-09-07 18:25 Test Hex((null)) added 50 Grey
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Ruin
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Swamp
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added feature 3
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Hex((null)) added Ruin
+2011-09-07 18:25 Test Feature(feature 12) destructed
+2011-09-07 18:25 Test Finished reading in hexes.
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Hex((null)) found Fertile 0
+2011-09-07 18:25 Test Counted 2 fertile hexes.
+2011-09-07 18:25 Test Hex((null)) found Grey Den
+2011-09-07 18:25 Test calling lay_template()
+2011-09-07 18:25 Test Player 4 has grid location 0.
+2011-09-07 18:25 Test 8F cleared
+2011-09-07 18:25 Test Hex(8F) added Peak
+2011-09-07 18:25 Test Put hex 0 into 8F (owner 4).
+2011-09-07 18:25 Test 9F cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(9F) added feature 3
+2011-09-07 18:25 Test Put hex 1 into 9F (owner 4).
+2011-09-07 18:25 Test 10F cleared
+2011-09-07 18:25 Test Hex(10F) added Temple
+2011-09-07 18:25 Test Put hex 2 into 10F (owner 4).
+2011-09-07 18:25 Test 7G cleared
+2011-09-07 18:25 Test Hex(7G) added feature 3
+2011-09-07 18:25 Test Put hex 3 into 7G (owner 4).
+2011-09-07 18:25 Test 8G cleared
+2011-09-07 18:25 Test Hex(8G) added 10 Red
+2011-09-07 18:25 Test Hex(8G) added Red Den
+2011-09-07 18:25 Test Put hex 4 into 8G (owner 4).
+2011-09-07 18:25 Test 9G cleared
+2011-09-07 18:25 Test Feature(Grey Den) destructed
+2011-09-07 18:25 Test Feature(29 Grey) destructed
+2011-09-07 18:25 Test Hex(9G) added 10 Green
+2011-09-07 18:25 Test Hex(9G) added feature 3
+2011-09-07 18:25 Test Put hex 5 into 9G (owner 4).
+2011-09-07 18:25 Test 10G cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(10G) added Peak
+2011-09-07 18:25 Test Put hex 6 into 10G (owner 4).
+2011-09-07 18:25 Test 8H cleared
+2011-09-07 18:25 Test Hex(8H) added 10 Green
+2011-09-07 18:25 Test Hex(8H) added feature 3
+2011-09-07 18:25 Test Put hex 7 into 8H (owner 4).
+2011-09-07 18:25 Test 9H cleared
+2011-09-07 18:25 Test Hex(9H) added Fertile 0
+2011-09-07 18:25 Test Put hex 8 into 9H (owner 4).
+2011-09-07 18:25 Test 10H cleared
+2011-09-07 18:25 Test Hex(10H) added 10 Red
+2011-09-07 18:25 Test Hex(10H) added Grey Home Den
+2011-09-07 18:25 Test Put hex 9 into 10H (owner 4).
+2011-09-07 18:25 Test 11H cleared
+2011-09-07 18:25 Test Hex(11H) added feature 3
+2011-09-07 18:25 Test Put hex 10 into 11H (owner 4).
+2011-09-07 18:25 Test 8I cleared
+2011-09-07 18:25 Test Feature(Yellow Den) destructed
+2011-09-07 18:25 Test Feature(14 Yellow) destructed
+2011-09-07 18:25 Test Hex(8I) added 70 Red
+2011-09-07 18:25 Test Hex(8I) added Red Den
+2011-09-07 18:25 Test Put hex 11 into 8I (owner 4).
+2011-09-07 18:25 Test 9I cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(9I) added Fertile 0
+2011-09-07 18:25 Test Put hex 12 into 9I (owner 4).
+2011-09-07 18:25 Test 10I cleared
+2011-09-07 18:25 Test Hex(10I) added 10 Green
+2011-09-07 18:25 Test Hex(10I) added feature 3
+2011-09-07 18:25 Test Put hex 13 into 10I (owner 4).
+2011-09-07 18:25 Test 11I cleared
+2011-09-07 18:25 Test Hex(11I) added 50 Grey
+2011-09-07 18:25 Test Hex(11I) added Ruin
+2011-09-07 18:25 Test Put hex 14 into 11I (owner 4).
+2011-09-07 18:25 Test 9J cleared
+2011-09-07 18:25 Test Feature(feature 3) destructed
+2011-09-07 18:25 Test Hex(9J) added feature 3
+2011-09-07 18:25 Test Put hex 15 into 9J (owner 4).
+2011-09-07 18:25 Test 10J cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(10J) added Ruin
+2011-09-07 18:25 Test Put hex 16 into 10J (owner 4).
+2011-09-07 18:25 Test 11J cleared
+2011-09-07 18:25 Test Feature(Swamp) destructed
+2011-09-07 18:25 Test Hex(11J) added feature 3
+2011-09-07 18:25 Test Put hex 17 into 11J (owner 4).
+2011-09-07 18:25 Test 12J cleared
+2011-09-07 18:25 Test Hex(12J) added Swamp
+2011-09-07 18:25 Test Put hex 18 into 12J (owner 4).
+2011-09-07 18:25 Test 9K cleared
+2011-09-07 18:25 Test Feature(Fertile 0) destructed
+2011-09-07 18:25 Test Hex(9K) added feature 3
+2011-09-07 18:25 Test Put hex 19 into 9K (owner 4).
+2011-09-07 18:25 Test 10K cleared
+2011-09-07 18:25 Test Feature(Black Den) destructed
+2011-09-07 18:25 Test Feature(29 Black) destructed
+2011-09-07 18:25 Test Hex(10K) added feature 3
+2011-09-07 18:25 Test Put hex 20 into 10K (owner 4).
+2011-09-07 18:25 Test 11K cleared
+2011-09-07 18:25 Test Hex(11K) added Ruin
+2011-09-07 18:25 Test Put hex 21 into 11K (owner 4).
+2011-09-07 18:25 Test lay_template player = 4 completed
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test (null) cleared
+2011-09-07 18:25 Test Finished player 4
+2011-09-07 18:25 Test Hex(1A) found Grey Den
+2011-09-07 18:25 Test Hex(1A) found 14 Grey
+2011-09-07 18:25 Test Hex(2B) found Fertile 0
+2011-09-07 18:25 Test Hex(1D) found Green Den
+2011-09-07 18:25 Test Hex(1D) found 14 Green
+2011-09-07 18:25 Test Hex(1E) found Fertile 0
+2011-09-07 18:25 Test Hex(1J) found Green Den
+2011-09-07 18:25 Test Hex(1J) found 29 Green
+2011-09-07 18:25 Test Hex(1I) found Fertile 0
+2011-09-07 18:25 Test Hex(32I) found Fertile 0
+2011-09-07 18:25 Test Hex(1X) found Grey Den
+2011-09-07 18:25 Test Hex(1X) found 14 Grey
+2011-09-07 18:25 Test Hex(1Y) found Fertile 0
+2011-09-07 18:25 Test Hex(2F) found Yellow Den
+2011-09-07 18:25 Test Hex(2F) found 44 Yellow
+2011-09-07 18:25 Test Hex(1F) found Fertile 0
+2011-09-07 18:25 Test Hex(1G) found Fertile 0
+2011-09-07 18:25 Test Hex(2G) found Fertile 0
+2011-09-07 18:25 Test Hex(1E) found Fertile 0
+2011-09-07 18:25 Test Hex(2O) found Black Den
+2011-09-07 18:25 Test Hex(2O) found 44 Black
+2011-09-07 18:25 Test Hex(1O) found Fertile 0
+2011-09-07 18:25 Test Hex(3N) found Fertile 0
+2011-09-07 18:25 Test Hex(2N) found Fertile 0
+2011-09-07 18:25 Test Hex(3J) found Grey Den
+2011-09-07 18:25 Test Hex(3J) found 44 Grey
+2011-09-07 18:25 Test Hex(2K) found Fertile 0
+2011-09-07 18:25 Test Hex(4J) found Fertile 0
+2011-09-07 18:25 Test Hex(2I) found Fertile 0
+2011-09-07 18:25 Test Hex(3Q) found Grey Den
+2011-09-07 18:25 Test Hex(3Q) found 14 Grey
+2011-09-07 18:25 Test Hex(2Q) found Fertile 0
+2011-09-07 18:25 Test Hex(3T) found Black Den
+2011-09-07 18:25 Test Hex(3T) found 29 Black
+2011-09-07 18:25 Test Hex(4T) found Fertile 0
+2011-09-07 18:25 Test Hex(2S) found Fertile 0
+2011-09-07 18:25 Test Hex(3X) found Red Den
+2011-09-07 18:25 Test Hex(3X) found 14 Red
+2011-09-07 18:25 Test Hex(2W) found Fertile 0
+2011-09-07 18:25 Test Hex(3AA) found (null)
+2011-09-07 18:25 Test Feature(feature 5) destructed
+2011-09-07 18:25 Test Hex(3AA) added Peak
+2011-09-07 18:25 Test Hex(3AD) found Green Den
+2011-09-07 18:25 Test Hex(3AD) found 44 Green
+2011-09-07 18:25 Test Hex(2AD) found Fertile 0
+2011-09-07 18:25 Test Hex(2AE) found Fertile 0
+2011-09-07 18:25 Test Hex(2AC) found Fertile 0
+2011-09-07 18:25 Test Hex(4N) found Black Den
+2011-09-07 18:25 Test Hex(4N) found 14 Black
+2011-09-07 18:25 Test Hex(3N) found Fertile 0
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(5J) found Black Den
+2011-09-07 18:25 Test Hex(5J) found 14 Black
+2011-09-07 18:25 Test Hex(4J) found Fertile 0
+2011-09-07 18:25 Test Hex(5K) found Fertile 0
+2011-09-07 18:25 Test Hex(5Q) found Red Den
+2011-09-07 18:25 Test Hex(5Q) found 44 Red
+2011-09-07 18:25 Test Hex(5R) found Fertile 0
+2011-09-07 18:25 Test Hex(6Q) found Fertile 0
+2011-09-07 18:25 Test Hex(6P) found Fertile 0
+2011-09-07 18:25 Test Hex(5U) found Red Den
+2011-09-07 18:25 Test Hex(5U) found 29 Red
+2011-09-07 18:25 Test Hex(6U) found Fertile 0
+2011-09-07 18:25 Test Hex(5T) found Fertile 0
+2011-09-07 18:25 Test Hex(5W) found Yellow Den
+2011-09-07 18:25 Test Hex(5W) found 14 Yellow
+2011-09-07 18:25 Test Hex(6W) found Fertile 0
+2011-09-07 18:25 Test Hex(5Z) found Yellow Den
+2011-09-07 18:25 Test Hex(5Z) found 29 Yellow
+2011-09-07 18:25 Test Hex(5AA) found Fertile 0
+2011-09-07 18:25 Test Hex(5Y) found Fertile 0
+2011-09-07 18:25 Test Hex(6A) found Green Den
+2011-09-07 18:25 Test Hex(6A) found 14 Green
+2011-09-07 18:25 Test Hex(5A) found Fertile 0
+2011-09-07 18:25 Test Hex(6F) found Black Den
+2011-09-07 18:25 Test Hex(6F) found 44 Black
+2011-09-07 18:25 Test Hex(5F) found Fertile 0
+2011-09-07 18:25 Test Hex(7F) found Fertile 0
+2011-09-07 18:25 Test Hex(5E) found Fertile 0
+2011-09-07 18:25 Test Hex(6AC) found Yellow Den
+2011-09-07 18:25 Test Hex(6AC) found 29 Yellow
+2011-09-07 18:25 Test Hex(5AC) found Fertile 0
+2011-09-07 18:25 Test Hex(7AD) found Fertile 0
+2011-09-07 18:25 Test Hex(7J) found Black Den
+2011-09-07 18:25 Test Hex(7J) found 29 Black
+2011-09-07 18:25 Test Hex(6K) found Fertile 0
+2011-09-07 18:25 Test Hex(6I) found Fertile 0
+2011-09-07 18:25 Test Hex(7O) found Green Den
+2011-09-07 18:25 Test Hex(7O) found 29 Green
+2011-09-07 18:25 Test Hex(6O) found Fertile 0
+2011-09-07 18:25 Test Hex(7N) found Fertile 0
+2011-09-07 18:25 Test Hex(8G) found Red Den
+2011-09-07 18:25 Test Hex(8I) found Red Den
+2011-09-07 18:25 Test Hex(9N) found Yellow Den
+2011-09-07 18:25 Test Hex(9N) found 14 Yellow
+2011-09-07 18:25 Test Hex(9O) found Fertile 0
+2011-09-07 18:25 Test Hex(9Q) found Yellow Den
+2011-09-07 18:25 Test Hex(9Q) found 29 Yellow
+2011-09-07 18:25 Test Hex(10R) found Fertile 0
+2011-09-07 18:25 Test Hex(10Q) found Fertile 0
+2011-09-07 18:25 Test Hex(9AA) found Black Den
+2011-09-07 18:25 Test Hex(9AA) found 29 Black
+2011-09-07 18:25 Test 10AB cleared
+2011-09-07 18:25 Test Hex(10AB) added Fertile 0
+2011-09-07 18:25 Test Hex(9AE) found Yellow Den
+2011-09-07 18:25 Test Hex(9AE) found 29 Yellow
+2011-09-07 18:25 Test Hex(10AE) found Fertile 0
+2011-09-07 18:25 Test Hex(9AD) found Fertile 0
+2011-09-07 18:25 Test Hex(10H) found Grey Home Den
+2011-09-07 18:25 Test Hex(10M) found (null)
+2011-09-07 18:25 Test Feature(feature 5) destructed
+2011-09-07 18:25 Test Hex(10M) added Peak
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(10T) found 29 Yellow
+2011-09-07 18:25 Test Hex(10U) found Fertile 0
+2011-09-07 18:25 Test Hex(10S) found Fertile 0
+2011-09-07 18:25 Test Hex(10Z) found Yellow Home Den
+2011-09-07 18:25 Test Hex(10AC) found (null)
+2011-09-07 18:25 Test Hex(10AB) found Fertile 0
+2011-09-07 18:25 Test Feature(feature 5) destructed
+2011-09-07 18:25 Test Hex(10AC) added Peak
+2011-09-07 18:25 Test Hex(11B) found Yellow Den
+2011-09-07 18:25 Test Hex(11B) found 14 Yellow
+2011-09-07 18:25 Test Hex(10C) found Fertile 0
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(11F) found 14 Grey
+2011-09-07 18:25 Test Hex(12F) found Fertile 0
+2011-09-07 18:25 Test Hex(12E) found Green Den
+2011-09-07 18:25 Test Hex(12E) found 29 Green
+2011-09-07 18:25 Test Hex(12F) found Fertile 0
+2011-09-07 18:25 Test Hex(13F) found Fertile 0
+2011-09-07 18:25 Test Hex(13D) found Fertile 0
+2011-09-07 18:25 Test Hex(12H) found Yellow Den
+2011-09-07 18:25 Test Hex(12H) found 14 Yellow
+2011-09-07 18:25 Test Hex(12G) found Fertile 0
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(12P) found 14 Black
+2011-09-07 18:25 Test Hex(11O) found Fertile 0
+2011-09-07 18:25 Test Hex(13B) found Black Den
+2011-09-07 18:25 Test Hex(13B) found 29 Black
+2011-09-07 18:25 Test Hex(13C) found Fertile 0
+2011-09-07 18:25 Test Hex(13A) found Fertile 0
+2011-09-07 18:25 Test Hex(13J) found (null)
+2011-09-07 18:25 Test Feature(feature 5) destructed
+2011-09-07 18:25 Test Hex(13J) added Peak
+2011-09-07 18:25 Test Hex(13S) found Grey Den
+2011-09-07 18:25 Test Hex(13S) found 29 Grey
+2011-09-07 18:25 Test Hex(14T) found Fertile 0
+2011-09-07 18:25 Test Hex(14S) found Fertile 0
+2011-09-07 18:25 Test Hex(13W) found Red Den
+2011-09-07 18:25 Test Hex(13W) found 14 Red
+2011-09-07 18:25 Test Hex(13V) found Fertile 0
+2011-09-07 18:25 Test Hex(13Z) found Yellow Den
+2011-09-07 18:25 Test Hex(13Z) found 44 Yellow
+2011-09-07 18:25 Test Hex(13AA) found Fertile 0
+2011-09-07 18:25 Test Hex(14Z) found Fertile 0
+2011-09-07 18:25 Test Hex(13Y) found Fertile 0
+2011-09-07 18:25 Test Hex(14Q) found Red Den
+2011-09-07 18:25 Test Hex(14Q) found 29 Red
+2011-09-07 18:25 Test Hex(13Q) found Fertile 0
+2011-09-07 18:25 Test Hex(15R) found Fertile 0
+2011-09-07 18:25 Test Hex(14AE) found Black Den
+2011-09-07 18:25 Test Hex(14AE) found 44 Black
+2011-09-07 18:25 Test Hex(13AE) found Fertile 0
+2011-09-07 18:25 Test Hex(15AD) found Fertile 0
+2011-09-07 18:25 Test Hex(14AD) found Fertile 0
+2011-09-07 18:25 Test Hex(15I) found Grey Den
+2011-09-07 18:25 Test Hex(15I) found 14 Grey
+2011-09-07 18:25 Test Hex(15J) found Fertile 0
+2011-09-07 18:25 Test Hex(15N) found Black Den
+2011-09-07 18:25 Test Hex(15N) found 29 Black
+2011-09-07 18:25 Test Hex(14N) found Fertile 0
+2011-09-07 18:25 Test Hex(14M) found Fertile 0
+2011-09-07 18:25 Test Hex(15V) found Grey Den
+2011-09-07 18:25 Test Hex(15V) found 14 Grey
+2011-09-07 18:25 Test Hex(14U) found Fertile 0
+2011-09-07 18:25 Test Hex(16Q) found Black Den
+2011-09-07 18:25 Test Hex(16Q) found 44 Black
+2011-09-07 18:25 Test Hex(17R) found Fertile 0
+2011-09-07 18:25 Test Hex(17Q) found Fertile 0
+2011-09-07 18:25 Test Hex(16P) found Fertile 0
+2011-09-07 18:25 Test Hex(16S) found Black Den
+2011-09-07 18:25 Test Hex(16S) found 14 Black
+2011-09-07 18:25 Test Hex(17S) found Fertile 0
+2011-09-07 18:25 Test Hex(17R) found Fertile 0
+2011-09-07 18:25 Test Hex(17C) found Yellow Den
+2011-09-07 18:25 Test Hex(17C) found 59 Yellow
+2011-09-07 18:25 Test Hex(18D) found Fertile 0
+2011-09-07 18:25 Test Hex(18C) found Fertile 0
+2011-09-07 18:25 Test Hex(18B) found Fertile 0
+2011-09-07 18:25 Test Hex(17B) found Fertile 0
+2011-09-07 18:25 Test Hex(17F) found Yellow Den
+2011-09-07 18:25 Test Hex(17F) found 14 Yellow
+2011-09-07 18:25 Test Hex(17E) found Fertile 0
+2011-09-07 18:25 Test Hex(17J) found Grey Den
+2011-09-07 18:25 Test Hex(17J) found 14 Grey
+2011-09-07 18:25 Test Hex(17K) found Fertile 0
+2011-09-07 18:25 Test Hex(18J) found Fertile 0
+2011-09-07 18:25 Test Hex(17Y) found Red Den
+2011-09-07 18:25 Test Hex(17Y) found 14 Red
+2011-09-07 18:25 Test Hex(17Z) found Fertile 0
+2011-09-07 18:25 Test Hex(18Y) found Fertile 0
+2011-09-07 18:25 Test Hex(17AA) found Green Den
+2011-09-07 18:25 Test Hex(17AA) found 29 Green
+2011-09-07 18:25 Test Hex(18AA) found Fertile 0
+2011-09-07 18:25 Test Hex(17Z) found Fertile 0
+2011-09-07 18:25 Test Hex(17AD) found Grey Den
+2011-09-07 18:25 Test Hex(17AD) found 44 Grey
+2011-09-07 18:25 Test Hex(17AE) found Fertile 0
+2011-09-07 18:25 Test Hex(18AD) found Fertile 0
+2011-09-07 18:25 Test Hex(17AC) found Fertile 0
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(18O) found 29 Red
+2011-09-07 18:25 Test Hex(17O) found Fertile 0
+2011-09-07 18:25 Test Hex(18N) found Fertile 0
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(18V) found 29 Green
+2011-09-07 18:25 Test Hex(17V) found Fertile 0
+2011-09-07 18:25 Test Hex(18W) found Fertile 0
+2011-09-07 18:25 Test Hex(19E) found Black Den
+2011-09-07 18:25 Test Hex(19E) found 29 Black
+2011-09-07 18:25 Test Hex(19F) found Fertile 0
+2011-09-07 18:25 Test Hex(20F) found Fertile 0
+2011-09-07 18:25 Test Hex(19J) found Green Den
+2011-09-07 18:25 Test Hex(19J) found 29 Green
+2011-09-07 18:25 Test Hex(18J) found Fertile 0
+2011-09-07 18:25 Test Hex(18K) found Fertile 0
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(20K) found 14 Red
+2011-09-07 18:25 Test Hex(21L) found Fertile 0
+2011-09-07 18:25 Test Hex(21C) found Grey Den
+2011-09-07 18:25 Test Hex(21C) found 44 Grey
+2011-09-07 18:25 Test Hex(22D) found Fertile 0
+2011-09-07 18:25 Test Hex(22C) found Fertile 0
+2011-09-07 18:25 Test Hex(21B) found Fertile 0
+2011-09-07 18:25 Test Hex(21O) found Red Den
+2011-09-07 18:25 Test Hex(21O) found 14 Red
+2011-09-07 18:25 Test Hex(21N) found Fertile 0
+2011-09-07 18:25 Test Hex(21U) found Green Den
+2011-09-07 18:25 Test Hex(21U) found 29 Green
+2011-09-07 18:25 Test Hex(21V) found Fertile 0
+2011-09-07 18:25 Test Hex(22U) found Fertile 0
+2011-09-07 18:25 Test Hex(21Y) found Red Den
+2011-09-07 18:25 Test Hex(21Y) found 44 Red
+2011-09-07 18:25 Test Hex(21Z) found Fertile 0
+2011-09-07 18:25 Test Hex(22Z) found Fertile 0
+2011-09-07 18:25 Test Hex(22Y) found Fertile 0
+2011-09-07 18:25 Test Hex(22G) found Grey Den
+2011-09-07 18:25 Test Hex(22G) found 14 Grey
+2011-09-07 18:25 Test Hex(23F) found Fertile 0
+2011-09-07 18:25 Test Hex(22M) found Black Den
+2011-09-07 18:25 Test Hex(22M) found 14 Black
+2011-09-07 18:25 Test Hex(23N) found Fertile 0
+2011-09-07 18:25 Test Hex(22AC) found Red Den
+2011-09-07 18:25 Test Hex(22AC) found 29 Red
+2011-09-07 18:25 Test Hex(21AC) found Fertile 0
+2011-09-07 18:25 Test Hex(22AD) found Fertile 0
+2011-09-07 18:25 Test Hex(23R) found Grey Den
+2011-09-07 18:25 Test Hex(23R) found 44 Grey
+2011-09-07 18:25 Test Hex(22R) found Fertile 0
+2011-09-07 18:25 Test Hex(22S) found Fertile 0
+2011-09-07 18:25 Test Hex(22Q) found Fertile 0
+2011-09-07 18:25 Test Hex(23V) found Yellow Den
+2011-09-07 18:25 Test Hex(23V) found 14 Yellow
+2011-09-07 18:25 Test Hex(22W) found Fertile 0
+2011-09-07 18:25 Test Hex(22U) found Fertile 0
+2011-09-07 18:25 Test Hex(24O) found Green Den
+2011-09-07 18:25 Test Hex(24O) found 14 Green
+2011-09-07 18:25 Test Hex(25O) found Fertile 0
+2011-09-07 18:25 Test Hex(24Q) found Red Den
+2011-09-07 18:25 Test Hex(24Q) found 29 Red
+2011-09-07 18:25 Test Hex(25R) found Fertile 0
+2011-09-07 18:25 Test Hex(25Q) found Fertile 0
+2011-09-07 18:25 Test Hex(25B) found Yellow Den
+2011-09-07 18:25 Test Hex(25B) found 14 Yellow
+2011-09-07 18:25 Test Hex(25C) found Fertile 0
+2011-09-07 18:25 Test Hex(25G) found Red Den
+2011-09-07 18:25 Test Hex(25G) found 29 Red
+2011-09-07 18:25 Test Hex(26H) found Fertile 0
+2011-09-07 18:25 Test Hex(26G) found Fertile 0
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(25M) found Grey Den
+2011-09-07 18:25 Test Hex(25M) found 14 Grey
+2011-09-07 18:25 Test Hex(26M) found Fertile 0
+2011-09-07 18:25 Test Hex(25T) found Red Den
+2011-09-07 18:25 Test Hex(25T) found 14 Red
+2011-09-07 18:25 Test Hex(26T) found Fertile 0
+2011-09-07 18:25 Test Hex(25Y) found Red Home Den
+2011-09-07 18:25 Test Hex(25AA) found Green Den
+2011-09-07 18:25 Test Hex(25AA) found 29 Green
+2011-09-07 18:25 Test Hex(26AA) found Fertile 0
+2011-09-07 18:25 Test Hex(25Z) found Fertile 0
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(25AD) found 29 Green
+2011-09-07 18:25 Test Hex(25AE) found Fertile 0
+2011-09-07 18:25 Test Hex(25AC) found Fertile 0
+2011-09-07 18:25 Test Hex(26C) found Grey Den
+2011-09-07 18:25 Test Hex(26C) found 29 Grey
+2011-09-07 18:25 Test Hex(25C) found Fertile 0
+2011-09-07 18:25 Test Hex(27D) found Fertile 0
+2011-09-07 18:25 Test Hex(27B) found Fertile 0
+2011-09-07 18:25 Test Hex(26I) found Black Home Den
+2011-09-07 18:25 Test Hex(26O) found Red Den
+2011-09-07 18:25 Test Hex(26O) found 14 Red
+2011-09-07 18:25 Test Hex(25O) found Fertile 0
+2011-09-07 18:25 Test Hex(27N) found Fertile 0
+2011-09-07 18:25 Test Hex(27J) found Green Den
+2011-09-07 18:25 Test Hex(27J) found 29 Green
+2011-09-07 18:25 Test Hex(26J) found Fertile 0
+2011-09-07 18:25 Test Hex(26K) found Fertile 0
+2011-09-07 18:25 Test Hex(27V) found Black Den
+2011-09-07 18:25 Test Hex(27V) found 29 Black
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(26U) found Fertile 0
+2011-09-07 18:25 Test Hex(28C) found Red Den
+2011-09-07 18:25 Test Hex(28C) found 29 Red
+2011-09-07 18:25 Test Hex(29C) found Fertile 0
+2011-09-07 18:25 Test Hex(29B) found Fertile 0
+2011-09-07 18:25 Test Hex(28AE) found (null)
+2011-09-07 18:25 Test Feature(feature 5) destructed
+2011-09-07 18:25 Test Hex(28AE) added Peak
+2011-09-07 18:25 Test Hex(29Q) found Yellow Den
+2011-09-07 18:25 Test Hex(29Q) found 14 Yellow
+2011-09-07 18:25 Test Hex(29R) found Fertile 0
+2011-09-07 18:25 Test Hex(29AA) found Grey Den
+2011-09-07 18:25 Test Hex(29AA) found 29 Grey
+2011-09-07 18:25 Test Hex(30AA) found Fertile 0
+2011-09-07 18:25 Test Hex(29Z) found Fertile 0
+2011-09-07 18:25 Test Hex(29AC) found Green Den
+2011-09-07 18:25 Test Hex(29AC) found 29 Green
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(30AC) found Fertile 0
+2011-09-07 18:25 Test Hex(30G) found Green Den
+2011-09-07 18:25 Test Hex(30G) found 29 Green
+2011-09-07 18:25 Test Hex(29G) found Fertile 0
+2011-09-07 18:25 Test Hex(30H) found Fertile 0
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(30K) found 14 Green
+2011-09-07 18:25 Test Hex(31J) found Fertile 0
+2011-09-07 18:25 Test Hex(30M) found Red Den
+2011-09-07 18:25 Test Hex(30M) found 44 Red
+2011-09-07 18:25 Test Hex(29M) found Fertile 0
+2011-09-07 18:25 Test Hex(30N) found Fertile 0
+2011-09-07 18:25 Test Hex(31N) found Fertile 0
+2011-09-07 18:25 Test Hex(30V) found Grey Den
+2011-09-07 18:25 Test Hex(30V) found 14 Grey
+2011-09-07 18:25 Test Hex(29W) found Fertile 0
+2011-09-07 18:25 Test Hex(30Y) found Yellow Den
+2011-09-07 18:25 Test Hex(30Y) found 14 Yellow
+2011-09-07 18:25 Test Hex(29Y) found Fertile 0
+2011-09-07 18:25 Test Hex(31E) found (null)
+2011-09-07 18:25 Test Feature(feature 5) destructed
+2011-09-07 18:25 Test Hex(31E) added Peak
+2011-09-07 18:25 Test Hex(31O) found Green Den
+2011-09-07 18:25 Test Hex(31O) found 14 Green
+2011-09-07 18:25 Test Hex(30O) found Fertile 0
+2011-09-07 18:25 Test Hex(31N) found Fertile 0
+2011-09-07 18:25 Test Hex(31Q) found Red Den
+2011-09-07 18:25 Test Hex(31Q) found 14 Red
+2011-09-07 18:25 Test Hex(31R) found Fertile 0
+2011-09-07 18:25 Test Hex(32L) found (null)
+2011-09-07 18:25 Test Feature(feature 5) destructed
+2011-09-07 18:25 Test Hex(32L) added Peak
+2011-09-07 18:25 Test Hex(1A) found Grey Den
+2011-09-07 18:25 Test Hex(1A) found 14 Grey
+2011-09-07 18:25 Test Hex(2B) found Fertile 0
+2011-09-07 18:25 Test Hex(1D) found Green Den
+2011-09-07 18:25 Test Hex(1D) found 14 Green
+2011-09-07 18:25 Test Hex(1E) found Fertile 0
+2011-09-07 18:25 Test Hex(1J) found Green Den
+2011-09-07 18:25 Test Hex(1J) found 29 Green
+2011-09-07 18:25 Test Hex(1I) found Fertile 0
+2011-09-07 18:25 Test Hex(32I) found Fertile 0
+2011-09-07 18:25 Test Hex(1X) found Grey Den
+2011-09-07 18:25 Test Hex(1X) found 14 Grey
+2011-09-07 18:25 Test Hex(1Y) found Fertile 0
+2011-09-07 18:25 Test Hex(2F) found Yellow Den
+2011-09-07 18:25 Test Hex(2F) found 44 Yellow
+2011-09-07 18:25 Test Hex(1F) found Fertile 0
+2011-09-07 18:25 Test Hex(1G) found Fertile 0
+2011-09-07 18:25 Test Hex(2G) found Fertile 0
+2011-09-07 18:25 Test Hex(1E) found Fertile 0
+2011-09-07 18:25 Test Hex(2O) found Black Den
+2011-09-07 18:25 Test Hex(2O) found 44 Black
+2011-09-07 18:25 Test Hex(1O) found Fertile 0
+2011-09-07 18:25 Test Hex(3N) found Fertile 0
+2011-09-07 18:25 Test Hex(2N) found Fertile 0
+2011-09-07 18:25 Test Hex(3J) found Grey Den
+2011-09-07 18:25 Test Hex(3J) found 44 Grey
+2011-09-07 18:25 Test Hex(2K) found Fertile 0
+2011-09-07 18:25 Test Hex(4J) found Fertile 0
+2011-09-07 18:25 Test Hex(2I) found Fertile 0
+2011-09-07 18:25 Test Hex(3Q) found Grey Den
+2011-09-07 18:25 Test Hex(3Q) found 14 Grey
+2011-09-07 18:25 Test Hex(2Q) found Fertile 0
+2011-09-07 18:25 Test Hex(3T) found Black Den
+2011-09-07 18:25 Test Hex(3T) found 29 Black
+2011-09-07 18:25 Test Hex(4T) found Fertile 0
+2011-09-07 18:25 Test Hex(2S) found Fertile 0
+2011-09-07 18:25 Test Hex(3X) found Red Den
+2011-09-07 18:25 Test Hex(3X) found 14 Red
+2011-09-07 18:25 Test Hex(2W) found Fertile 0
+2011-09-07 18:25 Test Hex(3AD) found Green Den
+2011-09-07 18:25 Test Hex(3AD) found 44 Green
+2011-09-07 18:25 Test Hex(2AD) found Fertile 0
+2011-09-07 18:25 Test Hex(2AE) found Fertile 0
+2011-09-07 18:25 Test Hex(2AC) found Fertile 0
+2011-09-07 18:25 Test Hex(4N) found Black Den
+2011-09-07 18:25 Test Hex(4N) found 14 Black
+2011-09-07 18:25 Test Hex(3N) found Fertile 0
+2011-09-07 18:25 Test Hex(5N) found Fertile 0
+2011-09-07 18:25 Test Hex(5J) found Black Den
+2011-09-07 18:25 Test Hex(5J) found 14 Black
+2011-09-07 18:25 Test Hex(4J) found Fertile 0
+2011-09-07 18:25 Test Hex(5K) found Fertile 0
+2011-09-07 18:25 Test Hex(5Q) found Red Den
+2011-09-07 18:25 Test Hex(5Q) found 44 Red
+2011-09-07 18:25 Test Hex(5R) found Fertile 0
+2011-09-07 18:25 Test Hex(6Q) found Fertile 0
+2011-09-07 18:25 Test Hex(6P) found Fertile 0
+2011-09-07 18:25 Test Hex(5U) found Red Den
+2011-09-07 18:25 Test Hex(5U) found 29 Red
+2011-09-07 18:25 Test Hex(6U) found Fertile 0
+2011-09-07 18:25 Test Hex(5T) found Fertile 0
+2011-09-07 18:25 Test Hex(5W) found Yellow Den
+2011-09-07 18:25 Test Hex(5W) found 14 Yellow
+2011-09-07 18:25 Test Hex(6W) found Fertile 0
+2011-09-07 18:25 Test Hex(5Z) found Yellow Den
+2011-09-07 18:25 Test Hex(5Z) found 29 Yellow
+2011-09-07 18:25 Test Hex(5AA) found Fertile 0
+2011-09-07 18:25 Test Hex(5Y) found Fertile 0
+2011-09-07 18:25 Test Hex(6A) found Green Den
+2011-09-07 18:25 Test Hex(6A) found 14 Green
+2011-09-07 18:25 Test Hex(5A) found Fertile 0
+2011-09-07 18:25 Test Hex(6F) found Black Den
+2011-09-07 18:25 Test Hex(6F) found 44 Black
+2011-09-07 18:25 Test Hex(5F) found Fertile 0
+2011-09-07 18:25 Test Hex(7F) found Fertile 0
+2011-09-07 18:25 Test Hex(5E) found Fertile 0
+2011-09-07 18:25 Test Hex(6AC) found Yellow Den
+2011-09-07 18:25 Test Hex(6AC) found 29 Yellow
+2011-09-07 18:25 Test Hex(5AC) found Fertile 0
+2011-09-07 18:25 Test Hex(7AD) found Fertile 0
+2011-09-07 18:25 Test Hex(7J) found Black Den
+2011-09-07 18:25 Test Hex(7J) found 29 Black
+2011-09-07 18:25 Test Hex(6K) found Fertile 0
+2011-09-07 18:25 Test Hex(6I) found Fertile 0
+2011-09-07 18:25 Test Hex(7O) found Green Den
+2011-09-07 18:25 Test Hex(7O) found 29 Green
+2011-09-07 18:25 Test Hex(6O) found Fertile 0
+2011-09-07 18:25 Test Hex(7N) found Fertile 0
+2011-09-07 18:25 Test Hex(8G) found Red Den
+2011-09-07 18:25 Test Hex(8I) found Red Den
+2011-09-07 18:25 Test Hex(9N) found Yellow Den
+2011-09-07 18:25 Test Hex(9N) found 14 Yellow
+2011-09-07 18:25 Test Hex(9O) found Fertile 0
+2011-09-07 18:25 Test Hex(9Q) found Yellow Den
+2011-09-07 18:25 Test Hex(9Q) found 29 Yellow
+2011-09-07 18:25 Test Hex(10R) found Fertile 0
+2011-09-07 18:25 Test Hex(10Q) found Fertile 0
+2011-09-07 18:25 Test Hex(9AA) found Black Den
+2011-09-07 18:25 Test Hex(9AA) found 14 Black
+2011-09-07 18:25 Test Hex(10AB) found Fertile 0
+2011-09-07 18:25 Test Hex(9AE) found Yellow Den
+2011-09-07 18:25 Test Hex(9AE) found 29 Yellow
+2011-09-07 18:25 Test Hex(10AE) found Fertile 0
+2011-09-07 18:25 Test Hex(9AD) found Fertile 0
+2011-09-07 18:25 Test Hex(10H) found Grey Home Den
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(10T) found 29 Yellow
+2011-09-07 18:25 Test Hex(10U) found Fertile 0
+2011-09-07 18:25 Test Hex(10S) found Fertile 0
+2011-09-07 18:25 Test Hex(10Z) found Yellow Home Den
+2011-09-07 18:25 Test Hex(11B) found Yellow Den
+2011-09-07 18:25 Test Hex(11B) found 14 Yellow
+2011-09-07 18:25 Test Hex(10C) found Fertile 0
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(11F) found 14 Grey
+2011-09-07 18:25 Test Hex(12F) found Fertile 0
+2011-09-07 18:25 Test Hex(12E) found Green Den
+2011-09-07 18:25 Test Hex(12E) found 29 Green
+2011-09-07 18:25 Test Hex(12F) found Fertile 0
+2011-09-07 18:25 Test Hex(13F) found Fertile 0
+2011-09-07 18:25 Test Hex(13D) found Fertile 0
+2011-09-07 18:25 Test Hex(12H) found Yellow Den
+2011-09-07 18:25 Test Hex(12H) found 14 Yellow
+2011-09-07 18:25 Test Hex(12G) found Fertile 0
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(12P) found 14 Black
+2011-09-07 18:25 Test Hex(11O) found Fertile 0
+2011-09-07 18:25 Test Hex(13B) found Black Den
+2011-09-07 18:25 Test Hex(13B) found 29 Black
+2011-09-07 18:25 Test Hex(13C) found Fertile 0
+2011-09-07 18:25 Test Hex(13A) found Fertile 0
+2011-09-07 18:25 Test Hex(13S) found Grey Den
+2011-09-07 18:25 Test Hex(13S) found 29 Grey
+2011-09-07 18:25 Test Hex(14T) found Fertile 0
+2011-09-07 18:25 Test Hex(14S) found Fertile 0
+2011-09-07 18:25 Test Hex(13W) found Red Den
+2011-09-07 18:25 Test Hex(13W) found 14 Red
+2011-09-07 18:25 Test Hex(13V) found Fertile 0
+2011-09-07 18:25 Test Hex(13Z) found Yellow Den
+2011-09-07 18:25 Test Hex(13Z) found 44 Yellow
+2011-09-07 18:25 Test Hex(13AA) found Fertile 0
+2011-09-07 18:25 Test Hex(14Z) found Fertile 0
+2011-09-07 18:25 Test Hex(13Y) found Fertile 0
+2011-09-07 18:25 Test Hex(14Q) found Red Den
+2011-09-07 18:25 Test Hex(14Q) found 29 Red
+2011-09-07 18:25 Test Hex(13Q) found Fertile 0
+2011-09-07 18:25 Test Hex(15R) found Fertile 0
+2011-09-07 18:25 Test Hex(14AE) found Black Den
+2011-09-07 18:25 Test Hex(14AE) found 44 Black
+2011-09-07 18:25 Test Hex(13AE) found Fertile 0
+2011-09-07 18:25 Test Hex(15AD) found Fertile 0
+2011-09-07 18:25 Test Hex(14AD) found Fertile 0
+2011-09-07 18:25 Test Hex(15I) found Grey Den
+2011-09-07 18:25 Test Hex(15I) found 14 Grey
+2011-09-07 18:25 Test Hex(15J) found Fertile 0
+2011-09-07 18:25 Test Hex(15N) found Black Den
+2011-09-07 18:25 Test Hex(15N) found 29 Black
+2011-09-07 18:25 Test Hex(14N) found Fertile 0
+2011-09-07 18:25 Test Hex(14M) found Fertile 0
+2011-09-07 18:25 Test Hex(15V) found Grey Den
+2011-09-07 18:25 Test Hex(15V) found 14 Grey
+2011-09-07 18:25 Test Hex(14U) found Fertile 0
+2011-09-07 18:25 Test Hex(16Q) found Black Den
+2011-09-07 18:25 Test Hex(16Q) found 44 Black
+2011-09-07 18:25 Test Hex(17R) found Fertile 0
+2011-09-07 18:25 Test Hex(17Q) found Fertile 0
+2011-09-07 18:25 Test Hex(16P) found Fertile 0
+2011-09-07 18:25 Test Hex(16S) found Black Den
+2011-09-07 18:25 Test Hex(16S) found 14 Black
+2011-09-07 18:25 Test Hex(17S) found Fertile 0
+2011-09-07 18:25 Test Hex(17R) found Fertile 0
+2011-09-07 18:25 Test Hex(17C) found Yellow Den
+2011-09-07 18:25 Test Hex(17C) found 59 Yellow
+2011-09-07 18:25 Test Hex(18D) found Fertile 0
+2011-09-07 18:25 Test Hex(18C) found Fertile 0
+2011-09-07 18:25 Test Hex(18B) found Fertile 0
+2011-09-07 18:25 Test Hex(17B) found Fertile 0
+2011-09-07 18:25 Test Hex(17F) found Yellow Den
+2011-09-07 18:25 Test Hex(17F) found 14 Yellow
+2011-09-07 18:25 Test Hex(17E) found Fertile 0
+2011-09-07 18:25 Test Hex(17J) found Grey Den
+2011-09-07 18:25 Test Hex(17J) found 14 Grey
+2011-09-07 18:25 Test Hex(17K) found Fertile 0
+2011-09-07 18:25 Test Hex(18J) found Fertile 0
+2011-09-07 18:25 Test Hex(17Y) found Red Den
+2011-09-07 18:25 Test Hex(17Y) found 14 Red
+2011-09-07 18:25 Test Hex(17Z) found Fertile 0
+2011-09-07 18:25 Test Hex(18Y) found Fertile 0
+2011-09-07 18:25 Test Hex(17AA) found Green Den
+2011-09-07 18:25 Test Hex(17AA) found 29 Green
+2011-09-07 18:25 Test Hex(18AA) found Fertile 0
+2011-09-07 18:25 Test Hex(17Z) found Fertile 0
+2011-09-07 18:25 Test Hex(17AD) found Grey Den
+2011-09-07 18:25 Test Hex(17AD) found 44 Grey
+2011-09-07 18:25 Test Hex(17AE) found Fertile 0
+2011-09-07 18:25 Test Hex(18AD) found Fertile 0
+2011-09-07 18:25 Test Hex(17AC) found Fertile 0
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(18O) found 29 Red
+2011-09-07 18:25 Test Hex(17O) found Fertile 0
+2011-09-07 18:25 Test Hex(18N) found Fertile 0
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(18V) found 29 Green
+2011-09-07 18:25 Test Hex(17V) found Fertile 0
+2011-09-07 18:25 Test Hex(18W) found Fertile 0
+2011-09-07 18:25 Test Hex(19E) found Black Den
+2011-09-07 18:25 Test Hex(19E) found 29 Black
+2011-09-07 18:25 Test Hex(19F) found Fertile 0
+2011-09-07 18:25 Test Hex(20F) found Fertile 0
+2011-09-07 18:25 Test Hex(19J) found Green Den
+2011-09-07 18:25 Test Hex(19J) found 29 Green
+2011-09-07 18:25 Test Hex(18J) found Fertile 0
+2011-09-07 18:25 Test Hex(18K) found Fertile 0
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(20K) found 14 Red
+2011-09-07 18:25 Test Hex(21L) found Fertile 0
+2011-09-07 18:25 Test Hex(21C) found Grey Den
+2011-09-07 18:25 Test Hex(21C) found 44 Grey
+2011-09-07 18:25 Test Hex(22D) found Fertile 0
+2011-09-07 18:25 Test Hex(22C) found Fertile 0
+2011-09-07 18:25 Test Hex(21B) found Fertile 0
+2011-09-07 18:25 Test Hex(21O) found Red Den
+2011-09-07 18:25 Test Hex(21O) found 14 Red
+2011-09-07 18:25 Test Hex(21N) found Fertile 0
+2011-09-07 18:25 Test Hex(21U) found Green Den
+2011-09-07 18:25 Test Hex(21U) found 29 Green
+2011-09-07 18:25 Test Hex(21V) found Fertile 0
+2011-09-07 18:25 Test Hex(22U) found Fertile 0
+2011-09-07 18:25 Test Hex(21Y) found Red Den
+2011-09-07 18:25 Test Hex(21Y) found 44 Red
+2011-09-07 18:25 Test Hex(21Z) found Fertile 0
+2011-09-07 18:25 Test Hex(22Z) found Fertile 0
+2011-09-07 18:25 Test Hex(22Y) found Fertile 0
+2011-09-07 18:25 Test Hex(22G) found Grey Den
+2011-09-07 18:25 Test Hex(22G) found 14 Grey
+2011-09-07 18:25 Test Hex(23F) found Fertile 0
+2011-09-07 18:25 Test Hex(22M) found Black Den
+2011-09-07 18:25 Test Hex(22M) found 14 Black
+2011-09-07 18:25 Test Hex(23N) found Fertile 0
+2011-09-07 18:25 Test Hex(22AC) found Red Den
+2011-09-07 18:25 Test Hex(22AC) found 29 Red
+2011-09-07 18:25 Test Hex(21AC) found Fertile 0
+2011-09-07 18:25 Test Hex(22AD) found Fertile 0
+2011-09-07 18:25 Test Hex(23R) found Grey Den
+2011-09-07 18:25 Test Hex(23R) found 44 Grey
+2011-09-07 18:25 Test Hex(22R) found Fertile 0
+2011-09-07 18:25 Test Hex(22S) found Fertile 0
+2011-09-07 18:25 Test Hex(22Q) found Fertile 0
+2011-09-07 18:25 Test Hex(23V) found Yellow Den
+2011-09-07 18:25 Test Hex(23V) found 14 Yellow
+2011-09-07 18:25 Test Hex(22W) found Fertile 0
+2011-09-07 18:25 Test Hex(22U) found Fertile 0
+2011-09-07 18:25 Test Hex(24O) found Green Den
+2011-09-07 18:25 Test Hex(24O) found 14 Green
+2011-09-07 18:25 Test Hex(25O) found Fertile 0
+2011-09-07 18:25 Test Hex(24Q) found Red Den
+2011-09-07 18:25 Test Hex(24Q) found 29 Red
+2011-09-07 18:25 Test Hex(25R) found Fertile 0
+2011-09-07 18:25 Test Hex(25Q) found Fertile 0
+2011-09-07 18:25 Test Hex(25B) found Yellow Den
+2011-09-07 18:25 Test Hex(25B) found 14 Yellow
+2011-09-07 18:25 Test Hex(25C) found Fertile 0
+2011-09-07 18:25 Test Hex(25G) found Red Den
+2011-09-07 18:25 Test Hex(25G) found 29 Red
+2011-09-07 18:25 Test Hex(26H) found Fertile 0
+2011-09-07 18:25 Test Hex(26G) found Fertile 0
+2011-09-07 18:25 Test Hex(26F) found Fertile 0
+2011-09-07 18:25 Test Hex(25M) found Grey Den
+2011-09-07 18:25 Test Hex(25M) found 14 Grey
+2011-09-07 18:25 Test Hex(26M) found Fertile 0
+2011-09-07 18:25 Test Hex(25T) found Red Den
+2011-09-07 18:25 Test Hex(25T) found 14 Red
+2011-09-07 18:25 Test Hex(26T) found Fertile 0
+2011-09-07 18:25 Test Hex(25Y) found Red Home Den
+2011-09-07 18:25 Test Hex(25AA) found Green Den
+2011-09-07 18:25 Test Hex(25AA) found 29 Green
+2011-09-07 18:25 Test Hex(26AA) found Fertile 0
+2011-09-07 18:25 Test Hex(25Z) found Fertile 0
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(25AD) found 29 Green
+2011-09-07 18:25 Test Hex(25AE) found Fertile 0
+2011-09-07 18:25 Test Hex(25AC) found Fertile 0
+2011-09-07 18:25 Test Hex(26C) found Grey Den
+2011-09-07 18:25 Test Hex(26C) found 29 Grey
+2011-09-07 18:25 Test Hex(25C) found Fertile 0
+2011-09-07 18:25 Test Hex(27D) found Fertile 0
+2011-09-07 18:25 Test Hex(27B) found Fertile 0
+2011-09-07 18:25 Test Hex(26I) found Black Home Den
+2011-09-07 18:25 Test Hex(26O) found Red Den
+2011-09-07 18:25 Test Hex(26O) found 14 Red
+2011-09-07 18:25 Test Hex(25O) found Fertile 0
+2011-09-07 18:25 Test Hex(27N) found Fertile 0
+2011-09-07 18:25 Test Hex(27J) found Green Den
+2011-09-07 18:25 Test Hex(27J) found 29 Green
+2011-09-07 18:25 Test Hex(26J) found Fertile 0
+2011-09-07 18:25 Test Hex(26K) found Fertile 0
+2011-09-07 18:25 Test Hex(27V) found Black Den
+2011-09-07 18:25 Test Hex(27V) found 29 Black
+2011-09-07 18:25 Test Hex(26V) found Fertile 0
+2011-09-07 18:25 Test Hex(26U) found Fertile 0
+2011-09-07 18:25 Test Hex(28C) found Red Den
+2011-09-07 18:25 Test Hex(28C) found 29 Red
+2011-09-07 18:25 Test Hex(29C) found Fertile 0
+2011-09-07 18:25 Test Hex(29B) found Fertile 0
+2011-09-07 18:25 Test Hex(29Q) found Yellow Den
+2011-09-07 18:25 Test Hex(29Q) found 14 Yellow
+2011-09-07 18:25 Test Hex(29R) found Fertile 0
+2011-09-07 18:25 Test Hex(29AA) found Grey Den
+2011-09-07 18:25 Test Hex(29AA) found 29 Grey
+2011-09-07 18:25 Test Hex(30AA) found Fertile 0
+2011-09-07 18:25 Test Hex(29Z) found Fertile 0
+2011-09-07 18:25 Test Hex(29AC) found Green Den
+2011-09-07 18:25 Test Hex(29AC) found 29 Green
+2011-09-07 18:25 Test Hex(30AD) found Fertile 0
+2011-09-07 18:25 Test Hex(30AC) found Fertile 0
+2011-09-07 18:25 Test Hex(30G) found Green Den
+2011-09-07 18:25 Test Hex(30G) found 29 Green
+2011-09-07 18:25 Test Hex(29G) found Fertile 0
+2011-09-07 18:25 Test Hex(30H) found Fertile 0
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(30K) found 14 Green
+2011-09-07 18:25 Test Hex(31J) found Fertile 0
+2011-09-07 18:25 Test Hex(30M) found Red Den
+2011-09-07 18:25 Test Hex(30M) found 44 Red
+2011-09-07 18:25 Test Hex(29M) found Fertile 0
+2011-09-07 18:25 Test Hex(30N) found Fertile 0
+2011-09-07 18:25 Test Hex(31N) found Fertile 0
+2011-09-07 18:25 Test Hex(30V) found Grey Den
+2011-09-07 18:25 Test Hex(30V) found 14 Grey
+2011-09-07 18:25 Test Hex(29W) found Fertile 0
+2011-09-07 18:25 Test Hex(30Y) found Yellow Den
+2011-09-07 18:25 Test Hex(30Y) found 14 Yellow
+2011-09-07 18:25 Test Hex(29Y) found Fertile 0
+2011-09-07 18:25 Test Hex(31O) found Green Den
+2011-09-07 18:25 Test Hex(31O) found 14 Green
+2011-09-07 18:25 Test Hex(30O) found Fertile 0
+2011-09-07 18:25 Test Hex(31N) found Fertile 0
+2011-09-07 18:25 Test Hex(31Q) found Red Den
+2011-09-07 18:25 Test Hex(31Q) found 14 Red
+2011-09-07 18:25 Test Hex(31R) found Fertile 0
+2011-09-07 18:25 Test Hex(1A) found Grey Den
+2011-09-07 18:25 Test Hex(1D) found Green Den
+2011-09-07 18:25 Test Hex(1J) found Green Den
+2011-09-07 18:25 Test Hex(1X) found Grey Den
+2011-09-07 18:25 Test Hex(2F) found Yellow Den
+2011-09-07 18:25 Test Hex(2O) found Black Den
+2011-09-07 18:25 Test Hex(3J) found Grey Den
+2011-09-07 18:25 Test Hex(3Q) found Grey Den
+2011-09-07 18:25 Test Hex(3T) found Black Den
+2011-09-07 18:25 Test Hex(3X) found Red Den
+2011-09-07 18:25 Test Hex(3AD) found Green Den
+2011-09-07 18:25 Test Hex(4N) found Black Den
+2011-09-07 18:25 Test Hex(5J) found Black Den
+2011-09-07 18:25 Test Hex(5Q) found Red Den
+2011-09-07 18:25 Test Hex(5U) found Red Den
+2011-09-07 18:25 Test Hex(5W) found Yellow Den
+2011-09-07 18:25 Test Hex(5Z) found Yellow Den
+2011-09-07 18:25 Test Hex(6A) found Green Den
+2011-09-07 18:25 Test Hex(6F) found Black Den
+2011-09-07 18:25 Test Hex(6AC) found Yellow Den
+2011-09-07 18:25 Test Hex(7J) found Black Den
+2011-09-07 18:25 Test Hex(7O) found Green Den
+2011-09-07 18:25 Test Hex(8G) found Red Den
+2011-09-07 18:25 Test Hex(8I) found Red Den
+2011-09-07 18:25 Test Hex(9N) found Yellow Den
+2011-09-07 18:25 Test Hex(9Q) found Yellow Den
+2011-09-07 18:25 Test Hex(9AA) found Black Den
+2011-09-07 18:25 Test Hex(9AE) found Yellow Den
+2011-09-07 18:25 Test Hex(10H) found Grey Home Den
+2011-09-07 18:25 Test Hex(10T) found Yellow Den
+2011-09-07 18:25 Test Hex(10Z) found Yellow Home Den
+2011-09-07 18:25 Test Hex(11B) found Yellow Den
+2011-09-07 18:25 Test Hex(11F) found Grey Den
+2011-09-07 18:25 Test Hex(12E) found Green Den
+2011-09-07 18:25 Test Hex(12H) found Yellow Den
+2011-09-07 18:25 Test Hex(12P) found Black Den
+2011-09-07 18:25 Test Hex(13B) found Black Den
+2011-09-07 18:25 Test Hex(13S) found Grey Den
+2011-09-07 18:25 Test Hex(13W) found Red Den
+2011-09-07 18:25 Test Hex(13Z) found Yellow Den
+2011-09-07 18:25 Test Hex(14Q) found Red Den
+2011-09-07 18:25 Test Hex(14AE) found Black Den
+2011-09-07 18:25 Test Hex(15I) found Grey Den
+2011-09-07 18:25 Test Hex(15N) found Black Den
+2011-09-07 18:25 Test Hex(15V) found Grey Den
+2011-09-07 18:25 Test Hex(16Q) found Black Den
+2011-09-07 18:25 Test Hex(16S) found Black Den
+2011-09-07 18:25 Test Hex(17C) found Yellow Den
+2011-09-07 18:25 Test Hex(17F) found Yellow Den
+2011-09-07 18:25 Test Hex(17J) found Grey Den
+2011-09-07 18:25 Test Hex(17Y) found Red Den
+2011-09-07 18:25 Test Hex(17AA) found Green Den
+2011-09-07 18:25 Test Hex(17AD) found Grey Den
+2011-09-07 18:25 Test Hex(18O) found Red Den
+2011-09-07 18:25 Test Hex(18V) found Green Den
+2011-09-07 18:25 Test Hex(19E) found Black Den
+2011-09-07 18:25 Test Hex(19J) found Green Den
+2011-09-07 18:25 Test Hex(20K) found Red Den
+2011-09-07 18:25 Test Hex(21C) found Grey Den
+2011-09-07 18:25 Test Hex(21O) found Red Den
+2011-09-07 18:25 Test Hex(21U) found Green Den
+2011-09-07 18:25 Test Hex(21Y) found Red Den
+2011-09-07 18:25 Test Hex(22G) found Grey Den
+2011-09-07 18:25 Test Hex(22M) found Black Den
+2011-09-07 18:25 Test Hex(22AC) found Red Den
+2011-09-07 18:25 Test Hex(23R) found Grey Den
+2011-09-07 18:25 Test Hex(23V) found Yellow Den
+2011-09-07 18:25 Test Hex(24O) found Green Den
+2011-09-07 18:25 Test Hex(24Q) found Red Den
+2011-09-07 18:25 Test Hex(25B) found Yellow Den
+2011-09-07 18:25 Test Hex(25G) found Red Den
+2011-09-07 18:25 Test Hex(25M) found Grey Den
+2011-09-07 18:25 Test Hex(25T) found Red Den
+2011-09-07 18:25 Test Hex(25Y) found Red Home Den
+2011-09-07 18:25 Test Hex(25AA) found Green Den
+2011-09-07 18:25 Test Hex(25AD) found Green Den
+2011-09-07 18:25 Test Hex(26C) found Grey Den
+2011-09-07 18:25 Test Hex(26I) found Black Home Den
+2011-09-07 18:25 Test Hex(26O) found Red Den
+2011-09-07 18:25 Test Hex(27J) found Green Den
+2011-09-07 18:25 Test Hex(27V) found Black Den
+2011-09-07 18:25 Test Hex(28C) found Red Den
+2011-09-07 18:25 Test Hex(29Q) found Yellow Den
+2011-09-07 18:25 Test Hex(29AA) found Grey Den
+2011-09-07 18:25 Test Hex(29AC) found Green Den
+2011-09-07 18:25 Test Hex(30G) found Green Den
+2011-09-07 18:25 Test Hex(30K) found Green Den
+2011-09-07 18:25 Test Hex(30M) found Red Den
+2011-09-07 18:25 Test Hex(30V) found Grey Den
+2011-09-07 18:25 Test Hex(30Y) found Yellow Den
+2011-09-07 18:25 Test Hex(31O) found Green Den
+2011-09-07 18:25 Test Hex(31Q) found Red Den
+2011-09-07 18:25 Test Hex(1A) found 14 Grey
+2011-09-07 18:25 Test Hex(1D) found 14 Green
+2011-09-07 18:25 Test Hex(1J) found 29 Green
+2011-09-07 18:25 Test Hex(1X) found 14 Grey
+2011-09-07 18:25 Test Hex(2F) found 59 Yellow
+2011-09-07 18:25 Test Hex(2O) found 44 Black
+2011-09-07 18:25 Test Hex(3J) found 44 Grey
+2011-09-07 18:25 Test Hex(3Q) found 14 Grey
+2011-09-07 18:25 Test Hex(3T) found 29 Black
+2011-09-07 18:25 Test Hex(3X) found 14 Red
+2011-09-07 18:25 Test Hex(3AD) found 44 Green
+2011-09-07 18:25 Test Hex(4N) found 29 Black
+2011-09-07 18:25 Test Hex(5J) found 29 Black
+2011-09-07 18:25 Test Hex(5Q) found 44 Red
+2011-09-07 18:25 Test Hex(5U) found 29 Red
+2011-09-07 18:25 Test Hex(5W) found 14 Yellow
+2011-09-07 18:25 Test Hex(5Z) found 29 Yellow
+2011-09-07 18:25 Test Hex(6A) found 14 Green
+2011-09-07 18:25 Test Hex(6F) found 44 Black
+2011-09-07 18:25 Test Hex(6AC) found 29 Yellow
+2011-09-07 18:25 Test Hex(7J) found 29 Black
+2011-09-07 18:25 Test Hex(7O) found 29 Green
+2011-09-07 18:25 Test Hex(8G) found 10 Red
+2011-09-07 18:25 Test Hex(8H) found 10 Green
+2011-09-07 18:25 Test Hex(8I) found 70 Red
+2011-09-07 18:25 Test Hex(8Y) found 10 Green, 50 Grey, 10 Black and 10 Yellow
+2011-09-07 18:25 Test Hex(9G) found 10 Green
+2011-09-07 18:25 Test Hex(9N) found 14 Yellow
+2011-09-07 18:25 Test Hex(9Q) found 29 Yellow
+2011-09-07 18:25 Test Hex(9X) found 90 Red
+2011-09-07 18:25 Test Hex(9Z) found 10 Green
+2011-09-07 18:25 Test Hex(9AA) found 14 Black
+2011-09-07 18:25 Test Hex(9AE) found 29 Yellow
+2011-09-07 18:25 Test Hex(10H) found 10 Red
+2011-09-07 18:25 Test Hex(10I) found 10 Green
+2011-09-07 18:25 Test Hex(10T) found 29 Yellow
+2011-09-07 18:25 Test Hex(10X) found 10 Green, 50 Grey, 10 Black and 10 Yellow
+2011-09-07 18:25 Test Hex(10Y) found 10 Red
+2011-09-07 18:25 Test Hex(10Z) found 80 Red, 50 Black and 10 Yellow
+2011-09-07 18:25 Test Hex(11B) found 14 Yellow
+2011-09-07 18:25 Test Hex(11F) found 14 Grey
+2011-09-07 18:25 Test Hex(11I) found 50 Grey
+2011-09-07 18:25 Test Hex(12E) found 44 Green
+2011-09-07 18:25 Test Hex(12H) found 14 Yellow
+2011-09-07 18:25 Test Hex(12P) found 14 Black
+2011-09-07 18:25 Test Hex(13B) found 29 Black
+2011-09-07 18:25 Test Hex(13S) found 29 Grey
+2011-09-07 18:25 Test Hex(13W) found 14 Red
+2011-09-07 18:25 Test Hex(13Z) found 44 Yellow
+2011-09-07 18:25 Test Hex(14Q) found 29 Red
+2011-09-07 18:25 Test Hex(14AE) found 44 Black
+2011-09-07 18:25 Test Hex(15I) found 14 Grey
+2011-09-07 18:25 Test Hex(15N) found 29 Black
+2011-09-07 18:25 Test Hex(15V) found 14 Grey
+2011-09-07 18:25 Test Hex(16Q) found 44 Black
+2011-09-07 18:25 Test Hex(16S) found 29 Black
+2011-09-07 18:25 Test Hex(17C) found 59 Yellow
+2011-09-07 18:25 Test Hex(17F) found 14 Yellow
+2011-09-07 18:25 Test Hex(17J) found 29 Grey
+2011-09-07 18:25 Test Hex(17Y) found 29 Red
+2011-09-07 18:25 Test Hex(17AA) found 29 Green
+2011-09-07 18:25 Test Hex(17AD) found 44 Grey
+2011-09-07 18:25 Test Hex(18O) found 29 Red
+2011-09-07 18:25 Test Hex(18V) found 29 Green
+2011-09-07 18:25 Test Hex(19E) found 29 Black
+2011-09-07 18:25 Test Hex(19J) found 29 Green
+2011-09-07 18:25 Test Hex(20K) found 14 Red
+2011-09-07 18:25 Test Hex(21C) found 44 Grey
+2011-09-07 18:25 Test Hex(21O) found 14 Red
+2011-09-07 18:25 Test Hex(21U) found 29 Green
+2011-09-07 18:25 Test Hex(21Y) found 44 Red
+2011-09-07 18:25 Test Hex(22G) found 14 Grey
+2011-09-07 18:25 Test Hex(22M) found 14 Black
+2011-09-07 18:25 Test Hex(22AC) found 29 Red
+2011-09-07 18:25 Test Hex(23R) found 44 Grey
+2011-09-07 18:25 Test Hex(23V) found 29 Yellow
+2011-09-07 18:25 Test Hex(24I) found 20 Green
+2011-09-07 18:25 Test Hex(24O) found 14 Green
+2011-09-07 18:25 Test Hex(24Q) found 29 Red
+2011-09-07 18:25 Test Hex(24Y) found 100 Red and 10 Green
+2011-09-07 18:25 Test Hex(24AA) found 100 Red and 50 Grey
+2011-09-07 18:25 Test Hex(25B) found 14 Yellow
+2011-09-07 18:25 Test Hex(25G) found 44 Red
+2011-09-07 18:25 Test Hex(25H) found 50 Grey
+2011-09-07 18:25 Test Hex(25I) found 110 Black
+2011-09-07 18:25 Test Hex(25J) found 50 Grey
+2011-09-07 18:25 Test Hex(25M) found 14 Grey
+2011-09-07 18:25 Test Hex(25T) found 14 Red
+2011-09-07 18:25 Test Hex(25AA) found 29 Green
+2011-09-07 18:25 Test Hex(25AD) found 29 Green
+2011-09-07 18:25 Test Hex(26C) found 44 Grey
+2011-09-07 18:25 Test Hex(26O) found 29 Red
+2011-09-07 18:25 Test Hex(26W) found 100 Red and 50 Grey
+2011-09-07 18:25 Test Hex(26X) found 10 Green
+2011-09-07 18:25 Test Hex(26Y) found 100 Red and 50 Yellow
+2011-09-07 18:25 Test Hex(26Z) found 10 Green
+2011-09-07 18:25 Test Hex(27J) found 29 Green
+2011-09-07 18:25 Test Hex(27V) found 29 Black
+2011-09-07 18:25 Test Hex(28C) found 29 Red
+2011-09-07 18:25 Test Hex(29Q) found 14 Yellow
+2011-09-07 18:25 Test Hex(29AA) found 29 Grey
+2011-09-07 18:25 Test Hex(29AC) found 29 Green
+2011-09-07 18:25 Test Hex(30G) found 29 Green
+2011-09-07 18:25 Test Hex(30K) found 14 Green
+2011-09-07 18:25 Test Hex(30M) found 44 Red
+2011-09-07 18:25 Test Hex(30V) found 14 Grey
+2011-09-07 18:25 Test Hex(30Y) found 14 Yellow
+2011-09-07 18:25 Test Hex(31O) found 29 Green
+2011-09-07 18:25 Test Hex(31Q) found 14 Red
+2011-09-07 18:25 Test world_t::~world_t() entered.
+2011-09-07 18:25 Test Debugger closing.

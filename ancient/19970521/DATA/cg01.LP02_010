@@ -1,0 +1,136 @@
+Header(cg01, 10)
+ClanID(jno,Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+
+ - 130 Black Lizards at 9O begin chanting...your Lizards at 9O disappear!
+ - Only to re-appear in Temple at 6AA.
+ - The Temple at 6AA glows! Your 130 Black Lizards finish chanting.
+
+ - 43 Yellow Lizards at 5R hurl stones and sticks N N at 3R.
+ - But they don't hit any Lizards.
+
+ - 130 Black Lizards at 10AA begin chanting...your Lizards at 10AA disappear!
+ - Only to re-appear in Temple at 18G.
+ - 56 Clan 'Mike TB' Lizards already occupy the Temple! Combat ensues...
+ - Combat round 2! Standing Lizards: 213. Standing enemy Lizards: 0.
+ - Your Lizards in Temple at 18G killed all of the Clan 'Mike TB' Lizards here.
+ - They are now Good warriors.
+ - The Temple at 18G glows! Your 130 Black Lizards finish chanting.
+Phase(movement)
+
+ - 2 Red, 46 Black Lizards at 17Z move SE (to 17AA).
+ - Lizards eat from fertile hex 17AA.
+ - 2 Red, 46 Black Lizards at 17AA move SE (to 18AB).
+ - Something slimy rises from the deep and ATTACKS your Lizards at 18AB!
+ - Combat round 4! Surviving Lizards: 0.
+ - Alas, all your Lizards at 18AB perish and the Sea Monster returns to the deep.
+
+ - 50 Grey, 11 Yellow, 7 Black Lizards split at 15R and move N (to 14R).
+ - 50 Grey, 11 Yellow, 7 Black Lizards at 14R move N (to 13R).
+
+ - 9 Red, 15 Green, 53 Black Lizards at 17AD move SW (to 17AC).
+ - 9 Red, 15 Green, 53 Black Lizards at 17AC move SW (to 18AB).
+
+ - 10 Green Lizards at 5S move S (to 6S).
+
+ - 2 Green Lizards split at 15AD and move N (to 14AD).
+ - Lizards at 14AD cringe as a HUGE and hungry Sea Monster rises from the hex.
+ - Combat round 1! Surviving Lizards: 0.
+ - The sea at 14AD settles to leave no trace of your valiant Lizards...
+
+ - Whirlpool at 16G moves N (to 15G)!
+
+ - 22 Grey Lizards at 8U move NW (to 8T).
+
+ - 10 Green Lizards at 4AB move SE (to 4AC).
+ - 10 Green Lizards at 4AC move SE (to 5AD).
+
+ - 31 Green, 96 Yellow, 73 Black Lizards at 5W move NE (to 5X).
+ - 31 Green, 96 Yellow, 73 Black Lizards at 5X move NE (to 4Y).
+Phase(development)
+
+ - Recruiting from Home Den at 10Y. 10 Red lizards recruited from Den leaving 19 Den Lizards at 10Y.
+
+ - Fertile hex planted at 10U by 10 Green Lizards.
+
+ - Recruiting from Black Den at 15Z. 26 Black lizards recruited from Den leaving 49 Den Lizards at 15Z.
+
+ - The 50 Grey Lizards rebuild the Ruin at 13W into a Den. Den is presently un-populated.
+
+ - Recruiting from Grey Den at 10R. 37 Grey lizards recruited from Den leaving 70 Den Lizards at 10R.
+
+ - Recruiting from Grey Den at 9V. 17 Grey lizards recruited from Den leaving 32 Den Lizards at 9V.
+
+ - Recruiting from Black Den at 17AD. 14 Black lizards recruited from Den leaving 27 Den Lizards at 17AD.
+
+ - Recruiting from Yellow Den at 13U. 13 Yellow lizards recruited from Den leaving 26 Den Lizards at 13U.
+
+ - Recruiting from Grey Den at 15R. 24 Grey lizards recruited from Den leaving 47 Den Lizards at 15R.
+
+ - Recruiting from Red Den at 10W. 31 Red lizards recruited from Den leaving 60 Den Lizards at 10W.
+
+ - Recruiting from Yellow Den at 5R. 15 Yellow lizards recruited from Den leaving 29 Den Lizards at 5R.
+
+ - Recruiting from Yellow Den at 5U. 19 Yellow lizards recruited from Den leaving 36 Den Lizards at 5U.
+
+ - Recruiting from Black Den at 6W. 20 Black lizards recruited from Den leaving 39 Den Lizards at 6W.
+
+ - Recruiting from Green Den at 6Y. 11 Green lizards recruited from Den leaving 22 Den Lizards at 6Y.
+
+ - Recruiting from Green Den at 15AD. 12 Green lizards recruited from Den leaving 23 Den Lizards at 15AD.
+
+ - Den at 11R has been half built. Den MUST be completed NEXT TURN with another Build order!
+ClanReport(Jumping Jono)
+Den(5R, 29, Yellow, 58 Yellow, Peckish, Average)
+
+Den(5U, 36, Yellow, 39 Yellow, Sated, Average)
+
+Den(6W, 39, Black, 42 Black, Sated, Average)
+
+Den(6Y, 22, Green, 23 Green, Sated, Average)
+
+Den(9V, 32, Grey, 17 Grey, Sated, Average)
+
+Den(10R, 70, Grey, 80 Grey, Sated, Average)
+
+Den(10W, 60, Red, 48 Red, Peckish, Average)
+
+HomeDen(10Y, 19, 1, 18 Red, 29 Black, Sated, Average)
+
+Den(13U, 26, Yellow, 25 Yellow, Sated, Average)
+
+Den(13W, 0, Unsettled, 50 Grey, 14 Yellow, Peckish, Average)
+
+Den(15R, 47, Grey, 51 Red, 37 Grey, Sated, Average)
+
+Den(15Z, 49, Black, 26 Black, Sated, Average)
+
+Den(15AD, 23, Green, 24 Green, Sated, Average)
+
+Den(17AD, 27, Black, 14 Black, Sated, Average)
+
+ - 4Y Band of 31 Green, 96 Yellow, 73 Black (Sated & Average) Lizards.
+ - 5AD Band of 10 Green (Sated & Average) Lizards.
+ - 6S Band of 10 Green (Sated & Average) Lizards.
+ - 6AA Band of 52 Red, 29 Yellow, 142 Black (Peckish & Dangerous) Lizards.
+ - 8T Band of 22 Grey (Famished & Average) Lizards.
+ - 10U Band of 10 Green (Peckish & Average) Lizards.
+ - 11R Band of 52 Grey (Hungry & Average) Lizards.
+ - 13R Band of 50 Grey, 11 Yellow, 7 Black (Peckish & Average) Lizards.
+ - 18G Band of 38 Red, 175 Black (Hungry & Good) Lizards.
+ - 18AB Band of 9 Red, 15 Green, 53 Black (Hungry & Average) Lizards.
+ - 16P Spy Lizard. Spy for 1 turns.
+ - 16T Spy Lizard. Spy for 1 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 10:
+
+ 01 -   2486 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   2448 Player 03, 'Dangerous Dan' (dan) Clan.
+ 03 -   2247 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -   1619 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

@@ -1,0 +1,45 @@
+Header(ff, 8, 1, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+ - 80 Black Lizards at 6K begin chanting NE...
+ - Mist engulfs 6L as the hex rises out of the sea!
+ - Your black lizards have created a Swamp hex there. 
+ - Your 80 Black Lizards at 6K finish chanting.
+ - 24 Black Lizards here slowly fade to Red!
+Phase(movement)
+ - 2 Green, 20 Grey Lizards at 5G move SW (to 6F).
+ - Lizards eat from fertile hex 6F.
+ - 2 Green, 20 Grey Lizards at 6F move SW (to 6E).
+ - 143 Green, 67 Grey Lizards at 5F move S (to 6F).
+ - Lizards eat from fertile hex 6F.
+ - 143 Green, 67 Grey Lizards at 6F move S (to 7F).
+ - 5 Green Lizards at 5J move SW (to 5I).
+ - Lizards eat from fertile hex 5I.
+ - 10 Green Lizards at 5E move SE (to 6F).
+ - Lizards eat from fertile hex 6F.
+ - 10 Green Lizards at 6F move SE (to 6G).
+Phase(development)
+ - Recruiting from Grey Den at 5F. 23 Grey lizards recruited from Den leaving 44 Den Lizards at 5F.
+ - Recruiting from Home Den at 6K. 17 Black lizards recruited from Den leaving 34 Den Lizards at 6K.
+ - Fertile hex planted at 7J by 47 Green Lizards.
+ClanReport(Raging Ross)
+Den(5B,96,2,0,113,0,0,0,3,0)
+Den(5F,44,3,0,0,23,0,0,0,0)
+HomeDen(6K,34,4,24,42,0,95,0,0,0)
+ - 5A Band of 10 Green (Sated & Average) Lizards.
+ - 5I Band of 5 Green (Sated & Average) Lizards.
+ - 6C Band of 10 Green (Peckish & Average) Lizards.
+ - 6E Band of 2 Green, 20 Grey (Sated & Average) Lizards.
+ - 6G Band of 10 Green (Sated & Average) Lizards.
+ - 7B Band of 10 Green (Peckish & Average) Lizards.
+ - 7F Band of 143 Green, 67 Grey (Sated & Average) Lizards.
+ - 7J Band of 47 Green (Hungry & Good) Lizards.
+
+ * Clans Ranking at end of Turn 8:
+
+ 01 -    905 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    754 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

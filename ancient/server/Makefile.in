@@ -1,0 +1,17 @@
+CFLAGS=@CFLAGS@ @DEFS@ -Wall
+LIBS=@LIBS@
+CC=@CC@
+LEX=flex++
+
+all: server connect parse
+
+server: server.o
+
+connect: connect.o
+
+parse: node.o lexicon.o main.o
+	$(CXX) node.o lexicon.o main.o -lfl -o parse
+
+lexicon.cc: lexicon.lex
+	$(LEX) lexicon.lex
+	mv lex.yy.cc lexicon.cc

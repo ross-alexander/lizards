@@ -1,0 +1,56 @@
+/Gameletter {(xx)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(1/1/1990)} def
+/saveobj save def
+/Shadow_Code {(rda)} def
+Map_Page
+-1169 140 Location
+(Raging Ross Clan World View for Lizards! Game xx Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+480 775 fer (1N) Small
+445 750 swp (1M) Small
+515 750 swp (1O) Small
+480 725 wat (2N) Small
+445 700 fer (2M) Small
+515 700 pla (2O) Small
+410 725 wat (2L) Small
+550 725 wat (2P) Small
+480 675 hden (3N) Small (rda) Owner (450) Troop_Number
+445 650 wat (3M) Small
+515 650 wat (3O) Small
+410 675 wat (3L) Small
+550 675 wat (3P) Small
+480 625 wat (4N) Small
+410 625 bru (4L) Small
+550 625 pla (4P) Small
+445 600 wat (4M) Small
+515 600 wat (4O) Small
+480 575 bru (5N) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(kea)} def
+Map_Page
+-1169 140 Location
+(Kill em all Clan World View for Lizards! Game xx Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+1005 750 wat (4AC) Small
+1005 700 pla (5AC) Small
+970 725 wat (5AB) Small
+1040 725 swp (5AD) Small
+935 700 gden (5AA) Small (Free) Owner
+1075 700 rui (5AE) Small
+1005 650 hden (6AC) Small (kea) Owner (450) Troop_Number
+970 675 wat (6AB) Small
+1040 675 pla (6AD) Small
+935 650 pla (6AA) Small
+1075 650 swp (6AE) Small
+970 625 wat (7AB) Small
+1040 625 fer (7AD) Small
+1005 600 wat (7AC) Small
+935 600 wat (7AA) Small
+1075 600 wat (7AE) Small
+970 575 pla (8AB) Small
+1040 575 wat (8AD) Small
+1005 550 wat (8AC) Small
+printing
+saveobj restore

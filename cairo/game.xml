@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<lizards>
+  <player startup="CUST1.MAP"/>
+  <player startup="CUST2.MAP"/>
+  <player startup="CUST3.MAP"/>
+  <player startup="CUST4.MAP"/>
+</lizards>

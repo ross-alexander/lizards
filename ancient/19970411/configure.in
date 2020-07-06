@@ -1,0 +1,6 @@
+AC_INIT(worldopen.c)
+AC_CONFIG_AUX_DIR(etc)
+AC_HEADER_STDC
+AC_CHECK_HEADERS(errno.h stdlib.h malloc.h string.h)
+AC_OUTPUT(Makefile liblizards/Makefile)
+

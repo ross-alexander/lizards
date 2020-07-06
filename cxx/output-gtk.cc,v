@@ -1,0 +1,326 @@
+head	1.1;
+access;
+symbols;
+locks
+	ralexand:1.1; strict;
+comment	@// @;
+
+
+1.1
+date	2006.04.21.14.24.25;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include <stdlib.h>
+#include <math.h>
+#include <libxml/tree.h>
+#include <gtk/gtk.h>
+#include <svg-cairo.h>
+#include "lizards.h"
+#include "hexlist.h"
+#include "output.h"
+
+#include "symbols/symbols.h"
+#include "symbols/symbols.c"
+
+gtk_t::gtk_t(world_t *w, int p_argc, char *p_argv[]) : output_t(w)
+{
+  argc = p_argc;
+  argv = p_argv;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- GObject stuff
+--
+---------------------------------------------------------------------- */
+
+typedef struct _SwampMap            SwampMap;
+typedef struct _SwampMapClass       SwampMapClass;
+
+struct _SwampMap
+{
+  GtkDrawingArea parent;
+  gtk_t *gtk;
+  int player;
+  cairo_surface_t *surface;
+  GdkPixbuf *px;
+  /* private */
+};
+
+struct _SwampMapClass
+{
+  GtkDrawingAreaClass parent_class;
+};
+
+#define TYPE_SWAMP_MAP             (swamp_map_get_type ())
+#define SWAMP_MAP(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_SWAMP_MAP, SwampMap))
+
+G_DEFINE_TYPE(SwampMap, swamp_map, GTK_TYPE_DRAWING_AREA);
+
+static gboolean swamp_map_expose (GtkWidget *smw, GdkEventExpose *event)
+{
+  SwampMap *sm = SWAMP_MAP(smw);
+  cairo_t *cr = gdk_cairo_create(smw->window);
+  cairo_set_source_surface(cr, sm->surface, 0, 0);
+  cairo_paint(cr);
+  cairo_destroy(cr);
+  return 0;
+}
+
+static gboolean swamp_map_configure(GtkWidget *smw, GdkEventConfigure* ev)
+{
+  SwampMap *sm = SWAMP_MAP(smw);
+
+  if (sm->surface == NULL)
+    {
+      sm->surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, 600, 600);
+      cairo_t *cr = cairo_create(sm->surface);
+      cairo_rectangle(cr, 0, 0, 600, 600);
+      cairo_set_source_rgb(cr, 1,1,0);
+      cairo_fill_preserve(cr);
+      cairo_stroke(cr);
+
+      sm->gtk->draw(cr, sm->player);
+
+      cairo_destroy(cr);
+      cairo_surface_flush(sm->surface);
+    }
+  return 1;
+}
+
+static void swamp_map_init (SwampMap *sm)
+{
+  sm->surface = NULL;
+}
+
+static void swamp_map_class_init (SwampMapClass *sm_class)
+{
+  GtkWidgetClass *widget_class;
+  widget_class = GTK_WIDGET_CLASS (sm_class);
+  widget_class->expose_event = swamp_map_expose;
+  widget_class->configure_event = swamp_map_configure;
+ }
+
+
+GtkWidget *swamp_map_new (gtk_t *g, int p)
+{
+  SwampMap *sm = SWAMP_MAP(g_object_new (TYPE_SWAMP_MAP, NULL));
+  sm->gtk = g;
+  sm->player = p;
+  return GTK_WIDGET(sm);
+}
+
+/* ----------------------------------------------------------------------
+--
+--
+--
+---------------------------------------------------------------------- */
+
+double fill[][3] = {
+  {0.1,0.1,0.9},
+  {0.1,0.8,0.2},
+  {0.7,0.4,0.1},
+  {0.9,1.0,0.9},
+  {0.8,0.8,0.0}};
+  
+svg_cairo_t *svg_outputs[sizeof(OutputOrder)];
+
+
+void gtk_t::draw(cairo_t *cr, int player)
+{
+  double r = 60.0;
+
+  hexlist_t* hexlist = new hexlist_t(world, player);
+  if (hexlist->cnt == 0)
+    return;
+
+  bbox_t box = hexlist->zero();
+
+  cairo_save(cr);
+  cairo_set_source_rgb(cr, 0.0, 0.0, 0.0);
+  cairo_select_font_face(cr, "Helvetica", CAIRO_FONT_SLANT_NORMAL, CAIRO_FONT_WEIGHT_NORMAL);
+  cairo_set_font_size(cr, 12.0);
+  cairo_set_line_width(cr, 0.5);
+
+  cairo_translate(cr, -(box.left-1.0) * r, -(box.top-1.0) * r);
+
+  cairo_save(cr);
+  cairo_scale(cr, r, r);
+  cairo_move_to(cr, box.left-1.0, box.top-1.0);
+  cairo_line_to(cr, box.right+1.0, box.top-1.0);
+  cairo_line_to(cr, box.right+1.0, box.bottom+1.0);
+  cairo_line_to(cr, box.left-1.0, box.bottom+1.0);
+  cairo_close_path(cr);
+  cairo_restore(cr);
+  cairo_set_line_width(cr, 1.0);
+  cairo_stroke(cr);
+
+  for (int work = 0; work < hexlist->cnt; work ++)
+    {
+      see_t *see = &hexlist->list[work];
+      hex_t *hex = world->gethex(see->x, see->y);
+
+      double cx = see->mx * r;
+      double cy = see->my * r;
+
+      double s3 = sqrt(3);
+      double r2 = r/2.0;
+      double s3r2 = s3 * r2;
+
+      cairo_save(cr);
+      cairo_translate(cr, cx, cy);
+
+      cairo_move_to(cr, -r2, -s3r2);
+      cairo_line_to(cr, +r2, -s3r2);
+      cairo_line_to(cr, +r, 0.0);
+      cairo_line_to(cr, +r2, +s3r2);
+      cairo_line_to(cr, -r2, +s3r2);
+      cairo_line_to(cr, -r, 0.0);
+      cairo_close_path(cr);
+
+      int color = hex->terrain;
+      cairo_save(cr);
+      cairo_set_source_rgb(cr, fill[color][0], fill[color][1], fill[color][2]);
+      cairo_fill_preserve(cr);
+      cairo_restore(cr);
+
+      cairo_stroke(cr);
+
+      cairo_save(cr);
+      cairo_translate(cr, 0.0, r/2.0);
+
+      switch(order(hex))
+	{
+	case OUTPUT_BRIDGE:
+	  break;
+	case OUTPUT_RAFT:
+	  break;
+	case OUTPUT_BUILDING:
+	  break;
+	case OUTPUT_HOME_DEN:
+	case OUTPUT_EMPTY_DEN:
+	case OUTPUT_RED_DEN:
+	case OUTPUT_GREEN_DEN:
+	case OUTPUT_GREY_DEN:
+	case OUTPUT_BLACK_DEN:
+	case OUTPUT_YELLOW_DEN:
+	  cairo_scale(cr, r / 150.0, -r / 150.0);
+	  den(cr);
+	  break;
+	case OUTPUT_RUIN:
+	  cairo_scale(cr, r / 150.0, -r / 150.0);
+	  ruin(cr);
+	  break;
+	case OUTPUT_FERTILE:
+ 	  cairo_scale(cr, r / 150, r / 150);
+	  cairo_translate(cr, -100, -200);
+	  svg_cairo_render(svg_outputs[OUTPUT_FERTILE], cr);
+	  break;
+	case OUTPUT_VOLCANO:
+	  break;
+	case OUTPUT_WHIRLPOOL:
+	  break;
+	case OUTPUT_TEMPLE:
+	  cairo_scale(cr, r / 150.0, r / 150.0);
+	  cairo_translate(cr, -100, -200);
+	  svg_cairo_render(svg_outputs[OUTPUT_TEMPLE], cr);
+	  //	  temple(cr);
+	  break;
+	case OUTPUT_CURSED:
+	  break;
+	case OUTPUT_PLAIN:
+	  cairo_scale(cr, r / 150.0, -r / 150.0);
+	  plain(cr);
+	  break;
+	case OUTPUT_SWAMP:
+	  cairo_scale(cr, r / 150, r / 150);
+	  cairo_translate(cr, -100, -200);
+	  svg_cairo_render(svg_outputs[OUTPUT_SWAMP], cr);
+	  break;
+	case OUTPUT_PEAK:
+	  break;
+	case OUTPUT_WATER:
+	  break;
+	case OUTPUT_SCRUB:
+	  cairo_scale(cr, r / 150.0, -r / 150.0);
+	  scrub(cr);
+	  break;
+	default:
+	  break;
+	}
+      cairo_restore(cr);
+
+      cairo_text_extents_t xt;
+      cairo_text_extents(cr, hex->title, &xt);
+      cairo_move_to(cr, -xt.width / 2, sqrt(3) / 2 * -r + xt.height + 2);
+      cairo_show_text(cr, hex->title);
+      cairo_restore(cr);
+    }
+  cairo_restore(cr);
+}
+
+void gtk_t::display()
+{
+  int width = 600;
+  int height = 600;
+
+  gtk_init (&argc, &argv);
+
+  svg_cairo_create(&svg_outputs[OUTPUT_SWAMP]);
+  if (svg_cairo_parse(svg_outputs[OUTPUT_SWAMP], "swamp.svg"))
+    {
+      perror("svg_cairo_parse");
+      exit(1);
+    }
+
+  svg_cairo_create(&svg_outputs[OUTPUT_FERTILE]);
+  if (svg_cairo_parse(svg_outputs[OUTPUT_FERTILE], "fertile.svg"))
+    {
+      perror("svg_cairo_parse");
+      exit(1);
+    }
+
+  svg_cairo_create(&svg_outputs[OUTPUT_TEMPLE]);
+  if (svg_cairo_parse(svg_outputs[OUTPUT_TEMPLE], "temple.svg"))
+    {
+      perror("svg_cairo_parse");
+      exit(1);
+    }
+
+  GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  GtkWidget *notebook = gtk_notebook_new();
+  gtk_container_add(GTK_CONTAINER(window), notebook);
+
+  for (int i = 1; i < world->num_players; i++)
+    {
+      char *label_text;
+      GtkWidget *sm, *vbox, *label;
+      vbox = gtk_vbox_new(FALSE, 0);
+
+      label_text = g_strdup_printf("Player %d - %s", i, world->player[i]->clan);
+      label = gtk_label_new(label_text);
+
+      sm = swamp_map_new (this, i);
+      gtk_widget_set_size_request(GTK_WIDGET(sm), width, height);
+
+      gtk_box_pack_start(GTK_BOX(vbox), label, 0, 0, 0);
+      gtk_box_pack_start(GTK_BOX(vbox), sm, 1, 1, 0);
+ 
+     gtk_notebook_append_page(GTK_NOTEBOOK(notebook), vbox, NULL);
+    }
+  g_signal_connect (G_OBJECT (window), "destroy", G_CALLBACK (gtk_main_quit), NULL);
+  gtk_widget_show_all (window);
+  gtk_main ();
+}
+@

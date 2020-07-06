@@ -1,0 +1,984 @@
+%!PS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ps2svg : A PostScript programme to convert PostScript files to SVG.
+%
+% Copyright 2001.  Ross Inglis (ringlis@ipv.com). All Rights Reserved.
+%
+% The usual legal stuff....
+%
+% This file may be freely copied and redistributed as long as:
+%   1) This entire notice continues to be included in the file, 
+%   2) If the file has been modified in any way, a notice of such
+%      modification is conspicuously indicated.
+%
+% THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES,
+% INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+% FITNESS FOR A PARTICULAR PURPOSE ARE  DISCLAIMED. IN NO EVENT SHALL THE
+% CREATOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+% OR CONSEQUENTIAL  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT  OF
+% SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR  PROFITS; OR BUSINESS
+% INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+% STRICT LIABILITY, OR TORT (INCLUDING  NEGLIGENCE OR  OTHERWISE) ARISING IN ANY
+% WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% What it does:
+%
+%    Reads an input PostScript program and converts all stroke,fill and show operators
+%    into SVG.
+%
+% What it doesn't do:
+%
+%    Any kind of font handling. I wrote it to convert some hand-coded PostScript
+%    diagrams to SVG. I wasn't bothered about font usage as that was minimal. I may
+%    try to fix this at some point (its certainly possible).
+%
+%    PostScript code that directly calls the 'setmatrix' operator will break this program.
+%
+%
+% $Revision: 7 $
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ten step usage guide below....follow the (numbers)...
+%
+/svgdict 40 dict def svgdict begin
+
+%
+% (1) What you need.....
+%
+%       (a) This file (obviously)
+%       (b) A PostScript interpreter. Best bet is GhostScript. If you are a real masochist
+%           you may be able to use a locally attached printer provided you have the means
+%           of collecting its comm's port output (and no, I haven't tried it). Note that this
+%           code writes to a file (see step (4) below). That means Ghostscript's SAFER option
+%           must NOT be used, it disables all file opens in write mode.
+%       (c) A PostScript file to convert
+
+%
+% (2) Copy your postscript file to a place where you can edit it.
+% (3) Add this file (the one you are looking at) to the FRONT of the postscript file.
+%     When you are done come back to step (4).
+%
+
+%
+% (4) Decide where you want the output to be sent. If using Ghostscript, a file is
+%     the best bet. the default below is for a Windows system. If using a printer try %stdout.
+%
+/opath (ps.svg) def
+% /opath (%stdout) def
+
+%
+% (5) Pick a font for text. Sorry, at the moment ps2svg does not even try to catch font
+%     changes, all text will be output using this same font. You can always tweak the output
+%     manually later.
+%
+% SVG Font that is applied to ALL text
+%
+/FontFamily (Times-Roman) def
+/FontSize 10 def
+
+%
+% (6) Set ImageSize (to X Y) if you know the INPUT bounding box (in points). 
+%     If you don't know, leave this comment this out and ps2svg will assume the image
+%     fills the page of the output device.
+%
+% /ImageSize { 400 200 } def
+/ImageSize { 594 840 } def	% Portrait A4'ish
+
+%
+% (7) Set to true to rotate page 90-degrees anticlockwise for a landscape PostScript file
+%
+/Landscape false def
+%/Landscape true def
+
+%
+% (8) Set to true if you want the output resizeable. Set to false if fixed-size.
+%     This only changes the svg preamble. You can always edit the SVG afterwards to fix it.
+%
+/Scaled true def
+
+%
+% (9) Enabling debug generates SVG id's for all paths and lots of %stderr output
+%     Its not terribly useful, also, if you are talking to a printer the output will
+%     mess up your SVG.
+%
+/debug false def			% Generates SVG id's and lots of stuff on path defined below
+/dout (%stderr) (w) file def
+/dout (debug.txt) (w) file def
+
+%
+% (10) Run the file through your PostScript interpreter. (See comments in step (1) about
+%      GhostScript's SAFER option. Test the output in your handy SVG viewer.
+%
+
+%
+% (10A) If (usually as a result of direct setmatrix calls) you get readable output, but
+%       transformed in some silly way (rotated or flipped) you can define an overriding
+%       global matrix here that will be applied to all SVG output.  Otherwise leave
+%       DocMatrix undefined.
+%
+% I used this example to correct a Microsoft Excel 'print to file'
+%
+%/DocMatrix { 
+%	matrix 180 exch rotate -850 -600 matrix translate 1 index dup concatmatrix pop
+%} def
+
+%
+% (10B) In a similar way, FontMatrix can be used to coerce text back into a readable
+%       transformation. It will be applied to all <text/> elements before output.
+%
+% Also used to correct a Microsoft Excel output document
+%
+%/FontMatrix  5 -5 matrix scale def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% No more configuration below this line.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Internal variables. Don't touch.
+%
+/ts 40 string def
+/svgid 1 def
+/ofile opath (w) file def
+/defaultstroke { 0 0 0 } def
+/defaultfontfill { 0 0 0 } def
+/defaultstrokewidth 1 def
+/defaultmiterlimit 10 def
+
+%
+% Current stroke state
+%
+/svgstroke { 0 0 0 } def
+/svgstrokewidth 1 def
+/svglinecap 0 def
+/svglinejoin 0 def
+/svgmiterlimit defaultmiterlimit def
+
+%
+% ps2svg matrix stack
+%
+/svggsdepth 100 def		% max depth
+/svgss svggsdepth array def
+% Init the matrix stack with identity matrices
+0 1 svggsdepth 1 sub { svgss exch matrix put } for
+/svgsp 0 def			% SP
+
+%
+% Output primitives
+%
+/rval 10000 def		% Output to 4 D.P.
+/sod { 
+	cvr rval mul cvi 
+	dup rval mod 0 eq { rval div cvi } { cvr rval div } ifelse
+	ts cvs ofile exch writestring } def			% output number to .rval precision
+/soi { cvi ts cvs ofile exch writestring } def	% output integer
+/svgnl { ofile 13 write ofile 10 write } def	% output newline
+/sos { ofile exch writestring } def				% output string
+/sol { sos svgnl } def							% output string followed by newline
+/soxy { 1 index sod (,) sos sod pop } def		% output X,Y pair
+/somatrix { (matrix\() sos 
+	dup 0 get sod (,) sos 
+	dup 1 get sod (,) sos
+	dup 2 get sod (,) sos 
+	dup 3 get sod (,) sos 
+	dup 4 get sod (,) sos 
+	5 get sod (\)) sos
+} def											% output matrix, svg style
+/sorgb {
+	(rgb\() sos 3 -1 roll 255 mul soi (,) sos 
+	exch 255 mul soi (,) sos 255 mul soi (\)) sos
+} def											% output rgb value, svg style
+
+%
+% String escaping
+%
+/esos2 {
+		{ (&) search { sos pop (&amp;) sos } { sos exit } ifelse } loop
+} def
+/esos {
+		{ (<) search { esos2 pop (&lt;) sos } { esos2 exit } ifelse } loop
+} def
+
+% Debug output
+/ds { dout exch writestring } def
+/di { ( ) ds ts cvs dout exch writestring } def
+/dl { dout 13 write dout 10 write } def
+/dm {
+	dup 0 get di (,) ds
+	dup 1 get di (,) ds
+	dup 2 get di (,) ds
+	dup 3 get di (,) ds
+	dup 4 get di (,) ds
+	5 get di
+} def
+
+/simatrix matrix initmatrix def					% Initial matrix
+
+% Figure out the page size
+svgdict /ImageSize known {
+	ImageSize /svgvy exch def /svgvx exch def
+} {
+	clippath pathbbox /sury exch def /surx exch def /slly exch def /sllx exch def
+	/svgvx surx sllx sub def
+	/svgvy sury slly sub def
+} ifelse
+
+% The matrix that translates the original coordinate scheme into SVG coords
+/svgcmatrix [ 1 0 0 -1 0 svgvy ] def 
+
+Landscape {
+	-90 matrix rotate svgcmatrix svgcmatrix concatmatrix pop
+	svgvy neg 0 matrix translate svgcmatrix svgcmatrix concatmatrix pop
+} if
+
+% The 'currently applied' svg output matrix
+/svgomatrix [ 1 0 0 1 0 0 ] def
+/svgfmatrix [ 1 0 0 -1 0 0 ] def
+
+% No output matrix currently applied
+/inmatrix false def
+
+% No stroke group currently applied
+/instroke false def
+
+/writeprologue {
+	(<?xml version="1.0" standalone="no"?>) sol svgnl
+	(<!-- Translated from PostScript by ps2svg.ps. Ross Inglis. ringlis@ipv.com -->) sol svgnl
+	(<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">) sol svgnl
+	(<svg width=") sos
+	Scaled {
+		(100%) sos
+	} {
+		Landscape { svgvy } { svgvx } ifelse soi (") sos
+		( height=") sos Landscape { svgvx } { svgvy } ifelse soi
+	} ifelse
+	(") sos( viewBox="0 0 ) sos 
+	Landscape { svgvy sod ofile 32 write svgvx sod } { svgvx sod ofile 32 write svgvy sod } ifelse
+	(" stroke=") sos
+	defaultstroke sorgb (" fill="none">) sol
+	(<style type="text/css">text {font-family:) sos FontFamily sos
+	(;font-size:) sos FontSize soi (;fill:black;stroke:none}</style>) sol
+
+	(<g stroke-miterlimit="10") sos
+		svgdict /DocMatrix known {
+			( transform=") sos DocMatrix somatrix (") sos
+		} if
+	(>) sol
+
+} def
+
+/writeepilogue {
+	exitstroke
+	inmatrix { (</g>) sol } if
+	(</g>) sol
+	(</svg>) sol
+} def
+
+% Hmm. Gotta be a better way :-)
+/eqmatrix {
+	dup 0 get 2 index 0 get eq {
+		dup 1 get 2 index 1 get eq {
+			dup 2 get 2 index 2 get eq {
+				dup 3 get 2 index 3 get eq {
+					dup 4 get 2 index 4 get eq {
+						dup 5 get 2 index 5 get eq {
+							true
+						} {
+							false
+						} ifelse
+					} {
+						false
+					} ifelse
+				} {
+					false
+				} ifelse
+			} {
+				false
+			} ifelse
+		} {
+			false
+		} ifelse
+	} {
+		false
+	} ifelse
+	exch pop exch pop
+} def
+
+/eqrgb {
+	3 index eq { 
+		3 index eq {
+			3 index eq {
+				pop pop pop true
+			} { 
+				pop pop pop false
+			} ifelse
+		} { 
+			pop pop pop pop false
+		} ifelse
+	} {
+		pop pop pop pop pop false
+	} ifelse
+} def
+
+/checkmatrix {
+	debug { (checkmatrix id=) ds svgid di (=>) ds svgcmatrix dm ( ==) ds svgomatrix dm dl } if
+	svgcmatrix svgomatrix eqmatrix not {
+		exitstroke
+		inmatrix { (</g>) sol } if
+		(<g transform=") sos svgcmatrix somatrix (">) sol
+		/inmatrix true def
+		svgcmatrix svgomatrix copy pop
+		debug { (svgomatrix set to svgcmatrix) ds dl } if
+	} if
+} def
+
+/exitstroke {
+	instroke {
+		(</g>) sol
+		/instroke false def
+	} if
+	/svgstroke { 0 0 0 } def
+	/svgstrokewidth 1 def
+	/svglinecap 0 def
+	/svglinejoin 0 def
+	/svgmiterlimit defaultmiterlimit def
+} def
+
+%
+% Check current stroke settings and apply group if not default
+%
+/checkstroke {
+	% Check settings against current stroke group
+	currentrgbcolor svgstroke eqrgb not 
+	currentlinewidth svgstrokewidth eq not
+	currentlinecap svglinecap eq not
+	currentlinejoin svglinejoin eq not
+	currentmiterlimit svgmiterlimit eq not
+	or or or or {
+		% Settings did not match current group. Exit and check again
+		exitstroke
+		currentrgbcolor svgstroke eqrgb not 
+		currentlinewidth svgstrokewidth eq not
+		currentlinecap svglinecap eq not
+		currentlinejoin svglinejoin eq not
+		currentmiterlimit svgmiterlimit eq not
+		or or or or {
+			(<g) sos
+			currentrgbcolor defaultstroke eqrgb not {
+				( stroke=") sos currentrgbcolor sorgb (") sos 
+				/svgstroke { currentrgbcolor } def
+			} if
+			currentlinewidth defaultstrokewidth eq not {
+				( stroke-width=") sos currentlinewidth sod (") sos 
+				/svgstrokewidth currentlinewidth def
+			} if
+			currentlinecap 0 eq not {
+				( stroke-linecap=") sos
+					currentlinecap 1 eq {
+						(round) sos
+					} { 
+						currentlinecap 2 eq {
+							(square) sos
+						} {
+							% shouldn't get here, but I have to put something
+							(butt) sos
+						} ifelse
+					} ifelse
+				(") sos
+				/svglinecap currentlinecap def
+			} if
+			currentlinejoin 0 eq not {
+				( stroke-linejoin=") sos
+					currentlinejoin 1 eq {
+						(round) sos
+					} { 
+						currentlinejoin 2 eq {
+							(bevel) sos
+						} {
+							% shouldn't get here, but I have to put something
+							(miter) sos
+						} ifelse
+					} ifelse
+				(") sos
+				/svglinejoin currentlinejoin def
+			} if
+			currentmiterlimit 10 eq not {
+				( stroke-miterlimit=") sos
+				currentmiterlimit soi
+				(") sos
+				/svgmiterlimit currentmiterlimit def
+			} if
+			(>) sol
+			/instroke true def
+		} if
+	} if
+} def
+
+%
+% Apply font colour if NOT black
+%
+/checkfontfill {
+	currentrgbcolor defaultfontfill eqrgb not { ( style="fill:) sos currentrgbcolor sorgb (") sos } if
+} def
+
+% Dash is assumed to be rare, so is applied on a per-stroke basis
+/checkdash {
+	currentdash pop length 0 eq { false } { true } ifelse {
+		( stroke-dasharray=") sos
+		currentdash pop
+		0 1 2 index length 1 sub { 1 index exch get soi } for pop (") sos
+	} if
+} def
+
+%
+% Link to original output functions
+%
+/Show { show } bind def
+/Ashow { ashow } bind def
+/Awidthshow { awidthshow } bind def
+/Kshow { kshow } bind def
+/Widthshow { widthshow } bind def
+/Stroke { stroke } bind def
+/Fill { fill } bind def
+/Eofill { eofill } bind def
+/Scale { scale } bind def
+/Rotate { rotate } bind def
+/Translate { translate } bind def
+/Gsave { gsave } bind def
+/Grestore { grestore } bind def
+/Setmatrix { setmatrix } bind def
+/Concatmatrix { concatmatrix } bind def
+/Concat { concat } bind def
+
+% Level-2
+/xshow where {
+	/islvl2 true def
+	pop
+	/Xshow { xshow } bind def
+	/Xyshow { xyshow } bind def
+} {
+	/islvl2 false def
+} ifelse
+
+end
+
+%
+% Overrides
+%
+/stroke { 
+	svgdict begin
+		checkmatrix
+		checkstroke
+		(<path) sos
+		debug { ( id="p) sos svgid cvi sod (") sos /svgid svgid 1 add def } if
+		checkdash
+		( d=") sos 
+		{ (M) sos soxy } %move
+		{ (L) sos soxy } %line
+		{ (C) sos 6 4 roll soxy (,) sos 4 2 roll soxy (,) sos soxy } %curve
+		{ (Z) sos } %close
+		pathforall ("/>) sol
+	Stroke end
+} def
+
+/fill { 
+	svgdict begin
+		checkmatrix
+		(<path) sos
+		debug { ( id="p) sos svgid cvi sod (") sos /svgid svgid 1 add def } if
+		( stroke="none" fill=") sos currentrgbcolor sorgb
+		(" d=") sos /svgid svgid 1 add def
+		{ (M) sos soxy } %move
+		{ (L) sos soxy } %line
+		{ (C) sos 6 4 roll soxy (,) sos 4 2 roll soxy (,) sos soxy } %curve
+		{ (Z) sos } %close
+		pathforall ("/>) sol
+	Fill end
+} def
+% Ditto, but uses evenodd fill-rule
+/eofill { 
+	svgdict begin
+		checkmatrix
+		(<path) sos
+		debug { ( id="p) sos svgid cvi sod (") sos /svgid svgid 1 add def } if
+		( stroke="none" fill-rule="evenodd" fill=") sos currentrgbcolor sorgb
+		(" d=") sos /svgid svgid 1 add def
+		{ (M) sos soxy } %move
+		{ (L) sos soxy } %line
+		{ (C) sos 6 4 roll soxy (,) sos 4 2 roll soxy (,) sos soxy } %curve
+		{ (Z) sos } %close
+		pathforall ("/>) sol
+	Eofill end
+} def
+
+/CmnShow {
+	checkmatrix
+	/svgid svgid 1 add def
+	% Because Fonts are 'upside-down' in SVG. I apply an invert scale after the translate
+	(<text transform="translate\() sos currentpoint soxy (\) ) sos 
+	currentdict /FontMatrix known {
+		FontMatrix svgfmatrix matrix concatmatrix somatrix
+	} { 
+		svgfmatrix somatrix
+	} ifelse
+	(") sos 
+	checkfontfill
+	(>) sos
+	dup esos (</text>) sol
+} def
+/show { svgdict begin CmnShow Show end } def
+/ashow { svgdict begin CmnShow Ashow end } def
+/awidthshow { svgdict begin CmnShow Awidthshow end } def
+/kshow { svgdict begin CmnShow Kshow end } def
+/widthshow { svgdict begin CmnShow Widthshow end } def
+svgdict begin islvl2 end {
+	/xshow { exch svgdict begin CmnShow exch Xshow end } def
+	/xyshow { exch svgdict begin CmnShow exch Xyshow end } def
+} if
+
+/scale { 
+	svgdict begin 
+	dup type /arraytype ne {
+		debug { (scale) ds 2 copy exch di di svgcmatrix dm } if 
+		2 copy matrix Scale svgcmatrix svgcmatrix Concatmatrix pop
+		debug { ( =) ds svgcmatrix dm dl } if
+	} if
+	Scale end } def
+/rotate { svgdict begin 
+	dup type /arraytype ne {
+		debug { (rotate) ds dup di svgcmatrix dm } if
+		dup matrix Rotate svgcmatrix svgcmatrix Concatmatrix pop
+		debug { ( =) ds svgcmatrix dm dl } if
+	} if
+	Rotate end } def
+/translate { 
+	svgdict begin 
+	dup type /arraytype ne {
+		debug { (translate) ds 2 copy exch di di svgcmatrix dm } if
+		2 copy matrix Translate svgcmatrix svgcmatrix Concatmatrix pop
+		debug { ( =) ds svgcmatrix dm dl } if
+	} if
+	Translate end } def
+/gsave { svgdict begin
+	debug { (gsave) ds dl } if
+	svgsp svggsdepth ge { stackoverflow } if
+	svgss svgsp get svgcmatrix exch copy pop
+	debug { (pushed matrix) ds svgcmatrix dm dl } if
+	/svgsp svgsp 1 add def
+	Gsave end } def
+/grestore { svgdict begin debug { (grestore) ds dl } if
+	svgsp 0 le { stackunderflow } if
+	/svgsp svgsp 1 sub def
+	svgss svgsp get svgcmatrix copy pop
+	debug { (popped matrix) ds svgcmatrix dm dl } if
+	Grestore end } def
+/setmatrix { svgdict begin Setmatrix
+	(SETMATRIX CALLED! Results will be incorrect.) ds dl
+	% matrix currentmatrix matrix invertmatrix 
+	% simatrix svgcmatrix Concatmatrix pop
+	end } def
+/concatmatrix { svgdict begin Concatmatrix end } def
+/concat { svgdict begin
+	dup svgcmatrix svgcmatrix Concatmatrix pop
+	Concat end } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+/pstosvg {
+	svgdict begin writeprologue end
+	currentfile cvx exec
+	svgdict begin 
+	writeepilogue
+	ofile closefile
+	end
+} def
+
+pstosvg
+
+%
+% End of ps2svg.ps
+%
+/rlt  /rlineto load def
+/rmt /rmoveto load def
+/cs  /closepath load def
+/st  /stroke load def
+/mt  /moveto load def
+/bd  /bind load def
+/sh  /show load def
+/lt  /lineto load def
+/wd  /widthshow load def
+/fp { gsave fill grestore } bind def
+/rgb /setrgbcolor load def
+%	Swamp with hex included.
+/swamp {
+% 125 0 mt 375 0 lt 475 250 lt 375 500 lt 125 500 lt 25 250 lt 125 0 lt st
+gsave
+0 0.7 0 rgb
+175 100 mt 325 100 lt st
+250 100 mt 180 160 lt st
+250 100 mt 320 130 lt st
+320 180 mt 310 180 lt 290 190 lt 290 200 lt 310 210 lt 325 190 lt 325 180 lt  310 180 lt gsave 0.5 0.9 0.4 rgb fp grestore st
+250 100 mt 250 230 lt 320 180 lt st
+grestore
+} bd def
+
+%	Temple only without a hex.
+/temple { 125 100 mt 165 100 lt st
+145 100 mt 205 180 lt 285 180 lt 365 100 lt 345 100 lt 285 180 lt st
+%	Dome on top.
+245 185 mt 245 185 30 356 185 arc gsave 0.9 0.6 0.6 rgb fill grestore st
+245 185 mt 245 185 25 0 80 arc st
+%	 
+375 100 mt 325 100 lt st 
+235 180 mt 205 100 lt st 
+255 180 mt 275 100 lt st
+%	Left side of steaps 
+235 180 mt 195 100 lt 205 100 lt st 
+%	Steaps.
+210 100 mt 270 100 lt st 
+213 120 mt 267 120 lt st 
+220 140 mt 260 140 lt st 
+230 160 mt 255 160 lt st 
+} bd def 
+%	End of temple.
+
+%	Fertile without hex.
+/fertile {
+    0.8 0.8 0.0 rgb
+    180 100 mt 180 180 lt 180 150 lt 170 170 lt 160 170 lt 160 160 lt 180 150 lt 190 170 lt 190 160 lt 180 150 lt 180 130 lt 170 150 lt 160 150 lt 160 140 lt 180 130 lt 190 150 lt 200 150 lt 180 130 lt st
+250 100 mt 250 200 lt 250 180 lt 240 200 lt 230 200 lt 230 190 lt 250 180 lt 250 170 lt 260 190 lt 270 190 lt 270 180 lt 250 170 lt 250 160 lt 240 180 lt 230 180 lt 230 170 lt 250 160 lt 250 150 lt 260 170 lt 270 170 lt 270 160 lt 250 150 lt 250 150 lt 240 160 lt 230 160 lt 230 150 lt 250 140 lt 250 120 lt 240 140 lt 230 140 lt 230 130 lt 250 120 lt st
+320 100 mt 320 170 lt 320 150 lt 310 170 lt 300 170 lt 300 160 lt 320 150 lt 320 140 lt 330 160 lt 340 160 lt 340 150 lt 320 140 lt 320 130 lt 310 150 lt 300 150 lt 300 140 lt 320 130 lt 320 120 lt 330 140 lt 340 140 lt 340 130 lt 320 120 lt st } bd def
+
+%	Mountains with hex.
+/hill {
+% 125 0 mt 375 0 lt 475 250 lt 375 500 lt 125 500 lt 25 250 lt 125 0 lt st
+120 100 mt 200 200 lt 225 155 lt st 200 115 mt 300 250 lt 400 120 lt st 300 250 mt 250 144 lt st 300 250 mt 270 160 lt st 300 250 mt 275 175 lt st } bd def
+
+%	Volcano with hex.
+/volcano {
+% 125 0 mt 375 0 lt 475 250 lt 375 500 lt 125 500 lt 25 250 lt 125 0 lt st
+120 100 mt 200 200 lt 225 155 lt st 200 195 mt 200 165 lt st 200 115 mt 275 220 lt 325 230 lt 400 120 lt st 285 220 mt 250 144 lt st 295 220 mt 270 160 lt st 300 230 mt 275 175 lt st 310 230 mt 300 200 lt st 320 230 mt 340 180 lt st 315 250 mt 250 250 lt st 230 250 mt 130 250 lt st 285 235 mt 85 235 lt st 275 223 mt 120 223 lt st 270 210 mt 240 210 lt st 220 210 mt 100 210 lt st } bd def
+
+%	Plains hex.
+/plain { 180 100 mt 180 140 lt st 190 100 mt 190 130 lt st 210 100 mt 210 150 lt st 220 100 mt 220 130 lt st 220 140 mt 220 150 lt st 240 100 mt 240 140 lt st 250 100 mt 250 170 lt st 270 100 mt 270 140 lt st 290 100 mt 290 140 lt st 320 100 mt 320 160 lt st } bd def
+
+%	Cursed without hex.	
+/cursed { 
+125 160 mt 220 165 lt 320 160 lt st 
+125 150 mt 320 150 lt st 
+145 140 mt 310 140 lt st 
+150 130 mt 220 130 lt st 
+135 120 mt 275 120 lt st 
+145 100 mt 220 110 lt 275 100 lt st } bd def
+
+/raftfill { 170 110 mt 230 170 lt 350 170 lt 350 160 lt 290 100 lt 170 100 lt 170 110 lt cs fill 
+} bd def
+
+%	Normal raft.
+/raft { 170 110 mt 230 170 lt 350 170 lt 350 160 lt 290 100 lt 170 100 lt 170 110 lt st 
+170 110 mt 290 110 lt 350 170 lt st 
+190 100 mt 190 110 lt 250 170 lt st 
+210 100 mt 210 110 lt 270 170 lt st 
+230 100 mt 230 110 lt 290 170 lt st 
+250 100 mt 250 110 lt 310 170 lt st 
+270 100 mt 270 110 lt 330 170 lt st } bd def
+
+%	????  (don't know what this does?)
+/scrubold { 170 100 mt 165 120 lt 167 120 lt 170 110 lt 170 130 lt 172 128 lt 170 100 lt st 200 100 mt 200 120 lt 190 130 lt 190 140 lt 190 130 lt 200 140 lt st 200 110 mt 230 130 lt st 230 100 mt 240 120 lt st 250 100 mt 250 120 lt 270 130 lt 255 120 lt 250 130 lt 260 140 lt st 270 100 mt 280 130 lt st 310 100 mt 310 120 lt 300 120 lt 300 100 lt 310 100 lt cs fill 310 115 mt 320 115 lt 330 125 lt 330 130 lt 310 150 lt 300 150 lt 290 140 lt 285 120 lt 290 115 lt 300 115 lt st 310 125 mt 310 130 lt 320 130 lt 310 125 lt cs fill 345 100 mt 345 120 lt st } bd def
+
+
+
+%	New Scrub
+%	Base line (trees are numbered from left to right)
+/scrub { 170 100 mt 325 100 lt st 
+%	Tree trunk #1
+185 100 mt 175 160 lt 180 160 lt 190 100 lt st
+%	Buch on tree #1
+170 160 mt 165 155 lt 160 165 lt 160 175 lt 165 180 lt 175 190 lt 185 190 lt 185 185 lt 195 175 lt 195 150 lt 185 160 lt 175 160 lt st
+%	Branches on tree #1
+185 125 mt 190 125 lt 190 130 lt st
+%	Tree #2 (stump)
+215 100 mt 210 110 lt 215 145 lt 215 110 lt 220 100 lt cs fill 
+%	Branches on tree #2
+215 110 mt 225 120 lt st
+%	Tree #3 (stick tree)
+245 100 mt 245 120 lt 240 130 lt 250 140 lt 250 150 lt st 240 130 mt 235 135 lt 235 145 lt 230 150 lt 230 165 lt st
+%	Tree #4 (tree with bush on top) (note the top of the tree in Number 2 below)
+265 100 mt 260 105 lt 260 120 lt 265 140 lt 260 160 lt 265 160 lt 275 135 lt 270 135 lt 265 120 lt 265 105 lt 270 100 lt 265 100 lt cs fill
+255 165 mt 255 160 lt 250 170 lt 250 160 lt 240 160 lt 245 165 lt 245 175 lt 250 185 lt 255 185 lt 255 195 lt 265 195 lt 265 185 lt 270 190 lt 280 190 lt 280 185 lt 285 180 lt 285 175 lt 295 175 lt 295 165 lt 285 155 lt 280 165 lt 260 165 lt st
+%	Tree #5 (tree on right side)
+305 100 mt 305 115 lt 310 125 lt 310 130 lt 302 135 lt 300 155 lt 305 140 lt 315 135 lt 320 150 lt 320 165 lt 315 185 lt 320 185 lt 325 165 lt 325 150 lt 310 115 lt 310 100 lt 310 100 lt cs fill
+} bd def
+%	End of Scrub.
+%	Gray stuff for Scrub hex.
+/one  {
+170 160 mt 165 155 lt 160 165 lt 160 175 lt 165 180 lt 175 190 lt 185 190 lt 185 185 lt 195 175 lt 195 150 lt 185 160 lt 175 160 lt cs fill
+} bd def
+/two  {
+255 165 mt 255 160 lt 250 170 lt 250 160 lt 240 160 lt 245 165 lt 245 175 lt 250 185 lt 255 185 lt 255 195 lt 265 195 lt 265 185 lt 270 190 lt 280 190 lt 280 185 lt 285 180 lt 285 175 lt 295 175 lt 295 165 lt 285 155 lt 280 165 lt 260 165 lt cs fill
+} bd def
+
+%
+/blackbridge { 150 110 mt 150 120 lt 220 150 lt 280 150 lt 350 120 lt 350 120 lt st 220 150 mt 220 140 lt st 280 150 mt 280 140 lt st 150 100 mt 220 100 20 180 0 arcn 280 100 20 180 0 arcn 350 100 lt 350 110 lt 280 140 lt 220 140 lt 150 110 lt 150 100 lt cs fill } bd def   
+
+%	Bridge
+/whitebridge { 150 110 mt 150 120 lt 220 150 lt 280 150 lt 350 120 lt 350 120 lt st 220 150 mt 220 140 lt st 280 150 mt 280 140 lt st 150 100 mt 220 100 20 180 0 arcn 280 100 20 180 0 arcn 350 100 lt 350 110 lt 280 140 lt 220 140 lt 150 110 lt 150 100 lt st cs } bd def   
+
+%	Whirlpool without hex.
+
+/whirlpool {
+2.5 2.5 scale
+gsave
+0.0 0.0 0.6 rgb
+40 58 mt 30 56 lt 20 48 lt 18 40 lt 18 30 lt 22 24 lt 34 18 lt st 
+50 56 mt 60 52 lt 68 46 lt 72 38 lt 70 30 lt 66 22 lt 60 16 lt 50 14 lt st 
+54 50 mt 40 52 lt 36 52 lt 30 46 lt 26 42 lt 26 36 lt 30 30 lt 36 26 lt 40 26 lt st 
+56 46 mt 60 42 lt 62 36 lt 62 28 lt 58 22 lt 54 20 lt 46 20 lt st 
+44 46 mt 40 46 lt 36 44 lt 34 40 lt 34 36 lt 38 32 lt 42 30 lt 46 30 lt 50 32 lt 52 36 lt 52 38 lt st 
+46 42 mt 50 42 lt 54 40 lt 56 36 lt 56 32 lt 54 28 lt 48 26 lt st
+grestore
+} bd def
+
+%	Ruins without hex.
+/ruin { 160 100 mt 340 100 lt 340 120 lt 310 140 lt 320 130 lt 290 130 lt 290 135 lt 305 135 lt 305 145 lt 290 145 lt 290 150 lt 310 150 lt 330 130 lt st 290 130 mt 270 130 lt 270 120 lt 260 120 lt 260 110 lt 250 110 lt 250 120 lt 240 120 lt 250 115 lt 240 115 lt 240 120 lt 245 115 lt 230 115 lt 230 120 lt 225 120 lt 225 130 lt 235 130 lt 230 135 lt 225 135 lt 225 150 lt 220 150 lt 220 100 lt 220 120 lt 210 120 lt 210 130 lt 200 130 lt 200 100 lt 195 100 lt 195 130 lt 195 120 lt 210 120 lt 190 120 lt 185 115 lt 180 120 lt 180 110 lt 175 110 lt 175 130 lt 170 130 lt 170 100 lt 165 100 lt 170 120 lt 160 110 lt 160 100 lt st } bd def
+
+%	Half built dens without hex.
+/halfden { 
+% Filled bits of the dens.
+%	Base line
+160 100 mt 340 100 lt st 
+%	Right end half built den.
+340 100 mt 340 120 lt 320 140 lt 300 150 lt 300 145 lt 310 140 lt 320 130 lt 320 100 lt 340 100 lt cs fill
+%	Left end halb built den. 
+190 140 mt 160 110 lt 160 100 lt 180 100 lt 180 120 lt 190 130 lt 200 130 lt 200 135 lt 195 135 lt 195 140 lt 190 140 lt cs fill
+%	Middle of the half built den.
+210 130 mt 220 120 lt 220 100 lt 230 100 lt 230 135 lt 235 145 lt 220 145 lt 220 140 lt 215 140 lt 215 135 lt 210 135 lt 210 130 lt cs fill 
+
+% Left scaffolding.
+%	Left Upright with hole for "Middle of the half built den" of the Scaf. 
+240 100 mt 240 135 lt st 240 155 mt 240 160 lt st
+%	Right Upright for Scaf.
+260 100 mt 260 160 lt st
+%	Zig-Zag going up and making all internal lines.
+240 100 mt 260 125 lt 240 125 lt 260 150 lt 240 150 lt st 
+%	Right support for scaf.
+260 125 mt 275 100 lt st
+
+% Right Scaffolding.
+%	Left Upright with hole.
+305 100 mt 305 135 lt st 305 150 mt 305 160 lt st 
+%	Right scaf.
+325 140 mt 325 160 lt st
+%	Half Zig-Zag going up.
+305 100 mt 315 110 lt st 315 125 mt 305 125 lt 310 130 lt st 325 150 mt 305 150 lt st 
+%	Right support for scaf.
+285 100 mt 305 125 lt st 
+} bd def 
+
+%	Normal dens without a colour but without hex.
+/den { 
+160 100 mt 340 100 lt st 
+340 100 mt 340 120 lt 
+320 140 lt 
+280 160 lt 
+230 160 lt 
+190 140 lt 
+160 110 lt 
+160 100 lt 
+180 100 lt 180 120 lt 190 130 lt 210 130 lt 220 120 lt 220 100 lt 230 100 lt 230 140 lt 240 150 lt 280 150 lt 310 140 lt 320 130 lt 320 100 lt 340 100 lt cs fill 
+
+185 115 mt 215 115 lt st 
+235 120 mt 315 120 lt st 
+240 105 mt 240 140 lt st 
+250 105 mt 250 140 lt st 
+260 105 mt 260 140 lt st 
+270 105 mt 270 140 lt st 
+280 105 mt 280 140 lt st 
+290 105 mt 290 140 lt st 
+300 105 mt 300 135 lt st 
+310 105 mt 310 130 lt st } bd def
+
+%	Lizardman without hex.	
+/lizardspear {
+5 5 scale
+
+%	Bottem of banner.1
+15 14 mt 15 12 lt 17 12 lt 17 14 lt 15 14 lt cs fill
+%	Bottem of banner.2
+15 11 mt 15 8 lt 16 5 lt 17 9 lt 17 11 lt 15 11 lt cs fill
+%	Top of banner
+16 75 mt 14 72 lt 15 70 lt 17 70 lt 18 72 lt 16 75 lt cs fill
+
+%	Banner staff
+15 69 mt 15 68 lt 5 68 lt 5 66 lt 15 66 lt 15 15 lt 17 15 lt
+17 66 lt 27 66 lt 27 68 lt 17 68 lt 17 69 lt 15 69 lt
+cs fill
+
+%	Banner
+6 65 mt 6 57 lt 
+5 55 lt 3 53 lt 2 51 lt 7 51 lt 8 53 lt 8 51 lt 19 51 lt 20 53 lt 
+22 53 lt 21 51 lt 22 51 lt 25 55 lt 26 58 lt 26 65 lt 17 65 lt
+cs fill
+
+36 4 mt 35 6 lt 37 6 lt 35 8 lt 35 14 lt 36 16 lt 38 17 lt 40 17 lt 
+41 15 lt 41 8 lt 39 6 lt 41 6 lt 40 4 lt 53 4 lt 52 6 lt 48 8 lt 48 16 lt 
+47 18 lt 52 21 lt 54 25 lt 56 35 lt 58 37 lt 60 38 lt 62 36 lt 63 34 lt 64 36 lt
+66 37 lt 65 38 lt 65 39 lt 67 42 lt 64 41 lt 63 41 lt 63 44 lt 60 42 lt 58 42 lt 
+54 40 lt 49 29 lt 47 26 lt 44 24 lt 45 27 lt 47 28 lt 48 30 lt 46 30 lt 47 32 lt 
+49 33 lt 50 35 lt 47 36 lt 49 39 lt 47 40 lt 47 41 lt 51 42 lt 49 44 lt 49 46 lt 
+50 49 lt 47 49 lt 46 51 lt 44 50 lt 43 52 lt 42 50 lt 40 50 lt 38 48 lt 34 47 lt 
+33 48 lt 32 46 lt 31 47 lt 30 45 lt 29 44 lt 30 42 lt 32 41 lt 38 42 lt 37 40 lt 
+32 39 lt 30 38 lt 29 39 lt 26 39 lt 20 38 lt 17 39 lt 15 39 lt 14 39 lt 13 38 lt
+13 36 lt 12 35 lt 12 34 lt 13 33 lt 13 32 lt 14 31 lt 15 31 lt 
+17 31 lt 19 33 lt 27 33 lt 30 34 lt 33 33 lt 32 32 lt 32 29 lt 
+33 28 lt 35 25 lt 35 23 lt 31 19 lt 29 15 lt 29  9 lt 25  7 lt 23  5 lt 23  4 lt 
+
+%	Eye
+42 46 mt 39 46 lt 42 48 lt 42 46 lt 
+cs fill
+
+} bd def 
+
+/lizardbanner {
+    5 5 scale
+    10 0 mt 30 0 lt 30 2 lt 32 0 lt 30 4 lt 30 6 lt 32 10 lt 40 18 lt 
+46 20 lt 50 18 lt 56 4 lt 48 4 lt 46 2 lt 46 0 lt 64 0 lt 64 2 lt 66 0 lt 
+64 4 lt 62 8 lt 56 18 lt 58 20 lt 58 24 lt 74 40 lt 80 48 lt 82 52 lt 
+84 54 lt 88 54 lt 90 52 lt 90 50 lt 94 50 lt 94 54 lt 90 58 lt 82 58 lt 
+78 54 lt 72 44 lt 68 40 lt 64 36 lt 60 34 lt 56 36 lt 56 48 lt 58 50 lt 
+60 56 lt 60 60 lt 54 66 lt 54 70 lt 50 76 lt 40 76 lt 38 74 lt 22 74 lt 
+20 70 lt 22 68 lt 42 68 lt 44 62 lt 42 56 lt 38 58 lt 16 60 lt 6 76 lt 
+10 76 lt -2 90 lt -2 74 lt 2 76 lt 12 60 lt 10 60 lt 12 56 lt 14 56 lt 
+24 40 lt 28 42 lt 24 48 lt 22 48 lt 22 50 lt 18 56 lt 28 54 lt 42 46 lt 
+42 26 lt 30 18 lt 28 18 lt 24 12 lt 24 10 lt 20 4 lt 12 4 lt 10 2 lt 10 0 lt 
+cs fill } bd def
+/box500 {
+newpath
+0 0 moveto
+0 500 lineto
+500 500 lineto
+500 0 lineto
+closepath
+stroke
+} bind def
+
+10 10 translate
+0.3 0.3 scale
+
+gsave
+gsave
+0 0 translate
+box500
+swamp
+grestore
+gsave
+500 0 translate
+box500
+temple
+grestore
+gsave
+1000 0 translate
+box500
+fertile
+grestore
+gsave
+1500 0 translate
+box500
+hill
+grestore
+grestore
+ 
+0 500 translate
+ 
+gsave
+gsave
+0 0 translate
+box500
+volcano
+grestore
+gsave
+500 0 translate
+box500
+cursed
+grestore
+gsave
+1000 0 translate
+box500
+raft
+grestore
+gsave
+1500 0 translate
+box500
+raftfill
+grestore
+grestore
+ 
+0 500 translate
+ 
+gsave
+gsave
+0 0 translate
+box500
+scrubold
+grestore
+gsave
+500 0 translate
+box500
+scrub
+grestore
+gsave
+1000 0 translate
+box500
+blackbridge
+grestore
+gsave
+1500 0 translate
+box500
+whitebridge
+grestore
+grestore
+ 
+0 500 translate
+ 
+gsave
+gsave
+0 0 translate
+box500
+whirlpool
+grestore
+gsave
+500 0 translate
+box500
+ruin
+grestore
+gsave
+1000 0 translate
+box500
+halfden
+grestore
+gsave
+1500 0 translate
+box500
+den
+grestore
+grestore
+ 
+0 500 translate
+ 
+gsave
+gsave
+0 0 translate
+box500
+lizardspear
+grestore
+gsave
+500 0 translate
+box500
+lizardbanner
+grestore
+grestore
+ 
+showpage

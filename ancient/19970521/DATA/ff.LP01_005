@@ -1,0 +1,8 @@
+Header(ff, 5, 1, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+ - 91 Green Lizards at 5A move NE (to 5B).
+ - Lizards attack 30 militia Lizards in free Den at 5B.
+ - Combat round 3! Standing Lizards: 80. Standing enemy Lizards: 0.

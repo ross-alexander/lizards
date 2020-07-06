@@ -1,0 +1,30 @@
+This is a test of lizards 
+
+Notes:
+
+* Lizards is made up of a number of objects.  
+  + Hexes (or provinces).
+  + Bands.
+  + Monsters.
+  + Features.
+
+* Originally hexes (from now on provinces) were of a fixes topology.  This
+  meant lots of extra code checking if the world wraps.  Since wrapping is
+  all setup in the creation, it is sensible that all the hard work is done
+  then.  The structure of a Province is the following.
+
+	(Province (
+		Name
+		Owner
+		Borders (
+			Name
+			Direction
+			Adjacent )
+		
+	))
+
+* To keep everything tidy an OO-relational model is used with strings
+  naming everything.  However, during runtime this would probably cause
+  a heavy performance penalty.  Using indexes would help but having a
+  network model would make coding simple.  During runtime one can avoid
+  referencing by using pointers.

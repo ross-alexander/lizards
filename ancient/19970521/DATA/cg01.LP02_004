@@ -1,0 +1,123 @@
+Header(cg01, 4)
+ClanID(jno,Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 54 Red Lizards at 11Y move SE (to 12Z).
+ - 54 Red Lizards at 12Z move S (to 13Z).
+ - Lizards eat from fertile hex 13Z.
+
+ - 10 Green Lizards split at 6Y and move NW (to 6X).
+ - 10 Green Lizards at 6X move NW (to 5W).
+
+ - Spy Lizard at 12S moves SW (to 13R).
+ - Spy Lizard at 13R moves SW (to 13Q).
+
+ - Spy Lizard at 13W moves S (to 14W).
+ - Spy Lizard at 14W moves S (to 15W).
+
+ - Spy Lizard at 6AB moves NE (to 5AC).
+ - Spy Lizard at 5AC moves NE (to 5AD).
+
+ - Spy Lizard at 8AB moves NE (to 7AC).
+ - Spy Lizard at 7AC moves NE (to 7AD).
+
+ - Spy Lizard at 10AA moves NE (to 10AB).
+ - Froth fills 10AB as your Spy Lizard is CONSUMED with gusto by a Sea Monster.
+
+ - Spy Lizard at 10AA moves SE (to 11AB).
+ - Spy Lizard at 11AB moves SE (to 11AC).
+ - BUBBLES RISE...and something drags your Spy Lizard under at 11AC!
+
+ - Spy Lizard at 14V moves SW (to 14U).
+ - Spy Lizard at 14U moves SW (to 15T).
+
+ - 12 Red, 16 Black Lizards at 10Y move SW (to 11X).
+ - 12 Red, 16 Black Lizards at 11X move NW (to 10W).
+
+ - Spy Lizard at 5Z moves NE (to 4AA).
+ - Spy Lizard at 4AA moves NE (to 4AB).
+
+ - Spy Lizard at 10S moves SW (to 11R).
+ - Spy Lizard at 11R moves NW (to 10Q).
+
+ - 27 Red, 190 Black Lizards at 7V move N (to 6V).
+ - Lizards eat from fertile hex 6V.
+ - 27 Red, 190 Black Lizards at 6V move NW (to 5U).
+ - Lizards attack 30 militia Lizards in free Den at 5U.
+ - Combat round 1! Standing Lizards: 209. Standing enemy Lizards: 0.
+ - Your Lizards at 5U mercilessly SLAUGHTERED their foul enemy. They are now Good warriors.
+ - Your Lizards captured Yellow Den at 5U.
+
+ - 179 Black Lizards split at 6Y and move SW (to 7X).
+ - Lizards at 7X are attacked by loathsome abomination from the depths.
+ - Combat round 2! Surviving Lizards: 159.
+ - Victory! The Sea Monster at 7X is slain by your Lizards.
+ - 159 Black Lizards survive at 7X.
+ - 159 Black Lizards at 7X move NW (to 6W).
+ - Lizards attack 30 militia Lizards in free Den at 6W.
+ - Combat round 2! Standing Lizards: 148. Standing enemy Lizards: 0.
+ - Your Lizards at 6W completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Black Den at 6W.
+
+ - Spy Lizard at 11U moves SW (to 12T).
+ - Spy Lizard at 12T moves SW (to 12S).
+
+ - Spy Lizard at 8T moves NW (to 7S).
+ - Spy Lizard at 7S moves NW (to 7R).
+Phase(development)
+
+ - Recruiting from Green Den at 6Y. 14 Green lizards recruited from Den leaving 27 Den Lizards at 6Y.
+
+ - Recruiting from Black Den at 6W. 34 Black lizards recruited from Den leaving 66 Den Lizards at 6W.
+
+ - Recruiting from Yellow Den at 5U. 34 Yellow lizards recruited from Den leaving 66 Den Lizards at 5U.
+
+ - Recruiting from Grey Den at 9V. 12 Grey lizards recruited from Den leaving 23 Den Lizards at 9V.
+
+ - Recruiting from Red Den at 10W. 22 Red lizards recruited from Den leaving 42 Den Lizards at 10W.
+
+ - Surveying hex N of 9V for Bridge. Grey Lizards build Bridge at 8V.
+
+ - Recruiting from Home Den at 10Y. 10 Red lizards recruited from Den leaving 21 Den Lizards at 10Y.
+ClanReport(Jumping Jono)
+Den(5U, 66, Yellow, 24 Red, 34 Yellow, 185 Black, Sated, Average)
+
+Den(6W, 66, Black, 182 Black, Sated, Average)
+
+Den(6Y, 27, Green, 21 Green, Sated, Average)
+
+Den(9V, 23, Grey, 43 Grey, Sated, Average)
+
+Den(10W, 42, Red, 58 Red, 16 Black, Sated, Average)
+
+HomeDen(10Y, 21, 1, 10 Red, Sated, Average)
+
+ - 5W Band of 10 Green (Peckish & Average) Lizards.
+ - 13Z Band of 54 Red (Sated & Average) Lizards.
+ - 5AD Spy Lizard. Spy for 3 turns.
+ - 4AB Spy Lizard. Spy for 3 turns.
+ - 14AC Spy Lizard. Spy for 3 turns.
+ - 7AD Spy Lizard. Spy for 2 turns.
+ - 13Q Spy Lizard. Spy for 2 turns.
+ - 9Z Spy Lizard. Spy for 2 turns.
+ - 10Q Spy Lizard. Spy for 2 turns.
+ - 15T Spy Lizard. Spy for 2 turns.
+ - 15W Spy Lizard. Spy for 2 turns.
+ - 7R Spy Lizard. Spy for 1 turns.
+ - 8T Spy Lizard. Spy for 1 turns.
+ - 12S Spy Lizard. Spy for 1 turns.
+ - 11U Spy Lizard. Spy for 1 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 4:
+
+ 01 -   1140 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   1043 Player 03, 'Dangerous Dan' (dan) Clan.
+ 03 -    937 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -    866 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

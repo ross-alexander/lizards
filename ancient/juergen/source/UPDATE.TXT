@@ -1,0 +1,13 @@
+]  public final synchronized void update (Graphics g) {
+
+    Dimension d = size();
+    if((offScreenImage == null) || (d.width != offScreenSize.width) ||  (d.heig
+ht != offScreenSize.height)) {
+      offScreenImage = createImage(d.width, d.height);
+      offScreenSize = d;
+      offScreenGraphics = offScreenImage.getGraphics();
+    }
+    paint(offScreenGraphics);
+    g.drawImage(offScreenImage, 0, 0, null);
+
+  }

@@ -1,0 +1,47 @@
+Header(ff, 10, 1, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+ - 80 Black Lizards at 6K begin chanting SE...
+ - Dust engulfs 7L as the hex sinks into the sea!
+ - Your black lizards have created a Water hex there.
+ - Your 80 Black Lizards at 6K finish chanting.
+ - 24 Black Lizards here slowly fade to Red!
+
+ - Mist engulfs 8G as the hex rises out of the sea! There is now a Plain hex there.
+Phase(movement)
+ - 47 Green Lizards at 7J move N (to 6J).
+ - Lizards eat from fertile hex 6J.
+ - 47 Green Lizards at 6J move NW (to 5I).
+ - Lizards eat from fertile hex 5I.
+ - 113 Green Lizards at 5B move S (to 6B).
+ - Lizards eat from fertile hex 6B.
+ - 113 Green Lizards at 6B move N (to 5B).
+Phase(development)
+ - Den completed at 7F by 67 Grey Lizards. Den is presently un-populated.
+ - Fertile hex planted at 6L by 10 Green Lizards.
+ - Fertile hex planted at 7B by 10 Green Lizards.
+ - Fertile hex planted at 6G by 10 Green Lizards.
+ - Surveying hex SW of 5E for Bridge. Grey Lizards build Bridge at 6D.
+ - Fertile hex planted at 6C by 10 Green Lizards.
+ClanReport(Raging Ross)
+Den(5B,145,2,0,113,0,0,0,0,0)
+Den(5F,59,3,0,0,25,0,0,1,0)
+HomeDen(6K,49,4,72,42,0,64,0,1,0)
+Den(7F,0,0,0,143,67,0,0,2,0)
+Band(5E, 0, 0, 20, 0, 0, 0, 0)
+Band(5I, 0, 52, 0, 0, 0, 0, 0)
+Band(6C, 0, 10, 0, 0, 0, 3, 0)
+Band(6E, 0, 2, 20, 0, 0, 2, 0)
+Band(6G, 0, 10, 0, 0, 0, 2, 0)
+Band(6L, 0, 10, 0, 0, 0, 1, 0)
+Band(7B, 0, 10, 0, 0, 0, 3, 0)
+
+ * Clans Ranking at end of Turn 10:
+
+ 01 -   1058 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    820 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+Trailer()

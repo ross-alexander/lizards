@@ -1,0 +1,402 @@
+head	1.1;
+access;
+symbols;
+locks
+	rossa:1.1; strict;
+comment	@ * @;
+
+
+1.1
+date	99.03.15.20.00.58;	author rossa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#ifndef __LIZARD_H
+#define __LIZARD_H
+
+#include "compat.h"
+
+#define LIZ_TRUE 1
+#define LIZ_FALSE 0
+
+#define VER_STRING "Ver 2.0b1"
+
+#define COPYRIGHT_STRING "1991-1999"
+
+#define MAX_PLAYERS 16
+#define MAX_CLAN_CODE 3
+#define MAX_CLAN_NAME 35
+
+#define MAX_RANDOM_MESSAGES 100
+
+#define MAX_SPYS 1000
+
+#define MAX_LIZARDS_IN_HEX 300
+
+#define PERCENT_HOME_DENS_FOR_VICTORY 0.60
+
+/* various text and binary orders files used by Lizards! */
+
+#define TEXT_ORDS_F                   "LORDS"   /* text order file */
+#define POSTSCRIPT_F                  "LPOST"  /* postscript turn file */
+
+/* various text output files for players. */
+
+#define PLAYER_MESG_F                 "LP"   /* general player text */
+#define PLAYER_LIST_F                 "LL"   /* modem user view list */
+#define PLYMAP_MESG_F                 "LM"   /* text maps */
+#define PLYPLY_MESG_F                 "LC"   /* text messages */
+#define PLYERR_MESG_F		      "LE"   /* error messages */
+
+/* Lizards! binary and text data files. */
+
+#define WORLD_DATA_F                  "LWLDATA"   /* binary hex file */
+#define WORLD_STAT_F                  "LWLSTAT"   /* text world statistics */
+#define LIZ_MESG_F                    "LMESGS.TXT" /* text random mesg file */
+
+#define LIZ_MAXPATH 256
+
+#define PLAIN 1
+#define SWAMP 2
+#define SCRUB 3
+#define PEAK 4
+#define WATER 5
+
+#define RUIN 11
+#define FERTILE 12
+#define VOLCANO 13
+#define TEMPLE 14
+#define CURSED 15
+#define DEN 16
+#define WHIRLPOOL 17
+#define BRIDGE 18
+#define RAFT 19
+#define BAND 20
+#define BUILDING 21
+
+#define LIZARD_TYPES 5
+
+#define RED_LIZARD 1
+#define GREEN_LIZARD 2
+#define GREY_LIZARD 3
+#define BLACK_LIZARD 4
+#define YELLOW_LIZARD 5
+
+#define RED (RED_LIZARD - 1)
+#define GREEN (GREEN_LIZARD - 1)
+#define GREY (GREY_LIZARD - 1)
+#define BLACK (BLACK_LIZARD - 1)
+#define YELLOW (YELLOW_LIZARD - 1)
+
+#define MAX_COMBAT_POINTS 5
+#define CP_MOD_LEVEL 3 /* %attack increase for every CP */
+
+#define MIN_CAPTURE_PERCENT 30
+#define CP_CAPTURE_MOD_LEVEL 3 /* %capture increase for every CP */
+
+#define MAX_HUNGER_POINTS 5 /* before starving */
+#define STARVE_PER_TURN 50 /* % chance of starving to death */
+
+#define BASE_ATTACK 50
+#define DEN_ATTACK 25
+#define BASE_DEFEND 50
+#define LOB_ATTACK 70
+#define MONSTER_DEFEND 50
+
+#define DEN_LIZARD_LEVEL 50 /* Increase in Max Pop for every adjacent Fertile */
+#define DEN_RECOVER_LEVEL 0.25
+#define DEN_STARVE_LEVEL 0.20
+#define DEN_INCREASE_STARVE_LEVEL 0.15
+#define DEN_MILITIA_LEVEL 0.30
+#define MINIMUM_POP_LEVEL 10
+#define POP_ADDITION 4
+
+#define DEN_RECRUIT_LEVEL 0.35
+
+#define SPY_CAPTURE_LEVEL 200 /* Lizards in hex that give automatic capture! */
+
+#define SPY_BUSH_TURNS 3
+
+#define SWAMP_BRIDGE_EAT_LEVEL 10 /* Chance of Swamp eating Bridges */
+
+#define SEA_MONSTER_LEVEL 10
+#define SWAMP_MIRE_LEVEL 20
+#define VOLCANO_ERUPT_LEVEL 8
+#define VOLCANO_SINK_LEVEL 30
+#define VOLCANO_DORMANT_LEVEL 8
+#define MOUNTAIN_ERUPT_LEVEL 8
+#define WHIRLPOOL_KILL_LEVEL 0.80
+#define COLLAPSE_KILL_LEVEL 0.40
+#define CURSED_KILL_LEVEL 0.80
+
+#define SPY_LAVA_KILL_LEVEL 50
+#define LAVA_KILL_LEVEL 0.50
+
+#define SEA_MONSTER_STRENGTH_LEVEL 15
+
+#define BUILD_FERTILE_LEVEL 10
+#define BUILD_RAFT_LEVEL 20
+#define BUILD_BRIDGE_LEVEL 20
+#define BUILD_DEN_LEVEL 50
+
+#define RAFT_LIFE 3
+
+#define NUMBER_CHANTS 10
+
+#define LIZ_SPAWN 0x0001
+#define LIZ_CAPTURE 0x0002
+#define LIZ_VOLCANO 0x0004
+#define LIZ_PEAK 0x0008
+#define LIZ_WRAP 0x0010
+#define LIZ_VICTORY 0x0020
+#define LIZ_GIVE 0x0040
+
+/* ----------------------------------------------------------------------
+--
+-- Lots of global variables
+--
+---------------------------------------------------------------------- */
+#define NUM_TEXT_ORDERS 9
+
+#define MAX_ORDERS_PER_TURN 600
+
+#define INACTIVE 0
+#define MOVE 1
+#define SPLIT 2
+#define BUILD_FERTILE 3
+#define BUILD_DEN 4
+#define BUILD_BRIDGE 5
+#define DESTROY_FERTILE 6
+#define DESTROY_BRIDGE 7
+#define RECRUIT 8
+#define ERUPT_VOLCANO 9
+#define COLLAPSE_BRIDGE 10
+#define MOVE_WHIRLPOOL 11
+#define CHANT 12
+#define LOB 13
+#define GIVE 14
+#define FREE 15
+#define BUILD_RAFT 16
+#define SAIL 17
+#define ERUPT_MOUNTAIN 18
+#define DORMANT_VOLCANO 19
+#define KILL_PLAYER 20
+#define SNEAK 21
+
+#define PLAYER 31
+#define MESSAGE 32
+#define MOD_MESG 33
+#define SPAWN_TURN 34
+
+#define NUM_DIRECTIONS 6
+#define NORTH 1
+#define NORTH_EAST 2
+#define SOUTH_EAST 3
+#define SOUTH 4
+#define SOUTH_WEST 5
+#define NORTH_WEST 6
+
+#define ORDER_PENDING 1
+#define ORDER_CURRENT 2
+#define ORDER_COMPLETE 3
+#define ORDER_IGNORE 4
+
+typedef struct
+{
+  int x, y,
+    terrain,
+    hex_owner,                     /* Which player last captured hex */
+    den_lizard_type,
+    tmpl_hex,                  /* for world adjustment post template */
+    red_lizards,
+    green_lizards,
+    grey_lizards,
+    black_lizards,
+    yellow_lizards,
+    lizard_pop;            /* Passive Lizard pop for Den hexes */
+} old_hex_t;
+
+typedef struct {
+  int invalid;
+  int x, y, z;
+} coord;
+
+typedef struct Feature {
+  struct Feature *chain;
+  int type;
+  int owner;
+  coord xy;
+  union Features {
+    struct Band {
+      int type[LIZARD_TYPES], hunger, combat, immobile;
+    } band;
+    struct Den {
+      int pop, hunger, type, home;
+    } den;
+    struct Fertile {
+      int level;
+    } fertile;
+    struct Building {
+      int type;
+      int undisturbed;
+    } build;
+    struct Raft {
+      int age;
+    } raft;
+  } f;
+} feature_t;
+
+typedef struct order
+{
+  int player, type, status;
+  feature_t feature;
+  coord source, dest;
+  struct order *chain;
+} order_t;
+
+typedef struct Hex {
+  coord xy;
+  int terrain,
+    owner;		 /* Which player last captured hex */
+  coord edge[NUM_DIRECTIONS];
+  feature_t *chain;
+} hex_t;
+    
+typedef struct
+{
+  int player,
+    x_hex,
+    y_hex,
+    lizard_type,
+    turns_alone,
+    moved_this_turn,		      /* Check against multiple spy moves */
+    mired,
+    unused [4];
+} spy_t;
+
+typedef struct
+{
+  coord xy;
+  int spy, peak;
+} unit_t;
+
+typedef struct {
+  int cnt;
+  unit_t *list;
+} BandList;
+
+typedef struct
+{
+  int x, y, centred_x, centred_y, wrapped;
+} see_t;
+
+typedef struct {
+  int cnt;
+  see_t *list;
+} HexList;
+
+typedef struct Player {
+  int ref;
+  int num;
+  char* code;
+  char* clan;
+  int num_orders;
+  int home_den;
+  FILE *fptr;
+} player_t;
+
+typedef struct World {
+  FILE *debug;
+  char *game;
+  char *path;
+  int x;
+  int y;
+  int turn;
+  time_t due;
+  int flags;
+  hex_t *hexes;
+  int num_spies;
+  spy_t **spylist;
+  int num_players;
+  player_t **player;
+  int num_orders;
+  order_t *order_list [MAX_ORDERS_PER_TURN];
+} world_t;
+
+extern char *ShowLizards(char *, hex_t*);
+
+extern char dir[7][3];
+extern char* lizard_colours[6];
+extern char* liz_hunger_desc[MAX_HUNGER_POINTS + 1];
+extern char* liz_cp_desc[MAX_COMBAT_POINTS + 1];
+extern char* liz_terrain[14];
+extern char* order_types[];
+
+extern char *message_list [MAX_RANDOM_MESSAGES];
+
+extern char *strworld_tInit, *strworld_tFfro, *strworld_tFill, *strworld_tPop;
+extern char *strworld_tFix, *strOrderEnt;
+
+extern void TextOrderConvert(world_t*);
+extern void Terrain(world_t*);
+extern void BinaryOrderShuffle(world_t *world_t);
+extern void WorldOpen(world_t *);
+extern void WorldMast(world_t *);
+extern void WorldClose(world_t *);
+extern void ClanReport(world_t *);
+extern void ClanRank(world_t *);
+extern void MesgAppend(world_t *world_t);
+
+extern void debug(world_t *, char *, ...);
+
+extern hex_t* get_hex(world_t *world_t, coord xy);
+extern coord move_coords(world_t *world_t, hex_t*, int);
+extern int num_features(hex_t *hex);
+extern feature_t *has_feature(hex_t *hex, int f);
+extern int terrain_adjacent(world_t *w, coord a, int t);
+extern int feature_adjacent(world_t *w, coord a, int t);
+extern coord new_string_to_loc (char *s);
+extern coord coord_cons(int x, int y);
+extern int coord_eq(coord a, coord b);
+
+extern int new_add_order(world_t *world_t, order_t *order);
+extern order_t* new_order(int, int, coord);
+extern order_t* new_order_append(order_t*, order_t*);
+extern void new_show_order(world_t *w, order_t *order, FILE *stream);
+extern int lizards_in_band(feature_t *);
+extern int lizards_in_hex(hex_t *);
+extern spy_t* player_spy_here (world_t *world_t, int x, int y, int player);
+extern char* new_show_lizards(feature_t *, char *);
+extern int kill_lizards (feature_t *f, int deaths);
+extern int join_band(feature_t *a, feature_t *b);
+extern int split_band(feature_t *a, feature_t *b);
+
+extern feature_t* create_feature(world_t *w, int type, coord xy);
+extern feature_t* clone_feature(feature_t *f);
+extern void destroy_feature(world_t *w, feature_t *f);
+extern feature_t* add_feature(world_t *w, feature_t *f, hex_t *hex);
+extern feature_t* move_feature(world_t *w, feature_t *f, hex_t *hex);
+extern feature_t* release_feature(world_t *w, feature_t *f);
+extern void clear_features(world_t *w, hex_t *hex);
+
+extern int new_combat (world_t*, feature_t*, feature_t*, hex_t*, hex_t*, int);
+
+extern void hex_attacked_or_moved_into (world_t *, hex_t *hex);
+extern void show_order (world_t *w, order_t *order, FILE *stream);
+extern void inc_combat_points (feature_t*);
+extern void move_band (world_t *, hex_t*, feature_t*);
+extern int combat_sea_monster (world_t*, feature_t*, coord, int);
+
+extern int move_order(world_t *, order_t *);
+#endif
+@

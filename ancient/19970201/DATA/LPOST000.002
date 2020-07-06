@@ -1,0 +1,153 @@
+/Gameletter {(002)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(01/01/1980
+)} def
+/saveobj save def
+/Shadow_Code {(C-G)} def
+PageOne
+(CG) Player_Number
+(CG) Credit
+Address
+(DO NOT POST) -20 Text
+(DO NOT POST) -20 Text
+(DO NOT POST) -20 Text
+(DO NOT POST) -20 Text
+(CIRCLE GAMES COVER PAGE) Clan_Full_Name
+Write
+[
+() Linef
+( 1)(-)(Player)(01,)('Kill)(em)(all')(\(KEA\))(Clan.) Linef
+( 1)(-)(Player)(02,)('Nuke)(til)(Glow')(\(NTG\))(Clan.) Linef
+() Linef
+() Linef
+( *)(Clans)(Ranking)(at)(end)(of)(Turn)(0:) Linef
+() Linef
+( 01)(-)(2450)(Player)(01,)('Kill)(em)(all')(\(KEA\))(Clan.) Linef
+( 02)(-)(2450)(Player)(02,)('Nuke)(til)(Glow')(\(NTG\))(Clan.) Linef
+() Linef
+( -)(THERE)(ARE)(2)(HOME)(DENS)(LEFT)(IN)(THIS)(GAME.)(YOU)(MUST)(GAIN)(2000)(VICTORY)(POINTS)(TO)(WIN.) Linef
+] format
+pr
+saveobj restore
+/saveobj save def
+/Shadow_Code {(KEA)} def
+PageOne
+(1) Player_Number
+($ 0.00) Credit
+Address
+(Ross) -18 Text
+() -18 Text
+() -18 Text
+() -18 Text
+() -18 Text
+(Kill em all) Clan_Full_Name
+Write
+[
+() Linef
+Startf ( WORLD PHASE \(all Den Growth and Settling\).) Endf
+() Linef
+Startf ( ARTILLERY PHASE \(all Chants, Lobs and Free orders\).) Endf
+() Linef
+Startf ( MOVEMENT PHASE \(all Moves, Splits, Sails and Sneaks orders\).) Endf
+() Linef
+Startf ( DEVELOPMENT PHASE \(all Builds, Destroy, Recruit and Give orders\).) Endf
+() Linef
+Startf ( Clan Listing for 'Kill em all' at end of Turn 0:) Endf
+() Linef
+( -)(11V)(Red)(Home)(Den)(contains)(400)(Green)(\(Sated)(&)(Average\))(Lizards)(and)(50)(Den)(Lizards.) Linef
+() Linef
+Startf ( Clans Ranking at end of Turn 0:) Endf
+() Linef
+( 01)(-)(2450)(Player)(01,)('Kill)(em)(all')(\(KEA\))(Clan.) Linef
+( 02)(-)(2450)(Player)(02,)('Nuke)(til)(Glow')(\(NTG\))(Clan.) Linef
+() Linef
+( -)(THERE)(ARE)(2)(HOME)(DENS)(LEFT)(IN)(THIS)(GAME.)(YOU)(MUST)(GAIN)(2000)(VICTORY)(POINTS)(TO)(WIN.) Linef
+( -)(YOU)(PRESENTLY)(CONTROL)(1)(HOME)(DEN.) Linef
+] format
+pr
+Map_Page_R
+-1190 140 Location_R
+(Kill em all Clan World View for Lizards! Game 002 Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+620 775 fer () Small
+585 750 swp () Small
+655 750 gden () Small (Free) Owner
+620 725 pla () Small
+585 700 pla () Small
+655 700 fer () Small
+550 725 wat () Small
+690 725 wat () Small
+620 675 hden () Small (KEA) Owner (450) Troop_Number
+585 650 wat () Small
+655 650 wat () Small
+550 675 wat () Small
+690 675 wat () Small
+620 625 wat () Small
+550 625 vol () Small
+690 625 wat () Small
+585 600 wat () Small
+655 600 wat () Small
+620 575 bden () Small (Free) Owner
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(NTG)} def
+PageOne
+(2) Player_Number
+($ 0.00) Credit
+Address
+(John) -18 Text
+() -18 Text
+() -18 Text
+() -18 Text
+() -18 Text
+(Nuke til Glow) Clan_Full_Name
+Write
+[
+() Linef
+Startf ( WORLD PHASE \(all Den Growth and Settling\).) Endf
+() Linef
+Startf ( ARTILLERY PHASE \(all Chants, Lobs and Free orders\).) Endf
+() Linef
+Startf ( MOVEMENT PHASE \(all Moves, Splits, Sails and Sneaks orders\).) Endf
+() Linef
+Startf ( DEVELOPMENT PHASE \(all Builds, Destroy, Recruit and Give orders\).) Endf
+() Linef
+Startf ( Clan Listing for 'Nuke til Glow' at end of Turn 0:) Endf
+() Linef
+( -)(25AA)(Red)(Home)(Den)(contains)(400)(Green)(\(Sated)(&)(Average\))(Lizards)(and)(50)(Den)(Lizards.) Linef
+() Linef
+Startf ( Clans Ranking at end of Turn 0:) Endf
+() Linef
+( 01)(-)(2450)(Player)(01,)('Kill)(em)(all')(\(KEA\))(Clan.) Linef
+( 02)(-)(2450)(Player)(02,)('Nuke)(til)(Glow')(\(NTG\))(Clan.) Linef
+() Linef
+( -)(THERE)(ARE)(2)(HOME)(DENS)(LEFT)(IN)(THIS)(GAME.)(YOU)(MUST)(GAIN)(2000)(VICTORY)(POINTS)(TO)(WIN.) Linef
+( -)(YOU)(PRESENTLY)(CONTROL)(1)(HOME)(DEN.) Linef
+] format
+pr
+Map_Page_R
+-1190 140 Location_R
+(Nuke til Glow Clan World View for Lizards! Game 002 Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+585 750 wat () Small
+585 700 wat () Small
+550 725 wat () Small
+620 725 pla () Small
+515 700 wat () Small
+655 700 wat () Small
+585 650 hden () Small (NTG) Owner (450) Troop_Number
+550 675 bru () Small
+620 675 wat () Small
+515 650 swp () Small
+655 650 fer () Small
+550 625 wat () Small
+620 625 wat () Small
+585 600 fer () Small
+515 600 swp () Small
+655 600 rden () Small (Free) Owner
+550 575 swp () Small
+620 575 wat () Small
+585 550 wat () Small
+printing
+saveobj restore
+

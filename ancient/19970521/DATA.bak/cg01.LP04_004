@@ -1,0 +1,98 @@
+Header(cg01, 4)
+ClanID(rda,Raging Ross)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 20 Yellow Lizards split at 2F and move NE (to 1G).
+ - 20 Yellow Lizards at 1G move NE (to 1H).
+
+ - Spy Lizard at 1N moves NE (to 32O).
+ - Spy Lizard at 32O moves NE (to 32P).
+
+ - Spy Lizard at 3O moves S (to 4O).
+ - Spy Lizard at 4O moves S (to 5O).
+
+ - Spy Lizard at 3D moves NW (to 2C).
+ - Spy Lizard MIRED in Swamp at 2C for next turn.
+
+ - Spy Lizard at 32M moves NE (to 32N).
+ - Spy Lizard at 32N is ENGULFED by a huge Sea Monster.
+
+ - Spy Lizard at 1O moves SE (to 2P).
+ - Spy Lizard at 2P moves NE (to 1Q).
+
+ - 56 Black Lizards at 4J move S (to 5J).
+ - 56 Black Lizards at 5J move S (to 6J).
+ - Lizards eat from fertile hex 6J.
+
+ - Spy Lizard at 6J moves S (to 7J).
+ - Spy Lizard at 7J moves S (to 8J).
+
+ - 29 Red Lizards split at 2I and move SE (to 3J).
+ - Lizards eat from fertile hex 3J.
+ - 29 Red Lizards at 3J move NW (to 2I).
+
+ - Spy Lizard splits at 2I and moves S (to 3I).
+ - Spy Lizard at 3I moves SW (to 4H).
+
+ - 7 Grey, 190 Black Lizards at 3M move S (to 4M).
+ - Lizards at 4M cringe as a HUGE and hungry Sea Monster rises from the hex.
+ - Combat round 2! Surviving Lizards: 186.
+ - The mighty Sea Monster falls under the blows of your Lizards at 4M.
+ - 3 Grey, 183 Black Lizards survive at 4M.
+ - 3 Grey, 183 Black Lizards at 4M move S (to 5M).
+
+ - Spy Lizard splits at 32H and moves N (to 31H).
+ - Spy Lizard at 31H moves NE (to 30I).
+ - Spy Lizard captured by Den at 30I.
+
+ - Spy Lizard at 1D moves N (to 32D).
+
+ - Spy Lizard splits at 2I and moves SW (to 3H).
+ - Spy Lizard at 3H moves SW (to 3G).
+
+ - 14 Grey Lizards at 1K move NW (to 1J).
+ - Lizards eat from fertile hex 1J.
+ - 14 Grey Lizards at 1J move SE (to 1K).
+
+ - Spy Lizard splits at 32H and moves NW (to 31G).
+ - Spy Lizard at 31G moves N (to 30G).
+Phase(development)
+
+ - Recruiting from Red Den at 3N. 34 Red lizards recruited from Den leaving 66 Den Lizards at 3N.
+ClanReport(Raging Ross)
+Den(1K, 43, Grey, 14 Grey, Sated, Average)
+
+Den(2F, 98, Yellow, 11 Yellow, Hungry, Average)
+
+HomeDen(2I, 43, 1, 29 Red, Sated, Average)
+
+Den(3N, 66, Red, 34 Red, Sated, Average)
+
+ - 1H Band of 20 Yellow (Hungry & Average) Lizards.
+ - 5M Band of 3 Grey, 183 Black (Peckish & Good) Lizards.
+ - 6J Band of 56 Black (Sated & Average) Lizards.
+ - 32H Band of 131 Black (Starved & Good) Lizards.
+ - 30L Spy Lizard. Spy for 3 turns.
+ - 8J Spy Lizard. Spy for 3 turns.
+ - 1Q Spy Lizard. Spy for 1 turns.
+ - 32P Spy Lizard. Spy for 1 turns.
+ - 2C Spy Lizard. Spy for 1 turns.
+ - 5O Spy Lizard. Spy for 1 turns.
+ - 32D Spy Lizard. Spy for 1 turns.
+ - 4H Spy Lizard. Spy for 0 turns.
+ - 3G Spy Lizard. Spy for 0 turns.
+ - 30G Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 4:
+
+ 01 -   1140 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   1043 Player 03, 'Dangerous Dan' (dan) Clan.
+ 03 -    937 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -    866 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

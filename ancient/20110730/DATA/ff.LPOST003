@@ -1,0 +1,191 @@
+/Gameletter {(ff)} def
+/Turnnumber {(3)} def
+/NTN {(4)} def
+/Date {(1/1/1990)} def
+/saveobj save def
+/Shadow_Code {(rda)} def
+Map_Page_R
+-1190 140 Location_R
+(Raging Ross Clan World View for Lizards! Game ff Turn 3 Page 1 of 1. World size 1A to 12L) Map_Page_Num
+200 775 wat (12J) Small
+270 775 wat (12L) Small
+235 750 wat (12K) Small
+200 725 fer (1J) Small
+165 700 pla (1I) Small
+235 700 yden (1K) Small (jno) Owner
+200 675 wat (2J) Small
+165 650 wat (2I) Small
+235 650 wat (2K) Small
+130 675 wat (2H) Small
+270 675 wat (2L) Small
+95 650 pla (2G) Small
+305 650 wat (2A) Small
+305 600 wat (3A) Small
+200 625 wat (3J) Small (rda) Owner (186) Troop_Number
+165 600 wat (3I) Small
+235 600 wat (3K) Small
+130 625 wat (3H) Small
+270 625 wat (3L) Small
+95 600 wat (3G) Small
+60 625 fer (3F) Small
+340 625 wat (3B) Small
+305 550 wat (4A) Small
+270 575 wat (4L) Small (rda) Owner (SPY) Troop_Number
+340 575 wat (4B) Small
+235 550 wat (4K) Small
+375 550 wat (4C) Small
+200 575 wat (4J) Small
+130 575 wat (4H) Small (rda) Owner (SPY) Troop_Number
+165 550 wat (4I) Small
+95 550 wat (4G) Small
+60 575 wat (4F) Small
+25 550 wat (4E) Small
+305 500 swp (5A) Small (rda) Owner (21) Troop_Number
+270 525 wat (5L) Small
+340 525 gden (5B) Small (Free) Owner
+235 500 fer (5K) Small
+375 500 fer (5C) Small
+200 525 pla (5J) Small (rda) Owner (10) Troop_Number
+165 500 fer (5I) Small
+130 525 wat (5H) Small
+410 525 wat (5D) Small
+25 500 swp (5E) Small
+60 525 grden (5F) Small (Free) Owner
+95 500 fer (5G) Small (rda) Owner (SPY) Troop_Number
+270 475 wat (6L) Small
+340 475 fer (6B) Small
+305 450 swp (6A) Small
+235 450 hden (6K) Small (rda) Owner (238) Troop_Number
+375 450 swp (6C) Small (rda) Owner (SPY) Troop_Number
+200 475 fer (6J) Small
+130 475 wat (6H) Small
+165 450 swp (6I) Small
+410 475 wat (6D) Small
+25 450 pla (6E) Small
+60 475 fer (6F) Small
+95 450 pla (6G) Small
+270 425 wat (7L) Small
+340 425 pla (7B) Small
+305 400 wat (7A) Small
+200 425 fer (7J) Small
+235 400 wat (7K) Small
+165 400 wat (7I) Small
+410 425 wat (7D) Small
+375 400 wat (7C) Small
+25 400 wat (7E) Small
+60 425 bru (7F) Small
+130 425 wat (7H) Small
+95 400 wat (7G) Small
+200 375 wat (8J) Small
+270 375 wat (8L) Small
+235 350 wat (8K) Small (jno) Owner (120) Troop_Number
+340 375 wat (8B) Small
+410 375 wat (8D) Small
+375 350 wat (8C) Small
+165 350 wat (8I) Small
+305 350 wat (8A) Small
+235 300 wat (9K) Small
+200 325 wat (9J) Small
+270 325 wat (9L) Small
+165 300 wat (9I) Small
+305 300 wat (9A) Small
+235 250 wat (10K) Small (rda) Owner (SPY) Troop_Number
+200 275 wat (10J) Small
+270 275 wat (10L) Small
+165 250 wat (10I) Small
+305 250 wat (10A) Small
+200 225 wat (11J) Small
+270 225 wat (11L) Small
+235 200 wat (11K) Small
+165 200 wat (11I) Small
+305 200 wat (11A) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(jno)} def
+Map_Page_R
+-1190 140 Location_R
+(Jumping Jono Clan World View for Lizards! Game ff Turn 3 Page 1 of 1. World size 1A to 12L) Map_Page_Num
+235 750 hden (6K) Small (rda) Owner
+375 700 wat (7C) Small
+235 700 wat (7K) Small
+200 725 fer (7J) Small
+270 725 wat (7L) Small
+165 700 wat (7I) Small
+305 700 wat (7A) Small
+375 650 wat (8C) Small
+340 675 wat (8B) Small
+410 675 wat (8D) Small
+305 650 wat (8A) Small
+445 650 wat (8E) Small
+95 650 wat (8G) Small
+235 650 wat (8K) Small (jno) Owner (120) Troop_Number
+200 675 wat (8J) Small
+270 675 wat (8L) Small
+165 650 wat (8I) Small
+375 600 grden (9C) Small (jno) Owner (164) Troop_Number
+340 625 wat (9B) Small
+410 625 wat (9D) Small
+305 600 wat (9A) Small
+445 600 bru (9E) Small
+60 625 bru (9F) Small
+95 600 fer (9G) Small
+130 625 wat (9H) Small
+165 600 wat (9I) Small
+200 625 wat (9J) Small
+270 625 wat (9L) Small
+235 600 wat (9K) Small
+340 575 swp (10B) Small
+410 575 wat (10D) Small
+375 550 fer (10C) Small
+305 550 wat (10A) Small
+445 550 pla (10E) Small (jno) Owner (11) Troop_Number
+60 575 wat (10F) Small
+95 550 hden (10G) Small (jno) Owner (106) Troop_Number
+130 575 wat (10H) Small
+165 550 wat (10I) Small
+200 575 wat (10J) Small
+270 575 wat (10L) Small
+235 550 wat (10K) Small
+340 525 wat (11B) Small
+410 525 wat (11D) Small
+375 500 wat (11C) Small
+60 525 fer (11F) Small
+445 500 wat (11E) Small
+95 500 wat (11G) Small
+130 525 wat (11H) Small
+165 500 wat (11I) Small
+235 500 wat (11K) Small
+410 475 fer (12D) Small (jno) Owner (SPY) Troop_Number
+60 475 wat (12F) Small
+445 450 wat (12E) Small
+130 475 wat (12H) Small
+95 450 wat (12G) Small
+235 450 wat (12K) Small
+200 475 wat (12J) Small
+270 475 wat (12L) Small
+165 450 wat (12I) Small
+305 450 wat (12A) Small
+375 450 wat (12C) Small
+340 475 wat (12B) Small
+235 400 yden (1K) Small (jno) Owner (116) Troop_Number
+200 425 fer (1J) Small
+270 425 wat (1L) Small
+165 400 pla (1I) Small
+305 400 wat (1A) Small
+410 425 wat (1D) Small
+340 425 wat (1B) Small
+60 425 bru (1F) Small
+375 400 wat (1C) Small
+445 400 bru (1E) Small
+200 375 wat (2J) Small
+270 375 wat (2L) Small
+235 350 wat (2K) Small
+165 350 wat (2I) Small
+305 350 wat (2A) Small
+410 375 wat (2D) Small
+200 325 wat (3J) Small (rda) Owner (186) Troop_Number
+270 325 wat (3L) Small
+235 300 wat (3K) Small
+printing
+saveobj restore

@@ -1,0 +1,612 @@
+2012-07-04 17:48 Debugger (debug.cc, 18) started.
+2012-07-04 17:48 Hex(1A) added Grey Den
+2012-07-04 17:48 Hex(1A) added 14 Grey
+2012-07-04 17:48 Hex(1B) added Swamp
+2012-07-04 17:48 Hex(1C) added Swamp
+2012-07-04 17:48 Hex(1D) added Green Den
+2012-07-04 17:48 Hex(1D) added 14 Green
+2012-07-04 17:48 Hex(1E) added Fertile 0
+2012-07-04 17:48 Hex(1F) added Fertile 0
+2012-07-04 17:48 Hex(1G) added Fertile 0
+2012-07-04 17:48 Hex(1I) added Fertile 0
+2012-07-04 17:48 Hex(1J) added Green Den
+2012-07-04 17:48 Hex(1J) added 29 Green
+2012-07-04 17:48 Hex(1K) added Swamp
+2012-07-04 17:48 Hex(1M) added Fertile 0
+2012-07-04 17:48 Hex(1O) added Fertile 0
+2012-07-04 17:48 Hex(1Q) added Swamp
+2012-07-04 17:48 Hex(1R) added Fertile 0
+2012-07-04 17:48 Hex(1S) added Swamp
+2012-07-04 17:48 Hex(1U) added Swamp
+2012-07-04 17:48 Hex(1V) added Swamp
+2012-07-04 17:48 Hex(1W) added Swamp
+2012-07-04 17:48 Hex(1X) added Grey Den
+2012-07-04 17:48 Hex(1X) added 14 Grey
+2012-07-04 17:48 Hex(1Y) added Fertile 0
+2012-07-04 17:48 Hex(1Z) added Swamp
+2012-07-04 17:48 Hex(1AA) added Swamp
+2012-07-04 17:48 Hex(1AC) added Swamp
+2012-07-04 17:48 Hex(1AD) added Swamp
+2012-07-04 17:48 Hex(1AE) added Swamp
+2012-07-04 17:48 Hex(1AF) added Swamp
+2012-07-04 17:48 Hex(2A) added Swamp
+2012-07-04 17:48 Hex(2B) added Fertile 0
+2012-07-04 17:48 Hex(2C) added Swamp
+2012-07-04 17:48 Hex(2E) added Swamp
+2012-07-04 17:48 Hex(2F) added Yellow Den
+2012-07-04 17:48 Hex(2F) added 59 Yellow
+2012-07-04 17:48 Hex(2G) added Fertile 0
+2012-07-04 17:48 Hex(2H) added Ruin
+2012-07-04 17:48 Hex(2I) added Fertile 0
+2012-07-04 17:48 Hex(2K) added Fertile 0
+2012-07-04 17:48 Hex(2L) added Swamp
+2012-07-04 17:48 Hex(2M) added Swamp
+2012-07-04 17:48 Hex(2N) added Fertile 0
+2012-07-04 17:48 Hex(2O) added Black Den
+2012-07-04 17:48 Hex(2O) added 44 Black
+2012-07-04 17:48 Hex(2Q) added Fertile 0
+2012-07-04 17:48 Hex(2R) added Swamp
+2012-07-04 17:48 Hex(2S) added Fertile 0
+2012-07-04 17:48 Hex(2U) added Swamp
+2012-07-04 17:48 Hex(2W) added Fertile 0
+2012-07-04 17:48 Hex(2Z) added Swamp
+2012-07-04 17:48 Hex(2AA) added Swamp
+2012-07-04 17:48 Hex(2AC) added Fertile 0
+2012-07-04 17:48 Hex(2AD) added Fertile 0
+2012-07-04 17:48 Hex(2AE) added Fertile 0
+2012-07-04 17:48 Hex(3B) added Swamp
+2012-07-04 17:48 Hex(3J) added Grey Den
+2012-07-04 17:48 Hex(3J) added 44 Grey
+2012-07-04 17:48 Hex(3N) added Fertile 0
+2012-07-04 17:48 Hex(3Q) added Grey Den
+2012-07-04 17:48 Hex(3Q) added 14 Grey
+2012-07-04 17:48 Hex(3R) added Swamp
+2012-07-04 17:48 Hex(3T) added Black Den
+2012-07-04 17:48 Hex(3T) added 29 Black
+2012-07-04 17:48 Hex(3V) added Swamp
+2012-07-04 17:48 Hex(3X) added Red Den
+2012-07-04 17:48 Hex(3X) added 14 Red
+2012-07-04 17:48 Hex(3AA) added Peak
+2012-07-04 17:48 Hex(3AD) added Green Den
+2012-07-04 17:48 Hex(3AD) added 44 Green
+2012-07-04 17:48 Hex(3AF) added Swamp
+2012-07-04 17:48 Hex(4A) added Swamp
+2012-07-04 17:48 Hex(4B) added Swamp
+2012-07-04 17:48 Hex(4J) added Fertile 0
+2012-07-04 17:48 Hex(4N) added Black Den
+2012-07-04 17:48 Hex(4N) added 29 Black
+2012-07-04 17:48 Hex(4P) added Swamp
+2012-07-04 17:48 Hex(4T) added Fertile 0
+2012-07-04 17:48 Hex(4AD) added Peak
+2012-07-04 17:48 Hex(4AE) added Swamp
+2012-07-04 17:48 Hex(5A) added Fertile 0
+2012-07-04 17:48 Hex(5B) added Fertile 0
+2012-07-04 17:48 Hex(5C) added Swamp
+2012-07-04 17:48 Hex(5E) added Fertile 0
+2012-07-04 17:48 Hex(5F) added Fertile 0
+2012-07-04 17:48 Hex(5G) added Peak
+2012-07-04 17:48 Hex(5J) added Black Den
+2012-07-04 17:48 Hex(5J) added 29 Black
+2012-07-04 17:48 Hex(5K) added Fertile 0
+2012-07-04 17:48 Hex(5M) added Swamp
+2012-07-04 17:48 Hex(5N) added Fertile 0
+2012-07-04 17:48 Hex(5O) added Swamp
+2012-07-04 17:48 Hex(5P) added Swamp
+2012-07-04 17:48 Hex(5Q) added Red Den
+2012-07-04 17:48 Hex(5Q) added 44 Red
+2012-07-04 17:48 Hex(5R) added Fertile 0
+2012-07-04 17:48 Hex(5S) added Swamp
+2012-07-04 17:48 Hex(5T) added Fertile 0
+2012-07-04 17:48 Hex(5U) added Red Den
+2012-07-04 17:48 Hex(5U) added 29 Red
+2012-07-04 17:48 Hex(5V) added Swamp
+2012-07-04 17:48 Hex(5W) added Yellow Den
+2012-07-04 17:48 Hex(5W) added 14 Yellow
+2012-07-04 17:48 Hex(5Y) added Fertile 0
+2012-07-04 17:48 Hex(5Z) added Yellow Den
+2012-07-04 17:48 Hex(5Z) added 29 Yellow
+2012-07-04 17:48 Hex(5AA) added Fertile 0
+2012-07-04 17:48 Hex(5AC) added Fertile 0
+2012-07-04 17:48 Hex(5AD) added Swamp
+2012-07-04 17:48 Hex(5AE) added Temple
+2012-07-04 17:48 Hex(5AF) added Swamp
+2012-07-04 17:48 Hex(6A) added Green Den
+2012-07-04 17:48 Hex(6A) added 14 Green
+2012-07-04 17:48 Hex(6C) added Swamp
+2012-07-04 17:48 Hex(6D) added Swamp
+2012-07-04 17:48 Hex(6E) added Swamp
+2012-07-04 17:48 Hex(6F) added Black Den
+2012-07-04 17:48 Hex(6F) added 44 Black
+2012-07-04 17:48 Hex(6H) added Whirlpool
+2012-07-04 17:48 Hex(6I) added Fertile 0
+2012-07-04 17:48 Hex(6K) added Fertile 0
+2012-07-04 17:48 Hex(6M) added Ruin
+2012-07-04 17:48 Hex(6O) added Fertile 0
+2012-07-04 17:48 Hex(6P) added Fertile 0
+2012-07-04 17:48 Hex(6Q) added Fertile 0
+2012-07-04 17:48 Hex(6S) added Swamp
+2012-07-04 17:48 Hex(6U) added Fertile 0
+2012-07-04 17:48 Hex(6V) added Swamp
+2012-07-04 17:48 Hex(6W) added Fertile 0
+2012-07-04 17:48 Hex(6X) added Swamp
+2012-07-04 17:48 Hex(6Y) added Swamp
+2012-07-04 17:48 Hex(6AA) added Swamp
+2012-07-04 17:48 Hex(6AC) added Yellow Den
+2012-07-04 17:48 Hex(6AC) added 29 Yellow
+2012-07-04 17:48 Hex(6AE) added Fertile 0
+2012-07-04 17:48 Hex(7B) added Swamp
+2012-07-04 17:48 Hex(7F) added Fertile 0
+2012-07-04 17:48 Hex(7G) added Swamp
+2012-07-04 17:48 Hex(7J) added Black Den
+2012-07-04 17:48 Hex(7J) added 29 Black
+2012-07-04 17:48 Hex(7N) added Fertile 0
+2012-07-04 17:48 Hex(7O) added Green Den
+2012-07-04 17:48 Hex(7O) added 29 Green
+2012-07-04 17:48 Hex(7R) added Swamp
+2012-07-04 17:48 Hex(7V) added Swamp
+2012-07-04 17:48 Hex(7Z) added Temple
+2012-07-04 17:48 Hex(7AD) added Fertile 0
+2012-07-04 17:48 Hex(8A) added Temple
+2012-07-04 17:48 Hex(8F) added Peak
+2012-07-04 17:48 Hex(8G) added 10 Red
+2012-07-04 17:48 Hex(8G) added Red Den
+2012-07-04 17:48 Hex(8H) added 10 Green
+2012-07-04 17:48 Hex(8H) added Swamp
+2012-07-04 17:48 Hex(8I) added 70 Red
+2012-07-04 17:48 Hex(8I) added Red Den
+2012-07-04 17:48 Hex(8Y) added 10 Green, 50 Grey, 10 Black and 10 Yellow
+2012-07-04 17:48 Hex(8Y) added Ruin
+2012-07-04 17:48 Hex(8Z) added Swamp
+2012-07-04 17:48 Hex(8AB) added Fertile 0
+2012-07-04 17:48 Hex(9A) added Swamp
+2012-07-04 17:48 Hex(9B) added Swamp
+2012-07-04 17:48 Hex(9C) added Ruin
+2012-07-04 17:48 Hex(9F) added Swamp
+2012-07-04 17:48 Hex(9G) added 10 Green
+2012-07-04 17:48 Hex(9G) added Swamp
+2012-07-04 17:48 Hex(9H) added Fertile 0
+2012-07-04 17:48 Hex(9I) added Fertile 0
+2012-07-04 17:48 Hex(9J) added Swamp
+2012-07-04 17:48 Hex(9K) added Swamp
+2012-07-04 17:48 Hex(9L) added Swamp
+2012-07-04 17:48 Hex(9M) added Swamp
+2012-07-04 17:48 Hex(9N) added Yellow Den
+2012-07-04 17:48 Hex(9N) added 14 Yellow
+2012-07-04 17:48 Hex(9O) added Fertile 0
+2012-07-04 17:48 Hex(9Q) added Yellow Den
+2012-07-04 17:48 Hex(9Q) added 29 Yellow
+2012-07-04 17:48 Hex(9R) added Swamp
+2012-07-04 17:48 Hex(9S) added Swamp
+2012-07-04 17:48 Hex(9U) added Swamp
+2012-07-04 17:48 Hex(9V) added Fertile 0
+2012-07-04 17:48 Hex(9X) added 90 Red
+2012-07-04 17:48 Hex(9X) added Temple
+2012-07-04 17:48 Hex(9Y) added Fertile 0
+2012-07-04 17:48 Hex(9Z) added 10 Green
+2012-07-04 17:48 Hex(9Z) added Swamp
+2012-07-04 17:48 Hex(9AA) added Black Den
+2012-07-04 17:48 Hex(9AA) added 14 Black
+2012-07-04 17:48 Hex(9AC) added Ruin
+2012-07-04 17:48 Hex(9AD) added Fertile 0
+2012-07-04 17:48 Hex(9AE) added Yellow Den
+2012-07-04 17:48 Hex(9AE) added 29 Yellow
+2012-07-04 17:48 Hex(10A) added Swamp
+2012-07-04 17:48 Hex(10C) added Fertile 0
+2012-07-04 17:48 Hex(10F) added Temple
+2012-07-04 17:48 Hex(10G) added Peak
+2012-07-04 17:48 Hex(10H) added 10 Red
+2012-07-04 17:48 Hex(10H) added Grey Home Den
+2012-07-04 17:48 Hex(10I) added 10 Green
+2012-07-04 17:48 Hex(10I) added Swamp
+2012-07-04 17:48 Hex(10J) added Ruin
+2012-07-04 17:48 Hex(10K) added Swamp
+2012-07-04 17:48 Hex(10M) added Peak
+2012-07-04 17:48 Hex(10N) added Swamp
+2012-07-04 17:48 Hex(10O) added Ruin
+2012-07-04 17:48 Hex(10Q) added Fertile 0
+2012-07-04 17:48 Hex(10R) added Fertile 0
+2012-07-04 17:48 Hex(10S) added Fertile 0
+2012-07-04 17:48 Hex(10T) added Yellow Den
+2012-07-04 17:48 Hex(10T) added 29 Yellow
+2012-07-04 17:48 Hex(10U) added Fertile 0
+2012-07-04 17:48 Hex(10W) added Swamp
+2012-07-04 17:48 Hex(10X) added 10 Green, 50 Grey, 10 Black and 10 Yellow
+2012-07-04 17:48 Hex(10X) added Ruin
+2012-07-04 17:48 Hex(10Y) added 10 Red
+2012-07-04 17:48 Hex(10Y) added Fertile 0
+2012-07-04 17:48 Hex(10Z) added 80 Red, 50 Black and 10 Yellow
+2012-07-04 17:48 Hex(10Z) added Yellow Home Den
+2012-07-04 17:48 Hex(10AA) added Swamp
+2012-07-04 17:48 Hex(10AB) added Fertile 0
+2012-07-04 17:48 Hex(10AC) added Peak
+2012-07-04 17:48 Hex(10AE) added Fertile 0
+2012-07-04 17:48 Hex(11B) added Yellow Den
+2012-07-04 17:48 Hex(11B) added 14 Yellow
+2012-07-04 17:48 Hex(11E) added Whirlpool
+2012-07-04 17:48 Hex(11F) added Grey Den
+2012-07-04 17:48 Hex(11F) added 14 Grey
+2012-07-04 17:48 Hex(11H) added Swamp
+2012-07-04 17:48 Hex(11I) added 50 Grey
+2012-07-04 17:48 Hex(11I) added Ruin
+2012-07-04 17:48 Hex(11J) added Swamp
+2012-07-04 17:48 Hex(11K) added Ruin
+2012-07-04 17:48 Hex(11N) added Swamp
+2012-07-04 17:48 Hex(11O) added Fertile 0
+2012-07-04 17:48 Hex(11R) added Swamp
+2012-07-04 17:48 Hex(11V) added Swamp
+2012-07-04 17:48 Hex(11Z) added Swamp
+2012-07-04 17:48 Hex(11AA) added Whirlpool
+2012-07-04 17:48 Hex(12C) added Swamp
+2012-07-04 17:48 Hex(12E) added Green Den
+2012-07-04 17:48 Hex(12E) added 44 Green
+2012-07-04 17:48 Hex(12F) added Fertile 0
+2012-07-04 17:48 Hex(12G) added Fertile 0
+2012-07-04 17:48 Hex(12H) added Yellow Den
+2012-07-04 17:48 Hex(12H) added 14 Yellow
+2012-07-04 17:48 Hex(12J) added Swamp
+2012-07-04 17:48 Hex(12N) added Whirlpool
+2012-07-04 17:48 Hex(12P) added Black Den
+2012-07-04 17:48 Hex(12P) added 14 Black
+2012-07-04 17:48 Hex(12AF) added Swamp
+2012-07-04 17:48 Hex(13A) added Fertile 0
+2012-07-04 17:48 Hex(13B) added Black Den
+2012-07-04 17:48 Hex(13B) added 29 Black
+2012-07-04 17:48 Hex(13C) added Fertile 0
+2012-07-04 17:48 Hex(13D) added Fertile 0
+2012-07-04 17:48 Hex(13E) added Swamp
+2012-07-04 17:48 Hex(13F) added Fertile 0
+2012-07-04 17:48 Hex(13G) added Swamp
+2012-07-04 17:48 Hex(13I) added Swamp
+2012-07-04 17:48 Hex(13J) added Peak
+2012-07-04 17:48 Hex(13K) added Swamp
+2012-07-04 17:48 Hex(13M) added Swamp
+2012-07-04 17:48 Hex(13O) added Swamp
+2012-07-04 17:48 Hex(13Q) added Fertile 0
+2012-07-04 17:48 Hex(13S) added Grey Den
+2012-07-04 17:48 Hex(13S) added 29 Grey
+2012-07-04 17:48 Hex(13U) added Swamp
+2012-07-04 17:48 Hex(13V) added Fertile 0
+2012-07-04 17:48 Hex(13W) added Red Den
+2012-07-04 17:48 Hex(13W) added 14 Red
+2012-07-04 17:48 Hex(13Y) added Fertile 0
+2012-07-04 17:48 Hex(13Z) added Yellow Den
+2012-07-04 17:48 Hex(13Z) added 44 Yellow
+2012-07-04 17:48 Hex(13AA) added Fertile 0
+2012-07-04 17:48 Hex(13AC) added Ruin
+2012-07-04 17:48 Hex(13AE) added Fertile 0
+2012-07-04 17:48 Hex(14B) added Swamp
+2012-07-04 17:48 Hex(14C) added Fertile 0
+2012-07-04 17:48 Hex(14E) added Swamp
+2012-07-04 17:48 Hex(14I) added Swamp
+2012-07-04 17:48 Hex(14J) added Ruin
+2012-07-04 17:48 Hex(14M) added Fertile 0
+2012-07-04 17:48 Hex(14N) added Fertile 0
+2012-07-04 17:48 Hex(14O) added Swamp
+2012-07-04 17:48 Hex(14Q) added Red Den
+2012-07-04 17:48 Hex(14Q) added 29 Red
+2012-07-04 17:48 Hex(14R) added Swamp
+2012-07-04 17:48 Hex(14S) added Fertile 0
+2012-07-04 17:48 Hex(14T) added Fertile 0
+2012-07-04 17:48 Hex(14U) added Fertile 0
+2012-07-04 17:48 Hex(14Z) added Fertile 0
+2012-07-04 17:48 Hex(14AA) added Fertile 0
+2012-07-04 17:48 Hex(14AC) added Fertile 0
+2012-07-04 17:48 Hex(14AD) added Fertile 0
+2012-07-04 17:48 Hex(14AE) added Black Den
+2012-07-04 17:48 Hex(14AE) added 44 Black
+2012-07-04 17:48 Hex(15I) added Grey Den
+2012-07-04 17:48 Hex(15I) added 14 Grey
+2012-07-04 17:48 Hex(15J) added Fertile 0
+2012-07-04 17:48 Hex(15M) added Swamp
+2012-07-04 17:48 Hex(15N) added Black Den
+2012-07-04 17:48 Hex(15N) added 29 Black
+2012-07-04 17:48 Hex(15R) added Fertile 0
+2012-07-04 17:48 Hex(15S) added Swamp
+2012-07-04 17:48 Hex(15V) added Grey Den
+2012-07-04 17:48 Hex(15V) added 14 Grey
+2012-07-04 17:48 Hex(15Z) added Swamp
+2012-07-04 17:48 Hex(15AC) added Swamp
+2012-07-04 17:48 Hex(15AD) added Fertile 0
+2012-07-04 17:48 Hex(16D) added Fertile 0
+2012-07-04 17:48 Hex(16P) added Fertile 0
+2012-07-04 17:48 Hex(16Q) added Black Den
+2012-07-04 17:48 Hex(16Q) added 44 Black
+2012-07-04 17:48 Hex(16S) added Black Den
+2012-07-04 17:48 Hex(16S) added 29 Black
+2012-07-04 17:48 Hex(17A) added Fertile 0
+2012-07-04 17:48 Hex(17B) added Fertile 0
+2012-07-04 17:48 Hex(17C) added Yellow Den
+2012-07-04 17:48 Hex(17C) added 59 Yellow
+2012-07-04 17:48 Hex(17E) added Fertile 0
+2012-07-04 17:48 Hex(17F) added Yellow Den
+2012-07-04 17:48 Hex(17F) added 14 Yellow
+2012-07-04 17:48 Hex(17G) added Swamp
+2012-07-04 17:48 Hex(17I) added Swamp
+2012-07-04 17:48 Hex(17J) added Grey Den
+2012-07-04 17:48 Hex(17J) added 29 Grey
+2012-07-04 17:48 Hex(17K) added Fertile 0
+2012-07-04 17:48 Hex(17M) added Fertile 0
+2012-07-04 17:48 Hex(17N) added Swamp
+2012-07-04 17:48 Hex(17O) added Fertile 0
+2012-07-04 17:48 Hex(17Q) added Fertile 0
+2012-07-04 17:48 Hex(17R) added Fertile 0
+2012-07-04 17:48 Hex(17S) added Fertile 0
+2012-07-04 17:48 Hex(17V) added Fertile 0
+2012-07-04 17:48 Hex(17Y) added Red Den
+2012-07-04 17:48 Hex(17Y) added 29 Red
+2012-07-04 17:48 Hex(17Z) added Fertile 0
+2012-07-04 17:48 Hex(17AA) added Green Den
+2012-07-04 17:48 Hex(17AA) added 29 Green
+2012-07-04 17:48 Hex(17AC) added Fertile 0
+2012-07-04 17:48 Hex(17AD) added Grey Den
+2012-07-04 17:48 Hex(17AD) added 44 Grey
+2012-07-04 17:48 Hex(17AE) added Fertile 0
+2012-07-04 17:48 Hex(18A) added Swamp
+2012-07-04 17:48 Hex(18B) added Fertile 0
+2012-07-04 17:48 Hex(18C) added Fertile 0
+2012-07-04 17:48 Hex(18D) added Fertile 0
+2012-07-04 17:48 Hex(18E) added Swamp
+2012-07-04 17:48 Hex(18G) added Temple
+2012-07-04 17:48 Hex(18I) added Swamp
+2012-07-04 17:48 Hex(18J) added Fertile 0
+2012-07-04 17:48 Hex(18K) added Fertile 0
+2012-07-04 17:48 Hex(18M) added Swamp
+2012-07-04 17:48 Hex(18N) added Fertile 0
+2012-07-04 17:48 Hex(18O) added Red Den
+2012-07-04 17:48 Hex(18O) added 29 Red
+2012-07-04 17:48 Hex(18Q) added Swamp
+2012-07-04 17:48 Hex(18R) added Ruin
+2012-07-04 17:48 Hex(18S) added Swamp
+2012-07-04 17:48 Hex(18U) added Swamp
+2012-07-04 17:48 Hex(18V) added Green Den
+2012-07-04 17:48 Hex(18V) added 29 Green
+2012-07-04 17:48 Hex(18W) added Fertile 0
+2012-07-04 17:48 Hex(18Y) added Fertile 0
+2012-07-04 17:48 Hex(18Z) added Swamp
+2012-07-04 17:48 Hex(18AA) added Fertile 0
+2012-07-04 17:48 Hex(18AC) added Swamp
+2012-07-04 17:48 Hex(18AD) added Fertile 0
+2012-07-04 17:48 Hex(18AE) added Swamp
+2012-07-04 17:48 Hex(19B) added Swamp
+2012-07-04 17:48 Hex(19E) added Black Den
+2012-07-04 17:48 Hex(19E) added 29 Black
+2012-07-04 17:48 Hex(19F) added Fertile 0
+2012-07-04 17:48 Hex(19J) added Green Den
+2012-07-04 17:48 Hex(19J) added 29 Green
+2012-07-04 17:48 Hex(19K) added Swamp
+2012-07-04 17:48 Hex(19R) added Fertile 0
+2012-07-04 17:48 Hex(19V) added Swamp
+2012-07-04 17:48 Hex(19Z) added Swamp
+2012-07-04 17:48 Hex(20C) added Swamp
+2012-07-04 17:48 Hex(20F) added Fertile 0
+2012-07-04 17:48 Hex(20K) added Red Den
+2012-07-04 17:48 Hex(20K) added 14 Red
+2012-07-04 17:48 Hex(20X) added Peak
+2012-07-04 17:48 Hex(20AA) added Swamp
+2012-07-04 17:48 Hex(20AF) added Swamp
+2012-07-04 17:48 Hex(21A) added Temple
+2012-07-04 17:48 Hex(21B) added Fertile 0
+2012-07-04 17:48 Hex(21C) added Grey Den
+2012-07-04 17:48 Hex(21C) added 44 Grey
+2012-07-04 17:48 Hex(21E) added Swamp
+2012-07-04 17:48 Hex(21F) added Swamp
+2012-07-04 17:48 Hex(21G) added Swamp
+2012-07-04 17:48 Hex(21I) added Swamp
+2012-07-04 17:48 Hex(21J) added Swamp
+2012-07-04 17:48 Hex(21K) added Swamp
+2012-07-04 17:48 Hex(21L) added Fertile 0
+2012-07-04 17:48 Hex(21N) added Fertile 0
+2012-07-04 17:48 Hex(21O) added Red Den
+2012-07-04 17:48 Hex(21O) added 14 Red
+2012-07-04 17:48 Hex(21Q) added Swamp
+2012-07-04 17:48 Hex(21R) added Temple
+2012-07-04 17:48 Hex(21S) added Swamp
+2012-07-04 17:48 Hex(21U) added Green Den
+2012-07-04 17:48 Hex(21U) added 29 Green
+2012-07-04 17:48 Hex(21V) added Fertile 0
+2012-07-04 17:48 Hex(21Y) added Red Den
+2012-07-04 17:48 Hex(21Y) added 44 Red
+2012-07-04 17:48 Hex(21Z) added Fertile 0
+2012-07-04 17:48 Hex(21AA) added Swamp
+2012-07-04 17:48 Hex(21AC) added Fertile 0
+2012-07-04 17:48 Hex(21AD) added Swamp
+2012-07-04 17:48 Hex(21AE) added Fertile 0
+2012-07-04 17:48 Hex(22A) added Swamp
+2012-07-04 17:48 Hex(22C) added Fertile 0
+2012-07-04 17:48 Hex(22D) added Fertile 0
+2012-07-04 17:48 Hex(22E) added Swamp
+2012-07-04 17:48 Hex(22G) added Grey Den
+2012-07-04 17:48 Hex(22G) added 14 Grey
+2012-07-04 17:48 Hex(22I) added Swamp
+2012-07-04 17:48 Hex(22K) added Swamp
+2012-07-04 17:48 Hex(22M) added Black Den
+2012-07-04 17:48 Hex(22M) added 14 Black
+2012-07-04 17:48 Hex(22N) added Swamp
+2012-07-04 17:48 Hex(22O) added Swamp
+2012-07-04 17:48 Hex(22P) added Swamp
+2012-07-04 17:48 Hex(22Q) added Fertile 0
+2012-07-04 17:48 Hex(22R) added Fertile 0
+2012-07-04 17:48 Hex(22S) added Fertile 0
+2012-07-04 17:48 Hex(22U) added Fertile 0
+2012-07-04 17:48 Hex(22V) added Swamp
+2012-07-04 17:48 Hex(22W) added Fertile 0
+2012-07-04 17:48 Hex(22Y) added Fertile 0
+2012-07-04 17:48 Hex(22Z) added Fertile 0
+2012-07-04 17:48 Hex(22AC) added Red Den
+2012-07-04 17:48 Hex(22AC) added 29 Red
+2012-07-04 17:48 Hex(22AD) added Fertile 0
+2012-07-04 17:48 Hex(22AE) added Swamp
+2012-07-04 17:48 Hex(23F) added Fertile 0
+2012-07-04 17:48 Hex(23J) added Swamp
+2012-07-04 17:48 Hex(23N) added Fertile 0
+2012-07-04 17:48 Hex(23R) added Grey Den
+2012-07-04 17:48 Hex(23R) added 44 Grey
+2012-07-04 17:48 Hex(23V) added Yellow Den
+2012-07-04 17:48 Hex(23V) added 29 Yellow
+2012-07-04 17:48 Hex(23Z) added Swamp
+2012-07-04 17:48 Hex(24I) added 20 Green
+2012-07-04 17:48 Hex(24I) added Fertile 0
+2012-07-04 17:48 Hex(24J) added Swamp
+2012-07-04 17:48 Hex(24O) added Green Den
+2012-07-04 17:48 Hex(24O) added 14 Green
+2012-07-04 17:48 Hex(24Q) added Red Den
+2012-07-04 17:48 Hex(24Q) added 29 Red
+2012-07-04 17:48 Hex(24Y) added 100 Red and 10 Green
+2012-07-04 17:48 Hex(24Y) added Swamp
+2012-07-04 17:48 Hex(24Z) added Swamp
+2012-07-04 17:48 Hex(24AA) added 100 Red and 50 Grey
+2012-07-04 17:48 Hex(24AA) added Peak
+2012-07-04 17:48 Hex(25A) added Swamp
+2012-07-04 17:48 Hex(25B) added Yellow Den
+2012-07-04 17:48 Hex(25B) added 14 Yellow
+2012-07-04 17:48 Hex(25C) added Fertile 0
+2012-07-04 17:48 Hex(25E) added Peak
+2012-07-04 17:48 Hex(25F) added Peak
+2012-07-04 17:48 Hex(25G) added Red Den
+2012-07-04 17:48 Hex(25G) added 44 Red
+2012-07-04 17:48 Hex(25H) added 50 Grey
+2012-07-04 17:48 Hex(25H) added Ruin
+2012-07-04 17:48 Hex(25I) added 110 Black
+2012-07-04 17:48 Hex(25I) added Temple
+2012-07-04 17:48 Hex(25J) added 50 Grey
+2012-07-04 17:48 Hex(25J) added Ruin
+2012-07-04 17:48 Hex(25K) added Fertile 0
+2012-07-04 17:48 Hex(25M) added Grey Den
+2012-07-04 17:48 Hex(25M) added 14 Grey
+2012-07-04 17:48 Hex(25N) added Swamp
+2012-07-04 17:48 Hex(25O) added Fertile 0
+2012-07-04 17:48 Hex(25Q) added Fertile 0
+2012-07-04 17:48 Hex(25R) added Fertile 0
+2012-07-04 17:48 Hex(25S) added Swamp
+2012-07-04 17:48 Hex(25T) added Red Den
+2012-07-04 17:48 Hex(25T) added 14 Red
+2012-07-04 17:48 Hex(25U) added Swamp
+2012-07-04 17:48 Hex(25V) added Swamp
+2012-07-04 17:48 Hex(25W) added Swamp
+2012-07-04 17:48 Hex(25X) added Fertile 0
+2012-07-04 17:48 Hex(25Y) added Red Home Den
+2012-07-04 17:48 Hex(25Z) added Fertile 0
+2012-07-04 17:48 Hex(25AA) added Green Den
+2012-07-04 17:48 Hex(25AA) added 29 Green
+2012-07-04 17:48 Hex(25AC) added Fertile 0
+2012-07-04 17:48 Hex(25AD) added Green Den
+2012-07-04 17:48 Hex(25AD) added 29 Green
+2012-07-04 17:48 Hex(25AE) added Fertile 0
+2012-07-04 17:48 Hex(26A) added Fertile 0
+2012-07-04 17:48 Hex(26C) added Grey Den
+2012-07-04 17:48 Hex(26C) added 44 Grey
+2012-07-04 17:48 Hex(26D) added Swamp
+2012-07-04 17:48 Hex(26E) added Swamp
+2012-07-04 17:48 Hex(26F) added Fertile 0
+2012-07-04 17:48 Hex(26G) added Fertile 0
+2012-07-04 17:48 Hex(26H) added Fertile 0
+2012-07-04 17:48 Hex(26I) added Black Home Den
+2012-07-04 17:48 Hex(26J) added Fertile 0
+2012-07-04 17:48 Hex(26K) added Fertile 0
+2012-07-04 17:48 Hex(26M) added Fertile 0
+2012-07-04 17:48 Hex(26O) added Red Den
+2012-07-04 17:48 Hex(26O) added 29 Red
+2012-07-04 17:48 Hex(26Q) added Swamp
+2012-07-04 17:48 Hex(26R) added Swamp
+2012-07-04 17:48 Hex(26S) added Fertile 0
+2012-07-04 17:48 Hex(26T) added Fertile 0
+2012-07-04 17:48 Hex(26U) added Fertile 0
+2012-07-04 17:48 Hex(26V) added Fertile 0
+2012-07-04 17:48 Hex(26W) added 100 Red and 50 Grey
+2012-07-04 17:48 Hex(26W) added Peak
+2012-07-04 17:48 Hex(26X) added 10 Green
+2012-07-04 17:48 Hex(26X) added Swamp
+2012-07-04 17:48 Hex(26Y) added 100 Red and 50 Yellow
+2012-07-04 17:48 Hex(26Y) added Fertile 0
+2012-07-04 17:48 Hex(26Z) added 10 Green
+2012-07-04 17:48 Hex(26Z) added Swamp
+2012-07-04 17:48 Hex(26AA) added Fertile 0
+2012-07-04 17:48 Hex(26AC) added Swamp
+2012-07-04 17:48 Hex(26AE) added Swamp
+2012-07-04 17:48 Hex(27A) added Swamp
+2012-07-04 17:48 Hex(27B) added Fertile 0
+2012-07-04 17:48 Hex(27D) added Fertile 0
+2012-07-04 17:48 Hex(27F) added Swamp
+2012-07-04 17:48 Hex(27H) added Swamp
+2012-07-04 17:48 Hex(27J) added Green Den
+2012-07-04 17:48 Hex(27J) added 29 Green
+2012-07-04 17:48 Hex(27N) added Fertile 0
+2012-07-04 17:48 Hex(27R) added Ruin
+2012-07-04 17:48 Hex(27S) added Swamp
+2012-07-04 17:48 Hex(27V) added Black Den
+2012-07-04 17:48 Hex(27V) added 29 Black
+2012-07-04 17:48 Hex(27X) added Swamp
+2012-07-04 17:48 Hex(27AB) added Ruin
+2012-07-04 17:48 Hex(28C) added Red Den
+2012-07-04 17:48 Hex(28C) added 29 Red
+2012-07-04 17:48 Hex(28F) added Peak
+2012-07-04 17:48 Hex(28G) added Fertile 0
+2012-07-04 17:48 Hex(28AE) added Peak
+2012-07-04 17:48 Hex(29A) added Temple
+2012-07-04 17:48 Hex(29B) added Fertile 0
+2012-07-04 17:48 Hex(29C) added Fertile 0
+2012-07-04 17:48 Hex(29F) added Swamp
+2012-07-04 17:48 Hex(29G) added Fertile 0
+2012-07-04 17:48 Hex(29I) added Peak
+2012-07-04 17:48 Hex(29J) added Temple
+2012-07-04 17:48 Hex(29K) added Swamp
+2012-07-04 17:48 Hex(29M) added Fertile 0
+2012-07-04 17:48 Hex(29N) added Swamp
+2012-07-04 17:48 Hex(29O) added Swamp
+2012-07-04 17:48 Hex(29Q) added Yellow Den
+2012-07-04 17:48 Hex(29Q) added 14 Yellow
+2012-07-04 17:48 Hex(29R) added Fertile 0
+2012-07-04 17:48 Hex(29U) added Swamp
+2012-07-04 17:48 Hex(29V) added Swamp
+2012-07-04 17:48 Hex(29W) added Fertile 0
+2012-07-04 17:48 Hex(29Y) added Fertile 0
+2012-07-04 17:48 Hex(29Z) added Fertile 0
+2012-07-04 17:48 Hex(29AA) added Grey Den
+2012-07-04 17:48 Hex(29AA) added 29 Grey
+2012-07-04 17:48 Hex(29AC) added Green Den
+2012-07-04 17:48 Hex(29AC) added 29 Green
+2012-07-04 17:48 Hex(29AE) added Swamp
+2012-07-04 17:48 Hex(30A) added Swamp
+2012-07-04 17:48 Hex(30B) added Swamp
+2012-07-04 17:48 Hex(30C) added Fertile 0
+2012-07-04 17:48 Hex(30D) added Fertile 0
+2012-07-04 17:48 Hex(30F) added Swamp
+2012-07-04 17:48 Hex(30G) added Green Den
+2012-07-04 17:48 Hex(30G) added 29 Green
+2012-07-04 17:48 Hex(30H) added Fertile 0
+2012-07-04 17:48 Hex(30I) added Temple
+2012-07-04 17:48 Hex(30J) added Swamp
+2012-07-04 17:48 Hex(30K) added Green Den
+2012-07-04 17:48 Hex(30K) added 14 Green
+2012-07-04 17:48 Hex(30M) added Red Den
+2012-07-04 17:48 Hex(30M) added 44 Red
+2012-07-04 17:48 Hex(30N) added Fertile 0
+2012-07-04 17:48 Hex(30O) added Fertile 0
+2012-07-04 17:48 Hex(30R) added Swamp
+2012-07-04 17:48 Hex(30V) added Grey Den
+2012-07-04 17:48 Hex(30V) added 14 Grey
+2012-07-04 17:48 Hex(30W) added Swamp
+2012-07-04 17:48 Hex(30Y) added Yellow Den
+2012-07-04 17:48 Hex(30Y) added 14 Yellow
+2012-07-04 17:48 Hex(30AA) added Fertile 0
+2012-07-04 17:48 Hex(30AC) added Fertile 0
+2012-07-04 17:48 Hex(30AD) added Fertile 0
+2012-07-04 17:48 Hex(31B) added Swamp
+2012-07-04 17:48 Hex(31E) added Peak
+2012-07-04 17:48 Hex(31F) added Whirlpool
+2012-07-04 17:48 Hex(31I) added Swamp
+2012-07-04 17:48 Hex(31J) added Fertile 0
+2012-07-04 17:48 Hex(31N) added Fertile 0
+2012-07-04 17:48 Hex(31O) added Green Den
+2012-07-04 17:48 Hex(31O) added 29 Green
+2012-07-04 17:48 Hex(31Q) added Red Den
+2012-07-04 17:48 Hex(31Q) added 14 Red
+2012-07-04 17:48 Hex(31R) added Fertile 0
+2012-07-04 17:48 Hex(31V) added Swamp
+2012-07-04 17:48 Hex(31Z) added Swamp
+2012-07-04 17:48 Hex(31AB) added Temple
+2012-07-04 17:48 Hex(31AD) added Fertile 0
+2012-07-04 17:48 Hex(32I) added Fertile 0
+2012-07-04 17:48 Hex(32L) added Peak
+2012-07-04 17:48 Hex(32M) added Swamp
+2012-07-04 17:48 Debugger closing.

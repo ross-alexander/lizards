@@ -1,0 +1,49 @@
+ - 110 Green Lizards split at 10G and move NW (to 10F).
+ - 110 Green Lizards at 10F move NW (to 9E).
+ - Spy Lizard splits at 10G and moves SW (to 11F).
+ - Spy Lizard at 11F moves SW (to 11E).
+ - Spy Lizard splits at 10G and moves SW (to 11F).
+ - Spy Lizard MIRED in Swamp at 11F for next turn.
+ - Spy Lizard splits at 10G and moves NE (to 10H).
+ - Froth fills 10H as your Spy Lizard is CONSUMED with gusto by a Sea Monster.
+ - 10 Green Lizards split at 10G and move SW (to 11F).
+ - 120 Green Lizards split at 10G and move SE (to 11H).
+ - 120 Green Lizards at 11H move SE (to 11I).
+ - Lizards at 11I are attacked by loathsome abomination from the depths.
+ - Combat round 4! Surviving Lizards: 74.
+ - Victory! The Sea Monster at 11I is slain by your Lizards.
+ - 74 Green Lizards survive at 11I.
+ - 30 Green Lizards split at 10G and move S (to 11G).
+ - 30 Green Lizards at 11G move S (to 12G).
+ - Spy Lizard splits at 10G and moves NE (to 10H).
+ - Spy Lizard at 10H moves NE (to 9I).
+ - BUBBLES RISE...and something drags your Spy Lizard under at 9I!
+ - 120 Green Lizards split at 10G and move N (to 9G).
+ - Lizards eat from fertile hex 9G.
+ - 120 Green Lizards at 9G move N (to 8G).
+ - Recruiting from Home Den at 10G. 17 Black lizards recruited from Den leaving 33 Den Lizards at 10G.
+SpyRejoin: 11F
+Header(ff, 1, 2, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+Phase(development)
+ClanReport(Jumping Jono)
+HomeDen(10G,33,4,0,6,0,17,0,0,0)
+
+ - 8G Band of 120 Green (Sated & Average) Lizards.
+ - 9E Band of 110 Green (Peckish & Average) Lizards.
+ - 11F Band of 11 Green (Peckish & Average) Lizards.
+ - 11I Band of 74 Green (Peckish & Average) Lizards.
+ - 12G Band of 30 Green (Peckish & Average) Lizards.
+ - 11E Spy Lizard. Spy for 0 turns.
+
+ * Clans Ranking at end of Turn 1:
+
+ 01 -    499 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    452 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+Trailer()

@@ -1,0 +1,100 @@
+Header(cg01, 5)
+ClanID(jno,Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - 10 Green Lizards split at 6Y and move SW (to 7X).
+ - 10 Green Lizards at 7X move NW (to 6W).
+
+ - 182 Black Lizards at 6W move SW (to 7V).
+ - Lizards eat from fertile hex 7V.
+ - 182 Black Lizards at 7V move S (to 8V).
+
+ - 58 Red, 16 Black Lizards at 10W move SW (to 11V).
+ - Lizards eat from fertile hex 11V.
+ - 58 Red, 16 Black Lizards at 11V move S (to 12V).
+
+ - 10 Red Lizards at 10Y move SE (to 11Z).
+ - Lizards eat from fertile hex 11Z.
+ - 10 Red Lizards at 11Z move NE (to 10AA).
+
+ - 24 Red, 34 Yellow, 185 Black Lizards at 5U move SW (to 6T).
+ - Something slimy rises from the deep and ATTACKS your Lizards at 6T!
+ - Combat round 1! Surviving Lizards: 236.
+ - The mighty Sea Monster falls under the blows of your Lizards at 6T.
+ - 23 Red, 30 Yellow, 183 Black Lizards survive at 6T.
+ - 23 Red, 30 Yellow, 183 Black Lizards at 6T move NW (to 5S).
+
+ - 54 Red Lizards at 13Z move S (to 14Z).
+ - Lizards eat from fertile hex 14Z.
+ - 54 Red Lizards at 14Z move S (to 15Z).
+ - Lizards attack 30 militia Lizards in free Den at 15Z.
+ - Combat round 5! Standing Lizards: 35. Standing enemy Lizards: 0.
+ - Your Lizards at 15Z completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Black Den at 15Z.
+
+ - 10 Green Lizards split at 6Y and move SE (to 7Z).
+ - Lizards eat from fertile hex 7Z.
+ - 10 Green Lizards at 7Z move NE (to 6AA).
+Phase(development)
+
+ - Recruiting from Black Den at 6W. 29 Black lizards recruited from Den leaving 54 Den Lizards at 6W.
+
+ - Recruiting from Red Den at 10W. 20 Red lizards recruited from Den leaving 38 Den Lizards at 10W.
+
+ - Recruiting from Grey Den at 9V. 10 Grey lizards recruited from Den leaving 21 Den Lizards at 9V.
+
+ - Recruiting from Yellow Den at 5U. 29 Yellow lizards recruited from Den leaving 54 Den Lizards at 5U.
+
+ - Fertile hex planted at 5W by 10 Green Lizards.
+
+ - Recruiting from Home Den at 10Y. 10 Red lizards recruited from Den leaving 19 Den Lizards at 10Y.
+
+ - Recruiting from Black Den at 15Z. 34 Black lizards recruited from Den leaving 66 Den Lizards at 15Z.
+SpyNative: 5AD
+SpyNative: 4AB
+SpyNative: 14AC
+ClanReport(Jumping Jono)
+Den(5U, 54, Yellow, 29 Yellow, Sated, Average)
+
+Den(6W, 54, Black, 10 Green, 29 Black, Sated, Average)
+
+Den(6Y, 35, Green, 1 Green, Peckish, Average)
+
+Den(9V, 21, Grey, 53 Grey, Sated, Average)
+
+Den(10W, 38, Red, 20 Red, Sated, Average)
+
+HomeDen(10Y, 19, 1, 10 Red, Sated, Average)
+
+Den(15Z, 66, Black, 35 Red, 34 Black, Sated, Average)
+
+ - 5S Band of 23 Red, 30 Yellow, 183 Black (Peckish & Average) Lizards.
+ - 5W Band of 10 Green (Hungry & Average) Lizards.
+ - 6AA Band of 10 Green (Sated & Average) Lizards.
+ - 8V Band of 182 Black (Sated & Average) Lizards.
+ - 10AA Band of 10 Red (Sated & Average) Lizards.
+ - 12V Band of 58 Red, 16 Black (Sated & Average) Lizards.
+ - 7AD Spy Lizard. Spy for 3 turns.
+ - 13Q Spy Lizard. Spy for 3 turns.
+ - 9Z Spy Lizard. Spy for 3 turns.
+ - 10Q Spy Lizard. Spy for 3 turns.
+ - 15T Spy Lizard. Spy for 3 turns.
+ - 15W Spy Lizard. Spy for 3 turns.
+ - 7R Spy Lizard. Spy for 2 turns.
+ - 8T Spy Lizard. Spy for 2 turns.
+ - 12S Spy Lizard. Spy for 2 turns.
+ - 11U Spy Lizard. Spy for 2 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 5:
+
+ 01 -   1321 Player 03, 'Dangerous Dan' (dan) Clan.
+ 02 -   1310 Player 02, 'Jumping Jono' (jno) Clan.
+ 03 -   1132 Player 01, 'Mike TB' (mtb) Clan.
+ 04 -   1129 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

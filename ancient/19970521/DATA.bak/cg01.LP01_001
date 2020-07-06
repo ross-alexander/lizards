@@ -1,0 +1,65 @@
+Header(cg01, 1)
+ClanID(mtb,Mike TB)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+
+ - Spy Lizard splits at 17I and moves SW (to 18H).
+ - Spy Lizard moved into Whirlpool at 18H.
+ - Spy Lizard is sucked down to a watery grave by Whirlpool.
+
+ - Spy Lizard splits at 17I and moves S (to 18I).
+ - Spy Lizard at 18I moves SE (to 19J).
+
+ - Spy Lizard splits at 17I and moves SW (to 18H).
+ - Spy Lizard moved into Whirlpool at 18H.
+ - Whirlpool drags your Spy Lizard to the ocean floor, where it quickly drowns.
+
+ - Spy Lizard splits at 17I and moves NW (to 17H).
+ - Spy Lizard at 17H moves NW (to 16G).
+
+ - Spy Lizard splits at 17I and moves N (to 16I).
+ - Spy Lizard at 16I moves N (to 15I).
+
+ - Spy Lizard splits at 17I and moves SW (to 18H).
+ - Spy Lizard moved into Whirlpool at 18H.
+ - Whirlpool drags your Spy Lizard to the ocean floor, where it quickly drowns.
+
+ - 200 Black Lizards split at 17I and move NE (to 17J).
+ - 200 Black Lizards at 17J move SE (to 17K).
+ - Lizards attack 15 militia Lizards in free Den at 17K.
+ - Combat round 1! Standing Lizards: 198. Standing enemy Lizards: 0.
+ - Your Lizards at 17K completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Green Den at 17K.
+
+ - Spy Lizard splits at 17I and moves SW (to 18H).
+ - Spy Lizard moved into Whirlpool at 18H.
+ - Whirlpool claws your Spy Lizard into the cold, unlit depths.
+
+ - Spy Lizard splits at 17I and moves NE (to 17J).
+ - Spy Lizard at 17J moves NE (to 16K).
+
+ - Whirlpool at 18H moves S (to 19H)!
+ - Whirlpool at 19H moves SE (to 19I)!
+Phase(development)
+ClanReport(Mike TB)
+HomeDen(17I, 50, 1, 192 Black, Peckish, Average)
+
+Den(17K, 50, Green, 198 Black, Peckish, Good)
+
+ - 19J Spy Lizard. Spy for 0 turns.
+ - 16G Spy Lizard. Spy for 0 turns.
+ - 15I Spy Lizard. Spy for 0 turns.
+ - 16K Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 1:
+
+ 01 -    733 Player 03, 'Dangerous Dan' (dan) Clan.
+ 02 -    646 Player 02, 'Jumping Jono' (jno) Clan.
+ 03 -    570 Player 04, 'Raging Ross' (rda) Clan.
+ 04 -    569 Player 01, 'Mike TB' (mtb) Clan.
+Trailer()

@@ -1,0 +1,654 @@
+head	1.2;
+access;
+symbols;
+locks
+	rossa:1.2; strict;
+comment	@ * @;
+
+
+1.2
+date	99.03.15.18.10.13;	author rossa;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	99.02.13.23.26.36;	author rossa;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@First major update finished.
+@
+text
+@#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <alloca.h>
+#include <time.h>
+#include <obstack.h>
+
+#define obstack_chunk_alloc malloc
+#define obstack_chunk_free free
+
+#include "lizards.h"
+#include "lizgame.h"
+
+void show_title (void)
+{
+  printf ("\n          ::::    :::: ::::::   :::   ::::::. :::::   .::::.  ::  TM\n"
+    "           ::      ::  ``  ::  :: ::   ::  ::  :: ::  ::  :: ::::\n"
+    "           ::      ::     ::  ::   ::  ::  ::  ::  :: ::     ::::\n"
+    "           ::      ::    ::   :::::::  :::::'  ::  :: `::::.  ::\n"
+    "           ::   .  ::   ::    ::   ::  :: :::  ::  ::     ::  ::\n"
+    "           ::  .:  ::   :: .. ::   ::  ::  ::  :: ::  ::  ::  ..\n"
+    "          ::::::: :::: :::::: ::   :: :::  :: :::::   `::::'  ::\n\n"
+    "                        (c) Copyright, 1991,92,93.\n"
+    "                        LIZARDS! (TM), 1991,92,93.\n"
+    "                      Programmed by Stuart Nicholson.\n"
+    "                          Contact Circle Games,\n"
+    "                  P O Box 105320 Auckland, New Zealand.\n"
+    "                           Phone (09) 358 5378.\n\n");
+}
+
+/*----------------------------------------------------------------------
+--
+-- get_player_list
+--
+---------------------------------------------------------------------- */
+static void get_player_list (world_t *world, FILE *fptr)
+{
+  struct obstack os;
+  player_t **pptr;
+  char work_string [255];
+  char *str;
+  int i, nplayers;
+
+  obstack_init(&os);
+  fscanf(fptr, "%d\n", &nplayers);
+  world->num_players = 1;
+  for (i = 0; i < nplayers && fgets (work_string, 255, fptr); i++)
+    {
+      player_t *player = (player_t*)calloc(sizeof(player_t), 1);
+      str = strtok(work_string, ","); player->ref = atoi(str);
+      str = strtok(NULL, ","); player->num = atoi(str);
+      str = strtok(NULL, ","); player->code = strdup(str);
+      str = strtok(NULL, "\n"); player->clan = strdup(str);
+      world->num_players = player->num > world->num_players ?
+	player->num : world->num_players;
+      obstack_ptr_grow(&os, player);
+  }
+  obstack_ptr_grow(&os, NULL);
+  pptr = (player_t**)obstack_finish(&os);
+
+  world->player = (player_t**)calloc(sizeof(player_t*), world->num_players+1);
+  for (i = 0; pptr[i]; i++)
+    world->player[pptr[i]->num] = pptr[i];
+
+  world->player[0] = (player_t*)malloc(sizeof(player_t));
+  world->player[0]->num = 0;
+  world->player[0]->ref = 0;
+  world->player[0]->clan = strdup("Circle Games");
+  world->player[0]->code = strdup("C-G");
+}
+
+static void save_player_list (world_t *world, FILE *fptr)
+{
+  int i, nplayers;
+  for (nplayers = 0, i = 1; i <= world->num_players; i++)
+    if (world->player[i]) nplayers++;
+  fprintf (fptr, "%d\n", nplayers);
+
+  for (i = 1; i <= world->num_players; i++)
+    if (world->player[i] && world->player[i]->num)
+      {
+	fprintf (fptr, "%d,%d,%s,%s\n",
+		 world->player[i]->ref,
+		 world->player[i]->num,
+		 world->player[i]->code,
+		 world->player[i]->clan);
+      }
+}
+
+/* ----------------------------------------------------------------------
+--
+-- get_world
+--
+---------------------------------------------------------------------- */
+world_t* get_world (char *path, char *game)
+{
+  world_t *w;
+  FILE *fptr;
+  int i, x, y, length, nfeatures;
+  char *filename, *hfilename;
+  w = (world_t*)calloc(1,sizeof(world_t));
+
+  if ((w->debug = fopen("debug.log", "w")) == NULL)
+    {
+      fprintf(stderr, "Cannot open debug.log file.\n");
+      exit(EXIT_FAILURE);
+    }
+  length = strlen(path) + strlen(WORLD_STAT_F) + strlen(game);
+  filename = (char*)alloca(length + 1);
+  sprintf (filename, "%s%s.%s", path, game, WORLD_STAT_F);
+
+  if ((fptr = fopen (filename, "r")) == NULL)
+    {
+      printf ("FATAL ERROR: Unable to read %s file.\n", filename);
+      exit (EXIT_FAILURE);
+    }
+  w->path = strdup(path);
+  w->game = strdup(game);
+
+  debug(w, "Opened file %s for reading.", filename);
+
+  fscanf (fptr, "%d\n", &w->x);
+  fscanf (fptr, "%d\n", &w->y);
+  fscanf (fptr, "%d\n", &w->turn);
+  fscanf (fptr, "%ld\n", &w->due);
+  fscanf (fptr, "%d\n", &w->num_spies);
+  fscanf (fptr, "%d\n", &nfeatures);
+  get_player_list(w, fptr);
+  fclose(fptr);
+
+  debug(w, "World (%d %d %d %ld) opened.", w->x, w->y, w->turn, w->due);
+  length = strlen(path) + strlen(WORLD_DATA_F) + strlen(game);
+  hfilename = (char*)alloca(length + 1);
+  sprintf (hfilename, "%s%s.%s", path, game, WORLD_DATA_F);
+
+  if ((fptr = fopen (hfilename, "rb")) == NULL)
+    {
+      printf ("FATAL ERROR: Unable to read/write %s file.\n", filename);
+      exit (EXIT_FAILURE);
+    }
+  w->hexes = (hex_t*)calloc(w->x * w->y, sizeof(hex_t));
+  fread(w->hexes, sizeof(hex_t), w->x * w->y, fptr);
+
+  for (y = 0; y < w->y; y++)
+    for (x = 0; x < w->x; x++)
+      {
+	coord xy; xy.x = x; xy.y = y;
+	get_hex(w, xy)->chain = NULL;
+      }
+  for (i = 0; i < nfeatures; i++)
+    {
+      feature_t* f = (feature_t*)malloc(sizeof(feature_t));
+      hex_t *hex;
+      fread(f, sizeof(feature_t), 1, fptr);
+      hex = get_hex(w, f->xy);
+      f->chain = hex->chain;
+      hex->chain = f;
+    }
+
+  w->spylist = (spy_t**)calloc(sizeof(spy_t*), w->num_spies);
+  for (i = 0; i < w->num_spies; i++)
+    {
+      w->spylist[i] = (spy_t*)malloc(sizeof(spy_t));
+      fread(w->spylist[i], sizeof(spy_t), 1, fptr);
+    }
+  fclose(fptr);
+
+  return w;
+}
+
+/* ----------------------------------------------------------------------
+--
+-- put_world
+--
+---------------------------------------------------------------------- */
+void put_world (world_t *w)
+{
+  FILE *fptr;
+  int length, x, y, i, nspies, nfeatures;
+  hex_t *hex;
+  feature_t *f;
+  char *filename;
+
+  for (nspies = i = 0; i < w->num_spies; i++)
+    nspies += w->spylist[i] ? 1 : 0;
+
+  length = strlen(w->path) + strlen(WORLD_DATA_F) + strlen(w->game);
+  filename = (char*)alloca(length + 1);
+  sprintf (filename, "%s%s.%s", w->path, w->game, WORLD_DATA_F);
+
+  if ((fptr = fopen (filename, "wb")) == NULL)
+    {
+      printf ("FATAL ERROR: Unable to read/write %s file.\n", filename);
+      exit (EXIT_FAILURE);
+    }
+  fwrite(w->hexes, sizeof(hex_t), w->x * w->y, fptr);
+
+  nfeatures = 0;
+  for (y = 0; y < w->y; y++)
+    for (x = 0; x < w->x; x++)
+      {
+	coord xy; xy.x = x; xy.y = y;
+	hex = get_hex(w, xy);
+	for (f = hex->chain; f; f = f->chain)
+	  {
+	    fwrite(f, sizeof(feature_t), 1, fptr);
+	    nfeatures++;
+	  }
+      }
+  for (i = 0; i < w->num_spies; i++)
+    if (w->spylist[i])
+      fwrite(w->spylist[i], sizeof(spy_t), 1, fptr);
+  fclose(fptr);
+
+  length = strlen(w->path) + strlen(WORLD_STAT_F) + strlen(w->game);
+  filename = (char*)alloca(length + 1);
+  sprintf (filename, "%s%s.%s", w->path, w->game, WORLD_STAT_F);
+
+  if ((fptr = fopen (filename, "w")) == 0)
+  {
+    printf ("FATAL ERROR: Unable to write %s file.\n", filename);
+    exit (EXIT_FAILURE);
+  }
+  fprintf (fptr, "%d\n", w->x);
+  fprintf (fptr, "%d\n", w->y);
+  fprintf (fptr, "%d\n", w->turn);
+  fprintf (fptr, "%ld\n", w->due);
+  fprintf (fptr, "%d\n", nspies);
+  fprintf (fptr, "%d\n", nfeatures);
+  save_player_list(w, fptr);
+  fclose(fptr);
+}
+
+/* ----------------------------------------------------------------------
+--
+-- OpenPlayerFiles
+--
+---------------------------------------------------------------------- */
+void OpenPlayerFiles(world_t *w)
+{
+  int i;
+  int j;
+  char *fname;
+
+  j = strlen(w->path) + strlen(w->game) + strlen("LP_") + 10;
+  fname = (char*)alloca(j);
+
+  for (i = 0; i <= w->num_players; i++)
+    if (w->player[i])
+      {
+	sprintf(fname, "%s%s.LP%02d_%03d", w->path, w->game,
+		i, w->turn);
+	if ((w->player[i]->fptr = fopen(fname, "w")) == NULL)
+	  {
+	    fprintf(stderr, "Error opening file %s.\n", fname);
+	    exit(1);
+	  }
+      }
+}
+
+void ClosePlayerFiles(world_t *w)
+{
+  int i;
+  for (i = 0; i <= w->num_players; i++)
+    fclose(w->player[i]->fptr);
+}
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d11 1
+a11 5
+#include "lizard.h"
+
+#include "filefunc.h"
+#include "strgfunc.h"
+
+a30 114
+/* ----------------------------------------------------------------------
+--
+-- get_switch_list
+--
+---------------------------------------------------------------------- */
+void get_switch_list (World *world)
+{
+  FILE *fptr;
+
+  char filename [255],
+       work_string [255],
+       temp_string [255];
+
+  int work;
+
+  const char known_switches [10][10] = { "SPAWN", "CAPTURE", "V_DORMANT",
+					 "P_ACTIVE", "WRAP", "V_POINTS",
+					 "HOME_OWN", "HOME_VIC", "GIVE",
+                                         "" },
+	     num_known_switches = 9;
+
+  strcpy (filename, world->path);
+  strcat (filename, world->game);
+  strcat (filename, ".");
+  strcat (filename, WORLD_SWITCH_F);
+
+  world->flags = 0;
+
+  if ((fptr = fopen (filename, "rt")) == NULL)
+  {
+    fprintf (stderr, "FATAL ERROR: Unable to read %s file.\n", filename);
+    exit (EXIT_FAILURE);
+  }
+
+  while (fgets (work_string, 255, fptr) != NULL)
+  {
+    work_string [strlen (work_string) - 1] = '\0';
+
+    strupr (work_string);
+
+    strtoken (temp_string, work_string, "=");
+
+    for (work = 0; work < num_known_switches; work ++)
+      if (strcmp (temp_string, known_switches [work]) == 0)
+	break;
+
+    switch (work)
+    {
+      case 0: /* SPAWN switch */
+	world->flags |= LZ_SPAWN;
+	break;
+
+      case 1: /* CAPTURE switch */
+	world->flags |= LZ_CAPTURE;
+	break;
+
+      case 2: /* VOLCANO DORMANT switch */
+	world->flags |= LZ_VOLCANO;
+	break;
+
+      case 3: /* PEAK ACTIVE switch */
+	world->flags |= LZ_PEAK;
+	break;
+
+      case 4: /* WORLD WRAP switch */
+	world->flags |= LZ_WRAP;
+	break;
+
+      case 5: /* VICTORY POINTS switch */
+	world->flags |= LZ_VICTORY;
+	break;
+
+      case 6: /* HOME RANK switch, indicates what home dens are worth */
+        break;
+
+      case 7: /* HOME POINTS switch, indicates points per home den */
+        break;
+
+      case 8: /* GIVE order allowed */
+	world->flags |= LZ_GIVE;
+        break;
+
+      default:
+	break;
+    }
+  }
+  fclose(fptr);
+}
+void put_switch_list(World *world)
+{
+  char *filename;
+  FILE *fptr;
+
+  filename = (char*)alloca(strlen(world->path) + strlen(world->game) +
+		    strlen(WORLD_SWITCH_F) + 3);
+  sprintf (filename, "%s%s.%s", world->path, world->game, WORLD_SWITCH_F);
+
+  if ((fptr = fopen (filename, "w")) == NULL)
+    {
+      printf ("FATAL ERROR: Unable to write to %s file.\n", filename);
+      exit (EXIT_FAILURE);
+    }
+
+  fprintf (fptr, "LIZARDS! Game %s Switches:\n", world->game);
+
+  if (world->flags & LZ_CAPTURE)
+    fprintf (fptr, "CAPTURE\n");
+  if (world->flags & LZ_WRAP)
+    fprintf (fptr, "WRAP\n");
+  if (world->flags & LZ_VICTORY)
+    fprintf (fptr, "V_POINTS\n");
+  fclose(fptr);
+}
+
+d36 1
+a36 1
+void get_player_list (World *world)
+a37 1
+  FILE *fptr;
+d40 1
+a40 2
+  char filename [255],
+       work_string [255];
+d42 1
+a42 1
+  int i;
+a43 6
+  sprintf (filename, "%s%s.%s", world->path, world->game, PLAYER_F);
+  if ((fptr = fopen (filename, "r")) == NULL)
+  {
+    world->num_players = 0;
+    return;
+  }
+d45 1
+d47 1
+a47 1
+  while (fgets (work_string, 255, fptr))
+a58 2
+  world->player = (player_t**)calloc(sizeof(player_t*), world->num_players+1);
+
+d61 1
+a69 1
+  fclose(fptr);
+d72 1
+a72 1
+void save_player_list (World *world)
+d74 4
+a77 5
+  FILE *fptr;
+  char filename [80];
+  int i;
+
+  sprintf (filename, "%s%s.%s", world->path, world->game, PLAYER_F);
+d79 1
+a79 6
+  if ((fptr = fopen (filename, "w")) == NULL)
+    {
+      printf ("FATAL ERROR: Unable to write to %s file.\n", filename);
+      exit (EXIT_FAILURE);
+    }
+  for (i = 0; i < world->num_players + 1; i++)
+a87 57
+  fclose(fptr);
+}
+
+/*----------------------------------------------------------------------
+--
+-- get_spy_list
+--
+---------------------------------------------------------------------- */
+void get_spy_list (World *world)
+{
+  FILE *fptr;
+  char filename [255];
+  int work;
+  spy_t work_spy;
+  world->spylist = (spy_t**)calloc(MAX_SPYS,sizeof(spy_t*));
+  sprintf (filename, "%s%s.%s", world->path, world->game, SPY_F);
+  if ((fptr = fopen (filename, "rb")) == NULL)
+    {
+      world->num_spies = 0;
+      return;
+    }
+  world->num_spies = num_records (fptr, sizeof (spy_t));
+  for (work = 0; work < world->num_spies; work ++)
+  {
+    get_rec (fptr, sizeof (spy_t), work, &work_spy);
+    if ((world->spylist[work] = (spy_t*)calloc (1,sizeof (spy_t))) == '\0')
+      {
+	printf ("FATAL ERROR: Out of memory.\n");
+	exit (EXIT_FAILURE);
+      }
+    *(world->spylist [work]) = work_spy;
+  }
+  fclose(fptr);
+}
+
+void put_spy_list (World *world)
+{
+  FILE *spy_fptr;
+
+  char filename [255];
+  int work,
+      work2;
+  sprintf (filename, "%s%s.%s", world->path, world->game, SPY_F);
+  if ((spy_fptr = fopen (filename, "wb")) == '\0')
+  {
+    printf ("FATAL ERROR: Unable to write to %s file.\n", filename);
+    exit (EXIT_FAILURE);
+  }
+  for (work = 0, work2 = 0; work < world->num_spies; work ++)
+  {
+    if (world->spylist[work]->player > 0)
+    {
+      put_rec (spy_fptr, sizeof (spy_t), work2, world->spylist [work]);
+      work2 ++;
+    }
+  }
+  fclose (spy_fptr);
+d95 1
+a95 1
+World* get_world (char *path, char *game)
+d97 1
+a97 1
+  World *world;
+d99 1
+a99 1
+  int length;
+d101 1
+a101 1
+  world = (World*)calloc(1,sizeof(World));
+d103 5
+d117 4
+a120 2
+  world->path = strdup(path);
+  world->game = strdup(game);
+d122 7
+a128 6
+  fscanf (fptr, "%d\n", &world->x);
+  fscanf (fptr, "%d\n", &world->y);
+  fscanf (fptr, "%d\n", &world->turn);
+  fscanf (fptr, "%ld\n", &world->due);
+  fscanf (fptr, "%d\n", &world->num_spies);
+  fscanf (fptr, "%d\n", &world->num_features);
+d130 2
+a131 1
+  get_switch_list(world);
+d141 10
+a150 7
+  world->hexes = (hex_t*)calloc(world->x * world->y, sizeof(hex_t));
+  fread(world->hexes, sizeof(hex_t), world->x * world->y, fptr);
+  world->hexen = (new_hex_t*)calloc(world->x * world->y, sizeof(new_hex_t));
+  fread(world->hexen, sizeof(new_hex_t), world->x * world->y, fptr);
+  world->features = (feature_t**)calloc(sizeof(feature_t*),
+					world->num_features);
+  for (i = 0; i < world->num_features; i++)
+d152 6
+a157 2
+      world->features[i] = (feature_t*)malloc(sizeof(feature_t));
+      fread(world->features[i], sizeof(feature_t), 1, fptr);
+d160 2
+a161 2
+  world->spylist = (spy_t**)calloc(sizeof(spy_t*), world->num_spies);
+  for (i = 0; i < world->num_spies; i++)
+d163 2
+a164 2
+      world->spylist[i] = (spy_t*)malloc(sizeof(spy_t));
+      fread(world->spylist[i], sizeof(spy_t), 1, fptr);
+d168 1
+a168 2
+  get_player_list(world);
+  return world;
+d176 1
+a176 1
+void put_world (World *world)
+d179 3
+a181 1
+  int length, i, nspies, nfeatures;
+d184 30
+a213 4
+  for (nspies = i = 0; i < world->num_spies; i++)
+    nspies += world->spylist[i] ? 1 : 0;
+  for (nfeatures = i = 0; i < world->num_features; i++)
+    nfeatures += world->features[i] ? 1 : 0;
+d215 1
+a215 1
+  length = strlen(world->path) + strlen(WORLD_STAT_F) + strlen(world->game);
+d217 1
+a217 1
+  sprintf (filename, "%s%s.%s", world->path, world->game, WORLD_STAT_F);
+d224 4
+a227 4
+  fprintf (fptr, "%d\n", world->x);
+  fprintf (fptr, "%d\n", world->y);
+  fprintf (fptr, "%d\n", world->turn);
+  fprintf (fptr, "%ld\n", world->due);
+d230 1
+a231 20
+  put_switch_list(world);
+  length = strlen(world->path) + strlen(WORLD_DATA_F) + strlen(world->game);
+  filename = (char*)alloca(length + 1);
+  sprintf (filename, "%s%s.%s", world->path, world->game, WORLD_DATA_F);
+
+  if ((fptr = fopen (filename, "wb")) == NULL)
+    {
+      printf ("FATAL ERROR: Unable to read/write %s file.\n", filename);
+      exit (EXIT_FAILURE);
+    }
+  fwrite(world->hexes, sizeof(hex_t), world->x * world->y, fptr);
+  fwrite(world->hexen, sizeof(new_hex_t), world->x * world->y, fptr);
+  for (i = 0; i < world->num_features; i++)
+    if (world->features[i])
+      fwrite(world->features[i], sizeof(feature_t), 1, fptr);
+  for (i = 0; i < world->num_spies; i++)
+    if (world->spylist[i])
+      fwrite(world->spylist[i], sizeof(spy_t), 1, fptr);
+  fclose(fptr);
+  save_player_list(world);
+d239 1
+a239 1
+void OpenPlayerFiles(World *world)
+d245 1
+a245 1
+  j = strlen(world->path) + strlen(world->game) + strlen("LP_") + 10;
+d248 11
+a258 10
+  for (i = 0; i <= world->num_players; i++)
+    {
+      sprintf(fname, "%s%s.LP%02d_%03d", world->path, world->game,
+	      i, world->turn);
+      if ((world->player[i]->fptr = fopen(fname, "a")) == NULL)
+	{
+	  fprintf(stderr, "Error opening file %s.\n", fname);
+	  exit(1);
+	}
+    }
+d261 1
+a261 1
+void ClosePlayerFiles(World *world)
+d264 2
+a265 2
+  for (i = 0; i <= world->num_players; i++)
+    fclose(world->player[i]->fptr);
+@

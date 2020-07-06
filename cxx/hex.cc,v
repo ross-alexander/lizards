@@ -1,0 +1,314 @@
+head	1.1;
+access;
+symbols;
+locks
+	ralexand:1.1; strict;
+comment	@// @;
+
+
+1.1
+date	2008.10.22.12.33.55;	author ralexand;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+#include <libxml/tree.h>
+#include <libxml/xpath.h>
+#include <libxml++/libxml++.h>
+
+#include "lizards.h"
+
+hex_t::hex_t(void)
+{
+  owner = 0;
+  terrain = WATER;
+  adjlist = new adjacent_t[DIRECTIONS];
+  flistlen = 0;
+  flist = 0;
+  title = 0;
+};
+
+hex_t::~hex_t(void)
+{
+  //  debug.log("~hex_t(%p %s)", this, title);
+  for (int i = 0; i < flistlen; i++)
+    if (flist[i])
+      delete flist[i];
+  delete [] flist;
+}
+
+void hex_t::set(int x_p, int y_p)
+{
+  xy.x = x_p;
+  xy.y = y_p;
+};
+
+hex_t* hex_t::adjacent(const char *dir)
+{
+  int d = (int)dir_t(dir);
+  
+  if (d < 0)
+    return NULL;
+  else
+    return adjacent(d);
+}  
+
+hex_t& hex_t::operator=(hex_t& h)
+{
+  owner = h.owner;
+  terrain = h.terrain;
+  //  undisturbed = h.undisturbed;
+  xy = h.xy;
+  title = strdup(h.title);
+  for (int i = 0; i < DIRECTIONS; i++)
+    {
+      adjlist[i].xy = h.adjlist[i].xy;
+      adjlist[i].hex = NULL;
+    }
+  flistlen = h.flistlen;
+  flist = new feature_t*[flistlen];
+  for (int i = 0; i < flistlen; i++)
+    if (h.flist[i])
+      flist[i] = h.flist[i]->clone();
+    else
+      flist[i] = 0;
+  return *this;
+}
+
+hex_t* hex_t::adjacent(dir_t d)
+{
+  if (!d.okay())
+    return NULL;
+
+  assert(adjlist[(int)d].hex != NULL);
+
+  return adjlist[(int)d].hex;
+}
+
+int hex_t::terrain_adjacent(Terrain t)
+{
+  int j = 0;
+  for (int i = 0; i < DIRECTIONS; i++)
+    j += adjlist[i].hex->terrain == t ? 1 : 0;
+  return j;
+}
+
+void hex_t::set_adjacent(dir_t dir, hex_t *hex)
+{
+  adjlist[dir].hex = hex;
+  adjlist[dir].xy = hex->xy;
+}
+
+int hex_t::num_features(void)
+{
+  int i = 0;
+  for (int j = 0; j < flistlen; j++)
+    i += flist[j] ? 1 : 0;
+  return i;
+}
+
+feature_t* hex_t::has_feature(Feature f)
+{
+  for (int i = 0; i < flistlen && flist[i]; i++)
+    if (flist[i]->type == f)
+      return flist[i];
+  return 0;
+}
+
+int hex_t::count_feature(Feature f)
+{
+  int count = 0;
+  for (int i = 0; i < flistlen && flist[i]; i++)
+    if (flist[i]->type == f)
+      count++;
+  return count;
+}
+
+int hex_t::count_feature(Feature f, int owner)
+{
+  int count = 0;
+  for (int i = 0; i < flistlen && flist[i]; i++)
+    if (flist[i]->type == f && flist[i]->owner == owner)
+      count++;
+  return count;
+}
+
+int hex_t::feature_adjacent(Feature f)
+{
+  int j = 0;
+  for (int i = NORTH; i <= NORTHWEST; i++)
+    if (adjacent(i)->has_feature(f))
+      j++;
+  return j;
+}
+
+feature_t* hex_t::add_feature(feature_t *f)
+{
+  int i;
+  for (i = 0; i < flistlen && flist[i]; i++)
+    {
+      if (flist[i] == f)
+	return f;
+    }
+
+  misc_t::dbg.log("add_feature(%d %s) i = %d, flistlen = %d", f->type, title, i, flistlen);
+
+  if (i == flistlen)
+    {
+      feature_t **tmp = new feature_t*[flistlen + 10];
+      for (int j = 0; j < flistlen; j++)
+	tmp[j] = flist[j];
+      for (int j = flistlen; j < flistlen + 10; j++)
+	tmp[j] = 0;
+      delete flist;
+      flist = tmp;
+      flistlen += 10;
+    }
+  flist[i] = f;
+  return f;
+}
+
+feature_t* hex_t::del_feature(feature_t *f)
+{
+  int i, j;
+  if (f == 0) return f;
+  for (i = 0; i < flistlen && flist[i]; i++)
+    if (flist[i] == f)
+      break;
+  if (flist[i] != f)
+    return 0;
+
+  /* Shuffle all other features down one */
+
+  for (j = i; j < flistlen && flist[j]; j++)
+    flist[j] = flist[j+1];
+  flist[j+1] = NULL;
+
+  return f;
+}
+
+feature_t* hex_t::pop_feature()
+{
+  feature_t *f;
+  f = (flistlen && flist[0]) ? del_feature(flist[0]) : NULL;
+  return f;
+}
+
+void hex_t::clear_features()
+{
+  for (int i = 0; i < flistlen && flist[i]; i++)
+    delete flist[i];
+  delete [] flist;
+  flist = 0;
+  flistlen = 0;
+}
+
+int hex_t::size()
+{
+  int size;
+  band_t *band;
+  den_t *den;
+  size = ((den = (den_t*)has_feature(DEN))) ? den->pop : 0;
+  return size + ((band = (band_t*)has_feature(BAND)) ? band->size() : 0);
+}
+
+void hex_t::save_xml(xmlpp::Element *p)
+{
+  xmlpp::Element *xn_hex = p->add_child("hex");
+  xn_hex->set_attribute("x", Glib::ustring::compose("%1", xy.x));
+  xn_hex->set_attribute("y", Glib::ustring::compose("%1", xy.y));
+  xn_hex->set_attribute("title", Glib::ustring::compose("%1", title));
+  xn_hex->set_attribute("terrain", Glib::ustring::compose("%1", terrain));
+  xn_hex->set_attribute("owner", Glib::ustring::compose("%1", owner));
+
+  for (int i = 0; i < DIRECTIONS; i++)
+    {
+      if (adjlist[i].hex)
+	{
+	  xmlpp::Element *xn_adj = xn_hex->add_child("adj");
+	  xn_adj->set_attribute("d", Glib::ustring::compose("%1", i));
+	  xn_adj->set_attribute("x", Glib::ustring::compose("%1", adjlist[i].xy.x));
+	  xn_adj->set_attribute("y", Glib::ustring::compose("%1", adjlist[i].xy.y));
+	}
+    }
+
+  for (int i = 0; i < flistlen && flist[i]; i++)
+    flist[i]->save_xml(xn_hex);
+}
+
+void hex_t::debug(FILE *stream)
+{
+  fprintf(stream, "Hex(x=%d y=%d title=%s terrain=%d owner=%d)\n",
+	  xy.x, xy.y, title, terrain, owner);
+  for (int i = 0; i < flistlen && flist[i]; i++)
+    flist[i]->debug(stream);
+}
+
+void hex_t::reload(xmlpp::Element *e, map_t *map)
+{
+  assert(e->get_attribute("title"));
+  assert(e->get_attribute("owner"));
+  assert(e->get_attribute("terrain"));
+
+  owner = strtol(e->get_attribute("owner")->get_value().data(), NULL, 10);
+  terrain = (Terrain)strtol(e->get_attribute("terrain")->get_value().data(), NULL, 10);
+  title = strdup(e->get_attribute("title")->get_value().data());
+
+  xmlpp::NodeSet ns = e->find("./*");
+
+  for (unsigned int j = 0; j < ns.size(); j++)
+    {
+      xmlpp::Element *t = dynamic_cast<xmlpp::Element*>(ns[j]);
+      if (t->get_name() == "adj")
+	{
+	  assert(t->get_attribute("d") != NULL);
+	  assert(t->get_attribute("x") != NULL);
+	  assert(t->get_attribute("y") != NULL);
+
+	  int dir = strtol(t->get_attribute("d")->get_value().data(), NULL, 10);
+	  int x = strtol(t->get_attribute("x")->get_value().data(), NULL, 10);
+	  int y = strtol(t->get_attribute("y")->get_value().data(), NULL, 10);
+
+	  adjlist[dir].hex = (*map)(x, y);
+	  adjlist[dir].xy = point_t(x, y);
+	}
+      Glib::ustring name = t->get_name();
+      if (name == "den") add_feature(new den_t(t));
+      if (name == "band") add_feature(new band_t(t));
+      if (name == "fertile") add_feature(new fertile_t(t));
+      if (name == "ruin") add_feature(new ruin_t(t));
+      if (name == "temple") add_feature(new temple_t(t));
+      if (name == "cursed") add_feature(new cursed_t(t));
+      if (name == "whirlpool") add_feature(new whirlpool_t(t));
+      if (name == "volcano") add_feature(new volcano_t(t));
+      if (name == "peak") add_feature(new peak_t(t));
+      if (name == "swamp") add_feature(new swamp_t(t));
+      if (name == "scrub") add_feature(new scrub_t(t));
+    }
+}
+
+hex_t::operator char*()
+{
+  return title;
+}
+
+void hex_t::remap(map_t& map)
+{
+  for (int i = 0; i < DIRECTIONS; i++)
+    adjlist[i].hex = map(adjlist[i].xy);
+}
+@

@@ -1,0 +1,34 @@
+
+ * LIZARDS! ORDER ERRORS
+
+Header(ff, 3, 1, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+ - 186 Green Lizards split at 5J and move N (to 4J).
+ - 186 Green Lizards at 4J move N (to 3J).
+ - Spy Lizard splits at 5J and moves NW (to 4I).
+ - Spy Lizard at 4I moves NW (to 4H).
+ - 20 Green Lizards at 5K move SE (to 6L).
+ - 20 Green Lizards at 6L move NE (to 5A).
+ - Spy Lizard splits at 5J and moves NW (to 4I).
+ - Spy Lizard at 4I is ENGULFED by a huge Sea Monster.
+ - Spy Lizard at 8K moves S (to 9K).
+ - Spy Lizard at 9K moves S (to 10K).
+ - 18 Green Lizards split at 5I and move SE (to 6J).
+ - Lizards eat from fertile hex 6J.
+ - 18 Green Lizards at 6J move SE (to 6K).
+ - Spy Lizard splits at 5I and moves NW (to 5H).
+ - Spy Lizard at 5H moves SW (to 5G).
+ - 20 Green Lizards at 7J move NE (to 6K).
+ - Spy Lizard at 7A moves NE (to 7B).
+ - Spy Lizard at 7B moves NE (to 6C).
+ - Spy Lizard splits at 5J and moves NE (to 4K).
+ - Spy Lizard at 4K moves NE (to 4L).
+ - Spy Lizard splits at 5I and moves SW (to 6H).
+ - Spy Lizard at 6H moves NW (to 5G).
+ - Spy Lizard splits at 5J and moves NE (to 4K).
+ - Spy Lizard at 4K moves NE (to 4L).
+Phase(development)
+SpyRejoin: 5A

@@ -1,0 +1,2148 @@
+<?xml version="1.0"?>
+<swamp game="Test" dir="." turn="0">
+  <players>
+    <player ref="0001" indx="1" clan="Raging Ross" code="RDA"/>
+    <player ref="0003" indx="2" clan="Mad Mike" code="MTB"/>
+    <player ref="0006" indx="3" clan="Jumping Jono" code="JNO"/>
+    <player ref="0007" indx="4" clan="James Bond" code="BON"/>
+  </players>
+  <turn turn="0">
+    <map width="32" height="32">
+      <hex x="0" y="0" title="1A" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="1" y="0" title="1B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="0" title="1C" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="3" y="0" title="1D" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="1"/>
+        <band green="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="4" y="0" title="1E" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="5" y="0" title="1F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="0" title="1G" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="0" title="1H" terrain="0" owner="0"/>
+      <hex x="8" y="0" title="1I" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="0" title="1J" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="0" title="1K" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="11" y="0" title="1L" terrain="0" owner="0"/>
+      <hex x="12" y="0" title="1M" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="13" y="0" title="1N" terrain="1" owner="0"/>
+      <hex x="14" y="0" title="1O" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="0" title="1P" terrain="0" owner="0"/>
+      <hex x="16" y="0" title="1Q" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="17" y="0" title="1R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="0" title="1S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="0" title="1T" terrain="0" owner="0"/>
+      <hex x="20" y="0" title="1U" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="21" y="0" title="1V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="0" title="1W" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="23" y="0" title="1X" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="24" y="0" title="1Y" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="0" title="1Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="0" title="1AA" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="27" y="0" title="1AB" terrain="0" owner="0"/>
+      <hex x="28" y="0" title="1AC" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="29" y="0" title="1AD" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="30" y="0" title="1AE" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="31" y="0" title="1AF" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="0" y="1" title="2A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="1" title="2B" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="1" title="2C" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="3" y="1" title="2D" terrain="0" owner="0"/>
+      <hex x="4" y="1" title="2E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="1" title="2F" terrain="1" owner="0">
+        <den hunger="0" population="200" colour="4"/>
+        <band yellow="59" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="6" y="1" title="2G" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="1" title="2H" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="8" y="1" title="2I" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="1" title="2J" terrain="0" owner="0"/>
+      <hex x="10" y="1" title="2K" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="1" title="2L" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="12" y="1" title="2M" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="13" y="1" title="2N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="1" title="2O" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="3"/>
+        <band black="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="1" title="2P" terrain="0" owner="0"/>
+      <hex x="16" y="1" title="2Q" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="17" y="1" title="2R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="1" title="2S" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="19" y="1" title="2T" terrain="0" owner="0"/>
+      <hex x="20" y="1" title="2U" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="21" y="1" title="2V" terrain="0" owner="0"/>
+      <hex x="22" y="1" title="2W" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="23" y="1" title="2X" terrain="0" owner="0"/>
+      <hex x="24" y="1" title="2Y" terrain="0" owner="0"/>
+      <hex x="25" y="1" title="2Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="1" title="2AA" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="27" y="1" title="2AB" terrain="0" owner="0"/>
+      <hex x="28" y="1" title="2AC" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="29" y="1" title="2AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="1" title="2AE" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="31" y="1" title="2AF" terrain="0" owner="0"/>
+      <hex x="0" y="2" title="3A" terrain="0" owner="0"/>
+      <hex x="1" y="2" title="3B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="2" title="3C" terrain="0" owner="0"/>
+      <hex x="3" y="2" title="3D" terrain="0" owner="0"/>
+      <hex x="4" y="2" title="3E" terrain="0" owner="0"/>
+      <hex x="5" y="2" title="3F" terrain="1" owner="0"/>
+      <hex x="6" y="2" title="3G" terrain="0" owner="0"/>
+      <hex x="7" y="2" title="3H" terrain="0" owner="0"/>
+      <hex x="8" y="2" title="3I" terrain="0" owner="0"/>
+      <hex x="9" y="2" title="3J" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="2"/>
+        <band grey="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="2" title="3K" terrain="0" owner="0"/>
+      <hex x="11" y="2" title="3L" terrain="0" owner="0"/>
+      <hex x="12" y="2" title="3M" terrain="0" owner="0"/>
+      <hex x="13" y="2" title="3N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="2" title="3O" terrain="0" owner="0"/>
+      <hex x="15" y="2" title="3P" terrain="0" owner="0"/>
+      <hex x="16" y="2" title="3Q" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="2" title="3R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="2" title="3S" terrain="0" owner="0"/>
+      <hex x="19" y="2" title="3T" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="20" y="2" title="3U" terrain="1" owner="0"/>
+      <hex x="21" y="2" title="3V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="2" title="3W" terrain="0" owner="0"/>
+      <hex x="23" y="2" title="3X" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="24" y="2" title="3Y" terrain="0" owner="0"/>
+      <hex x="25" y="2" title="3Z" terrain="0" owner="0"/>
+      <hex x="26" y="2" title="3AA" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="27" y="2" title="3AB" terrain="0" owner="0"/>
+      <hex x="28" y="2" title="3AC" terrain="0" owner="0"/>
+      <hex x="29" y="2" title="3AD" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="1"/>
+        <band green="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="30" y="2" title="3AE" terrain="0" owner="0"/>
+      <hex x="31" y="2" title="3AF" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="0" y="3" title="4A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="3" title="4B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="3" title="4C" terrain="0" owner="0"/>
+      <hex x="3" y="3" title="4D" terrain="0" owner="0"/>
+      <hex x="4" y="3" title="4E" terrain="0" owner="0"/>
+      <hex x="5" y="3" title="4F" terrain="0" owner="0"/>
+      <hex x="6" y="3" title="4G" terrain="0" owner="0"/>
+      <hex x="7" y="3" title="4H" terrain="0" owner="0"/>
+      <hex x="8" y="3" title="4I" terrain="0" owner="0"/>
+      <hex x="9" y="3" title="4J" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="3" title="4K" terrain="0" owner="0"/>
+      <hex x="11" y="3" title="4L" terrain="0" owner="0"/>
+      <hex x="12" y="3" title="4M" terrain="0" owner="0"/>
+      <hex x="13" y="3" title="4N" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="14" y="3" title="4O" terrain="0" owner="0"/>
+      <hex x="15" y="3" title="4P" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="16" y="3" title="4Q" terrain="0" owner="0"/>
+      <hex x="17" y="3" title="4R" terrain="0" owner="0"/>
+      <hex x="18" y="3" title="4S" terrain="0" owner="0"/>
+      <hex x="19" y="3" title="4T" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="20" y="3" title="4U" terrain="0" owner="0"/>
+      <hex x="21" y="3" title="4V" terrain="0" owner="0"/>
+      <hex x="22" y="3" title="4W" terrain="0" owner="0"/>
+      <hex x="23" y="3" title="4X" terrain="0" owner="0"/>
+      <hex x="24" y="3" title="4Y" terrain="0" owner="0"/>
+      <hex x="25" y="3" title="4Z" terrain="0" owner="0"/>
+      <hex x="26" y="3" title="4AA" terrain="0" owner="0"/>
+      <hex x="27" y="3" title="4AB" terrain="0" owner="0"/>
+      <hex x="28" y="3" title="4AC" terrain="0" owner="0"/>
+      <hex x="29" y="3" title="4AD" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="30" y="3" title="4AE" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="31" y="3" title="4AF" terrain="0" owner="0"/>
+      <hex x="0" y="4" title="5A" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="1" y="4" title="5B" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="4" title="5C" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="3" y="4" title="5D" terrain="0" owner="0"/>
+      <hex x="4" y="4" title="5E" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="5" y="4" title="5F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="4" title="5G" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="7" y="4" title="5H" terrain="0" owner="0"/>
+      <hex x="8" y="4" title="5I" terrain="0" owner="0"/>
+      <hex x="9" y="4" title="5J" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="4" title="5K" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="4" title="5L" terrain="0" owner="0"/>
+      <hex x="12" y="4" title="5M" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="13" y="4" title="5N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="4" title="5O" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="15" y="4" title="5P" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="16" y="4" title="5Q" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="0"/>
+        <band red="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="4" title="5R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="4" title="5S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="4" title="5T" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="20" y="4" title="5U" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="21" y="4" title="5V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="4" title="5W" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="23" y="4" title="5X" terrain="0" owner="0"/>
+      <hex x="24" y="4" title="5Y" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="4" title="5Z" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="26" y="4" title="5AA" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="27" y="4" title="5AB" terrain="0" owner="0"/>
+      <hex x="28" y="4" title="5AC" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="29" y="4" title="5AD" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="30" y="4" title="5AE" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="31" y="4" title="5AF" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="0" y="5" title="6A" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="1"/>
+        <band green="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="1" y="5" title="6B" terrain="0" owner="0"/>
+      <hex x="2" y="5" title="6C" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="3" y="5" title="6D" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="4" y="5" title="6E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="5" title="6F" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="3"/>
+        <band black="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="6" y="5" title="6G" terrain="1" owner="0"/>
+      <hex x="7" y="5" title="6H" terrain="0" owner="0">
+        <whirlpool/>
+      </hex>
+      <hex x="8" y="5" title="6I" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="5" title="6J" terrain="0" owner="0"/>
+      <hex x="10" y="5" title="6K" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="5" title="6L" terrain="0" owner="0"/>
+      <hex x="12" y="5" title="6M" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="13" y="5" title="6N" terrain="1" owner="0"/>
+      <hex x="14" y="5" title="6O" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="5" title="6P" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="16" y="5" title="6Q" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="17" y="5" title="6R" terrain="0" owner="0"/>
+      <hex x="18" y="5" title="6S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="5" title="6T" terrain="0" owner="0"/>
+      <hex x="20" y="5" title="6U" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="21" y="5" title="6V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="5" title="6W" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="23" y="5" title="6X" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="24" y="5" title="6Y" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="25" y="5" title="6Z" terrain="0" owner="0"/>
+      <hex x="26" y="5" title="6AA" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="27" y="5" title="6AB" terrain="0" owner="0"/>
+      <hex x="28" y="5" title="6AC" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="29" y="5" title="6AD" terrain="0" owner="0"/>
+      <hex x="30" y="5" title="6AE" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="31" y="5" title="6AF" terrain="0" owner="0"/>
+      <hex x="0" y="6" title="7A" terrain="0" owner="0"/>
+      <hex x="1" y="6" title="7B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="6" title="7C" terrain="0" owner="0"/>
+      <hex x="3" y="6" title="7D" terrain="0" owner="0"/>
+      <hex x="4" y="6" title="7E" terrain="0" owner="0"/>
+      <hex x="5" y="6" title="7F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="6" title="7G" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="7" y="6" title="7H" terrain="0" owner="0"/>
+      <hex x="8" y="6" title="7I" terrain="0" owner="0"/>
+      <hex x="9" y="6" title="7J" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="6" title="7K" terrain="0" owner="0"/>
+      <hex x="11" y="6" title="7L" terrain="0" owner="0"/>
+      <hex x="12" y="6" title="7M" terrain="0" owner="0"/>
+      <hex x="13" y="6" title="7N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="6" title="7O" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="6" title="7P" terrain="0" owner="0"/>
+      <hex x="16" y="6" title="7Q" terrain="0" owner="0"/>
+      <hex x="17" y="6" title="7R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="6" title="7S" terrain="0" owner="0"/>
+      <hex x="19" y="6" title="7T" terrain="0" owner="0"/>
+      <hex x="20" y="6" title="7U" terrain="0" owner="0"/>
+      <hex x="21" y="6" title="7V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="6" title="7W" terrain="0" owner="0"/>
+      <hex x="23" y="6" title="7X" terrain="0" owner="0"/>
+      <hex x="24" y="6" title="7Y" terrain="0" owner="0"/>
+      <hex x="25" y="6" title="7Z" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="26" y="6" title="7AA" terrain="0" owner="0"/>
+      <hex x="27" y="6" title="7AB" terrain="0" owner="0"/>
+      <hex x="28" y="6" title="7AC" terrain="0" owner="0"/>
+      <hex x="29" y="6" title="7AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="6" title="7AE" terrain="0" owner="0"/>
+      <hex x="31" y="6" title="7AF" terrain="0" owner="0"/>
+      <hex x="0" y="7" title="8A" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="1" y="7" title="8B" terrain="0" owner="0"/>
+      <hex x="2" y="7" title="8C" terrain="0" owner="0"/>
+      <hex x="3" y="7" title="8D" terrain="0" owner="0"/>
+      <hex x="4" y="7" title="8E" terrain="0" owner="0"/>
+      <hex x="5" y="7" title="8F" terrain="1" owner="4">
+        <peak/>
+      </hex>
+      <hex x="6" y="7" title="8G" terrain="1" owner="4">
+        <band red="10" hunger="0" combat="0" immobile="0"/>
+        <den hunger="0" population="30" colour="0"/>
+      </hex>
+      <hex x="7" y="7" title="8H" terrain="1" owner="4">
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+        <swamp/>
+      </hex>
+      <hex x="8" y="7" title="8I" terrain="1" owner="4">
+        <band red="70" hunger="0" combat="0" immobile="0"/>
+        <den hunger="0" population="30" colour="0"/>
+      </hex>
+      <hex x="9" y="7" title="8J" terrain="0" owner="0"/>
+      <hex x="10" y="7" title="8K" terrain="0" owner="0"/>
+      <hex x="11" y="7" title="8L" terrain="0" owner="0"/>
+      <hex x="12" y="7" title="8M" terrain="0" owner="0"/>
+      <hex x="13" y="7" title="8N" terrain="0" owner="0"/>
+      <hex x="14" y="7" title="8O" terrain="0" owner="0"/>
+      <hex x="15" y="7" title="8P" terrain="0" owner="0"/>
+      <hex x="16" y="7" title="8Q" terrain="0" owner="0"/>
+      <hex x="17" y="7" title="8R" terrain="0" owner="0"/>
+      <hex x="18" y="7" title="8S" terrain="0" owner="0"/>
+      <hex x="19" y="7" title="8T" terrain="0" owner="0"/>
+      <hex x="20" y="7" title="8U" terrain="0" owner="0"/>
+      <hex x="21" y="7" title="8V" terrain="0" owner="0"/>
+      <hex x="22" y="7" title="8W" terrain="0" owner="0"/>
+      <hex x="23" y="7" title="8X" terrain="0" owner="0"/>
+      <hex x="24" y="7" title="8Y" terrain="1" owner="3">
+        <band green="10" grey="50" black="10" yellow="10" hunger="0" combat="0" immobile="0"/>
+        <ruin/>
+      </hex>
+      <hex x="25" y="7" title="8Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="7" title="8AA" terrain="0" owner="0"/>
+      <hex x="27" y="7" title="8AB" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="28" y="7" title="8AC" terrain="0" owner="0"/>
+      <hex x="29" y="7" title="8AD" terrain="0" owner="0"/>
+      <hex x="30" y="7" title="8AE" terrain="0" owner="0"/>
+      <hex x="31" y="7" title="8AF" terrain="0" owner="0"/>
+      <hex x="0" y="8" title="9A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="8" title="9B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="8" title="9C" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="3" y="8" title="9D" terrain="0" owner="0"/>
+      <hex x="4" y="8" title="9E" terrain="1" owner="0"/>
+      <hex x="5" y="8" title="9F" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="6" y="8" title="9G" terrain="1" owner="4">
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+        <swamp/>
+      </hex>
+      <hex x="7" y="8" title="9H" terrain="1" owner="4">
+        <fertile level="0"/>
+      </hex>
+      <hex x="8" y="8" title="9I" terrain="1" owner="4">
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="8" title="9J" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="10" y="8" title="9K" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="11" y="8" title="9L" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="12" y="8" title="9M" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="13" y="8" title="9N" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="14" y="8" title="9O" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="8" title="9P" terrain="0" owner="0"/>
+      <hex x="16" y="8" title="9Q" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="8" title="9R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="8" title="9S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="8" title="9T" terrain="0" owner="0"/>
+      <hex x="20" y="8" title="9U" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="21" y="8" title="9V" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="22" y="8" title="9W" terrain="1" owner="0"/>
+      <hex x="23" y="8" title="9X" terrain="1" owner="3">
+        <band red="90" hunger="0" combat="0" immobile="0"/>
+        <temple/>
+      </hex>
+      <hex x="24" y="8" title="9Y" terrain="1" owner="3">
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="8" title="9Z" terrain="1" owner="3">
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+        <swamp/>
+      </hex>
+      <hex x="26" y="8" title="9AA" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="3"/>
+        <band black="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="27" y="8" title="9AB" terrain="0" owner="0"/>
+      <hex x="28" y="8" title="9AC" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="29" y="8" title="9AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="8" title="9AE" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="31" y="8" title="9AF" terrain="0" owner="0"/>
+      <hex x="0" y="9" title="10A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="9" title="10B" terrain="0" owner="0"/>
+      <hex x="2" y="9" title="10C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="9" title="10D" terrain="0" owner="0"/>
+      <hex x="4" y="9" title="10E" terrain="1" owner="0"/>
+      <hex x="5" y="9" title="10F" terrain="1" owner="4">
+        <temple/>
+      </hex>
+      <hex x="6" y="9" title="10G" terrain="1" owner="4">
+        <peak/>
+      </hex>
+      <hex x="7" y="9" title="10H" terrain="1" owner="4">
+        <band red="10" hunger="0" combat="0" immobile="0"/>
+        <den hunger="0" population="30" colour="2" home="1"/>
+      </hex>
+      <hex x="8" y="9" title="10I" terrain="1" owner="4">
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+        <swamp/>
+      </hex>
+      <hex x="9" y="9" title="10J" terrain="1" owner="4">
+        <ruin/>
+      </hex>
+      <hex x="10" y="9" title="10K" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="11" y="9" title="10L" terrain="0" owner="0"/>
+      <hex x="12" y="9" title="10M" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="13" y="9" title="10N" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="14" y="9" title="10O" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="15" y="9" title="10P" terrain="0" owner="0"/>
+      <hex x="16" y="9" title="10Q" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="17" y="9" title="10R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="9" title="10S" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="19" y="9" title="10T" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="20" y="9" title="10U" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="21" y="9" title="10V" terrain="0" owner="0"/>
+      <hex x="22" y="9" title="10W" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="23" y="9" title="10X" terrain="1" owner="3">
+        <band green="10" grey="50" black="10" yellow="10" hunger="0" combat="0" immobile="0"/>
+        <ruin/>
+      </hex>
+      <hex x="24" y="9" title="10Y" terrain="1" owner="3">
+        <band red="10" hunger="0" combat="0" immobile="0"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="9" title="10Z" terrain="1" owner="3">
+        <band red="80" black="50" yellow="10" hunger="0" combat="0" immobile="0"/>
+        <den hunger="0" population="30" colour="4" home="1"/>
+      </hex>
+      <hex x="26" y="9" title="10AA" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="27" y="9" title="10AB" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="28" y="9" title="10AC" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="29" y="9" title="10AD" terrain="0" owner="0"/>
+      <hex x="30" y="9" title="10AE" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="31" y="9" title="10AF" terrain="0" owner="0"/>
+      <hex x="0" y="10" title="11A" terrain="0" owner="0"/>
+      <hex x="1" y="10" title="11B" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="2" y="10" title="11C" terrain="0" owner="0"/>
+      <hex x="3" y="10" title="11D" terrain="0" owner="0"/>
+      <hex x="4" y="10" title="11E" terrain="0" owner="0">
+        <whirlpool/>
+      </hex>
+      <hex x="5" y="10" title="11F" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="6" y="10" title="11G" terrain="0" owner="0"/>
+      <hex x="7" y="10" title="11H" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="8" y="10" title="11I" terrain="1" owner="4">
+        <band grey="50" hunger="0" combat="0" immobile="0"/>
+        <ruin/>
+      </hex>
+      <hex x="9" y="10" title="11J" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="10" y="10" title="11K" terrain="1" owner="4">
+        <ruin/>
+      </hex>
+      <hex x="11" y="10" title="11L" terrain="0" owner="0"/>
+      <hex x="12" y="10" title="11M" terrain="0" owner="0"/>
+      <hex x="13" y="10" title="11N" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="14" y="10" title="11O" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="10" title="11P" terrain="1" owner="0"/>
+      <hex x="16" y="10" title="11Q" terrain="0" owner="0"/>
+      <hex x="17" y="10" title="11R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="10" title="11S" terrain="0" owner="0"/>
+      <hex x="19" y="10" title="11T" terrain="0" owner="0"/>
+      <hex x="20" y="10" title="11U" terrain="0" owner="0"/>
+      <hex x="21" y="10" title="11V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="10" title="11W" terrain="0" owner="0"/>
+      <hex x="23" y="10" title="11X" terrain="0" owner="0"/>
+      <hex x="24" y="10" title="11Y" terrain="0" owner="0"/>
+      <hex x="25" y="10" title="11Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="10" title="11AA" terrain="0" owner="0">
+        <whirlpool/>
+      </hex>
+      <hex x="27" y="10" title="11AB" terrain="0" owner="0"/>
+      <hex x="28" y="10" title="11AC" terrain="0" owner="0"/>
+      <hex x="29" y="10" title="11AD" terrain="1" owner="0"/>
+      <hex x="30" y="10" title="11AE" terrain="0" owner="0"/>
+      <hex x="31" y="10" title="11AF" terrain="0" owner="0"/>
+      <hex x="0" y="11" title="12A" terrain="0" owner="0"/>
+      <hex x="1" y="11" title="12B" terrain="0" owner="0"/>
+      <hex x="2" y="11" title="12C" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="3" y="11" title="12D" terrain="0" owner="0"/>
+      <hex x="4" y="11" title="12E" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="1"/>
+        <band green="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="5" y="11" title="12F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="11" title="12G" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="11" title="12H" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="8" y="11" title="12I" terrain="0" owner="0"/>
+      <hex x="9" y="11" title="12J" terrain="1" owner="4">
+        <swamp/>
+      </hex>
+      <hex x="10" y="11" title="12K" terrain="0" owner="0"/>
+      <hex x="11" y="11" title="12L" terrain="0" owner="0"/>
+      <hex x="12" y="11" title="12M" terrain="0" owner="0"/>
+      <hex x="13" y="11" title="12N" terrain="0" owner="0">
+        <whirlpool/>
+      </hex>
+      <hex x="14" y="11" title="12O" terrain="0" owner="0"/>
+      <hex x="15" y="11" title="12P" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="3"/>
+        <band black="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="16" y="11" title="12Q" terrain="0" owner="0"/>
+      <hex x="17" y="11" title="12R" terrain="0" owner="0"/>
+      <hex x="18" y="11" title="12S" terrain="0" owner="0"/>
+      <hex x="19" y="11" title="12T" terrain="0" owner="0"/>
+      <hex x="20" y="11" title="12U" terrain="0" owner="0"/>
+      <hex x="21" y="11" title="12V" terrain="0" owner="0"/>
+      <hex x="22" y="11" title="12W" terrain="0" owner="0"/>
+      <hex x="23" y="11" title="12X" terrain="0" owner="0"/>
+      <hex x="24" y="11" title="12Y" terrain="0" owner="0"/>
+      <hex x="25" y="11" title="12Z" terrain="0" owner="0"/>
+      <hex x="26" y="11" title="12AA" terrain="0" owner="0"/>
+      <hex x="27" y="11" title="12AB" terrain="0" owner="0"/>
+      <hex x="28" y="11" title="12AC" terrain="0" owner="0"/>
+      <hex x="29" y="11" title="12AD" terrain="0" owner="0"/>
+      <hex x="30" y="11" title="12AE" terrain="0" owner="0"/>
+      <hex x="31" y="11" title="12AF" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="0" y="12" title="13A" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="1" y="12" title="13B" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="2" y="12" title="13C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="12" title="13D" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="12" title="13E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="12" title="13F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="12" title="13G" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="7" y="12" title="13H" terrain="0" owner="0"/>
+      <hex x="8" y="12" title="13I" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="9" y="12" title="13J" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="10" y="12" title="13K" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="11" y="12" title="13L" terrain="0" owner="0"/>
+      <hex x="12" y="12" title="13M" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="13" y="12" title="13N" terrain="1" owner="0"/>
+      <hex x="14" y="12" title="13O" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="15" y="12" title="13P" terrain="0" owner="0"/>
+      <hex x="16" y="12" title="13Q" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="17" y="12" title="13R" terrain="1" owner="0"/>
+      <hex x="18" y="12" title="13S" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="2"/>
+        <band grey="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="19" y="12" title="13T" terrain="0" owner="0"/>
+      <hex x="20" y="12" title="13U" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="21" y="12" title="13V" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="22" y="12" title="13W" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="23" y="12" title="13X" terrain="0" owner="0"/>
+      <hex x="24" y="12" title="13Y" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="12" title="13Z" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="4"/>
+        <band yellow="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="26" y="12" title="13AA" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="27" y="12" title="13AB" terrain="0" owner="0"/>
+      <hex x="28" y="12" title="13AC" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="29" y="12" title="13AD" terrain="1" owner="0"/>
+      <hex x="30" y="12" title="13AE" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="31" y="12" title="13AF" terrain="0" owner="0"/>
+      <hex x="0" y="13" title="14A" terrain="0" owner="0"/>
+      <hex x="1" y="13" title="14B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="13" title="14C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="13" title="14D" terrain="0" owner="0"/>
+      <hex x="4" y="13" title="14E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="13" title="14F" terrain="0" owner="0"/>
+      <hex x="6" y="13" title="14G" terrain="0" owner="0"/>
+      <hex x="7" y="13" title="14H" terrain="0" owner="0"/>
+      <hex x="8" y="13" title="14I" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="9" y="13" title="14J" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="10" y="13" title="14K" terrain="1" owner="0"/>
+      <hex x="11" y="13" title="14L" terrain="0" owner="0"/>
+      <hex x="12" y="13" title="14M" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="13" y="13" title="14N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="13" title="14O" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="15" y="13" title="14P" terrain="0" owner="0"/>
+      <hex x="16" y="13" title="14Q" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="13" title="14R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="13" title="14S" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="19" y="13" title="14T" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="20" y="13" title="14U" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="21" y="13" title="14V" terrain="0" owner="0"/>
+      <hex x="22" y="13" title="14W" terrain="0" owner="0"/>
+      <hex x="23" y="13" title="14X" terrain="0" owner="0"/>
+      <hex x="24" y="13" title="14Y" terrain="1" owner="0"/>
+      <hex x="25" y="13" title="14Z" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="26" y="13" title="14AA" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="27" y="13" title="14AB" terrain="0" owner="0"/>
+      <hex x="28" y="13" title="14AC" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="29" y="13" title="14AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="13" title="14AE" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="3"/>
+        <band black="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="31" y="13" title="14AF" terrain="0" owner="0"/>
+      <hex x="0" y="14" title="15A" terrain="0" owner="0"/>
+      <hex x="1" y="14" title="15B" terrain="0" owner="0"/>
+      <hex x="2" y="14" title="15C" terrain="0" owner="0"/>
+      <hex x="3" y="14" title="15D" terrain="0" owner="0"/>
+      <hex x="4" y="14" title="15E" terrain="0" owner="0"/>
+      <hex x="5" y="14" title="15F" terrain="0" owner="0"/>
+      <hex x="6" y="14" title="15G" terrain="0" owner="0"/>
+      <hex x="7" y="14" title="15H" terrain="0" owner="0"/>
+      <hex x="8" y="14" title="15I" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="9" y="14" title="15J" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="14" title="15K" terrain="0" owner="0"/>
+      <hex x="11" y="14" title="15L" terrain="0" owner="0"/>
+      <hex x="12" y="14" title="15M" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="13" y="14" title="15N" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="14" y="14" title="15O" terrain="0" owner="0"/>
+      <hex x="15" y="14" title="15P" terrain="0" owner="0"/>
+      <hex x="16" y="14" title="15Q" terrain="0" owner="0"/>
+      <hex x="17" y="14" title="15R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="14" title="15S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="14" title="15T" terrain="0" owner="0"/>
+      <hex x="20" y="14" title="15U" terrain="0" owner="0"/>
+      <hex x="21" y="14" title="15V" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="22" y="14" title="15W" terrain="0" owner="0"/>
+      <hex x="23" y="14" title="15X" terrain="0" owner="0"/>
+      <hex x="24" y="14" title="15Y" terrain="0" owner="0"/>
+      <hex x="25" y="14" title="15Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="14" title="15AA" terrain="0" owner="0"/>
+      <hex x="27" y="14" title="15AB" terrain="0" owner="0"/>
+      <hex x="28" y="14" title="15AC" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="29" y="14" title="15AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="14" title="15AE" terrain="0" owner="0"/>
+      <hex x="31" y="14" title="15AF" terrain="0" owner="0"/>
+      <hex x="0" y="15" title="16A" terrain="0" owner="0"/>
+      <hex x="1" y="15" title="16B" terrain="0" owner="0"/>
+      <hex x="2" y="15" title="16C" terrain="0" owner="0"/>
+      <hex x="3" y="15" title="16D" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="15" title="16E" terrain="0" owner="0"/>
+      <hex x="5" y="15" title="16F" terrain="0" owner="0"/>
+      <hex x="6" y="15" title="16G" terrain="0" owner="0"/>
+      <hex x="7" y="15" title="16H" terrain="0" owner="0"/>
+      <hex x="8" y="15" title="16I" terrain="0" owner="0"/>
+      <hex x="9" y="15" title="16J" terrain="0" owner="0"/>
+      <hex x="10" y="15" title="16K" terrain="0" owner="0"/>
+      <hex x="11" y="15" title="16L" terrain="0" owner="0"/>
+      <hex x="12" y="15" title="16M" terrain="0" owner="0"/>
+      <hex x="13" y="15" title="16N" terrain="0" owner="0"/>
+      <hex x="14" y="15" title="16O" terrain="0" owner="0"/>
+      <hex x="15" y="15" title="16P" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="16" y="15" title="16Q" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="3"/>
+        <band black="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="15" title="16R" terrain="0" owner="0"/>
+      <hex x="18" y="15" title="16S" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="19" y="15" title="16T" terrain="0" owner="0"/>
+      <hex x="20" y="15" title="16U" terrain="0" owner="0"/>
+      <hex x="21" y="15" title="16V" terrain="0" owner="0"/>
+      <hex x="22" y="15" title="16W" terrain="0" owner="0"/>
+      <hex x="23" y="15" title="16X" terrain="0" owner="0"/>
+      <hex x="24" y="15" title="16Y" terrain="0" owner="0"/>
+      <hex x="25" y="15" title="16Z" terrain="0" owner="0"/>
+      <hex x="26" y="15" title="16AA" terrain="0" owner="0"/>
+      <hex x="27" y="15" title="16AB" terrain="0" owner="0"/>
+      <hex x="28" y="15" title="16AC" terrain="0" owner="0"/>
+      <hex x="29" y="15" title="16AD" terrain="0" owner="0"/>
+      <hex x="30" y="15" title="16AE" terrain="0" owner="0"/>
+      <hex x="31" y="15" title="16AF" terrain="0" owner="0"/>
+      <hex x="0" y="16" title="17A" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="1" y="16" title="17B" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="16" title="17C" terrain="1" owner="0">
+        <den hunger="0" population="200" colour="4"/>
+        <band yellow="59" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="16" title="17D" terrain="0" owner="0"/>
+      <hex x="4" y="16" title="17E" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="5" y="16" title="17F" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="6" y="16" title="17G" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="7" y="16" title="17H" terrain="0" owner="0"/>
+      <hex x="8" y="16" title="17I" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="9" y="16" title="17J" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="2"/>
+        <band grey="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="16" title="17K" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="16" title="17L" terrain="0" owner="0"/>
+      <hex x="12" y="16" title="17M" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="13" y="16" title="17N" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="14" y="16" title="17O" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="16" title="17P" terrain="0" owner="0"/>
+      <hex x="16" y="16" title="17Q" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="17" y="16" title="17R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="16" title="17S" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="19" y="16" title="17T" terrain="0" owner="0"/>
+      <hex x="20" y="16" title="17U" terrain="0" owner="0"/>
+      <hex x="21" y="16" title="17V" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="22" y="16" title="17W" terrain="1" owner="0"/>
+      <hex x="23" y="16" title="17X" terrain="0" owner="0"/>
+      <hex x="24" y="16" title="17Y" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="25" y="16" title="17Z" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="26" y="16" title="17AA" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="27" y="16" title="17AB" terrain="0" owner="0"/>
+      <hex x="28" y="16" title="17AC" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="29" y="16" title="17AD" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="2"/>
+        <band grey="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="30" y="16" title="17AE" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="31" y="16" title="17AF" terrain="0" owner="0"/>
+      <hex x="0" y="17" title="18A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="17" title="18B" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="17" title="18C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="17" title="18D" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="17" title="18E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="17" title="18F" terrain="0" owner="0"/>
+      <hex x="6" y="17" title="18G" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="7" y="17" title="18H" terrain="0" owner="0"/>
+      <hex x="8" y="17" title="18I" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="9" y="17" title="18J" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="17" title="18K" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="17" title="18L" terrain="0" owner="0"/>
+      <hex x="12" y="17" title="18M" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="13" y="17" title="18N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="17" title="18O" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="17" title="18P" terrain="0" owner="0"/>
+      <hex x="16" y="17" title="18Q" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="17" y="17" title="18R" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="18" y="17" title="18S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="17" title="18T" terrain="0" owner="0"/>
+      <hex x="20" y="17" title="18U" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="21" y="17" title="18V" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="22" y="17" title="18W" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="23" y="17" title="18X" terrain="0" owner="0"/>
+      <hex x="24" y="17" title="18Y" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="17" title="18Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="17" title="18AA" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="27" y="17" title="18AB" terrain="0" owner="0"/>
+      <hex x="28" y="17" title="18AC" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="29" y="17" title="18AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="17" title="18AE" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="31" y="17" title="18AF" terrain="0" owner="0"/>
+      <hex x="0" y="18" title="19A" terrain="0" owner="0"/>
+      <hex x="1" y="18" title="19B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="18" title="19C" terrain="0" owner="0"/>
+      <hex x="3" y="18" title="19D" terrain="0" owner="0"/>
+      <hex x="4" y="18" title="19E" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="5" y="18" title="19F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="18" title="19G" terrain="0" owner="0"/>
+      <hex x="7" y="18" title="19H" terrain="0" owner="0"/>
+      <hex x="8" y="18" title="19I" terrain="0" owner="0"/>
+      <hex x="9" y="18" title="19J" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="18" title="19K" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="11" y="18" title="19L" terrain="0" owner="0"/>
+      <hex x="12" y="18" title="19M" terrain="0" owner="0"/>
+      <hex x="13" y="18" title="19N" terrain="1" owner="0"/>
+      <hex x="14" y="18" title="19O" terrain="0" owner="0"/>
+      <hex x="15" y="18" title="19P" terrain="0" owner="0"/>
+      <hex x="16" y="18" title="19Q" terrain="0" owner="0"/>
+      <hex x="17" y="18" title="19R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="18" title="19S" terrain="0" owner="0"/>
+      <hex x="19" y="18" title="19T" terrain="0" owner="0"/>
+      <hex x="20" y="18" title="19U" terrain="0" owner="0"/>
+      <hex x="21" y="18" title="19V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="18" title="19W" terrain="0" owner="0"/>
+      <hex x="23" y="18" title="19X" terrain="0" owner="0"/>
+      <hex x="24" y="18" title="19Y" terrain="0" owner="0"/>
+      <hex x="25" y="18" title="19Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="18" title="19AA" terrain="0" owner="0"/>
+      <hex x="27" y="18" title="19AB" terrain="0" owner="0"/>
+      <hex x="28" y="18" title="19AC" terrain="0" owner="0"/>
+      <hex x="29" y="18" title="19AD" terrain="1" owner="0"/>
+      <hex x="30" y="18" title="19AE" terrain="0" owner="0"/>
+      <hex x="31" y="18" title="19AF" terrain="0" owner="0"/>
+      <hex x="0" y="19" title="20A" terrain="0" owner="0"/>
+      <hex x="1" y="19" title="20B" terrain="0" owner="0"/>
+      <hex x="2" y="19" title="20C" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="3" y="19" title="20D" terrain="1" owner="0"/>
+      <hex x="4" y="19" title="20E" terrain="0" owner="0"/>
+      <hex x="5" y="19" title="20F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="19" title="20G" terrain="0" owner="0"/>
+      <hex x="7" y="19" title="20H" terrain="0" owner="0"/>
+      <hex x="8" y="19" title="20I" terrain="0" owner="0"/>
+      <hex x="9" y="19" title="20J" terrain="0" owner="0"/>
+      <hex x="10" y="19" title="20K" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="11" y="19" title="20L" terrain="0" owner="0"/>
+      <hex x="12" y="19" title="20M" terrain="0" owner="0"/>
+      <hex x="13" y="19" title="20N" terrain="0" owner="0"/>
+      <hex x="14" y="19" title="20O" terrain="0" owner="0"/>
+      <hex x="15" y="19" title="20P" terrain="0" owner="0"/>
+      <hex x="16" y="19" title="20Q" terrain="0" owner="0"/>
+      <hex x="17" y="19" title="20R" terrain="0" owner="0"/>
+      <hex x="18" y="19" title="20S" terrain="0" owner="0"/>
+      <hex x="19" y="19" title="20T" terrain="0" owner="0"/>
+      <hex x="20" y="19" title="20U" terrain="0" owner="0"/>
+      <hex x="21" y="19" title="20V" terrain="0" owner="0"/>
+      <hex x="22" y="19" title="20W" terrain="0" owner="0"/>
+      <hex x="23" y="19" title="20X" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="24" y="19" title="20Y" terrain="0" owner="0"/>
+      <hex x="25" y="19" title="20Z" terrain="0" owner="0"/>
+      <hex x="26" y="19" title="20AA" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="27" y="19" title="20AB" terrain="0" owner="0"/>
+      <hex x="28" y="19" title="20AC" terrain="0" owner="0"/>
+      <hex x="29" y="19" title="20AD" terrain="0" owner="0"/>
+      <hex x="30" y="19" title="20AE" terrain="0" owner="0"/>
+      <hex x="31" y="19" title="20AF" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="0" y="20" title="21A" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="1" y="20" title="21B" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="20" title="21C" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="2"/>
+        <band grey="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="20" title="21D" terrain="0" owner="0"/>
+      <hex x="4" y="20" title="21E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="20" title="21F" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="6" y="20" title="21G" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="7" y="20" title="21H" terrain="0" owner="0"/>
+      <hex x="8" y="20" title="21I" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="9" y="20" title="21J" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="10" y="20" title="21K" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="11" y="20" title="21L" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="12" y="20" title="21M" terrain="1" owner="0"/>
+      <hex x="13" y="20" title="21N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="20" title="21O" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="20" title="21P" terrain="0" owner="0"/>
+      <hex x="16" y="20" title="21Q" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="17" y="20" title="21R" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="18" y="20" title="21S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="20" title="21T" terrain="0" owner="0"/>
+      <hex x="20" y="20" title="21U" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="21" y="20" title="21V" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="22" y="20" title="21W" terrain="0" owner="0"/>
+      <hex x="23" y="20" title="21X" terrain="0" owner="0"/>
+      <hex x="24" y="20" title="21Y" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="0"/>
+        <band red="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="25" y="20" title="21Z" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="26" y="20" title="21AA" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="27" y="20" title="21AB" terrain="0" owner="0"/>
+      <hex x="28" y="20" title="21AC" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="29" y="20" title="21AD" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="30" y="20" title="21AE" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="31" y="20" title="21AF" terrain="0" owner="0"/>
+      <hex x="0" y="21" title="22A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="21" title="22B" terrain="0" owner="0"/>
+      <hex x="2" y="21" title="22C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="21" title="22D" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="21" title="22E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="21" title="22F" terrain="0" owner="0"/>
+      <hex x="6" y="21" title="22G" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="7" y="21" title="22H" terrain="0" owner="0"/>
+      <hex x="8" y="21" title="22I" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="9" y="21" title="22J" terrain="0" owner="0"/>
+      <hex x="10" y="21" title="22K" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="11" y="21" title="22L" terrain="0" owner="0"/>
+      <hex x="12" y="21" title="22M" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="3"/>
+        <band black="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="21" title="22N" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="14" y="21" title="22O" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="15" y="21" title="22P" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="16" y="21" title="22Q" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="17" y="21" title="22R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="21" title="22S" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="19" y="21" title="22T" terrain="0" owner="0"/>
+      <hex x="20" y="21" title="22U" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="21" y="21" title="22V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="21" title="22W" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="23" y="21" title="22X" terrain="0" owner="0"/>
+      <hex x="24" y="21" title="22Y" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="21" title="22Z" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="26" y="21" title="22AA" terrain="1" owner="0"/>
+      <hex x="27" y="21" title="22AB" terrain="0" owner="0"/>
+      <hex x="28" y="21" title="22AC" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="29" y="21" title="22AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="21" title="22AE" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="31" y="21" title="22AF" terrain="0" owner="0"/>
+      <hex x="0" y="22" title="23A" terrain="0" owner="0"/>
+      <hex x="1" y="22" title="23B" terrain="1" owner="0"/>
+      <hex x="2" y="22" title="23C" terrain="0" owner="0"/>
+      <hex x="3" y="22" title="23D" terrain="0" owner="0"/>
+      <hex x="4" y="22" title="23E" terrain="0" owner="0"/>
+      <hex x="5" y="22" title="23F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="22" title="23G" terrain="0" owner="0"/>
+      <hex x="7" y="22" title="23H" terrain="0" owner="0"/>
+      <hex x="8" y="22" title="23I" terrain="0" owner="0"/>
+      <hex x="9" y="22" title="23J" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="10" y="22" title="23K" terrain="0" owner="0"/>
+      <hex x="11" y="22" title="23L" terrain="0" owner="0"/>
+      <hex x="12" y="22" title="23M" terrain="0" owner="0"/>
+      <hex x="13" y="22" title="23N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="22" title="23O" terrain="0" owner="0"/>
+      <hex x="15" y="22" title="23P" terrain="0" owner="0"/>
+      <hex x="16" y="22" title="23Q" terrain="0" owner="0"/>
+      <hex x="17" y="22" title="23R" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="2"/>
+        <band grey="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="18" y="22" title="23S" terrain="0" owner="0"/>
+      <hex x="19" y="22" title="23T" terrain="1" owner="0"/>
+      <hex x="20" y="22" title="23U" terrain="0" owner="0"/>
+      <hex x="21" y="22" title="23V" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="22" y="22" title="23W" terrain="0" owner="0"/>
+      <hex x="23" y="22" title="23X" terrain="0" owner="0"/>
+      <hex x="24" y="22" title="23Y" terrain="1" owner="0"/>
+      <hex x="25" y="22" title="23Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="22" title="23AA" terrain="0" owner="0"/>
+      <hex x="27" y="22" title="23AB" terrain="0" owner="0"/>
+      <hex x="28" y="22" title="23AC" terrain="0" owner="0"/>
+      <hex x="29" y="22" title="23AD" terrain="1" owner="0"/>
+      <hex x="30" y="22" title="23AE" terrain="0" owner="0"/>
+      <hex x="31" y="22" title="23AF" terrain="0" owner="0"/>
+      <hex x="0" y="23" title="24A" terrain="0" owner="0"/>
+      <hex x="1" y="23" title="24B" terrain="0" owner="0"/>
+      <hex x="2" y="23" title="24C" terrain="0" owner="0"/>
+      <hex x="3" y="23" title="24D" terrain="0" owner="0"/>
+      <hex x="4" y="23" title="24E" terrain="0" owner="0"/>
+      <hex x="5" y="23" title="24F" terrain="0" owner="0"/>
+      <hex x="6" y="23" title="24G" terrain="0" owner="0"/>
+      <hex x="7" y="23" title="24H" terrain="0" owner="0"/>
+      <hex x="8" y="23" title="24I" terrain="1" owner="1">
+        <band green="20" hunger="0" combat="0" immobile="0"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="23" title="24J" terrain="1" owner="1">
+        <swamp/>
+      </hex>
+      <hex x="10" y="23" title="24K" terrain="0" owner="0"/>
+      <hex x="11" y="23" title="24L" terrain="0" owner="0"/>
+      <hex x="12" y="23" title="24M" terrain="0" owner="0"/>
+      <hex x="13" y="23" title="24N" terrain="0" owner="0"/>
+      <hex x="14" y="23" title="24O" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="1"/>
+        <band green="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="23" title="24P" terrain="0" owner="0"/>
+      <hex x="16" y="23" title="24Q" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="23" title="24R" terrain="0" owner="0"/>
+      <hex x="18" y="23" title="24S" terrain="0" owner="0"/>
+      <hex x="19" y="23" title="24T" terrain="0" owner="0"/>
+      <hex x="20" y="23" title="24U" terrain="0" owner="0"/>
+      <hex x="21" y="23" title="24V" terrain="0" owner="0"/>
+      <hex x="22" y="23" title="24W" terrain="0" owner="0"/>
+      <hex x="23" y="23" title="24X" terrain="0" owner="0"/>
+      <hex x="24" y="23" title="24Y" terrain="1" owner="2">
+        <band red="100" green="10" hunger="0" combat="0" immobile="0"/>
+        <swamp/>
+      </hex>
+      <hex x="25" y="23" title="24Z" terrain="1" owner="2">
+        <swamp/>
+      </hex>
+      <hex x="26" y="23" title="24AA" terrain="1" owner="2">
+        <band red="100" grey="50" hunger="0" combat="0" immobile="0"/>
+        <peak/>
+      </hex>
+      <hex x="27" y="23" title="24AB" terrain="0" owner="0"/>
+      <hex x="28" y="23" title="24AC" terrain="0" owner="0"/>
+      <hex x="29" y="23" title="24AD" terrain="0" owner="0"/>
+      <hex x="30" y="23" title="24AE" terrain="0" owner="0"/>
+      <hex x="31" y="23" title="24AF" terrain="0" owner="0"/>
+      <hex x="0" y="24" title="25A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="24" title="25B" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="2" y="24" title="25C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="24" title="25D" terrain="0" owner="0"/>
+      <hex x="4" y="24" title="25E" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="5" y="24" title="25F" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="6" y="24" title="25G" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="0"/>
+        <band red="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="7" y="24" title="25H" terrain="1" owner="1">
+        <band grey="50" hunger="0" combat="0" immobile="0"/>
+        <ruin/>
+      </hex>
+      <hex x="8" y="24" title="25I" terrain="1" owner="1">
+        <band black="110" hunger="0" combat="0" immobile="0"/>
+        <temple/>
+      </hex>
+      <hex x="9" y="24" title="25J" terrain="1" owner="1">
+        <band grey="50" hunger="0" combat="0" immobile="0"/>
+        <ruin/>
+      </hex>
+      <hex x="10" y="24" title="25K" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="24" title="25L" terrain="0" owner="0"/>
+      <hex x="12" y="24" title="25M" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="24" title="25N" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="14" y="24" title="25O" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="24" title="25P" terrain="0" owner="0"/>
+      <hex x="16" y="24" title="25Q" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="17" y="24" title="25R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="24" title="25S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="24" title="25T" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="20" y="24" title="25U" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="21" y="24" title="25V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="24" title="25W" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="23" y="24" title="25X" terrain="1" owner="2">
+        <fertile level="0"/>
+      </hex>
+      <hex x="24" y="24" title="25Y" terrain="1" owner="2">
+        <den hunger="0" population="30" colour="0" home="1"/>
+      </hex>
+      <hex x="25" y="24" title="25Z" terrain="1" owner="2">
+        <fertile level="0"/>
+      </hex>
+      <hex x="26" y="24" title="25AA" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="27" y="24" title="25AB" terrain="0" owner="0"/>
+      <hex x="28" y="24" title="25AC" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="29" y="24" title="25AD" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="30" y="24" title="25AE" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="31" y="24" title="25AF" terrain="0" owner="0"/>
+      <hex x="0" y="25" title="26A" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="1" y="25" title="26B" terrain="0" owner="0"/>
+      <hex x="2" y="25" title="26C" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="2"/>
+        <band grey="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="25" title="26D" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="4" y="25" title="26E" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="5" y="25" title="26F" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="25" title="26G" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="25" title="26H" terrain="1" owner="1">
+        <fertile level="0"/>
+      </hex>
+      <hex x="8" y="25" title="26I" terrain="1" owner="1">
+        <den hunger="0" population="30" colour="3" home="1"/>
+      </hex>
+      <hex x="9" y="25" title="26J" terrain="1" owner="1">
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="25" title="26K" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="25" title="26L" terrain="0" owner="0"/>
+      <hex x="12" y="25" title="26M" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="13" y="25" title="26N" terrain="1" owner="0"/>
+      <hex x="14" y="25" title="26O" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="25" title="26P" terrain="0" owner="0"/>
+      <hex x="16" y="25" title="26Q" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="17" y="25" title="26R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="25" title="26S" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="19" y="25" title="26T" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="20" y="25" title="26U" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="21" y="25" title="26V" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="22" y="25" title="26W" terrain="1" owner="2">
+        <band red="100" grey="50" hunger="0" combat="0" immobile="0"/>
+        <peak/>
+      </hex>
+      <hex x="23" y="25" title="26X" terrain="1" owner="2">
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+        <swamp/>
+      </hex>
+      <hex x="24" y="25" title="26Y" terrain="1" owner="2">
+        <band red="100" yellow="50" hunger="0" combat="0" immobile="0"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="25" title="26Z" terrain="1" owner="2">
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+        <swamp/>
+      </hex>
+      <hex x="26" y="25" title="26AA" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="27" y="25" title="26AB" terrain="0" owner="0"/>
+      <hex x="28" y="25" title="26AC" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="29" y="25" title="26AD" terrain="0" owner="0"/>
+      <hex x="30" y="25" title="26AE" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="31" y="25" title="26AF" terrain="0" owner="0"/>
+      <hex x="0" y="26" title="27A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="26" title="27B" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="26" title="27C" terrain="0" owner="0"/>
+      <hex x="3" y="26" title="27D" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="26" title="27E" terrain="0" owner="0"/>
+      <hex x="5" y="26" title="27F" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="6" y="26" title="27G" terrain="0" owner="0"/>
+      <hex x="7" y="26" title="27H" terrain="1" owner="1">
+        <swamp/>
+      </hex>
+      <hex x="8" y="26" title="27I" terrain="0" owner="0"/>
+      <hex x="9" y="26" title="27J" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="26" title="27K" terrain="0" owner="0"/>
+      <hex x="11" y="26" title="27L" terrain="0" owner="0"/>
+      <hex x="12" y="26" title="27M" terrain="0" owner="0"/>
+      <hex x="13" y="26" title="27N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="26" title="27O" terrain="0" owner="0"/>
+      <hex x="15" y="26" title="27P" terrain="0" owner="0"/>
+      <hex x="16" y="26" title="27Q" terrain="0" owner="0"/>
+      <hex x="17" y="26" title="27R" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="18" y="26" title="27S" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="19" y="26" title="27T" terrain="0" owner="0"/>
+      <hex x="20" y="26" title="27U" terrain="0" owner="0"/>
+      <hex x="21" y="26" title="27V" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="3"/>
+        <band black="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="22" y="26" title="27W" terrain="0" owner="0"/>
+      <hex x="23" y="26" title="27X" terrain="1" owner="2">
+        <swamp/>
+      </hex>
+      <hex x="24" y="26" title="27Y" terrain="0" owner="0"/>
+      <hex x="25" y="26" title="27Z" terrain="1" owner="0"/>
+      <hex x="26" y="26" title="27AA" terrain="0" owner="0"/>
+      <hex x="27" y="26" title="27AB" terrain="1" owner="0">
+        <ruin/>
+      </hex>
+      <hex x="28" y="26" title="27AC" terrain="0" owner="0"/>
+      <hex x="29" y="26" title="27AD" terrain="1" owner="0"/>
+      <hex x="30" y="26" title="27AE" terrain="0" owner="0"/>
+      <hex x="31" y="26" title="27AF" terrain="0" owner="0"/>
+      <hex x="0" y="27" title="28A" terrain="0" owner="0"/>
+      <hex x="1" y="27" title="28B" terrain="0" owner="0"/>
+      <hex x="2" y="27" title="28C" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="0"/>
+        <band red="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="27" title="28D" terrain="0" owner="0"/>
+      <hex x="4" y="27" title="28E" terrain="0" owner="0"/>
+      <hex x="5" y="27" title="28F" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="6" y="27" title="28G" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="27" title="28H" terrain="0" owner="0"/>
+      <hex x="8" y="27" title="28I" terrain="0" owner="0"/>
+      <hex x="9" y="27" title="28J" terrain="0" owner="0"/>
+      <hex x="10" y="27" title="28K" terrain="0" owner="0"/>
+      <hex x="11" y="27" title="28L" terrain="0" owner="0"/>
+      <hex x="12" y="27" title="28M" terrain="0" owner="0"/>
+      <hex x="13" y="27" title="28N" terrain="0" owner="0"/>
+      <hex x="14" y="27" title="28O" terrain="0" owner="0"/>
+      <hex x="15" y="27" title="28P" terrain="0" owner="0"/>
+      <hex x="16" y="27" title="28Q" terrain="0" owner="0"/>
+      <hex x="17" y="27" title="28R" terrain="0" owner="0"/>
+      <hex x="18" y="27" title="28S" terrain="0" owner="0"/>
+      <hex x="19" y="27" title="28T" terrain="0" owner="0"/>
+      <hex x="20" y="27" title="28U" terrain="0" owner="0"/>
+      <hex x="21" y="27" title="28V" terrain="0" owner="0"/>
+      <hex x="22" y="27" title="28W" terrain="0" owner="0"/>
+      <hex x="23" y="27" title="28X" terrain="0" owner="0"/>
+      <hex x="24" y="27" title="28Y" terrain="0" owner="0"/>
+      <hex x="25" y="27" title="28Z" terrain="0" owner="0"/>
+      <hex x="26" y="27" title="28AA" terrain="0" owner="0"/>
+      <hex x="27" y="27" title="28AB" terrain="0" owner="0"/>
+      <hex x="28" y="27" title="28AC" terrain="0" owner="0"/>
+      <hex x="29" y="27" title="28AD" terrain="0" owner="0"/>
+      <hex x="30" y="27" title="28AE" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="31" y="27" title="28AF" terrain="0" owner="0"/>
+      <hex x="0" y="28" title="29A" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="1" y="28" title="29B" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="28" title="29C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="28" title="29D" terrain="0" owner="0"/>
+      <hex x="4" y="28" title="29E" terrain="0" owner="0"/>
+      <hex x="5" y="28" title="29F" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="6" y="28" title="29G" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="28" title="29H" terrain="0" owner="0"/>
+      <hex x="8" y="28" title="29I" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="9" y="28" title="29J" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="10" y="28" title="29K" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="11" y="28" title="29L" terrain="0" owner="0"/>
+      <hex x="12" y="28" title="29M" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="13" y="28" title="29N" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="14" y="28" title="29O" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="15" y="28" title="29P" terrain="0" owner="0"/>
+      <hex x="16" y="28" title="29Q" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="28" title="29R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="28" title="29S" terrain="0" owner="0"/>
+      <hex x="19" y="28" title="29T" terrain="0" owner="0"/>
+      <hex x="20" y="28" title="29U" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="21" y="28" title="29V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="28" title="29W" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="23" y="28" title="29X" terrain="0" owner="0"/>
+      <hex x="24" y="28" title="29Y" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="25" y="28" title="29Z" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="26" y="28" title="29AA" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="2"/>
+        <band grey="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="27" y="28" title="29AB" terrain="0" owner="0"/>
+      <hex x="28" y="28" title="29AC" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="29" y="28" title="29AD" terrain="0" owner="0"/>
+      <hex x="30" y="28" title="29AE" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="31" y="28" title="29AF" terrain="0" owner="0"/>
+      <hex x="0" y="29" title="30A" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="1" y="29" title="30B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="29" title="30C" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="29" title="30D" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="29" title="30E" terrain="0" owner="0"/>
+      <hex x="5" y="29" title="30F" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="6" y="29" title="30G" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="7" y="29" title="30H" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="8" y="29" title="30I" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="9" y="29" title="30J" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="10" y="29" title="30K" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="1"/>
+        <band green="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="11" y="29" title="30L" terrain="0" owner="0"/>
+      <hex x="12" y="29" title="30M" terrain="1" owner="0">
+        <den hunger="0" population="150" colour="0"/>
+        <band red="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="29" title="30N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="29" title="30O" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="29" title="30P" terrain="0" owner="0"/>
+      <hex x="16" y="29" title="30Q" terrain="1" owner="0"/>
+      <hex x="17" y="29" title="30R" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="18" y="29" title="30S" terrain="0" owner="0"/>
+      <hex x="19" y="29" title="30T" terrain="0" owner="0"/>
+      <hex x="20" y="29" title="30U" terrain="1" owner="0"/>
+      <hex x="21" y="29" title="30V" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="22" y="29" title="30W" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="23" y="29" title="30X" terrain="0" owner="0"/>
+      <hex x="24" y="29" title="30Y" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="25" y="29" title="30Z" terrain="0" owner="0"/>
+      <hex x="26" y="29" title="30AA" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="27" y="29" title="30AB" terrain="0" owner="0"/>
+      <hex x="28" y="29" title="30AC" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="29" y="29" title="30AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="29" title="30AE" terrain="1" owner="0"/>
+      <hex x="31" y="29" title="30AF" terrain="0" owner="0"/>
+      <hex x="0" y="30" title="31A" terrain="0" owner="0"/>
+      <hex x="1" y="30" title="31B" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="2" y="30" title="31C" terrain="0" owner="0"/>
+      <hex x="3" y="30" title="31D" terrain="0" owner="0"/>
+      <hex x="4" y="30" title="31E" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="5" y="30" title="31F" terrain="0" owner="0">
+        <whirlpool/>
+      </hex>
+      <hex x="6" y="30" title="31G" terrain="0" owner="0"/>
+      <hex x="7" y="30" title="31H" terrain="0" owner="0"/>
+      <hex x="8" y="30" title="31I" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="9" y="30" title="31J" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="30" title="31K" terrain="0" owner="0"/>
+      <hex x="11" y="30" title="31L" terrain="0" owner="0"/>
+      <hex x="12" y="30" title="31M" terrain="0" owner="0"/>
+      <hex x="13" y="30" title="31N" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="30" title="31O" terrain="1" owner="0">
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="30" title="31P" terrain="0" owner="0"/>
+      <hex x="16" y="30" title="31Q" terrain="1" owner="0">
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="17" y="30" title="31R" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="18" y="30" title="31S" terrain="0" owner="0"/>
+      <hex x="19" y="30" title="31T" terrain="0" owner="0"/>
+      <hex x="20" y="30" title="31U" terrain="0" owner="0"/>
+      <hex x="21" y="30" title="31V" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="22" y="30" title="31W" terrain="0" owner="0"/>
+      <hex x="23" y="30" title="31X" terrain="0" owner="0"/>
+      <hex x="24" y="30" title="31Y" terrain="0" owner="0"/>
+      <hex x="25" y="30" title="31Z" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="26" y="30" title="31AA" terrain="0" owner="0"/>
+      <hex x="27" y="30" title="31AB" terrain="1" owner="0">
+        <temple/>
+      </hex>
+      <hex x="28" y="30" title="31AC" terrain="0" owner="0"/>
+      <hex x="29" y="30" title="31AD" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="30" y="30" title="31AE" terrain="0" owner="0"/>
+      <hex x="31" y="30" title="31AF" terrain="0" owner="0"/>
+      <hex x="0" y="31" title="32A" terrain="0" owner="0"/>
+      <hex x="1" y="31" title="32B" terrain="0" owner="0"/>
+      <hex x="2" y="31" title="32C" terrain="0" owner="0"/>
+      <hex x="3" y="31" title="32D" terrain="0" owner="0"/>
+      <hex x="4" y="31" title="32E" terrain="0" owner="0"/>
+      <hex x="5" y="31" title="32F" terrain="0" owner="0"/>
+      <hex x="6" y="31" title="32G" terrain="0" owner="0"/>
+      <hex x="7" y="31" title="32H" terrain="0" owner="0"/>
+      <hex x="8" y="31" title="32I" terrain="1" owner="0">
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="31" title="32J" terrain="0" owner="0"/>
+      <hex x="10" y="31" title="32K" terrain="0" owner="0"/>
+      <hex x="11" y="31" title="32L" terrain="1" owner="0">
+        <peak/>
+      </hex>
+      <hex x="12" y="31" title="32M" terrain="1" owner="0">
+        <swamp/>
+      </hex>
+      <hex x="13" y="31" title="32N" terrain="0" owner="0"/>
+      <hex x="14" y="31" title="32O" terrain="0" owner="0"/>
+      <hex x="15" y="31" title="32P" terrain="0" owner="0"/>
+      <hex x="16" y="31" title="32Q" terrain="0" owner="0"/>
+      <hex x="17" y="31" title="32R" terrain="0" owner="0"/>
+      <hex x="18" y="31" title="32S" terrain="0" owner="0"/>
+      <hex x="19" y="31" title="32T" terrain="0" owner="0"/>
+      <hex x="20" y="31" title="32U" terrain="0" owner="0"/>
+      <hex x="21" y="31" title="32V" terrain="0" owner="0"/>
+      <hex x="22" y="31" title="32W" terrain="0" owner="0"/>
+      <hex x="23" y="31" title="32X" terrain="0" owner="0"/>
+      <hex x="24" y="31" title="32Y" terrain="0" owner="0"/>
+      <hex x="25" y="31" title="32Z" terrain="0" owner="0"/>
+      <hex x="26" y="31" title="32AA" terrain="0" owner="0"/>
+      <hex x="27" y="31" title="32AB" terrain="0" owner="0"/>
+      <hex x="28" y="31" title="32AC" terrain="0" owner="0"/>
+      <hex x="29" y="31" title="32AD" terrain="0" owner="0"/>
+      <hex x="30" y="31" title="32AE" terrain="0" owner="0"/>
+      <hex x="31" y="31" title="32AF" terrain="0" owner="0"/>
+    </map>
+  </turn>
+</swamp>

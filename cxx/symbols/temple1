@@ -1,0 +1,37 @@
+M -125 80
+L -85 80
+st
+M -105 80
+L -45 0
+L 35 0
+L 115 80
+L 95 80
+L 35 0
+st cs fill 
+%	 
+M 125 80
+L 75 80
+st 
+M -15 0
+L -45 80
+st 
+M 5 0
+L 25 80
+st
+%	Left side of steaps 
+M -15 0
+L -55 80
+L -45 80
+st 
+%	Steaps.
+M -40 80
+L 20 80
+st 
+M -37 60
+L 17 60
+st 
+M -30 40
+L 10 40
+st 
+M -20 20
+L 5 20

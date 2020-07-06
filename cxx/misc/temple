@@ -1,0 +1,12 @@
+/temple { 125 100 mt 165 100 lt st 145 100 mt 205 180 lt 285 180 lt 365 100 lt 345 100 lt 285 180 lt st cs fill 
+245 185 mt 245 185 30 356 185 arc st 
+245 185 mt 245 185 25 0 80 arc st
+375 100 mt 325 100 lt st 
+235 180 mt 205 100 lt st 
+255 180 mt 275 100 lt st
+235 180 mt 195 100 lt 205 100 lt st 
+210 100 mt 270 100 lt st 
+213 120 mt 267 120 lt st 
+220 140 mt 260 140 lt st 
+230 160 mt 255 160 lt st 
+} bd def 

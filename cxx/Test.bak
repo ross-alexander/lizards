@@ -1,0 +1,2244 @@
+<?xml version="1.0"?>
+<swamp game="Test" dir="." turn="0">
+  <players>
+    <player ref="0001" indx="1" code="RDA" clan="Raging Ross" homedens="1"/>
+    <player ref="0003" indx="2" code="MTB" clan="Mad Mike" homedens="1"/>
+    <player ref="0006" indx="3" code="JNO" clan="Jumping Jono" homedens="1"/>
+    <player ref="0007" indx="4" code="BON" clan="James Bond" homedens="1"/>
+  </players>
+  <turn turn="10"></turn>
+  <turn turn="0" updated="1214553440">
+    <map width="16" height="16">
+      <hex x="0" y="0" title="1A" terrain="0" owner="0">
+        <adj d="0" x="0" y="15"/>
+        <adj d="1" x="1" y="0"/>
+        <adj d="2" x="1" y="1"/>
+        <adj d="3" x="0" y="1"/>
+        <adj d="4" x="15" y="1"/>
+        <adj d="5" x="15" y="0"/>
+      </hex>
+      <hex x="1" y="0" title="1B" terrain="1" owner="0">
+        <adj d="0" x="1" y="15"/>
+        <adj d="1" x="2" y="15"/>
+        <adj d="2" x="2" y="0"/>
+        <adj d="3" x="1" y="1"/>
+        <adj d="4" x="0" y="0"/>
+        <adj d="5" x="0" y="15"/>
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="2" y="0" title="1C" terrain="1" owner="0">
+        <adj d="0" x="2" y="15"/>
+        <adj d="1" x="3" y="0"/>
+        <adj d="2" x="3" y="1"/>
+        <adj d="3" x="2" y="1"/>
+        <adj d="4" x="1" y="1"/>
+        <adj d="5" x="1" y="0"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="0" title="1D" terrain="0" owner="0">
+        <adj d="0" x="3" y="15"/>
+        <adj d="1" x="4" y="15"/>
+        <adj d="2" x="4" y="0"/>
+        <adj d="3" x="3" y="1"/>
+        <adj d="4" x="2" y="0"/>
+        <adj d="5" x="2" y="15"/>
+      </hex>
+      <hex x="4" y="0" title="1E" terrain="1" owner="0">
+        <adj d="0" x="4" y="15"/>
+        <adj d="1" x="5" y="0"/>
+        <adj d="2" x="5" y="1"/>
+        <adj d="3" x="4" y="1"/>
+        <adj d="4" x="3" y="1"/>
+        <adj d="5" x="3" y="0"/>
+        <scrub/>
+      </hex>
+      <hex x="5" y="0" title="1F" terrain="1" owner="0">
+        <adj d="0" x="5" y="15"/>
+        <adj d="1" x="6" y="15"/>
+        <adj d="2" x="6" y="0"/>
+        <adj d="3" x="5" y="1"/>
+        <adj d="4" x="4" y="0"/>
+        <adj d="5" x="4" y="15"/>
+        <den hunger="0" population="150" colour="0"/>
+        <band red="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="6" y="0" title="1G" terrain="1" owner="0">
+        <adj d="0" x="6" y="15"/>
+        <adj d="1" x="7" y="0"/>
+        <adj d="2" x="7" y="1"/>
+        <adj d="3" x="6" y="1"/>
+        <adj d="4" x="5" y="1"/>
+        <adj d="5" x="5" y="0"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="0" title="1H" terrain="0" owner="0">
+        <adj d="0" x="7" y="15"/>
+        <adj d="1" x="8" y="15"/>
+        <adj d="2" x="8" y="0"/>
+        <adj d="3" x="7" y="1"/>
+        <adj d="4" x="6" y="0"/>
+        <adj d="5" x="6" y="15"/>
+      </hex>
+      <hex x="8" y="0" title="1I" terrain="1" owner="0">
+        <adj d="0" x="8" y="15"/>
+        <adj d="1" x="9" y="0"/>
+        <adj d="2" x="9" y="1"/>
+        <adj d="3" x="8" y="1"/>
+        <adj d="4" x="7" y="1"/>
+        <adj d="5" x="7" y="0"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="0" title="1J" terrain="1" owner="0">
+        <adj d="0" x="9" y="15"/>
+        <adj d="1" x="10" y="15"/>
+        <adj d="2" x="10" y="0"/>
+        <adj d="3" x="9" y="1"/>
+        <adj d="4" x="8" y="0"/>
+        <adj d="5" x="8" y="15"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="0" title="1K" terrain="1" owner="0">
+        <adj d="0" x="10" y="15"/>
+        <adj d="1" x="11" y="0"/>
+        <adj d="2" x="11" y="1"/>
+        <adj d="3" x="10" y="1"/>
+        <adj d="4" x="9" y="1"/>
+        <adj d="5" x="9" y="0"/>
+        <swamp/>
+      </hex>
+      <hex x="11" y="0" title="1L" terrain="0" owner="0">
+        <adj d="0" x="11" y="15"/>
+        <adj d="1" x="12" y="15"/>
+        <adj d="2" x="12" y="0"/>
+        <adj d="3" x="11" y="1"/>
+        <adj d="4" x="10" y="0"/>
+        <adj d="5" x="10" y="15"/>
+      </hex>
+      <hex x="12" y="0" title="1M" terrain="1" owner="0">
+        <adj d="0" x="12" y="15"/>
+        <adj d="1" x="13" y="0"/>
+        <adj d="2" x="13" y="1"/>
+        <adj d="3" x="12" y="1"/>
+        <adj d="4" x="11" y="1"/>
+        <adj d="5" x="11" y="0"/>
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="0" title="1N" terrain="1" owner="0">
+        <adj d="0" x="13" y="15"/>
+        <adj d="1" x="14" y="15"/>
+        <adj d="2" x="14" y="0"/>
+        <adj d="3" x="13" y="1"/>
+        <adj d="4" x="12" y="0"/>
+        <adj d="5" x="12" y="15"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="0" title="1O" terrain="1" owner="0">
+        <adj d="0" x="14" y="15"/>
+        <adj d="1" x="15" y="0"/>
+        <adj d="2" x="15" y="1"/>
+        <adj d="3" x="14" y="1"/>
+        <adj d="4" x="13" y="1"/>
+        <adj d="5" x="13" y="0"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="0" title="1P" terrain="0" owner="0">
+        <adj d="0" x="15" y="15"/>
+        <adj d="1" x="0" y="15"/>
+        <adj d="2" x="0" y="0"/>
+        <adj d="3" x="15" y="1"/>
+        <adj d="4" x="14" y="0"/>
+        <adj d="5" x="14" y="15"/>
+      </hex>
+      <hex x="0" y="1" title="2A" terrain="1" owner="0">
+        <adj d="0" x="0" y="0"/>
+        <adj d="1" x="1" y="1"/>
+        <adj d="2" x="1" y="2"/>
+        <adj d="3" x="0" y="2"/>
+        <adj d="4" x="15" y="2"/>
+        <adj d="5" x="15" y="1"/>
+        <scrub/>
+      </hex>
+      <hex x="1" y="1" title="2B" terrain="0" owner="0">
+        <adj d="0" x="1" y="0"/>
+        <adj d="1" x="2" y="0"/>
+        <adj d="2" x="2" y="1"/>
+        <adj d="3" x="1" y="2"/>
+        <adj d="4" x="0" y="1"/>
+        <adj d="5" x="0" y="0"/>
+      </hex>
+      <hex x="2" y="1" title="2C" terrain="1" owner="0">
+        <adj d="0" x="2" y="0"/>
+        <adj d="1" x="3" y="1"/>
+        <adj d="2" x="3" y="2"/>
+        <adj d="3" x="2" y="2"/>
+        <adj d="4" x="1" y="2"/>
+        <adj d="5" x="1" y="1"/>
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="1" title="2D" terrain="1" owner="0">
+        <adj d="0" x="3" y="0"/>
+        <adj d="1" x="4" y="0"/>
+        <adj d="2" x="4" y="1"/>
+        <adj d="3" x="3" y="2"/>
+        <adj d="4" x="2" y="1"/>
+        <adj d="5" x="2" y="0"/>
+        <scrub/>
+      </hex>
+      <hex x="4" y="1" title="2E" terrain="1" owner="0">
+        <adj d="0" x="4" y="0"/>
+        <adj d="1" x="5" y="1"/>
+        <adj d="2" x="5" y="2"/>
+        <adj d="3" x="4" y="2"/>
+        <adj d="4" x="3" y="2"/>
+        <adj d="5" x="3" y="1"/>
+      </hex>
+      <hex x="5" y="1" title="2F" terrain="0" owner="0">
+        <adj d="0" x="5" y="0"/>
+        <adj d="1" x="6" y="0"/>
+        <adj d="2" x="6" y="1"/>
+        <adj d="3" x="5" y="2"/>
+        <adj d="4" x="4" y="1"/>
+        <adj d="5" x="4" y="0"/>
+      </hex>
+      <hex x="6" y="1" title="2G" terrain="1" owner="0">
+        <adj d="0" x="6" y="0"/>
+        <adj d="1" x="7" y="1"/>
+        <adj d="2" x="7" y="2"/>
+        <adj d="3" x="6" y="2"/>
+        <adj d="4" x="5" y="2"/>
+        <adj d="5" x="5" y="1"/>
+      </hex>
+      <hex x="7" y="1" title="2H" terrain="0" owner="0">
+        <adj d="0" x="7" y="0"/>
+        <adj d="1" x="8" y="0"/>
+        <adj d="2" x="8" y="1"/>
+        <adj d="3" x="7" y="2"/>
+        <adj d="4" x="6" y="1"/>
+        <adj d="5" x="6" y="0"/>
+      </hex>
+      <hex x="8" y="1" title="2I" terrain="1" owner="0">
+        <adj d="0" x="8" y="0"/>
+        <adj d="1" x="9" y="1"/>
+        <adj d="2" x="9" y="2"/>
+        <adj d="3" x="8" y="2"/>
+        <adj d="4" x="7" y="2"/>
+        <adj d="5" x="7" y="1"/>
+        <swamp/>
+      </hex>
+      <hex x="9" y="1" title="2J" terrain="1" owner="0">
+        <adj d="0" x="9" y="0"/>
+        <adj d="1" x="10" y="0"/>
+        <adj d="2" x="10" y="1"/>
+        <adj d="3" x="9" y="2"/>
+        <adj d="4" x="8" y="1"/>
+        <adj d="5" x="8" y="0"/>
+        <den hunger="-1" population="150" colour="3"/>
+        <band black="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="1" title="2K" terrain="1" owner="0">
+        <adj d="0" x="10" y="0"/>
+        <adj d="1" x="11" y="1"/>
+        <adj d="2" x="11" y="2"/>
+        <adj d="3" x="10" y="2"/>
+        <adj d="4" x="9" y="2"/>
+        <adj d="5" x="9" y="1"/>
+      </hex>
+      <hex x="11" y="1" title="2L" terrain="0" owner="0">
+        <adj d="0" x="11" y="0"/>
+        <adj d="1" x="12" y="0"/>
+        <adj d="2" x="12" y="1"/>
+        <adj d="3" x="11" y="2"/>
+        <adj d="4" x="10" y="1"/>
+        <adj d="5" x="10" y="0"/>
+      </hex>
+      <hex x="12" y="1" title="2M" terrain="1" owner="0">
+        <adj d="0" x="12" y="0"/>
+        <adj d="1" x="13" y="1"/>
+        <adj d="2" x="13" y="2"/>
+        <adj d="3" x="12" y="2"/>
+        <adj d="4" x="11" y="2"/>
+        <adj d="5" x="11" y="1"/>
+        <scrub/>
+      </hex>
+      <hex x="13" y="1" title="2N" terrain="0" owner="0">
+        <adj d="0" x="13" y="0"/>
+        <adj d="1" x="14" y="0"/>
+        <adj d="2" x="14" y="1"/>
+        <adj d="3" x="13" y="2"/>
+        <adj d="4" x="12" y="1"/>
+        <adj d="5" x="12" y="0"/>
+      </hex>
+      <hex x="14" y="1" title="2O" terrain="1" owner="0">
+        <adj d="0" x="14" y="0"/>
+        <adj d="1" x="15" y="1"/>
+        <adj d="2" x="15" y="2"/>
+        <adj d="3" x="14" y="2"/>
+        <adj d="4" x="13" y="2"/>
+        <adj d="5" x="13" y="1"/>
+        <swamp/>
+      </hex>
+      <hex x="15" y="1" title="2P" terrain="1" owner="0">
+        <adj d="0" x="15" y="0"/>
+        <adj d="1" x="0" y="0"/>
+        <adj d="2" x="0" y="1"/>
+        <adj d="3" x="15" y="2"/>
+        <adj d="4" x="14" y="1"/>
+        <adj d="5" x="14" y="0"/>
+        <den hunger="0" population="50" colour="0"/>
+        <band red="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="0" y="2" title="3A" terrain="0" owner="0">
+        <adj d="0" x="0" y="1"/>
+        <adj d="1" x="1" y="2"/>
+        <adj d="2" x="1" y="3"/>
+        <adj d="3" x="0" y="3"/>
+        <adj d="4" x="15" y="3"/>
+        <adj d="5" x="15" y="2"/>
+      </hex>
+      <hex x="1" y="2" title="3B" terrain="1" owner="0">
+        <adj d="0" x="1" y="1"/>
+        <adj d="1" x="2" y="1"/>
+        <adj d="2" x="2" y="2"/>
+        <adj d="3" x="1" y="3"/>
+        <adj d="4" x="0" y="2"/>
+        <adj d="5" x="0" y="1"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="2" title="3C" terrain="1" owner="4">
+        <adj d="0" x="2" y="1"/>
+        <adj d="1" x="3" y="2"/>
+        <adj d="2" x="3" y="3"/>
+        <adj d="3" x="2" y="3"/>
+        <adj d="4" x="1" y="3"/>
+        <adj d="5" x="1" y="2"/>
+        <scrub/>
+      </hex>
+      <hex x="3" y="2" title="3D" terrain="0" owner="0">
+        <adj d="0" x="3" y="1"/>
+        <adj d="1" x="4" y="1"/>
+        <adj d="2" x="4" y="2"/>
+        <adj d="3" x="3" y="3"/>
+        <adj d="4" x="2" y="2"/>
+        <adj d="5" x="2" y="1"/>
+      </hex>
+      <hex x="4" y="2" title="3E" terrain="0" owner="0">
+        <adj d="0" x="4" y="1"/>
+        <adj d="1" x="5" y="2"/>
+        <adj d="2" x="5" y="3"/>
+        <adj d="3" x="4" y="3"/>
+        <adj d="4" x="3" y="3"/>
+        <adj d="5" x="3" y="2"/>
+      </hex>
+      <hex x="5" y="2" title="3F" terrain="1" owner="0">
+        <adj d="0" x="5" y="1"/>
+        <adj d="1" x="6" y="1"/>
+        <adj d="2" x="6" y="2"/>
+        <adj d="3" x="5" y="3"/>
+        <adj d="4" x="4" y="2"/>
+        <adj d="5" x="4" y="1"/>
+        <scrub/>
+      </hex>
+      <hex x="6" y="2" title="3G" terrain="0" owner="0">
+        <adj d="0" x="6" y="1"/>
+        <adj d="1" x="7" y="2"/>
+        <adj d="2" x="7" y="3"/>
+        <adj d="3" x="6" y="3"/>
+        <adj d="4" x="5" y="3"/>
+        <adj d="5" x="5" y="2"/>
+      </hex>
+      <hex x="7" y="2" title="3H" terrain="0" owner="0">
+        <adj d="0" x="7" y="1"/>
+        <adj d="1" x="8" y="1"/>
+        <adj d="2" x="8" y="2"/>
+        <adj d="3" x="7" y="3"/>
+        <adj d="4" x="6" y="2"/>
+        <adj d="5" x="6" y="1"/>
+      </hex>
+      <hex x="8" y="2" title="3I" terrain="1" owner="0">
+        <adj d="0" x="8" y="1"/>
+        <adj d="1" x="9" y="2"/>
+        <adj d="2" x="9" y="3"/>
+        <adj d="3" x="8" y="3"/>
+        <adj d="4" x="7" y="3"/>
+        <adj d="5" x="7" y="2"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="2" title="3J" terrain="1" owner="0">
+        <adj d="0" x="9" y="1"/>
+        <adj d="1" x="10" y="1"/>
+        <adj d="2" x="10" y="2"/>
+        <adj d="3" x="9" y="3"/>
+        <adj d="4" x="8" y="2"/>
+        <adj d="5" x="8" y="1"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="2" title="3K" terrain="0" owner="0">
+        <adj d="0" x="10" y="1"/>
+        <adj d="1" x="11" y="2"/>
+        <adj d="2" x="11" y="3"/>
+        <adj d="3" x="10" y="3"/>
+        <adj d="4" x="9" y="3"/>
+        <adj d="5" x="9" y="2"/>
+      </hex>
+      <hex x="11" y="2" title="3L" terrain="0" owner="0">
+        <adj d="0" x="11" y="1"/>
+        <adj d="1" x="12" y="1"/>
+        <adj d="2" x="12" y="2"/>
+        <adj d="3" x="11" y="3"/>
+        <adj d="4" x="10" y="2"/>
+        <adj d="5" x="10" y="1"/>
+      </hex>
+      <hex x="12" y="2" title="3M" terrain="0" owner="0">
+        <adj d="0" x="12" y="1"/>
+        <adj d="1" x="13" y="2"/>
+        <adj d="2" x="13" y="3"/>
+        <adj d="3" x="12" y="3"/>
+        <adj d="4" x="11" y="3"/>
+        <adj d="5" x="11" y="2"/>
+      </hex>
+      <hex x="13" y="2" title="3N" terrain="1" owner="0">
+        <adj d="0" x="13" y="1"/>
+        <adj d="1" x="14" y="1"/>
+        <adj d="2" x="14" y="2"/>
+        <adj d="3" x="13" y="3"/>
+        <adj d="4" x="12" y="2"/>
+        <adj d="5" x="12" y="1"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="2" title="3O" terrain="0" owner="0">
+        <adj d="0" x="14" y="1"/>
+        <adj d="1" x="15" y="2"/>
+        <adj d="2" x="15" y="3"/>
+        <adj d="3" x="14" y="3"/>
+        <adj d="4" x="13" y="3"/>
+        <adj d="5" x="13" y="2"/>
+      </hex>
+      <hex x="15" y="2" title="3P" terrain="0" owner="0">
+        <adj d="0" x="15" y="1"/>
+        <adj d="1" x="0" y="1"/>
+        <adj d="2" x="0" y="2"/>
+        <adj d="3" x="15" y="3"/>
+        <adj d="4" x="14" y="2"/>
+        <adj d="5" x="14" y="1"/>
+      </hex>
+      <hex x="0" y="3" title="4A" terrain="0" owner="0">
+        <adj d="0" x="0" y="2"/>
+        <adj d="1" x="1" y="3"/>
+        <adj d="2" x="1" y="4"/>
+        <adj d="3" x="0" y="4"/>
+        <adj d="4" x="15" y="4"/>
+        <adj d="5" x="15" y="3"/>
+      </hex>
+      <hex x="1" y="3" title="4B" terrain="1" owner="4">
+        <adj d="0" x="1" y="2"/>
+        <adj d="1" x="2" y="2"/>
+        <adj d="2" x="2" y="3"/>
+        <adj d="3" x="1" y="4"/>
+        <adj d="4" x="0" y="3"/>
+        <adj d="5" x="0" y="2"/>
+        <peak/>
+      </hex>
+      <hex x="2" y="3" title="4C" terrain="1" owner="4">
+        <adj d="0" x="2" y="2"/>
+        <adj d="1" x="3" y="3"/>
+        <adj d="2" x="3" y="4"/>
+        <adj d="3" x="2" y="4"/>
+        <adj d="4" x="1" y="4"/>
+        <adj d="5" x="1" y="3"/>
+        <den hunger="0" population="30" colour="0"/>
+        <band red="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="3" title="4D" terrain="1" owner="4">
+        <adj d="0" x="3" y="2"/>
+        <adj d="1" x="4" y="2"/>
+        <adj d="2" x="4" y="3"/>
+        <adj d="3" x="3" y="4"/>
+        <adj d="4" x="2" y="3"/>
+        <adj d="5" x="2" y="2"/>
+        <scrub/>
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="4" y="3" title="4E" terrain="1" owner="4">
+        <adj d="0" x="4" y="2"/>
+        <adj d="1" x="5" y="3"/>
+        <adj d="2" x="5" y="4"/>
+        <adj d="3" x="4" y="4"/>
+        <adj d="4" x="3" y="4"/>
+        <adj d="5" x="3" y="3"/>
+        <den hunger="0" population="30" colour="0"/>
+        <band red="70" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="5" y="3" title="4F" terrain="0" owner="0">
+        <adj d="0" x="5" y="2"/>
+        <adj d="1" x="6" y="2"/>
+        <adj d="2" x="6" y="3"/>
+        <adj d="3" x="5" y="4"/>
+        <adj d="4" x="4" y="3"/>
+        <adj d="5" x="4" y="2"/>
+      </hex>
+      <hex x="6" y="3" title="4G" terrain="0" owner="0">
+        <adj d="0" x="6" y="2"/>
+        <adj d="1" x="7" y="3"/>
+        <adj d="2" x="7" y="4"/>
+        <adj d="3" x="6" y="4"/>
+        <adj d="4" x="5" y="4"/>
+        <adj d="5" x="5" y="3"/>
+      </hex>
+      <hex x="7" y="3" title="4H" terrain="0" owner="0">
+        <adj d="0" x="7" y="2"/>
+        <adj d="1" x="8" y="2"/>
+        <adj d="2" x="8" y="3"/>
+        <adj d="3" x="7" y="4"/>
+        <adj d="4" x="6" y="3"/>
+        <adj d="5" x="6" y="2"/>
+      </hex>
+      <hex x="8" y="3" title="4I" terrain="0" owner="0">
+        <adj d="0" x="8" y="2"/>
+        <adj d="1" x="9" y="3"/>
+        <adj d="2" x="9" y="4"/>
+        <adj d="3" x="8" y="4"/>
+        <adj d="4" x="7" y="4"/>
+        <adj d="5" x="7" y="3"/>
+      </hex>
+      <hex x="9" y="3" title="4J" terrain="1" owner="0">
+        <adj d="0" x="9" y="2"/>
+        <adj d="1" x="10" y="2"/>
+        <adj d="2" x="10" y="3"/>
+        <adj d="3" x="9" y="4"/>
+        <adj d="4" x="8" y="3"/>
+        <adj d="5" x="8" y="2"/>
+        <swamp/>
+      </hex>
+      <hex x="10" y="3" title="4K" terrain="0" owner="0">
+        <adj d="0" x="10" y="2"/>
+        <adj d="1" x="11" y="3"/>
+        <adj d="2" x="11" y="4"/>
+        <adj d="3" x="10" y="4"/>
+        <adj d="4" x="9" y="4"/>
+        <adj d="5" x="9" y="3"/>
+      </hex>
+      <hex x="11" y="3" title="4L" terrain="0" owner="0">
+        <adj d="0" x="11" y="2"/>
+        <adj d="1" x="12" y="2"/>
+        <adj d="2" x="12" y="3"/>
+        <adj d="3" x="11" y="4"/>
+        <adj d="4" x="10" y="3"/>
+        <adj d="5" x="10" y="2"/>
+        <whirlpool/>
+      </hex>
+      <hex x="12" y="3" title="4M" terrain="1" owner="3">
+        <adj d="0" x="12" y="2"/>
+        <adj d="1" x="13" y="3"/>
+        <adj d="2" x="13" y="4"/>
+        <adj d="3" x="12" y="4"/>
+        <adj d="4" x="11" y="4"/>
+        <adj d="5" x="11" y="3"/>
+        <ruin/>
+        <band green="10" grey="50" black="10" yellow="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="3" title="4N" terrain="0" owner="0">
+        <adj d="0" x="13" y="2"/>
+        <adj d="1" x="14" y="2"/>
+        <adj d="2" x="14" y="3"/>
+        <adj d="3" x="13" y="4"/>
+        <adj d="4" x="12" y="3"/>
+        <adj d="5" x="12" y="2"/>
+      </hex>
+      <hex x="14" y="3" title="4O" terrain="0" owner="0">
+        <adj d="0" x="14" y="2"/>
+        <adj d="1" x="15" y="3"/>
+        <adj d="2" x="15" y="4"/>
+        <adj d="3" x="14" y="4"/>
+        <adj d="4" x="13" y="4"/>
+        <adj d="5" x="13" y="3"/>
+      </hex>
+      <hex x="15" y="3" title="4P" terrain="0" owner="0">
+        <adj d="0" x="15" y="2"/>
+        <adj d="1" x="0" y="2"/>
+        <adj d="2" x="0" y="3"/>
+        <adj d="3" x="15" y="4"/>
+        <adj d="4" x="14" y="3"/>
+        <adj d="5" x="14" y="2"/>
+      </hex>
+      <hex x="0" y="4" title="5A" terrain="1" owner="0">
+        <adj d="0" x="0" y="3"/>
+        <adj d="1" x="1" y="4"/>
+        <adj d="2" x="1" y="5"/>
+        <adj d="3" x="0" y="5"/>
+        <adj d="4" x="15" y="5"/>
+        <adj d="5" x="15" y="4"/>
+        <den hunger="0" population="50" colour="2"/>
+        <band grey="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="1" y="4" title="5B" terrain="1" owner="4">
+        <adj d="0" x="1" y="3"/>
+        <adj d="1" x="2" y="3"/>
+        <adj d="2" x="2" y="4"/>
+        <adj d="3" x="1" y="5"/>
+        <adj d="4" x="0" y="4"/>
+        <adj d="5" x="0" y="3"/>
+        <scrub/>
+      </hex>
+      <hex x="2" y="4" title="5C" terrain="1" owner="4">
+        <adj d="0" x="2" y="3"/>
+        <adj d="1" x="3" y="4"/>
+        <adj d="2" x="3" y="5"/>
+        <adj d="3" x="2" y="5"/>
+        <adj d="4" x="1" y="5"/>
+        <adj d="5" x="1" y="4"/>
+        <scrub/>
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="4" title="5D" terrain="1" owner="4">
+        <adj d="0" x="3" y="3"/>
+        <adj d="1" x="4" y="3"/>
+        <adj d="2" x="4" y="4"/>
+        <adj d="3" x="3" y="5"/>
+        <adj d="4" x="2" y="4"/>
+        <adj d="5" x="2" y="3"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="4" title="5E" terrain="1" owner="4">
+        <adj d="0" x="4" y="3"/>
+        <adj d="1" x="5" y="4"/>
+        <adj d="2" x="5" y="5"/>
+        <adj d="3" x="4" y="5"/>
+        <adj d="4" x="3" y="5"/>
+        <adj d="5" x="3" y="4"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="5" y="4" title="5F" terrain="1" owner="4">
+        <adj d="0" x="5" y="3"/>
+        <adj d="1" x="6" y="3"/>
+        <adj d="2" x="6" y="4"/>
+        <adj d="3" x="5" y="5"/>
+        <adj d="4" x="4" y="4"/>
+        <adj d="5" x="4" y="3"/>
+        <scrub/>
+      </hex>
+      <hex x="6" y="4" title="5G" terrain="1" owner="4">
+        <adj d="0" x="6" y="3"/>
+        <adj d="1" x="7" y="4"/>
+        <adj d="2" x="7" y="5"/>
+        <adj d="3" x="6" y="5"/>
+        <adj d="4" x="5" y="5"/>
+        <adj d="5" x="5" y="4"/>
+        <scrub/>
+      </hex>
+      <hex x="7" y="4" title="5H" terrain="0" owner="0">
+        <adj d="0" x="7" y="3"/>
+        <adj d="1" x="8" y="3"/>
+        <adj d="2" x="8" y="4"/>
+        <adj d="3" x="7" y="5"/>
+        <adj d="4" x="6" y="4"/>
+        <adj d="5" x="6" y="3"/>
+      </hex>
+      <hex x="8" y="4" title="5I" terrain="1" owner="0">
+        <adj d="0" x="8" y="3"/>
+        <adj d="1" x="9" y="4"/>
+        <adj d="2" x="9" y="5"/>
+        <adj d="3" x="8" y="5"/>
+        <adj d="4" x="7" y="5"/>
+        <adj d="5" x="7" y="4"/>
+      </hex>
+      <hex x="9" y="4" title="5J" terrain="1" owner="0">
+        <adj d="0" x="9" y="3"/>
+        <adj d="1" x="10" y="3"/>
+        <adj d="2" x="10" y="4"/>
+        <adj d="3" x="9" y="5"/>
+        <adj d="4" x="8" y="4"/>
+        <adj d="5" x="8" y="3"/>
+        <swamp/>
+      </hex>
+      <hex x="10" y="4" title="5K" terrain="1" owner="0">
+        <adj d="0" x="10" y="3"/>
+        <adj d="1" x="11" y="4"/>
+        <adj d="2" x="11" y="5"/>
+        <adj d="3" x="10" y="5"/>
+        <adj d="4" x="9" y="5"/>
+        <adj d="5" x="9" y="4"/>
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="11" y="4" title="5L" terrain="1" owner="3">
+        <adj d="0" x="11" y="3"/>
+        <adj d="1" x="12" y="3"/>
+        <adj d="2" x="12" y="4"/>
+        <adj d="3" x="11" y="5"/>
+        <adj d="4" x="10" y="4"/>
+        <adj d="5" x="10" y="3"/>
+        <temple/>
+        <band red="90" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="12" y="4" title="5M" terrain="1" owner="3">
+        <adj d="0" x="12" y="3"/>
+        <adj d="1" x="13" y="4"/>
+        <adj d="2" x="13" y="5"/>
+        <adj d="3" x="12" y="5"/>
+        <adj d="4" x="11" y="5"/>
+        <adj d="5" x="11" y="4"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="13" y="4" title="5N" terrain="1" owner="3">
+        <adj d="0" x="13" y="3"/>
+        <adj d="1" x="14" y="3"/>
+        <adj d="2" x="14" y="4"/>
+        <adj d="3" x="13" y="5"/>
+        <adj d="4" x="12" y="4"/>
+        <adj d="5" x="12" y="3"/>
+        <swamp/>
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="14" y="4" title="5O" terrain="1" owner="0">
+        <adj d="0" x="14" y="3"/>
+        <adj d="1" x="15" y="4"/>
+        <adj d="2" x="15" y="5"/>
+        <adj d="3" x="14" y="5"/>
+        <adj d="4" x="13" y="5"/>
+        <adj d="5" x="13" y="4"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="4" title="5P" terrain="0" owner="0">
+        <adj d="0" x="15" y="3"/>
+        <adj d="1" x="0" y="3"/>
+        <adj d="2" x="0" y="4"/>
+        <adj d="3" x="15" y="5"/>
+        <adj d="4" x="14" y="4"/>
+        <adj d="5" x="14" y="3"/>
+      </hex>
+      <hex x="0" y="5" title="6A" terrain="1" owner="0">
+        <adj d="0" x="0" y="4"/>
+        <adj d="1" x="1" y="5"/>
+        <adj d="2" x="1" y="6"/>
+        <adj d="3" x="0" y="6"/>
+        <adj d="4" x="15" y="6"/>
+        <adj d="5" x="15" y="5"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="1" y="5" title="6B" terrain="1" owner="4">
+        <adj d="0" x="1" y="4"/>
+        <adj d="1" x="2" y="4"/>
+        <adj d="2" x="2" y="5"/>
+        <adj d="3" x="1" y="6"/>
+        <adj d="4" x="0" y="5"/>
+        <adj d="5" x="0" y="4"/>
+        <temple/>
+      </hex>
+      <hex x="2" y="5" title="6C" terrain="1" owner="4">
+        <adj d="0" x="2" y="4"/>
+        <adj d="1" x="3" y="5"/>
+        <adj d="2" x="3" y="6"/>
+        <adj d="3" x="2" y="6"/>
+        <adj d="4" x="1" y="6"/>
+        <adj d="5" x="1" y="5"/>
+        <peak/>
+      </hex>
+      <hex x="3" y="5" title="6D" terrain="1" owner="4">
+        <adj d="0" x="3" y="4"/>
+        <adj d="1" x="4" y="4"/>
+        <adj d="2" x="4" y="5"/>
+        <adj d="3" x="3" y="6"/>
+        <adj d="4" x="2" y="5"/>
+        <adj d="5" x="2" y="4"/>
+        <den hunger="0" population="30" colour="2" home="1"/>
+        <band red="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="4" y="5" title="6E" terrain="1" owner="4">
+        <adj d="0" x="4" y="4"/>
+        <adj d="1" x="5" y="5"/>
+        <adj d="2" x="5" y="6"/>
+        <adj d="3" x="4" y="6"/>
+        <adj d="4" x="3" y="6"/>
+        <adj d="5" x="3" y="5"/>
+        <scrub/>
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="5" y="5" title="6F" terrain="1" owner="4">
+        <adj d="0" x="5" y="4"/>
+        <adj d="1" x="6" y="4"/>
+        <adj d="2" x="6" y="5"/>
+        <adj d="3" x="5" y="6"/>
+        <adj d="4" x="4" y="5"/>
+        <adj d="5" x="4" y="4"/>
+        <ruin/>
+      </hex>
+      <hex x="6" y="5" title="6G" terrain="1" owner="4">
+        <adj d="0" x="6" y="4"/>
+        <adj d="1" x="7" y="5"/>
+        <adj d="2" x="7" y="6"/>
+        <adj d="3" x="6" y="6"/>
+        <adj d="4" x="5" y="6"/>
+        <adj d="5" x="5" y="5"/>
+        <scrub/>
+      </hex>
+      <hex x="7" y="5" title="6H" terrain="0" owner="0">
+        <adj d="0" x="7" y="4"/>
+        <adj d="1" x="8" y="4"/>
+        <adj d="2" x="8" y="5"/>
+        <adj d="3" x="7" y="6"/>
+        <adj d="4" x="6" y="5"/>
+        <adj d="5" x="6" y="4"/>
+      </hex>
+      <hex x="8" y="5" title="6I" terrain="1" owner="0">
+        <adj d="0" x="8" y="4"/>
+        <adj d="1" x="9" y="5"/>
+        <adj d="2" x="9" y="6"/>
+        <adj d="3" x="8" y="6"/>
+        <adj d="4" x="7" y="6"/>
+        <adj d="5" x="7" y="5"/>
+        <swamp/>
+      </hex>
+      <hex x="9" y="5" title="6J" terrain="0" owner="0">
+        <adj d="0" x="9" y="4"/>
+        <adj d="1" x="10" y="4"/>
+        <adj d="2" x="10" y="5"/>
+        <adj d="3" x="9" y="6"/>
+        <adj d="4" x="8" y="5"/>
+        <adj d="5" x="8" y="4"/>
+      </hex>
+      <hex x="10" y="5" title="6K" terrain="1" owner="0">
+        <adj d="0" x="10" y="4"/>
+        <adj d="1" x="11" y="5"/>
+        <adj d="2" x="11" y="6"/>
+        <adj d="3" x="10" y="6"/>
+        <adj d="4" x="9" y="6"/>
+        <adj d="5" x="9" y="5"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="5" title="6L" terrain="1" owner="3">
+        <adj d="0" x="11" y="4"/>
+        <adj d="1" x="12" y="4"/>
+        <adj d="2" x="12" y="5"/>
+        <adj d="3" x="11" y="6"/>
+        <adj d="4" x="10" y="5"/>
+        <adj d="5" x="10" y="4"/>
+        <ruin/>
+        <band green="10" grey="50" black="10" yellow="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="12" y="5" title="6M" terrain="1" owner="3">
+        <adj d="0" x="12" y="4"/>
+        <adj d="1" x="13" y="5"/>
+        <adj d="2" x="13" y="6"/>
+        <adj d="3" x="12" y="6"/>
+        <adj d="4" x="11" y="6"/>
+        <adj d="5" x="11" y="5"/>
+        <fertile level="0"/>
+        <band red="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="5" title="6N" terrain="1" owner="3">
+        <adj d="0" x="13" y="4"/>
+        <adj d="1" x="14" y="4"/>
+        <adj d="2" x="14" y="5"/>
+        <adj d="3" x="13" y="6"/>
+        <adj d="4" x="12" y="5"/>
+        <adj d="5" x="12" y="4"/>
+        <den hunger="0" population="50" colour="4" home="1"/>
+        <band red="80" black="50" yellow="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="14" y="5" title="6O" terrain="0" owner="0">
+        <adj d="0" x="14" y="4"/>
+        <adj d="1" x="15" y="5"/>
+        <adj d="2" x="15" y="6"/>
+        <adj d="3" x="14" y="6"/>
+        <adj d="4" x="13" y="6"/>
+        <adj d="5" x="13" y="5"/>
+      </hex>
+      <hex x="15" y="5" title="6P" terrain="0" owner="0">
+        <adj d="0" x="15" y="4"/>
+        <adj d="1" x="0" y="4"/>
+        <adj d="2" x="0" y="5"/>
+        <adj d="3" x="15" y="6"/>
+        <adj d="4" x="14" y="5"/>
+        <adj d="5" x="14" y="4"/>
+      </hex>
+      <hex x="0" y="6" title="7A" terrain="0" owner="0">
+        <adj d="0" x="0" y="5"/>
+        <adj d="1" x="1" y="6"/>
+        <adj d="2" x="1" y="7"/>
+        <adj d="3" x="0" y="7"/>
+        <adj d="4" x="15" y="7"/>
+        <adj d="5" x="15" y="6"/>
+      </hex>
+      <hex x="1" y="6" title="7B" terrain="1" owner="0">
+        <adj d="0" x="1" y="5"/>
+        <adj d="1" x="2" y="5"/>
+        <adj d="2" x="2" y="6"/>
+        <adj d="3" x="1" y="7"/>
+        <adj d="4" x="0" y="6"/>
+        <adj d="5" x="0" y="5"/>
+      </hex>
+      <hex x="2" y="6" title="7C" terrain="0" owner="0">
+        <adj d="0" x="2" y="5"/>
+        <adj d="1" x="3" y="6"/>
+        <adj d="2" x="3" y="7"/>
+        <adj d="3" x="2" y="7"/>
+        <adj d="4" x="1" y="7"/>
+        <adj d="5" x="1" y="6"/>
+      </hex>
+      <hex x="3" y="6" title="7D" terrain="1" owner="4">
+        <adj d="0" x="3" y="5"/>
+        <adj d="1" x="4" y="5"/>
+        <adj d="2" x="4" y="6"/>
+        <adj d="3" x="3" y="7"/>
+        <adj d="4" x="2" y="6"/>
+        <adj d="5" x="2" y="5"/>
+        <scrub/>
+      </hex>
+      <hex x="4" y="6" title="7E" terrain="1" owner="4">
+        <adj d="0" x="4" y="5"/>
+        <adj d="1" x="5" y="6"/>
+        <adj d="2" x="5" y="7"/>
+        <adj d="3" x="4" y="7"/>
+        <adj d="4" x="3" y="7"/>
+        <adj d="5" x="3" y="6"/>
+        <ruin/>
+        <band grey="50" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="5" y="6" title="7F" terrain="1" owner="4">
+        <adj d="0" x="5" y="5"/>
+        <adj d="1" x="6" y="5"/>
+        <adj d="2" x="6" y="6"/>
+        <adj d="3" x="5" y="7"/>
+        <adj d="4" x="4" y="6"/>
+        <adj d="5" x="4" y="5"/>
+        <scrub/>
+      </hex>
+      <hex x="6" y="6" title="7G" terrain="1" owner="4">
+        <adj d="0" x="6" y="5"/>
+        <adj d="1" x="7" y="6"/>
+        <adj d="2" x="7" y="7"/>
+        <adj d="3" x="6" y="7"/>
+        <adj d="4" x="5" y="7"/>
+        <adj d="5" x="5" y="6"/>
+        <ruin/>
+      </hex>
+      <hex x="7" y="6" title="7H" terrain="0" owner="0">
+        <adj d="0" x="7" y="5"/>
+        <adj d="1" x="8" y="5"/>
+        <adj d="2" x="8" y="6"/>
+        <adj d="3" x="7" y="7"/>
+        <adj d="4" x="6" y="6"/>
+        <adj d="5" x="6" y="5"/>
+      </hex>
+      <hex x="8" y="6" title="7I" terrain="1" owner="0">
+        <adj d="0" x="8" y="5"/>
+        <adj d="1" x="9" y="6"/>
+        <adj d="2" x="9" y="7"/>
+        <adj d="3" x="8" y="7"/>
+        <adj d="4" x="7" y="7"/>
+        <adj d="5" x="7" y="6"/>
+      </hex>
+      <hex x="9" y="6" title="7J" terrain="1" owner="0">
+        <adj d="0" x="9" y="5"/>
+        <adj d="1" x="10" y="5"/>
+        <adj d="2" x="10" y="6"/>
+        <adj d="3" x="9" y="7"/>
+        <adj d="4" x="8" y="6"/>
+        <adj d="5" x="8" y="5"/>
+        <swamp/>
+      </hex>
+      <hex x="10" y="6" title="7K" terrain="1" owner="0">
+        <adj d="0" x="10" y="5"/>
+        <adj d="1" x="11" y="6"/>
+        <adj d="2" x="11" y="7"/>
+        <adj d="3" x="10" y="7"/>
+        <adj d="4" x="9" y="7"/>
+        <adj d="5" x="9" y="6"/>
+        <ruin/>
+      </hex>
+      <hex x="11" y="6" title="7L" terrain="0" owner="0">
+        <adj d="0" x="11" y="5"/>
+        <adj d="1" x="12" y="5"/>
+        <adj d="2" x="12" y="6"/>
+        <adj d="3" x="11" y="7"/>
+        <adj d="4" x="10" y="6"/>
+        <adj d="5" x="10" y="5"/>
+      </hex>
+      <hex x="12" y="6" title="7M" terrain="0" owner="0">
+        <adj d="0" x="12" y="5"/>
+        <adj d="1" x="13" y="6"/>
+        <adj d="2" x="13" y="7"/>
+        <adj d="3" x="12" y="7"/>
+        <adj d="4" x="11" y="7"/>
+        <adj d="5" x="11" y="6"/>
+      </hex>
+      <hex x="13" y="6" title="7N" terrain="1" owner="0">
+        <adj d="0" x="13" y="5"/>
+        <adj d="1" x="14" y="5"/>
+        <adj d="2" x="14" y="6"/>
+        <adj d="3" x="13" y="7"/>
+        <adj d="4" x="12" y="6"/>
+        <adj d="5" x="12" y="5"/>
+        <scrub/>
+      </hex>
+      <hex x="14" y="6" title="7O" terrain="0" owner="0">
+        <adj d="0" x="14" y="5"/>
+        <adj d="1" x="15" y="6"/>
+        <adj d="2" x="15" y="7"/>
+        <adj d="3" x="14" y="7"/>
+        <adj d="4" x="13" y="7"/>
+        <adj d="5" x="13" y="6"/>
+      </hex>
+      <hex x="15" y="6" title="7P" terrain="0" owner="0">
+        <adj d="0" x="15" y="5"/>
+        <adj d="1" x="0" y="5"/>
+        <adj d="2" x="0" y="6"/>
+        <adj d="3" x="15" y="7"/>
+        <adj d="4" x="14" y="6"/>
+        <adj d="5" x="14" y="5"/>
+      </hex>
+      <hex x="0" y="7" title="8A" terrain="0" owner="0">
+        <adj d="0" x="0" y="6"/>
+        <adj d="1" x="1" y="7"/>
+        <adj d="2" x="1" y="8"/>
+        <adj d="3" x="0" y="8"/>
+        <adj d="4" x="15" y="8"/>
+        <adj d="5" x="15" y="7"/>
+      </hex>
+      <hex x="1" y="7" title="8B" terrain="1" owner="0">
+        <adj d="0" x="1" y="6"/>
+        <adj d="1" x="2" y="6"/>
+        <adj d="2" x="2" y="7"/>
+        <adj d="3" x="1" y="8"/>
+        <adj d="4" x="0" y="7"/>
+        <adj d="5" x="0" y="6"/>
+        <swamp/>
+      </hex>
+      <hex x="2" y="7" title="8C" terrain="0" owner="0">
+        <adj d="0" x="2" y="6"/>
+        <adj d="1" x="3" y="7"/>
+        <adj d="2" x="3" y="8"/>
+        <adj d="3" x="2" y="8"/>
+        <adj d="4" x="1" y="8"/>
+        <adj d="5" x="1" y="7"/>
+      </hex>
+      <hex x="3" y="7" title="8D" terrain="1" owner="0">
+        <adj d="0" x="3" y="6"/>
+        <adj d="1" x="4" y="6"/>
+        <adj d="2" x="4" y="7"/>
+        <adj d="3" x="3" y="8"/>
+        <adj d="4" x="2" y="7"/>
+        <adj d="5" x="2" y="6"/>
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="4" y="7" title="8E" terrain="1" owner="0">
+        <adj d="0" x="4" y="6"/>
+        <adj d="1" x="5" y="7"/>
+        <adj d="2" x="5" y="8"/>
+        <adj d="3" x="4" y="8"/>
+        <adj d="4" x="3" y="8"/>
+        <adj d="5" x="3" y="7"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="5" y="7" title="8F" terrain="1" owner="4">
+        <adj d="0" x="5" y="6"/>
+        <adj d="1" x="6" y="6"/>
+        <adj d="2" x="6" y="7"/>
+        <adj d="3" x="5" y="8"/>
+        <adj d="4" x="4" y="7"/>
+        <adj d="5" x="4" y="6"/>
+        <swamp/>
+      </hex>
+      <hex x="6" y="7" title="8G" terrain="0" owner="0">
+        <adj d="0" x="6" y="6"/>
+        <adj d="1" x="7" y="7"/>
+        <adj d="2" x="7" y="8"/>
+        <adj d="3" x="6" y="8"/>
+        <adj d="4" x="5" y="8"/>
+        <adj d="5" x="5" y="7"/>
+      </hex>
+      <hex x="7" y="7" title="8H" terrain="0" owner="0">
+        <adj d="0" x="7" y="6"/>
+        <adj d="1" x="8" y="6"/>
+        <adj d="2" x="8" y="7"/>
+        <adj d="3" x="7" y="8"/>
+        <adj d="4" x="6" y="7"/>
+        <adj d="5" x="6" y="6"/>
+      </hex>
+      <hex x="8" y="7" title="8I" terrain="0" owner="0">
+        <adj d="0" x="8" y="6"/>
+        <adj d="1" x="9" y="7"/>
+        <adj d="2" x="9" y="8"/>
+        <adj d="3" x="8" y="8"/>
+        <adj d="4" x="7" y="8"/>
+        <adj d="5" x="7" y="7"/>
+      </hex>
+      <hex x="9" y="7" title="8J" terrain="1" owner="0">
+        <adj d="0" x="9" y="6"/>
+        <adj d="1" x="10" y="6"/>
+        <adj d="2" x="10" y="7"/>
+        <adj d="3" x="9" y="8"/>
+        <adj d="4" x="8" y="7"/>
+        <adj d="5" x="8" y="6"/>
+        <scrub/>
+      </hex>
+      <hex x="10" y="7" title="8K" terrain="0" owner="0">
+        <adj d="0" x="10" y="6"/>
+        <adj d="1" x="11" y="7"/>
+        <adj d="2" x="11" y="8"/>
+        <adj d="3" x="10" y="8"/>
+        <adj d="4" x="9" y="8"/>
+        <adj d="5" x="9" y="7"/>
+      </hex>
+      <hex x="11" y="7" title="8L" terrain="0" owner="0">
+        <adj d="0" x="11" y="6"/>
+        <adj d="1" x="12" y="6"/>
+        <adj d="2" x="12" y="7"/>
+        <adj d="3" x="11" y="8"/>
+        <adj d="4" x="10" y="7"/>
+        <adj d="5" x="10" y="6"/>
+      </hex>
+      <hex x="12" y="7" title="8M" terrain="1" owner="0">
+        <adj d="0" x="12" y="6"/>
+        <adj d="1" x="13" y="7"/>
+        <adj d="2" x="13" y="8"/>
+        <adj d="3" x="12" y="8"/>
+        <adj d="4" x="11" y="8"/>
+        <adj d="5" x="11" y="7"/>
+        <den hunger="0" population="100" colour="1"/>
+        <band green="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="7" title="8N" terrain="0" owner="0">
+        <adj d="0" x="13" y="6"/>
+        <adj d="1" x="14" y="6"/>
+        <adj d="2" x="14" y="7"/>
+        <adj d="3" x="13" y="8"/>
+        <adj d="4" x="12" y="7"/>
+        <adj d="5" x="12" y="6"/>
+      </hex>
+      <hex x="14" y="7" title="8O" terrain="0" owner="0">
+        <adj d="0" x="14" y="6"/>
+        <adj d="1" x="15" y="7"/>
+        <adj d="2" x="15" y="8"/>
+        <adj d="3" x="14" y="8"/>
+        <adj d="4" x="13" y="8"/>
+        <adj d="5" x="13" y="7"/>
+      </hex>
+      <hex x="15" y="7" title="8P" terrain="0" owner="0">
+        <adj d="0" x="15" y="6"/>
+        <adj d="1" x="0" y="6"/>
+        <adj d="2" x="0" y="7"/>
+        <adj d="3" x="15" y="8"/>
+        <adj d="4" x="14" y="7"/>
+        <adj d="5" x="14" y="6"/>
+      </hex>
+      <hex x="0" y="8" title="9A" terrain="1" owner="0">
+        <adj d="0" x="0" y="7"/>
+        <adj d="1" x="1" y="8"/>
+        <adj d="2" x="1" y="9"/>
+        <adj d="3" x="0" y="9"/>
+        <adj d="4" x="15" y="9"/>
+        <adj d="5" x="15" y="8"/>
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="1" y="8" title="9B" terrain="1" owner="0">
+        <adj d="0" x="1" y="7"/>
+        <adj d="1" x="2" y="7"/>
+        <adj d="2" x="2" y="8"/>
+        <adj d="3" x="1" y="9"/>
+        <adj d="4" x="0" y="8"/>
+        <adj d="5" x="0" y="7"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="8" title="9C" terrain="1" owner="0">
+        <adj d="0" x="2" y="7"/>
+        <adj d="1" x="3" y="8"/>
+        <adj d="2" x="3" y="9"/>
+        <adj d="3" x="2" y="9"/>
+        <adj d="4" x="1" y="9"/>
+        <adj d="5" x="1" y="8"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="8" title="9D" terrain="0" owner="0">
+        <adj d="0" x="3" y="7"/>
+        <adj d="1" x="4" y="7"/>
+        <adj d="2" x="4" y="8"/>
+        <adj d="3" x="3" y="9"/>
+        <adj d="4" x="2" y="8"/>
+        <adj d="5" x="2" y="7"/>
+      </hex>
+      <hex x="4" y="8" title="9E" terrain="1" owner="0">
+        <adj d="0" x="4" y="7"/>
+        <adj d="1" x="5" y="8"/>
+        <adj d="2" x="5" y="9"/>
+        <adj d="3" x="4" y="9"/>
+        <adj d="4" x="3" y="9"/>
+        <adj d="5" x="3" y="8"/>
+        <swamp/>
+      </hex>
+      <hex x="5" y="8" title="9F" terrain="1" owner="0">
+        <adj d="0" x="5" y="7"/>
+        <adj d="1" x="6" y="7"/>
+        <adj d="2" x="6" y="8"/>
+        <adj d="3" x="5" y="9"/>
+        <adj d="4" x="4" y="8"/>
+        <adj d="5" x="4" y="7"/>
+        <swamp/>
+      </hex>
+      <hex x="6" y="8" title="9G" terrain="1" owner="0">
+        <adj d="0" x="6" y="7"/>
+        <adj d="1" x="7" y="8"/>
+        <adj d="2" x="7" y="9"/>
+        <adj d="3" x="6" y="9"/>
+        <adj d="4" x="5" y="9"/>
+        <adj d="5" x="5" y="8"/>
+        <swamp/>
+      </hex>
+      <hex x="7" y="8" title="9H" terrain="0" owner="0">
+        <adj d="0" x="7" y="7"/>
+        <adj d="1" x="8" y="7"/>
+        <adj d="2" x="8" y="8"/>
+        <adj d="3" x="7" y="9"/>
+        <adj d="4" x="6" y="8"/>
+        <adj d="5" x="6" y="7"/>
+      </hex>
+      <hex x="8" y="8" title="9I" terrain="1" owner="0">
+        <adj d="0" x="8" y="7"/>
+        <adj d="1" x="9" y="8"/>
+        <adj d="2" x="9" y="9"/>
+        <adj d="3" x="8" y="9"/>
+        <adj d="4" x="7" y="9"/>
+        <adj d="5" x="7" y="8"/>
+        <peak/>
+      </hex>
+      <hex x="9" y="8" title="9J" terrain="1" owner="0">
+        <adj d="0" x="9" y="7"/>
+        <adj d="1" x="10" y="7"/>
+        <adj d="2" x="10" y="8"/>
+        <adj d="3" x="9" y="9"/>
+        <adj d="4" x="8" y="8"/>
+        <adj d="5" x="8" y="7"/>
+        <temple/>
+      </hex>
+      <hex x="10" y="8" title="9K" terrain="1" owner="0">
+        <adj d="0" x="10" y="7"/>
+        <adj d="1" x="11" y="8"/>
+        <adj d="2" x="11" y="9"/>
+        <adj d="3" x="10" y="9"/>
+        <adj d="4" x="9" y="9"/>
+        <adj d="5" x="9" y="8"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="8" title="9L" terrain="0" owner="0">
+        <adj d="0" x="11" y="7"/>
+        <adj d="1" x="12" y="7"/>
+        <adj d="2" x="12" y="8"/>
+        <adj d="3" x="11" y="9"/>
+        <adj d="4" x="10" y="8"/>
+        <adj d="5" x="10" y="7"/>
+      </hex>
+      <hex x="12" y="8" title="9M" terrain="1" owner="0">
+        <adj d="0" x="12" y="7"/>
+        <adj d="1" x="13" y="8"/>
+        <adj d="2" x="13" y="9"/>
+        <adj d="3" x="12" y="9"/>
+        <adj d="4" x="11" y="9"/>
+        <adj d="5" x="11" y="8"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="13" y="8" title="9N" terrain="1" owner="0">
+        <adj d="0" x="13" y="7"/>
+        <adj d="1" x="14" y="7"/>
+        <adj d="2" x="14" y="8"/>
+        <adj d="3" x="13" y="9"/>
+        <adj d="4" x="12" y="8"/>
+        <adj d="5" x="12" y="7"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="8" title="9O" terrain="1" owner="0">
+        <adj d="0" x="14" y="7"/>
+        <adj d="1" x="15" y="8"/>
+        <adj d="2" x="15" y="9"/>
+        <adj d="3" x="14" y="9"/>
+        <adj d="4" x="13" y="9"/>
+        <adj d="5" x="13" y="8"/>
+        <scrub/>
+      </hex>
+      <hex x="15" y="8" title="9P" terrain="0" owner="0">
+        <adj d="0" x="15" y="7"/>
+        <adj d="1" x="0" y="7"/>
+        <adj d="2" x="0" y="8"/>
+        <adj d="3" x="15" y="9"/>
+        <adj d="4" x="14" y="8"/>
+        <adj d="5" x="14" y="7"/>
+      </hex>
+      <hex x="0" y="9" title="10A" terrain="1" owner="0">
+        <adj d="0" x="0" y="8"/>
+        <adj d="1" x="1" y="9"/>
+        <adj d="2" x="1" y="10"/>
+        <adj d="3" x="0" y="10"/>
+        <adj d="4" x="15" y="10"/>
+        <adj d="5" x="15" y="9"/>
+        <swamp/>
+      </hex>
+      <hex x="1" y="9" title="10B" terrain="1" owner="0">
+        <adj d="0" x="1" y="8"/>
+        <adj d="1" x="2" y="8"/>
+        <adj d="2" x="2" y="9"/>
+        <adj d="3" x="1" y="10"/>
+        <adj d="4" x="0" y="9"/>
+        <adj d="5" x="0" y="8"/>
+        <scrub/>
+      </hex>
+      <hex x="2" y="9" title="10C" terrain="1" owner="0">
+        <adj d="0" x="2" y="8"/>
+        <adj d="1" x="3" y="9"/>
+        <adj d="2" x="3" y="10"/>
+        <adj d="3" x="2" y="10"/>
+        <adj d="4" x="1" y="10"/>
+        <adj d="5" x="1" y="9"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="9" title="10D" terrain="1" owner="0">
+        <adj d="0" x="3" y="8"/>
+        <adj d="1" x="4" y="8"/>
+        <adj d="2" x="4" y="9"/>
+        <adj d="3" x="3" y="10"/>
+        <adj d="4" x="2" y="9"/>
+        <adj d="5" x="2" y="8"/>
+        <den hunger="0" population="150" colour="2"/>
+        <band grey="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="4" y="9" title="10E" terrain="1" owner="0">
+        <adj d="0" x="4" y="8"/>
+        <adj d="1" x="5" y="9"/>
+        <adj d="2" x="5" y="10"/>
+        <adj d="3" x="4" y="10"/>
+        <adj d="4" x="3" y="10"/>
+        <adj d="5" x="3" y="9"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="5" y="9" title="10F" terrain="1" owner="0">
+        <adj d="0" x="5" y="8"/>
+        <adj d="1" x="6" y="8"/>
+        <adj d="2" x="6" y="9"/>
+        <adj d="3" x="5" y="10"/>
+        <adj d="4" x="4" y="9"/>
+        <adj d="5" x="4" y="8"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="9" title="10G" terrain="1" owner="0">
+        <adj d="0" x="6" y="8"/>
+        <adj d="1" x="7" y="9"/>
+        <adj d="2" x="7" y="10"/>
+        <adj d="3" x="6" y="10"/>
+        <adj d="4" x="5" y="10"/>
+        <adj d="5" x="5" y="9"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="9" title="10H" terrain="0" owner="0">
+        <adj d="0" x="7" y="8"/>
+        <adj d="1" x="8" y="8"/>
+        <adj d="2" x="8" y="9"/>
+        <adj d="3" x="7" y="10"/>
+        <adj d="4" x="6" y="9"/>
+        <adj d="5" x="6" y="8"/>
+      </hex>
+      <hex x="8" y="9" title="10I" terrain="1" owner="0">
+        <adj d="0" x="8" y="8"/>
+        <adj d="1" x="9" y="9"/>
+        <adj d="2" x="9" y="10"/>
+        <adj d="3" x="8" y="10"/>
+        <adj d="4" x="7" y="10"/>
+        <adj d="5" x="7" y="9"/>
+      </hex>
+      <hex x="9" y="9" title="10J" terrain="1" owner="0">
+        <adj d="0" x="9" y="8"/>
+        <adj d="1" x="10" y="8"/>
+        <adj d="2" x="10" y="9"/>
+        <adj d="3" x="9" y="10"/>
+        <adj d="4" x="8" y="9"/>
+        <adj d="5" x="8" y="8"/>
+        <swamp/>
+      </hex>
+      <hex x="10" y="9" title="10K" terrain="1" owner="0">
+        <adj d="0" x="10" y="8"/>
+        <adj d="1" x="11" y="9"/>
+        <adj d="2" x="11" y="10"/>
+        <adj d="3" x="10" y="10"/>
+        <adj d="4" x="9" y="10"/>
+        <adj d="5" x="9" y="9"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="11" y="9" title="10L" terrain="1" owner="0">
+        <adj d="0" x="11" y="8"/>
+        <adj d="1" x="12" y="8"/>
+        <adj d="2" x="12" y="9"/>
+        <adj d="3" x="11" y="10"/>
+        <adj d="4" x="10" y="9"/>
+        <adj d="5" x="10" y="8"/>
+        <den hunger="0" population="150" colour="3"/>
+        <band black="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="12" y="9" title="10M" terrain="1" owner="0">
+        <adj d="0" x="12" y="8"/>
+        <adj d="1" x="13" y="9"/>
+        <adj d="2" x="13" y="10"/>
+        <adj d="3" x="12" y="10"/>
+        <adj d="4" x="11" y="10"/>
+        <adj d="5" x="11" y="9"/>
+      </hex>
+      <hex x="13" y="9" title="10N" terrain="0" owner="0">
+        <adj d="0" x="13" y="8"/>
+        <adj d="1" x="14" y="8"/>
+        <adj d="2" x="14" y="9"/>
+        <adj d="3" x="13" y="10"/>
+        <adj d="4" x="12" y="9"/>
+        <adj d="5" x="12" y="8"/>
+      </hex>
+      <hex x="14" y="9" title="10O" terrain="1" owner="0">
+        <adj d="0" x="14" y="8"/>
+        <adj d="1" x="15" y="9"/>
+        <adj d="2" x="15" y="10"/>
+        <adj d="3" x="14" y="10"/>
+        <adj d="4" x="13" y="10"/>
+        <adj d="5" x="13" y="9"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="9" title="10P" terrain="0" owner="0">
+        <adj d="0" x="15" y="8"/>
+        <adj d="1" x="0" y="8"/>
+        <adj d="2" x="0" y="9"/>
+        <adj d="3" x="15" y="10"/>
+        <adj d="4" x="14" y="9"/>
+        <adj d="5" x="14" y="8"/>
+      </hex>
+      <hex x="0" y="10" title="11A" terrain="0" owner="0">
+        <adj d="0" x="0" y="9"/>
+        <adj d="1" x="1" y="10"/>
+        <adj d="2" x="1" y="11"/>
+        <adj d="3" x="0" y="11"/>
+        <adj d="4" x="15" y="11"/>
+        <adj d="5" x="15" y="10"/>
+      </hex>
+      <hex x="1" y="10" title="11B" terrain="1" owner="0">
+        <adj d="0" x="1" y="9"/>
+        <adj d="1" x="2" y="9"/>
+        <adj d="2" x="2" y="10"/>
+        <adj d="3" x="1" y="11"/>
+        <adj d="4" x="0" y="10"/>
+        <adj d="5" x="0" y="9"/>
+      </hex>
+      <hex x="2" y="10" title="11C" terrain="0" owner="0">
+        <adj d="0" x="2" y="9"/>
+        <adj d="1" x="3" y="10"/>
+        <adj d="2" x="3" y="11"/>
+        <adj d="3" x="2" y="11"/>
+        <adj d="4" x="1" y="11"/>
+        <adj d="5" x="1" y="10"/>
+      </hex>
+      <hex x="3" y="10" title="11D" terrain="0" owner="0">
+        <adj d="0" x="3" y="9"/>
+        <adj d="1" x="4" y="9"/>
+        <adj d="2" x="4" y="10"/>
+        <adj d="3" x="3" y="11"/>
+        <adj d="4" x="2" y="10"/>
+        <adj d="5" x="2" y="9"/>
+      </hex>
+      <hex x="4" y="10" title="11E" terrain="0" owner="0">
+        <adj d="0" x="4" y="9"/>
+        <adj d="1" x="5" y="10"/>
+        <adj d="2" x="5" y="11"/>
+        <adj d="3" x="4" y="11"/>
+        <adj d="4" x="3" y="11"/>
+        <adj d="5" x="3" y="10"/>
+      </hex>
+      <hex x="5" y="10" title="11F" terrain="1" owner="0">
+        <adj d="0" x="5" y="9"/>
+        <adj d="1" x="6" y="9"/>
+        <adj d="2" x="6" y="10"/>
+        <adj d="3" x="5" y="11"/>
+        <adj d="4" x="4" y="10"/>
+        <adj d="5" x="4" y="9"/>
+        <den hunger="0" population="150" colour="1"/>
+        <band green="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="6" y="10" title="11G" terrain="0" owner="0">
+        <adj d="0" x="6" y="9"/>
+        <adj d="1" x="7" y="10"/>
+        <adj d="2" x="7" y="11"/>
+        <adj d="3" x="6" y="11"/>
+        <adj d="4" x="5" y="11"/>
+        <adj d="5" x="5" y="10"/>
+      </hex>
+      <hex x="7" y="10" title="11H" terrain="0" owner="0">
+        <adj d="0" x="7" y="9"/>
+        <adj d="1" x="8" y="9"/>
+        <adj d="2" x="8" y="10"/>
+        <adj d="3" x="7" y="11"/>
+        <adj d="4" x="6" y="10"/>
+        <adj d="5" x="6" y="9"/>
+      </hex>
+      <hex x="8" y="10" title="11I" terrain="0" owner="0">
+        <adj d="0" x="8" y="9"/>
+        <adj d="1" x="9" y="10"/>
+        <adj d="2" x="9" y="11"/>
+        <adj d="3" x="8" y="11"/>
+        <adj d="4" x="7" y="11"/>
+        <adj d="5" x="7" y="10"/>
+      </hex>
+      <hex x="9" y="10" title="11J" terrain="1" owner="0">
+        <adj d="0" x="9" y="9"/>
+        <adj d="1" x="10" y="9"/>
+        <adj d="2" x="10" y="10"/>
+        <adj d="3" x="9" y="11"/>
+        <adj d="4" x="8" y="10"/>
+        <adj d="5" x="8" y="9"/>
+        <swamp/>
+      </hex>
+      <hex x="10" y="10" title="11K" terrain="0" owner="0">
+        <adj d="0" x="10" y="9"/>
+        <adj d="1" x="11" y="10"/>
+        <adj d="2" x="11" y="11"/>
+        <adj d="3" x="10" y="11"/>
+        <adj d="4" x="9" y="11"/>
+        <adj d="5" x="9" y="10"/>
+      </hex>
+      <hex x="11" y="10" title="11L" terrain="0" owner="0">
+        <adj d="0" x="11" y="9"/>
+        <adj d="1" x="12" y="9"/>
+        <adj d="2" x="12" y="10"/>
+        <adj d="3" x="11" y="11"/>
+        <adj d="4" x="10" y="10"/>
+        <adj d="5" x="10" y="9"/>
+      </hex>
+      <hex x="12" y="10" title="11M" terrain="0" owner="0">
+        <adj d="0" x="12" y="9"/>
+        <adj d="1" x="13" y="10"/>
+        <adj d="2" x="13" y="11"/>
+        <adj d="3" x="12" y="11"/>
+        <adj d="4" x="11" y="11"/>
+        <adj d="5" x="11" y="10"/>
+      </hex>
+      <hex x="13" y="10" title="11N" terrain="1" owner="0">
+        <adj d="0" x="13" y="9"/>
+        <adj d="1" x="14" y="9"/>
+        <adj d="2" x="14" y="10"/>
+        <adj d="3" x="13" y="11"/>
+        <adj d="4" x="12" y="10"/>
+        <adj d="5" x="12" y="9"/>
+        <den hunger="0" population="50" colour="4"/>
+        <band yellow="14" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="14" y="10" title="11O" terrain="0" owner="0">
+        <adj d="0" x="14" y="9"/>
+        <adj d="1" x="15" y="10"/>
+        <adj d="2" x="15" y="11"/>
+        <adj d="3" x="14" y="11"/>
+        <adj d="4" x="13" y="11"/>
+        <adj d="5" x="13" y="10"/>
+      </hex>
+      <hex x="15" y="10" title="11P" terrain="0" owner="0">
+        <adj d="0" x="15" y="9"/>
+        <adj d="1" x="0" y="9"/>
+        <adj d="2" x="0" y="10"/>
+        <adj d="3" x="15" y="11"/>
+        <adj d="4" x="14" y="10"/>
+        <adj d="5" x="14" y="9"/>
+      </hex>
+      <hex x="0" y="11" title="12A" terrain="0" owner="0">
+        <adj d="0" x="0" y="10"/>
+        <adj d="1" x="1" y="11"/>
+        <adj d="2" x="1" y="12"/>
+        <adj d="3" x="0" y="12"/>
+        <adj d="4" x="15" y="12"/>
+        <adj d="5" x="15" y="11"/>
+      </hex>
+      <hex x="1" y="11" title="12B" terrain="0" owner="0">
+        <adj d="0" x="1" y="10"/>
+        <adj d="1" x="2" y="10"/>
+        <adj d="2" x="2" y="11"/>
+        <adj d="3" x="1" y="12"/>
+        <adj d="4" x="0" y="11"/>
+        <adj d="5" x="0" y="10"/>
+      </hex>
+      <hex x="2" y="11" title="12C" terrain="0" owner="0">
+        <adj d="0" x="2" y="10"/>
+        <adj d="1" x="3" y="11"/>
+        <adj d="2" x="3" y="12"/>
+        <adj d="3" x="2" y="12"/>
+        <adj d="4" x="1" y="12"/>
+        <adj d="5" x="1" y="11"/>
+      </hex>
+      <hex x="3" y="11" title="12D" terrain="0" owner="0">
+        <adj d="0" x="3" y="10"/>
+        <adj d="1" x="4" y="10"/>
+        <adj d="2" x="4" y="11"/>
+        <adj d="3" x="3" y="12"/>
+        <adj d="4" x="2" y="11"/>
+        <adj d="5" x="2" y="10"/>
+      </hex>
+      <hex x="4" y="11" title="12E" terrain="1" owner="1">
+        <adj d="0" x="4" y="10"/>
+        <adj d="1" x="5" y="11"/>
+        <adj d="2" x="5" y="12"/>
+        <adj d="3" x="4" y="12"/>
+        <adj d="4" x="3" y="12"/>
+        <adj d="5" x="3" y="11"/>
+        <fertile level="0"/>
+        <band green="20" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="5" y="11" title="12F" terrain="1" owner="1">
+        <adj d="0" x="5" y="10"/>
+        <adj d="1" x="6" y="10"/>
+        <adj d="2" x="6" y="11"/>
+        <adj d="3" x="5" y="12"/>
+        <adj d="4" x="4" y="11"/>
+        <adj d="5" x="4" y="10"/>
+        <scrub/>
+      </hex>
+      <hex x="6" y="11" title="12G" terrain="0" owner="0">
+        <adj d="0" x="6" y="10"/>
+        <adj d="1" x="7" y="11"/>
+        <adj d="2" x="7" y="12"/>
+        <adj d="3" x="6" y="12"/>
+        <adj d="4" x="5" y="12"/>
+        <adj d="5" x="5" y="11"/>
+      </hex>
+      <hex x="7" y="11" title="12H" terrain="0" owner="0">
+        <adj d="0" x="7" y="10"/>
+        <adj d="1" x="8" y="10"/>
+        <adj d="2" x="8" y="11"/>
+        <adj d="3" x="7" y="12"/>
+        <adj d="4" x="6" y="11"/>
+        <adj d="5" x="6" y="10"/>
+      </hex>
+      <hex x="8" y="11" title="12I" terrain="0" owner="0">
+        <adj d="0" x="8" y="10"/>
+        <adj d="1" x="9" y="11"/>
+        <adj d="2" x="9" y="12"/>
+        <adj d="3" x="8" y="12"/>
+        <adj d="4" x="7" y="12"/>
+        <adj d="5" x="7" y="11"/>
+      </hex>
+      <hex x="9" y="11" title="12J" terrain="1" owner="0">
+        <adj d="0" x="9" y="10"/>
+        <adj d="1" x="10" y="10"/>
+        <adj d="2" x="10" y="11"/>
+        <adj d="3" x="9" y="12"/>
+        <adj d="4" x="8" y="11"/>
+        <adj d="5" x="8" y="10"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="10" y="11" title="12K" terrain="1" owner="0">
+        <adj d="0" x="10" y="10"/>
+        <adj d="1" x="11" y="11"/>
+        <adj d="2" x="11" y="12"/>
+        <adj d="3" x="10" y="12"/>
+        <adj d="4" x="9" y="12"/>
+        <adj d="5" x="9" y="11"/>
+        <scrub/>
+      </hex>
+      <hex x="11" y="11" title="12L" terrain="0" owner="0">
+        <adj d="0" x="11" y="10"/>
+        <adj d="1" x="12" y="10"/>
+        <adj d="2" x="12" y="11"/>
+        <adj d="3" x="11" y="12"/>
+        <adj d="4" x="10" y="11"/>
+        <adj d="5" x="10" y="10"/>
+      </hex>
+      <hex x="12" y="11" title="12M" terrain="1" owner="2">
+        <adj d="0" x="12" y="10"/>
+        <adj d="1" x="13" y="11"/>
+        <adj d="2" x="13" y="12"/>
+        <adj d="3" x="12" y="12"/>
+        <adj d="4" x="11" y="12"/>
+        <adj d="5" x="11" y="11"/>
+        <scrub/>
+        <band red="100" green="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="11" title="12N" terrain="1" owner="2">
+        <adj d="0" x="13" y="10"/>
+        <adj d="1" x="14" y="10"/>
+        <adj d="2" x="14" y="11"/>
+        <adj d="3" x="13" y="12"/>
+        <adj d="4" x="12" y="11"/>
+        <adj d="5" x="12" y="10"/>
+        <scrub/>
+      </hex>
+      <hex x="14" y="11" title="12O" terrain="1" owner="2">
+        <adj d="0" x="14" y="10"/>
+        <adj d="1" x="15" y="11"/>
+        <adj d="2" x="15" y="12"/>
+        <adj d="3" x="14" y="12"/>
+        <adj d="4" x="13" y="12"/>
+        <adj d="5" x="13" y="11"/>
+        <peak/>
+        <band red="100" grey="50" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="15" y="11" title="12P" terrain="0" owner="0">
+        <adj d="0" x="15" y="10"/>
+        <adj d="1" x="0" y="10"/>
+        <adj d="2" x="0" y="11"/>
+        <adj d="3" x="15" y="12"/>
+        <adj d="4" x="14" y="11"/>
+        <adj d="5" x="14" y="10"/>
+      </hex>
+      <hex x="0" y="12" title="13A" terrain="1" owner="0">
+        <adj d="0" x="0" y="11"/>
+        <adj d="1" x="1" y="12"/>
+        <adj d="2" x="1" y="13"/>
+        <adj d="3" x="0" y="13"/>
+        <adj d="4" x="15" y="13"/>
+        <adj d="5" x="15" y="12"/>
+      </hex>
+      <hex x="1" y="12" title="13B" terrain="1" owner="0">
+        <adj d="0" x="1" y="11"/>
+        <adj d="1" x="2" y="11"/>
+        <adj d="2" x="2" y="12"/>
+        <adj d="3" x="1" y="13"/>
+        <adj d="4" x="0" y="12"/>
+        <adj d="5" x="0" y="11"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="12" title="13C" terrain="1" owner="0">
+        <adj d="0" x="2" y="11"/>
+        <adj d="1" x="3" y="12"/>
+        <adj d="2" x="3" y="13"/>
+        <adj d="3" x="2" y="13"/>
+        <adj d="4" x="1" y="13"/>
+        <adj d="5" x="1" y="12"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="3" y="12" title="13D" terrain="1" owner="1">
+        <adj d="0" x="3" y="11"/>
+        <adj d="1" x="4" y="11"/>
+        <adj d="2" x="4" y="12"/>
+        <adj d="3" x="3" y="13"/>
+        <adj d="4" x="2" y="12"/>
+        <adj d="5" x="2" y="11"/>
+        <ruin/>
+        <band grey="50" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="4" y="12" title="13E" terrain="1" owner="1">
+        <adj d="0" x="4" y="11"/>
+        <adj d="1" x="5" y="12"/>
+        <adj d="2" x="5" y="13"/>
+        <adj d="3" x="4" y="13"/>
+        <adj d="4" x="3" y="13"/>
+        <adj d="5" x="3" y="12"/>
+        <temple/>
+        <band black="110" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="5" y="12" title="13F" terrain="1" owner="1">
+        <adj d="0" x="5" y="11"/>
+        <adj d="1" x="6" y="11"/>
+        <adj d="2" x="6" y="12"/>
+        <adj d="3" x="5" y="13"/>
+        <adj d="4" x="4" y="12"/>
+        <adj d="5" x="4" y="11"/>
+        <ruin/>
+        <band grey="50" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="6" y="12" title="13G" terrain="1" owner="0">
+        <adj d="0" x="6" y="11"/>
+        <adj d="1" x="7" y="12"/>
+        <adj d="2" x="7" y="13"/>
+        <adj d="3" x="6" y="13"/>
+        <adj d="4" x="5" y="13"/>
+        <adj d="5" x="5" y="12"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="12" title="13H" terrain="0" owner="0">
+        <adj d="0" x="7" y="11"/>
+        <adj d="1" x="8" y="11"/>
+        <adj d="2" x="8" y="12"/>
+        <adj d="3" x="7" y="13"/>
+        <adj d="4" x="6" y="12"/>
+        <adj d="5" x="6" y="11"/>
+      </hex>
+      <hex x="8" y="12" title="13I" terrain="1" owner="0">
+        <adj d="0" x="8" y="11"/>
+        <adj d="1" x="9" y="12"/>
+        <adj d="2" x="9" y="13"/>
+        <adj d="3" x="8" y="13"/>
+        <adj d="4" x="7" y="13"/>
+        <adj d="5" x="7" y="12"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="9" y="12" title="13J" terrain="1" owner="0">
+        <adj d="0" x="9" y="11"/>
+        <adj d="1" x="10" y="11"/>
+        <adj d="2" x="10" y="12"/>
+        <adj d="3" x="9" y="13"/>
+        <adj d="4" x="8" y="12"/>
+        <adj d="5" x="8" y="11"/>
+        <den hunger="0" population="100" colour="2"/>
+        <band grey="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="10" y="12" title="13K" terrain="1" owner="0">
+        <adj d="0" x="10" y="11"/>
+        <adj d="1" x="11" y="12"/>
+        <adj d="2" x="11" y="13"/>
+        <adj d="3" x="10" y="13"/>
+        <adj d="4" x="9" y="13"/>
+        <adj d="5" x="9" y="12"/>
+        <scrub/>
+      </hex>
+      <hex x="11" y="12" title="13L" terrain="1" owner="2">
+        <adj d="0" x="11" y="11"/>
+        <adj d="1" x="12" y="11"/>
+        <adj d="2" x="12" y="12"/>
+        <adj d="3" x="11" y="13"/>
+        <adj d="4" x="10" y="12"/>
+        <adj d="5" x="10" y="11"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="12" y="12" title="13M" terrain="1" owner="2">
+        <adj d="0" x="12" y="11"/>
+        <adj d="1" x="13" y="12"/>
+        <adj d="2" x="13" y="13"/>
+        <adj d="3" x="12" y="13"/>
+        <adj d="4" x="11" y="13"/>
+        <adj d="5" x="11" y="12"/>
+        <den hunger="0" population="90" colour="0" home="1"/>
+      </hex>
+      <hex x="13" y="12" title="13N" terrain="1" owner="2">
+        <adj d="0" x="13" y="11"/>
+        <adj d="1" x="14" y="11"/>
+        <adj d="2" x="14" y="12"/>
+        <adj d="3" x="13" y="13"/>
+        <adj d="4" x="12" y="12"/>
+        <adj d="5" x="12" y="11"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="12" title="13O" terrain="1" owner="0">
+        <adj d="0" x="14" y="11"/>
+        <adj d="1" x="15" y="12"/>
+        <adj d="2" x="15" y="13"/>
+        <adj d="3" x="14" y="13"/>
+        <adj d="4" x="13" y="13"/>
+        <adj d="5" x="13" y="12"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="15" y="12" title="13P" terrain="0" owner="0">
+        <adj d="0" x="15" y="11"/>
+        <adj d="1" x="0" y="11"/>
+        <adj d="2" x="0" y="12"/>
+        <adj d="3" x="15" y="13"/>
+        <adj d="4" x="14" y="12"/>
+        <adj d="5" x="14" y="11"/>
+      </hex>
+      <hex x="0" y="13" title="14A" terrain="1" owner="0">
+        <adj d="0" x="0" y="12"/>
+        <adj d="1" x="1" y="13"/>
+        <adj d="2" x="1" y="14"/>
+        <adj d="3" x="0" y="14"/>
+        <adj d="4" x="15" y="14"/>
+        <adj d="5" x="15" y="13"/>
+        <swamp/>
+      </hex>
+      <hex x="1" y="13" title="14B" terrain="1" owner="0">
+        <adj d="0" x="1" y="12"/>
+        <adj d="1" x="2" y="12"/>
+        <adj d="2" x="2" y="13"/>
+        <adj d="3" x="1" y="14"/>
+        <adj d="4" x="0" y="13"/>
+        <adj d="5" x="0" y="12"/>
+        <swamp/>
+      </hex>
+      <hex x="2" y="13" title="14C" terrain="1" owner="0">
+        <adj d="0" x="2" y="12"/>
+        <adj d="1" x="3" y="13"/>
+        <adj d="2" x="3" y="14"/>
+        <adj d="3" x="2" y="14"/>
+        <adj d="4" x="1" y="14"/>
+        <adj d="5" x="1" y="13"/>
+        <den hunger="0" population="150" colour="1"/>
+        <band green="44" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="3" y="13" title="14D" terrain="1" owner="1">
+        <adj d="0" x="3" y="12"/>
+        <adj d="1" x="4" y="12"/>
+        <adj d="2" x="4" y="13"/>
+        <adj d="3" x="3" y="14"/>
+        <adj d="4" x="2" y="13"/>
+        <adj d="5" x="2" y="12"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="13" title="14E" terrain="1" owner="1">
+        <adj d="0" x="4" y="12"/>
+        <adj d="1" x="5" y="13"/>
+        <adj d="2" x="5" y="14"/>
+        <adj d="3" x="4" y="14"/>
+        <adj d="4" x="3" y="14"/>
+        <adj d="5" x="3" y="13"/>
+        <den hunger="0" population="30" colour="3" home="1"/>
+      </hex>
+      <hex x="5" y="13" title="14F" terrain="1" owner="1">
+        <adj d="0" x="5" y="12"/>
+        <adj d="1" x="6" y="12"/>
+        <adj d="2" x="6" y="13"/>
+        <adj d="3" x="5" y="14"/>
+        <adj d="4" x="4" y="13"/>
+        <adj d="5" x="4" y="12"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="13" title="14G" terrain="1" owner="0">
+        <adj d="0" x="6" y="12"/>
+        <adj d="1" x="7" y="13"/>
+        <adj d="2" x="7" y="14"/>
+        <adj d="3" x="6" y="14"/>
+        <adj d="4" x="5" y="14"/>
+        <adj d="5" x="5" y="13"/>
+        <swamp/>
+      </hex>
+      <hex x="7" y="13" title="14H" terrain="0" owner="0">
+        <adj d="0" x="7" y="12"/>
+        <adj d="1" x="8" y="12"/>
+        <adj d="2" x="8" y="13"/>
+        <adj d="3" x="7" y="14"/>
+        <adj d="4" x="6" y="13"/>
+        <adj d="5" x="6" y="12"/>
+      </hex>
+      <hex x="8" y="13" title="14I" terrain="1" owner="0">
+        <adj d="0" x="8" y="12"/>
+        <adj d="1" x="9" y="13"/>
+        <adj d="2" x="9" y="14"/>
+        <adj d="3" x="8" y="14"/>
+        <adj d="4" x="7" y="14"/>
+        <adj d="5" x="7" y="13"/>
+        <ruin/>
+      </hex>
+      <hex x="9" y="13" title="14J" terrain="0" owner="0">
+        <adj d="0" x="9" y="12"/>
+        <adj d="1" x="10" y="12"/>
+        <adj d="2" x="10" y="13"/>
+        <adj d="3" x="9" y="14"/>
+        <adj d="4" x="8" y="13"/>
+        <adj d="5" x="8" y="12"/>
+      </hex>
+      <hex x="10" y="13" title="14K" terrain="1" owner="2">
+        <adj d="0" x="10" y="12"/>
+        <adj d="1" x="11" y="13"/>
+        <adj d="2" x="11" y="14"/>
+        <adj d="3" x="10" y="14"/>
+        <adj d="4" x="9" y="14"/>
+        <adj d="5" x="9" y="13"/>
+        <peak/>
+        <band red="100" grey="50" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="11" y="13" title="14L" terrain="1" owner="2">
+        <adj d="0" x="11" y="12"/>
+        <adj d="1" x="12" y="12"/>
+        <adj d="2" x="12" y="13"/>
+        <adj d="3" x="11" y="14"/>
+        <adj d="4" x="10" y="13"/>
+        <adj d="5" x="10" y="12"/>
+        <scrub/>
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="12" y="13" title="14M" terrain="1" owner="2">
+        <adj d="0" x="12" y="12"/>
+        <adj d="1" x="13" y="13"/>
+        <adj d="2" x="13" y="14"/>
+        <adj d="3" x="12" y="14"/>
+        <adj d="4" x="11" y="14"/>
+        <adj d="5" x="11" y="13"/>
+        <fertile level="0"/>
+        <band red="100" yellow="50" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="13" y="13" title="14N" terrain="1" owner="2">
+        <adj d="0" x="13" y="12"/>
+        <adj d="1" x="14" y="12"/>
+        <adj d="2" x="14" y="13"/>
+        <adj d="3" x="13" y="14"/>
+        <adj d="4" x="12" y="13"/>
+        <adj d="5" x="12" y="12"/>
+        <scrub/>
+        <band green="10" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="14" y="13" title="14O" terrain="1" owner="0">
+        <adj d="0" x="14" y="12"/>
+        <adj d="1" x="15" y="13"/>
+        <adj d="2" x="15" y="14"/>
+        <adj d="3" x="14" y="14"/>
+        <adj d="4" x="13" y="14"/>
+        <adj d="5" x="13" y="13"/>
+        <swamp/>
+      </hex>
+      <hex x="15" y="13" title="14P" terrain="0" owner="0">
+        <adj d="0" x="15" y="12"/>
+        <adj d="1" x="0" y="12"/>
+        <adj d="2" x="0" y="13"/>
+        <adj d="3" x="15" y="14"/>
+        <adj d="4" x="14" y="13"/>
+        <adj d="5" x="14" y="12"/>
+      </hex>
+      <hex x="0" y="14" title="15A" terrain="0" owner="0">
+        <adj d="0" x="0" y="13"/>
+        <adj d="1" x="1" y="14"/>
+        <adj d="2" x="1" y="15"/>
+        <adj d="3" x="0" y="15"/>
+        <adj d="4" x="15" y="15"/>
+        <adj d="5" x="15" y="14"/>
+      </hex>
+      <hex x="1" y="14" title="15B" terrain="1" owner="0">
+        <adj d="0" x="1" y="13"/>
+        <adj d="1" x="2" y="13"/>
+        <adj d="2" x="2" y="14"/>
+        <adj d="3" x="1" y="15"/>
+        <adj d="4" x="0" y="14"/>
+        <adj d="5" x="0" y="13"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="2" y="14" title="15C" terrain="0" owner="0">
+        <adj d="0" x="2" y="13"/>
+        <adj d="1" x="3" y="14"/>
+        <adj d="2" x="3" y="15"/>
+        <adj d="3" x="2" y="15"/>
+        <adj d="4" x="1" y="15"/>
+        <adj d="5" x="1" y="14"/>
+      </hex>
+      <hex x="3" y="14" title="15D" terrain="1" owner="1">
+        <adj d="0" x="3" y="13"/>
+        <adj d="1" x="4" y="13"/>
+        <adj d="2" x="4" y="14"/>
+        <adj d="3" x="3" y="15"/>
+        <adj d="4" x="2" y="14"/>
+        <adj d="5" x="2" y="13"/>
+        <scrub/>
+      </hex>
+      <hex x="4" y="14" title="15E" terrain="1" owner="0">
+        <adj d="0" x="4" y="13"/>
+        <adj d="1" x="5" y="14"/>
+        <adj d="2" x="5" y="15"/>
+        <adj d="3" x="4" y="15"/>
+        <adj d="4" x="3" y="15"/>
+        <adj d="5" x="3" y="14"/>
+        <scrub/>
+      </hex>
+      <hex x="5" y="14" title="15F" terrain="1" owner="0">
+        <adj d="0" x="5" y="13"/>
+        <adj d="1" x="6" y="13"/>
+        <adj d="2" x="6" y="14"/>
+        <adj d="3" x="5" y="15"/>
+        <adj d="4" x="4" y="14"/>
+        <adj d="5" x="4" y="13"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="6" y="14" title="15G" terrain="1" owner="0">
+        <adj d="0" x="6" y="13"/>
+        <adj d="1" x="7" y="14"/>
+        <adj d="2" x="7" y="15"/>
+        <adj d="3" x="6" y="15"/>
+        <adj d="4" x="5" y="15"/>
+        <adj d="5" x="5" y="14"/>
+        <den hunger="0" population="100" colour="4"/>
+        <band yellow="29" hunger="0" combat="0" immobile="0"/>
+      </hex>
+      <hex x="7" y="14" title="15H" terrain="0" owner="0">
+        <adj d="0" x="7" y="13"/>
+        <adj d="1" x="8" y="13"/>
+        <adj d="2" x="8" y="14"/>
+        <adj d="3" x="7" y="15"/>
+        <adj d="4" x="6" y="14"/>
+        <adj d="5" x="6" y="13"/>
+      </hex>
+      <hex x="8" y="14" title="15I" terrain="0" owner="0">
+        <adj d="0" x="8" y="13"/>
+        <adj d="1" x="9" y="14"/>
+        <adj d="2" x="9" y="15"/>
+        <adj d="3" x="8" y="15"/>
+        <adj d="4" x="7" y="15"/>
+        <adj d="5" x="7" y="14"/>
+      </hex>
+      <hex x="9" y="14" title="15J" terrain="1" owner="0">
+        <adj d="0" x="9" y="13"/>
+        <adj d="1" x="10" y="13"/>
+        <adj d="2" x="10" y="14"/>
+        <adj d="3" x="9" y="15"/>
+        <adj d="4" x="8" y="14"/>
+        <adj d="5" x="8" y="13"/>
+        <scrub/>
+      </hex>
+      <hex x="10" y="14" title="15K" terrain="0" owner="0">
+        <adj d="0" x="10" y="13"/>
+        <adj d="1" x="11" y="14"/>
+        <adj d="2" x="11" y="15"/>
+        <adj d="3" x="10" y="15"/>
+        <adj d="4" x="9" y="15"/>
+        <adj d="5" x="9" y="14"/>
+      </hex>
+      <hex x="11" y="14" title="15L" terrain="1" owner="2">
+        <adj d="0" x="11" y="13"/>
+        <adj d="1" x="12" y="13"/>
+        <adj d="2" x="12" y="14"/>
+        <adj d="3" x="11" y="15"/>
+        <adj d="4" x="10" y="14"/>
+        <adj d="5" x="10" y="13"/>
+        <scrub/>
+      </hex>
+      <hex x="12" y="14" title="15M" terrain="1" owner="0">
+        <adj d="0" x="12" y="13"/>
+        <adj d="1" x="13" y="14"/>
+        <adj d="2" x="13" y="15"/>
+        <adj d="3" x="12" y="15"/>
+        <adj d="4" x="11" y="15"/>
+        <adj d="5" x="11" y="14"/>
+        <swamp/>
+      </hex>
+      <hex x="13" y="14" title="15N" terrain="1" owner="0">
+        <adj d="0" x="13" y="13"/>
+        <adj d="1" x="14" y="13"/>
+        <adj d="2" x="14" y="14"/>
+        <adj d="3" x="13" y="15"/>
+        <adj d="4" x="12" y="14"/>
+        <adj d="5" x="12" y="13"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="14" y="14" title="15O" terrain="0" owner="0">
+        <adj d="0" x="14" y="13"/>
+        <adj d="1" x="15" y="14"/>
+        <adj d="2" x="15" y="15"/>
+        <adj d="3" x="14" y="15"/>
+        <adj d="4" x="13" y="15"/>
+        <adj d="5" x="13" y="14"/>
+      </hex>
+      <hex x="15" y="14" title="15P" terrain="0" owner="0">
+        <adj d="0" x="15" y="13"/>
+        <adj d="1" x="0" y="13"/>
+        <adj d="2" x="0" y="14"/>
+        <adj d="3" x="15" y="15"/>
+        <adj d="4" x="14" y="14"/>
+        <adj d="5" x="14" y="13"/>
+      </hex>
+      <hex x="0" y="15" title="16A" terrain="0" owner="0">
+        <adj d="0" x="0" y="14"/>
+        <adj d="1" x="1" y="15"/>
+        <adj d="2" x="1" y="0"/>
+        <adj d="3" x="0" y="0"/>
+        <adj d="4" x="15" y="0"/>
+        <adj d="5" x="15" y="15"/>
+      </hex>
+      <hex x="1" y="15" title="16B" terrain="1" owner="0">
+        <adj d="0" x="1" y="14"/>
+        <adj d="1" x="2" y="14"/>
+        <adj d="2" x="2" y="15"/>
+        <adj d="3" x="1" y="0"/>
+        <adj d="4" x="0" y="15"/>
+        <adj d="5" x="0" y="14"/>
+      </hex>
+      <hex x="2" y="15" title="16C" terrain="0" owner="0">
+        <adj d="0" x="2" y="14"/>
+        <adj d="1" x="3" y="15"/>
+        <adj d="2" x="3" y="0"/>
+        <adj d="3" x="2" y="0"/>
+        <adj d="4" x="1" y="0"/>
+        <adj d="5" x="1" y="15"/>
+      </hex>
+      <hex x="3" y="15" title="16D" terrain="1" owner="0">
+        <adj d="0" x="3" y="14"/>
+        <adj d="1" x="4" y="14"/>
+        <adj d="2" x="4" y="15"/>
+        <adj d="3" x="3" y="0"/>
+        <adj d="4" x="2" y="15"/>
+        <adj d="5" x="2" y="14"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="4" y="15" title="16E" terrain="1" owner="0">
+        <adj d="0" x="4" y="14"/>
+        <adj d="1" x="5" y="15"/>
+        <adj d="2" x="5" y="0"/>
+        <adj d="3" x="4" y="0"/>
+        <adj d="4" x="3" y="0"/>
+        <adj d="5" x="3" y="15"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="5" y="15" title="16F" terrain="0" owner="0">
+        <adj d="0" x="5" y="14"/>
+        <adj d="1" x="6" y="14"/>
+        <adj d="2" x="6" y="15"/>
+        <adj d="3" x="5" y="0"/>
+        <adj d="4" x="4" y="15"/>
+        <adj d="5" x="4" y="14"/>
+      </hex>
+      <hex x="6" y="15" title="16G" terrain="1" owner="0">
+        <adj d="0" x="6" y="14"/>
+        <adj d="1" x="7" y="15"/>
+        <adj d="2" x="7" y="0"/>
+        <adj d="3" x="6" y="0"/>
+        <adj d="4" x="5" y="0"/>
+        <adj d="5" x="5" y="15"/>
+        <fertile level="0"/>
+      </hex>
+      <hex x="7" y="15" title="16H" terrain="0" owner="0">
+        <adj d="0" x="7" y="14"/>
+        <adj d="1" x="8" y="14"/>
+        <adj d="2" x="8" y="15"/>
+        <adj d="3" x="7" y="0"/>
+        <adj d="4" x="6" y="15"/>
+        <adj d="5" x="6" y="14"/>
+      </hex>
+      <hex x="8" y="15" title="16I" terrain="0" owner="0">
+        <adj d="0" x="8" y="14"/>
+        <adj d="1" x="9" y="15"/>
+        <adj d="2" x="9" y="0"/>
+        <adj d="3" x="8" y="0"/>
+        <adj d="4" x="7" y="0"/>
+        <adj d="5" x="7" y="15"/>
+      </hex>
+      <hex x="9" y="15" title="16J" terrain="0" owner="0">
+        <adj d="0" x="9" y="14"/>
+        <adj d="1" x="10" y="14"/>
+        <adj d="2" x="10" y="15"/>
+        <adj d="3" x="9" y="0"/>
+        <adj d="4" x="8" y="15"/>
+        <adj d="5" x="8" y="14"/>
+      </hex>
+      <hex x="10" y="15" title="16K" terrain="0" owner="0">
+        <adj d="0" x="10" y="14"/>
+        <adj d="1" x="11" y="15"/>
+        <adj d="2" x="11" y="0"/>
+        <adj d="3" x="10" y="0"/>
+        <adj d="4" x="9" y="0"/>
+        <adj d="5" x="9" y="15"/>
+      </hex>
+      <hex x="11" y="15" title="16L" terrain="0" owner="0">
+        <adj d="0" x="11" y="14"/>
+        <adj d="1" x="12" y="14"/>
+        <adj d="2" x="12" y="15"/>
+        <adj d="3" x="11" y="0"/>
+        <adj d="4" x="10" y="15"/>
+        <adj d="5" x="10" y="14"/>
+      </hex>
+      <hex x="12" y="15" title="16M" terrain="0" owner="0">
+        <adj d="0" x="12" y="14"/>
+        <adj d="1" x="13" y="15"/>
+        <adj d="2" x="13" y="0"/>
+        <adj d="3" x="12" y="0"/>
+        <adj d="4" x="11" y="0"/>
+        <adj d="5" x="11" y="15"/>
+      </hex>
+      <hex x="13" y="15" title="16N" terrain="0" owner="0">
+        <adj d="0" x="13" y="14"/>
+        <adj d="1" x="14" y="14"/>
+        <adj d="2" x="14" y="15"/>
+        <adj d="3" x="13" y="0"/>
+        <adj d="4" x="12" y="15"/>
+        <adj d="5" x="12" y="14"/>
+      </hex>
+      <hex x="14" y="15" title="16O" terrain="0" owner="0">
+        <adj d="0" x="14" y="14"/>
+        <adj d="1" x="15" y="15"/>
+        <adj d="2" x="15" y="0"/>
+        <adj d="3" x="14" y="0"/>
+        <adj d="4" x="13" y="0"/>
+        <adj d="5" x="13" y="15"/>
+      </hex>
+      <hex x="15" y="15" title="16P" terrain="0" owner="0">
+        <adj d="0" x="15" y="14"/>
+        <adj d="1" x="0" y="14"/>
+        <adj d="2" x="0" y="15"/>
+        <adj d="3" x="15" y="0"/>
+        <adj d="4" x="14" y="15"/>
+        <adj d="5" x="14" y="14"/>
+      </hex>
+    </map>
+  </turn>
+</swamp>

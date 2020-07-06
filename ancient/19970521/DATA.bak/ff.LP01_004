@@ -1,0 +1,39 @@
+Header(ff, 4, 1, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+ - 80 Green Lizards split at 6K and move NE (to 6L).
+ - A Sea Monster suddenly appears beneath your Lizards at 6L!
+ - Combat round 2! Surviving Lizards: 70.
+ - The mighty Sea Monster falls under the blows of your Lizards at 6L.
+ - 70 Green Lizards survive at 6L.
+ - 70 Green Lizards at 6L move NE (to 5A).
+ - Spy Lizard at 4L moves NE (to 3A).
+ - Spy Lizard at 3A moves NE (to 3B).
+ - 186 Green Lizards at 3J move SW (to 3I).
+ - 186 Green Lizards at 3I move SW (to 4H).
+Phase(development)
+ - Recruiting from Home Den at 6K. 24 Black lizards recruited from Den leaving 46 Den Lizards at 6K.
+SpyRejoin: 4H
+ClanReport(Raging Ross)
+HomeDen(6K,46,4,0,92,0,41,0,0,0)
+
+ - 4H Band of 187 Green (Hungry & Average) Lizards.
+ - 5A Band of 91 Green (Peckish & Average) Lizards.
+ - 5J Band of 10 Green (Hungry & Average) Lizards.
+ - 6C Spy Lizard. Spy for 3 turns.
+ - 10K Spy Lizard. Spy for 2 turns.
+ - 8K Spy Lizard. Spy for 2 turns.
+ - 5G Spy Lizard. Spy for 1 turns.
+ - 3B Spy Lizard. Spy for 1 turns.
+ - 5G Spy Lizard. Spy for 1 turns.
+ - 4L Spy Lizard. Spy for 1 turns.
+
+ * Clans Ranking at end of Turn 4:
+
+ 01 -    650 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -    524 Player 01, 'Raging Ross' (rda) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

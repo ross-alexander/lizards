@@ -1,0 +1,44 @@
+Header(ff, 6, 1, 2, 1, rda, Raging Ross, 2, jno, Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+Phase(movement)
+ - 10 Green Lizards split at 5F and move SW (to 5E).
+ - 20 Grey Lizards split at 5F and move SE (to 5G).
+ - Lizards eat from fertile hex 5G.
+ - 42 Green, 30 Black Lizards split at 6K and move N (to 5K).
+ - Lizards eat from fertile hex 5K.
+ - 42 Green, 30 Black Lizards at 5K move S (to 6K).
+ - 50 Green Lizards split at 6K and move SW (to 7J).
+ - Lizards attack 10 'Jumping Jono' Clan Lizards at 7J.
+ - Combat round 1! Standing Lizards: 47. Standing enemy Lizards: 0.
+ - Your Lizards at 7J mercilessly SLAUGHTERED their foul enemy. They are now Good warriors.
+ - 10 Green Lizards split at 5B and move SW (to 5A).
+ - Lizards MIRED in Swamp at 5A for next turn.
+Phase(development)
+ - Recruiting from Green Den at 5B. 29 Green lizards recruited from Den leaving 54 Den Lizards at 5B.
+ - Recruiting from Grey Den at 5F. 29 Grey lizards recruited from Den leaving 54 Den Lizards at 5F.
+ - Recruiting from Home Den at 6K. 20 Black lizards recruited from Den leaving 39 Den Lizards at 6K.
+SpyNative: 10K
+SpyNative: 8K
+SpyRejoin: 5G
+SpyRejoin: 5G
+ClanReport(Raging Ross)
+Den(5B,54,2,0,133,0,0,0,1,0)
+Den(5F,54,3,0,143,43,0,0,2,0)
+HomeDen(6K,39,4,0,42,0,84,0,0,0)
+ - 5A Band of 10 Green (Hungry & Average) Lizards.
+ - 5E Band of 10 Green (Famished & Average) Lizards.
+ - 5G Band of 2 Green, 20 Grey (Sated & Average) Lizards.
+ - 5J Band of 10 Green (Starved & Average) Lizards.
+ - 7J Band of 47 Green (Sated & Good) Lizards.
+ - 3B Spy Lizard. Spy for 3 turns.
+ - 4L Spy Lizard. Spy for 3 turns.
+
+ * Clans Ranking at end of Turn 6:
+
+ 01 -    793 Player 01, 'Raging Ross' (rda) Clan.
+ 02 -    700 Player 02, 'Jumping Jono' (jno) Clan.
+
+ - THERE ARE 2 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 2 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.

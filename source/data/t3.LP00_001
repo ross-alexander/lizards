@@ -1,0 +1,10 @@
+(header "t3" 1 0 4 '('(1 "10" "rda" "Raging Ross")'(2 "20" "jno" "Jumping Jono")'(3 "30" "mtb" "Mad Mike"))
+'( 1 - Player 01, 'Raging Ross' (rda) Clan.
+ 1 - Player 02, 'Jumping Jono' (jno) Clan.
+ 1 - Player 03, 'Mad Mike' (mtb) Clan.
+(clan-rank '((rank 01 610 2 "Jumping Jono" "jno")
+(rank 02 374 3 "Mad Mike" "mtb")
+(rank 03 369 1 "Raging Ross" "rda")
+)(victory-dens-continue 3 2 0)
+)
+(trailer)))

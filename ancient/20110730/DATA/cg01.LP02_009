@@ -1,0 +1,125 @@
+Header(cg01, 9)
+ClanID(jno,Jumping Jono)
+Spawning(off)
+Phase(world)
+Phase(artillery)
+
+ - 'Raging Ross' Clan Lizards at 4P are seized by a powerful force and hurled N!
+Phase(movement)
+
+ - 15 Green Lizards at 6Y move NW (to 6X).
+ - 15 Green Lizards at 6X move NW (to 5W).
+ - Lizards eat from fertile hex 5W.
+
+ - 23 Black Lizards at 6W move N (to 5W).
+ - Lizards eat from fertile hex 5W.
+
+ - 22 Grey Lizards at 9V move NW (to 8U).
+
+ - 52 Red, 29 Yellow, 142 Black Lizards at 9Q move SW (to 10P).
+ - 52 Red, 29 Yellow, 142 Black Lizards at 10P move NW (to 9O).
+
+ - 46 Black Lizards at 15Z move S (to 16Z).
+ - 46 Black Lizards at 16Z move S (to 17Z).
+
+ - 47 Red, 182 Black Lizards at 11AA move N (to 10AA).
+
+ - 50 Grey Lizards at 12V move S (to 13V).
+ - Lizards eat from fertile hex 13V.
+ - 50 Grey Lizards at 13V move SE (to 13W).
+
+ - 10 Green Lizards at 10V move SW (to 10U).
+
+ - 10 Green Lizards at 5AA move NE (to 5AB).
+ - 10 Green Lizards at 5AB move N (to 4AB).
+ - Lizards eat from fertile hex 4AB.
+
+ - Spy Lizard splits at 15R and moves SW (to 15Q).
+ - Spy Lizard at 15Q moves SW (to 16P).
+
+ - Spy Lizard splits at 15R and moves SE (to 15S).
+ - Spy Lizard at 15S moves SE (to 16T).
+
+ - 52 Grey Lizards at 10R move S (to 11R).
+
+ - 21 Yellow Lizards at 5U move SE (to 6V).
+ - Lizards eat from fertile hex 6V.
+ - 21 Yellow Lizards at 6V move NE (to 5W).
+ - Lizards eat from fertile hex 5W.
+
+ - 29 Black Lizards at 9W move SE (to 10X).
+ - 29 Black Lizards at 10X move SE (to 10Y).
+
+ - 11 Red, 17 Green, 38 Black Lizards at 15AD move S (to 16AD).
+ - 11 Red, 17 Green, 38 Black Lizards at 16AD move S (to 17AD).
+ - Lizards attack 15 militia Lizards in free Den at 17AD.
+ - Combat round 2! Standing Lizards: 60. Standing enemy Lizards: 0.
+ - Your Lizards at 17AD completely CONQUER their enemy. They are now Good warriors.
+ - Your Lizards captured Black Den at 17AD.
+Phase(development)
+
+ - Recruiting from Black Den at 17AD. 17 Black lizards recruited from Den leaving 33 Den Lizards at 17AD.
+
+ - Fertile hex planted at 5S by 10 Green Lizards.
+
+ - Recruiting from Green Den at 6Y. 12 Green lizards recruited from Den leaving 25 Den Lizards at 6Y.
+
+ - Recruiting from Black Den at 6W. 22 Black lizards recruited from Den leaving 41 Den Lizards at 6W.
+
+ - Recruiting from Grey Den at 10R. 43 Grey lizards recruited from Den leaving 81 Den Lizards at 10R.
+
+ - Recruiting from Grey Den at 15R. 29 Grey lizards recruited from Den leaving 54 Den Lizards at 15R.
+
+ - Recruiting from Yellow Den at 5U. 20 Yellow lizards recruited from Den leaving 38 Den Lizards at 5U.
+
+ - Recruiting from Green Den at 15AD. 14 Green lizards recruited from Den leaving 27 Den Lizards at 15AD.
+ClanReport(Jumping Jono)
+Den(5R, 31, Yellow, 43 Yellow, Peckish, Average)
+
+Den(5U, 38, Yellow, 20 Yellow, Sated, Average)
+
+Den(6W, 41, Black, 22 Black, Sated, Average)
+
+Den(6Y, 25, Green, 12 Green, Sated, Average)
+
+Den(9V, 35, Grey, , Hungry, Average)
+
+Den(10R, 81, Grey, 43 Grey, Sated, Average)
+
+Den(10W, 66, Red, 17 Red, Hungry, Average)
+
+HomeDen(10Y, 21, 1, 8 Red, 29 Black, Sated, Average)
+
+Den(13U, 31, Yellow, 12 Yellow, Peckish, Average)
+
+Den(15R, 54, Grey, 51 Red, 63 Grey, 11 Yellow, 7 Black, Sated, Average)
+
+Den(15Z, 58, Black, , Peckish, Average)
+
+Den(15AD, 27, Green, 14 Green, Sated, Average)
+
+Den(17AD, 33, Black, 9 Red, 15 Green, 53 Black, Peckish, Average)
+
+ - 4AB Band of 10 Green (Sated & Average) Lizards.
+ - 5S Band of 10 Green (Peckish & Average) Lizards.
+ - 5W Band of 31 Green, 96 Yellow, 73 Black (Sated & Average) Lizards.
+ - 8U Band of 22 Grey (Hungry & Average) Lizards.
+ - 9O Band of 52 Red, 29 Yellow, 142 Black (Sated & Dangerous) Lizards.
+ - 10U Band of 10 Green (Sated & Average) Lizards.
+ - 10AA Band of 47 Red, 182 Black (Peckish & Average) Lizards.
+ - 11R Band of 52 Grey (Peckish & Average) Lizards.
+ - 13W Band of 50 Grey, 14 Yellow (Sated & Average) Lizards.
+ - 17Z Band of 2 Red, 46 Black (Peckish & Average) Lizards.
+ - 16P Spy Lizard. Spy for 0 turns.
+ - 16T Spy Lizard. Spy for 0 turns.
+
+ - THERE ARE 4 HOME DENS LEFT IN THIS GAME. YOU MUST CONTROL 3 HOME DENS TO WIN.
+ - YOU PRESENTLY CONTROL 1 HOME DEN.
+
+ * Clans Ranking at end of Turn 9:
+
+ 01 -   2310 Player 02, 'Jumping Jono' (jno) Clan.
+ 02 -   2075 Player 01, 'Mike TB' (mtb) Clan.
+ 03 -   2075 Player 03, 'Dangerous Dan' (dan) Clan.
+ 04 -   1536 Player 04, 'Raging Ross' (rda) Clan.
+Trailer()

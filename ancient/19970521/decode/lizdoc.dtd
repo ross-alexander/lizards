@@ -1,0 +1,49 @@
+<!entity % general system -- general purpose characters -- >
+%general;
+
+
+<!entity space " ">
+<!entity null "">
+
+<!shortref global
+      "&#RS;B" null  -- delete leading blanks --
+  --    '"' qtag -- 
+      "~" nbsp
+      "_" lowbar
+      "#" num
+      "%" percnt
+      "^" circ
+      "{" lcub
+      "}" rcub
+      "(" lpar
+      ")" rpar
+      "|" verbar>
+
+<!shortref line
+      "&#RS;B" null  -- delete leading blanks --
+  --    '"' qtag -- 
+      "~" nbsp
+      "_" lowbar
+      "#" num
+      "%" percnt
+      "^" circ
+      "{" lcub
+      "}" rcub
+      " " nbsp
+      "(" lpar
+      ")" rpar
+      "|" verbar>
+
+<!usemap line item>
+
+<!element lizdoc - o (sect)+>
+<!attlist lizdoc
+	game cdata #implied
+	turn cdata #implied
+	clanname cdata #implied
+	clancode cdata #implied
+>
+<!element sect - o (stitle, p)>
+<!element stitle o o (#pcdata)+>
+<!element p - o (item)+>
+<!element item - o (#pcdata)+>

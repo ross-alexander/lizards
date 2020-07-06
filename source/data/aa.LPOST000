@@ -1,0 +1,209 @@
+/Gameletter {(aa)} def
+/Turnnumber {(0)} def
+/NTN {(1)} def
+/Date {(924125174)} def
+/saveobj save def
+/Shadow_Code {(RDA)} def
+Map_Page_R
+-1190 140 Location_R
+(Raging Ross Clan World View for Lizards! Game aa Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+585 750 fer (4Y) Small
+620 775 wat (4Z) Small
+655 750 pla (4AA) Small
+515 700 whi (5W) Small
+550 725 rden (5X) Small (Free) Owner
+585 700 wat (5Y) Small
+620 725 pla (5Z) Small
+655 700 bru (5AA) Small
+690 725 fer (5AB) Small
+725 700 wat (5AC) Small
+515 650 fer (6W) Small
+550 675 pla (6X) Small
+585 650 rui (6Y) Small (RDA) Owner (50) Troop_Number
+620 675 fer (6Z) Small (RDA) Owner (20) Troop_Number
+655 650 rui (6AA) Small (RDA) Owner (50) Troop_Number
+690 675 yden (6AB) Small (Free) Owner
+725 650 wat (6AC) Small
+515 600 bru (7W) Small
+550 625 wat (7X) Small
+585 600 fer (7Y) Small
+620 625 tem (7Z) Small (RDA) Owner (110) Troop_Number
+655 600 fer (7AA) Small
+690 625 wat (7AB) Small
+725 600 wat (7AC) Small
+550 575 fer (8X) Small
+585 550 bru (8Y) Small
+620 575 hden (8Z) Small (RDA) Owner (30) Troop_Number
+655 550 wat (8AA) Small
+690 575 whi (8AB) Small
+620 525 pla (9Z) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(MTB)} def
+Map_Page_R
+-1190 140 Location_R
+(Mad Mike Clan World View for Lizards! Game aa Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+655 750 rden (2G) Small (Free) Owner
+690 775 fer (2H) Small
+725 750 wat (2I) Small
+585 700 fer (3E) Small
+620 725 wat (3F) Small
+655 700 fer (3G) Small
+690 725 wat (3H) Small
+725 700 wat (3I) Small
+760 725 wat (3J) Small
+795 700 wat (3K) Small
+515 650 fer (4C) Small
+550 675 gden (4D) Small (Free) Owner
+585 650 bru (4E) Small
+620 675 wat (4F) Small
+655 650 bru (4G) Small
+690 675 pla (4H) Small
+725 650 wat (4I) Small
+760 675 wat (4J) Small
+795 650 bden (4K) Small (Free) Owner
+445 600 wat (5A) Small
+480 625 fer (5B) Small
+515 600 swp (5C) Small
+550 625 swp (5D) Small
+585 600 fer (5E) Small
+620 625 bru (5F) Small (MTB) Owner (10) Troop_Number
+655 600 fer (5G) Small
+690 625 mou (5H) Small (MTB) Owner (50) Troop_Number
+725 600 wat (5I) Small
+760 625 fer (5J) Small
+795 600 wat (5K) Small
+445 550 wat (6A) Small
+480 575 pla (6B) Small
+515 550 pla (6C) Small
+550 575 swp (6D) Small
+585 550 bru (6E) Small (MTB) Owner (10) Troop_Number
+620 575 hden (6F) Small (MTB) Owner (90) Troop_Number
+655 550 bru (6G) Small (MTB) Owner (10) Troop_Number
+690 575 swp (6H) Small
+725 550 wat (6I) Small
+760 575 fer (6J) Small
+795 550 grden (6K) Small (Free) Owner
+445 500 wat (7A) Small
+480 525 wat (7B) Small
+515 500 fer (7C) Small
+550 525 mou (7D) Small (MTB) Owner (50) Troop_Number
+585 500 bru (7E) Small
+620 525 fer (7F) Small (MTB) Owner (50) Troop_Number
+655 500 pla (7G) Small
+690 525 wat (7H) Small
+725 500 wat (7I) Small
+760 525 wat (7J) Small
+445 450 wat (8A) Small
+480 475 wat (8B) Small
+515 450 pla (8C) Small
+550 475 wat (8D) Small
+585 450 wat (8E) Small
+620 475 grden (8F) Small (Free) Owner
+655 450 swp (8G) Small
+690 475 bru (8H) Small
+480 425 mou (9B) Small
+515 400 wat (9C) Small
+550 425 yden (9D) Small (Free) Owner
+585 400 wat (9E) Small
+620 425 swp (9F) Small
+550 375 fer (10D) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(JNO)} def
+Map_Page_R
+-1190 140 Location_R
+(Jumping Jono Clan World View for Lizards! Game aa Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+585 750 fer (13O) Small
+620 775 bru (13P) Small
+655 750 swp (13Q) Small
+515 700 wat (14M) Small
+550 725 pla (14N) Small
+585 700 bru (14O) Small
+620 725 grden (14P) Small (Free) Owner
+655 700 wat (14Q) Small
+690 725 wat (14R) Small
+725 700 fer (14S) Small
+515 650 wat (15M) Small
+550 675 bru (15N) Small
+585 650 tem (15O) Small (JNO) Owner (90) Troop_Number
+620 675 rui (15P) Small (JNO) Owner (10) Troop_Number
+655 650 swp (15Q) Small (JNO) Owner (10) Troop_Number
+690 675 wat (15R) Small
+725 650 wat (15S) Small
+515 600 wat (16M) Small
+550 625 wat (16N) Small
+585 600 rui (16O) Small (JNO) Owner (10) Troop_Number
+620 625 fer (16P) Small
+655 600 hden (16Q) Small (JNO) Owner (100) Troop_Number
+690 625 wat (16R) Small
+725 600 tem (16S) Small
+515 550 wat (17M) Small
+550 575 fer (17N) Small
+585 550 wat (17O) Small
+620 575 fer (17P) Small (JNO) Owner (10) Troop_Number
+655 550 fer (17Q) Small
+690 575 swp (17R) Small
+725 550 wat (17S) Small
+550 525 mou (18N) Small
+585 500 bru (18O) Small
+620 525 swp (18P) Small
+655 500 yden (18Q) Small (Free) Owner
+690 525 pla (18R) Small
+620 475 swp (19P) Small
+printing
+saveobj restore
+/saveobj save def
+/Shadow_Code {(BON)} def
+Map_Page_R
+-1190 140 Location_R
+(James Bond Clan World View for Lizards! Game aa Turn 0 Page 1 of 1. World size 1A to 32AF) Map_Page_Num
+585 750 gden (12E) Small (Free) Owner
+515 700 wat (13C) Small
+550 725 fer (13D) Small
+585 700 wat (13E) Small
+620 725 pla (13F) Small
+655 700 wat (13G) Small
+480 675 pla (14B) Small
+515 650 mou (14C) Small
+550 675 bru (14D) Small
+585 650 bru (14E) Small (BON) Owner (10) Troop_Number
+620 675 fer (14F) Small
+655 650 grden (14G) Small (Free) Owner
+690 675 fer (14H) Small
+480 625 rden (15B) Small (Free) Owner
+515 600 bru (15C) Small
+550 625 rden (15D) Small (BON) Owner (40) Troop_Number
+585 600 fer (15E) Small
+620 625 rden (15F) Small (BON) Owner (100) Troop_Number
+655 600 bru (15G) Small
+690 625 wat (15H) Small
+480 575 wat (16B) Small
+515 550 tem (16C) Small (BON) Owner
+550 575 bru (16D) Small (BON) Owner (10) Troop_Number
+585 550 hden (16E) Small (BON) Owner (40) Troop_Number
+620 575 fer (16F) Small
+655 550 rui (16G) Small
+690 575 bru (16H) Small
+480 525 rden (17B) Small (Free) Owner
+515 500 fer (17C) Small
+550 525 mou (17D) Small
+585 500 bru (17E) Small
+620 525 bru (17F) Small (BON) Owner (10) Troop_Number
+655 500 bru (17G) Small
+690 525 bru (17H) Small
+550 475 fer (18D) Small
+585 450 wat (18E) Small
+620 475 rui (18F) Small (BON) Owner (50) Troop_Number
+655 450 swp (18G) Small
+690 475 rui (18H) Small
+550 425 wat (19D) Small
+585 400 wat (19E) Small
+620 425 wat (19F) Small
+655 400 bru (19G) Small
+690 425 wat (19H) Small
+620 375 wat (20F) Small
+printing
+saveobj restore
