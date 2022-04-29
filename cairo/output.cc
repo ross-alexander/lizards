@@ -307,9 +307,11 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
     {
       cr->save();
       cairo_t *c = (cairo_t*)(cr->cobj());
-      cr->translate(cx - 20.0, cy - 15.0);
-      cr->scale(0.20, 0.20);
-      rsvg_handle_render_cairo(id2sym[symbol]->handle, c);
+      RsvgRectangle viewport = {.x = cx - 20.0, .y = cy - 15.0, .width = 40, .height = 40};
+      //      cr->translate(cx - 20.0, cy - 15.0);
+      //      cr->scale(0.20, 0.20);
+      //      rsvg_handle_render_cairo(id2sym[symbol]->handle, c);
+      rsvg_handle_render_document(id2sym[symbol]->handle, c, &viewport, 0);
       cr->restore();
     }
 
@@ -352,11 +354,13 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
       cr->move_to(cx - e.width, cy - 5);
       cr->show_text(band);
 
-      cr->save();
-      cr->translate(cx, cy - 25);
-      cr->scale(0.15, 0.15);
-      rsvg_handle_render_cairo(id2sym[OUTPUT_LIZARD]->handle, (cairo_t*)(cr->cobj()));
-      cr->restore();
+      //      cr->save();
+      //      cr->translate(cx, cy - 25);
+      //      cr->scale(0.15, 0.15);
+      RsvgRectangle viewport = {.x = cx,.y = cy - 25,.width = 30,.height = 30 };
+      rsvg_handle_render_document(id2sym[OUTPUT_LIZARD]->handle, (cairo_t*)(cr->cobj()), &viewport, 0);
+      //      rsvg_handle_render_cairo(id2sym[OUTPUT_LIZARD]->handle, (cairo_t*)(cr->cobj()));
+      //      cr->restore();
     }
   else if (!ovh->center_text.empty())
     {
