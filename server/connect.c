@@ -15,31 +15,33 @@
 #include <netinet/in.h>
 #include <netdb.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
-static int die();
+static void die();
 
 #define LINE_LEN	80
 
 /* The server listens for connect requests on this port */
 #define SERVER_PORT	(5000)
 
-main(argc,argv)
-    int argc;
-    char **argv;
+int main(int argc, char **argv)
 {
-    int cnt, sock;
-    struct sockaddr_in sin;
-    struct hostent *hp;
-    char line[LINE_LEN];
+  int cnt, sock;
+  struct sockaddr_in sin;
+  struct hostent *hp;
+  char line[LINE_LEN];
 
-    if (argc != 2) {
-	printf("usage: %s host\n", argv[0]);
-	exit(1);
-    }
-
-    if ((sock = socket (AF_INET, SOCK_STREAM, 0)) < 0) {
-	perror("Can't open socket");
-	exit(1);
+  if (argc != 2) {
+    printf("usage: %s host\n", argv[0]);
+    exit(1);
+  }
+  
+  if ((sock = socket (AF_INET, SOCK_STREAM, 0)) < 0)
+    {
+      perror("Can't open socket");
+      exit(1);
     }
 
     /* Initialize the socket address to the server's address. */
@@ -56,7 +58,7 @@ main(argc,argv)
 
     /* Connect to the server. */
 
-    if (connect(sock, &sin,sizeof(sin)) < 0) {
+    if (connect(sock, (struct sockaddr*)&sin, sizeof(sin)) < 0) {
 	close(sock);
 	perror("Connect to server");
 	exit(1);
@@ -88,8 +90,7 @@ main(argc,argv)
     exit(0);
 }
 
-static int
-die()
+static void die()
 {
     fprintf(stderr, "Server closed connection\n");
     exit(1);
