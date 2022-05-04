@@ -1,5 +1,5 @@
 #include "node.h"
-#include <stream.h>
+#include <iostream>
 #include <string.h>
 
 TextNode::TextNode(int l, char *t)
@@ -15,5 +15,5 @@ TextNode::~TextNode()
 
 void TextNode::Dump(void)
 {
-  cout << text;
+  std::cout << text;
 }
