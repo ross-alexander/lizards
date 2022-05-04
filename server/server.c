@@ -34,7 +34,7 @@ char *Read(int fd)
       tb->text = (char*)alloca(size);
       tb->size = read(fd, tb->text, size - 1);
       tb->text[tb->size] = '\0';
-      printf("%d\n", tb->size);
+      printf("%zd\n", tb->size);
       tb->next = last;
       last = tb;
       FD_SET(fd, &set);
@@ -127,7 +127,8 @@ static void die(int sig)
 ---------------------------------------------------------------------- */
 int main(int argc, char *argv[])
 {
-  int msgsock, length;
+  int msgsock;
+  unsigned int length;
   struct hostent *hp;
   struct sockaddr_in sa;
   char *host = "localhost";
@@ -178,7 +179,7 @@ int main(int argc, char *argv[])
   listen(sockfd, 5);
       
   length = sizeof(sa);
-  msgsock = accept(sockfd, &sa, &length);
+  msgsock = accept(sockfd, (struct sockaddr*)&sa, &length);
   if (msgsock < 0)
     {
       perror("accept");
