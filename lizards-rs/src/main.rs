@@ -7,6 +7,7 @@
 extern crate serde_json;
 
 use serde_json::{Number, Value};
+use rand::Rng;
 
 #[derive(Copy, Clone)]
 struct Point(usize, usize);
@@ -53,6 +54,81 @@ impl World {
         let world = World {size:s, grid:Vec::with_capacity(s * s)};
         return world
     }
+    fn set(&mut self, p : Point, hex : Box<dyn Hex>) -> Box<dyn Hex>
+    {
+        let index = p.1 + self.size + p.0;
+        let mut ret = std::mem::replace(&mut self.grid[index], hex);
+        return ret;
+    }
+    
+    fn lay_island(&mut self, p : Point, land_density : f64) -> usize
+    {
+        let land : usize = 0;
+        let mut rng = rand::thread_rng();
+/*        
+        if (rng.gen::<f64>  < land_density)
+        {
+            replace(p, new plains_t);
+            land++;
+    }
+        */
+/*        
+        for (int dir = 0; dir < DIRECTIONS; dir++)
+        {
+            point_t z = this->move(p, dir);
+            self.set(
+            replace(z, new plains_t);
+            land++;
+        }
+*/
+  /* --------------------
+     Check edge proximity
+     -------------------- */
+/*  
+  int proximity =  ((p.x <= (width / 5) || p.x >= (width - (width / 5))) &&
+		    (p.y <= (height / 5) || p.y >= (height - (height / 5)))) ?
+    (140 * land_density) : (60 * land_density);
+
+  if (misc_t::uniform(100) < proximity)
+    {
+      int start = misc_t::uniform(DIRECTIONS);
+      int dir = (misc_t::uniform(100) < (100 * land_density)) ? 1 : -1;
+
+      for (int i = 0; i < DIRECTIONS && misc_t::uniform(100) < 35; i++)
+	{
+	  start = (start + dir + DIRECTIONS) % DIRECTIONS;
+	  point_t z = move(p, start);
+	  hex_t *a_hex = (*this)(z);
+	  if (dynamic_cast<plains_t*>(a_hex))
+	    {
+	      land--;
+	      replace(p, new water_t);
+	    }
+	}
+    }
+        */
+        return land;
+}
+
+    fn lay_islands(&mut self, land_density : f64)
+    {
+        println!("Laying down water...");
+        for y in 0 .. self.size {
+            for x in 0 .. self.size {
+                let mut p:Point = Point(x, y);
+                let mut hex:Box<dyn Hex> = Box::new(Water {xy: p});
+                self.set(Point(x, y), hex);
+            }
+        }
+        println!("Raising Islands I...");
+        let mut land : usize = 0;
+        for y in  (1 ..  self.size).step_by(4) {
+            for x in ( 1 .. self.size).step_by(4) {
+                land += self.lay_island(Point(x, y), land_density);
+            }
+        }
+    }
+    
     fn construct(&mut self)
     {
         let size = self.size;
@@ -81,7 +157,9 @@ impl World {
                 println!("{}", self.grid[y*size + x].descr());
             }
         }
+        let land_density : f64  = 0.50;
     }
+
 }
 
 
