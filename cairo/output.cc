@@ -12,7 +12,6 @@
 #include <assert.h>
 #include <sys/syslog.h>
 
-
 #include <cairomm/context.h>
 #include <cairomm/surface.h>
 #include <cairomm/scaledfont.h>
@@ -271,13 +270,13 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
   switch(ovh->background)
     {
     case BG_WATER:
-      cr->set_source_rgb(0.80, 0.94, 0.99);
-      break;
+      cr->set_source_rgb(output->water_colour.red, output->water_colour.green, output->water_colour.blue);
+	break;
     case BG_BLANK:
       cr->set_source_rgb(0.8, 0.8, 0.8);
       break;
     case BG_LAND:
-      cr->set_source_rgb(0.80, 0.99, 0.80);
+      cr->set_source_rgb(output->land_colour.red, output->land_colour.green, output->land_colour.blue);
       break;
     }
   cr->fill_preserve();
@@ -286,7 +285,7 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
      Paint hex border
      -------------------- */
   
-  cr->set_line_width(0.2);
+  cr->set_line_width(output->border_width);
   cr->set_source_rgb(0.0, 0.0, 0.0);
   if (ovh->hex->active)
     {
@@ -486,7 +485,7 @@ int output_t::svg(const char *file)
   /* --------------------
      borders are scaled because they are applied to the hex bounding box in place()
      -------------------- */
-  
+
   int s_width = width * scalef; // + 2 * border;
   int s_height = height * scalef; // + 2 * border;
 
@@ -787,6 +786,9 @@ output_t::output_t(grid_t *gd, int p)
   border = 5.0;
   radius = 40.0;
   player = p;
+  water_colour = {.red = 0.80, .green = 0.94, .blue = 0.99};
+  land_colour = {.red = 0.80, .green = 0.99, .blue = 0.80};
+  border_width = 0.2;
   place();
 }
 
