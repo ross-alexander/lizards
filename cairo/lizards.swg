@@ -311,6 +311,13 @@ public:
 %template(point_v) std::vector<point_t>;
 %template(single_v) std::vector<single_t>;
 %template(player_v) std::vector<player_t*>;
+%template(double_m) std::map<std::string, double>;
+%template(rgb_m) std::map<std::string, rgb_t>;
+
+
+%extend std::map<std::string, double> {
+  double __setitem(string s, double d) { (*self)[s] = d; return d; }
+}
 
 class single_t {
  public:
@@ -328,12 +335,19 @@ class singles_t {
   unsigned int size();
 };
 
+struct rgb_t {
+  double red;
+  double green;
+  double blue;
+};
+
 class output_t {
 public:
-  double scalef;
-  double border;
+  std::map<std::string, rgb_t> colours;
+  std::map<std::string, double> dimensions;
   output_t(game_t*, int);
   output_t(grid_t*, int);
+  void set_colour(std::string, double, double, double);
   int json(const char*);
   int svg(const char*);
 };
