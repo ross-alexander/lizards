@@ -3,7 +3,8 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
 #![allow(unused_mut)]
-#![feature(variant_count)]
+
+// #![feature(variant_count)]
 
 extern crate serde;
 extern crate serde_json;
@@ -15,8 +16,9 @@ extern crate serde_json;
 use serde::{Deserialize, Serialize};
 use serde::ser::{Serializer, SerializeStruct};
 use serde_json::{Number, Value};
-use rand::Rng;
+use rand::prelude::*;
 use int_enum::IntEnum;
+use variant_count::VariantCount;
 
 type lsize = i64;
 
@@ -87,7 +89,7 @@ impl Serialize for Plains {
 
 
 #[repr(isize)]
-#[derive(Clone, Copy, Eq, PartialEq, IntEnum)]
+#[derive(Clone, Copy, Eq, PartialEq, IntEnum, VariantCount)]
 enum Direction {
     NORTH = 0,
     NORTHEAST = 1,
@@ -219,9 +221,9 @@ impl Grid {
     fn lay_island(&mut self, p : Point, land_density : f64) -> usize
     {
         let mut land : usize = 0;
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
         
-        if rng.gen::<f64>()  < land_density
+        if rng.random::<f64>()  < land_density
         {
             self.replace(p, Box::new(Plains {xy:p}));
             land += 1;
@@ -241,16 +243,17 @@ impl Grid {
 		                  (p.1 <= (self.height / 5) || p.1 >= (self.height - (self.height / 5)))
         {1.40 * land_density} else {0.60 * land_density};
         
-        if rng.gen::<f64>() < proximity
+        if rng.random::<f64>() < proximity
         {
-            let mut start : isize = rng.gen_range((NORTH as isize) .. (NORTHWEST as isize));
-            let dir : isize = if rng.gen::<f64>() < land_density {1} else {-1};
-            let num_dir : isize = std::mem::variant_count::<Direction>() as isize;
+            let mut start : isize = rng.random_range((NORTH as usize) .. (NORTHWEST as usize)).try_into().unwrap();
+            let dir : isize = if rng.random::<f64>() < land_density {1} else {-1};
+            //            let num_dir : isize = std::mem::variant_count::<Direction>() as isize;
+            let num_dir : isize = Direction::VARIANT_COUNT.try_into().unwrap();
             for d in Direction::iterator()
             {
-                if rng.gen::<f64>() < 0.35 { break };
+                if rng.random::<f64>() < 0.35 { break };
                 start = (start + dir + num_dir)%num_dir;
-                let new_dir : Direction = Direction::from_int(start).unwrap();
+                let new_dir : Direction = Direction::try_from(start).unwrap();
                 let z = self.move_dir(p, new_dir);
             }
             /*
