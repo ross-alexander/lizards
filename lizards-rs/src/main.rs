@@ -4,35 +4,53 @@
 #![allow(unused_variables)]
 #![allow(unused_mut)]
 
-// #![feature(variant_count)]
-
-extern crate serde;
-extern crate serde_json;
-
-// extern crate num;
-// #[macro_use]
-// extern crate num_derive;
-
 use serde::{Deserialize, Serialize};
 use serde::ser::{Serializer, SerializeStruct};
 use serde_json::{Number, Value};
 use rand::prelude::*;
 use int_enum::IntEnum;
 use variant_count::VariantCount;
+use std::slice::Iter;
+use strum_macros::FromRepr;
+use std::any::{Any, TypeId};
+use cairo::{ ImageSurface, Format, Context };
+use std::f64;
+use std::f64::consts::PI;
+use std::fs::File;
+
+/* define co-ordinate as a signed 64 bit integer */
 
 type lsize = i64;
+type fsize = f64;
+
+/* Use the enum values in Direction */
 
 use self::Direction::*;
-use std::slice::Iter;
 
-#[derive(Copy, Clone,Deserialize)]
+/* Create a point and use derive macro to create implementation of the trait */
+/* The point is a tuple rather than explicit x & y members */
+
+#[derive(Copy, Clone, Deserialize)]
 struct Point(lsize, lsize);
 
-#[typetag::serde(tag = "type")]
-trait Hex {
-    fn descr(&self) -> String;
-    fn loc(&self) -> Point;
+#[derive(Copy, Clone)]
+struct FPoint(fsize, fsize);
+
+struct FBox {
+    left : fsize,
+    right : fsize,
+    top : fsize,
+    bottom: fsize,
 }
+
+struct FPlace {
+    center : FPoint,
+    bounds : FBox,
+    hull : [FPoint; 6],
+}
+
+/* rust doesn't not have inheritance, instead "subclasses" have different
+implementations of a "parent" trait */
 
 #[derive(Deserialize)]
 struct Blank {
@@ -48,6 +66,21 @@ struct Water {
 struct Plains {
     xy: Point
 }
+
+#[derive(PartialEq)]
+enum Hexes {
+    Blank,
+    Water,
+    Plains
+}
+
+#[typetag::serde(tag = "type")]
+trait Hex {
+    fn descr(&self) -> String;
+    fn loc(&self) -> Point;
+    fn isa(&self, htype : Hexes) -> bool;
+}
+
 
 struct Player {
     clan: String,
@@ -87,9 +120,10 @@ impl Serialize for Plains {
     }
 }    
 
+/* The enum looks like a C enum are is a signed interger */
 
 #[repr(isize)]
-#[derive(Clone, Copy, Eq, PartialEq, IntEnum, VariantCount)]
+#[derive(Clone, Copy, Eq, PartialEq, IntEnum, VariantCount, FromRepr)]
 enum Direction {
     NORTH = 0,
     NORTHEAST = 1,
@@ -113,6 +147,9 @@ impl Hex for Blank {
     fn loc(&self) -> Point {
         self.xy
     }
+    fn isa(&self, htype : Hexes) -> bool {
+        return if htype == Hexes::Blank {true} else {false};
+    }
 }
 
 #[typetag::serde(name = "WAT")]
@@ -123,6 +160,9 @@ impl Hex for Water {
     fn loc(&self) -> Point {
         self.xy
     }
+    fn isa(&self, htype : Hexes) -> bool {
+        return if htype == Hexes::Water {true} else {false};
+    }
 }
 
 #[typetag::serde(name = "PLA")]
@@ -132,6 +172,9 @@ impl Hex for Plains {
     }
     fn loc(&self) -> Point {
         self.xy
+    }
+    fn isa(&self, htype : Hexes) -> bool {
+        return if htype == Hexes::Plains {true} else {false};
     }
 }
 
@@ -242,36 +285,33 @@ impl Grid {
         let proximity : f64 = if (p.0 <= (self.width / 5) || p.0 >= (self.width - (self.width / 5))) &&
 		                  (p.1 <= (self.height / 5) || p.1 >= (self.height - (self.height / 5)))
         {1.40 * land_density} else {0.60 * land_density};
-        
-        if rng.random::<f64>() < proximity
+
+        let prox_rng = rng.random::<f64>();
+        if prox_rng < proximity
         {
-            let mut start : isize = rng.random_range((NORTH as usize) .. (NORTHWEST as usize)).try_into().unwrap();
+            let mut start : isize = rng.random_range((NORTH as usize) .. (NORTHWEST as usize)) as isize; // .try_into().unwrap();
             let dir : isize = if rng.random::<f64>() < land_density {1} else {-1};
-            //            let num_dir : isize = std::mem::variant_count::<Direction>() as isize;
-            let num_dir : isize = Direction::VARIANT_COUNT.try_into().unwrap();
+            let num_dir : isize = Direction::VARIANT_COUNT as isize;
+
             for d in Direction::iterator()
             {
                 if rng.random::<f64>() < 0.35 { break };
-                start = (start + dir + num_dir)%num_dir;
-                let new_dir : Direction = Direction::try_from(start).unwrap();
+                println!("-- Proximity = {} RNG = {} start = {} dir = {} num_dir = {}", proximity, prox_rng, start, dir, num_dir);
+                start = (start + dir + num_dir) % num_dir;
+                println!("++ Proximity = {} RNG = {} start = {} dir = {} num_dir = {}", proximity, prox_rng, start, dir, num_dir);
+                let new_dir : Direction = Direction::from_repr(start).unwrap();
                 let z = self.move_dir(p, new_dir);
+                println!("** {} {}", self.get(p).descr(), self.get(z).descr());
+                let mut new_hex = self.get(z);
+                if new_hex.isa(Hexes::Plains)
+                {
+                    land -= 1;
+                    self.replace(z, Box::new(Water {xy:p}));
+                }
             }
-            /*
-      for (int i = 0; i < DIRECTIONS && misc_t::uniform(100) < 35; i++)
-	{
-	  start = (start + dir + DIRECTIONS) % DIRECTIONS;
-	  point_t z = move(p, start);
-	  hex_t *a_hex = (*this)(z);
-	  if (dynamic_cast<plains_t*>(a_hex))
-	    {
-	      land--;
-	      replace(p, new water_t);
-	    }
-	}
-             */
         }
         return land;
-}
+    }
 
     fn lay_islands(&mut self, land_density : f64)
     {
@@ -378,9 +418,124 @@ fn world_load_json() -> Box<World> {
 --
 ---------------------------------------------------------------------- */
 
+impl FPoint {
+    fn new() -> Self
+    {
+        return FPoint(0.0, 0.0);
+    }
+}
+
+impl FBox {
+    fn new() -> Self
+    {
+        return FBox {left: 0.0, right: 0.0, top: 0.0, bottom: 0.0 };
+    }
+    fn setunion(&mut self, b : &FBox) -> &mut Self
+    {
+        if b.left < self.left { self.left = b.left; }
+        if b.right > self.right { self.right = b.right; }
+        if b.top < self.top { self.top = b.top; }
+        if b.bottom > self.bottom { self.bottom = b.bottom; }
+        return self;
+    }
+}
+
+impl FPlace {
+    fn place(p : Point, radius : f64, border : f64) -> Self
+    {
+        let sqrt3 : f64 = (3.0 as f64).sqrt();
+        let yshift : f64 = (p.0.abs() % 2) as f64  / 2.0;
+        let cx : f64 = 1.50 * radius * p.0 as f64;
+        let cy : f64 = sqrt3 * radius * (p.1 as f64 - yshift);
+  
+        let center = FPoint(cx, cy);
+        let bounds = FBox { left: cx - radius - border,
+                            right: cx + radius + border,
+                            top: cy - sqrt3/2.0 * radius - border,
+                            bottom: cy + sqrt3/2.0 * radius + border };
+        
+
+        let mut hull : [FPoint; 6] = [ FPoint(0.0, 0.0); 6 ];
+
+        for j in 0 .. 6
+        {
+            let x : f64 = ((j as f64) * 60.0 * PI / 180.0).cos();
+            let y : f64 = ((j as f64) * 60.0 * PI / 180.0).sin();
+            hull[j] = FPoint(cx + x * radius, cy + y * radius);
+        }
+        let new = FPlace { center: center, bounds: bounds, hull: hull };
+        return new;
+    }
+}
+
 fn main() {
     let mut world = world_load_json();
     world.grid.construct();
+
+    let g = &mut world.grid;
+
+    let radius = 25.0;
+    let mut edge = FBox::new();
+    for y in 0 .. g.height {
+        for x in 0 .. g.width {
+            let h = g.get(Point(x, y));
+            let place = FPlace::place(Point(x, y), radius, 2.0);
+            if (x == 0) && (y == 0)
+            {
+                edge = place.bounds
+            }
+            else
+            {
+                edge.setunion(&place.bounds);
+            }
+            println!("{} {} {} {}", edge.left, edge.right, edge.top, edge.bottom);
+        }
+    }
+
+    let width : i32 = (edge.right - edge.left) as i32;
+    let height : i32 = (edge.bottom - edge.top) as i32;
+
+    println!("{} {}", width, height);
+    
+    let surface = ImageSurface::create(Format::ARgb32, width, height).expect("Could not create surface");
+    let context = Context::new(&surface).expect("Could not create context");
+
+    context.translate(-edge.left, -edge.top);
+    context.set_source_rgb(0.0, 0.0, 0.0);
+    context.paint().unwrap();
+    context.set_source_rgb(0.0, 0.0, 0.0);
+    context.set_line_width(1.0);
+    
+    for y in 0 .. g.height {
+        for x in 0 .. g.width {
+            let h = g.get(Point(x, y));
+            let place = FPlace::place(Point(x, y), radius, 2.0);
+            context.new_path();
+//            context.rectangle(place.center.0, place.center.1, 2.0, 2.0);
+            context.move_to(place.hull[0].0, place.hull[0].1);
+            for i in 1 .. 6
+            {
+                context.line_to(place.hull[i].0, place.hull[i].1);
+            }
+            context.close_path();
+            if h.isa(Hexes::Water)
+            {
+                context.set_source_rgb(0.6, 0.6, 1.0);
+            }
+            else
+            {
+                context.set_source_rgb(0.6, 1.0, 0.6);
+            }
+            context.fill_preserve().unwrap();
+            context.set_source_rgb(0.0, 0.0, 0.0);
+            context.stroke().unwrap();
+            println!("{} {} {} {}", x, y, place.center.0, place.center.1);
+        }
+    }
+
+
+    let mut stream = File::create("output.png").expect("Could not create file");
+    surface.write_to_png(&mut stream).expect("Could not write png");
     
     // Save the JSON structure into the other file.
     
