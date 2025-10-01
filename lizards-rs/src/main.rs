@@ -487,7 +487,7 @@ impl FPlace {
             bottom: cy + sqrt3 / 2.0 * radius + border,
         };
 
-        let mut hull: [FPoint; 6] = [FPoint(0.0, 0.0); 6z];
+        let mut hull: [FPoint; 6] = [FPoint(0.0, 0.0); 6];
 
         for j in 0..6 {
             let x: f64 = ((j as f64) * 60.0 * PI / 180.0).cos();
@@ -511,7 +511,7 @@ impl Serialize for Player {
         let mut g = serializer.serialize_struct("player", 2)?;
         g.serialize_field("clan", &self.clan)?;
         g.serialize_field("index", &self.index)?;
-        g.end();
+        g.end()
     }
 }
 
@@ -524,7 +524,7 @@ impl Serialize for Grid {
         g.serialize_field("width", &self.width)?;
         g.serialize_field("height", &self.height)?;
         g.serialize_field("hexes", &self.hexes)?;
-        g.end();
+        g.end()
     }
 }
 
@@ -536,7 +536,7 @@ impl Serialize for World {
         let mut g = serializer.serialize_struct("world", 2)?;
         g.serialize_field("grid", &self.grid)?;
         g.serialize_field("players", &self.players)?;
-        g.end();
+        g.end()
     }
 }
 
