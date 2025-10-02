@@ -27,18 +27,23 @@ game_t::game_t(int format, const char *path)
   serial_array_t pl;
   assert(s.get("players", pl));
   nplayers = pl.size();
-  
-  assert(nplayers >= 1);
+
+  if (nplayers == 0)
+    misc_t::log(LOG_NOTICE, "No players, generated world only");
+  else
+    misc_t::log(LOG_NOTICE, "Number of players is %d", nplayers);
+    
   players.reserve(nplayers + 1);
-  misc_t::log(LOG_NOTICE, "Number of players is %d", nplayers);
+  players.push_back(nullptr);
   
   for (unsigned int i = 0; i < nplayers; i++)
     {
-      player_t *pp = players[i+1] = new player_t;
+      player_t *pp = new player_t;
       serial_t p = pl[i];
-      const char* startup;
-      p.get("startup", startup);
-      pp->startup = startup;
+
+      const char* startup = "UNDEF";
+      if (p.get("startup", startup))
+	pp->startup = startup;
 
       const char *code;
       if (p.get("code", code))
@@ -50,13 +55,14 @@ game_t::game_t(int format, const char *path)
 	{
 	  pp->clan = clan;
 	}
-      const char *format_s;
+      const char *format_s = "FORMAT_UNSPEC";
       p.get("format", format_s);
 
       misc_t::log(LOG_NOTICE, "Player %d (%s [%s]) with template %s format %s", i+1, clan, code, startup, format_s);
 
       assert(misc_t::formats.count(format_s) > 0);
       pp->format = misc_t::formats[format_s];
+      players.push_back(pp);
     }
 
   serial_map_t boot;
