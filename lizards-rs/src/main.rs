@@ -1,3 +1,11 @@
+/* ----------------------------------------------------------------------
+--
+-- lizards-rs
+--
+-- An attempt to learn rust using the lizards code as a base.
+--
+---------------------------------------------------------------------- */
+
 #![allow(non_camel_case_types)]
 #![allow(unused_imports)]
 #![allow(dead_code)]
@@ -14,42 +22,24 @@ use std::any::{Any, TypeId};
 use std::f64;
 use std::f64::consts::PI;
 use std::fs::File;
+use std::process::exit;
 use std::slice::Iter;
 use strum_macros::FromRepr;
 use variant_count::VariantCount;
 
-/* define co-ordinate as a signed 64 bit integer */
+pub mod point;
+pub mod floats;
+use crate::point::*;
+use crate::floats::*;
 
-type lsize = i64;
-type fsize = f64;
+/* define co-ordinate as a signed 64 bit integer */
 
 /* Use the enum values in Direction */
 
 use self::Direction::*;
 
-/* FP64 structures for cairo for mapping to cairo geometry */
-
-#[derive(Copy, Clone)]
-struct FPoint(fsize, fsize);
-
-struct FBox {
-    left: fsize,
-    right: fsize,
-    top: fsize,
-    bottom: fsize,
-}
-
-struct FPlace {
-    center: FPoint,
-    bounds: FBox,
-    hull: [FPoint; 6],
-}
-
 /* Create a point and use derive macro to create implementation of the trait */
 /* The point is a tuple rather than explicit x & y members */
-
-#[derive(Copy, Clone, Deserialize)]
-struct Point(lsize, lsize);
 
 /* rust doesn't not have inheritance, instead "subclasses" have different
 implementations of a "parent" trait */
@@ -429,7 +419,6 @@ impl Grid {
                 context.fill_preserve().unwrap();
                 context.set_source_rgb(0.0, 0.0, 0.0);
                 context.stroke().unwrap();
-                println!("{} {} {} {}", x, y, place.center.0, place.center.1);
             }
         }
 
@@ -437,69 +426,6 @@ impl Grid {
         surface
             .write_to_png(&mut stream)
             .expect("Could not write png");
-    }
-}
-
-impl FPoint {
-    fn new() -> Self {
-        return FPoint(0.0, 0.0);
-    }
-}
-
-impl FBox {
-    fn new() -> Self {
-        return FBox {
-            left: 0.0,
-            right: 0.0,
-            top: 0.0,
-            bottom: 0.0,
-        };
-    }
-    fn setunion(&mut self, b: &FBox) -> &mut Self {
-        if b.left < self.left {
-            self.left = b.left;
-        }
-        if b.right > self.right {
-            self.right = b.right;
-        }
-        if b.top < self.top {
-            self.top = b.top;
-        }
-        if b.bottom > self.bottom {
-            self.bottom = b.bottom;
-        }
-        return self;
-    }
-}
-
-impl FPlace {
-    fn place(p: Point, radius: f64, border: f64) -> Self {
-        let sqrt3: f64 = (3.0 as f64).sqrt();
-        let yshift: f64 = (p.0.abs() % 2) as f64 / 2.0;
-        let cx: f64 = 1.50 * radius * p.0 as f64;
-        let cy: f64 = sqrt3 * radius * (p.1 as f64 - yshift);
-
-        let center = FPoint(cx, cy);
-        let bounds = FBox {
-            left: cx - radius - border,
-            right: cx + radius + border,
-            top: cy - sqrt3 / 2.0 * radius - border,
-            bottom: cy + sqrt3 / 2.0 * radius + border,
-        };
-
-        let mut hull: [FPoint; 6] = [FPoint(0.0, 0.0); 6];
-
-        for j in 0..6 {
-            let x: f64 = ((j as f64) * 60.0 * PI / 180.0).cos();
-            let y: f64 = ((j as f64) * 60.0 * PI / 180.0).sin();
-            hull[j] = FPoint(cx + x * radius, cy + y * radius);
-        }
-        let new = FPlace {
-            center: center,
-            bounds: bounds,
-            hull: hull,
-        };
-        return new;
     }
 }
 
@@ -546,24 +472,26 @@ impl Serialize for World {
 --
 ---------------------------------------------------------------------- */
 
-fn world_load_json() -> Box<World> {
-    // Get the filenames from the command line.
+fn world_load_json(input_path: &str) -> Box<World> {
 
-    let input_path = std::env::args().nth(1).unwrap();
-
-    // let output_path = std::env::args().nth(2).unwrap();
-
-    let mut json = {
+    let mut json: serde_json::Value = {
         // Load the first file into a string.
         let text = std::fs::read_to_string(&input_path).unwrap();
 
         // Parse the string into a dynamically-typed JSON structure.
         serde_json::from_str::<Value>(&text).unwrap()
     };
-    let size_i64: i64 = json["size"].as_i64().expect("size must be integer");
+
+    println!("Loading json file {}", input_path);
+    
+    let width: i64 = json["width"].as_i64().expect("size must be integer");
+    let height: i64 = json["height"].as_i64().expect("size must be integer");
+
+    println!("{} {}", width, height);
+    
     let mut world = Box::new(World {
         players: Vec::new(),
-        grid: Grid::new(size_i64 as lsize, size_i64 as lsize),
+        grid: Grid::new(width as lsize, height as lsize),
     });
     //    world.players.push(Player { index: 0, clan: String::from("WLD") });
     return world;
@@ -576,7 +504,19 @@ fn world_load_json() -> Box<World> {
 ---------------------------------------------------------------------- */
 
 fn main() {
-    let mut world = world_load_json();
+    let mut args = &mut std::env::args();
+    let argc = args.len();
+    let progname: String = args.nth(0).unwrap();
+
+    if argc < 2 {
+        println!("{}: <world.js>", progname);
+        exit(1);
+    }
+
+    // Get the filenames from the command line.  Because we have
+    // already got an item from args nth(0) is actually argv[1]
+    
+    let mut world: Box<World> = world_load_json(&args.nth(0).unwrap());
     world.grid.construct();
 
     let g = &mut world.grid;
