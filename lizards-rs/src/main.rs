@@ -168,7 +168,7 @@ impl Hex for Blank {
 #[typetag::serde(name = "WAT")]
 impl Hex for Water {
     fn descr(&self) -> String {
-        format!("{:2} × {:2} Water", self.xy.0, self.xy.1)
+        format!("{:2} × {:2} {:3} Water", self.xy.0, self.xy.1, self.xy.id())
     }
     fn loc(&self) -> Point {
         self.xy
@@ -181,7 +181,7 @@ impl Hex for Water {
 #[typetag::serde(name = "PLA")]
 impl Hex for Plains {
     fn descr(&self) -> String {
-        format!("{:2} × {:2} Plains", self.xy.0, self.xy.1)
+        format!("{:2} × {:2} {:3} Plains", self.xy.0, self.xy.1, self.xy.id())
     }
     fn loc(&self) -> Point {
         self.xy
@@ -399,8 +399,12 @@ impl Grid {
 
         context.set_line_width(1.0);
 
+        context.select_font_face("Adwaita Sans", cairo::FontSlant::Normal, cairo::FontWeight::Normal);
+        context.set_font_size(8.0);
+        
         for y in 0..self.height {
             for x in 0..self.width {
+                let p = Point(x, y);
                 let h = self.get(Point(x, y));
                 let place = FPlace::place(Point(x, y), radius, border);
 
@@ -419,6 +423,9 @@ impl Grid {
                 context.fill_preserve().unwrap();
                 context.set_source_rgb(0.0, 0.0, 0.0);
                 context.stroke().unwrap();
+                let s: String = p.id();
+                context.move_to(place.center.0, place.center.1);
+                context.show_text(&s).unwrap();
             }
         }
 
@@ -472,29 +479,51 @@ impl Serialize for World {
 --
 ---------------------------------------------------------------------- */
 
-fn world_load_json(input_path: &str) -> Box<World> {
+impl World {
+    fn load_json(input_path: &str) -> Box<World> {
+        let mut json: serde_json::Value = {
+            // Load the first file into a string.
+            let text = std::fs::read_to_string(&input_path).unwrap();
+            
+            // Parse the string into a dynamically-typed JSON structure.
+            serde_json::from_str::<Value>(&text).unwrap()
+        };
+        
+        println!("Loading json file {}", input_path);
+        
+        let width: i64 = json["width"].as_i64().expect("size must be integer");
+        let height: i64 = json["height"].as_i64().expect("size must be integer");
+        
+        println!("{} {}", width, height);
 
-    let mut json: serde_json::Value = {
-        // Load the first file into a string.
-        let text = std::fs::read_to_string(&input_path).unwrap();
+        type WorldResult = std::result::Result<Box<World>, &'static str>;
 
-        // Parse the string into a dynamically-typed JSON structure.
-        serde_json::from_str::<Value>(&text).unwrap()
-    };
+        let res: WorldResult = match &json["hexes"] {
+            serde_json::Value::Null => {
+                Ok(Box::new(World {
+                    players: Vec::new(),
+                    grid: Grid::new(width as lsize, height as lsize),
+                }))
+            }
+            serde_json::Value::Object(_) => {
+                Err("Found object")
+            }
+            serde_json::Value::Array(hexes) => {
+                println!("{}", hexes.len());
+                for hex in hexes {
+                    println!("Found {:?}", hex);
+                }
+                Err("Found Array")
+            }
+            _ => {
+                Err("Incorrect structure")
+            }
+        };
 
-    println!("Loading json file {}", input_path);
-    
-    let width: i64 = json["width"].as_i64().expect("size must be integer");
-    let height: i64 = json["height"].as_i64().expect("size must be integer");
-
-    println!("{} {}", width, height);
-    
-    let mut world = Box::new(World {
-        players: Vec::new(),
-        grid: Grid::new(width as lsize, height as lsize),
-    });
-    //    world.players.push(Player { index: 0, clan: String::from("WLD") });
-    return world;
+        //        let mut world =;
+        //    world.players.push(Player { index: 0, clan: String::from("WLD") });
+        return res.expect("World creation failed");
+    }
 }
 
 /* ----------------------------------------------------------------------
@@ -516,7 +545,7 @@ fn main() {
     // Get the filenames from the command line.  Because we have
     // already got an item from args nth(0) is actually argv[1]
     
-    let mut world: Box<World> = world_load_json(&args.nth(0).unwrap());
+    let mut world: Box<World> = World::load_json(&args.nth(0).unwrap());
     world.grid.construct();
 
     let g = &mut world.grid;
