@@ -12,7 +12,7 @@
 #![allow(unused_variables)]
 #![allow(unused_mut)]
 
-use cairo::{Context, Format, ImageSurface};
+use cairo::{Context, Format, ImageSurface, Surface, PdfSurface, SvgSurface};
 use int_enum::IntEnum;
 use rand::prelude::*;
 use serde::ser::{SerializeStruct, Serializer};
@@ -359,7 +359,7 @@ impl Grid {
         }
     }
 
-    fn cairo_png(&mut self, radius: f64, border: f64, path: &str) {
+    fn edge(&mut self, radius: f64, border: f64) -> FBox {
         // Calculate the full bounding box
 
         let mut edge = FBox::new();
@@ -378,18 +378,35 @@ impl Grid {
             "edge box: {:5.2} {:5.2} {:5.2} {:5.2}",
             edge.left, edge.right, edge.top, edge.bottom
         );
+        return edge;
+    }
+    fn cairo_paint(&mut self, radius: f64, border: f64, surface: &cairo::Surface) {
+        let edge: FBox = self.edge(radius, border);
 
+        let loader = rsvg::Loader::new();
+        let mut rng = rand::rng();
+        let paths = [
+            "../images/scouts.svg",
+            "../images/flee.svg",
+            "../images/fight-1.svg",
+            "../images/fight-2.svg",
+            "../images/dance.svg",
+            "../images/catouche.svg",
+        ];
+        // let handle: [rsvg::SvgHandle; 3]  = paths.map(|x| { rsvg::Loader::new().read_path(x).unwrap() });
+        let handle = paths.map(|x| { rsvg::Loader::new().read_path(x).unwrap() });
+
+//        let href = handle.each_ref();
+        let renderer = handle.each_ref().map(|f| rsvg::CairoRenderer::new(f));
+        //        let renderer: [rsvg::CairoRenderer; 3] = href.map(|f| rsvg::CairoRenderer::new(f));
+
+//        let renderer: [rsvg::CairoRenderer; 3] = [
+//            rsvg::CairoRenderer::new(&handle[0]),
+//            rsvg::CairoRenderer::new(&handle[1]),
+//            rsvg::CairoRenderer::new(&handle[2]),
+//        ];
+        
         // Get image width & height as signed integers
-
-        let width: i32 = (edge.right - edge.left) as i32;
-        let height: i32 = (edge.bottom - edge.top) as i32;
-
-        println!("canvas size: {} {}", width, height);
-
-        // Create cairo surface & context
-
-        let surface =
-            ImageSurface::create(Format::ARgb32, width, height).expect("Could not create surface");
         let context = Context::new(&surface).expect("Could not create context");
 
         context.translate(-edge.left, -edge.top); // translate to match bounding box to (0,0) (w,h) image box
@@ -399,9 +416,11 @@ impl Grid {
 
         context.set_line_width(1.0);
 
-        context.select_font_face("Adwaita Sans", cairo::FontSlant::Normal, cairo::FontWeight::Normal);
-        context.set_font_size(8.0);
-        
+        context.select_font_face("Adwaita Sans", cairo::FontSlant::Normal, cairo::FontWeight::Bold);
+        context.set_font_size(10.0);
+
+        let sqrt3: f64 = (3.0 as f64).sqrt();
+
         for y in 0..self.height {
             for x in 0..self.width {
                 let p = Point(x, y);
@@ -423,16 +442,37 @@ impl Grid {
                 context.fill_preserve().unwrap();
                 context.set_source_rgb(0.0, 0.0, 0.0);
                 context.stroke().unwrap();
+
+                let view = cairo::Rectangle::new(place.center.0 - 20.0, place.center.1 - 20.0, 40.0, 40.0); // {.x = cx - 20.0, .y = cy - 15.0, .width = 40, .height = 40}
+                let r = rng.random::<u32>() % paths.len() as u32;
+                renderer[r as usize].render_document(&context, &view).unwrap();
+
                 let s: String = p.id();
-                context.move_to(place.center.0, place.center.1);
+                let ext: cairo::TextExtents = context.text_extents(&s).unwrap();
+                context.move_to(place.center.0 - (ext.width() / 2.0), place.center.1 + (radius * sqrt3 / 2.0) - 2.0);
                 context.show_text(&s).unwrap();
             }
         }
+    }
+    fn cairo_png(&mut self, radius: f64, border: f64, path: &str) {
 
+        let edge: FBox = self.edge(radius, border);
+        let width: i32 = (edge.right - edge.left) as i32;
+        let height: i32 = (edge.bottom - edge.top) as i32;
+
+        println!("canvas size: {} {}", width, height);
+
+        // Create cairo surface & context
+
+        let image =
+            ImageSurface::create(Format::ARgb32, width, height).expect("Could not create surface");
+        self.cairo_paint(radius, border, image.as_ref());
         let mut stream = File::create(path).expect("Could not create file");
-        surface
+        image
             .write_to_png(&mut stream)
             .expect("Could not write png");
+        let pdf = PdfSurface::new(width as f64, height as f64, "output.pdf").expect("Could not create PDF surface");
+        self.cairo_paint(radius, border, pdf.as_ref());
     }
 }
 
@@ -549,7 +589,7 @@ fn main() {
     world.grid.construct();
 
     let g = &mut world.grid;
-    g.cairo_png(25.0, 5.0, "output.png");
+    g.cairo_png(30.0, 5.0, "output.png");
 
     // Save the JSON structure into the other file.
 
