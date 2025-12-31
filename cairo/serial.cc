@@ -42,6 +42,11 @@ serial_t::serial_t(const char *s)
   json = json_object_new_string(s);
 }
 
+serial_t::serial_t(std::string &s)
+{
+  json = json_object_new_string(s.c_str());
+}
+
 serial_t::serial_t(int i)
 {
   json = json_object_new_int(i);
