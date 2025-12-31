@@ -7,6 +7,7 @@
 #include <getopt.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "lizards.h"
 
@@ -14,7 +15,7 @@ int main(int argc, char *argv[])
 {
   misc_t::rseed(time(0));
   int ch;
-  char *file = (char*)"cairo.svg";
+  char *file = (char*)"cairo-%02d.svg";
   while ((ch = getopt(argc, argv, "d:o:")) > 0)
     switch (ch)
       {
@@ -30,10 +31,10 @@ int main(int argc, char *argv[])
   for(unsigned int i = 0; i <= game->nplayers; i++)
     {
       char ffile[1024];
-      snprintf(ffile, 1024, "cairo-%02d.svg", i);  
+      snprintf(ffile, 1024, file, i);  
       output_t(game, i).svg((const char*)ffile);
     }
-  serial_t s = game->grid->serialize();
+  serial_t s = game->serialize();
   s.to_file("grid.js");
   exit(0);
 }
