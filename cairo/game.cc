@@ -25,9 +25,14 @@ game_t::game_t(int format, const char *path)
   s.get("game", id);
 
   serial_array_t pl;
-  assert(s.get("players", pl));
-  nplayers = pl.size();
-
+  if (s.get("players", pl))
+    {
+      nplayers = pl.size();
+    }
+  else
+    {
+      nplayers = 0;
+    }
   if (nplayers == 0)
     misc_t::log(LOG_NOTICE, "No players, generated world only");
   else
@@ -227,4 +232,18 @@ std::string game_t::tostring()
 {
   std::string s = fmt::sprintf("%s with %d players", id, nplayers);
   return s;
+}
+
+/* ----------------------------------------------------------------------
+   --
+   -- serialize
+   --
+   ---------------------------------------------------------------------- */
+
+serial_t game_t::serialize()
+{
+  serial_map_t g;
+  g.add("game", id);
+  g.add("grid", grid->serialize());
+  return g;
 }
