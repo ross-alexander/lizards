@@ -627,11 +627,16 @@ public:
 
 class player_t {
  public:
+  player_t();
+  player_t(serial_t);
+  std::string tostring();
   int format;
+  int index;
   std::string startup;
   std::string clan;
   std::string code;
   std::vector<std::string> messages;
+  serial_t serialize();
 };
 
 /* --------------------
