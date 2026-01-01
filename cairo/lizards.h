@@ -118,6 +118,7 @@ class serial_t {
   serial_t(struct json_object*);
   serial_t();
   serial_t(const char*);
+  serial_t(std::string&);
   serial_t(int);
   serial_t(double);
   static serial_t from_file(const char*);
@@ -492,9 +493,16 @@ class layouts_t {
  public:
   std::map<std::string, layout_t*> layouts;
   layouts_t(int, const char*);
+  std::vector<std::string> keys();
   layout_t*& operator[](std::string);
   layout_t* layout(std::string);
 }; 
+
+struct rgb_t {
+  double red;
+  double green;
+  double blue;
+};
 
 // --------------------
 //   template_t
@@ -593,17 +601,21 @@ private:
   class game_t *game;
   class output_private_t *priv;
   int player;
-  double radius;
-  double width;
-  double height;
   fbox_t edge;
   view_t *view;
   void place();
+  void defaults();
+  double width;
+  double height;
 public:
-  double scalef;
-  double border;
+  //  double scalef;
+  //  double border;
+  //  double border_width;
+  std::map<std::string, rgb_t> colours;
+  std::map<std::string, double> dimensions;
   output_t(grid_t*, int);
   output_t(game_t*, int);
+  void set_colour(std::string, double, double, double);
   int json(const char *file);
   int svg(const char *file);
   hex_t* hit(double, double, double, double);
@@ -641,5 +653,7 @@ class game_t {
   grid_t *bootstrap();
   void report();
   std::string tostring();
+  serial_t serialize();
 };
 
+extern int log_level;
