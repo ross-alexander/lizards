@@ -1,9 +1,9 @@
 include Makefile.rules
 
-CXXFLAGS = -g -Wall -std=c++17 -fPIC $(CAIROMM_CFLAGS) $(RSVG_CFLAGS) $(GTK_CFLAGS) $(GLIB_CFLAGS) $(JSON_CFLAGS)
-LDLIBS	= $(RSVG_LIBS) $(GTK_LIBS) $(GLIB_LIBS) $(CAIROMM_LIBS) $(JSON_LIBS) -lfmt
+CXXFLAGS = -g -Wall -std=c++17 -fPIC $(CAIROMM_CFLAGS) $(RSVG_CFLAGS) $(GLIB_CFLAGS) $(JSON_CFLAGS)
+LDLIBS	= $(RSVG_LIBS) $(GLIB_LIBS) $(CAIROMM_LIBS) $(JSON_LIBS) -lfmt
 
-OBJECTS = misc.o point.o feature.o hex.o output.o serial.o overlay.o game.o grid.o layout.o layouts.o template.o
+OBJECTS = misc.o point.o feature.o hex.o output.o serial.o overlay.o player.o game.o grid.o layout.o layouts.o template.o
 
 all: liblizards.a lizards lua/lizards.so
 
@@ -33,6 +33,8 @@ map.o: map.cc lizards.h
 overlay.o: overlay.cc lizards.h
 
 create.o: create.cc lizards.h
+
+player.o: player.cc lizards.h
 
 game.o: game.cc lizards.h
 
