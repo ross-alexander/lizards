@@ -1,3 +1,4 @@
+#include <iostream>
 #include <map>
 #include <vector>
 #include <string>
@@ -43,30 +44,8 @@ game_t::game_t(int format, const char *path)
   
   for (unsigned int i = 0; i < nplayers; i++)
     {
-      player_t *pp = new player_t;
-      serial_t p = pl[i];
-
-      const char* startup = "UNDEF";
-      if (p.get("startup", startup))
-	pp->startup = startup;
-
-      const char *code;
-      if (p.get("code", code))
-	{
-	  pp->code = code;
-	}
-      const char *clan;
-      if (p.get("clan", clan))
-	{
-	  pp->clan = clan;
-	}
-      const char *format_s = "FORMAT_UNSPEC";
-      p.get("format", format_s);
-
-      misc_t::log(LOG_NOTICE, "Player %d (%s [%s]) with template %s format %s", i+1, clan, code, startup, format_s);
-
-      assert(misc_t::formats.count(format_s) > 0);
-      pp->format = misc_t::formats[format_s];
+      player_t *pp = new player_t(pl[i]);
+      misc_t::log(LOG_NOTICE, "Player %d (%s [%s]) with template %s format %d", i+1, pp->clan.c_str(), pp->code.c_str(), pp->startup.c_str(), pp->format);
       players.push_back(pp);
     }
 
@@ -244,6 +223,12 @@ serial_t game_t::serialize()
 {
   serial_map_t g;
   g.add("game", id);
+  serial_array_t players_ser;
+  for (unsigned int i = 1; i < players.size(); i++)
+    {
+      players_ser.add(players[i]->serialize());
+    }
+  g.add("players", players_ser);
   g.add("grid", grid->serialize());
   return g;
 }
