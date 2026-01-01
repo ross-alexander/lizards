@@ -3,6 +3,9 @@
 #include <vector>
 #include <string>
 
+#include <fmt/format.h>
+#include <fmt/printf.h>
+
 #include <assert.h>
 #include <sys/syslog.h>
 
@@ -40,4 +43,9 @@ serial_t player_t::serialize(void)
   player_m.add("clan", clan);
   player_m.add("format", "FORMAT_JSON");
   return player_m;
+}
+
+std::string player_t::tostring(void)
+{
+  return fmt::sprintf("%s [%s]", clan, code);
 }
