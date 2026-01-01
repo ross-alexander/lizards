@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include <map>
 #include <vector>
@@ -149,4 +150,14 @@ layout_t* layouts_t::layout(std::string id)
 layout_t*& layouts_t::operator[](std::string id)
 {
   return layouts[id];
+}
+
+std::vector<std::string> layouts_t::keys()
+{
+  std::vector<std::string> res;
+  for (auto const& [key, val]: layouts)
+    {
+      res.push_back(key);
+    }
+  return res;
 }
