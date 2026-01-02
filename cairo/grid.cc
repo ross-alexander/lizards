@@ -74,6 +74,15 @@ void grid_t::place_template(template_t *tmpl, int owner, point_t c, int rename)
     }
 }
 
+/* ----------------------------------------------------------------------
+--
+-- fbox
+--
+-- Return flouting point bounding box based radius r
+--
+---------------------------------------------------------------------- */
+
+
 fbox_t grid_t::fbox(double r)
 {
   fbox_t f;
@@ -105,6 +114,12 @@ fbox_t grid_t::fbox(double r)
   f.top = (f.top + 0.5) * sqrt(3)*r;
   return f;
 }
+
+/* ----------------------------------------------------------------------
+--
+-- move
+--
+---------------------------------------------------------------------- */
 
 point_t grid_t::move(point_t p, int dir)
 {
@@ -154,6 +169,12 @@ point_t grid_t::move(point_t p, int dir)
   return np;
 }
 
+/* ----------------------------------------------------------------------
+--
+-- adjacent
+--
+---------------------------------------------------------------------- */
+
 int grid_t::adjacent(point_t p, const char* t)
 {
   int c = 0;
@@ -166,6 +187,12 @@ int grid_t::adjacent(point_t p, const char* t)
   return c;
 }
 
+/* ----------------------------------------------------------------------
+--
+-- set
+--
+---------------------------------------------------------------------- */
+
 hex_t* grid_t::set(point_t p, hex_t *h, int rename)
 {
   assert(p.x >= 0 && p.x < width && p.y >= 0 && p.y < height);
@@ -173,7 +200,7 @@ hex_t* grid_t::set(point_t p, hex_t *h, int rename)
   grid[p.y * width + p.x] = h;
   h->xy = p;
 
-  char string[6]; // Maximum 26^3 x and 999 y
+  char string[12]; // Maximum 26^3 x and 999 y
   sprintf(string, "%d", p.y + 1);
   int k = strlen(string);
   if (p.x >= 26)

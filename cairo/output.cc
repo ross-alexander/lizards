@@ -250,6 +250,8 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
   symbol = ovh->symbol;
   header = ovh->header_text.c_str();
   trailer = ovh->footer_text.c_str();
+  double radius = output->dimensions["radius"];
+  
 
   misc_t::log(LOG_DEBUG, "header=%s trailer=%s symbol=%d", header, trailer, symbol);
   
@@ -270,23 +272,34 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
   switch(ovh->background)
     {
     case BG_WATER:
-      cr->set_source_rgb(output->water_colour.red, output->water_colour.green, output->water_colour.blue);
+      {
+	rgb_t &colour = output->colours["water"];
+	cr->set_source_rgb(colour.red, colour.green, colour.blue);
 	break;
+      }
     case BG_BLANK:
-      cr->set_source_rgb(0.8, 0.8, 0.8);
-      break;
+      {
+	rgb_t &colour = output->colours["blank"];
+	cr->set_source_rgb(colour.red, colour.green, colour.blue);
+	break;
+      }
     case BG_LAND:
-      cr->set_source_rgb(output->land_colour.red, output->land_colour.green, output->land_colour.blue);
-      break;
+      {
+	rgb_t &colour = output->colours["land"];
+	cr->set_source_rgb(colour.red, colour.green, colour.blue);
+	break;
+      }
     }
   cr->fill_preserve();
 
   /* --------------------
      Paint hex border
      -------------------- */
-  
-  cr->set_line_width(output->border_width);
-  cr->set_source_rgb(0.0, 0.0, 0.0);
+
+  std::map<std::string, double> &dim = output->dimensions;
+  rgb_t &colour = output->colours["border"];
+  cr->set_source_rgb(colour.red, colour.green, colour.blue);
+  cr->set_line_width(dim["border"]);
   if (ovh->hex->active)
     {
       fprintf(stderr, "%s active\n", ovh->hex->getid().c_str());
@@ -322,7 +335,7 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
   if (trailer)
     {
       cr->get_text_extents(trailer, e);
-      cr->move_to(cx - e.width/2, cy + sqrt(3)/2*output->radius - 2);
+      cr->move_to(cx - e.width/2, cy + sqrt(3)/2*radius - 2);
       cr->set_source_rgb(0.0, 0.0, 0.0);
       cr->show_text(trailer);
     }
@@ -336,7 +349,7 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
   if (header)
     {
       cr->get_text_extents(header, e);
-      cr->move_to(cx - e.width/2, cy - sqrt(3)/2*output->radius + e.height + 2);
+      cr->move_to(cx - e.width/2, cy - sqrt(3)/2*radius + e.height + 2);
       cr->show_text(header);
     }
   cr->restore();
@@ -486,15 +499,16 @@ int output_t::svg(const char *file)
      borders are scaled because they are applied to the hex bounding box in place()
      -------------------- */
 
+  double scalef = dimensions["scale"];
   int s_width = width * scalef; // + 2 * border;
   int s_height = height * scalef; // + 2 * border;
 
   Cairo::RefPtr<Cairo::SvgSurface> surface = Cairo::SvgSurface::create(file, s_width, s_height);
   Cairo::RefPtr<Cairo::Context> cr = Cairo::Context::create(surface);
 
-  auto font = Cairo::ToyFontFace::create("Nimbus Sans", Cairo::ToyFontFace::Slant::NORMAL, Cairo::ToyFontFace::Weight::NORMAL);
+  auto font = Cairo::ToyFontFace::create(params["font"], Cairo::ToyFontFace::Slant::NORMAL, Cairo::ToyFontFace::Weight::NORMAL);
   cr->set_font_face(font);
-  cr->set_font_size(10);
+  cr->set_font_size(dimensions["fontsize"]);
 
   Cairo::FontOptions font_options;
 
@@ -751,11 +765,14 @@ void output_t::place()
   /* --------------------
      Place hexes and expand edge
      -------------------- */
+
+  double radius = dimensions["radius"];
+  double margin = dimensions["margin"];
   
   for (auto hex : hexes)
     {
       point_t o = hex->xy;
-      fplace_t b(o, radius, border);
+      fplace_t b(o, radius, margin);
       hex->place = b;
       edge.setunion(b.bounds);
       if (hex->hex->owner)
@@ -778,17 +795,34 @@ void output_t::place()
 --
 ---------------------------------------------------------------------- */
 
+void output_t::defaults()
+{
+  dimensions["scale"] = 1.0;
+  dimensions["margin"] = 5.0;
+  dimensions["radius"] = 40.0;
+  dimensions["border"] = 0.2;
+  dimensions["fontsize"] = 10.0;
+
+  params["font"] = "Adwaita Sans";
+
+  colours["water"] = {.red = 0.80, .green = 0.94, .blue = 0.99};
+  colours["land"] = {.red = 0.80, .green = 0.99, .blue = 0.80};
+  set_colour("blank", 0.8, 0.8, 0.8);
+  set_colour("border", 0.0, 0.0, 0.0);
+  player = 0;
+}  
+
+void output_t::set_colour(std::string c, double red, double green, double blue)
+{
+  colours[c] = { .red = red, .green = green, .blue = blue };
+}
+
 output_t::output_t(grid_t *gd, int p)
 {
   grid = gd;
   game = nullptr;
-  scalef = 1.0;
-  border = 5.0;
-  radius = 40.0;
+  defaults();
   player = p;
-  water_colour = {.red = 0.80, .green = 0.94, .blue = 0.99};
-  land_colour = {.red = 0.80, .green = 0.99, .blue = 0.80};
-  border_width = 0.2;
   place();
 }
 
@@ -802,9 +836,7 @@ output_t::output_t(game_t *ga, int p)
 {
   game = ga;
   grid = ga->grid;
-  scalef = 1.0;
-  border = 5.0;
-  radius = 40.0;
+  defaults();
   player = p;
   place();
 }

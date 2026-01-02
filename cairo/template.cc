@@ -197,7 +197,7 @@ hex_t *template_t::hexify(layout_t* layout, char **tokens)
   if (band->size())
     hex->set(band);
   else
-    free(band);
+    delete band;
   assert(hex);
   hex->xy = p->xy;
   hex->setid(p->id);

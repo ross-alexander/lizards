@@ -9,6 +9,7 @@
 #include <vector>
 #include <typeinfo>
 
+#include <sys/syslog.h>
 #include <cairomm/context.h>
 
 #include "lizards.h"
@@ -23,6 +24,8 @@ void misc_t::log(int level, const char *s, ...)
   struct tm *tm;
   va_list ap;
   FILE *stream = stderr;
+  if (level > log_level)
+    return;
   time(&t);
   tm = localtime(&t);
   strftime(timestr, 255, "%Y-%m-%d %H:%M", tm);
@@ -62,3 +65,5 @@ std::map<std::string, int> misc_t::formats = {
   {"FORMAT_TXT",  FORMAT_FILE_TXT},
   {"FORMAT_XML",  FORMAT_FILE_XML},
 };
+
+int log_level = LOG_INFO;

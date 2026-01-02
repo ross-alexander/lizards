@@ -608,11 +608,9 @@ private:
   double width;
   double height;
 public:
-  //  double scalef;
-  //  double border;
-  //  double border_width;
   std::map<std::string, rgb_t> colours;
   std::map<std::string, double> dimensions;
+  std::map<std::string, std::string> params;
   output_t(grid_t*, int);
   output_t(game_t*, int);
   void set_colour(std::string, double, double, double);
@@ -659,6 +657,7 @@ class game_t {
   void report();
   std::string tostring();
   serial_t serialize();
+  int set_loglevel(int);
 };
 
 extern int log_level;

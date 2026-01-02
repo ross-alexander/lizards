@@ -269,11 +269,14 @@ public:
   grid_t *realize();
 };
 
+%template(vectors) std::vector<std::string>;
+
 class layouts_t {
 public:
   std::map<std::string, layout_t*> layouts;
   layouts_t(int, char*);
   layout_t* layout(std::string);
+  std::vector<std::string> keys();
 };
 
 class template_t {
@@ -317,6 +320,7 @@ public:
 
 %extend std::map<std::string, double> {
   double __setitem(string s, double d) { (*self)[s] = d; return d; }
+  double __getitem(string s) { return (*self)[s]; }
 }
 
 class single_t {
@@ -368,6 +372,7 @@ public:
   game_t(int, const char*);
   player_t* player(int i);
   grid_t *bootstrap();
+  int set_loglevel(int);
 };
 
 class view_t {

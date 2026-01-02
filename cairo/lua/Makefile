@@ -3,13 +3,19 @@ include		$(TOP)/Makefile.rules
 
 ARCH = $(TOP)/liblizards.a
 
-LUA_CFLAGS = -I$(TOP)/lua-5.4.0/include
-LUA_LIBS = -L$(TOP)/lua-5.4.0/lib
+LUA_CFLAGS = -I$(TOP)/lua-dist/include
+LUA_LIBS = -L$(TOP)/lua-dist/lib
 
-CXXFLAGS = -g -Wall -fPIC -I$(TOP) -Iinclude $(CAIRO_CFLAGS) $(RSVG_CFLAGS) $(GTK_CFLAGS) $(GLIB_CFLAGS) $(JSON_CFLAGS) $(CAIROMM_CFLAGS) $(RSVG_CFLAGS) $(LUA_CFLAGS)
-LDLIBS	=  $(LUA_LIBS) -llua $(RSVG_LIBS) $(GTK_LIBS) $(GLIB_LIBS) $(XML_LIBS) $(CAIROMM_LIBS) $(CAIRO_LIBS) $(JSON_LIBS) -lfmt
+CXXFLAGS = -g -Wall -fPIC -I$(TOP) -Iinclude $(CAIRO_CFLAGS) $(RSVG_CFLAGS) $(GLIB_CFLAGS) $(JSON_CFLAGS) $(CAIROMM_CFLAGS) $(RSVG_CFLAGS) $(LUA_CFLAGS)
+LDLIBS	=  $(LUA_LIBS) -llua $(RSVG_LIBS) $(GLIB_LIBS) $(XML_LIBS) $(CAIROMM_LIBS) $(CAIRO_LIBS) $(JSON_LIBS) -lfmt
 
-all	: lizards.so
+all	: lizards.so lizards-lua
+
+lizards-lua: lizards-lua.o lua_lizards_wrap.o $(ARCH)
+	$(CXX) $^ $(LDLIBS) -o $@
+
+lizards-lua.o: lizards-lua.cc
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 lua_lizards_wrap.o : lua_lizards_wrap.cxx
 	$(CXX) $(CXXFLAGS) -c $^ -o $@

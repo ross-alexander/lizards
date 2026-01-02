@@ -1,17 +1,22 @@
 CFLAGS=@CFLAGS@ @DEFS@ -Wall
 LIBS=@LIBS@
 CC=@CC@
+CXX=g++ -std=c++17
 LEX=flex++
+ALL=server connect parse
 
-all: server connect parse
+all: $(ALL)
 
 server: server.o
 
 connect: connect.o
 
 parse: node.o lexicon.o main.o
-	$(CXX) node.o lexicon.o main.o -lfl -o parse
+	$(CXX) node.o lexicon.o main.o -o parse
 
 lexicon.cc: lexicon.lex
 	$(LEX) lexicon.lex
 	mv lex.yy.cc lexicon.cc
+
+clean:
+	rm $(ALL) *.o

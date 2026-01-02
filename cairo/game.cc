@@ -232,3 +232,10 @@ serial_t game_t::serialize()
   g.add("grid", grid->serialize());
   return g;
 }
+
+int game_t::set_loglevel(int ll)
+{
+  int ret = log_level;
+  log_level = ll;
+  return ret;
+}

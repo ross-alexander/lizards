@@ -351,6 +351,8 @@ serial_t den_t::serialize(void)
 {
   serial_map_t s(hex_t::serialize());
   s.add("pop", pop);
+  if (home)
+    s.add("home", 1);
   return s;
 }
 
@@ -366,11 +368,18 @@ hex_t* hex_t::factory(serial_t s)
   m.get("y", hex->xy.y);
   m.get("owner", hex->owner);
   //  m.get("ref", hex->ref);
-  const char *id;
-  m.get("id", id);
-  hex->setid(id);
+  const char *id = "UNSPEC";
+  if (m.get("id", id))
+    hex->setid(id);
   misc_t::log(LOG_DEBUG, "hex %s %s %2dx%2d", t, id, hex->xy.x, hex->xy.y);
 
+  den_t *den;
+  if ((den = dynamic_cast<den_t*>(hex)))
+    {
+      m.get("pop", den->pop);
+      m.get("home", den->home);
+    }
+  
   serial_array_t fa;
   if (m.get("features", fa))
     {
