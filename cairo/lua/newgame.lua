@@ -24,7 +24,8 @@ function spairs(t, order)
     for k in pairs(t) do keys[#keys+1] = k end
 
     -- if order function given, sort by it by passing the table and keys a, b,
-    -- otherwise just sort the keys 
+    -- otherwise just sort the keys
+    
     if order then
         table.sort(keys, function(a,b) return order(t, a, b) end)
     else
@@ -79,7 +80,6 @@ function svg(params, svgmap, game, player)
 
    local seen = {}
    for i = 0, hexes:size()-1, 1 do
-      local hex = hexes[i]
       mark(grid, hexes[i], distance(hexes[i]), seen)
    end
 
