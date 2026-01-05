@@ -389,21 +389,23 @@ static void build_hex (world_t *w, int *points, hex_t *hex, char *string)
 	    lizards -= ((lizards * GROUP_SIZE) + lizards_in_hex (hex) -
 			MAX_LIZARDS_IN_HEX) / GROUP_SIZE;
 	  if (lizards > 0)
-	    if (*points + (lizards * RED_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
-	      {
-		f->f.band.type[RED] += lizards * GROUP_SIZE;
-		*points += (lizards * RED_WARRIOR_COST);
-	      }
-	    else
-	      {
-		/* find max lizards they can purchase with remaining points */
-		max_groups = (PLAYER_SETUP_POINTS - *points) / RED_WARRIOR_COST;
-		if (max_groups > 0 && max_groups <= lizards)
-		  {
-		    f->f.band.type[RED] += max_groups * GROUP_SIZE;
-		    *points += (max_groups * RED_WARRIOR_COST);
-		  }
-	      }
+	    {
+	      if (*points + (lizards * RED_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
+		{
+		  f->f.band.type[RED] += lizards * GROUP_SIZE;
+		  *points += (lizards * RED_WARRIOR_COST);
+		}
+	      else
+		{
+		  /* find max lizards they can purchase with remaining points */
+		  max_groups = (PLAYER_SETUP_POINTS - *points) / RED_WARRIOR_COST;
+		  if (max_groups > 0 && max_groups <= lizards)
+		    {
+		      f->f.band.type[RED] += max_groups * GROUP_SIZE;
+		      *points += (max_groups * RED_WARRIOR_COST);
+		    }
+		}
+	    }
 	  break;
 	case 1:
 	  lizards = atoi (&tok_string [CODE_LENGTH - 1])  / GROUP_SIZE;
@@ -412,21 +414,23 @@ static void build_hex (world_t *w, int *points, hex_t *hex, char *string)
 	    lizards -= ((lizards * GROUP_SIZE) + lizards_in_hex (hex) -
 			MAX_LIZARDS_IN_HEX) / GROUP_SIZE;
 	  if (lizards > 0)
-	    if (*points + (lizards * YELLOW_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
-	      {
-		f->f.band.type[YELLOW] += lizards * GROUP_SIZE;
-		*points += (lizards * YELLOW_WARRIOR_COST);
-	      }
-	    else
-	      {
-	    /* find max lizards they can purchase with remaining points */
-		max_groups = (PLAYER_SETUP_POINTS - *points) / YELLOW_WARRIOR_COST;
-		if (max_groups > 0 && max_groups <= lizards)
-		  {
-		    f->f.band.type[YELLOW] += max_groups * GROUP_SIZE;
-		    *points += (max_groups * YELLOW_WARRIOR_COST);
-		  }
-	      }
+	    {
+	      if (*points + (lizards * YELLOW_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
+		{
+		  f->f.band.type[YELLOW] += lizards * GROUP_SIZE;
+		  *points += (lizards * YELLOW_WARRIOR_COST);
+		}
+	      else
+		{
+		  /* find max lizards they can purchase with remaining points */
+		  max_groups = (PLAYER_SETUP_POINTS - *points) / YELLOW_WARRIOR_COST;
+		  if (max_groups > 0 && max_groups <= lizards)
+		    {
+		      f->f.band.type[YELLOW] += max_groups * GROUP_SIZE;
+		      *points += (max_groups * YELLOW_WARRIOR_COST);
+		    }
+		}
+	    }
 	  break;
 	case 2:
 	  lizards = atoi (&tok_string [CODE_LENGTH - 1])  / GROUP_SIZE;
@@ -435,21 +439,23 @@ static void build_hex (world_t *w, int *points, hex_t *hex, char *string)
 	    lizards -= ((lizards * GROUP_SIZE) + lizards_in_hex (hex) -
 			MAX_LIZARDS_IN_HEX) / GROUP_SIZE;
 	  if (lizards > 0)
-	    if (*points + (lizards * GREEN_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
-	      {
-		f->f.band.type[GREEN] += lizards * GROUP_SIZE;
-		*points += (lizards * GREEN_WARRIOR_COST);
-	      }
-	    else
-	      {
-		/* find max lizards they can purchase with remaining points */
-		max_groups = (PLAYER_SETUP_POINTS - *points) / GREEN_WARRIOR_COST;
-		if (max_groups > 0 && max_groups <= lizards)
-		  {
-		    f->f.band.type[GREEN] += max_groups * GROUP_SIZE;
-		    *points += (max_groups * GREEN_WARRIOR_COST);
-		  }
-	      }
+	    {
+	      if (*points + (lizards * GREEN_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
+		{
+		  f->f.band.type[GREEN] += lizards * GROUP_SIZE;
+		  *points += (lizards * GREEN_WARRIOR_COST);
+		}
+	      else
+		{
+		  /* find max lizards they can purchase with remaining points */
+		  max_groups = (PLAYER_SETUP_POINTS - *points) / GREEN_WARRIOR_COST;
+		  if (max_groups > 0 && max_groups <= lizards)
+		    {
+		      f->f.band.type[GREEN] += max_groups * GROUP_SIZE;
+		      *points += (max_groups * GREEN_WARRIOR_COST);
+		    }
+		}
+	    }
 	  break;
 	case 3:
 	  lizards = atoi (&tok_string [CODE_LENGTH - 1])  / GROUP_SIZE;
@@ -458,21 +464,23 @@ static void build_hex (world_t *w, int *points, hex_t *hex, char *string)
 	    lizards -= ((lizards * GROUP_SIZE) + lizards_in_hex (hex) -
 			MAX_LIZARDS_IN_HEX) / GROUP_SIZE;
 	  if (lizards > 0)
-	    if (*points + (lizards * GREY_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
-	      {
-		f->f.band.type[GREY] += lizards * GROUP_SIZE;
-		*points += (lizards * GREY_WARRIOR_COST);
-	      }
-	    else 
-	      {
-		/* find max lizards they can purchase with remaining points */
-		max_groups = (PLAYER_SETUP_POINTS - *points) / GREY_WARRIOR_COST;
-		if (max_groups > 0 && max_groups <= lizards)
-		  {
-		    f->f.band.type[GREY] += max_groups * GROUP_SIZE;
-		    *points += (max_groups * GREY_WARRIOR_COST);
-		  }
-	      }
+	    {
+	      if (*points + (lizards * GREY_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
+		{
+		  f->f.band.type[GREY] += lizards * GROUP_SIZE;
+		  *points += (lizards * GREY_WARRIOR_COST);
+		}
+	      else 
+		{
+		  /* find max lizards they can purchase with remaining points */
+		  max_groups = (PLAYER_SETUP_POINTS - *points) / GREY_WARRIOR_COST;
+		  if (max_groups > 0 && max_groups <= lizards)
+		    {
+		      f->f.band.type[GREY] += max_groups * GROUP_SIZE;
+		      *points += (max_groups * GREY_WARRIOR_COST);
+		    }
+		}
+	    }
 	  break;
 	case 4:
 	  lizards = atoi (&tok_string [CODE_LENGTH - 1])  / GROUP_SIZE;
@@ -481,22 +489,24 @@ static void build_hex (world_t *w, int *points, hex_t *hex, char *string)
 	    lizards -= ((lizards * GROUP_SIZE) + lizards_in_hex (hex) -
 			MAX_LIZARDS_IN_HEX) / GROUP_SIZE;
 	  if (lizards > 0)
-	    if (*points + (lizards * BLACK_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
-	      {
-		f->f.band.type[BLACK] += lizards * GROUP_SIZE;
-		*points += (lizards * BLACK_WARRIOR_COST);
-	      }
-	    else 
-	      {
-		/* find max lizards they can purchase with remaining points */
-		max_groups = (PLAYER_SETUP_POINTS - *points) / BLACK_WARRIOR_COST;
-		
-		if (max_groups > 0 && max_groups <= lizards)
-		  {
-		    f->f.band.type[BLACK] += max_groups * GROUP_SIZE;
-		    *points += (max_groups * BLACK_WARRIOR_COST);
-		  }
-	      }
+	    {
+	      if (*points + (lizards * BLACK_WARRIOR_COST) <= PLAYER_SETUP_POINTS)
+		{
+		  f->f.band.type[BLACK] += lizards * GROUP_SIZE;
+		  *points += (lizards * BLACK_WARRIOR_COST);
+		}
+	      else 
+		{
+		  /* find max lizards they can purchase with remaining points */
+		  max_groups = (PLAYER_SETUP_POINTS - *points) / BLACK_WARRIOR_COST;
+		  
+		  if (max_groups > 0 && max_groups <= lizards)
+		    {
+		      f->f.band.type[BLACK] += max_groups * GROUP_SIZE;
+		      *points += (max_groups * BLACK_WARRIOR_COST);
+		    }
+		}
+	    }
 	  break;
 	default:
 	  break;
