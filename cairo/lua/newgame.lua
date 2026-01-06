@@ -201,12 +201,11 @@ function svg(params, svgmap, game, player)
    
    ctx:select_font_face(params.font, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL);
    ctx:set_font_size(params.fontsize);
-
    local font_options = cairo.FontOptions.create()
-   font_options.set_hint_style(cairo.HINT_STYLE_NONE);
-   font_options.set_hint_metrics(cairo.HINT_METRICS_OFF);
-   font_options.set_antialias(cairo.ANTIALIAS_GRAY);
-   ctx:set_font_options(font_options);
+   font_options:set_hint_style(cairo.HintStyle.NONE)
+   font_options:set_hint_metrics(cairo.HintMetrics.OFF)
+   font_options:set_antialias(cairo.Antialias.SUBPIXEL)
+   ctx:set_font_options(font_options)
 
    ctx:set_line_width(params.border)
 
