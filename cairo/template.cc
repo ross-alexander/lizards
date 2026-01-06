@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 #include <map>
 #include <vector>
@@ -455,7 +456,7 @@ void template_t::read_js(layouts_t *layouts, std::string s)
 		  code_map *c = hex_codes[type];
 		  hex_type = c->id;
 		  cost_priv += c->cost;
-		  misc_t::log(LOG_DEBUG, "Hex %s %s", id, type);
+		  misc_t::log(LOG_DEBUG, "Hex %s %s [%d : %d]", id, type, c->cost, cost_priv);
 		}
 	    }
 	  hex_t* hex = hex_from_type(hex_type);
@@ -590,7 +591,6 @@ grid_t* template_t::realize()
 void template_t::save(const char *file)
 {
   json_object* j_tmpl = json_object_new_object();
-
   json_object_object_add(j_tmpl, "layout", json_object_new_string(layout_id.c_str()));
   if (cost_priv) json_object_object_add(j_tmpl, "cost", json_object_new_int(cost_priv));
   if (home) json_object_object_add(j_tmpl, "home", json_object_new_string(home->getid().c_str()));
@@ -617,9 +617,11 @@ void template_t::save(const char *file)
 	}
       else
 #endif
-	if (hex_codes.count(typeid(*h).name()))
+	if (hex_types.count(typeid(*h).name()))
 	{
-	  code_map *map = hex_codes[typeid(*h).name()];
+	  std::cout << h->getid() << " " << typeid(*h).name() << "\n";
+      
+	  code_map *map = hex_types[typeid(*h).name()];
 	  json_object_object_add(j_hex, "type", json_object_new_string(map->code));
 	}
     }
@@ -681,8 +683,10 @@ template_t::template_t(layouts_t* layouts, int format, const char* path) : templ
  template_t::template_t()
  {
    for (unsigned int k = 0; k < sizeof(hex_code_map)/sizeof(code_map); k++)
-    hex_codes[hex_code_map[k].code] = &hex_code_map[k];
-  
+     {
+       hex_codes[hex_code_map[k].code] = &hex_code_map[k];
+       hex_types[hex_code_map[k].type_id] = &hex_code_map[k];
+     }
   for (unsigned int k = 0; k < sizeof(warrior_code_map)/sizeof(code_map); k++)
     warrior_codes[warrior_code_map[k].code] = &warrior_code_map[k];
 
