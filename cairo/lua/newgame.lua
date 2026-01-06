@@ -1,6 +1,6 @@
 -- ----------------------------------------------------------------------
 --
--- use the lgi library to integrate with cairo and GTK+
+-- use the lgi/LuaGObject library to integrate with cairo and GTK+
 --
 -- ----------------------------------------------------------------------
 
@@ -93,22 +93,24 @@ function svg(params, svgmap, game, player)
    
    local hex_min_weight = nil
    local min_weight = grid.width^2 * grid.height^2
-   for ak, av in pairs(seen) do
+   for _, a in pairs(seen) do
       local total = 0
-      for bk, bv in pairs(seen) do
-	 local dx = math.abs(bv.xy.x - av.xy.x)
-	 local dy = math.abs(bv.xy.y - av.xy.y)
+      for _, b in pairs(seen) do
+	 local dx = math.abs(b.xy.x - a.xy.x)
+	 local dy = math.abs(b.xy.y - a.xy.y)
 
 	 total = total + math.min(dx, grid.width - dx)
 	 total = total + math.min(dy, grid.width - dy)
       end
       if (total < min_weight) then
-	 hex_min_weight = av
+	 hex_min_weight = a
 	 min_weight = total
       end
    end
-   print("minimum", hex_min_weight, min_weight)   
+   print("minimum", hex_min_weight:getid(), min_weight)   
 
+-- Shift center x if odd
+   
    local center = hex_min_weight.xy
    center.x = center.x - center.x%2;
 
@@ -124,43 +126,55 @@ function svg(params, svgmap, game, player)
    local places = {}
    local bounds = lizards.fbox_t()
 
+   local radius = params.radius
+   local margin = params.margin
+   
    -- --------------------
-   -- place hexes and expand edge
+   -- place hexes and expand edge into places{}
    -- --------------------
    
-   for ak, av in pairs(seen) do
-      local p = av.xy + diff
-      p:clip(grid.width, grid.height)
-      local place = lizards.fplace_t(p, 40, 5)
-      bounds:setunion(place.bounds)
-      local t = { place = place, hex = av }
+   for _, hex in pairs(seen) do
+      local p = hex.xy + diff
 
-      if (av.owner > 0) then
-	 t.owner = game:player(av.owner).code
+      -- Ensure point isn't off the grid
+      
+      p:clip(grid.width, grid.height)
+
+      -- Use existing C++ function to create bounding box and hex frame
+      
+      local place = lizards.fplace_t(p, radius, margin)
+
+      -- Expand bounding box
+      
+      bounds:setunion(place.bounds)
+      local t = { place = place, hex = hex }
+
+      if (hex.owner > 0) then
+	 t.owner = game:player(hex.owner).code
       end
 
-      if (svgmap[av:isa()]) then
-	 t.symbol = svgmap[av:isa()]
+      if (svgmap[hex:isa()]) then
+	 t.symbol = svgmap[hex:isa()]
       end
 
       -- --------------------
       -- Are we are den
       -- --------------------
       
-      if (av:isa(lizards.DEN)) then
-	 if (av.owner == 0) then
+      if (hex:isa(lizards.DEN)) then
+	 if (hex.owner == 0) then
 	    t.header = "Free"
-	 elseif (av.owner == player) then
+	 elseif (hex.owner == player) then
 	    t.header = t.owner
-	    local band = av:get(lizards.BAND)
-	    if (av.home) then
+	    local band = hex:get(lizards.BAND)
+	    if (hex.home) then
 	       t.symbol = svgmap[lizards.HOME_DEN]
 	       t.center = "HOME DEN"
 	    end
 	    if (band ~= nil) then
-	       t.lizards = band:size() + av.pop
+	       t.lizards = band:size() + hex.pop
 	    else
-	       t.lizards = av.pop
+	       t.lizards = hex.pop
 	    end
 	 end
 
@@ -168,69 +182,80 @@ function svg(params, svgmap, game, player)
 	 -- Are we a band
 	 -- --------------------
 	 
-      elseif (av:get(lizards.BAND)) then
-	 local band = av:get(lizards.BAND)
-	 if ((av.owner == player) or not(av:isa(lizards.SCRUB) or av:isa(lizards.RUIN))) then
+      elseif (hex:get(lizards.BAND)) then
+	 local band = hex:get(lizards.BAND)
+	 if ((hex.owner == player) or not(hex:isa(lizards.SCRUB) or hex:isa(lizards.RUIN))) then
 	    t.lizards = band:size()
 	    t.header = t.owner
 	 end
       end
       table.insert(places, t)
    end
+
+   -- Create SVG surface and Cairo context
    
    local canvas = cairo.SvgSurface.create(file, math.floor(bounds.right - bounds.left), math.floor(bounds.bottom - bounds.top))
    local ctx = cairo.Context.create(canvas)
 
+   -- Set font
+   
    ctx:select_font_face(params.font, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL);
    ctx:set_font_size(params.fontsize);
 
    local font_options = cairo.FontOptions.create()
-   
    font_options.set_hint_style(cairo.HINT_STYLE_NONE);
    font_options.set_hint_metrics(cairo.HINT_METRICS_OFF);
    font_options.set_antialias(cairo.ANTIALIAS_GRAY);
    ctx:set_font_options(font_options);
 
-   ctx:save()
---   ctx:set_source_rgb(0.9, 0.9, 1.0)
---   ctx:rectangle(0, 0, bounds.right - bounds.left, bounds.bottom - bounds.top)
---   ctx:fill()
+   ctx:set_line_width(params.border)
 
-   ctx:translate(-bounds.left, -bounds.top)
-
-   ctx:set_line_width(0.2)
-   ctx:set_source_rgb(0.0, 0.0, 0.0)
+   -- Save context then translating bounds
    
-   for key, value in ipairs(places) do
+   ctx:save()
+   ctx:translate(-bounds.left, -bounds.top)
+   
+   for _, value in ipairs(places) do
       local place = value.place
+
+      -- Create hex frame path
+      
       ctx:move_to(place.hull[0].x, place.hull[0].y)
       for i = 1, 5, 1 do
 	 ctx:line_to(place.hull[i].x, place.hull[i].y)
       end
       ctx:close_path()
+
+      -- The original lizards is black and white so colour is new
+      -- Currently only two colours are used, water and land
+
+      local color
       if (value.hex:isa(lizards.WATER)) then
-	 ctx:set_source_rgb(0.80, 0.94, 0.99);
+	 color = params.colors.water
       else
-	 ctx:set_source_rgb(0.80, 0.99, 0.80);
+	 color = params.colors.land
       end
+      ctx:set_source_rgb(color.red, color.green, color.blue)
       ctx:fill_preserve()
-      ctx:set_source_rgb(0.0, 0.0, 0.0)
+      color = params.colors.border
+      ctx:set_source_rgb(color.red, color.green, color.blue)
       ctx:stroke()
 
       local cx = place.center.x;
       local cy = place.center.y;
       
       -- --------------------
-      -- symbol
+      -- symbol, using render_document
       -- --------------------
       
-      ctx:save();
-      ctx:translate(cx - 20.0, cy - 15.0);
-      ctx:scale(0.20, 0.20);
       if (value.symbol ~= nil) then
-	 value.symbol:render_cairo(ctx)
+	 local viewport = Rsvg.Rectangle()
+	 viewport.x = cx - 20
+	 viewport.y = cy - 15.0
+	 viewport.width = 40.0
+	 viewport.height = 40.0
+	 value.symbol:render_document(ctx,viewport)
       end
-      ctx:restore();
 
       -- --------------------
       -- trailer
@@ -238,7 +263,7 @@ function svg(params, svgmap, game, player)
       
       local trailer = value.hex:getid()
       local e = ctx:text_extents(trailer)
-      ctx:move_to(cx -e.width/2, cy + math.sqrt(3)/2*40.0 - 2);
+      ctx:move_to(cx -e.width/2, cy + math.sqrt(3)/2 * radius - 2);
       ctx:set_source_rgb(0.0, 0.0, 0.0);
       ctx:show_text(trailer);
 
@@ -251,7 +276,7 @@ function svg(params, svgmap, game, player)
 	 ctx:set_source_rgb(1.0, 0.0, 0.0);
 	 local header = value.header
 	 local e = ctx:text_extents(header);
-	 ctx:move_to(cx - e.width/2, cy - math.sqrt(3)/2*40.0 + e.height + 2);
+	 ctx:move_to(cx - e.width/2, cy - math.sqrt(3)/2 * radius + e.height + 2);
 	 ctx:show_text(header);
 	 ctx:restore();
       end
@@ -261,11 +286,12 @@ function svg(params, svgmap, game, player)
       -- --------------------
       
       if (value.lizards ~= nil and value.lizards > 0) then
-	 ctx:save();
-	 ctx:translate(cx, cy - 25);
-	 ctx:scale(0.15, 0.15);
-	 svgmap[lizards.BAND]:render_cairo(ctx)
-	 ctx:restore();
+	 local viewport = Rsvg.Rectangle()
+	 viewport.x = cx
+	 viewport.y = cy - 25.0
+	 viewport.width = 30.0
+	 viewport.height = 30.0
+	 svgmap[lizards.BAND]:render_document(ctx, viewport)
 	 
 	 local size = string.format("%d", value.lizards)
 	 local e = ctx:text_extents(size);
@@ -334,9 +360,19 @@ local svgmap = {
 print(game:tostring())
 local grid = game.grid
 print(grid:tostring())
+
 local params = {
    font = "Adwaita Sans",
-   fontsize = 10.0
+   fontsize = 10.0,
+   radius = 40.0,
+   margin = 5.0,
+   border = 0.2,
+   colors = {
+      border = { red = 0.0, green = 0.0, blue = 0.0 },
+      water = { red = 0.80, green = 0.94, blue = 0.99 },
+      land = { red = 0.80, green = 0.99, blue = 0.80 },
+      blank = { red = 0.80, green = 0.80, blue = 0.80 },
+   },
 }
 for p = 1, game.nplayers, 1 do
    svg(params, svgmap, game, p)
