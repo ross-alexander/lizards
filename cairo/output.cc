@@ -512,9 +512,9 @@ int output_t::svg(const char *file)
 
   Cairo::FontOptions font_options;
 
-  //  font_options.set_hint_style(Cairo::HINT_STYLE_NONE);
-  //  font_options.set_hint_metrics(Cairo::HINT_METRICS_OFF);
-  //  font_options.set_antialias(Cairo::ANTIALIAS_BEST);
+  font_options.set_hint_style(Cairo::FontOptions::HintStyle::NONE);
+  font_options.set_hint_metrics(Cairo::FontOptions::HintMetrics::OFF);
+  font_options.set_antialias(Cairo::Antialias::ANTIALIAS_SUBPIXEL);
   cr->set_font_options(font_options);
 
   /* --------------------
