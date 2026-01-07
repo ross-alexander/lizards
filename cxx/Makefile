@@ -9,25 +9,25 @@ CC	= gcc
 # GTKGL_CFLAGS	= @GTKGLEXT_CFLAGS@
 # GTKGL_LIBS	= @GTKGLEXT_LIBS@
 
-GTK_CFLAGS	= -pthread -I/usr/include/gtk-2.0 -I/usr/lib64/gtk-2.0/include -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/pixman-1  
-GTK_LIBS	= -L/usr/lib64 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype  
+GTK_CFLAGS	= -pthread -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/freetype2 -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng16 -I/usr/include/webp -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6
+GTK_LIBS	= -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
 
-GLIB_CFLAGS	= -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include  
-GLIB_LIBS	= -L/usr/lib64 -lglib-2.0  
+GLIB_CFLAGS	= -pthread -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6
+GLIB_LIBS	= -lglib-2.0
 
-XML_CFLAGS	= -I/usr/include/libxml++-3.0 -I/usr/lib64/libxml++-3.0/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib64/glibmm-2.4/include -I/usr/include/sigc++-2.0 -I/usr/lib64/sigc++-2.0/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include  
-XML_LIBS	= -L/usr/lib64 -lxml++-3.0 -lxml2 -lglibmm-2.4 -lgobject-2.0 -lsigc-2.0 -lglib-2.0  
+XML_CFLAGS	= -pthread -I/usr/include/libxml++-3.0 -I/usr/lib64/libxml++-3.0/include -I/usr/include/libxml2 -I/usr/include/glibmm-2.4 -I/usr/lib64/glibmm-2.4/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/sigc++-2.0 -I/usr/lib64/sigc++-2.0/include
+XML_LIBS	= -lxml++-3.0 -lxml2 -lglibmm-2.4 -lgobject-2.0 -lglib-2.0 -lsigc-2.0
 
-RSVG_CFLAGS	= -pthread -I/usr/include/librsvg-2.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/cairo -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/harfbuzz  
-RSVG_LIBS	= -L/usr/lib64 -lrsvg-2 -lm -lgio-2.0 -lgdk_pixbuf-2.0 -lcairo -lgobject-2.0 -lglib-2.0  
+RSVG_CFLAGS	= -pthread -I/usr/include/librsvg-2.0 -I/usr/include/cairo -I/usr/include/libxml2 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/webp -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/sysprof-6 -I/usr/include/cairo -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/pixman-1
+RSVG_LIBS	= -lrsvg-2 -lgio-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0 -lcairo
 
 # GL_LIBS		= -lGL -lGLU -lglut
 CAIRO_CFLAGS	= 
 CAIRO_LIBS	= 
 
 
-CAIROMM_CFLAGS	= -I/usr/include/cairomm-1.0 -I/usr/lib64/cairomm-1.0/include -I/usr/include/cairo -I/usr/include/sigc++-2.0 -I/usr/lib64/sigc++-2.0/include -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/harfbuzz  
-CAIROMM_LIBS	= -L/usr/lib64 -lcairomm-1.0 -lcairo -lsigc-2.0  
+CAIROMM_CFLAGS	= -I/usr/include/cairomm-1.0 -I/usr/lib64/cairomm-1.0/include -I/usr/include/cairo -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/sigc++-2.0 -I/usr/lib64/sigc++-2.0/include
+CAIROMM_LIBS	= -lcairomm-1.0 -lcairo -lsigc-2.0
 
 CXXFLAGS = -g -Wall $(CAIRO_CFLAGS) $(RSVG_CFLAGS) $(GTK_CFLAGS) $(GLIB_CFLAGS) $(XML_CFLAGS)
 LDLIBS	= $(RSVG_LIBS) $(GTK_LIBS) $(GLIB_LIBS) $(XML_LIBS) $(CAIRO_LIBS)

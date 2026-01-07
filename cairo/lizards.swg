@@ -350,9 +350,12 @@ class output_t {
 public:
   std::map<std::string, rgb_t> colours;
   std::map<std::string, double> dimensions;
+  std::map<std::string, std::string> params;
   output_t(game_t*, int);
   output_t(grid_t*, int);
   void set_colour(std::string, double, double, double);
+  void set_dimension(std::string, double);
+  void set_param(std::string, std::string);
   int json(const char*);
   int svg(const char*);
 };

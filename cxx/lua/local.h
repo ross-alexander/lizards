@@ -4,7 +4,7 @@
 #define PLAYER "Player"
 #define FEATURE "Feature"
 
-int Meta_register(lua_State *L, const char *name, const luaL_reg methods[], const luaL_reg meta[], int global);
+int Meta_register(lua_State *L, const char *name, const luaL_Reg methods[], const luaL_Reg meta[], const luaL_Reg globals[]);
 
 void World_register(lua_State *L);
 void Player_register(lua_State *L);

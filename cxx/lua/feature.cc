@@ -24,10 +24,10 @@ base_t* check(lua_State *L, int index, char* t)
   return *((base_t**)luaL_checkudata(L, index, t));
 }
 
-base_t* to(lua_State *L, int index, char *t)
+base_t* to(lua_State *L, int index, const char *t)
 {
   base_t **bar = (base_t**)lua_touserdata(L, index);
-  if (bar == NULL) luaL_typerror(L, index, t);
+  if (bar == NULL) luaL_typeerror(L, index, t);
   return *bar;
 }
 
@@ -48,15 +48,19 @@ int Feature_desc(lua_State *L)
 
 void Feature_register(lua_State *L)
 {
-  static const luaL_reg methods[] = {
+  static const luaL_Reg methods[] = {
     {"desc",	Feature_desc},
     {0, 0},
   };
   
-  static const luaL_reg meta[] = {
+  static const luaL_Reg meta[] = {
     {"__tostring", Feature_desc},
     {0, 0}
   };
 
-  Meta_register(L, FEATURE, methods, meta, 1);
+  static const luaL_Reg globals[] = {
+    {0, 0}
+  };
+
+  Meta_register(L, FEATURE, methods, meta, globals);
 }

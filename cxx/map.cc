@@ -228,7 +228,7 @@ void map_t::create_nowrap()
     for (int i = 0; i < width; i++)
       {
 	hex_t *ahex = hex(i,j);
-	char string[6]; // Maximum 26^3 x and 999 y
+	char string[12]; // Maximum 26^3 x and 999 y
 	sprintf(string, "%d", ahex->xy.y + 1);
 	int k = strlen(string);
 	if (ahex->xy.x < 26)

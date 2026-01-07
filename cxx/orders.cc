@@ -419,7 +419,7 @@ int order_movement_t::movement()
       if (t->terrain == WATER)
 	{
 	  if (!t->has_feature(BRIDGE) && (!s->has_feature(RAFT) && type != SAIL) && (!t->has_feature(RAFT))
-	      && misc_t::uniform(100) < SEA_MONSTER_LEVEL && t->adjacent(WATER) > 0)
+	      && misc_t::uniform(100) < SEA_MONSTER_LEVEL && t->terrain_adjacent(WATER) > 0)
 	    {
 		/* Lizards attacked by Sea Monster */
 	  //	  fprintf (fptr, " - %s\n", build_mesg (random (4) + 4, work_string, ""));
@@ -1619,7 +1619,7 @@ int order_free_t::execute()
   int free_type = UNSETTLED;
 
   for (int i = 0; i < LIZARD_TYPES; i++)
-    if (band[i] > 0)
+    if (band->colour[i] > 0)
       {
 	count++;
 	free_type = i;

@@ -20,7 +20,7 @@ extern "C" {
 map_t* toMap(lua_State *L, int index)
 {
   map_t **mapp = (map_t**)lua_touserdata(L, index);
-  if (mapp == NULL) luaL_typerror(L, index, MAP);
+  if (mapp == NULL) luaL_typeerror(L, index, MAP);
   return *mapp;
 }
 
@@ -90,7 +90,7 @@ static int Map_tostring (lua_State *L)
 
 void Map_register(lua_State *L)
 {
-  static const luaL_reg Map_methods[] = {
+  static const luaL_Reg Map_methods[] = {
     {"width",		Map_width},
     {"height",		Map_height},
     {"hexes",		Map_hexes},
@@ -98,11 +98,15 @@ void Map_register(lua_State *L)
     {0, 0},
   };
   
-  static const luaL_reg Map_meta[] = {
+  static const luaL_Reg Map_meta[] = {
     {"__tostring", Map_tostring},
     {0, 0}
   };
 
-  Meta_register(L, MAP, Map_methods, Map_meta, 0);
+  static const luaL_Reg Map_globals[] = {
+    {0, 0}
+  };
+
+  Meta_register(L, MAP, Map_methods, Map_meta, Map_globals);
 }
 

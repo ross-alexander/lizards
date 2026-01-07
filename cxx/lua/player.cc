@@ -15,7 +15,7 @@ extern "C" {
 player_t* toPlayer(lua_State *L, int index)
 {
   player_t **mapp = (player_t**)lua_touserdata(L, index);
-  if (mapp == NULL) luaL_typerror(L, index, PLAYER);
+  if (mapp == NULL) luaL_typeerror(L, index, PLAYER);
   return *mapp;
 }
 
@@ -36,16 +36,20 @@ static int Player_num(lua_State *L)
 
 void Player_register(lua_State *L)
 {
-  static const luaL_reg methods[] = {
+  static const luaL_Reg methods[] = {
     {"num",	Player_num},
     {0, 0},
   };
   
-  static const luaL_reg meta[] = {
+  static const luaL_Reg meta[] = {
     {"__tostring", Player_tostring},
     {0, 0}
   };
 
-  Meta_register(L, "Player", methods, meta, 0);
+  static const luaL_Reg globals[] = {
+    {0, 0}
+  };
+
+  Meta_register(L, "Player", methods, meta, globals);
 }
 

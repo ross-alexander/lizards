@@ -29,7 +29,7 @@ world_t *checkWorld(lua_State *L, int index)
 world_t* toWorld(lua_State *L, int index)
 {
   world_t **bar = (world_t**)lua_touserdata(L, index);
-  if (bar == NULL) luaL_typerror(L, index, WORLD);
+  if (bar == NULL) luaL_typeerror(L, index, WORLD);
   return *bar;
 }
 
@@ -110,19 +110,21 @@ int World_players(lua_State *L)
 
 void World_register(lua_State *L)
 {
-  static const luaL_reg World_methods[] = {
-    {"new",	World_new},
+  static const luaL_Reg World_methods[] = {
     {"game",	World_game},
     {"map",	World_map},
     {"players", World_players},
     {0, 0},
   };
-  
-  static const luaL_reg World_meta[] = {
+
+  static const luaL_Reg World_meta[] = {
     {"__gc",       World_gc},
     {"__tostring", World_tostring},
-    {0, 0}
+    {0, 0},
   };
-
-  Meta_register(L, WORLD, World_methods, World_meta, 1);
+  static const luaL_Reg World_globals[] = {
+    {"new",	World_new},
+    {0, 0},
+  };
+  Meta_register(L, WORLD, World_methods, World_meta, World_globals);
 }

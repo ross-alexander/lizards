@@ -238,7 +238,7 @@ void get_player_list (World *world)
 
   world->num_players = 1;
 
-  while (fgets (work_string, 255, fptr) != '\0' &&
+  while (fgets (work_string, 255, fptr) != NULL &&
     world->num_players < MAX_PLAYERS + 1)
   {
     work_string [strlen (work_string)] = '\0';
@@ -246,7 +246,7 @@ void get_player_list (World *world)
     last_comma = work_string;
     next_comma = strchr (work_string, ',');
     next_comma [0] = '\0';
-    strncpy (world->player[world->num_players].code, last_comma, 6);
+    strncpy (world->player[world->num_players].code, last_comma, MAX_CLAN_CODE + 1);
     world->player[world->num_players].code[5] = '\0';
 
     last_comma = next_comma + 1;
@@ -316,7 +316,7 @@ void get_spy_list (World *world)
   {
     get_rec (fptr, sizeof (spy_t), work, &work_spy);
 
-    if ((world->spylist[work] = (spy_t*)calloc (1,sizeof (spy_t))) == '\0')
+    if ((world->spylist[work] = (spy_t*)calloc (1,sizeof (spy_t))) == NULL)
     {
       printf ("FATAL ERROR: Out of memory.\n");
       exit (EXIT_FAILURE);
@@ -339,7 +339,7 @@ void put_spy_list (World *world)
 
   sprintf (filename, "%s%s.%s", data_path, game_code, SPY_F);
 
-  if ((spy_fptr = fopen (filename, "wb")) == '\0')
+  if ((spy_fptr = fopen (filename, "wb")) == NULL)
   {
     printf ("FATAL ERROR: Unable to write to %s file.\n", filename);
     exit (EXIT_FAILURE);

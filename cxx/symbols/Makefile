@@ -1,5 +1,5 @@
-CFLAGS=-D_XOPEN_SOURCE=600 -std=c99 `pkg-config --cflags cairo gtk+-2.0`
-LDLIBS=`pkg-config --libs cairo gtk+-2.0`
+CFLAGS=-D_XOPEN_SOURCE=600 -std=c99 `pkg-config --cflags cairo gtk+-3.0 x11`
+LDLIBS=`pkg-config --libs cairo gtk+-3.0 x11`
 
 all: cairo final.ps svg.ps ps.svg
 
@@ -17,4 +17,4 @@ svg.ps: ps2svg.ps final.ps
 	cat $^ > $@
 
 ps.svg: svg.ps
-	gs -sDEVICE=bbox -dNOPAUSE -dBATCH svg.ps
+	gs -sDEVICE=bbox -dNOSAFER -dNOPAUSE -dBATCH svg.ps

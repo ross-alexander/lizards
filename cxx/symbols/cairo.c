@@ -13,6 +13,12 @@
 #include "symbols.h"
 #include "symbols.c"
 
+/* ----------------------------------------------------------------------
+   --
+   -- cairo_expose
+   --
+   ---------------------------------------------------------------------- */
+
 int cairo_expose(cairo_t *cairo, int width, int height)
 {
   int box = 500;
@@ -163,28 +169,26 @@ int xlib(int argc, char *argv[], int width, int height)
     }
 }
 
-G_DEFINE_TYPE(LizardFace, lizard_face, GTK_TYPE_DRAWING_AREA);
+// G_DEFINE_TYPE(LizardFace, lizard_face, GTK_TYPE_DRAWING_AREA);
 
-static gboolean lizard_face_expose (GtkWidget *clock, GdkEventExpose *event)
- {
-   int width, height;
-   cairo_t *cr;
-   gdk_drawable_get_size(clock->window, &width, &height);
-
+static gboolean lizard_draw (GtkWidget *draw, cairo_t *cr, void *client_data)
+{
+  guint width = gtk_widget_get_allocated_width(draw);
+  guint height = gtk_widget_get_allocated_height(draw);
 
    /* get a cairo_t */
-   cr = gdk_cairo_create (clock->window);
+  //   cr = gdk_drawing_context_get_cairo_context (GDK_WINDOW(clock));
    cairo_expose(cr, width, height);
-   cairo_destroy (cr);
+   //   cairo_destroy (cr);
    return FALSE;
  }
 
+#ifdef Old
  static void lizard_face_class_init (LizardFaceClass *class)
  {
         GtkWidgetClass *widget_class;
 
         widget_class = GTK_WIDGET_CLASS (class);
-
         widget_class->expose_event = lizard_face_expose;
  }
 
@@ -196,23 +200,26 @@ static gboolean lizard_face_expose (GtkWidget *clock, GdkEventExpose *event)
  {
         return g_object_new (TYPE_LIZARD_FACE, NULL);
  }
-
+#endif
 
 int gtk(int argc, char *argv[], int width, int height)
 {
   GtkWidget *window;
   GtkWidget *clock;
-
+  GtkWidget *drawing;
+  
   gtk_init (&argc, &argv);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
 
+  drawing = gtk_drawing_area_new();
+  
+  //  clock = lizard_face_new ();
 
-  clock = lizard_face_new ();
+  gtk_widget_set_size_request(GTK_WIDGET(drawing), width, height);
 
-  gtk_widget_set_size_request(GTK_WIDGET(clock), width, height);
-
-  gtk_container_add (GTK_CONTAINER (window), clock);
+  gtk_container_add (GTK_CONTAINER (window), drawing);
+  g_signal_connect(G_OBJECT(drawing), "draw", G_CALLBACK(lizard_draw), NULL);
 
   g_signal_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
 

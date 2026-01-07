@@ -178,7 +178,7 @@ char *strtoken (char *dest, char *source, char *delim)
   length = strlen (source);
 
   for (loop = 0; loop < length; loop ++)
-    if (strchr (delim, (int) source [loop]) != '\0')
+    if (strchr (delim, (int) source [loop]) != NULL)
       break;
     else
       dest [loop] = source [loop];

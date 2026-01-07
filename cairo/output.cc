@@ -366,13 +366,8 @@ void output_private_t::path_paint_hex(Cairo::RefPtr<Cairo::Context> cr, view_hex
       cr->move_to(cx - e.width, cy - 5);
       cr->show_text(band);
 
-      //      cr->save();
-      //      cr->translate(cx, cy - 25);
-      //      cr->scale(0.15, 0.15);
       RsvgRectangle viewport = {.x = cx,.y = cy - 25,.width = 30,.height = 30 };
       rsvg_handle_render_document(id2sym[OUTPUT_LIZARD]->handle, (cairo_t*)(cr->cobj()), &viewport, 0);
-      //      rsvg_handle_render_cairo(id2sym[OUTPUT_LIZARD]->handle, (cairo_t*)(cr->cobj()));
-      //      cr->restore();
     }
   else if (!ovh->center_text.empty())
     {
@@ -434,7 +429,7 @@ void output_private_t::view(view_hex_t *see)
 	  else
 	    see->band = 0;
 	  see->header_text = see->owner;
-	  }
+	}
     }
   else
     { 
@@ -805,8 +800,8 @@ void output_t::defaults()
 
   params["font"] = "Adwaita Sans";
 
-  colours["water"] = {.red = 0.80, .green = 0.94, .blue = 0.99};
-  colours["land"] = {.red = 0.80, .green = 0.99, .blue = 0.80};
+  set_colour("water", 0.80, 0.94, 0.99);
+  set_colour("land", 0.80, 0.99, 0.80);
   set_colour("blank", 0.8, 0.8, 0.8);
   set_colour("border", 0.0, 0.0, 0.0);
   player = 0;
@@ -815,6 +810,16 @@ void output_t::defaults()
 void output_t::set_colour(std::string c, double red, double green, double blue)
 {
   colours[c] = { .red = red, .green = green, .blue = blue };
+}
+
+void output_t::set_dimension(std::string d, double v)
+{
+  dimensions[d] = v;
+}
+
+void output_t::set_param(std::string p, std::string v)
+{
+  params[p] = v;
 }
 
 output_t::output_t(grid_t *gd, int p)

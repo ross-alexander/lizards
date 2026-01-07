@@ -543,19 +543,23 @@ void template_t::load_file_js(layouts_t *layouts, const char *path)
 
 grid_t* template_t::realize()
 {
-  int x_min = layout->x_min;
-  int y_min = layout->y_min;
+  x_min = layout->x_min;
+  y_min = layout->y_min;
 
-  int x_max = layout->x_max;
-  int y_max = layout->y_max;
+  x_max = layout->x_max;
+  y_max = layout->y_max;
 
+  misc_t::log(LOG_DEBUG, "template::realize(x_min=%d, y_min=%d, x_max=%d, y_max=%d)", x_min, y_min, x_max, y_max);
+  
   x_min -= abs(x_min%2);
   y_min -= abs(y_min%2);
   x_max += abs(x_max%2);
   y_max += abs(y_max%2);
 
-  int width = x_max - x_min + 1;
-  int height = y_max - y_min + 1;
+  misc_t::log(LOG_DEBUG, "template::realize(x_min=%d, y_min=%d, x_max=%d, y_max=%d)", x_min, y_min, x_max, y_max);
+  
+  width = x_max - x_min + 1;
+  height = y_max - y_min + 1;
 
   /* --------------------
      Fill-in any missing hexes

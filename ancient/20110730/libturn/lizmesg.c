@@ -30,23 +30,24 @@ void get_message_file (void)
   work = 0;
 
   while (fgets (work_string, 255, fptr) != NULL)
-  {
-    if (work_string [0] != '/')
     {
-      if (work_string [strlen (work_string) - 1] == '\n');
-	work_string [strlen (work_string) - 1] = '\0';
+      if (work_string [0] != '/')
+	{
+	  if (work_string [strlen (work_string) - 1] == '\n');
+	  work_string [strlen (work_string) - 1] = '\0';
 
-      if ((message_list [work] = malloc (strlen (work_string) + 1)) == NULL)
-      {
-        printf ("FATAL ERROR: Out of memory.\n");
-	exit (EXIT_FAILURE);
-      } else
-	strcpy (message_list [work], work_string);
-
-      work ++;
-    }
-  };
-
+	  if ((message_list [work] = malloc (strlen (work_string) + 1)) == NULL)
+	    {
+	      printf ("FATAL ERROR: Out of memory.\n");
+	      exit (EXIT_FAILURE);
+	    }
+	  else
+	    {
+	      strcpy (message_list [work], work_string);
+	    }
+	  work ++;
+	}
+    };
   /* fclose(fptr); */
 }
 

@@ -2886,24 +2886,25 @@ SWIG_Lua_dostring(lua_State *L, const char *str) {
 #define SWIGTYPE_p_std__mapT_std__string_double_t swig_types[33]
 #define SWIGTYPE_p_std__mapT_std__string_layout_t_p_t swig_types[34]
 #define SWIGTYPE_p_std__mapT_std__string_rgb_t_t swig_types[35]
-#define SWIGTYPE_p_std__string swig_types[36]
-#define SWIGTYPE_p_std__vectorT_fpoint_t_t swig_types[37]
-#define SWIGTYPE_p_std__vectorT_hex_t_p_t swig_types[38]
-#define SWIGTYPE_p_std__vectorT_player_t_p_t swig_types[39]
-#define SWIGTYPE_p_std__vectorT_point_t_t swig_types[40]
-#define SWIGTYPE_p_std__vectorT_single_t_t swig_types[41]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[42]
-#define SWIGTYPE_p_swamp_t swig_types[43]
-#define SWIGTYPE_p_template_t swig_types[44]
-#define SWIGTYPE_p_temple_t swig_types[45]
-#define SWIGTYPE_p_value_type swig_types[46]
-#define SWIGTYPE_p_view_t swig_types[47]
-#define SWIGTYPE_p_volcano_t swig_types[48]
-#define SWIGTYPE_p_water_t swig_types[49]
-#define SWIGTYPE_p_whirlpool_t swig_types[50]
-#define SWIGTYPE_p_yellow_den_t swig_types[51]
-static swig_type_info *swig_types[53];
-static swig_module_info swig_module = {swig_types, 52, 0, 0, 0, 0};
+#define SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t swig_types[36]
+#define SWIGTYPE_p_std__string swig_types[37]
+#define SWIGTYPE_p_std__vectorT_fpoint_t_t swig_types[38]
+#define SWIGTYPE_p_std__vectorT_hex_t_p_t swig_types[39]
+#define SWIGTYPE_p_std__vectorT_player_t_p_t swig_types[40]
+#define SWIGTYPE_p_std__vectorT_point_t_t swig_types[41]
+#define SWIGTYPE_p_std__vectorT_single_t_t swig_types[42]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[43]
+#define SWIGTYPE_p_swamp_t swig_types[44]
+#define SWIGTYPE_p_template_t swig_types[45]
+#define SWIGTYPE_p_temple_t swig_types[46]
+#define SWIGTYPE_p_value_type swig_types[47]
+#define SWIGTYPE_p_view_t swig_types[48]
+#define SWIGTYPE_p_volcano_t swig_types[49]
+#define SWIGTYPE_p_water_t swig_types[50]
+#define SWIGTYPE_p_whirlpool_t swig_types[51]
+#define SWIGTYPE_p_yellow_den_t swig_types[52]
+static swig_type_info *swig_types[54];
+static swig_module_info swig_module = {swig_types, 53, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -6927,6 +6928,206 @@ static swig_lua_class *swig_grey_den_t_bases[] = {0,0};
 static const char *swig_grey_den_t_base_names[] = {"den_t *",0};
 static swig_lua_class _wrap_class_grey_den_t = { "grey_den_t", "grey_den_t", &SWIGTYPE_p_grey_den_t,_proxy__wrap_new_grey_den_t, swig_delete_grey_den_t, swig_grey_den_t_methods, swig_grey_den_t_attributes, &swig_grey_den_t_Sf_SwigStatic, swig_grey_den_t_meta, swig_grey_den_t_bases, swig_grey_den_t_base_names };
 
+static int _wrap_layout_t_x_min_set(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int arg2 ;
+    
+    SWIG_check_num_args("layout_t::x_min",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::x_min",1,"layout_t *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("layout_t::x_min",2,"int");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_x_min_set",1,SWIGTYPE_p_layout_t);
+    }
+    
+    arg2 = (int)lua_tonumber(L, 2);
+    if (arg1) (arg1)->x_min = arg2;
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_layout_t_x_min_get(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int result;
+    
+    SWIG_check_num_args("layout_t::x_min",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::x_min",1,"layout_t *");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_x_min_get",1,SWIGTYPE_p_layout_t);
+    }
+    
+    result = (int) ((arg1)->x_min);
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_layout_t_y_min_set(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int arg2 ;
+    
+    SWIG_check_num_args("layout_t::y_min",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::y_min",1,"layout_t *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("layout_t::y_min",2,"int");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_y_min_set",1,SWIGTYPE_p_layout_t);
+    }
+    
+    arg2 = (int)lua_tonumber(L, 2);
+    if (arg1) (arg1)->y_min = arg2;
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_layout_t_y_min_get(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int result;
+    
+    SWIG_check_num_args("layout_t::y_min",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::y_min",1,"layout_t *");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_y_min_get",1,SWIGTYPE_p_layout_t);
+    }
+    
+    result = (int) ((arg1)->y_min);
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_layout_t_x_max_set(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int arg2 ;
+    
+    SWIG_check_num_args("layout_t::x_max",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::x_max",1,"layout_t *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("layout_t::x_max",2,"int");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_x_max_set",1,SWIGTYPE_p_layout_t);
+    }
+    
+    arg2 = (int)lua_tonumber(L, 2);
+    if (arg1) (arg1)->x_max = arg2;
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_layout_t_x_max_get(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int result;
+    
+    SWIG_check_num_args("layout_t::x_max",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::x_max",1,"layout_t *");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_x_max_get",1,SWIGTYPE_p_layout_t);
+    }
+    
+    result = (int) ((arg1)->x_max);
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_layout_t_y_max_set(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int arg2 ;
+    
+    SWIG_check_num_args("layout_t::y_max",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::y_max",1,"layout_t *");
+    if(!lua_isnumber(L,2)) SWIG_fail_arg("layout_t::y_max",2,"int");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_y_max_set",1,SWIGTYPE_p_layout_t);
+    }
+    
+    arg2 = (int)lua_tonumber(L, 2);
+    if (arg1) (arg1)->y_max = arg2;
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_layout_t_y_max_get(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    layout_t *arg1 = 0 ;
+    int result;
+    
+    SWIG_check_num_args("layout_t::y_max",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("layout_t::y_max",1,"layout_t *");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_layout_t,0))){
+      SWIG_fail_ptr("layout_t_y_max_get",1,SWIGTYPE_p_layout_t);
+    }
+    
+    result = (int) ((arg1)->y_max);
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
 static int _wrap_layout_t_realize(lua_State* L) {
   {
     int SWIG_arg = 0;
@@ -6981,6 +7182,10 @@ static int _proxy__wrap_new_layout_t(lua_State *L) {
     return 1;
 }
 static swig_lua_attribute swig_layout_t_attributes[] = {
+    { "x_min", _wrap_layout_t_x_min_get, _wrap_layout_t_x_min_set },
+    { "y_min", _wrap_layout_t_y_min_get, _wrap_layout_t_y_min_set },
+    { "x_max", _wrap_layout_t_x_max_get, _wrap_layout_t_x_max_set },
+    { "y_max", _wrap_layout_t_y_max_get, _wrap_layout_t_y_max_set },
     {0,0,0}
 };
 static swig_lua_method swig_layout_t_methods[]= {
@@ -13087,6 +13292,60 @@ static int _wrap_output_t_dimensions_get(lua_State* L) {
 }
 
 
+static int _wrap_output_t_params_set(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    output_t *arg1 = 0 ;
+    std::map< std::string,std::string,std::less< std::string > > *arg2 = 0 ;
+    
+    SWIG_check_num_args("output_t::params",2,2)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("output_t::params",1,"output_t *");
+    if(!SWIG_isptrtype(L,2)) SWIG_fail_arg("output_t::params",2,"std::map< std::string,std::string,std::less< std::string > > *");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_output_t,0))){
+      SWIG_fail_ptr("output_t_params_set",1,SWIGTYPE_p_output_t);
+    }
+    
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&arg2,SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t,0))){
+      SWIG_fail_ptr("output_t_params_set",2,SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t);
+    }
+    
+    if (arg1) (arg1)->params = *arg2;
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_output_t_params_get(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    output_t *arg1 = 0 ;
+    std::map< std::string,std::string,std::less< std::string > > *result = 0 ;
+    
+    SWIG_check_num_args("output_t::params",1,1)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("output_t::params",1,"output_t *");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_output_t,0))){
+      SWIG_fail_ptr("output_t_params_get",1,SWIGTYPE_p_output_t);
+    }
+    
+    result = (std::map< std::string,std::string,std::less< std::string > > *)& ((arg1)->params);
+    SWIG_NewPointerObj(L,result,SWIGTYPE_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t,0); SWIG_arg++; 
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
 static int _wrap_new_output_t__SWIG_0(lua_State* L) {
   {
     int SWIG_arg = 0;
@@ -13234,6 +13493,76 @@ static int _wrap_output_t_set_colour(lua_State* L) {
 }
 
 
+static int _wrap_output_t_set_dimension(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    output_t *arg1 = 0 ;
+    std::string arg2 ;
+    double arg3 ;
+    
+    SWIG_check_num_args("output_t::set_dimension",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("output_t::set_dimension",1,"output_t *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("output_t::set_dimension",2,"std::string");
+    if(!lua_isnumber(L,3)) SWIG_fail_arg("output_t::set_dimension",3,"double");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_output_t,0))){
+      SWIG_fail_ptr("output_t_set_dimension",1,SWIGTYPE_p_output_t);
+    }
+    
+    {
+      size_t len;
+      const char *ptr = lua_tolstring(L, 2, &len);
+      (&arg2)->assign(ptr, len);
+    }
+    arg3 = (double)lua_tonumber(L, 3);
+    (arg1)->set_dimension(SWIG_STD_MOVE(arg2),arg3);
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_output_t_set_param(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    output_t *arg1 = 0 ;
+    std::string arg2 ;
+    std::string arg3 ;
+    
+    SWIG_check_num_args("output_t::set_param",3,3)
+    if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("output_t::set_param",1,"output_t *");
+    if(!lua_isstring(L,2)) SWIG_fail_arg("output_t::set_param",2,"std::string");
+    if(!lua_isstring(L,3)) SWIG_fail_arg("output_t::set_param",3,"std::string");
+    
+    if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_output_t,0))){
+      SWIG_fail_ptr("output_t_set_param",1,SWIGTYPE_p_output_t);
+    }
+    
+    {
+      size_t len;
+      const char *ptr = lua_tolstring(L, 2, &len);
+      (&arg2)->assign(ptr, len);
+    }
+    {
+      size_t len;
+      const char *ptr = lua_tolstring(L, 3, &len);
+      (&arg3)->assign(ptr, len);
+    }
+    (arg1)->set_param(SWIG_STD_MOVE(arg2),SWIG_STD_MOVE(arg3));
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
 static int _wrap_output_t_json(lua_State* L) {
   {
     int SWIG_arg = 0;
@@ -13303,10 +13632,13 @@ static int _proxy__wrap_new_output_t(lua_State *L) {
 static swig_lua_attribute swig_output_t_attributes[] = {
     { "colours", _wrap_output_t_colours_get, _wrap_output_t_colours_set },
     { "dimensions", _wrap_output_t_dimensions_get, _wrap_output_t_dimensions_set },
+    { "params", _wrap_output_t_params_get, _wrap_output_t_params_set },
     {0,0,0}
 };
 static swig_lua_method swig_output_t_methods[]= {
     { "set_colour", _wrap_output_t_set_colour},
+    { "set_dimension", _wrap_output_t_set_dimension},
+    { "set_param", _wrap_output_t_set_param},
     { "json", _wrap_output_t_json},
     { "svg", _wrap_output_t_svg},
     {0,0}
@@ -14126,7 +14458,44 @@ static swig_lua_class *swig_serial_t_bases[] = {0};
 static const char *swig_serial_t_base_names[] = {0};
 static swig_lua_class _wrap_class_serial_t = { "serial_t", "serial_t", &SWIGTYPE_p_serial_t,_proxy__wrap_new_serial_t, swig_delete_serial_t, swig_serial_t_methods, swig_serial_t_attributes, &swig_serial_t_Sf_SwigStatic, swig_serial_t_meta, swig_serial_t_bases, swig_serial_t_base_names };
 
+static int _wrap_log_level_set(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    int arg1 ;
+    
+    SWIG_check_num_args("log_level",1,1)
+    if(!lua_isnumber(L,1)) SWIG_fail_arg("log_level",1,"int");
+    arg1 = (int)lua_tonumber(L, 1);
+    log_level = arg1;
+    
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
+static int _wrap_log_level_get(lua_State* L) {
+  {
+    int SWIG_arg = 0;
+    int result;
+    
+    SWIG_check_num_args("log_level",0,0)
+    result = (int)log_level;
+    lua_pushnumber(L, (lua_Number) result); SWIG_arg++;
+    return SWIG_arg;
+    
+    fail: SWIGUNUSED;
+  }
+  lua_error(L);
+  return 0;
+}
+
+
 static swig_lua_attribute swig_SwigModule_attributes[] = {
+    { "log_level", _wrap_log_level_get, _wrap_log_level_set },
     {0,0,0}
 };
 static swig_lua_const_info swig_SwigModule_constants[]= {
@@ -14358,6 +14727,7 @@ static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0
 static swig_type_info _swigt__p_std__mapT_std__string_double_t = {"_p_std__mapT_std__string_double_t", "std::map< std::string,double,std::less< std::string > > *|std::map< std::string,double > *", 0, 0, (void*)&_wrap_class_double_m, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_layout_t_p_t = {"_p_std__mapT_std__string_layout_t_p_t", "std::map< std::string,layout_t *,std::less< std::string > > *|std::map< std::string,layout_t * > *", 0, 0, (void*)&_wrap_class_layout_m, 0};
 static swig_type_info _swigt__p_std__mapT_std__string_rgb_t_t = {"_p_std__mapT_std__string_rgb_t_t", "std::map< std::string,rgb_t,std::less< std::string > > *|std::map< std::string,rgb_t > *", 0, 0, (void*)&_wrap_class_rgb_m, 0};
+static swig_type_info _swigt__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t = {"_p_std__mapT_std__string_std__string_std__lessT_std__string_t_t", "std::map< std::string,std::string,std::less< std::string > > *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_std__string = {"_p_std__string", "std::string *", 0, 0, (void*)&_wrap_class_string, 0};
 static swig_type_info _swigt__p_std__vectorT_fpoint_t_t = {"_p_std__vectorT_fpoint_t_t", "std::vector< fpoint_t > *", 0, 0, (void*)&_wrap_class_fpoint_v, 0};
 static swig_type_info _swigt__p_std__vectorT_hex_t_p_t = {"_p_std__vectorT_hex_t_p_t", "std::vector< hex_t * > *", 0, 0, (void*)&_wrap_class_hex_pv, 0};
@@ -14412,6 +14782,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_std__mapT_std__string_double_t,
   &_swigt__p_std__mapT_std__string_layout_t_p_t,
   &_swigt__p_std__mapT_std__string_rgb_t_t,
+  &_swigt__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t,
   &_swigt__p_std__string,
   &_swigt__p_std__vectorT_fpoint_t_t,
   &_swigt__p_std__vectorT_hex_t_p_t,
@@ -14466,6 +14837,7 @@ static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0}
 static swig_cast_info _swigc__p_std__mapT_std__string_double_t[] = {  {&_swigt__p_std__mapT_std__string_double_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_layout_t_p_t[] = {  {&_swigt__p_std__mapT_std__string_layout_t_p_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__mapT_std__string_rgb_t_t[] = {  {&_swigt__p_std__mapT_std__string_rgb_t_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t[] = {  {&_swigt__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__string[] = {  {&_swigt__p_std__string, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_fpoint_t_t[] = {  {&_swigt__p_std__vectorT_fpoint_t_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_std__vectorT_hex_t_p_t[] = {  {&_swigt__p_std__vectorT_hex_t_p_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -14520,6 +14892,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_std__mapT_std__string_double_t,
   _swigc__p_std__mapT_std__string_layout_t_p_t,
   _swigc__p_std__mapT_std__string_rgb_t_t,
+  _swigc__p_std__mapT_std__string_std__string_std__lessT_std__string_t_t,
   _swigc__p_std__string,
   _swigc__p_std__vectorT_fpoint_t_t,
   _swigc__p_std__vectorT_hex_t_p_t,

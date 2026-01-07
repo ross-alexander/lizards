@@ -16,7 +16,7 @@ LIBLIZARDS = liblizards/liblizards.a
 LIBTURN = libturn/libturn.a
 
 CURSES = compat/curses.o
-CURSESLIB = -lncurses
+CURSESLIB = -lncurses -ltinfo
 
 all: $(LIBLIZARDS) $(CURSES) $(FILES)
 

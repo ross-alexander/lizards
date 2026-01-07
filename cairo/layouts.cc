@@ -75,7 +75,6 @@ void layouts_t::read_string_js(std::string s)
 {
   enum json_tokener_error jerr;
   json_tokener *tok = json_tokener_new();
-
   json_object *js = json_tokener_parse_ex(tok, s.c_str(), s.length());
 
   assert((jerr = json_tokener_get_error(tok)) == json_tokener_success);

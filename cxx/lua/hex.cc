@@ -21,7 +21,7 @@ extern "C" {
 hex_t* toHex(lua_State *L, int index)
 {
   hex_t **mapp = (hex_t**)lua_touserdata(L, index);
-  if (mapp == NULL) luaL_typerror(L, index, HEX);
+  if (mapp == NULL) luaL_typeerror(L, index, HEX);
   return *mapp;
 }
 
@@ -61,16 +61,14 @@ int Hex_features(lua_State *L)
 
 void Hex_register(lua_State *L)
 {
-  static const luaL_reg methods[] = {
+  static const luaL_Reg methods[] = {
     {"owner",	Hex_owner},
     {"features", Hex_features},
     {0, 0}
   };
-
-  static const luaL_reg meta[] = {
+  static const luaL_Reg meta[] = {
     {"__tostring", Hex_tostring},
     {0, 0}
   };
-
   Meta_register(L, HEX, methods, meta, 0);
 }

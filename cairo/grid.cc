@@ -28,7 +28,7 @@ grid_t::grid_t(int w, int h)
     grid[i] = 0;
   width = w;
   height = h;
-  misc_t::log(LOG_NOTICE, "grid (%d x %d) created", width, height);
+  misc_t::log(LOG_NOTICE, "grid (%d × %d) created", width, height);
 }
 
 hex_t* grid_t::operator()(int x, int y)
@@ -56,11 +56,23 @@ hex_t* grid_t::operator[](int i)
 
 void grid_t::place_template(template_t *tmpl, int owner, point_t c, int rename)
 {
-  assert(c.x + tmpl->layout->x_min >= 0);
-  assert(c.x - tmpl->layout->x_max < width);
+  misc_t::log(LOG_DEBUG, "place_template(c.x=%d c.y=%d x_min=%d y_min=%d x_max=%d y_max=%d)",
+ 	      c.x, c.y,
+	      tmpl->x_min,
+	      tmpl->y_min,
+	      tmpl->x_max,
+	      tmpl->y_max
+	      );
+  
+  //  assert(c.x + tmpl->layout->x_min >= 0);
+  //  assert(c.x - tmpl->layout->x_max < width);
+  //  assert(c.y + tmpl->layout->y_min >= 0);
+  //  assert(c.y - tmpl->layout->y_max < height);
 
-  assert(c.y + tmpl->layout->y_min >= 0);
-  assert(c.y - tmpl->layout->y_max < height);
+  assert(c.x + tmpl->x_min >= 0);
+  assert(c.x - tmpl->x_max < width);
+  assert(c.y + tmpl->y_min >= 0);
+  assert(c.y - tmpl->y_max < height);
 
   for (auto &i : tmpl->map)
     {

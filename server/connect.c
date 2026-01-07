@@ -19,7 +19,7 @@
 #include <string.h>
 #include <unistd.h>
 
-static void die();
+static void die(int);
 
 #define LINE_LEN	80
 
@@ -90,7 +90,7 @@ int main(int argc, char **argv)
     exit(0);
 }
 
-static void die()
+static void die(int)
 {
     fprintf(stderr, "Server closed connection\n");
     exit(1);

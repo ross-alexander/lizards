@@ -10,7 +10,6 @@
 #include <cairo-pdf.h>
 
 #include <librsvg/rsvg.h>
-#include <librsvg/rsvg-cairo.h>
 
 #include "lizards.h"
 #include "hexlist.h"

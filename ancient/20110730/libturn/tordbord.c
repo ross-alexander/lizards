@@ -1,3 +1,4 @@
+#include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -76,7 +77,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
   order_t work_order;
   hex_t world_hex;
  
-  while (fgets (work_string, 140, in_fptr) != '\0')
+  while (fgets (work_string, 140, in_fptr) != NULL)
   {
     work_string [strlen (work_string) - 1] = '\0';
 
@@ -126,7 +127,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
 
 	work1 = 0;
 
-	while (fgets (tmp_string2, 140, in_fptr) != '\0')
+	while (fgets (tmp_string2, 140, in_fptr) != NULL)
 	{
 	  strcpy (mesg_string [work1], tmp_string2);
 
@@ -146,7 +147,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
 	sprintf (filename, "%s%s%02d_%03d.%s", data_path,
 	  PLYPLY_MESG_F, present_player, world->turn, game_code);
 
-	if ((fptr = fopen (filename, "at")) == '\0')
+	if ((fptr = fopen (filename, "at")) == NULL)
 	  {
 	    printf ("FATAL ERROR: Unable to append to %s file. Press SPACE.\n",
 		    filename);
@@ -174,7 +175,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
 	      sprintf (filename, "%s%s%02d_%03d.%s", data_path, PLYPLY_MESG_F,
 		work3, world->turn, game_code);
 
-	      if ((fptr = fopen (filename, "at")) == '\0')
+	      if ((fptr = fopen (filename, "at")) == NULL)
 	      {
                 printf ("FATAL ERROR: Unable to append to %s file. Press SPACE.\n",
 			filename);
@@ -207,7 +208,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
 	      sprintf (filename, "%s%s%02d_%03d.%s", data_path,
 		PLYPLY_MESG_F, atoi (tmp_string2), world->turn, game_code);
 
-	      if ((fptr = fopen (filename, "at")) == '\0')
+	      if ((fptr = fopen (filename, "at")) == NULL)
 	      {
                 printf ("FATAL ERROR: Unable to append to %s file. Press SPACE.\n",
 			filename);
@@ -700,7 +701,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
 
 	work1 = 0;
 
-	while (fgets (tmp_string2, 140, in_fptr) != '\0')
+	while (fgets (tmp_string2, 140, in_fptr) != NULL)
 	{
 	  strcpy (mesg_string [work1], tmp_string2);
 
@@ -723,7 +724,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
 	sprintf (filename, "%s%s00_%03d.%s", data_path, PLYPLY_MESG_F,
 	  world->turn, game_code);
 
-	if ((fptr = fopen (filename, "at")) == '\0')
+	if ((fptr = fopen (filename, "at")) == NULL)
 	{
           printf ("FATAL ERROR: Unable to append to %s file.\n",
 		   filename);
@@ -1101,7 +1102,7 @@ int* ProcessFile(FILE *in_fptr, World *world, int *no_move_returned_flags)
       case 43:  	/* Spawn Turn Order */
 	sprintf (filename, "%s%s%s", data_path, WORLD_SWITCH_F, game_code);
 
-	if ((fptr = fopen (filename, "wt")) == '\0')
+	if ((fptr = fopen (filename, "wt")) == NULL)
 	{
 	  printf ("FATAL ERROR: Unable to write to %s file.\n", filename);
 	  exit (EXIT_FAILURE);
@@ -1249,21 +1250,22 @@ void add_order (order_t *order)
   {
     case SPLIT:
       for (work1 = 0, split_total = 0; work1 < world->num_orders; work1 ++)
-	if (world->order_list [work1]->order_type == SPLIT &&
-	    order->player == world->order_list [work1]->player &&
-	    order->x_hex == world->order_list [work1]->x_hex &&
-	    order->y_hex == world->order_list [work1]->y_hex)
 	{
-	  split_total += world->order_list [work1]->red_lizards +
-			 world->order_list [work1]->green_lizards +
-			 world->order_list [work1]->grey_lizards +
-			 world->order_list [work1]->black_lizards +
-			 world->order_list [work1]->yellow_lizards;
+	  if (world->order_list [work1]->order_type == SPLIT &&
+	      order->player == world->order_list [work1]->player &&
+	      order->x_hex == world->order_list [work1]->x_hex &&
+	      order->y_hex == world->order_list [work1]->y_hex)
+	    {
+	      split_total += world->order_list [work1]->red_lizards +
+		world->order_list [work1]->green_lizards +
+		world->order_list [work1]->grey_lizards +
+		world->order_list [work1]->black_lizards +
+		world->order_list [work1]->yellow_lizards;
+	    }
+	  
+	  get_hex (world, order->x_hex, order->y_hex, &hex);
 	}
-
-	get_hex (world, order->x_hex, order->y_hex, &hex);
-
-	if (split_total >= lizards_in_hex (&hex))
+      if (split_total >= lizards_in_hex (&hex))
 	{
 	  /* Redundant order ignored! */
 
@@ -1289,68 +1291,70 @@ void add_order (order_t *order)
       break;
     case MOVE:
       for (work1 = 0; work1 < world->num_orders; work1 ++)
-	if (world->order_list [work1]->order_type == MOVE &&
-	    order->player == world->order_list [work1]->player &&
-	    order->x_hex == world->order_list [work1]->x_hex &&
-	    order->y_hex == world->order_list [work1]->y_hex &&
-	    order->red_lizards == world->order_list [work1]->red_lizards &&
-	    order->green_lizards == world->order_list [work1]->green_lizards &&
-	    order->grey_lizards == world->order_list [work1]->grey_lizards &&
-	    order->black_lizards == world->order_list [work1]->black_lizards &&
-	    order->yellow_lizards == world->order_list [work1]->yellow_lizards)
 	{
-	  /* Redundant order ignored! */
-
-	  xy_to_string (order->x_hex, order->y_hex, hex_loc);
-
-	  if (order->moves [1] != 0)
-	    send_player_mesg (order->player,
-	      " - MOVE %s %s %s %s ignored, not enough lizards starting in hex.\n",
-	      hex_loc, dir [order->moves [0]], dir [order->moves [1]],
-	      show_lizards (order->red_lizards, order->green_lizards,
-	      order->grey_lizards, order->black_lizards,
-	      order->yellow_lizards, string));
-	  else
-	    send_player_mesg (order->player,
-	      " - MOVE %s %s %s ignored, not enough lizards starting in hex.\n",
-	      hex_loc, dir [order->moves [0]], show_lizards (order->red_lizards,
-	      order->green_lizards, order->grey_lizards, order->black_lizards,
-	      order->yellow_lizards, string));
-
-	  return;
+	  if (world->order_list [work1]->order_type == MOVE &&
+	      order->player == world->order_list [work1]->player &&
+	      order->x_hex == world->order_list [work1]->x_hex &&
+	      order->y_hex == world->order_list [work1]->y_hex &&
+	      order->red_lizards == world->order_list [work1]->red_lizards &&
+	      order->green_lizards == world->order_list [work1]->green_lizards &&
+	      order->grey_lizards == world->order_list [work1]->grey_lizards &&
+	      order->black_lizards == world->order_list [work1]->black_lizards &&
+	      order->yellow_lizards == world->order_list [work1]->yellow_lizards)
+	    {
+	      /* Redundant order ignored! */
+	      
+	      xy_to_string (order->x_hex, order->y_hex, hex_loc);
+	      
+	      if (order->moves [1] != 0)
+		send_player_mesg (order->player,
+				  " - MOVE %s %s %s %s ignored, not enough lizards starting in hex.\n",
+				  hex_loc, dir [order->moves [0]], dir [order->moves [1]],
+				  show_lizards (order->red_lizards, order->green_lizards,
+						order->grey_lizards, order->black_lizards,
+						order->yellow_lizards, string));
+	      else
+		send_player_mesg (order->player,
+				  " - MOVE %s %s %s ignored, not enough lizards starting in hex.\n",
+				  hex_loc, dir [order->moves [0]],
+				  show_lizards (order->red_lizards,
+						order->green_lizards, order->grey_lizards, order->black_lizards,
+						order->yellow_lizards, string));
+	      
+	      return;
+	    }
 	}
-
       break;
     case SNEAK:
       for (work1 = 0, sneak_total = 0; work1 < world->num_orders; work1 ++)
-	if (world->order_list [work1]->order_type == SNEAK &&
-	    order->player == world->order_list [work1]->player &&
-	    order->x_hex == world->order_list [work1]->x_hex &&
-	    order->y_hex == world->order_list [work1]->y_hex)
 	{
-	  sneak_total ++;
+	  if (world->order_list [work1]->order_type == SNEAK &&
+	      order->player == world->order_list [work1]->player &&
+	      order->x_hex == world->order_list [work1]->x_hex &&
+	      order->y_hex == world->order_list [work1]->y_hex)
+	    {
+	      sneak_total ++;
+	    }
+	  get_hex (world, order->x_hex, order->y_hex, &hex);
+
+	  if (sneak_total >= spy_lizards_in_hex (world, order->x_hex, order->y_hex, order->player))
+	    {
+	      /* Redundant order ignored! */
+	      
+	      xy_to_string (order->x_hex, order->y_hex, hex_loc);
+	      
+	      if (order->moves [1] != 0)
+		send_player_mesg (order->player,
+				  " - SNEAK %s %s %s ignored, not enough lizards starting in hex.\n",
+				  hex_loc, dir [order->moves [0]], dir [order->moves [1]]);
+	      else
+		send_player_mesg (order->player,
+				  " - SNEAK %s %s ignored, not enough lizards starting in hex.\n",
+				  hex_loc, dir [order->moves [0]]);
+	      
+	      return;
+	    }
 	}
-
-	get_hex (world, order->x_hex, order->y_hex, &hex);
-
-	if (sneak_total >= spy_lizards_in_hex (world, order->x_hex, order->y_hex, order->player))
-	{
-	  /* Redundant order ignored! */
-
-	  xy_to_string (order->x_hex, order->y_hex, hex_loc);
-
-	  if (order->moves [1] != 0)
-	    send_player_mesg (order->player,
-	      " - SNEAK %s %s %s ignored, not enough lizards starting in hex.\n",
-	      hex_loc, dir [order->moves [0]], dir [order->moves [1]]);
-	  else
-	    send_player_mesg (order->player,
-	      " - SNEAK %s %s ignored, not enough lizards starting in hex.\n",
-	      hex_loc, dir [order->moves [0]]);
-
-	  return;
-	}
-
       break;
     case CHANT:
       for (work1 = 0; work1 < world->num_orders; work1 ++)

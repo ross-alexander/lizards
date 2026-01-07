@@ -1,1 +1,11 @@
-{"layout":1,"cost":495,"home":"04","active":"04","hexes":[{"id":"01","type":"SWA"},{"id":"02","type":"FER"},{"id":"03","type":"TEM"},{"id":"04","type":"GRY"},{"id":"05","type":"PLA"},{"id":"06","type":"WHI"},{"id":"07","type":"PEA"}]}
+{"layout":1,"cost":495,"home":"04","active":"04",
+ "hexes":[
+     {"id":"01","type":"SWA", "band":{"RED": 20, "GRY":50}},
+     {"id":"02","type":"FER"},
+     {"id":"03","type":"TEM"},
+     {"id":"04","type":"GRY"},
+     {"id":"05","type":"PLA"},
+     {"id":"06","type":"WHI"},
+     {"id":"07","type":"PEA"}
+ ]
+}

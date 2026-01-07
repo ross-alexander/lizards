@@ -518,6 +518,7 @@ class template_t {
   void load_file_js(layouts_t*, const char*);
   void read_js(layouts_t*, std::string);
   int cost_priv;
+  std::map<std::string, struct code_map*>  hex_types;
   std::map<std::string, struct code_map*>  hex_codes;
   std::map<std::string, struct code_map*>  warrior_codes;
   std::map<std::string, struct code_map*>  pop_codes;
@@ -526,6 +527,7 @@ class template_t {
   std::map<int, struct code_map*>  warrior_ids;
   std::map<int, struct code_map*>  pop_ids;
  public:
+  int x_min, y_min, x_max, y_max, width, height;
   std::string layout_id;
   std::map<std::string, hex_t*> map;
   int size; 
@@ -614,6 +616,8 @@ public:
   output_t(grid_t*, int);
   output_t(game_t*, int);
   void set_colour(std::string, double, double, double);
+  void set_dimension(std::string, double);
+  void set_param(std::string, std::string);
   int json(const char *file);
   int svg(const char *file);
   hex_t* hit(double, double, double, double);

@@ -4,10 +4,14 @@
 #include <string.h>
 #include <libxml++/libxml++.h>
 
+#include <lua.hpp>
+#ifdef X
 extern "C" {
+#include "lua.h"
 #include "lualib.h"
 #include "lauxlib.h"
 }
+#endif
 
 #include <lizards.h>
 #include "local.h"
@@ -38,45 +42,37 @@ void dump_stack(lua_State *L)
 ---------------------------------------------------------------------- */
 
 
-int Meta_register(lua_State *L, const char *name, const luaL_reg methods[], const luaL_reg meta[], int global)
+int Meta_register(lua_State *L, const char *name, const luaL_Reg methods[], const luaL_Reg meta[], const luaL_Reg globals[])
 {
-  lua_pushlstring(L, name, strlen(name));           /* name of Image table */
+  printf("register %s\n", name);
+  luaL_newmetatable(L, name);             /* Metatable */
+  luaL_setfuncs(L, meta, 0);	/* fill metatable */
+
   lua_newtable(L);             /* Methods table */
-  lua_gettop(L);
-  lua_newtable(L);             /* Metatable */
-  lua_gettop(L);
+  luaL_setfuncs(L, methods, 0);	/* fill methods table */
 
   /*
-    03: Metatable
-    02: Methods
-    01: "World"
+    01: Methods
+    02: Metatable
   */
+
+  // Set meta.__index == methods, which removes methods from stack
   
-  lua_pushliteral(L, "__index");	/* add index event to metatable */
-  lua_pushvalue(L, 2);
-  lua_settable(L, 3);          	 /* metatable.__index = methods */
+  lua_setfield(L, -2, "__index");
 
   //  lua_pushliteral(L, "__metatable");    /* hide metatable */
   //  lua_pushvalue(L, 2);
   //  lua_settable(L, 3);       	    /* metatable.__metatable = methods */
 
-  lua_pushvalue(L, 2);
-  luaL_register(L, 0, methods);	/* fill methods table */
   lua_pop(L, 1);
-  
-  luaL_register(L, 0, meta);	/* fill metatable */
-  
-  lua_pushvalue(L, 1);
-  lua_pushvalue(L, 3);
-  lua_settable(L, LUA_REGISTRYINDEX);
-  if (global)
+  printf("-- %d\n", lua_gettop(L));
+
+  if (globals != nullptr)
     {
-      lua_pop(L, 1);
-      lua_settable(L, LUA_GLOBALSINDEX);
-    }
-  else
-    {
-      lua_pop(L, 3);
+      lua_newtable(L);
+      luaL_setfuncs(L, globals, 0);
+      lua_setglobal(L, name);
+      printf("Setting global %s\n", name);
     }
   return 0;
 }
@@ -88,14 +84,14 @@ main
 
 int main(int argc, char *argv[])
 {
-  lua_State *L = lua_open();
+  lua_State *L = luaL_newstate();
   luaL_openlibs(L);
 
   World_register(L);
   Hex_register(L);
-  Map_register(L);
-  Player_register(L);
-  Feature_register(L);
+  //  Map_register(L);
+  //  Player_register(L);
+  //  Feature_register(L);
 
   if(argc > 1)
     {

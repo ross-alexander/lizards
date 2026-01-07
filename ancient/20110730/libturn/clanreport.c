@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <alloca.h>
 
 #include "lizard.h"
 #include "order.h"

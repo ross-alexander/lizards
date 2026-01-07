@@ -1597,7 +1597,7 @@ void world_t::populate(int home_den_colour, int start_lizard_colour)
       printf ("Home Den placed at %s.\n", hex->title);
       misc_t::dbg.log("Den at %s has pop %d", hex->title, den->pop);
     }
-  delete grid;
+  delete[] grid;
 }
 
 /* ----------------------------------------------------------------------

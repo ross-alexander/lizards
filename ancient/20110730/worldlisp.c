@@ -97,8 +97,8 @@ void ShowHexes(World *world)
 	    */
 	    fprintf(stdout, ")");
 	    fprintf(stdout, ")\n");
-	  }
-    fprintf(stdout, ")\n");
+      }
+  fprintf(stdout, ")\n");
 }
 
 int main(int argc, char *argv[])

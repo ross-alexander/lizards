@@ -1,3 +1,4 @@
+#include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -59,7 +60,7 @@ void Terrain(World *world)
 	  else
 	    {
 	    if (random (100) < VOLCANO_DORMANT_LEVEL &&
-		((world->flags & LZ_VOLCANO) == 1) &&
+		((world->flags & LZ_VOLCANO) > 0) &&
 		(world->turn > 0))
 	    {
 	      work_order.player = 0;
@@ -81,7 +82,7 @@ void Terrain(World *world)
 	  break;
 	case PEAK:
 	  if (random (100) < MOUNTAIN_ERUPT_LEVEL &&
-	      ((world->flags & LZ_PEAK) == 1) &&
+	      ((world->flags & LZ_PEAK) > 0) &&
 	      world->turn > 0)
 	  {
 	     work_order.player = 0;
