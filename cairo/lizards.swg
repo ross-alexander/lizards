@@ -266,6 +266,7 @@ class grey_den_t : public den_t {};
 
 class layout_t {
 public:
+  int x_min, y_min, x_max, y_max;
   grid_t *realize();
 };
 
@@ -389,3 +390,9 @@ class serial_t {
   int to_file(const char*);
   static serial_t from_file(const char*);
 };
+
+int log_level;
+
+/* Local Variables: */
+/* mode: c          */
+/* End:             */
